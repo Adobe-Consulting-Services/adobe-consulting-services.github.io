@@ -245,9 +245,11 @@ footer {
 #jumbotron h1 {
   color: #666;
   text-shadow: #ccc 0px 1px 0px;
+  white-space: nowrap;
 }
 #jumbotron .lead {
   text-shadow: #666 0px 2px 0px;
+  white-space: nowrap;
 }
 #projects {
   margin-top: -18rem;
