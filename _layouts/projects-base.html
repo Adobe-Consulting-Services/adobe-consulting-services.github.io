@@ -1,0 +1,27 @@
+---
+project: projects
+---
+<!DOCTYPE html>
+<html lang="en">
+    {% include shared/head.html %}
+
+    <body>
+        {% include shared/analytics.html %}
+
+        <header class="top">
+            <div class="container">
+                <ul class="nav">
+                    {% include projects/nav.html %}
+                </ul>
+            </div>
+        </header>
+
+        <div class="page" role="main">
+            {{ content }}
+        </div>
+
+        {% include shared/footer.html %}
+
+        {% include shared/footer-libs.html %}
+    </body>
+</html>

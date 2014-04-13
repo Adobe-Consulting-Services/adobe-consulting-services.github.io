@@ -1,0 +1,93 @@
+@import "core.less";
+
+.feature-doc {
+  margin-top: 2em;
+
+  h1 {
+    margin-top: 2em;
+
+    .badge {
+      color: #FFF;
+      padding: .25em .5em;
+      border-radius: 5px;
+      margin-left: 10px;
+      font-size: .7em;
+      position: relative;
+      top: -.1em;
+    }
+
+    .new {
+      background-color:red;
+      .badge
+    }
+
+    .updated {
+      background-color: red;
+      .badge
+    }
+
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5, {
+    margin-top: 1.25em;
+  }
+
+  h2 {
+    border-bottom: dotted 1px #ccc;
+    padding-bottom: .25em;
+  }
+
+  .img-wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  pre code {
+    font-size: 1em;
+  }
+
+  ul,
+  ol,
+  dd {
+    margin-bottom: 1em;
+  }
+
+  dd {
+    margin-left: 2em;
+  }
+
+  code {
+    whitespace: normal;
+  }
+}
+
+/* Inline Code */
+code {
+  .code;
+  font-family: SourceSans, sans-serif;
+  font-weight: 200;
+  padding: .25rem .75rem;
+}
+
+/* Code Blocks */
+
+pre {
+  border-radius: 0;
+  border-color: #eee;
+  padding: 1.5rem 2rem;
+
+  code {
+     .code-block;
+    background-color: transparent;
+    border: 0;
+  }
+}

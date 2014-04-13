@@ -1,0 +1,57 @@
+
+.features {
+
+  .stripe {
+    margin-bottom: 2em;
+  }
+
+  .feature {
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(4);
+    .make-lg-column(4);
+
+    text-align: center;
+    position: relative;
+
+    img {
+      border: solid 1px #ccc;
+
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -khtml-border-radius: 5px;
+    }
+
+    h3 {
+      margin: 1em 0 .5em 0;
+    }
+
+    p {
+      color: #999;
+      font-weight: 200;
+      margin-bottom: 4rem;
+    }
+
+    .banner {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: top left;
+      width: 119px;
+      height: 119px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .new {
+      background-image: url('/assets/shared/images/new-banner.png');
+      .banner;
+    }
+
+    .updated {
+      background-image: url('/assets/shared/images/updated-banner.png');
+      .banner;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+---
+layout: commons-home
+project: commons
+title: Adobe AEM Commons
+description: xxxx
+---
+
+<!-- News -->
+<section class="news">
+    <div class="container">
+        <ul class="show-more-list">
+
+            {% include commons/news.html %}
+
+            <a class="show-more" href="javascript:void();">Show more news &#xffec;</a>
+
+        </ul>
+    </div>
+</section>
+
+<!-- How to use -->
+<section class="introduction">
+    <div class="container">
+        <div class="wrapper">
+
+            <div class="what-it-is">
+                <div class="icon icon-check"></div>
+
+                <h4>What ACS AEM Commons <u>is</u>!</h4>
+
+                <p>
+                    A way to <em>bootstrap an AEM project</em> with common functionality,
+                    a set of <em>reusable components</em>,
+                    and an <em>AEM development toolkit</em>.
+                </p>
+
+            </div>
+
+            <div class="what-it-isnt">
+                <div class="icon icon-x"></div>
+
+                <h4>What ACS AEM Commons <u>isn't</u>!</h4>
+
+                <p>
+                    A <em>framework</em>,
+                    library with <em>required</em>
+                    <a href="{{ site.baseurl }}/pages/thirdparty.html">3rd party dependencies</a>,
+                    or a library that <em>changes</em> standard AEM functionality by default.
+                </p>
+            </div>
+
+            <div class="how-to-use">
+                <div class="icon icon-gear"></div>
+
+                <h4>How to <u>use</u> ACS AEM Commons!</h4>
+
+                <p>
+                    Add as a <em>sub package</em> from repo.adobe.com using Maven
+                    or manually deploy the <em><a href="#">package</a> using package manager</em>.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Features -->
+<section class="features">
+    <div class="stripe">
+        <div class="container">
+            <h2 id="features">ACS AEM Commons Features</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="wrapper">
+
+            {% for post in site.categories.features %}
+                {% assign mod2 = forloop.index|modulo:2 %}
+                {% assign mod3 = forloop.index|modulo:3 %}
+
+                {% include shared/feature-card.html feature=post project=page.project %}
+
+                {% if mod2 == 0 %}
+                <div class="clearfix visible-sm visible-xs hidden-md hidden-lg"></div>
+                {% endif %}
+
+                {% if mod3 == 0 %}
+                <div class="clearfix hidden-sm hidden-xs visible-md visible-lg"></div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Who are you? -->
+<section class="who-we-are">
+    <div class="container">
+
+        <h4>Who we are</h4>
+
+        <p>
+            We are Adobe Consulting Services.
+            We build solutions on top of Adobe products including Adobe Experience Manager (AEM, fka CQ, fka Communique).
+            Learn more.
+        </p>
+    </div>
+</section>
