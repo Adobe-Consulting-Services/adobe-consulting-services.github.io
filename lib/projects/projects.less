@@ -1,4 +1,21 @@
 @import "../shared/shared.less";
 
-#jumbotron {
+@color: #1e002e;
+@color-dark: darken(@color, 25%);
+@color-light: lighten(@color, 25%);
+
+@secondary-color: red;
+
+@dark-bg-color: @color-light;
+@dark-bg-color-text: white;
+@dark-bg-color-dark: darken(@dark-bg-color, 10%);
+@dark-bg-color-light: lighten(@dark-bg-color, 10%);
+
+a {
+  color: @color;
+
+  &:hover {
+    color: @color-dark;
+  }
 }
+

@@ -1,38 +1,21 @@
 @import "../shared/shared.less";
 
-@primary-color: #cb0900;
+@color: #cb0900;
+@color-dark: darken(@color, 25%);
+@color-light: lighten(@color, 25%);
+
+@secondary-color: red;
+
+@dark-bg-color: #ffe400;
+@dark-bg-color-text: darken(@color, 10%);
+@dark-bg-color-light: #ffe400;
+@dark-bg-color-dark: #ff9c00;
 
 a {
-  color: @primary-color;
+  color: @color;
 
   &:hover {
-    color: @primary-color;
+    color: @color-dark;
   }
 }
 
-
-#jumbotron {
-
-  .action-btn {
-    .btn();
-    .btn-lg();
-
-    color: #7c2300;
-
-    &:hover {
-      color: #7c2300;
-    }
-
-    border-color: #ff8a00;
-
-    background-color: #ffe400;
-    background-image: linear-gradient(#ffe400, #ff9c00);
-
-    background: #ffe400;
-    background: linear-gradient(#ffe400, #ff9c00);
-
-    -moz-box-shadow:    0px 1px 0px 1px rgba(0, 0, 1px, 0.25);
-    -webkit-box-shadow: 0px 1px 0px 1px rgba(0, 0, 1px, 0.25);
-    box-shadow:         0px 1px 0px 1px rgba(0, 0, 1px, 0.25);
-  }
-}

@@ -1,5 +1,6 @@
 @import "core.less";
 @import "icons.less";
+@import "jumbotron.less";
 @import "feature-cards.less";
 @import "feature-docs.less";
 
@@ -61,45 +62,6 @@ header.top {
   }
 }
 
-#jumbotron {
-  color: white;
-  height: 600px;
-
-  .slide {
-    position: relative;
-
-    .image {
-      margin: 20px 0 0 25px;
-
-      img {
-        -moz-box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.25);
-        -webkit-box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.25);
-      }
-    }
-
-    .message {
-      position: absolute;
-      top: 185px;
-      right: 0;
-
-      .text {
-        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
-
-        h1 {
-          font-size: 3.25em;
-        }
-
-        p {
-          font-size: 1.75em;
-          color: #f7f7f7;
-        }
-      }
-
-    }
-  }
-}
-
 .stripe {
   .color-block();
   background-size: cover;
@@ -112,10 +74,28 @@ header.top {
   }
 }
 
+.news {
+  .news-entry {
+    margin-bottom: .5em;
+  }
+
+  .date {
+
+  }
+
+  .title {
+    color: black;
+    font-weight: normal;
+  }
+
+  .description{
+
+  }
+}
+
 
 .home {
   .content {
-
 
     section {
       padding: 1em 0;
@@ -130,26 +110,21 @@ header.top {
       }
     }
 
-    section.news {
-    }
-
-    section.introduction {
+    section {
       border-top: solid 1px #eee;
       border-bottom: solid 1px #eee;
       background-color: #fcfcfc;
 
-      .wrapper {
+      .wrapper.infos-with-icon
+      {
         .make-row();
 
-        .how-to-use,
-        .what-it-is,
-        .what-it-isnt {
+        .info-with-icon {
           .clearfix();
           padding: 1em 0 1em 0;
         }
 
-        .what-it-is,
-        .what-it-isnt {
+        .info-with-icon {
           .make-xs-column(12);
           .make-sm-column(6);
           .make-md-column(4);
@@ -160,7 +135,7 @@ header.top {
           }
         }
 
-        .how-to-use {
+        .info-with-icon:last-child {
           .make-xs-column(12);
           .make-sm-column(12);
           .make-md-column(4);

@@ -18,5 +18,15 @@
 });
 
 
+;$(function() {
+    $('.unslider').unslider({
+        dots: true,
+        fluid: true,
+        speed: 500,
+        delay: 1000000
+    });
+});
+
+
 
 

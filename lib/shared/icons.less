@@ -1,30 +1,45 @@
+.icon {
+  display: block;
+}
+
 .info-icons {
   background-image: url('/assets/shared/images/info-icons.png');
+  width: 100px;
+  height: 100px;
 }
 
 .icon-check {
   .info-icons();
-
   background-position:0px 0px;
-  width: 100px;
-  height: 100px;
-
 }
 
 .icon-x {
   .info-icons();
-
-  background-position:-118px 0px;
-  width: 100px;
-  height: 100px;
-
+  background-position:-100px 0px;
 }
 
 .icon-gear {
   .info-icons();
+  background-position:-200px 0px;
+}
 
-  background-position:-235px 0px;
+.project-icons {
+  background-image: url('/assets/shared/images/project-icons.png');
   width: 100px;
   height: 100px;
+}
 
+.icon-acs-aem-commons {
+  .project-icons();
+  background-position:0px 0px;
+}
+
+.icon-acs-aem-tools {
+  .project-icons();
+  background-position:-100px 0px;
+}
+
+.icon-acs-aem-samples {
+  .project-icons();
+  background-position:-200px 0px;
 }

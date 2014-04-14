@@ -1,53 +1,21 @@
 @import "../shared/shared.less";
 
+@color: #1d6700;
+@color-dark: darken(@color, 25%);
+@color-light: lighten(@color, 25%);
 
-#promo {
-	border-bottom: solid 1px #ccc;
-	margin-top: 2rem;
+@secondary-color: red;
 
-	.promo-text {
-		margin-bottom: 2rem;
-		text-align: center;
+@dark-bg-color: #2ee200;
+@dark-bg-color-text: white;
+@dark-bg-color-light: #2bce00;
+@dark-bg-color-dark: #1f8b00;
 
-		h2 {			
-			color: @color1;
-			margin-top: 0;
-		}
+a {
+  color: @color;
 
-		p {
-			margin-left: 2rem;
-			margin-right: 2rem;
-		}
-	}
+  &:hover {
+    color: @color-dark;
+  }
 }
 
-
-
-@screen-sm: 460px;
-@screen-md: 992px;
-@screen-lg: 1200px;
-
-/* Media Selectors */
-@media (min-width: @screen-sm) {
-	#jumbotron {
-		min-height: 30rem;
-	}
-
-	#promo {
-		margin-top: -10rem;		
-	}
-}
-
-@media (min-width: @screen-md) {
-	#jumbotron {
-		min-height: 45rem;
-	}
-
-	#promo {
-		margin-top: -21rem;		
-	}
-}
-
-@media (min-width: @screen-lg) {
-	
-}

@@ -1,0 +1,31 @@
+---
+project: tools
+---
+<!DOCTYPE html>
+<html lang="en">
+    {% include shared/head.html %}
+
+    <body class="home">
+    {% include shared/analytics.html %}
+
+    <div class="color-block">
+        <header class="top">
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    {% include tools/nav.html %}
+                </div>
+            </nav>
+        </header>
+
+        {% include tools/jumbotron.html %}
+    </div>
+
+    <div class="page content" role="main">
+        {{ content }}
+    </div>
+
+    {% include shared/footer.html %}
+
+    {% include shared/footer-libs.html %}
+    </body>
+</html>

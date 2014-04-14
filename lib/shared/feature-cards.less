@@ -15,15 +15,19 @@
     position: relative;
 
     img {
-      border: solid 1px #ccc;
+      border-color: white;
+      border-style: solid;
+      border-width: 10px 10px 20px 10px;
 
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-      -khtml-border-radius: 5px;
+      .rounded-corners(2px);
+      .shadow();
     }
 
     h3 {
+      a {
+        color: black;
+      }
+      color: black;
       margin: 1em 0 .5em 0;
     }
 

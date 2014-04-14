@@ -21,9 +21,9 @@ description: xxxx
 <!-- How to use -->
 <section class="introduction">
     <div class="container">
-        <div class="wrapper">
+        <div class="wrapper infos-with-icon">
 
-            <div class="what-it-is">
+            <div class="info-with-icon">
                 <div class="icon icon-check"></div>
 
                 <h4>What ACS AEM Commons <u>is</u>!</h4>
@@ -36,7 +36,7 @@ description: xxxx
 
             </div>
 
-            <div class="what-it-isnt">
+            <div class="info-with-icon">
                 <div class="icon icon-x"></div>
 
                 <h4>What ACS AEM Commons <u>isn't</u>!</h4>
@@ -49,7 +49,7 @@ description: xxxx
                 </p>
             </div>
 
-            <div class="how-to-use">
+            <div class="info-with-icon">
                 <div class="icon icon-gear"></div>
 
                 <h4>How to <u>use</u> ACS AEM Commons!</h4>
@@ -76,7 +76,10 @@ description: xxxx
     <div class="container">
         <div class="wrapper">
 
-            {% for post in site.categories.features %}
+            {% assign index = 0 %}
+
+            {% for post in site.categories.features and in site.categories.acs-aem-commons %}
+
                 {% assign mod2 = forloop.index|modulo:2 %}
                 {% assign mod3 = forloop.index|modulo:3 %}
 
@@ -89,6 +92,7 @@ description: xxxx
                 {% if mod3 == 0 %}
                 <div class="clearfix hidden-sm hidden-xs visible-md visible-lg"></div>
                 {% endif %}
+
             {% endfor %}
 
         </div>
