@@ -7,6 +7,7 @@
   .slide {
     height: @jumbtron-height;
 
+
     .wrapper {
       .make-row();
     }
@@ -21,6 +22,10 @@
 
     .image {
       margin: 20px 0 0 0;
+      
+      img {
+        margin: 0 auto;
+      }
     }
 
     .message {
@@ -40,6 +45,19 @@
         }
       }
     }
+
+    .stacked {
+        text-align: center;
+
+        img {
+          margin: 1em auto 1.75em auto;          
+        }
+        
+        .message {
+          margin: 0;
+        }
+    }
+
 
     .action-gradient-btn {
       .btn();
