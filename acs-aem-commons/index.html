@@ -76,9 +76,8 @@ description: xxxx
     <div class="container">
         <div class="wrapper">
 
-            {% assign index = 0 %}
 
-            {% for post in site.categories.features and in site.categories.acs-aem-commons %}
+            {% for post in site.categories.acs-aem-commons-features %}
 
                 {% assign mod2 = forloop.index|modulo:2 %}
                 {% assign mod3 = forloop.index|modulo:3 %}

@@ -4,8 +4,7 @@ title: Developer Health Checks
 description: Automatically check your components and templates.
 date: 2014-03-23 01:00:00
 thumbnail: /images/health-checks/thumbnail.png
-categories: acs-aem-tools features
-tags: new
+tags: acs-aem-tools-features new
 ---
 
 Sling Health Check Tools is a Sling module for checking the health of a running Sling system based on a series of Health Check services. ACS AEM Tools includes two Health Checks for evaluating the quality of development deliverables:

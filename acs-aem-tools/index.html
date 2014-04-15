@@ -61,23 +61,21 @@ description: ...
 
     <div class="container">
         <div class="wrapper">
-            {% for post in site.posts.acs-aem-tools %}
-            {% if post.categories contains 'features' %}
+            {% for post in site.tags.acs-aem-tools-features %}
 
-            {% assign mod2 = forloop.index|modulo:2 %}
-            {% assign mod3 = forloop.index|modulo:3 %}
+                {% assign mod2 = forloop.index|modulo:2 %}
+                {% assign mod3 = forloop.index|modulo:3 %}
 
-            {% include shared/feature-card.html feature=post project=page.project %}
+                {% include shared/feature-card.html feature=post project=page.project %}
 
-            {% if mod2 == 0 %}
-            <div class="clearfix visible-sm visible-xs hidden-md hidden-lg"></div>
-            {% endif %}
+                {% if mod2 == 0 %}
+                <div class="clearfix visible-sm visible-xs hidden-md hidden-lg"></div>
+                {% endif %}
 
-            {% if mod3 == 0 %}
-            <div class="clearfix hidden-sm hidden-xs visible-md visible-lg"></div>
-            {% endif %}
+                {% if mod3 == 0 %}
+                <div class="clearfix hidden-sm hidden-xs visible-md visible-lg"></div>
+                {% endif %}
 
-            {% endif %}
             {% endfor %}
         </div>
 

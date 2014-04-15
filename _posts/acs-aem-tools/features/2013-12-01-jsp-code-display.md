@@ -4,8 +4,8 @@ title: JSP Code Display
 description: A tool for tracking down those pesky JSP errors hidden away in compiled servlets.
 date: 2013-12-05
 thumbnail: /images/jsp-code-display/thumbnail.png
-categories: acs-aem-tools features
 initial-release: 0.0.2
+tags: acs-aem-tools-features
 ---
 
 ## Getting Started
