@@ -77,7 +77,7 @@ description: xxxx
         <div class="wrapper">
 
 
-            {% for post in site.categories.acs-aem-commons-features %}
+            {% for post in site.tags.acs-aem-commons-feature %}
 
                 {% assign mod2 = forloop.index|modulo:2 %}
                 {% assign mod3 = forloop.index|modulo:3 %}
@@ -99,17 +99,7 @@ description: xxxx
     </div>
 </section>
 
+{% include shared/who-we-are.html %}
 
-<!-- Who are you? -->
-<section class="who-we-are">
-    <div class="container">
+{% include shared/projects.html %}
 
-        <h4>Who we are</h4>
-
-        <p>
-            We are Adobe Consulting Services.
-            We build solutions on top of Adobe products including Adobe Experience Manager (AEM, fka CQ, fka Communique).
-            Learn more.
-        </p>
-    </div>
-</section>

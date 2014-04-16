@@ -4,7 +4,7 @@ title: AEM Cloud Services
 description: Integrate with cloud services like a Pro!
 date: 2013-11-10 23:39:29
 thumbnail: /images/cloud-services/thumbnail.png
-categories: acs-aem-commons features
+tags: acs-aem-commons-feature
 initial-release: 1.2.0
 ---
 

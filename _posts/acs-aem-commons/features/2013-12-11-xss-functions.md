@@ -4,7 +4,7 @@ title: XSS JSP Functions
 description: JSP Taglib for XSS Protection
 date: 2013-12-11 23:39:29
 thumbnail: /images/xssfunctions/thumbnail.png
-categories: acs-aem-commons features
+tags: acs-aem-commons-feature
 initial-release: 1.3.0
 ---
 

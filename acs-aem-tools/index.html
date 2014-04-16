@@ -59,7 +59,7 @@ description: ...
 
     <div class="container">
         <div class="wrapper">
-            {% for post in site.tags.acs-aem-tools-features %}
+            {% for post in site.tags.acs-aem-tools-feature %}
 
                 {% assign mod2 = forloop.index|modulo:2 %}
                 {% assign mod3 = forloop.index|modulo:3 %}
@@ -81,3 +81,5 @@ description: ...
 </section>
 
 {% include shared/who-we-are.html %}
+
+{% include shared/projects.html %}

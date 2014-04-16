@@ -4,7 +4,7 @@ title: ClientLibs Manager
 description: AEM Design-driven, reusable ClientLibs
 date: 2013-09-20 23:39:29
 thumbnail: /images/designer-clientlibsmanager/thumbnail.png
-categories: acs-aem-commons features
+tags: acs-aem-commons-feature
 initial-release: 1.0.0
 ---
 

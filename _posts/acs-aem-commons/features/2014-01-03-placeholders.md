@@ -4,9 +4,8 @@ title: Component Placeholders
 description: A little polish goes a long way
 date: 2014-01-10 23:39:29
 thumbnail: /images/placeholders/thumbnail.png
-categories: acs-aem-commons features
+tags: acs-aem-commons-feature new
 initial-release: 1.5.0
-tags: new
 ---
 
 ## Purpose

@@ -6381,9 +6381,9 @@ h4 {
   color: #ffffff;
   border-color: #50007a;
   background-color: #9200e1;
-  background-image: linear-gradient(#9200e1, #50007b);
+  background-image: linear-gradient(#9200e1, #2f0048);
   background: #9200e1;
-  background: linear-gradient(#9200e1, #50007b);
+  background: linear-gradient(#9200e1, #2f0048);
   -moz-box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
   -webkit-box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
   box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
@@ -6442,7 +6442,7 @@ fieldset[disabled] #jumbotron .slide .action-gradient-btn {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
-  color: #eee;
+  color: #ddd;
   font-weight: 200;
   border-color: #9200e1;
   background-color: transparent;
@@ -6477,12 +6477,12 @@ fieldset[disabled] #jumbotron .slide .action-btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-#jumbotron .slide .action-btnhover {
-  color: white;
+#jumbotron .slide .action-btn:hover {
+  color: #fff;
 }
 #jumbotron .slide .action-btn:active {
   color: white;
-  background-color: #7100ae;
+  background-color: #2f0048;
 }
 .features .stripe {
   margin-bottom: 2em;
@@ -6738,6 +6738,7 @@ header.top .navbar .nav li.acs-aem-projects a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-color: ##2A073B;
   background-size: cover;
   height: 5em;
   color: white;
@@ -6878,4 +6879,7 @@ a {
 }
 a:hover {
   color: #000000;
+}
+.color-block {
+  background-color: ##2A073B;
 }

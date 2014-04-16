@@ -6379,11 +6379,11 @@ h4 {
   line-height: 1.33;
   border-radius: 6px;
   color: #980700;
-  border-color: #998900;
-  background-color: #ffe400;
-  background-image: linear-gradient(#ffe400, #ff9c00);
-  background: #ffe400;
-  background: linear-gradient(#ffe400, #ff9c00);
+  border-color: #ff261b;
+  background-color: #ff8781;
+  background-image: linear-gradient(#ff8781, #bc2606);
+  background: #ff8781;
+  background: linear-gradient(#ff8781, #bc2606);
   -moz-box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
   -webkit-box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
   box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
@@ -6442,9 +6442,9 @@ fieldset[disabled] #jumbotron .slide .action-gradient-btn {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
-  color: #eee;
+  color: #ddd;
   font-weight: 200;
-  border-color: #ffe400;
+  border-color: #ff8781;
   background-color: transparent;
   background: transparent;
 }
@@ -6477,12 +6477,12 @@ fieldset[disabled] #jumbotron .slide .action-btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-#jumbotron .slide .action-btnhover {
-  color: white;
+#jumbotron .slide .action-btn:hover {
+  color: #fff;
 }
 #jumbotron .slide .action-btn:active {
   color: white;
-  background-color: #ccb600;
+  background-color: #bc2606;
 }
 .features .stripe {
   margin-bottom: 2em;
@@ -6738,6 +6738,7 @@ header.top .navbar .nav li.acs-aem-projects a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-color: #882021;
   background-size: cover;
   height: 5em;
   color: white;
@@ -6878,4 +6879,7 @@ a {
 }
 a:hover {
   color: #4b0300;
+}
+.color-block {
+  background-color: #882021;
 }

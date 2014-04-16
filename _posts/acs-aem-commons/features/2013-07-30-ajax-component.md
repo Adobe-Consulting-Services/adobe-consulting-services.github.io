@@ -4,7 +4,7 @@ title: Base AJAX Component
 description: AJAX-ify your AEM Components with ease
 date: 2013-07-30 23:39:29
 thumbnail: /images/ajax-component/thumbnail.png
-categories: acs-aem-commons features
+tags: acs-aem-commons-feature
 initial-release: 1.0.0
 ---
 

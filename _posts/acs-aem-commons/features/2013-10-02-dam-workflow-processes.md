@@ -4,9 +4,8 @@ title: DAM Workflow Processes
 description: Commonly required DAM workflow processes.
 date: 2013-10-02 15:39:29
 thumbnail: /images/dam-workflow-processes/thumbnail.png
-categories: acs-aem-commons features
-tags: updated
-initial-release: 1.0
+tags: acs-aem-commons-feature updated
+initial-release: 1.0.0
 ---
 
 ## Abstract Rendition Modifying Process

@@ -6442,7 +6442,7 @@ fieldset[disabled] #jumbotron .slide .action-gradient-btn {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
-  color: #eee;
+  color: #ddd;
   font-weight: 200;
   border-color: #2bce00;
   background-color: transparent;
@@ -6477,12 +6477,12 @@ fieldset[disabled] #jumbotron .slide .action-btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-#jumbotron .slide .action-btnhover {
-  color: white;
+#jumbotron .slide .action-btn:hover {
+  color: #fff;
 }
 #jumbotron .slide .action-btn:active {
   color: white;
-  background-color: #209b00;
+  background-color: #1f8b00;
 }
 .features .stripe {
   margin-bottom: 2em;
@@ -6738,6 +6738,7 @@ header.top .navbar .nav li.acs-aem-projects a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-color: #2D3C27;
   background-size: cover;
   height: 5em;
   color: white;
@@ -6878,4 +6879,7 @@ a {
 }
 a:hover {
   color: #000000;
+}
+.color-block {
+  background-color: #2D3C27;
 }

@@ -4,7 +4,7 @@ title: Dispatcher Flush Rules
 description: Statlevels cramping your flushes?
 date: 2013-10-01 23:39:29
 thumbnail: /images/dispatcher-flush-rules/thumbnail.png
-categories: acs-aem-commons features
+tags: acs-aem-commons-feature
 initial-release: 1.2.0
 ---
 
