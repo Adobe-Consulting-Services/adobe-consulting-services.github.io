@@ -4,7 +4,7 @@ title: WCMMode Tags & Functions
 description: JSP Taglib for working with WCM Mode
 date: 2013-08-20 23:39:29
 thumbnail: /images/wcmmode/thumbnail.png
-tags: acs-aem-commons-feature
+tags: acs-aem-commons-features
 initial-release: 1.0.0
 ---
 

@@ -4,7 +4,18 @@
 
             {% for post in site.categories.news %}
             <li class="news-entry">
-                <span class="title">{{ post.project-name }}{{ post.title }}</span>
+
+                <span class="title">                
+                    {% if post.tags contains 'acs-aem-commons-news' %}
+                        {{ site.data.acs-aem-commons.title }}
+                        &mdash;
+                    {% elsif post.tags contains 'acs-aem-tools-news' %}
+                        {{ site.data.acs-aem-tools.title }}
+                        &mdash;
+                    {% endif %}
+
+                    {{ post.title }}
+                </span>
                 @ <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
                 &#x219d; <span class="description">{{ post.description }}</span>
             </li>

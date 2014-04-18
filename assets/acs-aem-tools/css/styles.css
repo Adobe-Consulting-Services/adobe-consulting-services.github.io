@@ -6442,7 +6442,7 @@ fieldset[disabled] #jumbotron .slide .action-gradient-btn {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
-  color: #ddd;
+  color: #eee;
   font-weight: 200;
   border-color: #2bce00;
   background-color: transparent;
@@ -6744,8 +6744,15 @@ header.top .navbar .nav li.acs-aem-projects a {
   line-height: 1.75em;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
 }
+.news {
+  margin-top: 1.25em;
+  margin-bottom: .5em;
+}
 .news .news-entry {
   margin-bottom: .5em;
+}
+.news .date {
+  color: #999;
 }
 .news .title {
   color: black;
