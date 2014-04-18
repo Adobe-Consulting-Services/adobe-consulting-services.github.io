@@ -8,9 +8,10 @@
         {% elsif feature.tags contains 'updated' %}<div class="updated"></div>{% endif %}
 
         <img class="img-responsive"
-             src="/acs-aem-{{ project }}{{ feature.thumbnail }}"/></a>
+             src="/{{ project }}{{ feature.thumbnail }}"/></a>
 
     <h3><a href="{{ feature.url }}">{{ feature.title }}</a></h3>
 
     <p>{{ feature.description }}</p>
 </div>
+	

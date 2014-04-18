@@ -1,25 +1,25 @@
 ---
-layout: tools-feature
+layout: acs-aem-tools_feature
 title: Query Editor
 description: Build and debug QueryBuilder queries in real time!
 date: 2014-03-23 01:00:00
 thumbnail: /images/query-editor/thumbnail.png
 initial-release: 0.0.4
-tags: acs-aem-tools-feature new
+tags: acs-aem-tools-features new
 ---
 
 QueryEditor is a WebUI that allows QueryBuilder queries to be written, executed and debugged in real time.  
 
 ## Getting Started
 
-![AEM Tools]({{ site.baseurl }}/images/query-editor/miscadmin.png)
+![AEM Tools]({{ site.data.acs-aem-tools.baseurl }}/images/query-editor/miscadmin.png)
 
 
 Install the ACS AEM Tools package via the AEM Package Manager and then open Query Editor from the AEM Tools console, or directly at [/etc/acs-tool/query-editor.html](http://localhost:4502/etc/acs-tools/query-editor.html)
 
 > To get to the AEM Tools console from the Touch UI, from the left rail navigation, select Tools > Operations > Configuration.
 
-![Query Editor]({{ site.baseurl }}/images/query-editor/query-editor.png)
+![Query Editor]({{ site.data.acs-aem-tools.baseurl }}/images/query-editor/query-editor.png)
 
 Simply enter your [QueryBuilder](http://dev.day.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) params in the left editor pane, and the results will display in the right pane.
 
@@ -29,7 +29,7 @@ Querying can be set to "Auto Query" which will execute and display the results o
 * To activate code completion, press `Ctrl-Space`.
 * On a Mac, `Cmd-click` on a any `path` value in the results to jump to that result in CRXDE Lite.
 
-![Query Editor - Cmd Click]({{ site.baseurl }}/images/query-editor/cmd-click.png)
+![Query Editor - Cmd Click]({{ site.data.acs-aem-tools.baseurl }}/images/query-editor/cmd-click.png)
 
 
 ## Warning

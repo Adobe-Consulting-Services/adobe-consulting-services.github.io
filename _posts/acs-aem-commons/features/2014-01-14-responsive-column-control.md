@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Responsive Column Control
 description: Give your authors maximal column layout flexibility.
 date: 2014-01-14 23:39:29
 thumbnail: /images/responsive-column-control/thumbnail.png
-tags: acs-aem-commons-feature new
+tags: acs-aem-commons-features new
 initial-release: 1.5.0
 ---
 
@@ -12,7 +12,7 @@ initial-release: 1.5.0
 
 This generic column control component allows authors to define column widths as a percentage.
 
-![Responsive Column Control Dialog]({{ site.baseurl }}/images/responsive-column-control/dialog.png)
+![Responsive Column Control Dialog]({{ site.data.acs-aem-commons.baseurl }}/images/responsive-column-control/dialog.png)
 
 
 # How to Use

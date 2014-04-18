@@ -1,10 +1,10 @@
 ---
-layout: feature
+layout: acs-aem-tools_feature
 title: Developer Health Checks
 description: Automatically check your components and templates.
 date: 2014-03-23 01:00:00
 thumbnail: /images/health-checks/thumbnail.png
-tags: acs-aem-tools-feature new
+tags: acs-aem-tools-features new
 ---
 
 Sling Health Check Tools is a Sling module for checking the health of a running Sling system based on a series of Health Check services. ACS AEM Tools includes two Health Checks for evaluating the quality of development deliverables:
@@ -22,20 +22,20 @@ Both health checks need to be configured with the root path(s) of the applicatio
 
 ***
 
-![Component HC]({{ site.baseurl }}/images/health-checks/component.png)
+![Component HC]({{ site.data.acs-aem-tools.baseurl }}/images/health-checks/component.png)
 
 ***
 
-![Template HC]({{ site.baseurl }}/images/health-checks/template.png)
+![Template HC]({{ site.data.acs-aem-tools.baseurl }}/images/health-checks/template.png)
 
 ***
 
 In the case of these screenshots, both Health Checks are tagged with `development`. Using this tag, you can also create a composite Health Check using OSGi configuration:
 
-![Composite HC]({{ site.baseurl }}/images/health-checks/composite.png)
+![Composite HC]({{ site.data.acs-aem-tools.baseurl }}/images/health-checks/composite.png)
 
 ***
 
 Once configured, the Health Checks are testable through the OSGi Web Console or using JMX.
 
-![Executing HC]({{ site.baseurl }}/images/health-checks/execution.png)
+![Executing HC]({{ site.data.acs-aem-tools.baseurl }}/images/health-checks/execution.png)

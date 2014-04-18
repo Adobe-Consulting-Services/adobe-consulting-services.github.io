@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: ClientLibs Manager
 description: AEM Design-driven, reusable ClientLibs
 date: 2013-09-20 23:39:29
@@ -27,13 +27,13 @@ Create one ClientLib (/etc/clientlibs/us-brands) and use it across all US Sites 
 
   > Body Clientlibs only accept JavaScript as CSS should always be loaded in the Head.
 
-- Leverages the [ACS Commons - Delegating Servlet]({{ site.baseurl }}/features/delegating-servlet.html) to provide an unobtrusive overlay
+- Leverages the [ACS Commons - Delegating Servlet]({{ site.data.acs-aem-commons.baseurl }}/features/delegating-servlet.html) to provide an unobtrusive overlay
 
-- [DesignHtmlLibraryManager]({{ site.baseurl }}/apidocs/index.html?com/adobe/acs/commons/designer/DesignHtmlLibraryManager.html) Service
+- [DesignHtmlLibraryManager]({{ site.data.acs-aem-commons.baseurl }}/apidocs/index.html?com/adobe/acs/commons/designer/DesignHtmlLibraryManager.html) Service
 
   > Wraps the OOTB HtmlLibraryManager Service but is driven by the ClientLib configuration from the current design (first bullet point)
 
-![image]({{ site.baseurl }}/images/designer-clientlibsmanager/designs-page.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/designer-clientlibsmanager/designs-page.png)
 
 ### Required Sling OSGi Configuration
 

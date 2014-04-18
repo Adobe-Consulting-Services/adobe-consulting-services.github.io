@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Dynamic RTE Configuration
 description: Create a re-usable RTE configurations
 date: 2013-08-30 23:39:29

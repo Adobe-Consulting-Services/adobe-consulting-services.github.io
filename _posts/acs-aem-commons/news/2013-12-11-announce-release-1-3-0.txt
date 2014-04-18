@@ -5,4 +5,5 @@ description: New feature XSS JSP Functions. Bug fixes to versioned client librar
 date: 2013-12-11 10:39:29
 thumbnail: /images/default/thumbnail.png
 categories: news
+tags: acs-aem-commons-news
 ---

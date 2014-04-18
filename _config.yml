@@ -1,4 +1,7 @@
 name: Adobe Consulting Services
 pygments: true
 permalink:  none
+markdown: kramdown
 baseurl: /
+acs-aem-commons-version: 1.5.0
+acs-aem-tools-version: 0.0.8

@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: LinkedIn Scribe Integration
 description: Ease LinkedIn integration needs
 date: 2013-07-25 23:39:29
 thumbnail: /images/linkedin-scribe/thumbnail.png
-tags: acs-aem-commons-feature new
+tags: acs-aem-commons-features new
 ---
 
 # Purpose

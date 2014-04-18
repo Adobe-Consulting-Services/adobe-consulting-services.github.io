@@ -5,4 +5,5 @@ description: New Query Editor Tool; New Developer Health Checks; Misc AEM 6 comp
 date: 2014-03-24 10:00:00
 thumbnail: /images/default/thumbnail.png
 categories: news
+tags: acs-aem-tools-news
 ---

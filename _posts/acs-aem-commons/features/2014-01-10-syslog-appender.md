@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Syslog Integration
 description: Send log messages to remote systems
 date: 2014-01-10 23:39:29
 thumbnail: /images/syslog/thumbnail.png
-tags: acs-aem-commons-feature new
+tags: acs-aem-commons-features new
 initial-release: 1.5.0
 ---
 
@@ -18,4 +18,4 @@ Using this OSGi configured Logback appender, you can easily send log messages to
 
 Configure a new instance of the `com.adobe.acs.commons.logging.impl.SyslogAppender` with the host and port of your syslog server. To log all messages, leave the logger names field as `ROOT`; otherwise specify the specific logger names you want to send to the server.
 
-![syslog configuration]({{ site.baseurl }}/images/syslog/config.png)
+![syslog configuration]({{ site.data.acs-aem-commons.baseurl }}/images/syslog/config.png)

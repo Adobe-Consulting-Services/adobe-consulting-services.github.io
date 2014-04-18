@@ -5,4 +5,5 @@ description: New features include a Drag-and-Drop path field widget and a Design
 date: 2013-10-11 10:39:29
 thumbnail: /images/default/thumbnail.png
 categories: news
+tags: acs-aem-commons-news
 ---

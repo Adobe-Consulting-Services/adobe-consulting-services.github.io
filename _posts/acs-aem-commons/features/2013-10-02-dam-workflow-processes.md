@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: DAM Workflow Processes
 description: Commonly required DAM workflow processes.
 date: 2013-10-02 15:39:29
 thumbnail: /images/dam-workflow-processes/thumbnail.png
-tags: acs-aem-commons-feature updated
+tags: acs-aem-commons-features updated
 initial-release: 1.0.0
 ---
 
@@ -27,14 +27,14 @@ This process overlays the named watermark image onto the named rendition in the 
 1. Store your watermark file in CQ. This can either be a DAM asset or just an `nt:file` node.
 2. Update the DAM Update Asset workflow (`/etc/workflow/models/dam/update_asset`) and add a custom process step at any point after the rendition you want to watermark has been generated.
     1. Open the DAM Update Asset workflow
-    2. Insert a new Process step, Workflow/Process Step ![Workflow Component List]({{ site.baseurl }}/images/dam-workflow-processes/1.png)
+    2. Insert a new Process step, Workflow/Process Step ![Workflow Component List]({{ site.data.acs-aem-commons.baseurl }}/images/dam-workflow-processes/1.png)
     3. Edit the Process Step
         1. Title: Add watermark to image
-        2. On the Process tab, select “Add Watermark to Rendition” from the Process drop down. ![Process Drop Down]({{ site.baseurl }}/images/dam-workflow-processes/2.png)
+        2. On the Process tab, select “Add Watermark to Rendition” from the Process drop down. ![Process Drop Down]({{ site.data.acs-aem-commons.baseurl }}/images/dam-workflow-processes/2.png)
         3. Check the Handler Advance option
         4. Two arguments are required
             1. `renditionName`: The name of the rendition to modify, e.g. "cq5dam.web.1280.1280"
-            2. `watermark`: The repository path of the watermark. If this is a simple `nt:file` node, it is just the path to the node. If it is a DAM asset, it is the path to the original rendition, e.g. `/content/dam/geometrixx/icons/target.png/jcr:content/renditions/original`. ![Arguments]({{ site.baseurl }}/images/dam-workflow-processes/3.png)
+            2. `watermark`: The repository path of the watermark. If this is a simple `nt:file` node, it is just the path to the node. If it is a DAM asset, it is the path to the original rendition, e.g. `/content/dam/geometrixx/icons/target.png/jcr:content/renditions/original`. ![Arguments]({{ site.data.acs-aem-commons.baseurl }}/images/dam-workflow-processes/3.png)
     4. Click OK and then “Save” the workflow.
 
 A full configuration example might have all the following:  
@@ -51,12 +51,12 @@ This process ensures that an rendition *exactly* matches a set of dimensions by 
 Update the DAM Update Asset workflow (`/etc/workflow/models/dam/update_asset`) and add a custom process step at any point after the rendition you want to matte has been generated.
 
 1. Open the DAM Update Asset workflow
-2. At the end insert a new Process step, Workflow/Process Step ![Workflow Component List]({{ site.baseurl }}/images/dam-workflow-processes/1.png)
+2. At the end insert a new Process step, Workflow/Process Step ![Workflow Component List]({{ site.data.acs-aem-commons.baseurl }}/images/dam-workflow-processes/1.png)
 3. Edit the Process Step
     1. Title: Matte Rendition
-    2. On the Process tab, select “Matte Rendition” from the Process drop down ![image]({{ site.baseurl }}/images/dam-workflow-processes/select-matte-finish.jpg)
+    2. On the Process tab, select “Matte Rendition” from the Process drop down ![image]({{ site.data.acs-aem-commons.baseurl }}/images/dam-workflow-processes/select-matte-finish.jpg)
     3. Check the Handler Advance option
-    4. Five arguments are required ![Matte Renditions Params]({{ site.baseurl }}/images/dam-workflow-processes/matte-finish-params.jpg)
+    4. Five arguments are required ![Matte Renditions Params]({{ site.data.acs-aem-commons.baseurl }}/images/dam-workflow-processes/matte-finish-params.jpg)
         1. `bgcolor`: The background color (in hex notation) you want to apply to the rendition
         2. `dimension`: dimensions of the image size
         3. `vpos`: starting vertical position, the options are "top", "bottom", and "middle"

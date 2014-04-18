@@ -5,4 +5,5 @@ description: First public release!
 date: 2013-12-18 00:00:00
 thumbnail: /images/default/thumbnail.png
 categories: news
+tags: acs-aem-tools-news
 ---

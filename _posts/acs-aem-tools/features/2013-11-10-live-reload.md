@@ -1,11 +1,11 @@
 ---
-layout: tools-feature
+layout: acs-aem-tools_feature
 title: AEM LiveReload
 description: Give Cmd-R a break
 date: 2013-12-04
 thumbnail: /images/aem-livereload/thumbnail.png
 initial-release: 0.0.2
-tags: acs-aem-tools-feature updated
+tags: acs-aem-tools-features updated
 ---
 
 LiveReload is a browser plugin which automatically reloads browser windows when files change. It uses WebSockets to create a persistent connection to the server. When used with AEM 5.6 or AEM 5.6.1, this feature supports reloading pages when JSPs change. When used with AEM 6.0, it will also listen for client library changes.
@@ -41,7 +41,7 @@ This includes the necessary Netty OSGi bundles.
 * [IE](https://github.com/dvdotsenko/livereload_ie_extension)
 
 
-![Browser Plugin]({{ site.baseurl }}/images/aem-livereload/browser-plugin.png)
+![Browser Plugin]({{ site.data.acs-aem-tools.baseurl }}/images/aem-livereload/browser-plugin.png)
 
 ## How to Use
 
@@ -52,6 +52,6 @@ This includes the necessary Netty OSGi bundles.
 	* LiveReload can be leveraged when vlt'ing files into CRX, deploying via Maven builds or editting in CRXDE/CRXDE Lite.
 5. The browser window opened in Step 1. will automatically refresh and display the changes.
 
-![ACS AEM Tools LiveReload Example]({{ site.baseurl }}/images/aem-livereload/example.png)
+![ACS AEM Tools LiveReload Example]({{ site.data.acs-aem-tools.baseurl }}/images/aem-livereload/example.png)
 
 ***Tip: Append `?wcmmode=disabled` to the end of the URL in your address bar to avoid loading authoring scripts and reduce refresh times.***

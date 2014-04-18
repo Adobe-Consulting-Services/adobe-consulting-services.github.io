@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Component Helper
 description: Simplify your components
 date: 2013-06-10 23:39:29
 thumbnail: /images/default/thumbnail.png
-tags: acs-aem-commons-feature
+tags: acs-aem-commons-features
 initial-release: 1.0.0
 ---
 

@@ -1,4 +1,4 @@
-@import "core.less";
+@import "core.less"; 
 @import "icons.less";
 @import "jumbotron.less";
 @import "feature-cards.less";
@@ -80,6 +80,7 @@ header.top {
 
 .stripe {
   .color-block();
+
   background-size: cover;
   height: 5em;
   color: white;
@@ -183,12 +184,20 @@ header.top {
   }
 }
 
+#projects {
+  a {
+    color: black;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
 
 footer {
   border-top: solid 1px #eee;
   padding: 2em 0 2em 0;
 }
-
 
 /* reusables */
 

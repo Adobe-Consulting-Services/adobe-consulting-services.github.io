@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Dispatcher Flush UI
 description: The conveniece of flushing by yourself
 date: 2013-10-02 23:39:29
@@ -23,16 +23,16 @@ Allow AEM authors (or "super authors") to flush parts of the dispatcher cache ma
 		* /etc/acs-commons/dispatcher-flush
 		* /etc/dispatcher-flush
 		* /etc/replication
-![image]({{ site.baseurl }}/images/dispatcher-flush-ui/new-page.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-ui/new-page.png)
 * Give the page a logical naming ("Brand X Site" or "Brand Y Site")
 * Open the page and edit the component
-![image]({{ site.baseurl }}/images/dispatcher-flush-ui/dialog.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-ui/dialog.png)
 	* Add all the paths you would like to flush for the particular site
 	* Select the "flush type"
 	  * `Invalidate Cache` touches .stat files invalidating the cache
 	  * `Delete Cache` deletes the files from Dispatcher
 * Verify that all the expected Dispatcher Flush Agents are listed below the configuration and the paths are correct.
-![image]({{ site.baseurl }}/images/dispatcher-flush-ui/dispatcher-flush-ui.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-ui/dispatcher-flush-ui.png)
 * Press the "Flush Paths" button
 	* If the "Flush Paths" button does not appear something is wrong with the configuration or no Flush Agents are available.
 * The page will refresh indicating the successful status of your Flush request
@@ -41,4 +41,4 @@ Allow AEM authors (or "super authors") to flush parts of the dispatcher cache ma
 
 **Note: This requires Dispatcher Flush Replication Agents to be setup on Author. If your Dispatcher Flush agents reside on Publish, you will need to setup a parrallel set on AEM Author with the setting if "Ignore Default"**
 
-![image]({{ site.baseurl }}/images/dispatcher-flush-ui/replication-agent-config-ignore-default.png)      
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-ui/replication-agent-config-ignore-default.png)      

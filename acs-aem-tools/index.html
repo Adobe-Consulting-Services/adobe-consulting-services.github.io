@@ -1,12 +1,11 @@
 ---
-layout: tools-home
-project: tools
+layout: acs-aem-tools_home
 title: ACS AEM Tools
 description: ...
 ---
 
 <!-- News -->
-{% include tools/news.html %}
+{% include acs-aem-tools/news.html %}
 
 <!-- How to use -->
 <section class="introduction">
@@ -59,12 +58,12 @@ description: ...
 
     <div class="container">
         <div class="wrapper">
-            {% for post in site.tags.acs-aem-tools-feature %}
+            {% for post in site.tags.acs-aem-tools-features %}
 
                 {% assign mod2 = forloop.index|modulo:2 %}
                 {% assign mod3 = forloop.index|modulo:3 %}
 
-                {% include shared/feature-card.html feature=post project=page.project %}
+                {% include shared/feature-card.html feature=post project=site.data.acs-aem-tools.name %}
 
                 {% if mod2 == 0 %}
                 <div class="clearfix visible-sm visible-xs hidden-md hidden-lg"></div>

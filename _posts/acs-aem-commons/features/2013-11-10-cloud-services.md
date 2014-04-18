@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: AEM Cloud Services
 description: Integrate with cloud services like a Pro!
 date: 2013-11-10 23:39:29
@@ -17,7 +17,7 @@ Due to a AEM 5.6.0 product issue.
 
 Centrally manage and distribute JavaScript across all your web properties.
 
-![image]({{ site.baseurl }}/images/cloud-services/dtm.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/cloud-services/dtm.png)
 
 ### How to Use
 
@@ -34,7 +34,7 @@ Centrally manage and distribute JavaScript across all your web properties.
 
 Leverage Adobe Typekit's web-fonts to make your AEM web sites stand out on the Web.
 
-![image]({{ site.baseurl }}/images/cloud-services/typekit.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/cloud-services/typekit.png)
 
 ### How to Use
 

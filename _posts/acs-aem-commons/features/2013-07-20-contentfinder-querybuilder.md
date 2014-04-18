@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Content Finder - Query Builder
 description: Use QueryBuilder syntax to build ContentFinder tabs
 date: 2013-07-20 23:39:29

@@ -1,3 +1,3 @@
-lessc projects/projects.less > ../assets/projects/css/styles.css
-lessc commons/commons.less > ../assets/commons/css/styles.css
-lessc tools/tools.less > ../assets/tools/css/styles.css
+lessc acs-aem-projects/projects.less > ../assets/acs-aem-projects/css/styles.css
+lessc acs-aem-commons/commons.less > ../assets/acs-aem-commons/css/styles.css
+lessc acs-aem-tools/tools.less > ../assets/acs-aem-tools/css/styles.css

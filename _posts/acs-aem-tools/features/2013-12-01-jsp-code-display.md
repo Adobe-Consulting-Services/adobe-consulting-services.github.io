@@ -1,16 +1,16 @@
 ---
-layout: tools-feature
+layout: acs-aem-tools_feature
 title: JSP Code Display
 description: A tool for tracking down those pesky JSP errors hidden away in compiled servlets.
 date: 2013-12-05
 thumbnail: /images/jsp-code-display/thumbnail.png
 initial-release: 0.0.2
-tags: acs-aem-tools-feature
+tags: acs-aem-tools-features
 ---
 
 ## Getting Started
 
-![AEM Tools]({{ site.baseurl }}/images/jsp-code-display/miscadmin.png)
+![AEM Tools]({{ site.data.acs-aem-tools.baseurl }}/images/jsp-code-display/miscadmin.png)
 
 Install the ACS AEM Tools package via the AEM Package Manager and then open JSP Code Display from the AEM Tools console, or directly at [/etc/acs-tools/jsp-code-display.html](http://localhost:4502/etc/acs-tools/jsp-code-display.html)
 
@@ -18,4 +18,4 @@ Install the ACS AEM Tools package via the AEM Package Manager and then open JSP 
 
 ## Overview
 
-![JSP Code Display]({{ site.baseurl }}/images/jsp-code-display/screenshot.png)
+![JSP Code Display]({{ site.data.acs-aem-tools.baseurl }}/images/jsp-code-display/screenshot.png)

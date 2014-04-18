@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Named Transform Image Servlet
 description: Consistently resize, crop and transform images
 date: 2014-01-12 01:00:00
 thumbnail: /images/named-image-transform/thumbnail.png
-tags: acs-aem-commons-feature new
+tags: acs-aem-commons-features new
 initial-release: 1.5.0
 ---
 
@@ -20,13 +20,13 @@ The below DAM Asset image has been resizes, rotated, cropped and greyscaled as d
 
 `http://localhost:4502/content/dam/geometrixx/shapes/sq_plan.png.transform/my-transform-name/image.png`
 
-![image]({{ site.baseurl }}/images/named-image-transform/my-transform-name-example.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/named-image-transform/my-transform-name-example.png)
 
 ( Original image on left. Transformed image on right. )
 
 Supporting OSGi Configuration
 
-![image]({{ site.baseurl }}/images/named-image-transform/my-transform-name-osgi-config.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/named-image-transform/my-transform-name-osgi-config.png)
 
 
 

@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: ACL Packager
 description: Easily zip up access control entries
 date: 2014-01-20 23:39:29
 thumbnail: /images/acl-packager/thumbnail.png
-tags: acs-aem-commons-feature new
+tags: acs-aem-commons-features new
 initial-release: 1.5.0
 ---
 
@@ -18,10 +18,10 @@ Frequently, access control entries need to be copied from one environment to ano
 * Navigate to the Classic UI Tools Console (from the Touch UI, this is Tools:Operations:Configuration)
 * Under the `acs-commmons` folder, create a folder named `packagers` (Title can be anything).
 * Under the `packagers` folder, create a new Page of Template type "ACL Packager"
-![image]({{ site.baseurl }}/images/acl-packager/create_dialog.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/create_dialog.png)
 * Use the Edit dialog to configure the package rules and configuration
-![image]({{ site.baseurl }}/images/acl-packager/edit_dialog.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/edit_dialog.png)
 * The Preview button output a list of the access control entries which will be packaged.
-![image]({{ site.baseurl }}/images/acl-packager/page_with_preview.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/page_with_preview.png)
 * The Create Package button... creates the package
-![image]({{ site.baseurl }}/images/acl-packager/created_package.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/created_package.png)

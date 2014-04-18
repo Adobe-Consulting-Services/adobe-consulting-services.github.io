@@ -1,22 +1,11 @@
 ---
-layout: commons-home
-project: commons
+layout: acs-aem-commons_home
 title: Adobe AEM Commons
 description: xxxx
 ---
 
 <!-- News -->
-<section class="news">
-    <div class="container">
-        <ul class="show-more-list">
-
-            {% include commons/news.html %}
-
-            <a class="show-more" href="javascript:void();">Show more news &#xffec;</a>
-
-        </ul>
-    </div>
-</section>
+{% include acs-aem-commons/news.html %}
 
 <!-- How to use -->
 <section class="introduction">
@@ -29,7 +18,7 @@ description: xxxx
                 <h4>What ACS AEM Commons <u>is</u>!</h4>
 
                 <p>
-                    A way to <em>bootstrap an AEM project</em> with common functionality,
+                    A way to <em>bootstra AEM project</em> with common functionality,
                     a set of <em>reusable components</em>,
                     and an <em>AEM development toolkit</em>.
                 </p>
@@ -75,14 +64,13 @@ description: xxxx
 
     <div class="container">
         <div class="wrapper">
+                {{ page.project }}
 
-
-            {% for post in site.tags.acs-aem-commons-feature %}
-
+            {% for post in site.tags.acs-aem-commons-features %}
                 {% assign mod2 = forloop.index|modulo:2 %}
                 {% assign mod3 = forloop.index|modulo:3 %}
 
-                {% include shared/feature-card.html feature=post project=page.project %}
+                {% include shared/feature-card.html feature=post project=site.data.acs-aem-commons.name %}
 
                 {% if mod2 == 0 %}
                 <div class="clearfix visible-sm visible-xs hidden-md hidden-lg"></div>

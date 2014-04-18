@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Error Page Handler
 description: Create authorable error pages with ease
 date: 2013-09-30 23:39:29

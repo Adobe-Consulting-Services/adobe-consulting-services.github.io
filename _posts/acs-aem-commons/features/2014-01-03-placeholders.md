@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Component Placeholders
 description: A little polish goes a long way
 date: 2014-01-10 23:39:29
 thumbnail: /images/placeholders/thumbnail.png
-tags: acs-aem-commons-feature new
+tags: acs-aem-commons-features new
 initial-release: 1.5.0
 ---
 
@@ -73,7 +73,7 @@ Note that sizes can be used with the standard placeholder classes as well:
 
 Yields the following ..
 
-![Sample Placeholderes]({{ site.baseurl }}/images/placeholders/sample.png)
+![Sample Placeholderes]({{ site.data.acs-aem-commons.baseurl }}/images/placeholders/sample.png)
 
 
 ## Notes

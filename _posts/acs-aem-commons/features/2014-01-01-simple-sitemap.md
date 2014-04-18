@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Simple Sitemap Generator
 description: Easily generate sitemaps for search indexing
 date: 2014-01-01 23:39:29
 thumbnail: /images/sitemap/thumbnail.png
-tags: acs-aem-commons-feature new
+tags: acs-aem-commons-features new
 initial-release: 1.5.0
 ---
 
@@ -16,7 +16,7 @@ Generate a Sitemap XML file in the syntax defined by [http://www.sitemaps.org/](
 
 In order to use this feature, you must have a "home page" page component, e.g. `geometrixx/components/homepage`. Once you have determined the resource type for this page component, configure a new instance of the `com.adobe.acs.commons.wcm.impl.SiteMapServlet` servlet with the resource type and, optionally, a domain name configured in the Externalizer component.
 
-![sitemap servlet configuration]({{ site.baseurl }}/images/sitemap/config.png)
+![sitemap servlet configuration]({{ site.data.acs-aem-commons.baseurl }}/images/sitemap/config.png)
 
 > See [http://dev.day.com/docs/en/cq/current/developing/externalizer.html](http://dev.day.com/docs/en/cq/current/developing/externalizer.html) for more information on configuring the Externalizer.
 

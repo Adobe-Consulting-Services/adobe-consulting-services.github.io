@@ -1,10 +1,10 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Component Error Handler
 description: Don't let erring Components ruin your day
 date: 2013-10-23 23:39:29
 thumbnail: /images/component-error-handler/thumbnail.png
-tags: acs-aem-commons-feature updated
+tags: acs-aem-commons-features updated
 initial-release: 1.2.0
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Dispatcher Flush Rules
 description: Statlevels cramping your flushes?
 date: 2013-10-01 23:39:29
@@ -20,7 +20,7 @@ Create a new `sling:OsgiConfig` node for each logical flush rule set. A good pra
 
 ### OSGi Config Properties
 
-![image]({{ site.baseurl }}/images/dispatcher-flush-rules/osgi-configuration.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-rules/osgi-configuration.png)
 
 ##### prop.replication-action-type
 
@@ -63,11 +63,11 @@ used to initiate "ResourceOnly" dispatcher flush requests.
 
 ***Note: To use ResourceOnly mappings, a second set of Dispatcher Flush Agents must be created with the exact HTTP Header `CQ-Action-Scope: ResourceOnly`. ***
 
-![image]({{ site.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-cq-action-scope-resourceonly.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-cq-action-scope-resourceonly.png)
 
 These Flush Agents should also be configured as `Ignore Default`
 
-![image]({{ site.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-ignore-default.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-ignore-default.png)
 
 
 {% highlight xml %}
@@ -86,7 +86,7 @@ These Flush Agents should also be configured as `Ignore Default`
 
 Dispatcher Flush Rules work from AEM 5.6 Publish Servers as well. Simple configure your Dispatcher Flush Agents on Publish to issue "On Trigger". (It is likely this has been previously configured if you are already using Publish-side flushing).
 
-![image]({{ site.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-on-receive.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-on-receive.png)
 
 
 ## Global Config Example

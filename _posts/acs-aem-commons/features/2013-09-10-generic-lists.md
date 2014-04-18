@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: Generic Lists
 description: Easy creation of simple name/value pair lists
 date: 2013-09-10 23:39:29
@@ -18,11 +18,11 @@ Generic Lists are a feature allowing easy creation and management of lists of ti
 
 Generic Lists are represented as CQ Pages under `/etc/acs-commons/lists`, e.g. `/etc/acs-commons/lists/age-ranges`. They are editable by using the Tools screen:
 
-![image]({{ site.baseurl }}/images/generic-lists/in-miscadmin.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/generic-lists/in-miscadmin.png)
 
 On a list page, the items in the list are components within a parsys. New items can be created using the Sidekick. Items can be removed using the context menu.
 
-![image]({{ site.baseurl }}/images/generic-lists/editor.png)
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/generic-lists/editor.png)
 
 ### Using Lists in Dialogs
 

@@ -1,5 +1,5 @@
 ---
-layout: commons-feature
+layout: acs-aem-commons_feature
 title: ACS AEM Commons Utils
 description: A collection of common utils
 date: 2013-06-30 23:39:29
@@ -14,7 +14,7 @@ Provide common utility functionality across projects.
 
 h2. Overview
 
-The best overview are the "ACS AEM Commons Utils JavaDocs":{{ site.baseurl }}/apidocs/com/adobe/acs/commons/util/package-summary.html.
+The best overview are the "ACS AEM Commons Utils JavaDocs":{{ site.data.acs-aem-commons.baseurl }}/apidocs/com/adobe/acs/commons/util/package-summary.html.
 
 Characteristics of the ACS AEM Commons Utils are:
 
