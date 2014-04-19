@@ -1,4 +1,5 @@
 name: Adobe Consulting Services
 pygments: true
 permalink:  none
+markdown: kramdown
 baseurl: /
