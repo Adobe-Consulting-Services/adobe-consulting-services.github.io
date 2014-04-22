@@ -4,6 +4,7 @@ title: Developer Health Checks
 description: Automatically check your components and templates.
 date: 2014-03-23 01:00:00
 thumbnail: /images/health-checks/thumbnail.png
+categories: acs-aem-tools features
 tags: acs-aem-tools-features new
 ---
 

@@ -5,6 +5,7 @@ description: Give Cmd-R a break
 date: 2013-12-04
 thumbnail: /images/aem-livereload/thumbnail.png
 initial-release: 0.0.2
+categories: acs-aem-tools features
 tags: acs-aem-tools-features updated
 ---
 

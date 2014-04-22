@@ -15,10 +15,17 @@
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
     text-align: center;
-    /* hack to get the dots centered */
-    padding-right: 40px;
-    bottom: -8px;
+    padding: 1em 0 0 0;
+    margin: 0;
+    background-color:rgba(0,0,0,0.5);
+}
+
+@media (min-width: @screen-lg-min) {
+    .unslider .dots {
+        background-color: transparent;
+    }
 }
 
 .unslider .dots li {

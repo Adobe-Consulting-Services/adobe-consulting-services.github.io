@@ -5,6 +5,7 @@ description: A tool for tracking down those pesky JSP errors hidden away in comp
 date: 2013-12-05
 thumbnail: /images/jsp-code-display/thumbnail.png
 initial-release: 0.0.2
+categories: acs-aem-tools
 tags: acs-aem-tools-features
 ---
 

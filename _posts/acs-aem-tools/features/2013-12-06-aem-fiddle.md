@@ -5,6 +5,7 @@ description: Web-based AEM IDE perfect for POC’s, experimenting and running ad
 date: 2013-12-06 01:00:00
 thumbnail: /images/aem-fiddle/thumbnail.png
 initial-release: 0.0.2
+categories: acs-aem-tools features
 tags: acs-aem-tools-features updated
 ---
 
