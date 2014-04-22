@@ -6592,13 +6592,11 @@ p a {
     margin-top: 10em;
   }
   #jumbotron .slide .wrapper.image-on-left .slide-image {
-    margin: initial;
     left: 2.5em;
     right: inherit;
   }
   #jumbotron .slide .wrapper.image-on-right .slide-image {
     right: 2.5em;
-    width: 650px;
     left: inherit;
   }
   #jumbotron .slide .wrapper.image-on-top .slide-image {
