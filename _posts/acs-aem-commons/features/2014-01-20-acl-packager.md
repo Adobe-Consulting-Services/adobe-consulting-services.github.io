@@ -5,6 +5,7 @@ description: Easily zip up access control entries
 date: 2014-01-20 23:39:29
 thumbnail: /images/acl-packager/thumbnail.png
 tags: acs-aem-commons-features new
+categories: acs-aem-commons features
 initial-release: 1.5.0
 ---
 
