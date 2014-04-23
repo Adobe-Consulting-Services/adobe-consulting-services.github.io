@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: acs-aem-commons_default
 title: Using with Maven
 ---
 
