@@ -6869,7 +6869,7 @@ p a {
   #jumbotron .slide .wrapper.image-on-left .slide-image {
     top: 1em;
     margin: initial;
-    width: 525px;
+    width: auto;
     height: auto;
   }
   #jumbotron .slide .wrapper.image-on-right .message,
