@@ -6968,7 +6968,7 @@ p a {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
-  color: #eee;
+  color: white;
   font-weight: 200;
   border-color: #2bce00;
   background-color: transparent;
@@ -7004,7 +7004,7 @@ fieldset[disabled] #jumbotron .slide .action-btn {
   box-shadow: none;
 }
 #jumbotron .slide .action-btn:hover {
-  color: #fff;
+  color: white;
 }
 #jumbotron .slide .action-btn:active {
   color: white;
