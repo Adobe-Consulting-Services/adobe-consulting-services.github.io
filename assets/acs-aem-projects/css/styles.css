@@ -7206,8 +7206,9 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
   padding-bottom: .25em;
 }
 .feature-doc .img-wrapper {
-  margin: 1em auto;
+  margin: 2em auto;
   max-width: 900px;
+  text-align: center;
 }
 .feature-doc img {
   display: inline-block;
@@ -7226,9 +7227,6 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
 }
 .feature-doc code {
   whitespace: normal;
-}
-.feature-doc .img-wrapper {
-  margin: .5em auto;
 }
 /* Inline Code */
 code {
