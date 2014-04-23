@@ -4,6 +4,6 @@ title: Release 1.2.4 now available!
 description: Bugfix release
 date: 2013-12-04 10:39:29
 thumbnail: /images/default/thumbnail.png
-categories: news
+categories: acs-aem-commons news
 tags: acs-aem-commons-news
 ---
