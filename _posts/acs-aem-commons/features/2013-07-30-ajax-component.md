@@ -13,6 +13,9 @@ initial-release: 1.0.0
 
 Provide a simple extension point for turning "normal" components into components that are pulled into the page via AJAX.
 
+> An robust alternative to the AJAX Component is the open-source [Dynamic Sling Include](https://github.com/Cognifide/Sling-Dynamic-Include#sling-dynamic-include) project.
+
+
 ## How to Use
 
 1. Requires jQuery 1.8+
