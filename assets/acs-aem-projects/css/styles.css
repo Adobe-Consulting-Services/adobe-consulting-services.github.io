@@ -7185,7 +7185,7 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
   top: -0.1em;
 }
 .feature-doc h1 .updated {
-  background-color: red;
+  background-color: #308BF6;
   color: #FFF;
   padding: .25em .5em;
   border-radius: 5px;
@@ -7228,6 +7228,9 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
 .feature-doc code {
   whitespace: normal;
 }
+.feature-doc .feature-doc-header {
+  margin-bottom: 1.5em;
+}
 /* Inline Code */
 code {
   background-color: #f7f7f7;
@@ -7250,7 +7253,7 @@ pre code {
   border: 0;
 }
 .color-block {
-  background: url('../images/colored-bg.jpg') no-repeat center center fixed;
+  background: url('../shared/../images/colored-bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7326,7 +7329,7 @@ header.top .navbar .nav li.acs-aem-projects a {
   top: -5px;
 }
 .stripe {
-  background: url('../images/colored-bg.jpg') no-repeat center center fixed;
+  background: url('../shared/../images/colored-bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

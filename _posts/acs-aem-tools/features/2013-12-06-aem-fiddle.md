@@ -11,7 +11,7 @@ tags: acs-aem-tools-features updated
 
 The intent of AEM Fiddle is to provide an accessible, developer friendly environent for experimentation, POCs and other one-off tasks. AEM Fiddle is **not** intended to be used as a full fledged application development environment.
 
-AEM Fiddle's fundamental advantage over other AEM IDE's is: *time to execution*. 
+AEM Fiddle's fundamental advantage over other AEM IDEs is: *time to execution*. 
 
 Most AEM IDE/development tooling requires the orchestration of scripts, resources and `sling:resourceTypes`. AEM Fiddle allows you to begin coding and executing your code in seconds (literally).
 

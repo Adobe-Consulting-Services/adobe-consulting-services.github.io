@@ -4,18 +4,20 @@ layout: acs-aem-tools_default
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
         <section class="feature-doc">
-            <h1>
-                {{ page.title }}
-                {% if page.tags contains 'new' %}
-                <span class="new">New!</span>
-                {% elsif page.tags contains 'updated' %}
-                <span class="updated">Updated</span>
-                {% endif %}
-            </h1>
+            <div class="feature-doc-header">
+                <h1>
+                    {{ page.title }}
+                    {% if page.tags contains 'new' %}
+                    <span class="new">New!</span>
+                    {% elsif page.tags contains 'updated' %}
+                    <span class="updated">Updated</span>
+                    {% endif %}
+                </h1>
 
-            {% if page.initial-release %}
-            Available since version {{page.initial-release}}
-            {% endif %}
+                {% if page.initial-release %}
+                <p class="available-since">Available since version {{page.initial-release}}</p>
+                {% endif %}
+            </div>
 
             {{ content }}
         </section>
