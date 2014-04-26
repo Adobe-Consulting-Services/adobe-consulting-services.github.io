@@ -1,8 +1,8 @@
 ---
 layout: acs-aem-commons_default
-title: Release 1.2.4 now available!
-description: Bugfix release
-date: 2013-12-04
+title: Release 1.5.2 now available!
+description: CQ 5.5 Compatability Release
+date: 2014-04-24
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
 tags: acs-aem-commons-news

@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Versioned ClientLibs
 description: Set TTLs on ClientLib JS/CSS to infinity and beyond!
-date: 2013-10-01 23:39:29
+date: 2013-10-01
 thumbnail: /images/versioned-clientlibs/thumbnail.png
 tags: acs-aem-commons-features updated
 categories: acs-aem-commons features

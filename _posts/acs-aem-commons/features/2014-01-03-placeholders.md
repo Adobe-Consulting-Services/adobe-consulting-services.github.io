@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Component Placeholders
 description: A little polish goes a long way
-date: 2014-01-10 23:39:29
+date: 2014-01-10
 thumbnail: /images/placeholders/thumbnail.png
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features

@@ -2,7 +2,7 @@
 layout: acs-aem-tools_feature
 title: AEM Fiddle
 description: Web-based AEM IDE perfect for POC’s, experimenting and running ad hoc scripts.
-date: 2013-12-06 01:00:00
+date: 2013-12-06
 thumbnail: /images/aem-fiddle/thumbnail.png
 initial-release: 0.0.2
 categories: acs-aem-tools features

@@ -7247,7 +7247,7 @@ pre code {
   border: 0;
 }
 .color-block {
-  background: url('../shared/../images/colored-bg.jpg') no-repeat center center fixed;
+  background: url('../images/colored-bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7323,7 +7323,7 @@ header.top .navbar .nav li.acs-aem-projects a {
   top: -5px;
 }
 .stripe {
-  background: url('../shared/../images/colored-bg.jpg') no-repeat center center fixed;
+  background: url('../images/colored-bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Simple Sitemap Generator
 description: Easily generate sitemaps for search indexing
-date: 2014-01-01 23:39:29
+date: 2014-01-01
 thumbnail: /images/sitemap/thumbnail.png
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features

@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Syslog Integration
 description: Send log messages to remote systems
-date: 2014-01-10 23:39:29
+date: 2014-01-10
 thumbnail: /images/syslog/thumbnail.png
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features

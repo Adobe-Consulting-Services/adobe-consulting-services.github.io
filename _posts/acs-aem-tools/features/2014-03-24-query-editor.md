@@ -2,7 +2,7 @@
 layout: acs-aem-tools_feature
 title: Query Editor
 description: Build and debug QueryBuilder queries in real time!
-date: 2014-03-23 01:00:00
+date: 2014-03-23
 thumbnail: /images/query-editor/thumbnail.png
 initial-release: 0.0.4
 categories: acs-aem-tools features

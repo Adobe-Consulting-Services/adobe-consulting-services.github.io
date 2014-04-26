@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Generic Lists
 description: Easy creation of simple name/value pair lists
-date: 2013-09-10 23:39:29
+date: 2013-09-10
 thumbnail: /images/generic-lists/thumbnail.png
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
