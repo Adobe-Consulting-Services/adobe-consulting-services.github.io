@@ -5,6 +5,7 @@ description: Commonly required DAM workflow processes.
 date: 2013-10-02 15:39:29
 thumbnail: /images/dam-workflow-processes/thumbnail.png
 tags: acs-aem-commons-features updated
+categories: acs-aem-commons features
 initial-release: 1.0.0
 ---
 

@@ -5,6 +5,7 @@ description: Ease LinkedIn integration needs
 date: 2013-07-25 23:39:29
 thumbnail: /images/linkedin-scribe/thumbnail.png
 tags: acs-aem-commons-features new
+categories: acs-aem-commons features
 ---
 
 # Purpose
