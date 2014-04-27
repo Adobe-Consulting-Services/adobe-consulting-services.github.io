@@ -5,4 +5,5 @@ description: Live Reload now supports JavaScript injection to support mobile dev
 date: 2014-04-16
 thumbnail: /images/default/thumbnail.png
 categories: news
+tags: acs-aem-tools-news
 ---
