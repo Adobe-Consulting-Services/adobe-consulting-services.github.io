@@ -4,14 +4,17 @@ title: Error Page Handler
 description: Create authorable error pages with ease
 date: 2013-09-30
 thumbnail: /images/errorpagehandler/thumbnail.png
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.0.0
 ---
 
+> New in version 1.5.0 the ACS AEM Commons Error Page Handler comes w a light in-memory TTL-based caching layer to greatly enhance performance.
+
 ## Purpose
 
 Provide an author-able means for defining, creating and managing custom Error pages per content tree/site.
+
 
 ## Overview
 
@@ -29,6 +32,9 @@ Normal/OOTB 500x/Exception error handling behavior is respected. JSP exceptions 
 Author is displayed the corresponding Error page
 
 #### 50x Handling
+
+![image](/acs-aem-commons/images/errorpagehandler/preview-error-page.png)
+
 A custom "Error page" is displayed that includes the Request Progress and Stack Trace.
 
 ### Disabled (Publish) mode
@@ -36,6 +42,8 @@ A custom "Error page" is displayed that includes the Request Progress and Stack 
 The corresponding Error page is displayed.
 
 ## How to Use
+
+> Watch a [video on how to use the ACS AEM Commons Error Page Handler](http://aemcasts.com/aem/episode-11.html).
 
 * Create the proxy overlays for Sling errorhandler scripts (404.jsp and default.jsp) which include the acs-commons counterparts.
 
@@ -78,6 +86,22 @@ OR create a your own custom pathfield widget
     xtype="pathfield"/>
 {% endhighlight %}
 
+
+* Create a sling:OsgiConfig node to enable the Error Page Handler
+
+  /apps/myapp/config/com.adobe.acs.commons.errorpagehandler.impl.ErrorPageHandlerImpl.xml
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    prop.enabled="{Boolean}true"
+    serve-authenticated-from-cache="{Boolean}true"
+    ttl="{Long}300"/>
+{% endhighlight %}
+
+> Note: ttl is the TTL of the in-memory error page cache in seconds
+
 * Create a CQ Page that will act as the default Error page, and also contain all custom variations of error pages.
 Each error page's "name" (Node name) should correspond to the HTTP Response Status code it should respond to.
   * 500: Internal Server Error
@@ -102,9 +126,30 @@ A common pattern is to create this at the site's root under a node named "errors
 ***Note:*** At this time the full Sling exception-name look-up scheme is not supported. Implementing a *500* error page is sufficient.
 
 
-### Sling OSGi Configuration
 
-The following `sling:OsgiConfig` can be used to configure the Error Page Handler.
+## In Memory TTL-based Cache
+
+Beginning with ACS AEM Commons v1.5.0, Error Page Handler comes w an in-memory TTL based
+
+
+### JMX Mbean
+
+* The cache implementation is an implementation detail and may change over time without notice; This may change the MBean behavior, attributes and operations. *
+
+An ErrorPageHandler MBean is available when the Error Page Handler is enabled. This MBean reports on the In Memory caches entries, size in KB, hit/miss rates. It also provides functionality to clear the cache and to view the contents of the cache.
+
+![image](/acs-aem-commons/images/errorpagehandler/mbean-1.png)
+
+Error Page Handler Cache overview
+
+![image](/acs-aem-commons/images/errorpagehandler/mbean-2.png)
+
+Viewing the contents of the cache for a particular entry
+
+
+## Advanced Sling OSGi Configuration
+
+The Error Page Handler has a few more advanced settings that are typically unused/left as default.
 
     /apps/myapp/config/com.adobe.acs.commons.errorpagehandler.impl.ErrorPageHandlerImpl.xml
 
@@ -113,11 +158,29 @@ The following `sling:OsgiConfig` can be used to configure the Error Page Handler
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     prop.enabled="{Boolean}true"
+    serve-authenticated-from-cache="{Boolean}true"
+    ttl="{Long}300"
     prop.error-page.system-path="/content/error"
-    prop.error-page.extension="html"
     prop.error-page.fallback-name="500"
-    prop.paths="[/content/mysite/en:errors,/content/mysite/fr:erreurs]"/>
+    prop.error-page.extension="html"
+    prop.paths="[/content/mysite/en:errors,/content/mysite/fr:erreurs]"
+    />
 {% endhighlight %}
+
+* `enabled` true/false to toggle the Error Page Handler on and off
+
+* `serve-authenticated-from-cache` true allows authenticated requests to service the the in-memory cache. If your error pages do not contain any server-side personalization, this should be set to true to maximize cache effectiveness.
+
+* `ttl` TTL in seconds for the in-memory Error Page Handler cache; Defaults to 300 seconds (5 mins).
+
+* `error-page.system-path` is the absolute path to system Error page resource to serve if no other more appropriate error pages can be found. Does not include extension.
+
+* `error-page.fallback-name` defines the error page name (not path) to use if a valid Error Code/Error Servlet Name cannot be retrieved from the Request. Defaults to `500`
+
+* `error-page.extension` defines the extension to call the fallback error page with; This is almost ALWAYS "html" unless the application is using non-standard extensions.
+
+* `paths` define a list of valid inclusive content trees under which error pages may reside, along with the name of the the default error page for the content tree. This is a fallback/less powerful option to adding the `./errorPages`property to CQ Page property dialogs.
+
 
 ***Note: It is better to use the Page Properties-defined `errorPages` than the `prop.paths` in the OSGi Configuration. Typically `prop.paths` is left blank.***
 
