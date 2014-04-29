@@ -15,7 +15,6 @@ initial-release: 1.0.0
 
 Provide an author-able means for defining, creating and managing custom Error pages per content tree/site.
 
-
 ## Overview
 
 ### Edit/Design mode
@@ -127,12 +126,12 @@ A common pattern is to create this at the site's root under a node named "errors
 
 
 
-## In Memory TTL-based Cache
+## In Memory TTL-based Cache (Since v1.5.0)
 
-Beginning with ACS AEM Commons v1.5.0, Error Page Handler comes w an in-memory TTL based
+Introduced in ACS AEM Commons 1.5.0, Error Page Handler comes w an in-memory TTL based. It is recommended you upgrade to 1.5.0 and configure the cache per your requirements using the sling:OsgiConfig settings outlined above.
 
 
-### JMX Mbean
+### JMX MBean
 
 * The cache implementation is an implementation detail and may change over time without notice; This may change the MBean behavior, attributes and operations. *
 
@@ -169,9 +168,9 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 
 * `enabled` true/false to toggle the Error Page Handler on and off
 
-* `serve-authenticated-from-cache` true allows authenticated requests to service the the in-memory cache. If your error pages do not contain any server-side personalization, this should be set to true to maximize cache effectiveness.
+* `serve-authenticated-from-cache` true allows authenticated requests to service the the in-memory cache. If your error pages do not contain any server-side personalization, this should be set to true to maximize cache effectiveness. (Since v1.5.0)
 
-* `ttl` TTL in seconds for the in-memory Error Page Handler cache; Defaults to 300 seconds (5 mins).
+* `ttl` TTL in seconds for the in-memory Error Page Handler cache; Defaults to 300 seconds (5 mins). (Since v1.5.0)
 
 * `error-page.system-path` is the absolute path to system Error page resource to serve if no other more appropriate error pages can be found. Does not include extension.
 
