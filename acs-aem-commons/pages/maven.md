@@ -7,24 +7,22 @@ title: Using with Maven
 
 If you're using the Content Package Maven plugin, take these two easy steps:
 
-In your Content project's pom.xml
-
 ## Step 1: Add ACS AEM Commons as a Dependency
 
-In the `<dependencies>` section of your _pom.xml_ file, add this:
+In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
 
 {% highlight xml %}
     <dependency>
         <groupId>com.adobe.acs</groupId>
         <artifactId>acs-aem-commons-content</artifactId>
-        <version>1.5.0</version>
+        <version>{{ site.data.acs-aem-commons.version }}</version>
         <type>content-package</type>
     </dependency>
 {% endhighlight %}
 
-## Step 2: Add ACS AEM Commons as a Sub Package
+## Step 3: Add ACS AEM Commons as a Sub Package
 
-Then, within the configuration of the `content-package-maven-plugin`, add a `subPackage`:
+Then, (while still in the _content project's pom.xml_) within the configuration of the `content-package-maven-plugin`, add a `subPackage`:
 
 {% highlight xml %}
     <plugin>
