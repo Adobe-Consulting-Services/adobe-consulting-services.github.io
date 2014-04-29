@@ -66,6 +66,8 @@ initial-release: 1.0.0
 ---
 ```
 
+Example:
+
 ```
 ---
 layout: acs-aem-commons_feature
