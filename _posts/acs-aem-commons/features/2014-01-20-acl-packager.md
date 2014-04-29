@@ -19,10 +19,13 @@ Frequently, access control entries need to be copied from one environment to ano
 * Navigate to the Classic UI Tools Console (from the Touch UI, this is Tools:Operations:Configuration)
 * Under the `acs-commmons` folder, create a folder named `packagers` (Title can be anything).
 * Under the `packagers` folder, create a new Page of Template type "ACL Packager"
-![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/create_dialog.png)
+![image](/acs-aem-commons/images/acl-packager/create_dialog.png)
 * Use the Edit dialog to configure the package rules and configuration
-![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/edit_dialog.png)
+![image](/acs-aem-commons/images/acl-packager/edit_dialog.png)
 * The Preview button output a list of the access control entries which will be packaged.
-![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/page_with_preview.png)
-* The Create Package button... creates the package
-![image]({{ site.data.acs-aem-commons.baseurl }}/images/acl-packager/created_package.png)
+![image](/acs-aem-commons/images/acl-packager/page_with_preview.png)
+* The Create Package button (cut off in the above screenshot!)... creates the package
+![image](/acs-aem-commons/images/acl-packager/created_package.png)
+* Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package. 
+
+
