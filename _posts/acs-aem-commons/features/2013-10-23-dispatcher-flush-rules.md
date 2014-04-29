@@ -4,7 +4,7 @@ title: Dispatcher Flush Rules
 description: Statlevels cramping your flushes?
 date: 2013-10-01
 thumbnail: /images/dispatcher-flush-rules/thumbnail.png
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.2.0
 ---
@@ -23,7 +23,7 @@ Create a new `sling:OsgiConfig` node for each logical flush rule set. A good pra
 
 ![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-rules/osgi-configuration.png)
 
-##### prop.replication-action-type
+### prop.replication-action-type
 
 Defines the ReplicationActionType to use when issuing the chained replications.
 
@@ -31,30 +31,36 @@ Defines the ReplicationActionType to use when issuing the chained replications.
 * `ACTIVATE`: Invalidates the cached files opposed to deleting
 * `DELETE`: Deletes the cached files opposed to invalidating
  
-##### prop.rules.hierarchical
+### prop.rules.hierarchical
 
 Defines the flush mappings in the format (the delimiter is `=`).
 
 	regex-of-replicating-resource=absolute-path-flush
 
-used for "normal" dispatcher hierarchy (stat file)base flushing.
+Introduced in 1.5.0, regex groups can be used to further dynamic behavior.
 
-###### Example
+    /content/geometrixx/([^/]+)/([^/]+)=/content/$1/geometrixx/$2
+
+
 
 To flush all pages under `/content/mysite` when an new DAM `png` or `jpg` is replicated use
-
-	prop.rules.hierarchical=[
-		"/content/dam/.*\.png=/content/mysite"
-		"/content/dam/.*\.jpg=/content/mysite"
-	]
-
-or more succinctly
 
 	prop.rules.hierarchical=[
 		"/content/dam/.*\.(png|jpg)=/content/mysite"
 	]
 
-#### prop.rules.resource-only
+or using the new regex grouping (v1.5.0) to flush site pages based on activations to corresponding site dam folders
+
+    prop.rules.hierarchical=[
+        "/content/dam/([^/]+)/.*\.(png|jpg)=/content/$1"
+    ]
+
+In this case the following activations would triggers the follow flushes: 
+
+    `/content/dam/mysite/animals/dog.jpg` would flush `/content/mysite`
+    `/content/dam/yoursite/animals/cat.jpg` would flush `/content/yoursite`
+
+### prop.rules.resource-only
 
 Defines the flush mappings in the (same as hierarchical) format
 
@@ -64,11 +70,11 @@ used to initiate "ResourceOnly" dispatcher flush requests.
 
 ***Note: To use ResourceOnly mappings, a second set of Dispatcher Flush Agents must be created with the exact HTTP Header `CQ-Action-Scope: ResourceOnly`. ***
 
-![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-cq-action-scope-resourceonly.png)
+![image](/acs-aem-commons/images/dispatcher-flush-rules/replication-agent-config-cq-action-scope-resourceonly.png)
 
 These Flush Agents should also be configured as `Ignore Default`
 
-![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-rules/replication-agent-config-ignore-default.png)
+![image](/acs-aem-commons/images/dispatcher-flush-rules/replication-agent-config-ignore-default.png)
 
 
 {% highlight xml %}
@@ -83,7 +89,7 @@ These Flush Agents should also be configured as `Ignore Default`
 {% endhighlight %}  
 
 
-## Flushing from AEM 5.6 Publish Servers
+## Flushing from AEM 5.6+ Publish Servers
 
 Dispatcher Flush Rules work from AEM 5.6 Publish Servers as well. Simple configure your Dispatcher Flush Agents on Publish to issue "On Trigger". (It is likely this has been previously configured if you are already using Publish-side flushing).
 
