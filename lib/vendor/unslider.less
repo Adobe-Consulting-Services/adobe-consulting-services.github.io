@@ -3,7 +3,7 @@
 .unslider li { list-style: none; }
 .unslider ul li { float: left; }
 
-.unslider .dot {
+.unslider .dot {    
     -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
     -moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
     -ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
@@ -19,12 +19,12 @@
     text-align: center;
     padding: 1em 0 0 0;
     margin: 0;
-    background-color:rgba(0,0,0,0.5);
+    background-color: transparent;
 }
 
-@media (min-width: @screen-lg-min) {
+@media (min-width: @screen-sm-min) {
     .unslider .dots {
-        background-color: transparent;
+        background-color:rgba(0,0,0,0.5);
     }
 }
 

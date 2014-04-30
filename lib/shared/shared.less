@@ -6,12 +6,14 @@
 @import "feature-docs.less";
 
 .color-block {
-  background: url('../images/colored-bg.jpg') no-repeat center center fixed;
+  background: url('../images/colored-bg.jpg') no-repeat center top fixed;
   
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   @media (min-width: @screen-sm-min) {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } 
 }
 
 header.top {

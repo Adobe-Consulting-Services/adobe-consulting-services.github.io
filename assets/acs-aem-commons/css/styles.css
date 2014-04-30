@@ -6471,11 +6471,11 @@ li.L9 {
   text-align: center;
   padding: 1em 0 0 0;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .unslider .dots {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 .unslider .dots li {
@@ -7250,11 +7250,15 @@ pre code {
   border: 0;
 }
 .color-block {
-  background: url('../shared/../images/colored-bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('../shared/../images/colored-bg.jpg') no-repeat center top fixed;
+}
+@media (min-width: 768px) {
+  .color-block {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 header.top .navbar {
   background: transparent;
@@ -7326,14 +7330,19 @@ header.top .navbar .nav li.acs-aem-projects a {
   top: -5px;
 }
 .stripe {
-  background: url('../shared/../images/colored-bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url('../shared/../images/colored-bg.jpg') no-repeat center top fixed;
   background-color: #882021;
   background-size: cover;
   height: 5em;
   color: white;
+}
+@media (min-width: 768px) {
+  .stripe {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 .stripe h2 {
   line-height: 1.75em;
