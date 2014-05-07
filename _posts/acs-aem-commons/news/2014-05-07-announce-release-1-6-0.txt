@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 1.6.0 now available!
+description: Some New Features!!!
+date: 2014-05-09
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
