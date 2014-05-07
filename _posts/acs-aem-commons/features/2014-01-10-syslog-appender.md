@@ -4,7 +4,7 @@ title: Syslog Integration
 description: Send log messages to remote systems
 date: 2014-01-10
 thumbnail: /images/syslog/thumbnail.png
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---

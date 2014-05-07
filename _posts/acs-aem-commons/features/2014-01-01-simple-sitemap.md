@@ -4,7 +4,7 @@ title: Simple Sitemap Generator
 description: Easily generate sitemaps for search indexing
 date: 2014-01-01
 thumbnail: /images/sitemap/thumbnail.png
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---

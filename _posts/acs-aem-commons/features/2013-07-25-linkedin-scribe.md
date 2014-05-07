@@ -4,8 +4,9 @@ title: LinkedIn Scribe Integration
 description: Ease LinkedIn integration needs
 date: 2013-07-25
 thumbnail: /images/linkedin-scribe/thumbnail.png
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
+initial-release: 1.5.0
 ---
 
 # Purpose
