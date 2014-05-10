@@ -17,13 +17,13 @@ Third party dependencies will generally be made available in content package for
 
 ## Packaged Third-party Dependencies
 
-[Learn more about and Download the third-party dependenices](/pages/acs-aem-bundles.html)
+[Learn more about and Download the third-party dependencies](/pages/acs-aem-bundles.html)
 
 <hr/>
 
 ## Using ACS AEM Commons without 3rd-party dependencies
 
-#### Available in 1.6.0+
+#### Available since version 1.6.0
 
 When running the "full" ACS AEM Commons bundle, benign errors appear in the error.log if the below third-party bundle depdencies are not installed. While these errors do not harm the operation of AEM or ACS AEM Commons (other than preventing the associated ACS AEM Commons behaviors).
 
