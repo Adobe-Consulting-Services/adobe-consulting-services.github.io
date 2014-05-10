@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: AEM Objects Sling Models Injector
 description: Inject AEM objects into your Sling Models classes
 date: 2014-04-08 23:39:29
-thumbnail: /images/default/thumbnail.png
+thumbnail: /images/aem-sling-models-injectors/thumbnail.png
 categories: acs-aem-commons features
 tags: acs-aem-commons-features new
 initial-release: 1.6.0
