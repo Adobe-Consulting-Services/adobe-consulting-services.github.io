@@ -7115,8 +7115,8 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
   -webkit-border-radius: 0px;
   border-radius: 0px;
   -khtml-border-radius: 0px;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 .features .feature h3 {
   color: black;
@@ -7205,11 +7205,6 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
   border-bottom: dotted 1px #ccc;
   padding-bottom: .25em;
 }
-.feature-doc .img-wrapper {
-  margin: 2em auto;
-  max-width: 900px;
-  text-align: center;
-}
 .feature-doc img {
   display: inline-block;
   max-width: 100%;
@@ -7253,7 +7248,7 @@ pre code {
   border: 0;
 }
 .color-block {
-  background: url('../shared/../images/colored-bg.jpg') no-repeat center top fixed;
+  background: url('../images/colored-bg.jpg') no-repeat center top fixed;
 }
 @media (min-width: 768px) {
   .color-block {
@@ -7333,7 +7328,7 @@ header.top .navbar .nav li.acs-aem-projects a {
   top: -5px;
 }
 .stripe {
-  background: url('../shared/../images/colored-bg.jpg') no-repeat center top fixed;
+  background: url('../images/colored-bg.jpg') no-repeat center top fixed;
   background-color: ##2A073B;
   background-size: cover;
   height: 5em;
@@ -7364,6 +7359,19 @@ header.top .navbar .nav li.acs-aem-projects a {
 .news .title {
   color: black;
   font-weight: normal;
+}
+.acs-aem-bundles {
+  background-color: white;
+}
+.img-wrapper {
+  margin: 2em auto;
+  max-width: 900px;
+  text-align: center;
+}
+img.framed {
+  border: solid 10px white;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 #projects a {
   color: black;

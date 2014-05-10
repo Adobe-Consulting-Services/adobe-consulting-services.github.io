@@ -1,0 +1,4 @@
+name: com.adobe.acs.bundles.netty
+title: Netty
+releases: https://github.com/Adobe-Consulting-Services/com.adobe.acs.bundles.netty/releases
+version: 1.0.2
