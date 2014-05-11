@@ -1,6 +1,15 @@
 $.bigfoot();
 
 ;$(function() { 
+    $('body').on('click', "a[href^='http']", function() { 
+        var url = $(this).attr('href');
+        ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+            function () {}
+        });
+    });
+});
+
+;$(function() { 
 	var wrapper = $('<div class="img-wrapper"></div>');
 	$('.feature-doc img').wrap(wrapper);
     $('img.framed').wrap(wrapper);
