@@ -36,6 +36,7 @@ Allow AEM authors (or "super authors") to flush parts of the dispatcher cache ma
 ![image]({{ site.data.acs-aem-commons.baseurl }}/images/dispatcher-flush-ui/dispatcher-flush-ui.png)
 * Press the "Flush Paths" button
 	* If the "Flush Paths" button does not appear something is wrong with the configuration or no Flush Agents are available.
+    * Note: Resource-Only flush agents are NOT supported.
 * The page will refresh indicating the successful status of your Flush request
 * If there are problems, review the Dispatcher Flush Agent Logs
       
