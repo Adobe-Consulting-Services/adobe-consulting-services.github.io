@@ -9,7 +9,7 @@ categories: acs-aem-commons features
 initial-release: 1.0.0
 ---
 
-> New in version 1.5.0 the ACS AEM Commons Error Page Handler comes w a light in-memory TTL-based caching layer to greatly enhance performance.
+> New in version 1.6.0 the ACS AEM Commons Error Page Handler comes w a light in-memory TTL-based caching layer to greatly enhance performance.
 
 ## Purpose
 
