@@ -4,7 +4,7 @@ title: ClientLibs Manager
 description: AEM Design-driven, reusable ClientLibs
 date: 2013-09-20
 thumbnail: /images/designer-clientlibsmanager/thumbnail.png
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.0.0
 ---
@@ -53,7 +53,7 @@ To enable the CQ Design Page overlay, the following `sling:OsgiConfig` must be a
     prop.target-resource-type="acs-commons/components/utilities/designer"/>
 {% endhighlight %}
 
-## Custom Tag Example
+## JSP Integration
 
 Since version 1.1.0, a custom tag can be used in JSP pages. Be sure to include the JSP taglib declaration:
 
@@ -77,7 +77,7 @@ Since version 1.1.0, a custom tag can be used in JSP pages. Be sure to include t
 {% endhighlight %}
 
 
-## Scriptlet Example
+### Scriptlet Example
 
 {% highlight jsp %}
 <% DesignHtmlLibraryManager dhlm = sling.getService(DesignHtmlLibraryManager.class); %>
@@ -109,4 +109,25 @@ Since version 1.1.0, a custom tag can be used in JSP pages. Be sure to include t
         <cq:includeClientLib categories="<%= StringUtils.join(dhlm.getLibraries(currentDesign, PageRegion.BODY), ',') %>"/>
     </body>
 </html>
+{% endhighlight %}
+
+## Sightly Integration (Since 1.6.0)
+
+In a Sightly script, you can use the `head` and `body` templates in the script `/apps/acs-commons/sightly/templates/dhlm.html`. The `body` template does not take any arguments. The `head` template accepts a `mode` argument which can be `js`, `css`, or `all`.
+
+{% highlight html %}
+<html data-sly-use.dhlm="${'/apps/acs-commons/sightly/templates/dhlm.html'}">
+  <head>
+      <title>Demo Page</title>
+      <style data-sly-call="${dhlm.head @ mode='all'}" data-sly-unwrap></style>
+  </head>
+  <body>
+      <h1>Demo Page</h1>
+
+      <p>CSS has no business being in the body of a document, and its almost always better to push JS load to the end of the body</p>
+
+      <section data-sly-call="${dhlm.body}" data-sly-unwrap></section>
+  </body>
+</html>
+
 {% endhighlight %}
