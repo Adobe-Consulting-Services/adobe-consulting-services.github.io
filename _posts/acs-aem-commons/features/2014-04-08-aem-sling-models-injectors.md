@@ -26,7 +26,7 @@ Allows for [Sling Models](http://sling.apache.org/documentation/bundles/models.h
 * `session`
 * `xssApi`
 
-Most injections are available when adapting either a `Resource` or `SlingHttpServletRequest` object, with these exceptions:
+Most injections are available when adapting either a `Resource` or `SlingHttpServletRequest` object, with these exceptions, which only work when adapting a `SlingHttpServletRequest` object:
 
 * `currentPage`
 * `componentContext`
