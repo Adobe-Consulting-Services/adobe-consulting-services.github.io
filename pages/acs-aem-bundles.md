@@ -9,9 +9,9 @@ The ACS AEM Projects provide third-party dependencies in easy deployable CRX Pac
 
 <img src="/assets/acs-aem-projects/images/acs-aem-bundles.png" class="framed" alt="ACS AEM Bundles"/>
 
-### Twitter4J Bundle
+### Twitter4J
 
-Used by the [ACS AEM Commons](/acs-aem-commons) Twitter-based features.
+Used by the [ACS AEM Commons](/acs-aem-commons) Twitter-based features. Repackages [Twitter4J](http://twitter4j.org/en/index.html) 3.0.5 as an OSGi bundle.
 
 * [Download the Latest Release ({{ site.data.dependencies-twitter4j.version }})]({{ site.data.dependencies-twitter4j.releases}}/download/{{ site.data.dependencies-twitter4j.name}}-{{ site.data.dependencies-twitter4j.version}}/{{ site.data.dependencies-twitter4j.name}}-content-{{ site.data.dependencies-twitter4j.version}}.zip)
 
@@ -19,9 +19,9 @@ Used by the [ACS AEM Commons](/acs-aem-commons) Twitter-based features.
 
 <hr/>	
 
-### Sling Models Bundle
+### Apache Sling Models
 
-Used by the [ACS AEM Commons](/acs-aem-commons) AEM Sling Models injectors.
+Used by the [ACS AEM Commons](/acs-aem-commons) AEM Sling Models injectors. Includes Sling Models API 1.0.0 and Sling Models Implementation 1.0.4.
 
 Note: Sling Models comes standard with all AEM6+ installations. This dependency is only required when using ACS AEM Commons' Sling Model Injectors on AEM 5.6.1.
 
@@ -31,9 +31,9 @@ Note: Sling Models comes standard with all AEM6+ installations. This dependency 
 
 <hr/>
 
-### Netty Bundle
+### Netty
 
-Used by [ACS AEM Tools](/acs-aem-tools) LiveReload feature.
+Used by [ACS AEM Tools](/acs-aem-tools) LiveReload feature. Includes [Netty](http://netty.io/) Handler, Buffer, Common, Transport, Codec, and HTTP bundles from version 4.0.13 Final.
 
 * [Download the Latest Release ({{ site.data.dependencies-netty.version }})]({{ site.data.dependencies-netty.releases}}/download/{{ site.data.dependencies-netty.name}}-{{ site.data.dependencies-netty.version}}/{{ site.data.dependencies-netty.name}}-{{ site.data.dependencies-netty.version}}.zip)
 
