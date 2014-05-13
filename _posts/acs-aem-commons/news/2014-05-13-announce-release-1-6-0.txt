@@ -2,7 +2,7 @@
 layout: acs-aem-commons_default
 title: Release 1.6.0 now available!
 description: Design and Page Reference Providers, Twitter Feed Component, Sling Models AEM Injector, Email API, Sightly compatibility for the Design Html Library Manager, New "minimal" packaging, Various AEM 6 related fixes.
-date: 2014-05-12
+date: 2014-05-13
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
 tags: acs-aem-commons-news
