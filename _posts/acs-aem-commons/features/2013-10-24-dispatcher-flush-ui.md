@@ -17,8 +17,7 @@ Allow AEM authors (or "super authors") to flush parts of the dispatcher cache ma
 
 * Log in to AEM Author
 * Navigate to Tools
-* Create a folder named `acs-commons` (Title can be anything)
-* Under the `acs-commmons` folder, create a folder named "dispatcher-flush" (Title can be anything)
+* Under the `acs-commmons` folder, create a folder named "dispatcher-flush" (NOTE: As of 1.6.0, this folder is created automatically)
 * Under the `dispatcher-flush` folder, create a new Page of Template type "Dispatcher Flush"
 	* Note: After v1.2.0, Dispatcher Flush templates creation will be limited to:
 		* /etc/acs-commons/dispatcher-flush
