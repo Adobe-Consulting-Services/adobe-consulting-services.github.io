@@ -31,6 +31,18 @@ Note: Sling Models comes standard with all AEM6+ installations. This dependency 
 
 <hr/>
 
+### Apache Sling Health Check
+
+Includes Sling Health Check Core 1.1.0 and Sling Health Check Web Console 1.1.0
+
+Note: Sling Health Check comes standard with all AEM6+ installations. This dependency is only required when using AEM 5.6.1.
+
+* [Download the Latest Release ({{ site.data.dependencies-sling-hc.version }})]({{ site.data.dependencies-sling-hc.releases}}/download/{{ site.data.dependencies-sling-hc.name}}-{{ site.data.dependencies-sling-hc.version}}/{{ site.data.dependencies-sling-hc.name}}-{{ site.data.dependencies-sling-hc.version}}.zip)
+
+* [View All Releases]({{ site.data.dependencies-sling-hc.releases }})
+
+<hr/>
+
 ### Netty
 
 Used by [ACS AEM Tools](/acs-aem-tools) LiveReload feature. Includes [Netty](http://netty.io/) Handler, Buffer, Common, Transport, Codec, and HTTP bundles from version 4.0.13 Final.

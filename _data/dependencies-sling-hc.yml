@@ -1,0 +1,4 @@
+name: com.adobe.acs.bundles.sling-healthcheck
+title: Sling Health Check Package
+version: 1.0.0
+releases: https://github.com/Adobe-Consulting-Services/com.adobe.acs.bundles.sling-healthcheck/releases
