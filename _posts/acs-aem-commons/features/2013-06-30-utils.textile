@@ -4,6 +4,7 @@ title: ACS AEM Commons Utils
 description: A collection of common utils
 date: 2013-06-30
 thumbnail: /images/default/thumbnail.png
+feature-tags: backend-dev
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0

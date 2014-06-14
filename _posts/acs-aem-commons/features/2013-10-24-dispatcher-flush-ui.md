@@ -4,6 +4,7 @@ title: Dispatcher Flush UI
 description: The conveniece of flushing by yourself
 date: 2013-10-02
 thumbnail: /images/dispatcher-flush-ui/thumbnail.png
+feature-tags: administration standard
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.2.0

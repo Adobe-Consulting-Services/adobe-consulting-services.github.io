@@ -60,6 +60,7 @@ title: Post title
 description: Post description
 date: 2014-01-01 # Time not required
 thumbnail: /images/default/thumbnail.png #relative to `/<project>`
+feature-tags: standard || component-dev || backend-dev || authoring || administration
 tags: <project>-features || <project>-news && new || updated
 categories: <project> features || news 
 initial-release: 1.0.0
@@ -75,12 +76,14 @@ title: Component Helper
 description: Simplify your components
 date: 2013-06-10
 thumbnail: /images/default/thumbnail.png
+feature-tags: standard authoring
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0
 ---
 ```
 
+Note: `feature-tags` will only effect Feature Filtering on ACS AEM Commons; it will be ignored on other sites.
 
 ## LESS/CSS
 

@@ -4,6 +4,7 @@ title: Component Error Handler
 description: Don't let erring Components ruin your day
 date: 2013-10-23
 thumbnail: /images/component-error-handler/thumbnail.png
+feature-tags: component-dev authoring
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.2.0

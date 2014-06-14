@@ -63,23 +63,15 @@ description: A way to bootstrap AEM project with common functionality, a set ofr
     </div>
 
     <div class="container">
+        {% include shared/feature-filters.html %}
+    </div>
+    
+    <div class="container">
         <div class="wrapper">
                 {{ page.project }}
 
             {% for post in site.tags.acs-aem-commons-features %}
-                {% assign mod2 = forloop.index|modulo:2 %}
-                {% assign mod3 = forloop.index|modulo:3 %}
-
                 {% include shared/feature-card.html feature=post project=site.data.acs-aem-commons.name %}
-
-                {% if mod2 == 0 %}
-                <div class="clearfix visible-sm visible-xs hidden-md hidden-lg"></div>
-                {% endif %}
-
-                {% if mod3 == 0 %}
-                <div class="clearfix hidden-sm hidden-xs visible-md visible-lg"></div>
-                {% endif %}
-
             {% endfor %}
 
         </div>

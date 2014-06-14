@@ -4,6 +4,7 @@ title: Audio Component
 description: An HTML5 audio component and related workflow process
 date: 2013-08-10
 thumbnail: /images/audio/thumbnail.png
+feature-tags: component-dev components
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0

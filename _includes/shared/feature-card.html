@@ -1,7 +1,9 @@
 {% assign feature = include.feature %}
 {% assign project = include.project %}
 
-<div class="feature">
+<div class="feature" data-filter-tags="all {{ feature.feature-tags }}
+ {% if feature.tags contains 'new' %} new 
+ {% elsif feature.tags contains 'updated' %} updated {% endif %}">
     <a href="{{ feature.url }}">
 
         {% if feature.tags contains 'new' %}<div class="new"></div>

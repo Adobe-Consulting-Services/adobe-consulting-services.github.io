@@ -7077,6 +7077,36 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
 #jumbotron .action-gradient-btn:hover {
   color: white;
 }
+.feature-filters {
+  margin-bottom: 1em;
+}
+.feature-filters ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.feature-filters ul li {
+  display: inline-block;
+  margin: .25em 0 .5em .25em;
+  padding: 0;
+}
+.feature-filters ul li a {
+  display: inline-block;
+  padding: .75em 1.5em;
+  background-color: #eee;
+}
+.feature-filters ul li a.active {
+  color: white;
+  background-color: #E12420;
+}
+.feature-filters ul li p {
+  display: none;
+}
+.feature-filters .filter-description {
+  margin-top: 1em;
+  font-size: 1.25em;
+  color: #333;
+}
 .features .stripe {
   margin-bottom: 2em;
 }
@@ -7086,6 +7116,7 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  height: 350px;
   text-align: center;
   position: relative;
 }

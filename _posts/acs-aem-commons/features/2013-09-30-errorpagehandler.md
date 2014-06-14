@@ -4,6 +4,7 @@ title: Error Page Handler
 description: Create authorable error pages with ease
 date: 2013-09-30
 thumbnail: /images/errorpagehandler/thumbnail.png
+feature-tags: authoring standard
 tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.0.0

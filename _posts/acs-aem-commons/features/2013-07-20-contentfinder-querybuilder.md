@@ -4,6 +4,7 @@ title: Content Finder - Query Builder
 description: Use QueryBuilder syntax to build ContentFinder tabs
 date: 2013-07-20
 thumbnail: /images/contentfinder-querybuilder/thumbnail.png
+feature-tags: authoring
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0

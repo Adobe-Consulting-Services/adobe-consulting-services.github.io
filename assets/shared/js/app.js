@@ -40,6 +40,27 @@ $.bigfoot();
 });
 
 
+;$(function() {
+    $('body').on('click', '.feature-filters a', function(e) {
+        var $this = $(this),
+            $filters = $this.closest('.feature-filters'),
+            $features = $this.closest('.features'),
+            $description = $filters.find('.filter-description');
+            tag = $this.data('filter-tags');
+
+        $filters.find('a.active').removeClass('active');
+        $this.addClass('active');
+
+        $features.find('.feature').hide();
+        $features.find('.feature[data-filter-tags~="' + tag + '"]').show();
+
+        $description.html($this.siblings('p').html());
+
+        e.preventDefault();
+    });
+});
+
+
 
 
 

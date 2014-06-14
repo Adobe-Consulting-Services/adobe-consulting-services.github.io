@@ -4,6 +4,7 @@ title: Dynamic RTE Configuration
 description: Create a re-usable RTE configurations
 date: 2013-08-30
 thumbnail: /images/dynamic-rte-configuration/thumbnail.png
+feature-tags: component-dev
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0

@@ -4,6 +4,7 @@ title: Page and Design Reference Providers
 description: Notify authors when dependencies need to be activated.
 date: 2014-04-05
 thumbnail: /images/default/thumbnail.png
+feature-tags: authoring standard
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
 initial-release: 1.6.0
