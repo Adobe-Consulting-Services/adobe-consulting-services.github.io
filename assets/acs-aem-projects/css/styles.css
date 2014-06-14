@@ -7138,7 +7138,11 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
     width: 33.33333333333333%;
   }
 }
-.features .feature img {
+.features .feature .feature-image-wrapper {
+  display: inline-block;
+  margin: 0 auto;
+}
+.features .feature .feature-image-wrapper img {
   border-color: white;
   border-style: solid;
   border-width: 1em;

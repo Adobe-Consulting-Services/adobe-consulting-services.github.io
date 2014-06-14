@@ -4,7 +4,7 @@
 <div class="feature" data-filter-tags="all {{ feature.feature-tags }}
  {% if feature.tags contains 'new' %} new 
  {% elsif feature.tags contains 'updated' %} updated {% endif %}">
-    <a href="{{ feature.url }}">
+    <a class="feature-image-wrapper" href="{{ feature.url }}">
 
         {% if feature.tags contains 'new' %}<div class="new"></div>
         {% elsif feature.tags contains 'updated' %}<div class="updated"></div>{% endif %}
