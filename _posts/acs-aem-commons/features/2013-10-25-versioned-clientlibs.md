@@ -31,7 +31,8 @@ This re-writer does **NOT** support
 * URIs including a scheme, e.g. `http://example.com/etc/clientlibs/mysite/styles.css` and `//example.com/etc/clientlibs/mysite/styles.css`
 * URIs to non-AEM HtmlClientLibrary resources, e.g. `/etc/designs/mysite.css`
 * Tags contained in conditional comments.
- 
+* ClientLibs included by Javascript (e.g. when leveraging the property channels)
+
 ## Rewriter Configuration Node
 
 The easiest way to configure the rewriter pipline is just to copy `/libs/cq/config/rewriter/default` to a path inside your application, e.g. `/apps/myapp/config/rewriter/versioned-clientlibs`. Note that the configuration node *must* be inside a four-level path that ends in `config/rewriter`.
