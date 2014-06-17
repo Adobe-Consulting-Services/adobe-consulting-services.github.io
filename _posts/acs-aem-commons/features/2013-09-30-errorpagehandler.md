@@ -95,7 +95,7 @@ OR create a your own custom pathfield widget
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    prop.enabled="{Boolean}true"
+    enabled="{Boolean}true"
     serve-authenticated-from-cache="{Boolean}true"
     ttl="{Long}300"/>
 {% endhighlight %}
@@ -157,7 +157,7 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    prop.enabled="{Boolean}true"
+    enabled="{Boolean}true"
     serve-authenticated-from-cache="{Boolean}true"
     ttl="{Long}300"
     error-page.system-path="/content/error"
