@@ -160,10 +160,8 @@ The Error Page Handler has a few more advanced settings that are typically unuse
     prop.enabled="{Boolean}true"
     serve-authenticated-from-cache="{Boolean}true"
     ttl="{Long}300"
-    prop.error-page.system-path="/content/error"
-    prop.error-page.fallback-name="500"
-    prop.error-page.extension="html"
-    prop.paths="[/content/mysite/en:errors,/content/mysite/fr:erreurs]"
+    error-page.system-path="/content/error"
+    error-page.fallback-name="500"
     />
 {% endhighlight %}
 
@@ -182,5 +180,5 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 * `paths` define a list of valid inclusive content trees under which error pages may reside, along with the name of the the default error page for the content tree. This is a fallback/less powerful option to adding the `./errorPages`property to CQ Page property dialogs.
 
 
-***Note: It is better to use the Page Properties-defined `errorPages` than the `prop.paths` in the OSGi Configuration. Typically `prop.paths` is left blank.***
+***Note: It is better to use the Page Properties-defined `errorPages` than the `paths` in the OSGi Configuration. Typically `paths` is left blank.***
 
