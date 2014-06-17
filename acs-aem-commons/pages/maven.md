@@ -28,7 +28,7 @@ This will include the ''full'' package. To include the ''minimal'' package, add
 
 inside the `<dependency>` element.
 
-## Step 3: Add ACS AEM Commons as a Sub Package
+## Step 3: Add ACS AEM Common as a Sub Package
 
 Then, (while still in the _content project's pom.xml_) within the configuration of the `content-package-maven-plugin`, add a `subPackage`:
 
@@ -49,4 +49,18 @@ Then, (while still in the _content project's pom.xml_) within the configuration 
             ...
         </configuration>
     </plugin>    
+{% endhighlight %}
+
+
+## Step 4: Add ACS AEM Commons Bundle as a Dependency (Optional)
+
+In the `<dependencies>` section of the _pom.xml_ any maven projects that use ACS AEM Commons APIs (Java utils, TagLibs, etc.), add the dependency for the `acs-aem-commons-bundle` project. The `acs-aem-commons-bundle` will deployed as part of the `acs-aem-commons-content` package (above), however the dependency is required to compile your project when it uses ACS AEM Commons Java APIs.
+
+{% highlight xml %}
+    <dependency>
+        <groupId>com.adobe.acs</groupId>
+        <artifactId>acs-aem-commons-bundle</artifactId>
+        <version>{{ site.data.acs-aem-commons.version }}</version>
+        <type>provided</type>
+    </dependency>
 {% endhighlight %}
