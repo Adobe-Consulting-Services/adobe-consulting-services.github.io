@@ -7280,7 +7280,7 @@ pre code {
   border: 0;
 }
 .color-block {
-  background: url('../images/colored-bg.jpg') no-repeat center top fixed;
+  background: url('../shared/../images/colored-bg.jpg') no-repeat center top fixed;
 }
 @media (min-width: 768px) {
   .color-block {
@@ -7360,7 +7360,7 @@ header.top .navbar .nav li.acs-aem-projects a {
   top: -5px;
 }
 .stripe {
-  background: url('../images/colored-bg.jpg') no-repeat center top fixed;
+  background: url('../shared/../images/colored-bg.jpg') no-repeat center top fixed;
   background-color: #882021;
   background-size: cover;
   height: 5em;
@@ -7428,6 +7428,12 @@ ul.show-more-list li {
   margin: 0;
   padding: 0;
   display: none;
+}
+.comment-header {
+  border-top: dashed 1px #eee;
+  color: #999;
+  margin: 3em 0 1em 0;
+  padding-top: .5em;
 }
 /*#cb0900; */
 a {
