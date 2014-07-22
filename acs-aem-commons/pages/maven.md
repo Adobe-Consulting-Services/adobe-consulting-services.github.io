@@ -61,6 +61,6 @@ In the `<dependencies>` section of the _pom.xml_ any maven projects that use ACS
         <groupId>com.adobe.acs</groupId>
         <artifactId>acs-aem-commons-bundle</artifactId>
         <version>{{ site.data.acs-aem-commons.version }}</version>
-        <type>provided</type>
+        <scope>provided</scope>
     </dependency>
 {% endhighlight %}
