@@ -147,6 +147,14 @@ Error Page Handler Cache overview
 Viewing the contents of the cache for a particular entry
 
 
+## Error Images (Since v1.7.0)
+
+Introduced in ACS AEM Commons 1.7.0, Error Page Handler supports serving an "error image" in the event a request with a qualified "image" extension (jpg, jpeg, png and gif) cannot be found. The OSGi config properties described in futher detail below int he Advanced section can be used to configure this feature.
+
+* error-images.enabled
+* error-images.path
+
+
 ## Advanced Sling OSGi Configuration
 
 The Error Page Handler has a few more advanced settings that are typically unused/left as default.
@@ -167,9 +175,9 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 
 * `enabled` true/false to toggle the Error Page Handler on and off
 
-* `serve-authenticated-from-cache` true allows authenticated requests to service the the in-memory cache. If your error pages do not contain any server-side personalization, this should be set to true to maximize cache effectiveness. (Since v1.5.0)
+* `cache.serve-authenticated` true allows authenticated requests to service the the in-memory cache. If your error pages do not contain any server-side personalization, this should be set to true to maximize cache effectiveness. (Since v1.5.0)
 
-* `ttl` TTL in seconds for the in-memory Error Page Handler cache; Defaults to 300 seconds (5 mins). (Since v1.5.0)
+* `cache.ttl` TTL in seconds for the in-memory Error Page Handler cache; Defaults to 300 seconds (5 mins). (Since v1.5.0)
 
 * `error-page.system-path` is the absolute path to system Error page resource to serve if no other more appropriate error pages can be found. Does not include extension.
 
@@ -178,6 +186,11 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 * `error-page.extension` defines the extension to call the fallback error page with; This is almost ALWAYS "html" unless the application is using non-standard extensions.
 
 * `paths` define a list of valid inclusive content trees under which error pages may reside, along with the name of the the default error page for the content tree. This is a fallback/less powerful option to adding the `./errorPages`property to CQ Page property dialogs.
+
+* `error-images.enabled` boolean value; true to enable, false to disable. Defaults to false. (Since version 1.7.0)
+
+* `error-images.path` is a &lt;selectors.extension&gt; (ex. `.img.png`) absolute path to a nt:file image, or relative path to a image component resource.
+If an extension or relative path, this value is applied to the resolved error page. (ex. if error-image.path is 'jcr:content/image.img.png' and the resolve error path is '/content/acme/error' then '/content/acme/error/jcr:content/image.img.png' will be used to render the image.). Defaults to '.img.png' which will render the error page's Page image. (Since version 1.7.0)
 
 
 ***Note: It is better to use the Page Properties-defined `errorPages` than the `paths` in the OSGi Configuration. Typically `paths` is left blank.***
