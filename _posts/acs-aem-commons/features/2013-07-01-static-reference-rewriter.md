@@ -5,7 +5,7 @@ description: Minimize your static request size.
 date: 2013-07-01
 thumbnail: /images/default/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0
 ---
