@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_default
 title: Release 1.7.0 now available!
-description: New Features: Share This Cloud Service, Oak Index Manager, Component Disabler, JSON Event Logger, AJAX Base Component loading indicator and Touch UI hot keys
+description: Share This Cloud Service, Oak Index Manager, Component Disabler, JSON Event Logger, AJAX Base Component loading indicator and Touch UI hot keys
 date: 2014-07-23
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
