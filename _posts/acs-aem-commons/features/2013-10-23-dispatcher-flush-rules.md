@@ -5,7 +5,7 @@ description: Statlevels cramping your flushes?
 date: 2013-10-01
 thumbnail: /images/dispatcher-flush-rules/thumbnail.png
 feature-tags: backend-dev administration
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.2.0
 ---

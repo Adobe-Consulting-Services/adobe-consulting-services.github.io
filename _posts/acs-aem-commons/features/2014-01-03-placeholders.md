@@ -5,7 +5,7 @@ description: A little polish goes a long way
 date: 2014-01-10
 thumbnail: /images/placeholders/thumbnail.png
 feature-tags: component-dev standard
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---
