@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Oak Index Manager
-description: Review and reindex on AEM6
+description: Get Oak index status and re-index too!
 date: 2014-07-24
 thumbnail: /images/oak-index-manager/thumbnail.png
 feature-tags: administration
@@ -25,3 +25,6 @@ An AEM6 Oak-based repository is required. This does not work with a Jackrabbit 2
 
 ![image](/acs-aem-commons/images/oak-index-manager/screenshot.png)
 
+## Caution!
+
+Re-indexing can be an expensive operation. Please ensure you understand the impact of the system before performing a reindex, and especially a bulk re-index.
