@@ -1,8 +1,8 @@
 ---
 layout: acs-aem-commons_feature
 title: JSON Event Logger
-description: Disable OSGi Components as part of your build
-date: 2014-07-24
+description: Log OSGi events as JSON
+date: 2014-07-23
 thumbnail: /images/json-event-logger/thumbnail.png
 feature-tags: administration
 tags: acs-aem-commons-features new
