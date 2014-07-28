@@ -17,7 +17,7 @@ This EventLogger service provides a configurable bridge between the OSGi Event m
 
 ## How to Use
 
-Create a config at `/apps/system/config/com.adobe.acs.commons.logging.impl.EventLogger-RESOURCE.xml` with the following to start sending Resource events as JSON messages to the `osgi.events.resource`logging category at the INFO level:
+Create a config at `/apps/system/config/com.adobe.acs.commons.logging.impl.JsonEventLogger-RESOURCE.xml` with the following to start sending Resource events as JSON messages to the `osgi.events.resource`logging category at the INFO level:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -26,7 +26,6 @@ Create a config at `/apps/system/config/com.adobe.acs.commons.logging.impl.Event
     jcr:primaryType="sling:OsgiConfig"
 	event.topics="[org/apache/sling/api/resource/Resource/*]"
 	event.logger.category="osgi.events.resource"
-	event.filter="(event.topics=*)"
 	event.logger.level="INFO"
     />
 {% endhighlight %}     
