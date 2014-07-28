@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: TouchUI Hot Keys
-description: Switch page editting modes with a single key-stroke!
+description: Switch active layer with a key combination!
 date: 2014-07-23
 thumbnail: /images/touchui-hot-keys/thumbnail.png
 feature-tags: authoring
@@ -17,9 +17,9 @@ Switching between edit / preview and other layers in the AEM Touch UI requires n
 
 ## How to Use
 
-Open up a page in AEM6 using the TouchUI page editting interface (not the Classic UI).
+Open up a page in AEM6 using the TouchUI page editing interface (not the Classic UI).
 
-Use the following key strokes to show the correspinding layers.
+Use the following key strokes to show the corresponding layers.
 
 * Edit: Ctrl + Shift + E
 * Preview: Ctrl + Shift + P
