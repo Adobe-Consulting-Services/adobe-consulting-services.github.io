@@ -62,7 +62,8 @@ Leverage Share This to easily add social sharing to your site.
 3. Select `New > New Page`
 4. Select `Share This Configuration` and open the newly created page
 5. Enter your Publisher ID
-6. Apply this Share This Configuration to any AEM Page in the usual manner
+6. Configure the other options as needed.
+7. Apply this Share This Configuration to any AEM Page in the usual manner
 	`Page Properties > Cloud Services Tab > Add Service > Share This > Select the configuration`
 
 
