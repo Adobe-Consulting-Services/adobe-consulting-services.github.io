@@ -4,7 +4,7 @@ title: AEM Cloud Services
 description: Integrate with cloud services like a Pro!
 date: 2013-11-10
 thumbnail: /images/cloud-services/thumbnail.png
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.2.0
 ---
@@ -47,3 +47,22 @@ Leverage Adobe Typekit's web-fonts to make your AEM web sites stand out on the W
 5. Enter your Kit ID
 6. Apply this Typekit Configuration to any AEM Page in the usual manner
 	`Page Properties > Cloud Services Tab > Add Service > TypeKit > Select the configuration`
+
+
+## Share This (Since 1.7.0)
+
+Leverage Share This to easily add social sharing to your site.
+
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/cloud-services/sharethis.png)
+
+### How to Use
+
+1. Navigate to `AEM Author > Tools > Cloud Services Configurations`
+2. Select `Share This`
+3. Select `New > New Page`
+4. Select `Share This Configuration` and open the newly created page
+5. Enter your Publisher ID
+6. Apply this Share This Configuration to any AEM Page in the usual manner
+	`Page Properties > Cloud Services Tab > Add Service > Share This > Select the configuration`
+
+
