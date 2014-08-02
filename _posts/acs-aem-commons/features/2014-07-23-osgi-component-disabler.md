@@ -14,14 +14,14 @@ initial-release: 1.7.0
 
 The OSGi Component Disabler allows you to shutdown OSGi services and Components by configuration, but only after they have been started.
 
-Some AEM components are interfere or simply be unneccessary for an implementation but cannot be turned off soley via configuration (or no configuration). The feature allows these OSGi Services and Components to be disabled as part of your applications configuration.
+Some AEM components can interfere or simply be unneccessary for an implementation but cannot be turned off soley via configuration (or no configuration). The feature allows these OSGi Services and Components to be disabled as part of your applications configuration.
 
 
 ## Description
 
 In Apache Felix the state of components and services is not persisted across restarts of its containing bundle.
 
-For example, when you have a Bundle S containing a service S, and you manually stop the service S; after a deactivate and activate of the bundle the service S is up again.
+For example, when you have a Bundle S containing a service T, and you manually stop the service T; after the bundle is stopped and started, the service T is up again.
  
 This service allows you to specify the names of components, which shouldn't be running. Whenever an OSGI service event is fired, which services checks the status of this components and stops them if required.
 
