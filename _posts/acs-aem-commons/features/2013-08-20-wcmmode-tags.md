@@ -58,7 +58,7 @@ EL Functions available are:
 These would typically be used in a `<c:if>` tag, e.g.
 
 {% highlight jsp %}
-<c:if test="${blank properties['title'] && wcmmode:isEdit(pageContext)}">
+<c:if test="${empty properties['title'] && wcmmode:isEdit(pageContext)}">
     You probably want to populate the title in the dialog.
 </c:if>
 {% endhighlight %}
