@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-tools_default
 title: Release 0.0.12 now available!
-description: Oak Explain Query, Test Page Generator and AEM6 compatability updates for AEM6
+description: Oak Explain Query, Test Page Generator and AEM6 compatibility updates for AEM Fiddle
 date: 2014-08-08
 thumbnail: /images/default/thumbnail.png
 categories: news
