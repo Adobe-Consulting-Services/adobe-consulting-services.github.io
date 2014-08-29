@@ -6,7 +6,7 @@ date: 2013-12-04
 thumbnail: /images/aem-livereload/thumbnail.png
 initial-release: 0.0.2
 categories: acs-aem-tools features
-tags: acs-aem-tools-features updated
+tags: acs-aem-tools-features
 ---
 
 LiveReload is a browser plugin which automatically reloads browser windows when files change. It uses WebSockets to create a persistent connection to the server. When used with AEM 5.6 or AEM 5.6.1, this feature supports reloading pages when JSPs change. When used with AEM 6.0, it will also listen for client library changes.
