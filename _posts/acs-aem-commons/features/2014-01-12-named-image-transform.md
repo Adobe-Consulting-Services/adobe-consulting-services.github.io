@@ -144,7 +144,7 @@ Example
 
 ### Crop
 
-Crops the image based on 
+Crops the image to the specified bounds.
 
 Name
 
