@@ -12,11 +12,11 @@ initial-release: 1.7.5
 
 ## Purpose
 
-The OSGi Bundle Disabler allows ensures that OSGi bundles can be stopped by configuration.
+The OSGi Bundle Disabler allowes OSGi bundles to be stopped by configuration.
 
-AEM contains some bundles (e.g. CRXDE) that are very useful during the development, but should be stopped on production instances.  Also it may be desirable to disable certain features that are not in use.   
+AEM contains some bundles (e.g. CRXDE) that are useful during the development, but should be stopped on production instances.   You may also want to disable certain features that are not in use.   
   
-Whilst it is possible to manually stop these bundles through the Felix console, it may be desirable to do this through configuration, so that:
+Whilst it is possible to manually stop these bundles through the Apache Felix console, you may wish to do this through configuration, so that:
 
 * the number of manual steps for manual deployment are minimised
  
@@ -25,13 +25,13 @@ Whilst it is possible to manually stop these bundles through the Felix console, 
 
 ## Description
 
-If a bundle is stopped in the Apache Felix console, that stopped state will persist across restarts.  However, there is no way of permanently configuring Apache Felix to never start specific bundle.   
+If a bundle is stopped in the Apache Felix console, that 'stopped' state will persist across restarts.  However, there is no way of preventing Apache Felix from starting it.
 
-This service allows you to specify the symbolic names of bundles that shouldn't be running.  
+This service allows you to specify the symbolic names of bundles that you wish to stop.
 
-When the service starts it will check all of the installed bundles and stop any of those specified that are not already uninstalled.  
+When the BundleDisabler service starts it will check all of the OSGi bundles and stop any of those whose symbolic name has been specified.
 
-When any bundle is started, the service will receive a BundleEvent notification and stop that bundle if has been specified. 
+When any other bundle is started, the service will receive a BundleEvent notification and stop that bundle if required.
 
 
 ## How to Use
@@ -52,3 +52,5 @@ When any bundle is started, the service will receive a BundleEvent notification 
 `bundles` is an array of the OSGi bundle symbolic names to disable.  
 
 To find the symbolic name of a bundle, select a bundle in the Apache Felix bundles console and the symbolic name will be listed amongst the properties of that bundle.
+
+If you create the configuration under config.production for example, this configuration could be enabled only when that runmode is set in your production environment.
