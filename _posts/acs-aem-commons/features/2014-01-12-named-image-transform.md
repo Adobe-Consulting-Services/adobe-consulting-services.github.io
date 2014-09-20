@@ -2,9 +2,9 @@
 layout: acs-aem-commons_feature
 title: Named Transform Image Servlet
 description: Consistently resize, crop and transform images
-date: 2014-01-12
+date: 2014-09-18
 thumbnail: /images/named-image-transform/thumbnail.png
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---
@@ -158,7 +158,8 @@ Params
 
 Example
 
-* `rotate:degrees=180`
+* `crop:bounds=150,100,100,100`
+* `crop:bounds=150,100,100,100&smart=false`
 
 
 ### Adjust Brightness/Contrast
@@ -177,6 +178,47 @@ Params
 Example
 
 * `adjust:brightness=120&contrast=0`
+
+
+### Multiply Blend
+
+Multiplies all of the RGB values of the image against a base color. Follows specification of Multiply blend from Adobe Photoshop (http://helpx.adobe.com/after-effects/using/blending-modes-layer-styles.html#Multiply)
+
+Name
+
+* `multiply`
+
+Params
+
+* `alpha=[0.0..1.0]` (Opacity, percentage)
+* `color=[000000..FFFFFF]` (Hex Color for use in blending; if specified, overrides all red/green/blue parameters)
+* `red=[0..255]` (Red value for use in blending; not required if using `color` parameter; default value: 255)
+* `green=[0..255]` (Green value for use in blending; not required if using `color` parameter; default value: 255)
+* `blue=[0..255]` (Blue value for use in blending; not required if using `color` parameter; default value: 255)
+
+Examples
+
+* `multiply:alpha=.75&color=3366FF`
+* `multiply:alpha=.75&red=51&green=102&blue=255`
+
+
+### Red/Green/Blue Shift
+
+Shifts the color of all pixels in an image. Parameters are a percentage of R/G/B value. Omit or set R/G/B shift value to 0 to keep current value. If any element of the color is shifted beyond min/max allowed (0..255) the min/max value is used. Based on http://pixastic.com/lib/docs/actions/coloradjust/
+
+Name
+
+* `rgb-shift`
+
+Params
+
+* `red=[-1.0..1.0]` (Percentage, amount of red to shift the image)
+* `green=[-1.0..1.0]` (Percentage, amount of green to shift the image)
+* `blue=[-1.0..1.0]` (Percentage, amount of blue to shift the image)
+
+Examples
+
+* `rgb-shift:red=.5&ggreen=.25&blue=-.60`
 
 
 ## Notes
