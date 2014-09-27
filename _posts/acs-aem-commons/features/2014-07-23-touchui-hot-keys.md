@@ -5,7 +5,7 @@ description: Switch active layer with a key combination!
 date: 2014-07-23
 thumbnail: /images/touchui-hot-keys/thumbnail.png
 feature-tags: authoring
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.7.0
 ---

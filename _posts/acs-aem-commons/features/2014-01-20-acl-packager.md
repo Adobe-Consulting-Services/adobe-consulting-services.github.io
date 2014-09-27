@@ -5,7 +5,7 @@ description: Easily zip up access control entries
 date: 2014-01-20
 thumbnail: /images/acl-packager/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---
@@ -30,3 +30,6 @@ Frequently, access control entries need to be copied from one environment to ano
 * Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package. 
 
 
+## Bug Fixes
+
+* Version 1.8.0 excludes `.tokens` nodes when packaging principals that caused problems when installing on AEM6/Oak repositories.

@@ -5,7 +5,7 @@ description: Get Oak index status and re-index too!
 date: 2014-07-23
 thumbnail: /images/oak-index-manager/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.7.0
 ---

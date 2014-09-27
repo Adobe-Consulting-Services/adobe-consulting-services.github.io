@@ -5,7 +5,7 @@ description: AJAX-ify your AEM Components with ease
 date: 2013-07-30
 thumbnail: /images/ajax-component/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0
 ---

@@ -5,7 +5,7 @@ description: Don't let erring Components ruin your day
 date: 2013-10-23
 thumbnail: /images/component-error-handler/thumbnail.png
 feature-tags: component-dev authoring
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.2.0
 ---
@@ -49,3 +49,8 @@ As of version 1.5.0, there are two mechanisms for suppressing the component erro
 	* Request attribute suppression prevents component error handling in two ways
 		1. Errors occurring within the context of the include which sets the suppression request attribute will be supressess (allowing a component to suppress itself).
 		2. Errors occuring in any include after the suppression request attribute is set, UNTIL the suppression request attribute it removed/set to false, will be suppressed.
+
+## Bug Fixes
+
+* Version 1.8.0 resolves conflict with ACS AEM Commons Error Page Handler which prevented error pages from displaying under WCMMode Disabled mode on Publish tier.
+
