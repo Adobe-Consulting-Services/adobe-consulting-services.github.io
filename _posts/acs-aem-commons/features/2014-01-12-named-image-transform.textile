@@ -244,7 +244,7 @@ Params
 
 Examples
 
-* @rgb-shift:red=.5&ggreen=.25&blue=-.60@
+* @rgb-shift:red=.5&green=.25&blue=-.60@
 </div>
 
 h2. Notes
