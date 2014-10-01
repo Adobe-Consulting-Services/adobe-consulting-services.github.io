@@ -188,7 +188,7 @@ h3. Adjust Brightness/Contrast
 
 Adjusts the brightness and contrast of the image. 
 
-** Note: This utilizes the Adobe CQ Layer adjust(..) method which does not seem to conform w common brightness/contrast expectations **
+Note: This utilizes the Adobe CQ Layer adjust(..) method which does not seem to conform w common brightness/contrast expectations.
 
 Name
 
