@@ -4,7 +4,7 @@ title: Workflow Processes
 description: Helpful Workflow processes
 date: 2014-09-01
 thumbnail: /images/workflow-processes/thumbnail.png
-tags: acs-aem-commons-features authoring administration new
+tags: acs-aem-commons-features authoring administration
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---

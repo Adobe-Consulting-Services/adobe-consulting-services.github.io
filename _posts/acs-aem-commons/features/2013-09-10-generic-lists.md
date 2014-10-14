@@ -5,7 +5,7 @@ description: Easy creation of simple name/value pair lists
 date: 2013-09-10
 thumbnail: /images/generic-lists/thumbnail.png
 feature-tags: component-dev backend-dev
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.0.0
 ---

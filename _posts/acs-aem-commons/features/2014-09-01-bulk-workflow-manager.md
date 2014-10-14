@@ -4,8 +4,8 @@ title: Bulk Workflow Manager
 description: Finally execute Workflow at scale!
 date: 2014-09-01
 thumbnail: /images/bulk-workflow-manager/thumbnail.png
-feature-tags: administration
-tags: acs-aem-commons-features new
+feature-tags: administration content-migration
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---

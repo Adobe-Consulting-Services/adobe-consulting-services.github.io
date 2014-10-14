@@ -5,7 +5,7 @@ description: Create package definitions from Queries
 date: 2014-09-22
 thumbnail: /images/query-packager/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
