@@ -19,7 +19,7 @@ ACS AEM Commons Synthetic Workflow is designed to facilitate the execute of AEM 
 ## Supported Workflow Features
 
 * Synthetic Workflow ONLY supports OSGi Workflow Processes
-* `wfSession.complete(..)`, `wfSession.terminate(..)`, `wfSession.restart(..)` are supported
+* `wfSession.terminate(..)`, `wfSession.restart(..)` are supported if SyntheticWorkflow objects are passed to them. This limits their use to self-termination or self-restarting.
   * `wfSession.restart(..)` restarts the entire worflow execution up to 3 times per payload
 * `workItem` MetaDataMap (local to a Workflow Process step)
 * `workflow` and `workflowData` MetaDataMap (shares throughout the Workflow execution for a payload)
@@ -32,6 +32,7 @@ ACS AEM Commons Synthetic Workflow is designed to facilitate the execute of AEM 
 * Does NOT support ECMA workflow steps, dialog participant steps, etc.
 * Synthetic Workflow does NOT support Routes and executes Workflow Processes serially.
 * Unsupported operations throw UnsupportedOperation Exceptions; Test your Synthetic Workflow run on a representative sample set to ensure the candidate Workflow Process steps do not use unimplemented features.
+* `wfSession.complete(..)` is not supported as it requires a Route which is an unsupported abstraction by Synthetic Workflow.
 
 
 ## How to Use
