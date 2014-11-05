@@ -11,6 +11,7 @@ com.adobe.acs.commons.images
 com.adobe.acs.commons.packaging
 com.adobe.acs.commons.replication
 com.adobe.acs.commons.replication.dispatcher
+com.adobe.acs.commons.replication.status
 com.adobe.acs.commons.rewriter
 com.adobe.acs.commons.social.linkedin
 com.adobe.acs.commons.twitter
@@ -19,4 +20,6 @@ com.adobe.acs.commons.wcm
 com.adobe.acs.commons.wcm.tags
 com.adobe.acs.commons.wcm.tags.wcmmode
 com.adobe.acs.commons.widgets
+com.adobe.acs.commons.workflow
+com.adobe.acs.commons.workflow.bulk
 com.adobe.acs.commons.xss
