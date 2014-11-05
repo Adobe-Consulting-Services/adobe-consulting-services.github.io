@@ -7261,6 +7261,11 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
 .feature-doc .feature-doc-header {
   margin-bottom: 1.5em;
 }
+.section {
+  padding: 0 2em 1em 2em;
+  border: dotted 5px #f0f0f0;
+  margin-bottom: 2em;
+}
 /* Inline Code */
 code {
   background-color: #f7f7f7;
@@ -7433,7 +7438,7 @@ ul.show-more-list li {
   display: none;
 }
 .comment-header {
-  border-top: dashed 1px #eee;
+  border-top: solid 1px #eee;
   color: #999;
   margin: 3em 0 1em 0;
   padding-top: .5em;
