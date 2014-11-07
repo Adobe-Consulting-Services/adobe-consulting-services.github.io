@@ -1,6 +1,7 @@
 ---
 layout: acs-aem-commons_default
 title: Using with Maven
+youtube-id: ePXinpRWBzk
 ---
 
 # {{ page.title }}
@@ -64,3 +65,8 @@ In the `<dependencies>` section of the _pom.xml_ any maven projects that use ACS
         <scope>provided</scope>
     </dependency>
 {% endhighlight %}
+
+## Video Walk-through
+
+{% include shared/youtube-player.html %}
+
