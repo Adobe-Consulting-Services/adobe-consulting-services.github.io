@@ -11,6 +11,8 @@ layout: acs-aem-commons_default
                     <span class="new">New!</span>
                     {% elsif page.tags contains 'updated' %}
                     <span class="updated">Updated</span>
+                    {% elsif page.tags contains 'beta' %}
+                    <span class="beta">Beta</span>					
                     {% endif %}
                 </h1>
 
