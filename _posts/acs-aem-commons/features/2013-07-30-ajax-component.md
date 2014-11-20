@@ -4,6 +4,7 @@ title: Base AJAX Component
 description: AJAX-ify your AEM Components with ease
 date: 2013-07-30
 thumbnail: /images/ajax-component/thumbnail.png
+youtube-id: 8fAyI2IVBbc
 feature-tags: component-dev
 tags: acs-aem-commons-features
 categories: acs-aem-commons features
@@ -16,6 +17,8 @@ Provide a simple extension point for turning "normal" components into components
 
 > An robust alternative to the AJAX Component is the open-source [Dynamic Sling Include](https://github.com/Cognifide/Sling-Dynamic-Include#sling-dynamic-include) project.
 
+
+{% include shared/youtube-player.html %}
 
 ## How to Use
 

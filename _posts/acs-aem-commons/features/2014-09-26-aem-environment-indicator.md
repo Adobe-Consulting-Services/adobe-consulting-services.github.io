@@ -73,27 +73,39 @@ This is an example of a custom indicator that renders the environment name in a 
 Set `css-override` to with adjusted color and background colors per environment.
 
 {% highlight css %}
-#acs-commons-env-indicator {
-	background-color: #800080; 
-	color: #FFF;
-
-	position: fixed;
-	left: 100px; 
-	top: 0;
-	height: 30px; 
-	width: 125px;
-	border: 1px solid rgba(0, 0, 0, 0.25);
-	font-size: 18px; 
-	font-weight: bold;
-	text-align: center;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	border-top-width: 0;
-	box-sizing: border-box;
-	line-height: 29px;
-	z-index: 100000000000000;
+#acs-commons-env-indicator { 	
+background-color: #800080;  	
+color: #FFF;  
+	
+position: fixed; 
+top: 0; 
+left: 50%;	
+width: 126px; 
+margin-left: -63px;
+height: 30px;  	
+font: bold 18px/29px sans-serif;
+text-align: center; 	 	
+border: solid 1px black;
+border-top-width: 0;
+z-index: 100000000000000; 
 }
 {% endhighlight %}
 
-Set `inner-html` to be the text to display; Ex. "Dev", "QA" or "Staging"
+Set `inner-html` to be the text to display; Ex. "Local", "Dev", "QA" or "Staging"
+
+You can even add JS to the `inner-html` make the Tab move away from your mouse
+
+{% highlight html %}
+Local
+<script>
+document.getElementById('acs-commons-env-indicator').onmouseover = function() { 
+	if(this.style.left === '50%') {
+		this.style.left = '25%';
+	} else {
+		this.style.left = '50%';
+	}
+};
+</script>
+{% endhighlight %}
+
 
