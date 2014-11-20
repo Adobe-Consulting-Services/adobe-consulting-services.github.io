@@ -7,12 +7,12 @@ layout: acs-aem-tools_default
             <div class="feature-doc-header">
                 <h1>
                     {{ page.title }}
-                    {% if page.tags contains 'new' %}
+                    {% if page.tags contains 'beta' %}
+                    <span class="beta">Beta</span>	
+                    {% elsif page.tags contains 'new' %}
                     <span class="new">New!</span>
                     {% elsif page.tags contains 'updated' %}
-                    <span class="updated">Updated</span>
-                    {% elsif page.tags contains 'beta' %}
-                    <span class="beta">Beta</span>
+                    <span class="updated">Updated</span>    				
                     {% endif %}
                 </h1>
 

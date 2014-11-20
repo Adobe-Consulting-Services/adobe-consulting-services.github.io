@@ -11,8 +11,8 @@ $.bigfoot();
 
 ;$(function() { 
 	var wrapper = $('<div class="img-wrapper"></div>');
-	$('.feature-doc img').wrap(wrapper);
-    $('img.framed').wrap(wrapper);
+	$('.feature-doc img').not('.feature-doc .section img').wrap(wrapper);
+    $('img.framed').not('.feature-doc .section img').wrap(wrapper);
 
 	$("a[href^='http']").attr('target', '_blank');
 });

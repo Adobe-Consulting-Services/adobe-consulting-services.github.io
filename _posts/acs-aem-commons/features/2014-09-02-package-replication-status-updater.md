@@ -5,7 +5,7 @@ description: Replicate content packages and have your cake too!
 date: 2014-09-02
 thumbnail: /images/package-replication-status-updater/thumbnail.png
 feature-tags: content-migration
-tags: acs-aem-commons-features administration
+tags: acs-aem-commons-features administration updated
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
@@ -27,14 +27,15 @@ To enable Package Replication Status Updating, create a new `sling:OsgiConfig` n
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    node-types="[cq:ReplicationStatus,cq:PageContent,dam:AssetContent,rep:User,rep:Group]"
+    node-types="[cq:ReplicationStatus,cq:PageContent,dam:AssetContent,rep:User,rep:Group,sling:OrderedFolder/nt:unstructured]"
     replicated-by="Package Replication"
     replicated-at="Package Last Modified"
     />
 {% endhighlight %}        
 
 * `node-types`: A String array of node-types (or mixins) that are candidates for replication status updates. 
-   * Default: [cq:ReplicationStatus,cq:PageContent,dam:AssetContent,rep:User,rep:Group]
+   * Added in 1.9.0, hierarchy node-type definitions are supported to allow setting replication status on sling:OrderedFolder's jcr:content nodes. This can be leveraged for custom node-type hierarchies.
+   * Default: [cq:ReplicationStatus,cq:PageContent,dam:AssetContent,rep:User,rep:Group,sling:OrderedFolder/nt:unstructured]
 * `replicated-by`: Marks the replicator for the package content. Accepts a principal name or any String.
    * Default: Package Replication
 * `replicated-at`: Marks the replication time for the content. Accepts "Package Last Modified" or "Current Time"

@@ -4,7 +4,8 @@ title: Named Transform Image Servlet
 description: Consistently resize, crop and transform images
 date: 2014-09-18
 thumbnail: /images/named-image-transform/thumbnail.png
-tags: acs-aem-commons-features
+feature-tags: component-dev
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---
@@ -28,8 +29,6 @@ bc. http://localhost:4502/content/dam/geometrixx/shapes/sq_plan.png.transform/my
 Supporting OSGi Configuration
 
 !/acs-aem-commons/images/named-image-transform/my-transform-name-osgi-config.png!
-
-
 
 h2. Supported "image-y" resources
 
@@ -80,8 +79,46 @@ or
 * @<img src="/content/dam/images/dog.jpg.transform/my-transform/img.png"/>@
 
 
-h2. ACS AEM Commons provided Image Transformers
+h3. Chained Transformations (Available in v.1.9.0+)
 
+Transforms can be chained by naming a series in the suffix.
+
+* Transform rules on the left are overwritten by those on the right.
+* Transform rules order is defined from left to right.   
+
+<pre>
+<code>
+/content/ira.png.transform/hero/small/image.png
+</code>
+</pre>
+
+Where @hero@ is a NamedTransform with ImageTransforms
+
+<pre>
+<code>
+resize:width=100
+greyscale:greyscale=true
+</code>
+</pre>
+
+and @small@ is a NamedTransform w ImageTransforms
+
+<pre>
+<code>
+resize:width=50
+</code>
+</pre>
+
+The combined transformation would result in:
+
+<pre>
+<code>
+resize:width=50
+greyscale:greyscale=true
+</code>
+</pre>
+
+h2. ACS AEM Commons provided Image Transformers
 
 <div class="section">
 h3. Greyscale
@@ -245,6 +282,27 @@ Params
 Examples
 
 * @rgb-shift:red=.5&green=.25&blue=-.60@
+</div>
+
+<div class="section">
+h3. Quality (v.1.9.0+)
+
+Adjusts the quality of the output image. This leverages the AEM Product Layer API's write method, so it only works on JPEG and GIF image types (PNG is not supported).
+
+Quality is always executed LAST, no matter where is appears in the transform list.
+
+Name
+
+* @quality@
+
+Params
+
+* @quality=[0..100]@ (0 is lowest quality, 100 is highest)
+* If quality number is "out of bounds", 82 will be used (OOTB AEM Default quality)
+
+Examples
+
+* @quality:quality=75@
 </div>
 
 h2. Notes

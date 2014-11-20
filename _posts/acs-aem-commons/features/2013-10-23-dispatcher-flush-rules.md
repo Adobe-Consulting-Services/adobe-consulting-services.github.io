@@ -5,7 +5,7 @@ description: Statlevels cramping your flushes?
 date: 2013-10-01
 thumbnail: /images/dispatcher-flush-rules/thumbnail.png
 feature-tags: backend-dev administration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.2.0
 ---
@@ -84,11 +84,20 @@ These Flush Agents should also be configured as `Ignore Default`
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     prop.replication-action-type="INHERIT|ACTIVATE|DELETE"
-    prop.rules.hierarchical="[regex=abs-path,regex2=abs-path2]"
+    prop.rules.hierarchical="[regex=/abs/path,regex2=/abs/path2]"
     prop.rules.resource-only="[]"
 	/>
 {% endhighlight %}  
 
+
+## One-to-Many Patterns-to-Flush Paths (Available in v1.9.2+)
+
+Added in 1.9.2 (not 1.9.0), multiple flush paths can be assigned to a replication pattern. Each absolute path to flush is delimited by `&`.
+
+{% highlight xml %}
+    prop.rules.hierarchical="[regex=/abs/path/A&/abs/path/B,regex2=/abs/path/X]"
+    prop.rules.resource-only="[regex=/abs/path/C&/abs/path/D,regex2=/abs/path/Y]"
+{% endhighlight %}  
 
 ## Flushing from AEM 5.6+ Publish Servers
 
