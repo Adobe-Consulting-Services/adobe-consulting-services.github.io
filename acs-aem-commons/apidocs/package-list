@@ -9,6 +9,9 @@ com.adobe.acs.commons.forms.helpers
 com.adobe.acs.commons.genericlists
 com.adobe.acs.commons.images
 com.adobe.acs.commons.packaging
+com.adobe.acs.commons.quickly
+com.adobe.acs.commons.quickly.operations
+com.adobe.acs.commons.quickly.results
 com.adobe.acs.commons.replication
 com.adobe.acs.commons.replication.dispatcher
 com.adobe.acs.commons.replication.status
@@ -22,4 +25,5 @@ com.adobe.acs.commons.wcm.tags.wcmmode
 com.adobe.acs.commons.widgets
 com.adobe.acs.commons.workflow
 com.adobe.acs.commons.workflow.bulk
+com.adobe.acs.commons.workflow.synthetic
 com.adobe.acs.commons.xss
