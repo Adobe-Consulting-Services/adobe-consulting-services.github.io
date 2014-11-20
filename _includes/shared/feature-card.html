@@ -6,10 +6,10 @@
  {% elsif feature.tags contains 'updated' %} updated {% endif %}">
     <a class="feature-image-wrapper" href="{{ feature.url }}">
 
-        {% if feature.tags contains 'new' %}<div class="new"></div>
-        {% elsif feature.tags contains 'updated' %}<div class="updated"></div>
-        {% elsif feature.tags contains 'beta' %}<div class="beta"></div>{% endif %}
-
+        {% if feature.tags contains 'beta' %}<div class="beta"></div>
+        {% elsif feature.tags contains 'new' %}<div class="new"></div>
+        {% elsif feature.tags contains 'updated' %}<div class="updated"></div>{% endif %}
+		
         <img class="img-responsive"
              src="/{{ project }}{{ feature.thumbnail }}"/></a>
 

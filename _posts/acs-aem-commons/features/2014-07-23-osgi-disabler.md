@@ -5,7 +5,7 @@ description: Disable OSGi Components &amp; Bundles as part of your build
 date: 2014-09-23
 thumbnail: /images/osgi-disabler/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.7.0
 ---

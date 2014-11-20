@@ -63,7 +63,6 @@ The following code executes the OOTB DAM Asset Workflow Processes against a DAM 
 * Create Web Enabled Image
 * Update Folder Thumbnail Process
 
-
 {% highlight jsp %}
 
 <%@include file="/libs/foundation/global.jsp"%><%
@@ -143,3 +142,33 @@ The following code executes the OOTB DAM Asset Workflow Processes against a DAM 
 ## Notes
 
 Make sure to **disable any Launchers/Event Listeners that should not be triggered** during the Synthetic Worflow execution on payload or related resources.
+
+## Example
+
+This example shows applying OOTB AEM6 DAM Asset Update WF against unprocessed assets using Synthetic Workflow leveraging these OOTB WF Steps
+
+* Extract Meta Data
+* Create Thumbnail
+* Create Web Enabled Image
+* Create Reference
+	* Note this is an invalid name and will not execute; See in logs screenshot
+* Update Folder Thumbnail Process
+
+Disable launchers and upload "raw" images to DAM
+![Synthetic Workflow Example](/acs-aem-commons/images/synthetic-workflow/example-1.png)
+
+Create your script to execute the Synthetic Workflow (example uses [AEM Fiddle](http://adobe-consulting-services.github.io/acs-aem-tools/features/aem-fiddle.html))
+
+![Synthetic Workflow Example](/acs-aem-commons/images/synthetic-workflow/example-2.png)
+
+Log output of Synthetic Workflow executing. Note how it skips missing WF Processes with an ERROR message.
+![Synthetic Workflow Example](/acs-aem-commons/images/synthetic-workflow/example-3.png)
+
+
+Post-Synthetic Workflow DAM listing.
+![Synthetic Workflow Example](/acs-aem-commons/images/synthetic-workflow/example-4.png)
+
+Note the custom Redition sizes specified in the Synthetic Workflow script.
+![Synthetic Workflow Example](/acs-aem-commons/images/synthetic-workflow/example-5.png)
+
+
