@@ -44,6 +44,7 @@ h2. How to Use
 
 
 Or you can set it directly on your local via the "Adobe Web Console":http://localhost:4502/system/console/configMgr
+<<<<<<< HEAD
 
 !/acs-aem-commons/images/quickly/felix-configmgr.png!
 
@@ -51,6 +52,15 @@ Or you can set it directly on your local via the "Adobe Web Console":http://loca
 h2. Supported Browsers
 
 h3. Open Quickly
+=======
+
+!/acs-aem-commons/images/quickly/felix-configmgr.png!
+
+
+h2. Supported Browsers
+
+h4. Open Quickly
+>>>>>>> 500317305de5a509a20ddd44fac3f796d920b16b
 
 * OS X Chrome/Safari ~> @Ctrl-Space@
 * OS X FireFox ~> @Shift-Ctrl-Space@
