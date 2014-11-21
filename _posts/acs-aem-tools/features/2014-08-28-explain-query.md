@@ -6,7 +6,7 @@ date: 2014-08-28
 thumbnail: /images/explain-query/thumbnail.png
 initial-release: 0.0.12
 categories: acs-aem-tools
-tags: acs-aem-tools-features new
+tags: acs-aem-tools-features
 ---
 
 ## Getting Started
