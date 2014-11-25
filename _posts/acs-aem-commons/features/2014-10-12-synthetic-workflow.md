@@ -14,7 +14,7 @@ initial-release: 1.9.0
 
 Content processing at scale can be challenging in AEM, especally when business process in encapsulated by AEM Workflow process, which is challenging and even slow to execute as scale (even with ACS AEM Commons Bulk Workflow Manager).
 
-ACS AEM Commons Synthetic Workflow is designed to facilitate the execute of AEM Workflow Processes (Java WorkflowProcesses) without engaging the AEM Workflow Enging which has large amount of overheard; Job management, Workflow instance node creation and management.
+ACS AEM Commons Synthetic Workflow is designed to facilitate the execute of AEM Workflow Processes (Java WorkflowProcesses) without engaging the AEM Workflow Engine which has large amount of overheard; Job management, Workflow instance node creation and management.
 
 ## Supported Workflow Features
 
