@@ -18,19 +18,19 @@ Gracefully handle erring components with custom views. Edit, Preview and Publish
 
 Create a new `sling:OsgiConfig` to define how each view should be handled. To leverage the ACS AEM Commons OOTB views use the `sling:OsgiConfig` node defined below. This configuration will be used globally across all sites and pages on the AEM instance. 
 
-    /apps/myapp/config/com.adobe.acs.commons.wcm.impl.ComponentErrorHandlerImpl
+    /apps/myapp/config/com.adobe.acs.commons.wcm.impl.ComponentErrorHandlerImpl.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    prop.edit.enabled="{Boolean}true"
-    prop.edit.html="/apps/acs-commons/components/utilities/component-error-handler/edit.html"
-    prop.preview.enabled="{Boolean}false"
-    prop.preview.html="/apps/acs-commons/components/utilities/component-error-handler/preview.html"
-    prop.publish.enabled="{Boolean}false"
-    prop.publish.html="/dev/null"
+    edit.enabled="{Boolean}true"
+    edit.html="/apps/acs-commons/components/utilities/component-error-handler/edit.html"
+    preview.enabled="{Boolean}false"
+    preview.html="/apps/acs-commons/components/utilities/component-error-handler/preview.html"
+    publish.enabled="{Boolean}false"
+    publish.html="/dev/null"
 	/>
 {% endhighlight %}  
 
@@ -53,4 +53,19 @@ As of version 1.5.0, there are two mechanisms for suppressing the component erro
 ## Bug Fixes
 
 * Version 1.8.0 resolves conflict with ACS AEM Commons Error Page Handler which prevented error pages from displaying under WCMMode Disabled mode on Publish tier.
+
+* AEM6 requires adjusting the service ranking of the OOTB AEM WCMDeveloperModeFilter. This can be done by creating `sling:OsgiConfig` as follow. 
+
+    /apps/myapp/config.author/com.day.cq.wcm.core.impl.WCMDeveloperModeFilter.xml
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    wcmdevmodefilter.enabled="{Boolean}true"
+    service.ranking="{Long}75000"
+	/>
+{% endhighlight %}  
+
 
