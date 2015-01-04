@@ -100,7 +100,7 @@ OR create a your own custom pathfield widget
     jcr:primaryType="sling:OsgiConfig"
     enabled="{Boolean}true"
     cache.serve-authenticated="{Boolean}true"
-    ttl="{Long}300"/>
+    cache.ttl="{Long}300"/>
 {% endhighlight %}
 
 > Note: ttl is the TTL of the in-memory error page cache in seconds
