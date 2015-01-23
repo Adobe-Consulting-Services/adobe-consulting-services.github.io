@@ -6661,7 +6661,7 @@ p a {
 }
 #jumbotron {
   color: white;
-  border-bottom: solid 1px #06a608;
+  border-bottom: solid 1px #8859a7;
 }
 #jumbotron .wrapper {
   margin-left: -15px;
@@ -6802,7 +6802,7 @@ p a {
   border-radius: 6px;
   color: white;
   font-weight: 200;
-  border-color: #2bce00;
+  border-color: #8859a7;
   background-color: transparent;
   background: transparent;
 }
@@ -6840,7 +6840,7 @@ fieldset[disabled] #jumbotron .wrapper .action-btn {
 }
 #jumbotron .wrapper .action-btn:active {
   color: white;
-  background-color: #1f8b00;
+  background-color: #8859a7;
 }
 #jumbotron .action-gradient-btn {
   display: inline-block;
@@ -6865,11 +6865,11 @@ fieldset[disabled] #jumbotron .wrapper .action-btn {
   line-height: 1.33;
   border-radius: 6px;
   color: white;
-  border-color: #166800;
-  background-color: #2bce00;
-  background-image: linear-gradient(#2bce00, #1f8b00);
-  background: #2bce00;
-  background: linear-gradient(#2bce00, #1f8b00);
+  border-color: #523565;
+  background-color: #8859a7;
+  background-image: linear-gradient(#8859a7, #8859a7);
+  background: #8859a7;
+  background: linear-gradient(#8859a7, #8859a7);
   -moz-box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
   -webkit-box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
   box-shadow: 0px 1px 0px 1px rgba(0, 0, 1, 0.25);
@@ -7274,7 +7274,7 @@ header.top .navbar .nav li.acs-aem-projects a {
 }
 .stripe {
   background: url('../images/colored-bg.jpg') no-repeat center top fixed;
-  background-color: #2D3C27;
+  background-color: #5a2648;
   background-size: cover;
   height: 5em;
   color: white;
@@ -7348,12 +7348,49 @@ ul.show-more-list li {
   margin: 3em 0 1em 0;
   padding-top: .5em;
 }
+/*#cb0900; */
 a {
-  color: #1d6700;
+  color: #333333;
 }
 a:hover {
   color: #000000;
 }
 .color-block {
-  background-color: #2D3C27;
+  background-color: #5a2648;
+}
+/* Home Page Columns */
+.samples-section {
+  border-bottom: dotted 1px #ccc;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+}
+.col1,
+.col2 {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .col1,
+  .col2 {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col1,
+  .col2 {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .col1,
+  .col2 {
+    float: left;
+    width: 50%;
+  }
 }

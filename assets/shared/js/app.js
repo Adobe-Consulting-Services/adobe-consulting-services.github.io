@@ -28,7 +28,7 @@ $.bigfoot();
     });
 
 });
-
+/*
 ;$(function() {
     $('.unslider').unslider({
         dots: true,
@@ -38,7 +38,7 @@ $.bigfoot();
         keys: true
     });
 });
-
+*/
 
 ;$(function() {
     $('body').on('click', '.feature-filters a', function(e) {
