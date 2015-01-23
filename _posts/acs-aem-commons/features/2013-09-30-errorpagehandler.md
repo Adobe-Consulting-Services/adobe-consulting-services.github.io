@@ -99,8 +99,8 @@ OR create a your own custom pathfield widget
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     enabled="{Boolean}true"
-    serve-authenticated-from-cache="{Boolean}true"
-    ttl="{Long}300"/>
+    cache.serve-authenticated="{Boolean}true"
+    cache.ttl="{Long}300"/>
 {% endhighlight %}
 
 > Note: ttl is the TTL of the in-memory error page cache in seconds
@@ -177,6 +177,10 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 {% endhighlight %}
 
 * `enabled` true/false to toggle the Error Page Handler on and off
+
+* `not-found.behavior = redirect-to-login || respond-with-404` Defines the default behavior for 404'ing requests. Defaults to `respond-with-404`. (Since v1.9.4)
+
+* `not-found.exclusion-path-patterns = [ /content/foo/.* ]` Defines a list of path patterns (Regex) should respond using the opposite method to `not-found-behavior`. Exmaple. If `not-found-behavior=respond-with-404`, anonymous requests sent to `/content/site/profile/.*` can be sent to the login page, instead of responding with the usual 404. (Since v.1.9.4)
 
 * `cache.serve-authenticated` true allows authenticated requests to service the the in-memory cache. If your error pages do not contain any server-side personalization, this should be set to true to maximize cache effectiveness. (Since v1.5.0)
 
