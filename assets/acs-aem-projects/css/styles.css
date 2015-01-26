@@ -7241,7 +7241,7 @@ header.top .navbar {
 header.top .navbar .nav {
   list-style: none;
   font-size: 1.25em;
-  display: inline;
+  display: inline-block;
 }
 header.top .navbar .nav li {
   display: block;
