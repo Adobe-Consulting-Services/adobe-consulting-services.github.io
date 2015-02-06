@@ -29,7 +29,7 @@ This will include the ''full'' package. To include the ''minimal'' package, add
 
 inside the `<dependency>` element.
 
-## Step 2: Add ACS AEM Common as a Sub Package
+## Step 2: Add ACS AEM Commons as a Sub Package
 
 Then, (while still in the _content project's pom.xml_) within the configuration of the `content-package-maven-plugin`, add a `subPackage`:
 
