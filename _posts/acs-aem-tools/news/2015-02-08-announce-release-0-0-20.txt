@@ -1,0 +1,8 @@
+---
+layout: acs-aem-tools_default
+title: Release 0.0.20 now available!
+description: Client Library Optimizer enhancements, Explain Query now shows helpful Oak query log messages ad Test Page Generator now supports CQ Page buckets!
+thumbnail: /images/default/thumbnail.png
+categories: news
+tags: acs-aem-tools-news
+---
