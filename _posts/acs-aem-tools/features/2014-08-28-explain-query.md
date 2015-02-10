@@ -6,7 +6,7 @@ date: 2014-08-28
 thumbnail: /images/explain-query/thumbnail.png
 initial-release: 0.0.12
 categories: acs-aem-tools
-tags: acs-aem-tools-features
+tags: acs-aem-tools-features updated
 ---
 
 ## Getting Started
@@ -31,5 +31,7 @@ Explain Query has several features:
 * Reports the Oak indexed used to execute the query
 * Displays the actual Oak Query engine explanation
 * Provides click-to-load list of Slow and Popular queries
+* Oak Query Plan log messages (Since v0.0.18)
+  * When using Oak 1.0.9 and below, log messages will display however they may be unnecessarily verbose.
 
 ![Explain Query - Slow and Popular Queries]({{ site.data.acs-aem-tools.baseurl }}/images/explain-query/slow-and-popular.png)
