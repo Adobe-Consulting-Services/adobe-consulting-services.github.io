@@ -57,6 +57,8 @@ The bar is a default visual indicator. This indicator can be configured using th
 
 Custom indicators can be added using the `css-override` and `inner-html` properties.
 
+> Remember to escape the value of `inner-html` and `css-override` as needed using [escapehtmlforxml.com](http://www.escapehtmlforxml.com)
+
 * `css-override` selectors should always be scoped w `#acs-commons-env-indicator`
 * The base indicator div is injected at the end of the document like so  `... <div id="acs-commons-env-indicator"></div></body>` and thus should be positioned using fixed or absolute positioning. 
    * fixed positioning is usually better so the indicator is not lost when scrolling the page
