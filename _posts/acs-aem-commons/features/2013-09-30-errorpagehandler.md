@@ -180,7 +180,7 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 
 * `not-found.behavior = redirect-to-login || respond-with-404` Defines the default behavior for 404'ing requests. Defaults to `respond-with-404`. (Since v1.9.4)
 
-* `not-found.exclusion-path-patterns = [ /content/foo/.* ]` Defines a list of path patterns (Regex) should respond using the opposite method to `not-found-behavior`. Exmaple. If `not-found-behavior=respond-with-404`, anonymous requests sent to `/content/site/profile/.*` can be sent to the login page, instead of responding with the usual 404. (Since v.1.9.4)
+* `not-found.exclusion-path-patterns = [ /content/foo/.* ]` Defines a list of path patterns (Regex) should respond using the opposite method to `not-found-behavior`. Example. If `not-found-behavior=respond-with-404`, anonymous requests sent to `/content/site/profile/.*` can be sent to the login page, instead of responding with the usual 404. (Since v.1.9.4)
 
 * `cache.serve-authenticated` true allows authenticated requests to service the the in-memory cache. If your error pages do not contain any server-side personalization, this should be set to true to maximize cache effectiveness. (Since v1.5.0)
 
@@ -197,6 +197,7 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 * `error-images.enabled` boolean value; true to enable, false to disable. Defaults to false. (Since version 1.7.0)
 
 * `error-images.path` is a &lt;selectors.extension&gt; (ex. `.img.png`) absolute path to a nt:file image, or relative path to a image component resource.
+
 If an extension or relative path, this value is applied to the resolved error page. (ex. if error-image.path is 'jcr:content/image.img.png' and the resolve error path is '/content/acme/error' then '/content/acme/error/jcr:content/image.img.png' will be used to render the image.). Defaults to '.img.png' which will render the error page's Page image. (Since version 1.7.0)
 
 
