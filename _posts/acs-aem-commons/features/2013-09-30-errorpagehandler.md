@@ -46,6 +46,8 @@ The corresponding Error page is displayed.
 
 ## How to Use
 
+> In [AEM Dispatcher configuration](https://docs.adobe.com/docs/en/dispatcher/disp-install.html), set `DispatcherPassError` to '1'. This allows erring requests to be sent back to AEM. 
+
 > Watch a [video on how to use the ACS AEM Commons Error Page Handler](http://aemcasts.com/aem/episode-11.html).
 
 * Create the proxy overlays for Sling errorhandler scripts (404.jsp and default.jsp) which include the acs-commons counterparts.
