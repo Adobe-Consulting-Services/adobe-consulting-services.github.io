@@ -194,7 +194,8 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 
 * `error-page.extension` defines the extension to call the fallback error page with; This is almost ALWAYS "html" unless the application is using non-standard extensions.
 
-* `paths` define a list of valid inclusive content trees under which error pages may reside, along with the name of the the default error page for the content tree. This is a fallback/less powerful option to adding the `./errorPages`property to CQ Page property dialogs.
+* `paths` define a list of valid inclusive content trees under which error pages may reside, along with the name of the the default error page for the content tree. This is a fallback/less powerful option to adding the `./errorPages`property to CQ Page property dialogs. Examples:
+ * [/content/geometrixx/en:errors,/content/geometrixx/fr:/content/geometrixx/fr/erruers/ ]
 
 * `error-images.enabled` boolean value; true to enable, false to disable. Defaults to false. (Since version 1.7.0)
 
