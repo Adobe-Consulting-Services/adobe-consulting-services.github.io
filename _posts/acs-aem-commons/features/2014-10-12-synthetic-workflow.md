@@ -134,10 +134,11 @@ The following code executes the OOTB DAM Asset Workflow Processes against a DAM 
         	// Save in batches of 1000; How data is saved should be driven by the use case.
         	resourceResolver.commit();
         }	
+    }
+    
+    // Final save to catch stragglers
+    resourceResolver.commit();
 
-        // Final save to catch stragglers
-    	resourceResolver.commit();
-    }    
 %>
 {% endhighlight %}
 
