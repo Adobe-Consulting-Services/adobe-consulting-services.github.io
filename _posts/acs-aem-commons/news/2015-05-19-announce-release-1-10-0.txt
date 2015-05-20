@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 1.10.0 now available!
+description: WCM Views, Named Transform Image component, cqinclude Namespace, Workflow remover, Touch UI Composite Multifield and Property Merge POST Operation along with various bug fixes and what not.
+date: 2014-05-19
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
