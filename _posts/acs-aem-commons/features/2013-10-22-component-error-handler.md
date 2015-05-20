@@ -25,12 +25,12 @@ Create a new `sling:OsgiConfig` to define how each view should be handled. To le
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    prop.edit.enabled="{Boolean}true"
-    prop.edit.html="/apps/acs-commons/components/utilities/component-error-handler/edit.html"
-    prop.preview.enabled="{Boolean}false"
-    prop.preview.html="/apps/acs-commons/components/utilities/component-error-handler/preview.html"
-    prop.publish.enabled="{Boolean}false"
-    prop.publish.html="/dev/null"
+    edit.enabled="{Boolean}true"
+    edit.html="/apps/acs-commons/components/utilities/component-error-handler/edit.html"
+    preview.enabled="{Boolean}false"
+    preview.html="/apps/acs-commons/components/utilities/component-error-handler/preview.html"
+    publish.enabled="{Boolean}false"
+    publish.html="/dev/null"
 	/>
 {% endhighlight %}  
 
@@ -70,4 +70,19 @@ AEM6 SP1 introduced [an issue](https://github.com/Adobe-Consulting-Services/acs-
 
 * Version 1.8.0 resolves conflict with ACS AEM Commons Error Page Handler which prevented error pages from displaying under WCMMode Disabled mode on Publish tier.
 * Version 1.9.4 resolves Filter order conflict w AEM6 SP1's `WCM Developer Mode Filter` (see above)
+
+* AEM6 requires adjusting the service ranking of the OOTB AEM WCMDeveloperModeFilter. This can be done by creating `sling:OsgiConfig` as follow. 
+
+    /apps/myapp/config.author/com.day.cq.wcm.core.impl.WCMDeveloperModeFilter.xml
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    wcmdevmodefilter.enabled="{Boolean}true"
+    service.ranking="{Long}75000"
+	/>
+{% endhighlight %}  
+
 
