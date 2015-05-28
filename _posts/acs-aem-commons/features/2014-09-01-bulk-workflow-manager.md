@@ -5,7 +5,7 @@ description: Finally execute Workflow at scale!
 date: 2014-09-01
 thumbnail: /images/bulk-workflow-manager/thumbnail.png
 feature-tags: administration content-migration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
@@ -32,4 +32,7 @@ The ACS AEM Commons Bulk Workflow Manager allows resources to be selected via a 
 * When the Bulk Workflow exection is complete, the page will display the final results. 
 ![image](/acs-aem-commons/images/bulk-workflow-manager/step-5.png)
 * To start another Bulk Workflow run, create a new `Bulk Workflow Manager` page.
+
+
+* Auto-resume toggle (added in v1.10.0) - Bulk Workflow Manager now has an OSGi config that allows disabling the automatic resumption of Bulk Workflow Manager when the ACS AEM Commons bundle starts. When auto-resume is enabled, Bulk Workflow Manager will attempt to resume 'stopped via deactivation' bulk workflow jobs under /etc/acs-commons/bulk-workflow-manager. 
 

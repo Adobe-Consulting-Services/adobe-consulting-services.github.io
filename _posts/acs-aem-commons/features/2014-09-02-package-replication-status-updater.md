@@ -5,7 +5,7 @@ description: Replicate content packages and have your cake too!
 date: 2014-09-02
 thumbnail: /images/package-replication-status-updater/thumbnail.png
 feature-tags: content-migration
-tags: acs-aem-commons-features administration updated
+tags: acs-aem-commons-features administration
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
