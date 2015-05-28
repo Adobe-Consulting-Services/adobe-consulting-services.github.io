@@ -7,7 +7,7 @@ thumbnail: /images/cqinclude-namespace/thumbnail.png
 feature-tags: component-dev
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
-initial-release: 1.10.0
+initial-release: 1.10.2
 ---
 
 ## Purpose
@@ -61,17 +61,17 @@ Feature component dialog; This namespace cqincludes dialogs from 3 other compone
         <title-tab
 		jcr:primaryType="cq:Widget"
 		title="Title Tab"
-		path="/apps/demo/components/title/dialog/tab.cqinclude.title.json"
+		path="/apps/demo/components/title/dialog/tab.cqinclude.namespace.title.json"
 		xtype="cqinclude"/>
         <text-tab
 		jcr:primaryType="cq:Widget"
 		title="Text Tab"
-		path="/apps/demo/components/text/dialog/tab.cqinclude.title.json"
+		path="/apps/demo/components/text/dialog/tab.cqinclude.namespace.text.json"
 		xtype="cqinclude"/>
         <button-tab
 		jcr:primaryType="cq:Widget"
 		title="Button Tab"
-		path="/apps/demo/components/button/dialog/tab.cqinclude.title.json"
+		path="/apps/demo/components/button/dialog/tab.cqinclude.namespace.button.json"
 		xtype="cqinclude"/>
 	</items>
 </jcr:root>
@@ -83,14 +83,14 @@ Feature component JSP; This includes other components; note youll want to ensure
 
 {% highlight jsp %}
 <div class="feature-box">
-	<% IncludeOptions.fromRequest(slingRequest, true).forceSameContext(true); %>
+	<% IncludeOptions.getOptions(slingRequest, true).forceSameContext(true); %>
 	<cq:include path="title" resourceType="demo/components/title"/>
 
-	<% IncludeOptions.fromRequest(slingRequest, true).forceSameContext(true); %>
+	<% IncludeOptions.getOptions(slingRequest, true).forceSameContext(true); %>
 	<cq:include path="text" resourceType="demo/components/text"/>
 
 	<div class="call-to-action">
-		<% IncludeOptions.fromRequest(slingRequest, true).forceSameContext(true); %>
+		<% IncludeOptions.getOptions(slingRequest, true).forceSameContext(true); %>
 		<cq:include path="button" resourceType="demo/components/button"/>	
 	</div>
 </div>
