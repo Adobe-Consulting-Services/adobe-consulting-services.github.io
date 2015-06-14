@@ -91,13 +91,13 @@ Note the `:` prefix to ensure these params are ignored by the OOTB Sling POST Se
                 <cq-tags-property-merge-allow-duplicates
                     jcr:primaryType="cq:Widget"
                     ignoreData="{Boolean}true"
-                    name=":PropertyMerge.AllowDuplicates"
+                    name=":cq:tags@PropertyMerge.AllowDuplicates"
                     value="false"
                     xtype="hidden"/> 						
                 <cq-tags-property-merge-type-hint
                     jcr:primaryType="cq:Widget"
                     ignoreData="{Boolean}true"
-                    name=":PropertyMerge.TypeHint"
+                    name=":cq:tags@PropertyMerge.TypeHint"
                     value="String"
                     xtype="hidden"/> 						
 				</items>
