@@ -6,7 +6,7 @@ date: 2014-11-21
 thumbnail: /images/clientlibs-optimizer/thumbnail.png
 initial-release: 0.0.16
 categories: acs-aem-tools
-tags: acs-aem-tools-features updated
+tags: acs-aem-tools-features
 ---
 
 ## Getting Started

@@ -2,7 +2,7 @@
 layout: acs-aem-tools_feature
 title: Explain Query
 description: Understand how Oak's query engine is executing queries
-date: 2014-08-28
+date: 2015-06-01
 thumbnail: /images/explain-query/thumbnail.png
 initial-release: 0.0.12
 categories: acs-aem-tools
