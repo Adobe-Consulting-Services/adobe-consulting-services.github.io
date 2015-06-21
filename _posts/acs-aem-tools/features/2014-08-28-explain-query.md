@@ -23,9 +23,18 @@ Explain Query is a tool that explains how Oak is executing a query. For any give
 
 ![Explain Query]({{ site.data.acs-aem-tools.baseurl }}/images/explain-query/screenshot.png)
 
-Explain Query has several features:
 
-* Xpath, JCR-SQL and JCR-SQL2 support
+#### Explain Query Results 
+
+![Explain Query - Results]({{ site.data.acs-aem-tools.baseurl }}/images/explain-query/results.png)
+
+#### Download as JSON
+
+![Explain Query - JSON Results]({{ site.data.acs-aem-tools.baseurl }}/images/explain-query/results-json.png)
+
+### Explain Query's features
+
+* Xpath, JCR-SQL and JCR-SQL2 and (in v0.0.22) QueryBuilder map support
 * Option to execute the provided query and report the acutal query execution time
 * Slow query detection; Explain query will warn you about potentially slow queries. 
 * Reports the Oak indexed used to execute the query
@@ -33,5 +42,6 @@ Explain Query has several features:
 * Provides click-to-load list of Slow and Popular queries
 * Oak Query Plan log messages (Since v0.0.18)
   * When using Oak 1.0.8 and below, log messages will display however they may be unnecessarily verbose.
+* Export results to JSON
 
 ![Explain Query - Slow and Popular Queries]({{ site.data.acs-aem-tools.baseurl }}/images/explain-query/slow-and-popular.png)
