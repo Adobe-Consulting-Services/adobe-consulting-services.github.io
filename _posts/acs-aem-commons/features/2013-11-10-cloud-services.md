@@ -9,11 +9,17 @@ categories: acs-aem-commons features
 initial-release: 1.2.0
 ---
 
-### Currently only supported in AEM 5.6.1+
+## General Requirements
 
-Due to a AEM 5.6.0 product issue.
+In order to use these Cloud Services, ensure that the Cloud Service configuration components are included in *both* the head and body of the page. This typically is done by including `<cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>` in _headlibs.jsp_ and `<cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>` in _body.jsp_. If you run into trouble with these Cloud Services, compare your page component scripts to the Foundation page component.
 
-> In order to use these Cloud Services, ensure that the Cloud Service configuration components are included in *both* the head and body of the page. This typically is done by including `<cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>` in _headlibs.jsp_ and `<cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>` in _body.jsp_. If you run into trouble with these Cloud Services, compare your page component scripts to the Foundation page component.
+## Special Requirement when using AEM 6.1+
+
+On AEM 6.1, use of these components generally require enabling of the CQ Configuration Manager component, which is disabled by default. This is required for cross-compatibility with AEM 6.0 and AEM 6.1.
+
+![image]({{ site.data.acs-aem-commons.baseurl }}/images/cloud-services/enable-configuration-manager.png)
+
+This must be done in both author and publish.
 
 ## Adobe Dynamic Tag Manager (DTM)
 
