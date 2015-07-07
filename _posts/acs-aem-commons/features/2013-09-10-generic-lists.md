@@ -62,9 +62,9 @@ In a Touch UI dialog, a generic concept called a _datasource_ is used to populat
 {% endhighlight %}
 
 
-### Using Lists in Touch UI Metadata Asset Editor (since 1.8.0)
+### Using Lists in Touch UI Asset Metadata Editor (since 1.8.0)
 
-In the Touch UI Metadata Asset Editor, you can provide the name to the list *prefixed* with _/mnt/acs-commons/lists_ (e.g. _ /mnt/acs-commons/lists/sharethis-services_ for _/etc/acs-commons/lists/sharethis-services_) as the JSON Path for a Dropdown list. You may optionally include the _json_ extension.
+In the Touch UI Asset Metadata Editor, you can provide the name to the list *prefixed* with _/mnt/acs-commons/lists_ (e.g. _ /mnt/acs-commons/lists/sharethis-services_ for _/etc/acs-commons/lists/sharethis-services_) as the JSON Path for a Dropdown list. You may optionally include the _json_ extension.
 
 ![image]({{ site.data.acs-aem-commons.baseurl }}/images/generic-lists/metadata-editor.png)
 
