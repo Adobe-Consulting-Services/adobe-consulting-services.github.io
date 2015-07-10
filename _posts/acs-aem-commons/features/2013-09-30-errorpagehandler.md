@@ -206,3 +206,18 @@ If an extension or relative path, this value is applied to the resolved error pa
 
 ***Note: It is better to use the Page Properties-defined `errorPages` than the `paths` in the OSGi Configuration. Typically `paths` is left blank.***
 
+
+## Internationalization on Error Pages
+
+If your error pages require the I18N bundle, you must extend the I18NFilter configuration to include it in ERROR-scoped filter chain.
+
+* Create an nt:file node to configure the Sling I18N Filter
+
+  /apps/sling/config/org.apache.sling.i18n.impl.I18NFilter.config
+
+{% highlight %}
+service.ranking=I"-10000"
+sling.filter.scope=["REQUEST","ERROR"]
+{% endhighlight %}
+
+***Note:*** You must use a .config file because the `service.ranking` must be of type integer, which cannot be set on a sling:OsgiConfig node.
