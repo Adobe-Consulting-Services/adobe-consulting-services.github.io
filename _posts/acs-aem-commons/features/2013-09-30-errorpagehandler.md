@@ -46,7 +46,7 @@ The corresponding Error page is displayed.
 
 ## How to Use
 
-> In [AEM Dispatcher configuration](https://docs.adobe.com/docs/en/dispatcher/disp-install.html), set `DispatcherPassError` to '0'. This allows erring requests to be sent back to AEM. 
+> In [AEM Dispatcher configuration](https://docs.adobe.com/docs/en/dispatcher/disp-install.html), set `DispatcherPassError` to '0'. This allows erring requests to be sent back to AEM.
 
 > Watch a [video on how to use the ACS AEM Commons Error Page Handler](http://aemcasts.com/aem/episode-11.html).
 
@@ -115,7 +115,7 @@ Each error page's "name" (Node name) should correspond to the HTTP Response Stat
 
   Typically only 404 and 500 are needed with everything else using the fallback (default error page) as the messaging around these tends to be less useful to Web site visitors.
 A common pattern is to create this at the site's root under a node named "errors"
-  
+
   * Ex. /content/geometrixx/en/errors
 
 * Create any error-specific pages under this default error page created in Step 2. Note, it is critical that the page NAMES (node names) follow status codes. The Page Titles can be anything.
@@ -124,7 +124,7 @@ A common pattern is to create this at the site's root under a node named "errors
   * Ex. /content/geometrixx/en/errors/500
 
 * Edit the Page Properties of the site's root node, and in the new "Error Pages" dialog input (Step 1) select the default error page (Step 2).
-  
+
   * Ex. ./errorPages => /content/geometrixx/en/errors
 * Further customizations can be made via the OSGi Configuration for the *ACS AEM Commons - Error Page Handler* Configuration, including a "System wide" fallback error page.
 
@@ -215,7 +215,7 @@ If your error pages require the I18N bundle, you must extend the I18NFilter conf
 
   /apps/sling/config/org.apache.sling.i18n.impl.I18NFilter.config
 
-{% highlight %}
+{% highlight xml %}
 service.ranking=I"-10000"
 sling.filter.scope=["REQUEST","ERROR"]
 {% endhighlight %}
