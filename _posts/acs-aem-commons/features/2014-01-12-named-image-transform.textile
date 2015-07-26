@@ -12,7 +12,7 @@ initial-release: 1.5.0
 
 h2. Purpose
 
-Many web site designs demands consistency of images based on their use within components. For example, a panoramic spotlight may demand the image be 960 x 400, and bio picture must be 100 x 100 and greyscale. 
+Many web site designs demands consistency of images based on their use within components. For example, a panoramic spotlight may demand the image be 960 x 400, and bio picture must be 100 x 100 and greyscale.
 
 The ACS AEM Commons Named Transform Image Servlet allows specific image transforms to be defined centrally via OSGi configurations. These image transforms can be easily invoked via parameterized HTTP GET requests to image resources in AEM.
 
@@ -34,7 +34,7 @@ h2. Supported "image-y" resources
 
 Almost any "image-like" resource can be requested using the named transform URI parameterization, and the underlying image will be derived and rendered using the transformation parameters.
 
-* Pages (@cq:Page@s)
+* Pages (@cq:Page@)
 ** HTTP GET @/content/acme/article.transform/feature/image.png@
 
 * Image component resources
@@ -64,17 +64,19 @@ h2. How to Use
     transforms="[resize:width=400,rotate:degrees=10]"/>
 {% endhighlight %}
 
+* **Order matters** when defining your image transformation rules. For example, a resize then crop can yield significantly different results than a crop then resize.
+
 
 * Get the URI to a supported resource (see above) to transform
 * add the @.transform@ extension (append this even if the resource is named with an extension; like a DAM asset)
 * Add an initial suffix segment that matches your transform name (Ex. @/my-transform@)
 * Add a final suffix segment of @/image.<image-format-extension>@ OR @/img.<image-format-extension>@
 
-Resulting in 
+Resulting in
 
 * @<img src="/content/mysite/article/_jcr_content/image.transform/my-transform/image.png"/>@
 
-or 
+or
 
 * @<img src="/content/dam/images/dog.jpg.transform/my-transform/img.png"/>@
 
@@ -84,7 +86,7 @@ h3. Chained Transformations (Available in v.1.9.0+)
 Transforms can be chained by naming a series in the suffix.
 
 * Transform rules on the left are overwritten by those on the right.
-* Transform rules order is defined from left to right.   
+* Transform rules order is defined from left to right.
 
 <pre>
 <code>
@@ -141,7 +143,7 @@ Example
 <div class="section">
 h3. Resize
 
-Resizes the image to the specified width and/or height. 
+Resizes the image to the specified width and/or height.
 
 Name
 
@@ -211,7 +213,7 @@ Name
 Params
 
 * @bounds=[x,y,width,height]@
-* @smart=[boolean]@ Defaults to true. Smart bounding will attempt to shift the specified crop-zone to fit within the image dimensions if the crop-zone falls outside the images dimensions. 
+* @smart=[boolean]@ Defaults to true. Smart bounding will attempt to shift the specified crop-zone to fit within the image dimensions if the crop-zone falls outside the images dimensions.
 
 
 Example
@@ -223,7 +225,7 @@ Example
 <div class="section">
 h3. Adjust Brightness/Contrast
 
-Adjusts the brightness and contrast of the image. 
+Adjusts the brightness and contrast of the image.
 
 Note: This utilizes the Adobe CQ Layer adjust(..) method which does not seem to conform w common brightness/contrast expectations.
 
@@ -287,6 +289,8 @@ Examples
 <div class="section">
 h3. Quality (v.1.9.0+)
 
+bc. Known Issue: Setting quality above 82 causes rendition file-size to balloon dramatically (up to 2x original).
+
 Adjusts the quality of the output image. This leverages the AEM Product Layer API's write method, so it only works on JPEG and GIF image types (PNG is not supported).
 
 Quality is always executed LAST, no matter where is appears in the transform list.
@@ -304,8 +308,3 @@ Examples
 
 * @quality:quality=75@
 </div>
-
-h2. Notes
-
-* **ORDER MATTERS** when defining your image transformation rules. For example, a resize then crop can yield significantly different results than a crop then resize.
-
