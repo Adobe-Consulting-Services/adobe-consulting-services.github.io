@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 1.10.4 now available!
+description: Bug fix release.
+date: 2015-08-09
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
