@@ -31,4 +31,5 @@ This page identifies the versions of Adobe Experience Manager with which a parti
 | 1.9.6           |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
 | 1.10.0          |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
 | 1.10.2          |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
+| 1.10.4          |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
 | 2.0.0 (planned) |            |          |             | &#x2714;  | &#x2714;  |
