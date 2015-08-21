@@ -5,7 +5,7 @@ description: Power-tooling for workflow removal
 date: 2015-05-18
 thumbnail: /images/workflow-remover/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.10.0
 ---

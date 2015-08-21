@@ -5,7 +5,7 @@ description: Merge data into a single property
 date: 2015-05-17
 thumbnail: /images/property-merge-post-processor/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features 
 categories: acs-aem-commons features
 initial-release: 1.10.0
 ---

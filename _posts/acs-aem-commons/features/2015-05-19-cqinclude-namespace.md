@@ -5,7 +5,7 @@ description: Use your components as building blocks
 date: 2015-05-19
 thumbnail: /images/cqinclude-namespace/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features 
 categories: acs-aem-commons features
 initial-release: 1.10.2
 ---
