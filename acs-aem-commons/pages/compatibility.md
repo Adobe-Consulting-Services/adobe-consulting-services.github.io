@@ -5,7 +5,7 @@ title: Compatibility
 
 # {{ page.title }}
 
-This page identifies the versions of Adobe Experience Manager with which a particular version of ACS AEM Commons is compatible. For the purpose of this page, _compatible_ means that the package is installable. Individual features may require a higher version. Please refer to the individual feature documentation pages for more details.
+This page identifies the versions of Adobe Experience Manager with which a particular version of ACS AEM Commons is compatible. In general, we strive to be compatible with the current version and the last prior version. For the purpose of this page, _compatible_ means that the package is installable. Individual features may require a higher version. Please refer to the individual feature documentation pages for more details.
 
     
 {:.data-table}
