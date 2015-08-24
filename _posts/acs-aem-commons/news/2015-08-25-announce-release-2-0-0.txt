@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.0.0 now available!
+description: AEM 6.0 Required! New Feature Release
+date: 2015-08-25
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
