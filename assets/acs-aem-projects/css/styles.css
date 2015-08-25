@@ -6663,6 +6663,8 @@ p a {
 #jumbotron {
   color: white;
   border-bottom: solid 1px #333333;
+  /* Banner */
+  /* ACS AEM Commons 2.0 Jumbotron Banner */
 }
 #jumbotron .wrapper {
   margin-left: -15px;
@@ -6906,6 +6908,45 @@ fieldset[disabled] #jumbotron .action-gradient-btn {
 #jumbotron .action-gradient-btn:focus,
 #jumbotron .action-gradient-btn:active {
   color: white;
+}
+#jumbotron .banner {
+  background-color: #FFDF00;
+  color: #222;
+  padding: .5em 1em;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -ms-transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  margin-left: -50%;
+  width: 100%;
+  font-size: 1.5em;
+}
+@media (min-width: 768px) {
+  #jumbotron .banner {
+    font-size: 1.75em;
+    top: 125px;
+    margin-left: -325px;
+    width: 650px;
+  }
+}
+@media (min-width: 992px) {
+  #jumbotron .banner {
+    font-size: 1.75em;
+    top: 310px;
+    margin-left: -325px;
+    width: 650px;
+  }
+}
+@media (min-width: 1200px) {
+  #jumbotron .banner {
+    font-size: 1.75em;
+    top: 310px;
+    margin-left: -325px;
+    width: 650px;
+  }
 }
 .feature-filters {
   margin-bottom: 1em;
