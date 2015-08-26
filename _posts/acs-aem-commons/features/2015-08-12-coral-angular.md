@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: CoralUI Angular Directives
-description: Improve your dialogs
+description: Cut down on duplicate markup in custom Coral UI interfaces
 date: 2015-08-12
 thumbnail: /images/default/thumbnail.png
 tags: acs-aem-commons-features new
@@ -12,7 +12,7 @@ categories: acs-aem-commons features
 
 This Client Library includes a variety of AngularJS directives useful when building user interfaces based on CoralUI 2. Its primary function is to simplify the markup required, as seen in the examples below.
 
-> This feature is **not** intended to be used while building Granite UI-bsaed user interfaces.
+> This feature is **not** intended to be used while building Granite UI-based user interfaces.
 
 # General Usage
 

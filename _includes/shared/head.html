@@ -24,6 +24,7 @@
 
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
+    <meta name="tags" content="{% for tag in page.tags %}{{ tag }} {% endfor %}">
 
     <link rel="stylesheet" href="/assets/shared/fonts/source-sans/stylesheet.css">
     <link rel="stylesheet" href="/assets/{{ include.project }}/css/styles.css">
