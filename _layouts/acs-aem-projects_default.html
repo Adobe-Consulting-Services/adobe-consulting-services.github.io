@@ -1,6 +1,10 @@
 ---
 layout: acs-aem-projects_base
 ---
+<script>
+    digitalData.page.pageInfo.category.pageType = "Information";
+    digitalData.page.pageInfo.category.projectName = "Generic";
+</script>
 <div class="color-block">
     <header class="top">
         <nav class="navbar" role="navigation">
@@ -12,7 +16,7 @@ layout: acs-aem-projects_base
 </div>
 
 <div class="page content" role="main">
-	<div class="container">
-    	{{ content }}
-	</div>
+    <div class="container">
+        {{ content }}
+    </div>
 </div>

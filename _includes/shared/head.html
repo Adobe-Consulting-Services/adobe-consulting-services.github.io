@@ -28,4 +28,17 @@
     <link rel="stylesheet" href="/assets/shared/fonts/source-sans/stylesheet.css">
     <link rel="stylesheet" href="/assets/{{ include.project }}/css/styles.css">
     <link rel="shortcut icon" href="/assets/{{ include.project }}/images/favicon.ico">
+    <script>
+    var digitalData = {
+        page : {
+            pageInfo : {
+                pageName : "{{ page.title }}",
+                category : {
+                }
+            }
+        }
+    };
+    </script>
+    
+    {% include shared/analytics.html %}
 </head>

@@ -1,24 +1,29 @@
 ---
 layout: acs-aem-projects_base
 ---
+<script>
+    digitalData.page.pageInfo.category.pageType = "Home";
+    digitalData.page.pageInfo.category.projectName = "Generic";
+</script>
+
 <div class="home">
-	<div class="color-block">
-	    <header class="top">
-	        <nav class="navbar" role="navigation">
-	            <div class="container">
-					{% include shared/quick-links.html %}																							
-	                {% include acs-aem-projects/nav.html %}
-	            </div>
-	        </nav>
-	    </header>
+    <div class="color-block">
+        <header class="top">
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    {% include shared/quick-links.html %}
+                    {% include acs-aem-projects/nav.html %}
+                </div>
+            </nav>
+        </header>
 
-	    {% include acs-aem-projects/jumbotron.html %}
+        {% include acs-aem-projects/jumbotron.html %}
 
-	</div>
+    </div>
 
-	{% include acs-aem-projects/news.html %}
+    {% include acs-aem-projects/news.html %}
 
-	<div class="page content" role="main">
-	    {{ content }}
-	</div>
+    <div class="page content" role="main">
+        {{ content }}
+    </div>
 </div>
