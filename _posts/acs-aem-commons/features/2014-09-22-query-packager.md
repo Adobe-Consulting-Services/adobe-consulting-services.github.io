@@ -12,7 +12,7 @@ initial-release: 1.8.0
 
 # Purpose
 
-ACS AEM commons Query Packager faciliates the creation of CQ Packages based on XPath, JCR-SQL, JCR-SQL2, or QueryBuilder query results.
+ACS AEM Commons Query Packager faciliates the creation of CQ Packages based on XPath, JCR-SQL, JCR-SQL2, or QueryBuilder query results.
 
 # How to Use
 
