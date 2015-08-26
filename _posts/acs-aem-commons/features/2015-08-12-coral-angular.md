@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: CoralUI Angular Directives
 description: Cut down on duplicate markup in custom Coral UI interfaces
 date: 2015-08-12
-thumbnail: /images/default/thumbnail.png
+thumbnail: /images/coral-angular/thumbnail.png
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
 ---
@@ -50,7 +50,7 @@ Adds the appropriate [list](http://docs.adobe.com/docs/en/aem/6-0/develop/ref/co
     <ul acs-coral-list>
         <li>First Item</li>
         <li>Second Item</li>
-    </ul>    
+    </ul>
 
 ## `acsCoralCheckbox`
 
