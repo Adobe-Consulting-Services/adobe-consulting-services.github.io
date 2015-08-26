@@ -25,8 +25,17 @@ In the path field, enter the the path of the page or asset for which you want to
 
 Each property for the page or asset (and its children) will be displayed with a visual indicator of whether the 
 
-### Configuration Options
+### Display Options
 
 * Paint Connections - adds visual connections between properties
 * Hide Unchanged - removes the unchanged properties from being displayed
 * Hide Versions - removes individual versions from the version list
+
+### Configuration Options
+
+You can configure the tool to exclude properties and/or nodes from the comparison. This can be especially useful for system properties/nodes such as MSM related functionality.
+
+* OSGi config PID `com.adobe.acs.commons.version.impl.EvolutionAnalyserImpl`
+* supports regex
+* `(.*/)?jcr:uuid` excludes the property `jcr:uuid` of all subnodes
+* `(.*/)?cq:LiveSyncConfig` excludes all subnodes named `cq:LiveSyncConfig`
