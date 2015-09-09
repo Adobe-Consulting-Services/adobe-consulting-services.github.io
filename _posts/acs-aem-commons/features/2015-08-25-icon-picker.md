@@ -13,8 +13,6 @@ categories: acs-aem-commons features
 
 Adds a visual icon selection to AEM Component Dialogs.
 
-> Currently, this feature only supports Font Awesome, but other icon fonts may be supported in the future.
-
 ## Usage
 
 ### Setup
@@ -52,3 +50,11 @@ For Classic UI, add a widget using the xtype `graphiciconselection`.
 In your component code, output the appropriate markup, e.g.
 
     <c:if test="${!empty properties.icon}"><i class="fa ${properties.icon}"></i></c:if>
+    
+### Using Other Icon Fonts
+
+In order to use an icon font other than Font Awesome, you must do the following:
+
+1. Create a Generic List as described above pointing to the specific icon classes.
+2. Point the widget/component at your Generic List.
+3. Create a new Client Library with the categories `cq.widgets` and `cq.authoring.dialog` with the CSS required for the specific font. For a specific example [download this package which enables Brandico](https://files.acrobat.com/a/preview/265e6578-936d-4ffc-8b14-99355c8baf08)
