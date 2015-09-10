@@ -9,7 +9,9 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
 
 <style type="text/css">
     #s7interactivevideo_div.s7interactivevideoviewer {
-         height: 400px;
+         width: 57%;
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
 <script type="text/javascript" src="http://justinedelson.assetsadobe.com/etc/dam/viewers/s7viewers/html5/js/InteractiveVideoViewer.js"></script>
