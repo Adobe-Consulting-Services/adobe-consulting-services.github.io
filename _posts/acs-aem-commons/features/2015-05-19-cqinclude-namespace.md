@@ -60,17 +60,14 @@ Feature component dialog; This namespace cqincludes dialogs from 3 other compone
     <items jcr:primaryType="cq:WidgetCollection">
         <title-tab
 		jcr:primaryType="cq:Widget"
-		title="Title Tab"
 		path="/apps/demo/components/title/dialog/tab.cqinclude.namespace.title.json"
 		xtype="cqinclude"/>
         <text-tab
 		jcr:primaryType="cq:Widget"
-		title="Text Tab"
 		path="/apps/demo/components/text/dialog/tab.cqinclude.namespace.text.json"
 		xtype="cqinclude"/>
         <button-tab
 		jcr:primaryType="cq:Widget"
-		title="Button Tab"
 		path="/apps/demo/components/button/dialog/tab.cqinclude.namespace.button.json"
 		xtype="cqinclude"/>
 	</items>
