@@ -168,7 +168,7 @@ Resizes the image but will not resize past maximum dimension constraints. Accept
 
 Name
 
-* resize
+* @bounded-resize@
 
 Params
 
