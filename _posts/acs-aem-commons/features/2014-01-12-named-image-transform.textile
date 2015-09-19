@@ -147,7 +147,7 @@ Resizes the image to the specified width and/or height.
 
 Name
 
-* resize
+* @resize@
 
 Params
 
