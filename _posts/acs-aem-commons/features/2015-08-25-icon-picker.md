@@ -17,7 +17,7 @@ Adds a visual icon selection to AEM Component Dialogs.
 
 ### Setup
 
-A [Generic List](generic-list.html) must be created to hold the available icons. One is provided containing *all* icons in Font Awesome 4.4.0 icons, but projects will likely want to provide their own lists with the appropriate subset of icons. The value of each list item is the icon class name (e.g. `fa-film`).
+A [Generic List](/acs-aem-commons/features/generic-lists.html) must be created to hold the available icons. One is provided containing *all* icons in Font Awesome 4.4.0 icons, but projects will likely want to provide their own lists with the appropriate subset of icons. The value of each list item is the icon class name (e.g. `fa-film`).
 
 Ensure that the appropriate font is available on your site. This can be done by adding the client library category `acs-commons.fontawesome` as a dependency for your site's main client library.
 
