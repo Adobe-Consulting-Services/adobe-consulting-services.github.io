@@ -4,7 +4,7 @@ title: CoralUI Angular Directives
 description: Cut down on duplicate markup in custom Coral UI interfaces
 date: 2015-08-12
 thumbnail: /images/coral-angular/thumbnail.png
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 ---
 

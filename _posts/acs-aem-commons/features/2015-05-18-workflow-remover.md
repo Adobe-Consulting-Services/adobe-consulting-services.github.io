@@ -5,7 +5,7 @@ description: Power-tooling for workflow removal
 date: 2015-05-18
 thumbnail: /images/workflow-remover/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.10.0
 ---
@@ -26,7 +26,7 @@ In AEM, navigate to the Tools > ACS AEM Commons > Workflow Remover
 
 ![Workflow Remover - Web UI](/acs-aem-commons/images/workflow-remover/web-ui.png)
 
-* Status: [Required] Select the statuses for the Workflows to be removed. 
+* Status: [Required] Select the statuses for the Workflows to be removed.
  * If no status is selected, no Workflow instances will be removed.
 * Payload Paths: [Optional] Worflow payload paths must match at least one regex to be removed.
 * Older Than: [Optional] Worflow instances must be created older than this time.
@@ -60,7 +60,7 @@ Define a `sling:OsgiConfig` with the following attributes.
 	workflow.models="[/etc/workflow/models/dam/adddamsize/jcr:content/modelm/etc/workflow/models/my-app/my-workflow-model/jcr:content/model]",
 	workflow.payloads="[/content/dam/.+/.*\.pdf(/.*)?]",
 	workflow.older-than="1234567890"
-	
+
     />
 {% endhighlight %}
 
@@ -72,4 +72,4 @@ Define a `sling:OsgiConfig` with the following attributes.
 * workflow.payloads: Only remove Workflow Instances whose payloads match one of these regex patterns.
 * worlflow.older-than: Only remove Workflow Instances whose payloads are older than this UTC Time in milliseconds.
 
-Note: 
+Note:

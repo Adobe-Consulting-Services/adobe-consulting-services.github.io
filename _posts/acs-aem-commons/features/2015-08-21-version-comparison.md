@@ -5,7 +5,7 @@ description: Need to compare multiple versions of a page?
 date: 2015-08-21
 thumbnail: /images/version-compare/thumbnail.png
 feature-tags: authoring administration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.0.0
 ---
@@ -23,7 +23,7 @@ In the path field, enter the the path of the page or asset for which you want to
 
 ![Version Compare - Web UI](/acs-aem-commons/images/version-compare/version-compare.png)
 
-Each property for the page or asset (and its children) will be displayed with a visual indicator of whether the 
+Each property for the page or asset (and its children) will be displayed with a visual indicator of whether the
 
 ### Display Options
 

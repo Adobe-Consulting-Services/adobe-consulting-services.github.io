@@ -5,7 +5,7 @@ description: Workflow Process execution has never been faster
 date: 2014-10-12
 thumbnail: /images/synthetic-workflow/thumbnail.png
 feature-tags: backend-dev content-migration
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.9.0
 ---

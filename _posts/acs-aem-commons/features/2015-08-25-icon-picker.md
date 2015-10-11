@@ -5,7 +5,7 @@ description: Add visual icon picker to dialogs
 date: 2015-08-25
 thumbnail: /images/iconpicker/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 ---
 
@@ -41,7 +41,7 @@ For Touch UI, add a component definition to your dialog with a `sling:resourceTy
 For Classic UI, add a widget using the xtype `graphiciconselection`.
 
     <icon xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="cq:Widget" fieldLabel="Icon" name="./icon" 
+          jcr:primaryType="cq:Widget" fieldLabel="Icon" name="./icon"
           options="/etc/acs-commons/lists/font-awesome-icons/_jcr_content.list.json"
           xtype="graphiciconselection"/>
 
@@ -50,7 +50,7 @@ For Classic UI, add a widget using the xtype `graphiciconselection`.
 In your component code, output the appropriate markup, e.g.
 
     <c:if test="${!empty properties.icon}"><i class="fa ${properties.icon}"></i></c:if>
-    
+
 ### Using Other Icon Fonts
 
 In order to use an icon font other than Font Awesome, you must do the following:

@@ -5,7 +5,7 @@ description: Create package definitions of Authorizables
 date: 2015-08-22
 thumbnail: /images/authorizable-packager/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.0.0
 ---
@@ -25,6 +25,4 @@ ACS AEM Commons Authorizble Packager faciliates the creation Content Packages co
 ![image](/acs-aem-commons/images/authorizable-packager/step-2.png)
 * The Preview button output a list of the package filter entries which will be included.
 * The Create Package button (cut off in the above screenshot!)... creates the package
-* Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package. 
-
-
+* Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package.

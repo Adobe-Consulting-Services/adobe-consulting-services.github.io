@@ -5,14 +5,14 @@ description: Quickly navigate AEM
 date: 2014-11-12
 thumbnail: /images/quickly/thumbnail.png
 feature-tags: authoring administration
-tags: acs-aem-commons-features beta new
+tags: acs-aem-commons-features beta
 categories: acs-aem-commons features
 initial-release: 1.9.0
 ---
 
 h2. Beta
 
-Quickly is in Beta. 
+Quickly is in Beta.
 
 Full cross-browser support is not yet available. Chrome, Safari and FireFox are known to work on Windows and OSX. Internet Explorer 9 and above may work, but have not been tested.
 
@@ -56,7 +56,7 @@ h3. Open Quickly
 * OS X FireFox ~> @Shift-Ctrl-Space@
 * Windows Chrome/Safari ~> @Ctrl-Space@
 * Windows FireFox ~> @Shift-Ctrl-Space@
-* Internet Explorer has not been tested 
+* Internet Explorer has not been tested
 
 h3. Close Quickly
 
@@ -79,7 +79,7 @@ Displays the help menu of all the available Operations
 
 <div class="section">
 !/acs-aem-commons/images/quickly/back.png!
-	
+
 h3. Back
 
 List of last 25 accessed URIs in AEM by the user. Values are stored in local storage in the user's Web browser.
@@ -106,7 +106,7 @@ Go support two "special" instructions that switch the current AEM Authoring mode
 
 <div class="section">
 !/acs-aem-commons/images/quickly/docs.png!
-	
+
 h3. Docs
 
 Access Adobe's AEM documentation
@@ -118,7 +118,7 @@ Access Adobe's AEM documentation
 
 <div class="section">
 !/acs-aem-commons/images/quickly/lastmod.png!
-	
+
 h3. Lastmod
 
 Find the last modified CQ Pages by user and date.
@@ -130,7 +130,7 @@ Find the last modified CQ Pages by user and date.
 
 <div class="section">
 !/acs-aem-commons/images/quickly/favorites.png!
-	
+
 h3. Favorites
 
 List of last 25 accessed URIs in AEM by the user. Values are stored in local storage in the user's Web browser; different browsers means different favorite lists.
@@ -139,6 +139,3 @@ List of last 25 accessed URIs in AEM by the user. Values are stored in local sto
 * Command: @* rm@
   * Removes the selected Favorite from the list
 </div>
-
-
-

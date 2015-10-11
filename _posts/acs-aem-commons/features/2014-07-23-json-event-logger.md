@@ -65,4 +65,3 @@ Finally, use a [SyslogAppender](/acs-aem-commons/features/syslog-appender.html) 
 	host="127.0.0.1"
     />
 {% endhighlight %}   
-

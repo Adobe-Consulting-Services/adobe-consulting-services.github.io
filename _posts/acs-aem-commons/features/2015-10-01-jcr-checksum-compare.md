@@ -7,6 +7,8 @@ thumbnail: /images/jcr-compare/thumbnail.png
 feature-tags: administration content-migration
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
+initial-release: 2.1.0
+
 ---
 
 ![JCR Compare](/acs-aem-commons/images/jcr-compare/jcr-compare.png)

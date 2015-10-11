@@ -22,7 +22,7 @@ Some OSGi Components can interfere or simply be unneccessary for an implementati
 In Apache Felix the state of Components and Services is not persisted across restarts of its containing bundle.
 
 For example, when you have a Bundle S containing a service T, and you manually stop the service T; after the bundle is stopped and started, the service T is up again.
- 
+
 This service allows you to specify the names of components, which shouldn't be running. Whenever an OSGI service event is fired, which services checks the status of this components and stops them if required.
 
 Note 1: The component is always started, but this service takes care, that it is stopped immediately after. So if a behaviour you don't like already happens during the activation of this service, you cannot prevent it using the mechanism here.
@@ -53,11 +53,11 @@ Note 2: Using this service should always be considered as a workaround. The prim
 The OSGi Bundle Disabler allows ensures that OSGi bundles can be stopped by configuration.
 
 AEM contains some bundles (e.g. CRXDE) that are very useful during the development, but should be stopped on production instances.  Also it may be desirable to disable certain features that are not in use.   
-  
+
 Whilst it is possible to manually stop these bundles through the Felix console, it may be desirable to do this through configuration, so that:
 
 * the number of manual steps for manual deployment are minimised
- 
+
 * if the bundle is inadvertently enabled, it will be immediately disabled once more
 
 If a bundle is stopped in the Apache Felix console, that stopped state will persist across restarts.  However, there is no way of permanently configuring Apache Felix to never start specific bundle.   
@@ -66,7 +66,7 @@ This service allows you to specify the symbolic names of bundles that shouldn't 
 
 When the service starts it will check all of the installed bundles and stop any of those specified that are not already uninstalled.  
 
-When any bundle is started, the service will receive a BundleEvent notification and stop that bundle if has been specified. 
+When any bundle is started, the service will receive a BundleEvent notification and stop that bundle if has been specified.
 
 ## How to Use
 
