@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.1.0 now available!
+description: JCR Checksu Compare, Ensure Oak Index, Restrict Workflows to Content trees
+date: 2015-10-20
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
