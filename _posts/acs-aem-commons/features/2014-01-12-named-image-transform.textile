@@ -312,7 +312,7 @@ Examples
 <div class="section">
 h3. Letter/Pillar Box (v.2.1.0+)
 
-Adds a Letter/Pillar box support when the specified new dimensions don't match aspect ratio of original image. The apporopriate boxing will be applied based on best fit for the calculated aspect ratio. The background of the boxing is configurable, however if using JPG encoding, transparency is lost, resulting in black.
+Adds a Letter/Pillar box support when the specified new dimensions don't match aspect ratio of original image. The apporopriate boxing will be applied based on best fit for the calculated aspect ratio. The background of the boxing is configurable, however if using JPG encoding transparency is lost resulting in black.
 
 Name
 
