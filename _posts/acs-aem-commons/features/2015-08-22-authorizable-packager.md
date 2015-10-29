@@ -5,7 +5,7 @@ description: Create package definitions of Authorizables
 date: 2015-08-22
 thumbnail: /images/authorizable-packager/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 2.0.0
 ---
