@@ -5,7 +5,7 @@ description: Use your components as building blocks
 date: 2015-05-19
 thumbnail: /images/cqinclude-namespace/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features 
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.10.2
 ---
@@ -27,8 +27,8 @@ The ACS AEM Commons CQInclude Namespace Servlet allows "prefixing" of property p
 
 The include for Title component dialog may look like
 
-	jcr:primaryType=cq:Widget 
-	path=/apps/demo/components/title/dialog/items/tab.cqinclude.namespace.title.json 
+	jcr:primaryType=cq:Widget
+	path=/apps/demo/components/title/dialog/items/tab.cqinclude.namespace.title.json
 	xtype=cqinclude
 
 The include for Button component dialog may look like
@@ -45,7 +45,7 @@ The dialog would then read/save the jcr:title from the respective includes as fo
 cleanly separating the two.
 
 
-## Example 
+## Example
 
 Feature component dialog; This namespace cqincludes dialogs from 3 other components.
 
@@ -88,10 +88,36 @@ Feature component JSP; This includes other components; note youll want to ensure
 
 	<div class="call-to-action">
 		<% IncludeOptions.getOptions(slingRequest, true).forceSameContext(true); %>
-		<cq:include path="button" resourceType="demo/components/button"/>	
+		<cq:include path="button" resourceType="demo/components/button"/>
 	</div>
 </div>
 {% endhighlight %}
 
 
+# OSGi Configurations (since v2.1.0)
 
+Optionally configure what property values will be namespaced.
+
+`/apps/mysite/config/com.adobe.acs.commons.wcm.impl.CQIncludePropertyNamespaceServlet.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    namespace.property-names="[name,cropParameter,fileNameParameter,fileReferenceParameter,mapParameter,rotateParameter,widthParameter,heightParameter]"
+    namespace.property-value-patterns="[^\\./.*]"
+    />
+{% endhighlight %}     
+
+## OSGi Config Properties
+
+*namespace.property-names*
+
+* An array of propertyNames whose values should be namespaced.
+* Defaults to: `name, cropParameter, fileNameParameter, fileReferenceParameter, mapParameter, rotateParameter, widthParameter, heightParameter`
+
+*namespace.property-value-patterns*
+
+* An array of regex patterns; if a property value matches one of these patterns it will be namespaced.
+* Defaults to: `^\\./.*` which is the equivalent of `startsWith("./")`
