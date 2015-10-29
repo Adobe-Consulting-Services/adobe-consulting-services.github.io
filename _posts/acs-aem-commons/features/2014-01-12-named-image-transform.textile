@@ -5,7 +5,7 @@ description: Consistently resize, crop and transform images
 date: 2014-09-18
 thumbnail: /images/named-image-transform/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---
@@ -147,7 +147,7 @@ Resizes the image to the specified width and/or height.
 
 Name
 
-* resize
+* @resize@
 
 Params
 
@@ -307,4 +307,49 @@ Params
 Examples
 
 * @quality:quality=75@
+</div>
+
+
+<div class="section">
+h3. Scale (v.2.1.0+)
+
+Scale allows percent-based scaling of images.
+
+Name
+
+* @scale@
+
+Params
+
+* @scale=decimal representation of percent to scale
+  * Example: 0.25 = 25%
+* @round=up | down | round
+  * Default: round
+
+Examples
+
+* @scale:scale=.75@
+</div>
+
+
+<div class="section">
+h3. Letter/Pillar Box (v.2.1.0+)
+
+Adds a Letter/Pillar box support when the specified new dimensions don't match aspect ratio of original image. The apporopriate boxing will be applied based on best fit for the calculated aspect ratio. The background of the boxing is configurable, however if using JPG encoding transparency is lost resulting in black.
+
+Name
+
+* @letter-pillar-box@
+
+Params
+
+* @width=[width in px]@
+* @height=[height in px]@
+* @alpha=[0.0..1.0]@ (Opacity of background, percentage)
+* @color=[000000..FFFFFF]@ (Hex Color for use in background)
+
+Examples
+
+* @letter-pillar-box:width=600&height=600@
+* @letter-pillar-box:width=600&height=600&alpha=.65&color=0F0F0F@
 </div>
