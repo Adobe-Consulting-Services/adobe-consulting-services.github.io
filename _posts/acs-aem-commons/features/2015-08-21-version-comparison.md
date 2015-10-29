@@ -39,3 +39,5 @@ You can configure the tool to exclude properties and/or nodes from the compariso
 * supports regex
 * `(.*/)?jcr:uuid` excludes the property `jcr:uuid` of all subnodes
 * `(.*/)?cq:LiveSyncConfig` excludes all subnodes named `cq:LiveSyncConfig`
+
+> Note: Version Comparison Tool requires `Apache Sling Models API (org.apache.sling.models.api)` and `Apache Sling Models Implementation (org.apache.sling.models.impl)` to be at least at version 1.1.0. Get the latest version from  [Sling Downloads](https://sling.apache.org/downloads.cgi).
