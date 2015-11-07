@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_default
 title: Release 2.1.0 now available!
-description: Requires AEM 6.0 or higher! New features include: Ensure Oak Index, JCR Compare, Synthesized Resources, AEM System Notifications, ResourceResolver.map(..) transformer, ModeUtil, TouchUI RTE Plugin for Dialogs and PageInfoProvider for limiting Workflows by path. Enhancements include CQInclude Namespace, Named Imaged Transform, Sitemap and Icon Picker. Bug-fixes include for the E-mail service!
+description: Requires AEM 6.0 or higher! Huge new feature set including Ensure Oak Index, JCR Compare, Synthesized Resources, AEM System Notifications, ResourceResolver Map transformer, ModeUtil, TouchUI RTE Plugin for Dialogs and PageInfoProvider for limiting Workflows by path. Enhancements include CQInclude Namespace, Named Imaged Transform, Sitemap and Icon Picker. Bug-fixes include for the E-mail service!
 date: 2015-11-06
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
