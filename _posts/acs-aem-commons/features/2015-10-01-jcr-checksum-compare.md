@@ -30,7 +30,7 @@ Ensure the following
 1. Install ACS AEM Commons 2.1.0+ on all AEM instances that require comparing.
 2. The browser running the JCR Checksum Compare WebUI has access to all the hosts being compared.
 3. The proper credentials are being used for each host configuration (ie. admin)
-4. The following servlet paths are not blocked (especially when accessing remote AEM instances via a host-name protected via Dispatcher)
+4. The following servlet paths are not blocked (especially when accessing remote AEM instances via a host-name protected via Dispatcher). **Note: Under NO circumstance should the following paths be publicly accessible.**
  * /bin/acs-commons/jcr-compare.hashes.txt
  * /bin/acs-commons/jcr-compare.dump.json
 
