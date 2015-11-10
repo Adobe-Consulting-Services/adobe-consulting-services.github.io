@@ -173,4 +173,4 @@ Once you know which paths are different then you can go to each server you retri
 
 `curl -u admin:admin http://localhost:4502/bin/acs-commons/jcr-compare.dump.json?path=/content/my-site/en/jcr:content`
 
-Then you can use a JSON diff tool like this one or the one to manually see the differences: [http://tlrobinson.net/projects/javascript-fun/jsondiff](http://tlrobinson.net/projects/javascript-fun/jsondiff)
+Then you can use a JSON diff tool to visualize the differences: [http://tlrobinson.net/projects/javascript-fun/jsondiff](http://tlrobinson.net/projects/javascript-fun/jsondiff)
