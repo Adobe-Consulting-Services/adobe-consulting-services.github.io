@@ -13,7 +13,6 @@ initial-release: 2.1.0
 
 ![JCR Compare](/acs-aem-commons/images/jcr-compare/jcr-compare.png)
 
-
 ## Purpose
 
 Quickly compares the contents of AEM instances. JCR Compare computes checksums for specified node types (via an aggregated checksum of that node's descendants) across multiple AEM instances and then compares the checksum results to identify what node (and node sub-systems) are the same or different.
@@ -154,3 +153,24 @@ Click on non-matching results to open up a node-system (JSON-based) content comp
 Basic functionality exists for downloading the raw JSON Dump for the comparison defined in the Configuration Tab.
 
 > This functionality currently does not support the authentication credentials defined with each Host.
+
+
+# JCR Compare via curl
+
+To use the tool, do the following:
+
+1. `HTTP GET /bin/acs-commons/jcr-compare.hashes.txt?path=/content/my-site` where `/content/my-site` should be replaced with the path you want to generate hashes for. For example:
+`curl -u admin:admin http://localhost:4502/bin/acs-commons/jcr-compare.hashes.txt?path=/content/my-site > hashes_pub1.txt`
+2. Save the output to a file and sort the results using the sort command on a linux machine then diff them. For example:
+
+{% highlight xml %}
+cat hashes_pub1.txt | sort > hashes_pub1_sorted.txt
+cat hashes_pub2.txt | sort > hashes_pub2_sorted.txt
+diff hashes_pub1_sorted.txt hashes_pub2_sorted.txt
+{% endhighlight %}
+
+Once you know which paths are different then you can go to each server you retrieved a diff against and use the `HTTP GET /bin/acs-commons/jcr-compare.dump.json` servlet to get a dump of the content. For example here is how you would request this for a particular node:
+
+`curl -u admin:admin http://localhost:4502/bin/acs-commons/jcr-compare.dump.json?path=/content/my-site/en/jcr:content`
+
+Then you can use a JSON diff tool like this one or the one to manually see the differences: [http://tlrobinson.net/projects/javascript-fun/jsondiff](http://tlrobinson.net/projects/javascript-fun/jsondiff)
