@@ -28,8 +28,8 @@ In AEM, navigate to the Tools > ACS AEM Commons > Workflow Remover
 
 * Status: [Required] Select the statuses for the Workflows to be removed.
  * If no status is selected, no Workflow instances will be removed.
-* Payload Paths: [Optional] Worflow payload paths must match at least one regex to be removed.
-* Older Than: [Optional] Worflow instances must be created older than this time.
+* Payload Paths: [Optional] Workflow payload paths must match at least one regex to be removed.
+* Older Than: [Optional] Workflow instances must be created older than this time.
 * Models: [Optional] Workflow models that are eligible for removal.
   * If no models are selected, all models are eligible for removal.
 
