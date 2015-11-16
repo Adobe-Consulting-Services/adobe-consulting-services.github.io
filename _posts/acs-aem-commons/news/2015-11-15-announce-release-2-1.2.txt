@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.1.2 now available!
+description: Requires AEM 6.0 or higher! Bug fix release for System Notifications!
+date: 2015-11-15
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
