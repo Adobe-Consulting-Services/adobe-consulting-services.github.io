@@ -35,7 +35,9 @@ Ensure the following
  * /bin/acs-commons/jcr-compare.dump.json
 
 
-Access the tool on the base AEM instance at [/etc/acs-commons/jcr-checksum-compare.html](http://localhost:4502/etc/acs-commons/jcr-checksum-compare.html)
+Access the tool on the base AEM instance at
+http://localhost:4502/etc/acs-commons/jcr-compare.html
+[/etc/acs-commons/jcr-compare.html](http://localhost:4502/etc/acs-commons/jcr-compare.html)
 
 ### Configuration Tab
 
