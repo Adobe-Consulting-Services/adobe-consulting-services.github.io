@@ -21,9 +21,9 @@ Used by the [ACS AEM Commons](/acs-aem-commons) Twitter-based features. Repackag
 
 ### Apache Sling Models
 
-Used by the [ACS AEM Commons](/acs-aem-commons) AEM Sling Models injectors. Includes Sling Models API 1.0.0 and Sling Models Implementation 1.0.4.
+Used by the [ACS AEM Commons](/acs-aem-commons) AEM Sling Models injectors. Includes Sling Models API 1.1.0 and Sling Models Implementation 1.1.0.
 
-Note: Sling Models comes standard with all AEM6+ installations. This dependency is only required when using ACS AEM Commons' Sling Model Injectors on AEM 5.6.1.
+Note: Sling Models comes standard with all AEM6+ installations. This dependency is only required when using ACS AEM Commons' Sling Model Injectors on AEM 5.6.1 or when using the Version Comparison Tool on AEM 6.0.
 
 * [Download the Latest Release ({{ site.data.dependencies-sling-models.version }})]({{ site.data.dependencies-sling-models.releases}}/download/{{ site.data.dependencies-sling-models.name}}-{{ site.data.dependencies-sling-models.version}}/{{ site.data.dependencies-sling-models.name}}-{{ site.data.dependencies-sling-models.version}}.zip)
 
