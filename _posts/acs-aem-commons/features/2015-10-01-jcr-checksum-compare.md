@@ -17,7 +17,7 @@ initial-release: 2.1.0
 
 Quickly compares the contents of AEM instances. JCR Compare computes checksums for specified node types (via an aggregated checksum of that node's descendants) across multiple AEM instances and then compares the checksum results to identify what node (and node sub-systems) are the same or different.
 
-This is a useful tool for checking for content inconsistencies across AEM instances that would be otherwise difficult to fine.
+This is a useful tool for checking for content inconsistencies across AEM instances that would be otherwise difficult to find.
 
 > The checksum computation cost is a function of the amount of data being compared. Large amounts of data will be costly to collect and compare.
 
