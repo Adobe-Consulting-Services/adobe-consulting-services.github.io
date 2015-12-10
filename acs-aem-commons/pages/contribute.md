@@ -23,6 +23,7 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
             "serverurl" : "http://justinedelson.assetsadobe.com/is/image",
             "contenturl" : "http://justinedelson.assetsadobe.com/", 
             "config" : "/etc/dam/presets/viewer/Shoppable_Video_light",
+            "config2" : "/etc/dam/tenants/justinedelson/presets/analytics",
             "videoserverurl": "https://gateway-na.assetsadobe.com/DMGateway/public/justinedelson",
             "interactivedata": "is/content/content/dam/mac/justinedelson/_VTT/aemcasts/Contributing.mp4.svideo.vtt",
             "asset" : "/content/dam/mac/justinedelson/aemcasts/Contributing.mp4" }
