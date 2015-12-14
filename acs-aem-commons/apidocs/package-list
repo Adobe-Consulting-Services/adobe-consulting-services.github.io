@@ -1,3 +1,4 @@
+com.adobe.acs.commons
 com.adobe.acs.commons.analysis.jcrchecksum
 com.adobe.acs.commons.components.longformtext
 com.adobe.acs.commons.dam
@@ -10,6 +11,16 @@ com.adobe.acs.commons.forms.components
 com.adobe.acs.commons.forms.helpers
 com.adobe.acs.commons.genericlists
 com.adobe.acs.commons.http.injectors
+com.adobe.acs.commons.httpcache
+com.adobe.acs.commons.httpcache.config
+com.adobe.acs.commons.httpcache.engine
+com.adobe.acs.commons.httpcache.exception
+com.adobe.acs.commons.httpcache.invalidator
+com.adobe.acs.commons.httpcache.invalidator.event
+com.adobe.acs.commons.httpcache.keys
+com.adobe.acs.commons.httpcache.rule
+com.adobe.acs.commons.httpcache.store
+com.adobe.acs.commons.httpcache.util
 com.adobe.acs.commons.images
 com.adobe.acs.commons.json
 com.adobe.acs.commons.packaging
