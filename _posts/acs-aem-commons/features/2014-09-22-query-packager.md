@@ -5,7 +5,7 @@ description: Create package definitions from Queries
 date: 2014-09-22
 thumbnail: /images/query-packager/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
@@ -27,7 +27,5 @@ ACS AEM Commons Query Packager faciliates the creation of CQ Packages based on X
 ![image](/acs-aem-commons/images/query-packager/step-3.png)
 * The Create Package button (cut off in the above screenshot!)... creates the package
 ![image](/acs-aem-commons/images/query-packager/step-4.png)
-* Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package. 
+* Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package.
 ![image](/acs-aem-commons/images/query-packager/step-5.png)
-
-

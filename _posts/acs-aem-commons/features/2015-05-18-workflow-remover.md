@@ -54,12 +54,13 @@ Define a `sling:OsgiConfig` with the following attributes.
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.ortg/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
+
     scheduler.expression="0 1 0 ? * *"
-	workflow.statuses="[ABORTED,COMPLETED,RUNNING,SUSPENDED,STALE]"
-	workflow.models="[/etc/workflow/models/dam/adddamsize/jcr:content/modelm/etc/workflow/models/my-app/my-workflow-model/jcr:content/model]",
-	workflow.payloads="[/content/dam/.+/.*\.pdf(/.*)?]",
-	workflow.older-than="1234567890",
-  max-duration="60"
+    workflow.statuses="[ABORTED,COMPLETED,RUNNING,SUSPENDED,STALE]"
+    workflow.models="[/etc/workflow/models/dam/adddamsize/jcr:content/modelm/etc/workflow/models/my-app/my-workflow-model/jcr:content/model]"
+    workflow.payloads="[/content/dam/.+/.*\.pdf(/.*)?]"
+    workflow.older-than="1234567890"
+    max-duration="60"
 
     />
 {% endhighlight %}
