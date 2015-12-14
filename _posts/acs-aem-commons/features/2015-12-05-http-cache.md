@@ -1,37 +1,42 @@
 ---
-published: false
+layout: acs-aem-commons_feature
+title: HTTP Cache
+description: Cache the uncacheable!
+date: 2015-12-05
+thumbnail: /images/http-cache/thumbnail.png
+feature-tags: backend-dev
+tags: acs-aem-commons-features new
+categories: acs-aem-commons features
+initial-release: 2.2.0
+
 ---
 
+> Since AEM 6.0, AEM provides an OOTB in-memory HTTP cache for anonymous requests with a 60sec TTL. Please evaluate if this simple cache is sufficient before using this HTTP cache. This HTTP Cache was designed explicitly for more complex use-cases the OOTB AEM HTTP Cache does not cover. Also ensure that AEM Dispatcher caching is insufficient for your use case.
 
-
-
-
-
-# Http Cache framework
 ## Purpose
 HttpCache provides an effective way to improve performance of an application by caching the full output of a http request and then bypassing the request processing entirely on each subsequent requests. It's ideal for meeting performance requirements for cacheable http requests which costs high compute time. HttpCache works irrespective of run-modes.
 
 ### Features
-- Caches anonymous and authenticated requests.
-- Supports caching personalized requests.
-	- Group based caching provided OOTB.
-	- Mechanism exposed to plugin custom logic for handling personalized requests.
-- Super flexible cache configs tied to URIs supported.
-	- Allows extending cache configs.
-	- Allows multiple cache configs.
-- Developer hook exposed to plugin custom rules on key cache handling events such as
-	- On request receive.
-	- On response cache
-	- On response deliver
-	- On cache invalidate
-- Provides mechanism to plugin custom cache keys.
-- Pluggable cache persistence model.
-	- In-memory implementation provided OOTB
-	- Allows multiple cache stores to co-exist.
-- Invalidation mechanism based on JCR paths and Sling jobs.
-	- Sample JCR change event handler based invalidation supplied.
+* Caches anonymous and authenticated requests.
+* Supports caching personalized requests.
+	* Group based caching provided OOTB.
+	* Mechanism exposed to plugin custom logic for handling personalized requests.
+* Super flexible cache configs tied to URIs supported.
+	* Allows extending cache configs.
+	* Allows multiple cache configs.
+* Developer hook exposed to plugin custom rules on key cache handling events such as
+	* On request receive.
+	* On response cache
+	* On response deliver
+	* On cache invalidate
+* Provides mechanism to plugin custom cache keys.
+* Pluggable cache persistence model.
+	* In-memory implementation provided OOTB
+	* Allows multiple cache stores to co-exist.
+* Invalidation mechanism based on JCR paths and Sling jobs.
+	* Sample JCR change event handler based invalidation supplied.
 	In-memory cache store supports TTL.
-- Provides powerful instrumentation based on JMX MBean.
+* Provides powerful instrumentation based on JMX MBean.
 
 ## How to configure
 
@@ -40,33 +45,34 @@ HttpCache provides an effective way to improve performance of an application by 
 Modeled as OSGi configuration factory and hence multiple configurations allowed.
 
 For each configuration, define a `sling:OsgiConfig`  
+
 `/apps/mysite/config/com.adobe.acs.commons.httpcache.config.impl.HttpCacheConfigImpl-uniquename.xml`
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
-
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 	  	xmlns:cq="http://www.day.com/jcr/cq/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     httpcache.config.order="1000"
-    httpcache.config.requesturi.patterns="[/content/my-site/(.*).html], /content/my-site/products(.*).json]"
+    httpcache.config.requesturi.patterns="[/content/my-site/(.*).html, /content/my-site/products(.*).json]"
     httpcache.config.requesturi.patterns.blacklisted="[/content/my-site(.*)no-cache(.*)]"
     httpcache.config.request.authentication="authenticated"
-    httpcache.config.invalidation.oak.paths=["/content/my-site/(.*)"]
+    httpcache.config.invalidation.oak.paths="[/content/my-site/(.*)]"
     cacheConfigExtension.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
     cacheKeyFactory.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
     httpcache.config.cache-handling-rules.pid="[pid-of-rule1, pid-of-rule2]"
  />
-```
+ {% endhighlight %}     
 
-- `httpcache.config.order` Default value is 1000. Evaluated in ascending order. Determines the ordering of cache config while selecting config for the given HTTP request. If 2 cache config with the same order matches, caching is abandoned as it's a conflict.
-- `httpcache.config.requesturi.patterns` Set of whitelisted request URI applicable for this config. Expressed in REGEX.
-- `httpcache.config.requesturi.patterns.blacklisted` Set of blacklisted request URI. Expressed in REGEX. This is applied post applying `httpcache.config.requesturi.patterns` and hence has an overriding effect.
-- `httpcache.config.request.authentication` Authentication requirement for this cache config. Values could be `anonynous`, `authenticated` or `both`.
-- `httpcache.config.invalidation.oak.paths` Set of JCR paths for which all the cache entries derived from this config will be invalidated on receiving an cache invalidation job.
-- `cacheConfigExtension.target` Service pid of the `CacheConfigExtension` custom implementation. Expressed in LDAP syntax. This could also be a combination of `service.factoryPid` and `config.name`.
-- `cacheKeyFactory.target` Service pid of the `CacheKeyFactory` custom implementation. Expressed in LDAP syntax. This could also be a combination of `service.factoryPid` and `config.name`.
-- `httpcache.config.cache-handling-rules.pid` Service pid of cache handling rules applied for this config. Note that this is cache config specific rule while the global set of rules set at cache engine are applied to all cache configs.
+* `httpcache.config.order` Default value is 1000. Evaluated in ascending order. Determines the ordering of cache config while selecting config for the given HTTP request. If 2 cache config with the same order matches, caching is abandoned as it's a conflict.
+* `httpcache.config.requesturi.patterns` Set of whitelisted request URI applicable for this config. Expressed in REGEX.
+* `httpcache.config.requesturi.patterns.blacklisted` Set of blacklisted request URI. Expressed in REGEX. This is applied post applying `httpcache.config.requesturi.patterns` and hence has an overriding effect.
+* `httpcache.config.request.authentication` Authentication requirement for this cache config.
+  * Allowed values: `anonynous`, `authenticated` or `both`.
+* `httpcache.config.invalidation.oak.paths` Set of JCR paths for which all the cache entries derived from this config will be invalidated on receiving an cache invalidation job.
+* `cacheConfigExtension.target` Service pid of the `CacheConfigExtension` custom implementation. Expressed in LDAP syntax. This could also be a combination of `service.factoryPid` and `config.name`.
+* `cacheKeyFactory.target` Service pid of the `CacheKeyFactory` custom implementation. Expressed in LDAP syntax. This could also be a combination of `service.factoryPid` and `config.name`.
+* `httpcache.config.cache-handling-rules.pid` Service pid of cache handling rules applied for this config. Note that this is cache config specific rule while the global set of rules set at cache engine are applied to all cache configs.
 
 
 #### Configuring cache config extension (GroupHttpCacheConfigExtension)
@@ -76,16 +82,17 @@ User group based cache config extension and associated cache key creation. Model
 For each configuration, define a `sling:OsgiConfig`  
 `/apps/mysite/config/com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension-uniquename.xml`
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
-
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    config.name="unique-name"
-    httpcache.config.extension.user-groups.allowed="[group1, group2]"
+	config.name="unique-name"
+	httpcache.config.extension.user-groups.allowed="[group1, group2]"
  />
-```
+ {% endhighlight %}     
+
+
 - `config.name` Name to be used to refer this configuration in `HttpCacheConfig`.
 - `httpcache.config.extension.user-groups.allowed` Set of AEM user group names. At least one of these groups has to be present in the HTTP request user's group to have the request cacheable.
 
@@ -95,14 +102,14 @@ Central controlling unit for http cache.
 
 Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache.engine.impl.HttpCacheEngineImpl.xml`
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     httpcache.engine.cache-handling-rules.global="[pid1, pid2, pid3]"
  />
-```
+{% endhighlight %}
 
 - `httpcache.engine.cache-handling-rules.global` Set of service pid of global cache handling rules. These rules are applied to all cache configs and hence all cache-able requests.
 
@@ -112,7 +119,7 @@ In-memory store for caching http responses.
 
 Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache.store.mem.impl.MemHttpCacheStoreImpl.xml`
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
@@ -120,7 +127,7 @@ Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache
     httpcache.cachestore.memcache.ttl="-1"
     httpcache.cachestore.memcache.maxsize="10"
  />
-```
+{% endhighlight %}
 
 - `httpcache.cachestore.memcache.ttl` Time To Live (TTL) of cached items in seconds. Value of '-1' disables the TTL behavior.
 - `httpcache.cachestore.memcache.maxsize` Max size of the cache store in MB.  Once the store reaches the set size, least recently used entry would be evicted.
@@ -131,14 +138,14 @@ Sample cache invalidation job creator. Watches for changes in JCR nodes and crea
 
 Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache.store.mem.impl.JCRNodeChangeEventHandler.xml`
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     event.filter="(|(path=/content*)(path=/etc*))"
  />
-```
+{% endhighlight %}
 
 - `event.filter` JCR paths to be watched for changes. Expressed in LDAP syntax.
 
@@ -151,7 +158,7 @@ HttpCache provides number of developer hooks to alter or extend its behavior. He
 
 ### Creating new global cache handling rule
 
-Cache handling rules provide touchpoints to plug in custom logic on key cache handling events. They are modeled as OSGi services implementing `com.adobe.acs.commons.httpcache.rule.HttpCacheHandlingRule`. The contract is that the current cache action will be continued only if the methods implementing the interface returns true. A convenient abstract class  `com.adobe.acs.commons.httpcache.rule.AbstractHttpCacheHandlingRule` has been provided facilitating the sub classes to override just the intended methods. The best practice is to have a rule overriding just one method.
+Cache handling rules provide touch-points to plug in custom logic on key cache handling events. They are modeled as OSGi services implementing `com.adobe.acs.commons.httpcache.rule.HttpCacheHandlingRule`. The contract is that the current cache action will be continued only if the methods implementing the interface returns true. A convenient abstract class  `com.adobe.acs.commons.httpcache.rule.AbstractHttpCacheHandlingRule` has been provided facilitating the sub classes to override just the intended methods. The best practice is to have a rule overriding just one method.
 
 Event  | Method | OOTB rules
 ------------- | ------------- | -------------
