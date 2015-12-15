@@ -2,10 +2,10 @@
 layout: acs-aem-commons_feature
 title: AEM Environment Indicator
 description: Too many tabs have you confused?
-date: 2014-09-26	
+date: 2014-09-26
 thumbnail: /images/aem-environment-indicator/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
@@ -46,7 +46,7 @@ Set a value in the browser tab using the `browser-title-prefix` sling:OsgiConfig
 
 Browser titles can be used in conjunction with visual indicators (bars, tabs or other custom)
 
-### AEM Indicator Bar 
+### AEM Indicator Bar
 
 ![image](/acs-aem-commons/images/aem-environment-indicator/default-indicator-bar.png)
 
@@ -60,13 +60,20 @@ Custom indicators can be added using the `css-override` and `inner-html` propert
 > Remember to escape the value of `inner-html` and `css-override` as needed using [escapehtmlforxml.com](http://www.escapehtmlforxml.com)
 
 * `css-override` selectors should always be scoped w `#acs-commons-env-indicator`
-* The base indicator div is injected at the end of the document like so  `... <div id="acs-commons-env-indicator"></div></body>` and thus should be positioned using fixed or absolute positioning. 
+* The base indicator div is injected at the end of the document like so  `... <div id="acs-commons-env-indicator"></div></body>` and thus should be positioned using fixed or absolute positioning.
    * fixed positioning is usually better so the indicator is not lost when scrolling the page
 * The z-index for `#acs-commons-env-indicator` should be very high as to not be hidden by overlapping elements.
 * Image stylings should be added as data URIs. ([Data URI Maker](http://dataurl.net/#dataurlmaker))
 
+### System Properties in inner-html (Since v2.2.0)
 
-#### Custom Example: AEM Indicator Tab
+Since v2.2.0, [System Properties](http://docs.oracle.com/javase/6/docs/api/java/lang/System.html?is-external=true#getProperties()) can be injected into a templatized `inner-html`.
+
+Example: `inner-html="<div>${os.name} - ${os.version}$</div>"` would inject the OS Name and Version.
+
+Note: HTML escaping considerations still need to be followed as noted above.
+
+### Custom Example: AEM Indicator Tab
 
 This is an example of a custom indicator that renders the environment name in a fixed "tab" in the upper left corner of the browser window.
 
@@ -78,18 +85,18 @@ Set `css-override` to with adjusted color and background colors per environment.
 #acs-commons-env-indicator { 	
 background-color: #800080;  	
 color: #FFF;  
-	
-position: fixed; 
-top: 0; 
-left: 50%;	
-width: 126px; 
+
+position: fixed;
+top: 0;
+left: 50%;
+width: 126px;
 margin-left: -63px;
 height: 30px;  	
 font: bold 18px/29px sans-serif;
 text-align: center; 	 	
 border: solid 1px black;
 border-top-width: 0;
-z-index: 100000000000000; 
+z-index: 100000000000000;
 }
 {% endhighlight %}
 
@@ -100,7 +107,7 @@ You can even add JS to the `inner-html` make the Tab move away from your mouse
 {% highlight html %}
 Local
 <script>
-document.getElementById('acs-commons-env-indicator').onmouseover = function() { 
+document.getElementById('acs-commons-env-indicator').onmouseover = function() {
 	if(this.style.left === '50%') {
 		this.style.left = '25%';
 	} else {
@@ -109,5 +116,3 @@ document.getElementById('acs-commons-env-indicator').onmouseover = function() {
 };
 </script>
 {% endhighlight %}
-
-

@@ -5,7 +5,7 @@ description: Add visual icon picker to dialogs
 date: 2015-08-25
 thumbnail: /images/iconpicker/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.0.0
 

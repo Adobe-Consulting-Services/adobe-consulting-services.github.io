@@ -5,7 +5,7 @@ description: See what content is different between JCRs
 date: 2015-10-1
 thumbnail: /images/jcr-compare/thumbnail.png
 feature-tags: administration content-migration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.1.0
 
