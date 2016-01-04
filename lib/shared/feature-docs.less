@@ -25,7 +25,7 @@
       background-color: #308BF6;
       .badge
     }
-	
+
     .beta {
       background-color: #76107E;
       .badge
@@ -72,7 +72,7 @@
   .feature-doc-header {
     margin-bottom: 1.5em;
   }
-  
+
   .available-since {
 
   }
@@ -80,21 +80,40 @@
   .section {
     padding: 0 2em 1em 2em;
     border: dotted 5px #f0f0f0;
-    margin-bottom: 2em;  
+    margin-bottom: 2em;
 
     .clearfix;
-  
+
     img {
   	  float: right;
   	  display: block;
-	  padding: 2em 0 1em 2em;	 
+	  padding: 2em 0 1em 2em;
 	  max-width: 400px;
   	  .clearfix;
     }
   }
+
+  /* Markdown Table */
+  table {
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+
+    tr {
+      border-top: solid 1px #cecece;
+
+      th {
+        padding: 1rem;
+        background-color: #eee;
+      }
+
+      td {
+        padding: 1rem;
+        border-left: solid 1px #cecece;
+      }
+    }
+  }
 }
-
-
 
 /* Inline Code */
 code {

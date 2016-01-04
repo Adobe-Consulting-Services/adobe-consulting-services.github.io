@@ -6,7 +6,7 @@ date: 2014-03-23
 thumbnail: /images/query-editor/thumbnail.png
 initial-release: 0.0.4
 categories: acs-aem-tools features
-tags: acs-aem-tools-features
+tags: acs-aem-tools-features updated
 ---
 
 QueryEditor is a WebUI that allows QueryBuilder queries to be written, executed and debugged in real time.  
@@ -35,10 +35,10 @@ Querying can be set to "Auto Query" which will execute and display the results o
 
 ## Warning
 
-* Be careful when using "Auto Query" mode as you made inadvertantly intiate an expensive query and cause your Query Editor to be temporarily unresponsive.
+* Be careful when using "Auto Query" mode as you made inadvertently initiate an expensive query and cause your Query Editor to be temporarily unresponsive.
 
 ## Links
 
 * [QueryBuilder Docs](http://dev.day.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)
-* [QueryBuiler Predicate Evaluators](http://dev.day.com/docs/en/cq/current/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)
-* [QueryBuilder Introductory Slidedeck](http://www.slideshare.net/alexkli/cq5-querybuilder-adapttoberlin-2011)
+* [QueryBuilder Predicate Evaluators](http://dev.day.com/docs/en/cq/current/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)
+* [QueryBuilder Introductory Slide Deck](http://www.slideshare.net/alexkli/cq5-querybuilder-adapttoberlin-2011)

@@ -5,18 +5,16 @@ description: Power-tooling for workflow removal
 date: 2015-05-18
 thumbnail: /images/workflow-remover/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.10.0
 ---
 
 ## Purpose
 
-During content migration, bulk ingest, development, or just unanticipated situations, large volumnes of Workflow instances can amass. When large volumes of Workflow instances exist in AEM, system resources may become taxed.
+During content migration, bulk ingest, development, or just unanticipated situations, large volumes of Workflow instances can amass.
 
-While AEM has OOTB support for Workflow maintenance, this functionality has limitations (ex. only workflow instances older than 1 day can be removed).
-
-ACS AEM Commons' Workflow Remover helps bridge the gap and provide power-tooling to remove unwanted Workflow instances.
+AEM has OOTB support for Workflow clean-up via Granite Console and JMX however may not satisfy all use cases. ACS AEM Commons' Workflow Remover helps bridge the gap and provide power-tooling to remove unwanted Workflow instances.
 
 ## How to Use
 
@@ -32,6 +30,7 @@ In AEM, navigate to the Tools > ACS AEM Commons > Workflow Remover
 * Older Than: [Optional] Workflow instances must be created older than this time.
 * Models: [Optional] Workflow models that are eligible for removal.
   * If no models are selected, all models are eligible for removal.
+* Duration: [Optional] Only allow the workflow removal process to run for this many minutes. Leave blank for no limit.
 
 The Workflow Remover Web UI will show status from the last successful Workflow Removal execution.
 
@@ -55,11 +54,13 @@ Define a `sling:OsgiConfig` with the following attributes.
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.ortg/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
+
     scheduler.expression="0 1 0 ? * *"
-	workflow.statuses="[ABORTED,COMPLETE,RUNNING,SUSPENDED,STALE]"
-	workflow.models="[/etc/workflow/models/dam/adddamsize/jcr:content/modelm/etc/workflow/models/my-app/my-workflow-model/jcr:content/model]",
-	workflow.payloads="[/content/dam/.+/.*\.pdf(/.*)?]",
-	workflow.older-than="1234567890"
+    workflow.statuses="[ABORTED,COMPLETED,RUNNING,SUSPENDED,STALE]"
+    workflow.models="[/etc/workflow/models/dam/adddamsize/jcr:content/modelm/etc/workflow/models/my-app/my-workflow-model/jcr:content/model]"
+    workflow.payloads="[/content/dam/.+/.*\.pdf(/.*)?]"
+    workflow.older-than="1234567890"
+    max-duration="60"
 
     />
 {% endhighlight %}
@@ -71,5 +72,4 @@ Define a `sling:OsgiConfig` with the following attributes.
 	* Example: /etc/workflow/models/dam/adddamsize/jcr:content/model
 * workflow.payloads: Only remove Workflow Instances whose payloads match one of these regex patterns.
 * worlflow.older-than: Only remove Workflow Instances whose payloads are older than this UTC Time in milliseconds.
-
-Note:
+* max-duration: Max number of minutes to run. 0 for no limit.

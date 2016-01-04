@@ -7,7 +7,7 @@ title: Compatibility
 
 This page identifies the versions of Adobe Experience Manager with which a particular version of ACS AEM Commons is compatible. In general, we strive to be compatible with the current version and the last prior version. For the purpose of this page, _compatible_ means that the package is installable. Individual features may require a higher version. Please refer to the individual feature documentation pages for more details.
 
-    
+
 {:.data-table}
 |                 | CQ 5.5     | CQ 5.6   |  AEM 5.6.1  | AEM 6.0   | AEM 6.1   |
 |-----------------|:----------:|:--------:|:-----------:|:---------:|:---------:|
@@ -32,4 +32,8 @@ This page identifies the versions of Adobe Experience Manager with which a parti
 | 1.10.0          |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
 | 1.10.2          |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
 | 1.10.4          |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
+| 1.10.6          |            |          | &#x2714;    | &#x2714;  | &#x2714;  |
 | 2.0.0           |            |          |             | &#x2714;  | &#x2714;  |
+| 2.1.0           |            |          |             | &#x2714;  | &#x2714;  |
+| 2.1.2           |            |          |             | &#x2714;  | &#x2714;  |
+| 2.2.0           |            |          |             | &#x2714;  | &#x2714;  |

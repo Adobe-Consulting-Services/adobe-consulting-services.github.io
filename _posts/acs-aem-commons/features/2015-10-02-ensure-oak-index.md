@@ -1,11 +1,11 @@
 ---
 layout: acs-aem-commons_feature
 title: Ensure Oak Index
-description: Finally include Oak Indexes in your app package
+description: Include Oak Indexes in your app package
 date: 2015-10-02
 thumbnail: /images/ensure-oak-index/thumbnail.png
 feature-tags: backend-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 2.1.0
 
@@ -13,9 +13,7 @@ initial-release: 2.1.0
 
 ![JCR Compare](/acs-aem-commons/images/ensure-oak-index/osgi-console.png)
 
-
 ## Purpose
-
 
 The Oak repository used by AEM 6, allows from fine tuning of search performance via the definition of [Oak Index definitions](https://jackrabbit.apache.org/oak/docs/query/lucene.html). The index definition nodes, usually stored under `/oak:index`, define the index and also store the index data (in a node structure invisible to the AEM tooling).
 
@@ -24,6 +22,8 @@ Ideally the Oak Index definitions used by an application could be stored with in
 Ensure Oak Index is tooling that allows Oak Index Definitions (referred to in this document as Ensure Definitions) to be defined in a content package, and then safely translated to real Oak Indexes.
 
 ## How to Use
+
+As of v2.2.0, the management of Oak Indexes has been moved to an async Sling Job to ensure the work does not block bundle activation.
 
 ### Define the Ensure Definitions
 
@@ -61,7 +61,7 @@ Now, deploy the package containing the Ensure Definitions and the OSGi Configura
 * Ensure Definition nodes must be `oak:Unstructured`
 * Ensure Definition nodes can be multi-levels deep, supporting Lucene Property Index definitions.
 * Define the Ensure Definition exactly as you would the Oak Index you wish to create/update (with the exception of the `jcr:primaryType` as noted above)
-*
+
 
 ### Special Properties
 
@@ -74,6 +74,14 @@ Property Name: `ignore`
 An Ensure Definition can be ignored completely by setting `@ignore=true`.
 
 * `/apps/mysite/oak-index/ignore-this-index@ignore=true`
+
+### Disabled (as of v.2.2.0)
+
+Property Name: `disable`
+
+An Ensure Definition can mark an Oak Index as disabled (but NOT deleted) by setting `@disable=true`.
+
+* `/apps/mysite/oak-index/disable-this-index@disable=true`
 
 
 ### Delete

@@ -6,7 +6,7 @@ date: 2014-08-27
 thumbnail: /images/test-page-generator/thumbnail.png
 initial-release: 0.0.12
 categories: acs-aem-tools
-tags: acs-aem-tools-features
+tags: acs-aem-tools-features updated
 ---
 
 ## Getting Started

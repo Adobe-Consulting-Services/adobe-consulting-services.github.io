@@ -6,12 +6,12 @@ date: 2013-12-06
 thumbnail: /images/aem-fiddle/thumbnail.png
 initial-release: 0.0.2
 categories: acs-aem-tools features
-tags: acs-aem-tools-features	
+tags: acs-aem-tools-features
 ---
 
-The intent of AEM Fiddle is to provide an accessible, developer friendly environent for experimentation, POCs and other one-off tasks. AEM Fiddle is **not** intended to be used as a full fledged application development environment.
+The intent of AEM Fiddle is to provide an accessible, developer friendly environment for experimentation, POCs and other one-off tasks. AEM Fiddle is **not** intended to be used as a full fledged application development environment.
 
-AEM Fiddle's fundamental advantage over other AEM IDEs is: *time to execution*. 
+AEM Fiddle's fundamental advantage over other AEM IDEs is: *time to execution*.
 
 Most AEM IDE/development tooling requires the orchestration of scripts, resources and `sling:resourceTypes`. AEM Fiddle allows you to begin coding and executing your code in seconds (literally).
 
@@ -26,7 +26,7 @@ Install the ACS AEM Tools package via the AEM Package Manager and then open AEM 
 
 ## Overview
 
-The term "fiddle" is used to describe the script entered into the Web UI (left side of screen) to be executed against AEM. 
+The term "fiddle" is used to describe the script entered into the Web UI (left side of screen) to be executed against AEM.
 
 ![AEM Fiddle Overview]({{ site.data.acs-aem-tools.baseurl }}/images/aem-fiddle/overview.png)
 
@@ -34,11 +34,11 @@ The term "fiddle" is used to describe the script entered into the Web UI (left s
 2. Absolute path to resource used for script execution context (defaults to `/etc/acs-tools/aemfiddle/jcr:content`)
 3. Button to run code defined in (1.)
 	* Windows shortcut: Ctrl-K
-	* OS X shortcut: Cmd-K 
+	* OS X shortcut: Cmd-K
 
 4. Displays the output of code execution
 5. Toggles output between rendered HTML *(shown)* and HTML src view
-6. Displays the time of execution and resource context 
+6. Displays the time of execution and resource context
 7. Opens dialog for creating a new input using script languages supported by the AEM install
 8. Toggles the sidebar used to Creating, Updating, Loading and Deleting saves fiddles
 9. Updates the active saved fiddle
@@ -60,7 +60,7 @@ AEM Fiddle will allow you to code in any script language the AEM installation su
 
 
 ## Error Handling
-AEM Fiddle supports erroring scripts by displaying the normal output of the error along with a Warning notification.
+AEM Fiddle supports erring scripts by displaying the normal output of the error along with a Warning notification.
 
 Note: Switching to HTML src view often makes reading the error messages easier.
 

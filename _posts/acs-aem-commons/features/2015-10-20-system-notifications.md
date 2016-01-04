@@ -5,11 +5,13 @@ description: Alert AEM Authors about system activities
 date: 2015-10-20
 thumbnail: /images/system-notifications/thumbnail.png
 feature-tags: administration content-migration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 2.1.0
 
 ---
+
+> Use of System Notifications should target v2.2.0 as issues existed in v2.1.x.
 
 ## Purpose
 
