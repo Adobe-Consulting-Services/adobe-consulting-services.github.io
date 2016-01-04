@@ -18,8 +18,7 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
 <div id="s7interactivevideo_div"></div>
 <script type="text/javascript">
     (function() {
-        var vpPlugin,
-            onUserEvent = function(event) {
+        var onUserEvent = function(event) {
                 if (event.s7event.trackEvent === s7sdk.event.UserEvent.INTERACTIVE_SWATCH) {
                     digitalData.event.push({
                         href : event.s7event.data[0],
@@ -58,24 +57,38 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
                     "trackEvent": function(objID, compClass, instName, timeStamp, eventInfo) {
                         var eventData = eventInfo.split(","),
                             eventType = eventData[0],
-                            event = { eventType : eventType };
+                            logEvent = true;
 
                         switch (eventType) {
-                            case s7sdk.event.UserEvent.MILESTONE:
+                            case s7sdk.event.UserEvent.LOAD:
+                                logEvent = false;
+                                if (videoViewer.vpPlugin) {
+                                    videoViewer.vpPlugin.trackVideoLoad();
+                                }
+                                break;
+                            case s7sdk.event.UserEvent.STOP:
+                                if (digitalData.videoInfo.length === Number.parseInt(eventData[1], 10)) {
+                                    logEvent = false;
+                                    if (videoViewer.vpPlugin) {
+                                        videoViewer.vpPlugin.trackComplete();
+                                    }
+                                }
                                 break;
                             case s7sdk.event.UserEvent.PLAY:
-                                event.timestamp = eventData[1];
+                                logEvent = false;
+                                digitalData.videoInfo.playhead = Number.parseInt(eventData[1], 10);
+                                if (videoViewer.vpPlugin) {
+                                    videoViewer.vpPlugin.trackPlay();
+                                }
                                 break;
                             case s7sdk.event.UserEvent.METADATA:
                                 if (eventData[1] === "DURATION") {
-                                    digitalData.videoInfo.length = eventData[2];
+                                    digitalData.videoInfo.length = Number.parseInt(eventData[2], 10);
                                 }
                                 break;
                         }
-                        //digitalData.event.push(event);
-                        //console.log(eventInfo);
-                        if (_satellite) {
-                            _satellite.track("video-" + eventType.toLowerCase());
+                        if (logEvent && console.log) {
+                            console.log(eventInfo);
                         }
                     },
                     "initComplete" : function() {
@@ -87,10 +100,6 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
                         videoPlayer.addEventListener(s7sdk.event.InteractiveDataEvent.NOTF_INTERACTIVE_DATA, onInteractiveData, false);
                         interactiveSwatches.addEventListener(s7sdk.event.UserEvent.NOTF_USER_EVENT, onUserEvent, false);
                         callToAction.addEventListener(s7sdk.event.UserEvent.NOTF_USER_EVENT, onUserEvent, false);
-                        
-                        if (window.initVideoAnalytics) {
-                            vpPlugin = window.initVideoAnalytics(videoPlayer);
-                        }
                     }
                 }
             });
@@ -99,8 +108,8 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
             streamType: "vod",
             playerName: "Interactive"
         };
-
         videoViewer.init();
+        window.videoViewer = videoViewer;
     })();
 </script>
 
