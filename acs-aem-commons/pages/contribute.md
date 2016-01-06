@@ -56,39 +56,12 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
                 "handlers":{
                     "trackEvent": function(objID, compClass, instName, timeStamp, eventInfo) {
                         var eventData = eventInfo.split(","),
-                            eventType = eventData[0],
-                            logEvent = true;
+                            eventType = eventData[0];
 
-                        switch (eventType) {
-                            case s7sdk.event.UserEvent.LOAD:
-                                logEvent = false;
-                                if (videoViewer.vpPlugin) {
-                                    videoViewer.vpPlugin.trackVideoLoad();
-                                }
-                                break;
-                            case s7sdk.event.UserEvent.STOP:
-                                if (digitalData.videoInfo.length === Number.parseInt(eventData[1], 10)) {
-                                    logEvent = false;
-                                    if (videoViewer.vpPlugin) {
-                                        videoViewer.vpPlugin.trackComplete();
-                                    }
-                                }
-                                break;
-                            case s7sdk.event.UserEvent.PLAY:
-                                logEvent = false;
-                                digitalData.videoInfo.playhead = Number.parseInt(eventData[1], 10);
-                                if (videoViewer.vpPlugin) {
-                                    videoViewer.vpPlugin.trackPlay();
-                                }
-                                break;
-                            case s7sdk.event.UserEvent.METADATA:
-                                if (eventData[1] === "DURATION") {
-                                    digitalData.videoInfo.length = Number.parseInt(eventData[2], 10);
-                                }
-                                break;
-                        }
-                        if (logEvent && console.log) {
-                            console.log(eventInfo);
+                        if (eventType === s7sdk.event.UserEvent.PLAY) {
+                            if (_satellite) {
+                                _satellite.track("video-play");
+                            }
                         }
                     },
                     "initComplete" : function() {
