@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.2.2 now available!
+description: Compatibility release
+date: 2015-12-15
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
