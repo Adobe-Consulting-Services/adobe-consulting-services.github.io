@@ -1,5 +1,5 @@
 name: Adobe Consulting Services
-pygments: true
+highlighter: pygments
 permalink:  none
 markdown: kramdown
 exclude:  [ Gemfile, Gemfile.lock, README.md, vendor/ ]
