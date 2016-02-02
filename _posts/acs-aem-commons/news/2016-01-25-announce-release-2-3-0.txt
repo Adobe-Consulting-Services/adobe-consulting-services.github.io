@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_default
 title: Release 2.3.0 now available!
-description: New feature release! Limited Parys, DAM Assets in Sitemap, and raw Twitter data.
+description: New feature release! Limited Parys, Assets in Sitemap, and access to raw Twitter data.
 date: 2016-02-02
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
