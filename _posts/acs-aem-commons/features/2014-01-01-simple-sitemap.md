@@ -40,10 +40,8 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
     sling.servlet.resourceTypes="[myapp/components/page/home-page]"
     externalizer.domain="publish"
     include.lastmod="{Boolean}false"
-    changefreq.properties="[myChangeFreqProperties]"
-    priority.properties="[myPriorityProperties]"
-    damassets.property="myDAMFoldersProperty"
-    damassets.types="[myDAMAllowedMIMETypes]"
+    changefreq.properties="[myChangeFreq]"
+    priority.properties="[myPriority]"
     />
 {% endhighlight %}   
 
@@ -58,10 +56,4 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
 
 * *changefreq.properties* The set of JCR property names which will contain the change frequency value. Defaults to none.
 
-* *priority.properties* The set of JCR property names which will contain the priority value. Defaults to none.
-
-#### Since v2.3.0
-
-* *damassets.property* The JCR property name which will contain DAM folders to include in the sitemap.
-
-* *damassets.types* MIME types allowed for DAM assets included in the sitemap.
+* *priority.properties* The set of JCR property names which will contain the priority value. Defauls to none.
