@@ -59,7 +59,7 @@ To validate that your configuration was successful, look at the Sling Rewriter t
 
 To configure Apache to send the right header to set a long TTL:
 
-{% highlight apache %}
+{% highlight conf %}
 SetEnvIf Request_URI "(\.min)?\.[a-f0-9]+\.js" long_expires=true
 SetEnvIf Request_URI "(\.min)?\.[a-f0-9]+\.css" long_expires=true
 Header set Cache-Control max-age=2592000 env=long_expires 
