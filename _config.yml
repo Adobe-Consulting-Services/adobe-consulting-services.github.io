@@ -1,6 +1,5 @@
 name: Adobe Consulting Services
 highlighter: rouge
-permalink:  none
 markdown: kramdown
 exclude:  [ Gemfile, Gemfile.lock, README.md, vendor/ ]
 baseurl: /
