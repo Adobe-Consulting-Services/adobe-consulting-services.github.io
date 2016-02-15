@@ -97,7 +97,7 @@ To delete an existing Oak Index, create an Ensure Definition with the same node 
 
 Property Name: `forceReindex`
 
-On create or update, the Oak Index can be marked to be immediately re-indexed by setting @forceRefresh=true`.
+On create or update, the Oak Index can be marked to be immediately re-indexed by setting @forceReindex=true`.
 
 * `/apps/mysite/oak-index/always-reindex-this-index@forceReindex=true`
 
