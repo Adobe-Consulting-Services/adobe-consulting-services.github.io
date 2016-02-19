@@ -3,3 +3,4 @@ highlighter: rouge
 markdown: kramdown
 exclude:  [ Gemfile, Gemfile.lock, README.md, vendor/ ]
 baseurl: /
+permalink: none
