@@ -25,9 +25,9 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
                 <div class="icon icon-x"></div>
 
                 <h4>What ACS AEM Samples isn't!</h4>
-				
+
                 <p>
-                    An AEM package that provides "real" functionality. 
+                    An AEM package that provides "real" functionality.
 					No guarantees exist around the effects of installing this package in AEM; it has not been vetted for unobtrusiveness.
                 </p>
             </div>
@@ -54,106 +54,111 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
             <h2 id="samples">Samples</h2>
         </div>
     </div>
-    
+
     <div class="container">
         <div class="wrapper">
-			
-<!-- **************************************** COLUMN 1 **************************************** -->		
-			
+
+<!-- **************************************** COLUMN 1 **************************************** -->
+
 			<div class="col1">
 				<div class="samples-section">
 					<h3>AngularJS</h3>
 					<p>Build rich experiences within AEM using AngularJS.</p>
 					<ul>
 						<li><a href="{{ page.contentURL }}/angularjs-app" target="_blank">Single-Page App</a></li>
-					</ul>	
-				</div>	
+					</ul>
+				</div>
 
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/authentication/impl" target="_blank">Authentication</a></h3>
 					<p>Authenticating users in AEM or getting different security contexts programmatically (Resource Resolvers and JCR Sessions)</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/authentication/impl/SampleServiceLoginResourceResolverImpl.java" target="_blank">Service Resource Resolvers</a></li>
-					</ul>	
-				</div>	
+					</ul>
+				</div>
 
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/events/impl" target="_blank">Events</a></h3>
 					<p>Asynchronous system notifications.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/events/impl/SampleSlingEventHandler.java" target="_blank">Sling Event Handler</a></li>
-						<li><a href="{{ page.bundleURL }}/events/impl/SampleJcrEventListener.java" target="_blank">JCR Event Listener</a></li>						
-						<li><a href="{{ page.bundleURL }}/events/cq5/impl/SampleSlingEventHandler.java" target="_blank">(Legacy) CQ5 Sling Event Handler</a></li>					
-					</ul>	
-				</div>	
-							  
+            <li><a href="{{ page.bundleURL }}/jobs/impl/SampleEventHandlerWithImmediateJobExecution.java" target="_blank">Sling Event Handler (with Immediate Job Excution)</a></li>
+            <li><a href="{{ page.bundleURL }}/events/impl/SampleJcrEventListener.java" target="_blank">JCR Event Listener</a></li>
+						<li><a href="{{ page.bundleURL }}/events/cq5/impl/SampleSlingEventHandler.java" target="_blank">(Legacy) CQ5 Sling Event Handler</a></li>
+					</ul>
+				</div>
+
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/filters/impl" target="_blank">Filters</a></h3>
 					<p>Executed in a chain against every HTTP request, Filters provide a powerful hook into the HTTP Request processing context.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/filters/impl/SampleSlingIncludeFilter.java" target="_blank">Sling Include Filter</a></li>
 						<li><a href="{{ page.bundleURL }}/filters/impl/SampleSlingRequestFilter.java" target="_blank">Sling Request Filter</a></li>
-						<li><a href="{{ page.bundleURL }}/filters/impl/SampleThreadLocalFilter.java" target="_blank">Thread Local Filter</a></li>					
-					</ul>	
-				</div>			  
-			   
+						<li><a href="{{ page.bundleURL }}/filters/impl/SampleThreadLocalFilter.java" target="_blank">Thread Local Filter</a></li>
+					</ul>
+				</div>
+
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/jobs/impl" target="_blank">Jobs</a></h3>
 					<p>Completing work with some guarantees.</p>
-				</div>				   
-			   
-				<div class="samples-section">
-					<h3><a href="{{ page.bundleURL }}/mbean/impl" target="_blank">MBeans</a></h3>
-					<p>Interact with your code via JMX and the Apache Felix MBean Web UI.</p>					
-				</div>				   
+          <ul>
+						<li><a href="{{ page.bundleURL }}/jobs/impl/SampleSlingJobConsumer.java" target="_blank">Sling Job Consumer</a></li>
+						<li><a href="{{ page.bundleURL }}/jobs/impl/SampleEventHandlerWithImmediateJobExecution.java" target="_blank">Sling Event Handler (with Immediate Job Excution)</a></li>
+          </ul>
+				</div>
 
 				<div class="samples-section">
-					<h3><a href="{{ page.bundleURL }}/models" target="_blank">Models</a></h3>					
+					<h3><a href="{{ page.bundleURL }}/mbean/impl" target="_blank">MBeans</a></h3>
+					<p>Interact with your code via JMX and the Apache Felix MBean Web UI.</p>
+				</div>
+
+				<div class="samples-section">
+					<h3><a href="{{ page.bundleURL }}/models" target="_blank">Models</a></h3>
 					<p>Create models for resources (or other things).</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/models/SampleSlingModel.java" target="_blank">Sling Model</a></li>
-					</ul>		
-				</div>	
+					</ul>
+				</div>
 
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/predicates/impl/SamplePredicate.java" target="_blank">Predicates</a></h3>
-					<p>Filter Nodes and Resources in and out of Lists and Pathfields.</p>					
-				</div>	
+					<p>Filter Nodes and Resources in and out of Lists and Pathfields.</p>
+				</div>
 
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/querybuilder/impl" target="_blank">Query Builder</a></h3>
 					<p>AEM's Querybuilder provides an extensible abstraction for querying content.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/querybuilder/impl/SampleJsonHitWriter.java" target="_blank">Result Hit Writer</a></li>
-						<li><a href="{{ page.bundleURL }}/querybuilder/impl/SampleFilteringPredicateEvaluator.java" target="_blank">Filtering Predicate Evaluator</a></li>					
+						<li><a href="{{ page.bundleURL }}/querybuilder/impl/SampleFilteringPredicateEvaluator.java" target="_blank">Filtering Predicate Evaluator</a></li>
 
-						<li><a href="{{ page.bundleURL }}/querybuilder/facets/impl/SampleFacetPredicateEvaluator.java" target="_blank">Facet Extractor</a></li>					
+						<li><a href="{{ page.bundleURL }}/querybuilder/facets/impl/SampleFacetPredicateEvaluator.java" target="_blank">Facet Extractor</a></li>
 					</ul>
 
-				</div>	
+				</div>
 
 			</div>
-<!-- **************************************** COLUMN 2 **************************************** -->		
-			<div class="col2">	
+<!-- **************************************** COLUMN 2 **************************************** -->
+			<div class="col2">
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/services/impl" target="_blank">OSGi Services</a></h3>
-					<p>One of the most powerful abstractions in AEM! 
+					<p>One of the most powerful abstractions in AEM!
 						OSGi services are the perfect place to develop business logic for
 						re-use across all your AEM applications.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/services/impl/SampleMultiReferenceServiceImpl.java" target="_blank">Service w/ Multi-References</a></li>
 						<li><a href="{{ page.bundleURL }}/services/impl/SampleMutableStateServiceImpl.java" target="_blank">Service w/ Mutable State</a></li>
-						<li><a href="{{ page.bundleURL }}/services/impl/SampleServiceImpl.java" target="_blank">Basic Service</a></li>					
-					</ul>						
-				</div>			
-			
+						<li><a href="{{ page.bundleURL }}/services/impl/SampleServiceImpl.java" target="_blank">Basic Service</a></li>
+					</ul>
+				</div>
+
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/replication/impl" target="_blank">Replication</a></h3>
 					<p>Add custom behaviors to the AEM Replication process.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/replication/impl/SampleReplicationContentFilter.java" target="_blank">Replication Content Filter</a></li>
 												<li><a href="{{ page.bundleURL }}/replication/impl/SampleReplicationPreprocessor.java" target="_blank">Replication Preprocessor</a></li>
-					</ul>					
+					</ul>
 				</div>
 
 				<div class="samples-section">
@@ -162,34 +167,34 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 					<ul>
 						<li><a href="{{ page.bundleURL }}/servlets/impl/SampleAllMethodsServlet.java" target="_blank">All Methods Servlet</a></li>
 						<li><a href="{{ page.bundleURL }}/servlets/impl/SampleSafeMethodsServlet.java" target="_blank">Safe Methods Servlet</a></li>
-					</ul>					
+					</ul>
 				</div>
-												
+
 				<div class="samples-section">
-					<h3><a href="{{ page.bundleURL }}/adapterfactories/impl" target="_blank">Sling Adapter Factories</a></h3>					
+					<h3><a href="{{ page.bundleURL }}/adapterfactories/impl" target="_blank">Sling Adapter Factories</a></h3>
 					<p>Create your own .adaptTo(..) implementations.</p>
-				</div>				
+				</div>
 
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/resources" target="_blank">Sling Resources</a></h3>
-					<p>Sling tooling to mimic and extend Sling Resource abstractions.</p>	
+					<p>Sling tooling to mimic and extend Sling Resource abstractions.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/resources/SampleResource.java" target="_blank">Resource</a></li>
 						<li><a href="{{ page.bundleURL }}/resources/impl/SampleResourceDecorator.java" target="_blank">Resource Decorator</a></li>
 						<li><a href="{{ page.bundleURL }}/resources/SampleResourceWrapper.java" target="_blank">Resource Wrapper</a></li>
-					</ul>				
-				</div>	
-							
+					</ul>
+				</div>
+
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/resourceproviders/impl" target="_blank">Sling Resource Providers</a></h3>
 					<p>Expose data not in the JCR as if it were in the JCR!</p>
-				</div>			
-			
+				</div>
+
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/schedulers/impl" target="_blank">Sling Scheduled Services</a></h3>
 					<p>Run code on a given schedule or interval.</p>
 				</div>
-			
+
 				<div class="samples-section">
 					<h3><a href="{{ page.contentURL }}/touch-ui" target="_blank">Touch UI Widgets</a></h3>
 					<p>Build and customize AEM's Touch UI interfaces and dialogs.</p>
@@ -197,7 +202,7 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 						<li><a href="{{ page.contentURL }}/touch-ui/datasources/sample-datasource" target="_blank">Data Sources</a></li>
 					</ul>
 				</div>
-			
+
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/workflow/impl" target="_blank">Workflow</a></h3>
 					<p>Workflow provides a powerful toolset for applying business logic to content in AEM.</p>
@@ -210,4 +215,3 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 {% include shared/who-we-are.html %}
 
 {% include shared/projects.html %}
-
