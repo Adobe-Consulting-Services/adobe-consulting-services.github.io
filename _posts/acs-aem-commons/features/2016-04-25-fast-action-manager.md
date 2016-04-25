@@ -16,7 +16,7 @@ Fast Action Manager is a easy-to-use API that allows for parallelized and (intel
 
 ## How to Use
 
-> [Fast Action Manager JavaDocs](http://localhost:4000/acs-aem-commons/apidocs/com/adobe/acs/commons/fam/package-summary.html)
+> [Fast Action Manager JavaDocs](http://adobe-consulting-services.github.io/acs-aem-commons/apidocs/com/adobe/acs/commons/fam/package-summary.html)
 
 The Action Manager is built on top of the Throttled Task Runner providing a convenient way to run many of AEM-specific activities.  Set up your own work using `defferedWithResolver` which is the simplest call to schedule work to run at some future point.  To run the same action(s) against query results you can do like the examples (below) and use `withQueryResults` instead.
 
