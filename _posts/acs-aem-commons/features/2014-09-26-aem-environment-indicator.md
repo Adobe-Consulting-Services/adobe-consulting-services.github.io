@@ -5,7 +5,7 @@ description: Too many tabs have you confused?
 date: 2014-09-26
 thumbnail: /images/aem-environment-indicator/thumbnail.png
 feature-tags: administration
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---

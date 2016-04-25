@@ -5,7 +5,7 @@ description: Effortlessly take advantage of Dispatcher’s TTL caching
 date: 2015-12-04
 thumbnail: /images/dispatcher-ttl/thumbnail.png
 feature-tags: backend-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.2.0
 
