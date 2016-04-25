@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.4.0 now available!
+description: (3.0.0 for AEM 6.2 support) .. Fast Action Manager, Path-based rendition conditions, Social image support for Named Image Transform, and more!
+date: 2016-04-25
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---

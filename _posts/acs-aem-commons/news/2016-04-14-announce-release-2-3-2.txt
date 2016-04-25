@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 2.3.2 now available!
-description: Bug fix release.
-date: 2016-04-14
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----
