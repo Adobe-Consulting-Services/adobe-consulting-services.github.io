@@ -42,4 +42,6 @@ This page identifies the versions of Adobe Experience Manager with which a parti
 | 2.3.0           |            |          |             | &#x2714;  | &#x2714;  |            |
 | 2.3.2           |            |          |             | &#x2714;  | &#x2714;  |            |
 | 2.4.0           |            |          |             | &#x2714;  | &#x2714;  |            |
+| 2.4.2           |            |          |             | &#x2714;  | &#x2714;  |            |
 | 3.0.0           |            |          |             |           |           | &#x2714;   |
+| 3.0.2           |            |          |             |           |           | &#x2714;   |

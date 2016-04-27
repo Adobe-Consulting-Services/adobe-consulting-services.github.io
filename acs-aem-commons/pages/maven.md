@@ -12,6 +12,8 @@ If you're using the Content Package Maven plugin, take these two easy steps:
 
 In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
 
+### For 6.0 and 6.1
+
 {% highlight xml %}
 <dependency>
     <groupId>com.adobe.acs</groupId>
@@ -21,7 +23,27 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
 </dependency>
 {% endhighlight %}
 
-This will include the ''full'' package. To include the ''minimal'' package, add
+### For 6.2
+
+{% highlight xml %}
+<dependency>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>acs-aem-commons-content</artifactId>
+    <version>{{ site.data.acs-aem-commons.62version }}</version>
+    <type>content-package</type>
+</dependency>
+{% endhighlight %}
+
+### Minimal Package
+
+ACS AEM Commons has two distributions:
+
+* The ''full'' package which includes all functionality.
+* The ''min'' package which excludes functionality requiring 3rd party dependencies.
+
+Currently, the only feature excluded from the ''min'' package is the [Twitter](/acs-aem-commons/features/twitter.html) integration.
+
+To include the ''min'' package, add
 
 {% highlight xml %}
 <classifier>min</classifier>
