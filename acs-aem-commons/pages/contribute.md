@@ -14,7 +14,7 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
         margin-right: auto;
     }
 </style>
-<script type="text/javascript" src="http://justinedelson.assetsadobe.com/etc/dam/viewers/s7viewers/html5/js/InteractiveVideoViewer.js"></script>
+<script type="text/javascript" src="//justinedelson.assetsadobe.com/etc/dam/viewers/s7viewers/html5/js/InteractiveVideoViewer.js"></script>
 <div id="s7interactivevideo_div"></div>
 <script type="text/javascript">
     (function() {
