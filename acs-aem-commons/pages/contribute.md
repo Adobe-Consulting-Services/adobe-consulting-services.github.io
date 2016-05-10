@@ -45,8 +45,8 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
             videoViewer = new s7viewers.InteractiveVideoViewer({
                 "containerId" : "s7interactivevideo_div",
                 "params" : { 
-                    "serverurl" : "http://justinedelson.assetsadobe.com/is/image",
-                    "contenturl" : "http://justinedelson.assetsadobe.com/", 
+                    "serverurl" : window.location.protocol + "//justinedelson.assetsadobe.com/is/image",
+                    "contenturl" : window.location.protocol + "//justinedelson.assetsadobe.com/", 
                     "config" : "/etc/dam/presets/viewer/Shoppable_Video_light",
                     "config2" : "/etc/dam/tenants/justinedelson/presets/analytics",
                     "videoserverurl": "https://gateway-na.assetsadobe.com/DMGateway/public/justinedelson",
