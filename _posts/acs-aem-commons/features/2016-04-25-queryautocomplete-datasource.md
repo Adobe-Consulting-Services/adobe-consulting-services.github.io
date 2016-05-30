@@ -7,7 +7,7 @@ thumbnail: /images/queryautocomplete/thumbnail.png
 feature-tags: component-dev
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
-initial-release: 2.4.0/3.0.0
+initial-release: 2.4.3/3.0.3
 ---
 
 ## Purpose
