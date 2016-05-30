@@ -149,7 +149,7 @@ Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache
 
 - `event.filter` JCR paths to be watched for changes. Expressed in LDAP syntax.
 
-#### Configuring Reference-based invalidations (HttpCacheInvalidationJobConsumer). Since 2.6.0/3.1.0
+#### Configuring Reference-based invalidations (HttpCacheInvalidationJobConsumer). Since v2.5.0/3.1.0
 
 Invalidate resources that reference the change resource.
 

@@ -7,7 +7,7 @@ thumbnail: /images/review-task-assets-mover/thumbnail.png
 feature-tags: authoring
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
-initial-release: 2.6.0/3.1.0
+initial-release: 2.5.0/3.1.0
 ---
 
 ## Purpose
