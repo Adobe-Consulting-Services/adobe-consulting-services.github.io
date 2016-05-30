@@ -5,7 +5,7 @@ description: Show and hide your nodes in Touch UI based on the current path.
 date: 2016-04-25
 thumbnail: /images/default/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.4.0/3.0.0
 ---
