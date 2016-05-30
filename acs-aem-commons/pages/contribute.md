@@ -14,7 +14,7 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
         margin-right: auto;
     }
 </style>
-<script type="text/javascript" src="http://justinedelson.assetsadobe.com/etc/dam/viewers/s7viewers/html5/js/InteractiveVideoViewer.js"></script>
+<script type="text/javascript" src="//justinedelson.assetsadobe.com/etc/dam/viewers/s7viewers/html5/js/InteractiveVideoViewer.js"></script>
 <div id="s7interactivevideo_div"></div>
 <script type="text/javascript">
     (function() {
@@ -45,8 +45,8 @@ Contributions to ACS AEM Commons are welcome from all parties, including Adobe, 
             videoViewer = new s7viewers.InteractiveVideoViewer({
                 "containerId" : "s7interactivevideo_div",
                 "params" : { 
-                    "serverurl" : "http://justinedelson.assetsadobe.com/is/image",
-                    "contenturl" : "http://justinedelson.assetsadobe.com/", 
+                    "serverurl" : window.location.protocol + "//justinedelson.assetsadobe.com/is/image",
+                    "contenturl" : window.location.protocol + "//justinedelson.assetsadobe.com/", 
                     "config" : "/etc/dam/presets/viewer/Shoppable_Video_light",
                     "config2" : "/etc/dam/tenants/justinedelson/presets/analytics",
                     "videoserverurl": "https://gateway-na.assetsadobe.com/DMGateway/public/justinedelson",

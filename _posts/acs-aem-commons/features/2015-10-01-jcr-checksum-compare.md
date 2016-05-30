@@ -173,6 +173,6 @@ diff hashes_pub1_sorted.txt hashes_pub2_sorted.txt
 
 Once you know which paths are different then you can go to each server you retrieved a diff against and use the `HTTP GET /bin/acs-commons/jcr-compare.dump.json` servlet to get a dump of the content. For example here is how you would request this for a particular node:
 
-`curl -u admin:admin http://localhost:4502/bin/acs-commons/jcr-compare.dump.json?path=/content/my-site/en/jcr:content`
+`curl -u admin:admin http://localhost:4502/bin/acs-commons/jcr-compare.dump.json?paths=/content/my-site/en/jcr:content`
 
 Then you can use a JSON diff tool to visualize the differences: [http://tlrobinson.net/projects/javascript-fun/jsondiff](http://tlrobinson.net/projects/javascript-fun/jsondiff)
