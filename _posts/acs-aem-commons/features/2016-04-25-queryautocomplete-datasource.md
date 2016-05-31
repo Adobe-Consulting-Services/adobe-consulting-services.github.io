@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Query Autocomplete Datasource
-description: Build your autocomplete list with an xpath query.
+description: Xpath driven autocomplete lists
 date: 2016-04-25
 thumbnail: /images/queryautocomplete/thumbnail.png
 feature-tags: component-dev

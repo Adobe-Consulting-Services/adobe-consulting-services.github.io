@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Draggable Lists
-description: Build a Draggable List widget for Touch UI.
+description: Drag to order your lists
 date: 2016-04-25
 thumbnail: /images/draggablelist/thumbnail.png
 feature-tags: component-dev
