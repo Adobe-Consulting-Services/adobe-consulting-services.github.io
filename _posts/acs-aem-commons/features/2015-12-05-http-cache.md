@@ -5,7 +5,7 @@ description: Cache the uncacheable!
 date: 2015-12-05
 thumbnail: /images/http-cache/thumbnail.png
 feature-tags: backend-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 2.2.0
 
@@ -148,6 +148,19 @@ Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache
 {% endhighlight %}
 
 - `event.filter` JCR paths to be watched for changes. Expressed in LDAP syntax.
+
+#### Configuring Reference-based invalidations (HttpCacheInvalidationJobConsumer). Since v2.5.0/3.1.0
+
+Invalidate resources that reference the change resource.
+
+Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache.invalidator.HttpCacheInvalidationJobConsumer.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig" httpcache.config.invalidation.references="{Boolean}true" />
+{% endhighlight %}
 
 ## How to extend
 
