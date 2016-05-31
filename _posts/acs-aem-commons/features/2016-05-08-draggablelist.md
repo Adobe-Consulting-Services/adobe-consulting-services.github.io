@@ -7,7 +7,7 @@ thumbnail: /images/draggablelist/thumbnail.png
 feature-tags: component-dev
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
-initial-release: 2.4.3/3.0.3
+initial-release: 2.5.0/3.1.0
 ---
 
 ## Purpose
@@ -85,4 +85,3 @@ The Draggable List component lets you create an ordered list of elements that ar
       </content>
    </jcr:root>
 {% endhighlight %}
-
