@@ -116,10 +116,10 @@ Examples for AEM 6.0/6.1 and AEM 6.2 are provided below.
 
 {% endhighlight %}
 
-![Review Task Creation Wizard](/acs-commons/images/review-task-asset-mover/image-1.png)
+![Review Task Creation Wizard](/acs-aem-commons/images/review-task-asset-mover/image-1.png)
 
-![Review Task UI](/acs-commons/images/review-task-asset-mover/image-2.png)
+![Review Task UI](/acs-aem-commons/images/review-task-asset-mover/image-2.png)
 
-![Assets with Move Assets](/acs-commons/images/review-task-asset-mover/image-3.png)
+![Assets with Move Assets](/acs-aem-commons/images/review-task-asset-mover/image-3.png)
 
-![Approved Assets](/acs-commons/images/review-task-asset-mover/image-4.png)
+![Approved Assets](/acs-aem-commons/images/review-task-asset-mover/image-4.png)
