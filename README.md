@@ -85,6 +85,8 @@ initial-release: 1.0.0
 
 Note: `feature-tags` will only effect Feature Filtering on ACS AEM Commons; it will be ignored on other sites.
 
+Thumbnail images for features should ba named `thumbnail.png` and be a native `400 width x 200 height pixels`.
+
 ## LESS/CSS
 
 LESS/CSS is maintained under /lib as LESS, and compiled via `./build_less` which compiles each project specific set of LESS files, and copies them to `/assets/<project-name>/css/styles.css`. **This mean no changes to LESS/CSS should be made directly under `/assets`.**
