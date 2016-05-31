@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Assets Geolocation Map
-description: See from where your assets hail!
+description: See from whence your assets hail!
 date: 2016-05-29
 thumbnail: /images/assets-geo-map/thumbnail.png
 feature-tags: authoring
