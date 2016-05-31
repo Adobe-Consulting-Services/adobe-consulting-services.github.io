@@ -18,7 +18,7 @@ Provide a way to rewrite the values in the `exif:GPSLatitude` and `exif:GPSLongi
 
 Provide a visual map in the Assets metadata editor view, powered by OpenStreeMap via the Leaflet (http://leafletjs.com/) JS library.
 
-![Geolocation Map](/acs-commons/images/assets-geo-map/image.png)
+![Geolocation Map](/acs-aem-commons/images/assets-geo-map/image.png)
 
 ## How to Use
 
