@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Review Task Asset Mover
 description: Review and automatically move assets!
 date: 2016-05-28
-thumbnail: /images/review-task-assets-mover/thumbnail.png
+thumbnail: /images/review-task-asset-mover/thumbnail.png
 feature-tags: authoring
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
