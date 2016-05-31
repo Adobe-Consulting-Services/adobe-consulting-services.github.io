@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 2.6.0 & 3.1.0 now available!
-description: Assets Geo Map, Touch UI widgets, Assets Review Task organizer, Reference-based HTTP Cache invalidation, and bug fixes!
-date: 2016-05-30
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----
