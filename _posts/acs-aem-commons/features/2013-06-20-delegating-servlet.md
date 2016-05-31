@@ -28,7 +28,7 @@ an "in code" overlay of the "Source resource type".
 
 To create a delegation mapping, create a new `sling:OsgiConfig` node for a factory configuration:
 
-    /apps/myapp/config.author/com.adobe.acs.util.impl.DelegatingServletFactoryImpl-SomeFriendlyName
+    /apps/myapp/config.author/com.adobe.acs.commons.util.impl.DelegatingServletFactoryImpl-SomeFriendlyName
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
