@@ -13,7 +13,7 @@ tags: beta
 
 * [AEM Chrome Plug-in Download](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)
 * [Sling Log Tracer Bundle Download](http://mirror.symnds.com/software/Apache//sling/org.apache.sling.tracer-1.0.0.jar)
-
+* [GitHub Project](https://github.com/Adobe-Consulting-Services/aem-chrome-plugin)
 
 ## Requirements
 
