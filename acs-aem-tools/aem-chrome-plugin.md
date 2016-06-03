@@ -12,7 +12,7 @@ tags: beta
 ## Quick Links
 
 * [AEM Chrome Plug-in Download](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)
-* [Sling Log Tracer Bundle Download](http://mirror.symnds.com/software/Apache//sling/org.apache.sling.tracer-1.0.0.jar)
+* [Sling Log Tracer Bundle Download](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.0/org.apache.sling.tracer-1.0.0.jar)
 * [GitHub Project](https://github.com/Adobe-Consulting-Services/aem-chrome-plugin)
 
 ## Requirements
@@ -35,7 +35,7 @@ AEM Chrome Plug-in will collect and expose per-request:
 
 ## How to use AEM Chrome Plug-in
 
-1. Download and install [Sling Log Tracer 1.0.0+](http://mirror.symnds.com/software/Apache//sling/org.apache.sling.tracer-1.0.0.jar) via [AEM 6.1 Felix Console](http://localhost:4502/system/console/bundles) and ensure it is started/active.
+1. Download and install [Sling Log Tracer 1.0.0+](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.0/org.apache.sling.tracer-1.0.0.jar) via [AEM 6.1 Felix Console](http://localhost:4502/system/console/bundles) and ensure it is started/active.
 2.  Enable [Sling Log Tracer via Felix ConfigMgr](http://localhost:4502/system/console/configMgr/configMgr/org.apache.sling.tracer.internal.LogTracer).
  * Make sure both "Enabled" and "Servlet Enabled" are checked.
  ![Sling Log Tracer OSGi Config](/acs-aem-tools/images/aem-chrome-plugin/sling-log-tracer-configmgr.png)
