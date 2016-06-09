@@ -11,7 +11,7 @@
         {% elsif feature.tags contains 'updated' %}<div class="updated"></div>{% endif %}
 		
         <img class="img-responsive"
-             src="/{{ project }}{{ feature.thumbnail }}"/></a>
+             src="/{{ project }}{{ feature.thumbnail }}" alt="{{ feature.title }}"/></a>
 
     <h3><a href="{{ feature.url }}">{{ feature.title }}</a></h3>
 
