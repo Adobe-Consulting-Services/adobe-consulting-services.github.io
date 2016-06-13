@@ -30,6 +30,8 @@ To the metadata field definition for exif:GPSLatitude and exif:GPSLongitude
 
 To add the map, create a new component of type `acs-commons/components/dam/asset-location-map` in the metadata schema editor.
 
+> IMPORTANT: Once making manual changes like this to a Metadata Schema you can no longer reliably edit the schema using the GUI.
+
 ### Example
 
 {% highlight xml %}
