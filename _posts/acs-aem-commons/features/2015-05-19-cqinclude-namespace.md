@@ -12,7 +12,7 @@ initial-release: 1.10.2
 
 ## Purpose
 
-The `cqinclude` "xtype" allows for modularization and re-use widgets and widget collections. This facilitates an elegant pattern of composition when creating AEM components; Larger components cant be composed of smaller components.
+The `cqinclude` "xtype" allows for modularization and re-use widgets and widget collections. This facilitates an elegant pattern of composition when creating AEM components where larger components can be composed of smaller components.
 
 The `cqinclude` xtype is simple in that it pulls the targets widget node structure into the `cqincluding` component for re-use.  This is problematic when a n AEM component is composed of multiple sub-components and each sub-component use the same property names.
 
