@@ -16,11 +16,26 @@ Automatically move approved and rejected assets from the Review Task view to con
 
 ## How to use
 
+Enable the Sling Event Handler that listens for completed tasks and processes them accordingly.
+
+Define a empty `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.dam.impl.ReviewTaskAssetMoverHandler.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+ />
+{% endhighlight %}
+
+
 Use a Sling Merge to add the following inputs to the Review Task creation wizard. The key elements are collection the paths in properties name `onApproveMoveTo` and `onRejectMoveTo`. Valid values are absolute paths to folders under `/content/dam`.
 
 Examples for AEM 6.0/6.1 and AEM 6.2 are provided below.
 
 ### AEM 6.0/6.1 Example
+
+`/apps/dam/gui/content/projects/addtask`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
