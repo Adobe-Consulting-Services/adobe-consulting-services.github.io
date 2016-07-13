@@ -15,7 +15,7 @@ AEM Chrome Plug-in has two main sets of functionality, each of which can be use 
 * **Log Tracer**: Which collects and displays request-based log data right in the browser.
   * [Learn more about the Log Tracer module](/acs-aem-tools/aem-chrome-plugin/log-tracer/)
 * **Adaptive Form**: Provides a number of tools for debugging and developing AEM Adaptive Forms on AEM 6.2
-  * [Learn more about the Adaptive Form module](/acs-aem-tools/aem-chrome-plugin/adaptive-forms/)
+  * [Learn more about the Adaptive Form module](/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
 
 ## Quick Links
 
