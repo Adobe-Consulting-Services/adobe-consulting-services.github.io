@@ -56,6 +56,7 @@ AEM Chrome Plug-in - Log Tracer collects and exposes per-request:
   * ![AEM Chrome Plug-in Logs](/acs-aem-tools/images/aem-chrome-plugin/logs.png)
 10. Pro tip: Use the inline "Mini-options" to quickly tune what data you're collecting based on what you're working on.
   * ![AEM Chrome Plug-in Mini-Options](/acs-aem-tools/images/aem-chrome-plugin/mini-options.png)
+11. Pro tip: You can download logs to your local machine so you can open then in your favorite log viewer
 
 ## How AEM Chrome Plug-in - Log Tracer Works
 
