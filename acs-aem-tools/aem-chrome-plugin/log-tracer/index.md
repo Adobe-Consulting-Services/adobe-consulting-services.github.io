@@ -6,7 +6,6 @@ date: 2016-06-01
 thumbnail: /images/aem-chome-plugin/thumbnail.png
 initial-release: 0.1.0
 categories: acs-aem-tools
-tags: beta
 ---
 
 [< Back to AEM Chrome Plug-in](/acs-aem-tools/aem-chrome-plugin)
