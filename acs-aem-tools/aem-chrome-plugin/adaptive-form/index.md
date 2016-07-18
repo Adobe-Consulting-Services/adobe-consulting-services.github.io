@@ -36,6 +36,16 @@ The Adaptive Form tab further organizes the information in the following tabs.
 
 Note: All tabs are not active in authoring and runtime modes. The tabs are active depending on the mode in which the form is opened.
 
+## How to use AEM Chrome Plug-in - Adaptive Form
+
+1. Install [AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) via the Chrome web store.
+2. Open up Chrome Dev Panels (Chrome > View > Developer > Dev Tools) and click on the AEM tab.
+  * Pro tip: You can drag to re-arrange Dev Tool tabs.
+   ![Chrome Dev Tools Bar](acs-aem-tools/images/aem-chrome-plugin/adaptiveFormImages/AEM-panel.PNG)
+3. Navigate to Adaptive Form Tab.
+   ![Adaptive Form Panel](acs-aem-tools/images/aem-chrome-plugin/adaptiveFormImages/adaptive-form-tab.PNG)
+4. Use AEM Chrome Plug-in!
+
 ## Adaptive Form Author mode
 
 When you open an adaptive form in authoring mode, only the Performance, Keyword Errors, and BindRef Errors tabs are active. Active tabs in authoring mode include a Reload button. If you make changes to a form, you can click Reload to view the current state of the updated form in the dev tools window.
