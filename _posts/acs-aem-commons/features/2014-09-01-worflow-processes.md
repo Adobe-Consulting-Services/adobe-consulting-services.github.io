@@ -4,7 +4,7 @@ title: Workflow Processes
 description: Helpful Workflow processes
 date: 2014-09-01
 thumbnail: /images/workflow-processes/thumbnail.png
-tags: acs-aem-commons-features authoring administration
+tags: acs-aem-commons-features authoring administration updated
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
@@ -15,7 +15,7 @@ Based on the payload the email parameters are pre-populate with JCR properties:
 
 * If payload is a **DAM asset** then the param map is populated with `[dam:Asset]/jcr:content/metadata` node properties
 * If the payload is **cq:Page** then the param map is populated with `[cq:Page]/jcr:content` properties
-* The param map keys are the Node's property names and the values the `String` representations of the property value. For `String[]` properties the value is one comma separated String. 
+* The param map keys are the Node's property names and the values the `String` representations of the property value. For `String[]` properties the value is one comma separated String.
   * Currently `String[]` are checked for multiple properties.
 
 Include additional parameters added to E-mail params
@@ -61,3 +61,7 @@ Mark content as replicated by the Workflow Initiator. This Workflow Process is e
 A new Workflow Process step that executed Replicated By Workflow Initiator can be added to the end of this model, and content will be marked as being Activated/Deactived by the user that initiated the replication request.
 
 ![image](/acs-aem-commons/images/workflow-processes/replicated-by-workflow-initiator-config.png)
+
+## Content Traversing Workflow - Synthetic Workflow Wrapper
+
+## Content Traversing Workflow - Replication

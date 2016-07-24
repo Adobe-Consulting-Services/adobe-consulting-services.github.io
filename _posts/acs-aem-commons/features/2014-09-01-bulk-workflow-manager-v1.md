@@ -1,14 +1,14 @@
 ---
 layout: acs-aem-commons_feature
-title: Bulk Workflow Manager
+title: Bulk Workflow Manager v1
 description: Finally execute Workflow at scale!
 date: 2014-09-01
 thumbnail: /images/bulk-workflow-manager/thumbnail.png
-feature-tags: administration content-migration
-tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
+
+> [Bulk Workflow Manager](/acs-aem-commons/features/bulk-workflow-manager.html) v2 (available in 2.6.0 / 3.2.0) now replaces the original Bulk Workflow Manager implementation.
 
 # Purpose
 

@@ -1,8 +1,8 @@
 ---
 layout: acs-aem-commons_default
-title: Release 2.5.0 & 3.1.0 now available!
-description: New Features include Asset Geolocation Map, Review Task Asset Mover, Touch UI Search-based Path Browser widget, Touch UI Query-based Autocomplete List widget, Touch UI Draggable List widget, and InboxNotificationSender API. Enhancements include Limit AEM Environment Indicator by WCMMode and HTTP Cache - Reference based invalidation. There are bug fixes too!
-date: 2016-05-30
+title: Release 2.6.0 & 3.2.0 now available!
+description: New Features include Bulk Workflow Manager v2, Asset Color Palettes and Content Traversing Workflows. Enhancements for Fast Action Manager, Synthetic Workflow Granite WF support, HTTP Cache include support, Review Task Mover collision support and E-mail API attachments!
+date: 2016-07-24
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
 tags: acs-aem-commons-news

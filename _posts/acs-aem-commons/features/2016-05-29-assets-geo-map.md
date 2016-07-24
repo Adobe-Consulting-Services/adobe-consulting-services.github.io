@@ -5,7 +5,7 @@ description: See from whence your assets hail!
 date: 2016-05-29
 thumbnail: /images/assets-geo-map/thumbnail.png
 feature-tags: authoring
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 3.1.0
 ---
