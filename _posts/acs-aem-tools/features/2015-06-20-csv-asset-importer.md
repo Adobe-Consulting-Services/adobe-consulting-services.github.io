@@ -76,11 +76,14 @@ Note that there are 2 required Column definitions
 
 * `absTargetPath` this is the absolute path in the JCR where the Asset will be imported to
 * `relSrcPath` this is the relative (from a provided root path) path to the file to ingest for the asset. This file must be available from the AEM instance executing the importer.
+	* Since v0.0.28 this column is optional to allow for Property Update executions.
 
 
 ### Multi-values
 
 If a row is marked as multi via `propertyName {{"{{ Type : multi "}}}}`, multi-values are delimited by default via `|`. The multi-value delimiter is configurable via the Web UI.
+
+* Since v0.0.28 CSV Asset Importer supports changing property types from Single to Multi (and vice versa). Note that the data in the CSV will replace any existing data at the defined property (This is not a Patch operation)
 
 ### Empty Values
 

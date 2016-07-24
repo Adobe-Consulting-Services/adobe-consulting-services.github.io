@@ -6,7 +6,7 @@ date: 2013-12-06
 thumbnail: /images/aem-fiddle/thumbnail.png
 initial-release: 0.0.2
 categories: acs-aem-tools features
-tags: acs-aem-tools-features
+tags: acs-aem-tools-features updated
 ---
 
 The intent of AEM Fiddle is to provide an accessible, developer friendly environment for experimentation, POCs and other one-off tasks. AEM Fiddle is **not** intended to be used as a full fledged application development environment.
@@ -70,4 +70,4 @@ Note: Switching to HTML src view often makes reading the error messages easier.
 ## Extras
 
 * The name AEM Fiddle and term "fiddle" were inspired by the popular [JSFiddle.net](http://jsfiddle.net)
-* "My Fiddles" are stored under the logged in user's profile node. Ex. `/home/users/david/profile/fiddles/demo-fiddle`
+* "My Fiddles" are stored under the logged in user's profile node. Ex. `/home/users/admin/profile/fiddles/demo-fiddle`
