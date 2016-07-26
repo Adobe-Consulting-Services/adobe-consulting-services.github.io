@@ -117,4 +117,4 @@ Rows 2..N each represent an Asset to import.
 
 ----------
 
-> Credits: Thanks to Elise H. for helping define and refine the scope and behavior of this tool.
+*Credits: Thanks to Elise H. for helping define and refine the scope and behavior of this tool.*
