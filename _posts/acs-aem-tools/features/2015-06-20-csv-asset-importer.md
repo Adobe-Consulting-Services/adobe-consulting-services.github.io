@@ -17,8 +17,7 @@ To get to the AEM Tools console from the Touch UI, from the left rail navigation
 
 ## Overview
 
-CSV Asset Importer is a tool that accepts a CSV file whose rows represent an Asset to importer.
-
+CSV Asset Importer is a tool that accepts a CSV file whose rows represent an Asset to import.
 
 ## Important Considerations
 
@@ -32,19 +31,41 @@ Before importing...
 
 ## How to Use
 
-Create the Asset metadata to import in Excel and export as CSV
+[> Download an example CSV file](/assets/acs-aem-tools/store/import.csv)
+
+CSV Asset Importer has 2 import strategies:
+
+### Full
+
+![CSV Asset Importer - Full Import](/acs-aem-tools/images/csv-asset-importer/form-full-import.png)
+
+When selecting `Full` import strategy, the CSV Asset Importer will complete remove any matching existing assets (via the optional `Asset Uniqueness Column` or mandatory `absTargetPath`).
+
+### Delta
+
+![CSV Asset Importer - Delta Import](/acs-aem-tools/images/csv-asset-importer/form-delta-import.png)
+
+When selecting `Delta` import strategy, the CSV Asset Importer will attempt to update (and/or re-adjust) any existing asset before creating a net net asset. For example, if an existing asset is found w/ a `Asset Uniqueness Column name` value, it will attempt to move the existing asset to the `absTargetPath` and update the metadata rather than deleting the existing Asset with the matching `Asset Uniqueness Column name` and re-creating it from scratch.
+
+#### Update Binary Yes/No
+
+When selecting the `Delta` import strategy you can select to only update Metadata by setting `Update Binary` to `No`. This prevent the `original` rendition from being touched. From v2.6.0/3.2.0+, the `relSrcPath` is not required for this import style, allowing for a wholly **Update Properties** import method.
+
+Once an import strategy is selected, an import CSV file must be created:
+
+[Download an example CSV file](/assets/acs-aem-tools/store/import.csv)
 
 ![CSV Asset Importer - Excel](/acs-aem-tools/images/csv-asset-importer/excel.png)
 
- Ensure that the files to import are available from the AEM instance executing the import are `<Absolute File Dump Location>/<relSrcPath>`. The AEM process must have read access to these files.
+Unless you are doing a `Delta` import without Binary updates, ensure that the files to import are available from the AEM instance executing the import are `<Absolute File Dump Location>/<relSrcPath>`. The AEM process must have read access to these files.
 
-![CSV Asset Importer - Web UI](/acs-aem-tools/images/csv-asset-importer/web-ui.png)
-
-Execute the importer; Please see the Important Considerations section above! This may take some time to process. A Logger can be setup for `com.adobe.acs.tools.csv_asset_importer` to monitor progress.
+Execute the importer; Please see the Important Considerations section above! This may take some time to process. An `INFO` logger can be setup for `com.adobe.acs.tools.csv_asset_importer` to monitor progress.
 
 ![CSV Asset Importer - Web UI Results](/acs-aem-tools/images/csv-asset-importer/results-web-ui.png)
 
 When the import is complete, review the Logs for errors. Wait for any Workflow to full complete, then verify the results.
+
+* It is often best to ensure any Workflow triggered by asset import- usually DAM Asset Update or Metadata WriteBack is either marked as Transient (6.1+) or disabled, and DAM Asset Update Workflow is processed in a controlled manner later (ex. via ACS Commons Bulk Workflow Manager).
 
 ![CSV Asset Importer - AEM DAM Admin Results](/acs-aem-tools/images/csv-asset-importer/results-dam-admin.png)
 
@@ -78,17 +99,20 @@ Note that there are 2 required Column definitions
 * `relSrcPath` this is the relative (from a provided root path) path to the file to ingest for the asset. This file must be available from the AEM instance executing the importer.
 	* Since v0.0.28 this column is optional to allow for Property Update executions.
 
-
 ### Multi-values
 
 If a row is marked as multi via `propertyName {{"{{ Type : multi "}}}}`, multi-values are delimited by default via `|`. The multi-value delimiter is configurable via the Web UI.
 
 * Since v0.0.28 CSV Asset Importer supports changing property types from Single to Multi (and vice versa). Note that the data in the CSV will replace any existing data at the defined property (This is not a Patch operation)
 
+* Since v0.0.28 CSV Asset Importer handles changing existing Multi properties to single value, and vice-versa. Any prior values will be removed (this is not a Patch operation, rather a remove and add).
+
 ### Empty Values
 
-If a column has an empty value, that property will be not exist on the Asset's metadata node.
+If a column has an empty value, that property will be not exist on the Asset's metadata node. Existing values at the property will be removed.
 
 ### Asset Definition Rows
 
 Rows 2..N each represent an Asset to import.
+
+> Credits: Thanks to Elise H. for helping define and refine the scope and behavior of this tool.
