@@ -30,7 +30,7 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
 
 ## OSGi Property Configurations
 
-`/apps/mysite/config/com.adobe.acs.commons.wcm.impl.SiteMapServlet.xml`
+`/apps/mysite/config/com.adobe.acs.commons.wcm.impl.SiteMapServlet-sample.xml`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
