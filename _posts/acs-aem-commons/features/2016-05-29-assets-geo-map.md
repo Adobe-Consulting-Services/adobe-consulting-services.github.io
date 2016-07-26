@@ -5,7 +5,7 @@ description: See from whence your assets hail!
 date: 2016-05-29
 thumbnail: /images/assets-geo-map/thumbnail.png
 feature-tags: authoring
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 3.1.0
 ---
@@ -20,7 +20,7 @@ Provide a visual map in the Assets metadata editor view, powered by OpenStreeMap
 
 ![Geolocation Map](/acs-aem-commons/images/assets-geo-map/image.png)
 
-## How to Use
+## How to Use - Location Properties
 
 To configure the display JavaScript bit, you need to add
 
@@ -28,11 +28,21 @@ To configure the display JavaScript bit, you need to add
 
 To the metadata field definition for exif:GPSLatitude and exif:GPSLongitude
 
+## How to Use - Map
+
+### Since 3.2.0
+
+To add the map, create a new textfield component in the Metadata Schema Editor and specify a "Map to property" of `./jcr:content/metadata/location` and ensure the field is disabled. This field will be automatically replaced with the map component when the asset editor is loaded.
+
+![Asset Editor Configuration](/acs-aem-commons/images/assets-geo-map/schema-editor.png)
+
+### Legacy (pre-3.2.0 approach)
+
 To add the map, create a new component of type `acs-commons/components/dam/asset-location-map` in the metadata schema editor.
 
 > IMPORTANT: Once making manual changes like this to a Metadata Schema you can no longer reliably edit the schema using the GUI.
 
-### Example
+#### Example
 
 {% highlight xml %}
 <col2
