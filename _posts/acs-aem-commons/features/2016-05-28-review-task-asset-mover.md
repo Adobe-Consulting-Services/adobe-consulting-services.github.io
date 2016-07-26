@@ -16,6 +16,9 @@ Automatically move approved and rejected assets from the Review Task view to con
 
 ## How to use
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xtGPc84ju2o" frameborder="0" allowfullscreen></iframe>
+
+
 Enable the Sling Event Handler that listens for completed tasks and processes them accordingly.
 
 ![Review Task Mover OSGi Configuration](/acs-aem-commons/images/review-task-asset-mover/osgi-config.png)
