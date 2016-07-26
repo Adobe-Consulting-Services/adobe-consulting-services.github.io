@@ -6,7 +6,7 @@ date: 2015-12-14
 thumbnail: /images/csv-resource-type-updater/thumbnail.png
 initial-release: 0.0.24
 categories: acs-aem-tools
-tags: acs-aem-tools-features new
+tags: acs-aem-tools-features
 ---
 
 ## Getting Started
