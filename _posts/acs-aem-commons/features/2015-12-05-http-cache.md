@@ -37,6 +37,7 @@ HttpCache provides an effective way to improve performance of an application by 
 	* Sample JCR change event handler based invalidation supplied.
 	In-memory cache store supports TTL.
 * Provides powerful instrumentation based on JMX MBean.
+* Since v2.6.0/3.2.0 HTTP Cache now supports caching that the Sling Include level (as well as the original Sling Request level)
 
 ## How to configure
 
@@ -73,7 +74,7 @@ For each configuration, define a `sling:OsgiConfig`
 * `cacheConfigExtension.target` Service pid of the `CacheConfigExtension` custom implementation. Expressed in LDAP syntax. This could also be a combination of `service.factoryPid` and `config.name`.
 * `cacheKeyFactory.target` Service pid of the `CacheKeyFactory` custom implementation. Expressed in LDAP syntax. This could also be a combination of `service.factoryPid` and `config.name`.
 * `httpcache.config.cache-handling-rules.pid` Service pid of cache handling rules applied for this config. Note that this is cache config specific rule while the global set of rules set at cache engine are applied to all cache configs.
-
+* `httpcache.config.filter-scope` specifies if the HTTP Cache config should be evaluated at the Sling Request or Include level. Valid values are `REQUEST` or `INCLUDE`. Available since v2.6.0/3.2.0 - prior all caching occurred at the REQUEST level which is the default. 
 
 #### Configuring cache config extension (GroupHttpCacheConfigExtension)
 
