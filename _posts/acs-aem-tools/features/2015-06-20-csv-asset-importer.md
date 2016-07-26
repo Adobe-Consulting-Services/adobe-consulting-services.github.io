@@ -115,4 +115,6 @@ If a column has an empty value, that property will be not exist on the Asset's m
 
 Rows 2..N each represent an Asset to import.
 
+----------
+
 > Credits: Thanks to Elise H. for helping define and refine the scope and behavior of this tool.
