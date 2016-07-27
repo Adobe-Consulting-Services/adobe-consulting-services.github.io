@@ -16,7 +16,14 @@ initial-release: 2.6.2/3.2.2
 
 Execute Workflow in bulk across a variety of resources is difficult in AEM. OOTB Workflow initiation is on a per resource basis, via Workflow Packages or folders of limited size (15).
 
-The ACS AEM Commons Bulk Workflow Manager allows resources to be selected via a query (QueryBuilder, xPath, JCR-SQL, JCR-SQl2) or list, and put under managed Workflow execution ensuring only a fixed number of items are queued or under workflow at a time.
+The ACS AEM Commons Bulk Workflow Manager allows resources to be selected via a query
+
+* QueryBuilder
+* xPath
+* JCR-SQL
+* JCR-SQL
+
+or List of paths, and put under managed Workflow execution ensuring only a fixed number of items are queued or under workflow at a time.
 
 Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Workflow](/acs-aem-commons/features/synthetic-workflow.html) or [Synthetic Workflow](/acs-aem-commons/features/synthetic-workflow.html) via [Fast Action Manager](/acs-aem-commons/features/fast-action-manager.html).
 
@@ -37,7 +44,7 @@ Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Wo
 ![image](/acs-aem-commons/images/bulk-workflow-manager/step-5.png)
 * To start another Bulk Workflow run, create a new `Bulk Workflow Manager` page.
 
-## Runner Types
+## Runner Types (v2.6.2/3.2.2)
 
 ### AEM OOTB Workflow
 
