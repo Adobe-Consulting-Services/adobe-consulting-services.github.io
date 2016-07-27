@@ -16,6 +16,10 @@ AEM Chrome Plug-in has two main sets of functionality, each of which can be use 
 * **Adaptive Form**: Provides a number of tools for debugging and developing AEM Adaptive Forms on AEM 6.2
   * [Learn more about the Adaptive Form module](/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
 
+## Installation and Configuration
+
+<iframe width="960" height="720" src="https://www.youtube.com/embed/ygxwrSpvaYc" frameborder="0" allowfullscreen></iframe>
+
 ## Quick Links
 
 * [AEM Chrome Plug-in Download](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)
