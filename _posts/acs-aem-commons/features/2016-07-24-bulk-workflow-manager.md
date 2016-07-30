@@ -7,7 +7,7 @@ thumbnail: /images/bulk-workflow-manager/thumbnail.png
 feature-tags: administration content-migration
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
-initial-release: 2.6.2/3.2.2
+initial-release: 2.6.4/3.2.4
 ---
 
 > This version of Bulk Workflow Manager replaces the previous [Bulk Workflow Manager v1](/acs-aem-commons/features/bulk-workflow-manager-v1.html).
