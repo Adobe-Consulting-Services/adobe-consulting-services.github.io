@@ -44,7 +44,7 @@ Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Wo
 ![image](/acs-aem-commons/images/bulk-workflow-manager/step-5.png)
 * To start another Bulk Workflow run, create a new `Bulk Workflow Manager` page.
 
-## Runner Types (v2.6.2/3.2.2)
+## Runner Types (v2.6.4/3.2.4)
 
 ### AEM OOTB Workflow
 
