@@ -6,7 +6,7 @@ date: 2014-03-23
 thumbnail: /images/query-editor/thumbnail.png
 initial-release: 0.0.4
 categories: acs-aem-tools features
-tags: acs-aem-tools-features updated
+tags: acs-aem-tools-features
 ---
 
 QueryEditor is a WebUI that allows QueryBuilder queries to be written, executed and debugged in real time.  

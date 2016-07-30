@@ -5,7 +5,7 @@ description: Include Oak Indexes in your app package
 date: 2015-10-02
 thumbnail: /images/ensure-oak-index/thumbnail.png
 feature-tags: backend-dev
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 2.1.0
 
@@ -51,9 +51,24 @@ Once all the Ensure Definitions are defined, create a `sling:OsgiConfig` factory
     />
 {% endhighlight %}     
 
+### Provide Additional Ignore Properties (Since v2.6.4/3.2.4)
+
+If additional properties on the root ensure definition/oak index node need to be ignored, you can specify them via OSGi configuration. These additional properties will be joined w the mandatory ignore properties list and will NOT be considered when 1) evaluating if there is a change between the ensure definition and oak index 2) when removing properties from the oak index during and update operation.
+
+Create a `sling:OsgiConfig` at `/apps/mysite/config/com.adobe.acs.commons.oak.impl.EnsureOakIndexManagerImpl.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    properties.ignore="[myDescription,ignoreMe]"
+    />
+{% endhighlight %}     
+
 ### Deployment
 
-Now, deploy the package containing the Ensure Definitions and the OSGi Configuration. Set logging to *INFO* on `com.adobe.acs.commons.oak.impl.EnsureOakIndex` to see what Oak Indexes are managed.
+Now, deploy the package containing the Ensure Definitions and the OSGi Configuration. Set logging to *INFO* on `com.adobe.acs.commons.oak.impl` to see what Oak Indexes are managed.
 
 ## Ensure Definitions
 
@@ -113,7 +128,7 @@ The default behavior for updating Oak Index properties is to perform an in place
 
 ## Example Ensure Definition
 
-* /apps/mysite/oak-index/uuid
+* `/apps/mysite/oak-index/uuid`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
