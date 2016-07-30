@@ -10,7 +10,7 @@ categories: acs-aem-commons features
 initial-release: 2.6.4/3.2.4
 ---
 
-> This version of Bulk Workflow Manager replaces the previous [Bulk Workflow Manager v1](/acs-aem-commons/features/bulk-workflow-manager-v1.html).
+> This version of Bulk Workflow Manager replaces the previous Bulk Workflow Manager implementation.
 
 # Purpose
 
