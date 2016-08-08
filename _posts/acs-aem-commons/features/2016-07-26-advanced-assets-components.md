@@ -16,6 +16,10 @@ initial-release: 3.2.0
 
 Images and documented edited with Adobe creative applications contain a variety of interesting metadata automatically  inserted into them using the XMP metadata standard. AEM provides components for viewing and editing simple text and numeric values but in some cases, the metadata is defined in a structure and so the primitive fields can't display them properly.
 
+## Usage - General
+
+In order to take advantage of the automatic activation of any of these components, it is necessary to activate the OSGi component `com.adobe.acs.commons.dam.impl.CustomComponentActivatorListServlet`. To do this, create a new node of type `sling:OsgiConfig` in any valid `config` folder in the repository.
+
 ## History
 
 The History component displays the content of the `xmpMM:History` structure showing the edit history of an asset.
