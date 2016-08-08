@@ -18,7 +18,7 @@ Images and documented edited with Adobe creative applications contain a variety 
 
 ## Usage - General
 
-In order to take advantage of the automatic activation of any of these components, it is necessary to activate the OSGi component `com.adobe.acs.commons.dam.impl.CustomComponentActivatorListServlet`. To do this, create a new node of type `sling:OsgiConfig` in any valid `config` folder in the repository.
+In order to take advantage of the automatic activation of any of these components, it is necessary to activate an OSGi component which handles the activation. To do this, create a new node named `com.adobe.acs.commons.dam.impl.CustomComponentActivatorListServlet` of type `sling:OsgiConfig` in any valid `config` folder in the repository.
 
 ## History
 
