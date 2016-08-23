@@ -16,6 +16,8 @@ categories: acs-aem-tools
 * [AEM Chrome Plug-in Download](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)
 * [Sling Log Tracer Bundle Download](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.0/org.apache.sling.tracer-1.0.0.jar)
 
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/6xedlK-ckuo" frameborder="0" allowfullscreen></iframe>
+
 ## Requirements
 
 * Requires AEM 6.1+

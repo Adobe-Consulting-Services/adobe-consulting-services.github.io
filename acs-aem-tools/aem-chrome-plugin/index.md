@@ -11,14 +11,14 @@ AEM Chrome Plug-in is a open-source, must-have AEM developer extension for the G
 
 AEM Chrome Plug-in has two main sets of functionality, each of which can be use independently of the other. The functionality is separated into 2 top-level tabs in the plug-in.
 
-* **Log Tracer**: Which collects and displays request-based log data right in the browser.
-  * [Learn more about the Log Tracer module](/acs-aem-tools/aem-chrome-plugin/log-tracer/)
-* **Adaptive Form**: Provides a number of tools for debugging and developing AEM Adaptive Forms on AEM 6.2
-  * [Learn more about the Adaptive Form module](/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
+* **Log Tracer**: Collect and display request-based log data right in the browser.
+  * ***[Learn more about the Log Tracer module](/acs-aem-tools/aem-chrome-plugin/log-tracer/)***
+* **Adaptive Form**: Tooling for debugging and developing AEM Adaptive Forms on AEM 6.2
+  * ***[Learn more about the Adaptive Form module](/acs-aem-tools/aem-chrome-plugin/adaptive-form/)***
 
 ## Installation and Configuration
 
-<iframe width="960" height="720" src="https://www.youtube.com/embed/ygxwrSpvaYc" frameborder="0" allowfullscreen></iframe>
+<iframe width="960" height="720" src="https://www.youtube.com/embed/33R_460BfAE" frameborder="0" allowfullscreen></iframe>
 
 ## Quick Links
 
