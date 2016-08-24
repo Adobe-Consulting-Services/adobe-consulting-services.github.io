@@ -172,9 +172,9 @@ greyscale:greyscale=true
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>resize:width=200</code></li>
-	<li><code>resize:height=300</code></li>
-	<li><code>resize:width=400&amp;height=400&amp;upscale=true</code><br>
+	<li><code>bounded-resize:width=200</code></li>
+	<li><code>bounded-resize:height=300</code></li>
+	<li><code>bounded-resize:width=400&amp;height=400&amp;upscale=true</code><br>
 </li></ul></div>
 
 <div class="section">
