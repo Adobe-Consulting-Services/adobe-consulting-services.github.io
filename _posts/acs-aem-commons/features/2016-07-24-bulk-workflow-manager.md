@@ -5,7 +5,7 @@ description: Finally execute Workflow at scale!
 date: 2016-07-24
 thumbnail: /images/bulk-workflow-manager/thumbnail.png
 feature-tags: administration content-migration
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.6.4/3.2.4
 ---
@@ -18,12 +18,12 @@ Execute Workflow in bulk across a variety of resources is difficult in AEM. OOTB
 
 The ACS AEM Commons Bulk Workflow Manager allows resources to be selected via a query
 
-* QueryBuilder
-* xPath
-* JCR-SQL
-* JCR-SQL
+* `QueryBuilder`
+* `xPath`
+* `JCR-SQL`
+* `JCR-SQL`
 
-or List of paths, and put under managed Workflow execution ensuring only a fixed number of items are queued or under workflow at a time.
+or `List` of paths, and put under managed Workflow execution ensuring only a fixed number of items are queued or under workflow at a time.
 
 Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Workflow](/acs-aem-commons/features/synthetic-workflow.html) or [Synthetic Workflow](/acs-aem-commons/features/synthetic-workflow.html) via [Fast Action Manager](/acs-aem-commons/features/fast-action-manager.html).
 
@@ -40,7 +40,7 @@ Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Wo
 ![image](/acs-aem-commons/images/bulk-workflow-manager/step-3.png)
 * Stopped Bulk Workflow processes can be resumed. Note; Bulk Workflow Manager processing will stop/restart automatically during re-deploys of the ACS AEM Commons bundle.
 ![image](/acs-aem-commons/images/bulk-workflow-manager/step-4.png)
-* When the Bulk Workflow exection is complete, the page will display the final results.
+* When the Bulk Workflow execution is complete, the page will display the final results.
 ![image](/acs-aem-commons/images/bulk-workflow-manager/step-5.png)
 * To start another Bulk Workflow run, create a new `Bulk Workflow Manager` page.
 
@@ -49,6 +49,8 @@ Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Wo
 ### AEM OOTB Workflow
 
 Select AEM OOTB Workflow to execute the workflow using the AEM Workflow Engine. This provides all the usual functionality AEM Workflow provides. This uses the Sling Job Engine and large sets 10,000+ payloads, this can be slower as as Bulk Workflow Manager throttles/manages the # of workflows being executed at once.
+
+> Bulk Workflow Manager does NOT support transient workflow
 
 ### Synthetic Workflow
 

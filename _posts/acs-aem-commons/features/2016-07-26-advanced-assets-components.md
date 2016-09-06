@@ -5,7 +5,7 @@ description: Dig deeper into your creative assets' metadata
 date: 2016-07-25
 thumbnail: /images/advanced-assets-components/thumbnail.png
 feature-tags: authoring
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 3.2.0
 ---

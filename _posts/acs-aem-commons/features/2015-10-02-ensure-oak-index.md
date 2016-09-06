@@ -5,7 +5,7 @@ description: Include Oak Indexes in your app package
 date: 2015-10-02
 thumbnail: /images/ensure-oak-index/thumbnail.png
 feature-tags: backend-dev
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.1.0
 

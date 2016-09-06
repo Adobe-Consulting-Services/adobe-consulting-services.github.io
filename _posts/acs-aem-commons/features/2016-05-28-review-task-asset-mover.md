@@ -5,7 +5,7 @@ description: Automatically move reviewed assets!
 date: 2016-05-28
 thumbnail: /images/review-task-asset-mover/thumbnail.png
 feature-tags: authoring
-tags: acs-aem-commons-features updated
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.5.0/3.1.0
 ---
