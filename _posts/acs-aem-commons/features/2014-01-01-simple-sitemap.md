@@ -65,3 +65,8 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
 * *damassets.property* The JCR property name which will contain DAM folders to include in the sitemap.
 
 * *damassets.types* MIME types allowed for DAM assets included in the sitemap.
+
+#### Since v2.7.0/3.3.0
+
+* *exclude.property* The `[cq:Page]/jcr:content` property name which if evaluates to true, excludes the Page from the site map. Defaults to backwards compatible property name `hideInNav`, allowing the Hide In Navigation checkbox to control if the page is excluded from Site map.
+  * To disregard all properties, set to a non-existent property: `exclude.property=null` as this will always evaluate to `false`
