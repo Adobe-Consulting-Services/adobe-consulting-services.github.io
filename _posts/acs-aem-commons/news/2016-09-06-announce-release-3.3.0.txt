@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_default
 title: Release 2.7.0 and 3.3.0 now available!
-description: 3.3.0 includes Watson speed to text integration; 2.7.0 and 3.3.0 include enhancements to Sitemap.
+description: Critial PagesReferenceProvider bug fix; 3.3.0 includes Watson speed to text integration; 2.7.0 and 3.3.0 include enhancements to Sitemap.
 date: 2016-09-06
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
