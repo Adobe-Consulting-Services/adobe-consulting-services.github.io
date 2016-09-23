@@ -16,7 +16,7 @@ Automatically move approved and rejected assets from the Review Task view to con
 
 ## How to use
 
-<iframe  width="960" height="720" src="https://www.youtube.com/embed/xtGPc84ju2o" frameborder="0" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/xtGPc84ju2o" frameborder="0" allowfullscreen></iframe>
 
 
 Enable the Sling Event Handler that listens for completed tasks and processes them accordingly.

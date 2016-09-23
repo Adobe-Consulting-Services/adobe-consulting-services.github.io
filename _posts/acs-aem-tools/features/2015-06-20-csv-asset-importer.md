@@ -13,7 +13,9 @@ tags: acs-aem-tools-features updated
 
 Install the ACS AEM Tools package via the AEM Package Manager and then open CSV Asset Importer from the AEM Tools console, or directly at [/etc/acs-tools/csv-asset-importer.html](http://localhost:4502/etc/acs-tools/csv-asset-importer.html)
 
-To get to the AEM Tools console from the Touch UI, from the left rail navigation, select Tools > ACS AEM Tools > CSV Asset Importer.
+To get to the AEM Tools console from the Touch UI, select Tools > ACS AEM Tools > CSV Asset Importer.
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/23m8xA5xHH0" frameborder="0" allowfullscreen></iframe>
 
 ## Overview
 
