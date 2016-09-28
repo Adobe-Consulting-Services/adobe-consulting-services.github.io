@@ -161,8 +161,8 @@ Basic functionality exists for downloading the raw JSON Dump for the comparison 
 
 To use the tool, do the following:
 
-1. `HTTP GET /bin/acs-commons/jcr-compare.hashes.txt?path=/content/my-site` where `/content/my-site` should be replaced with the path you want to generate hashes for. For example:
-`curl -u admin:admin http://localhost:4502/bin/acs-commons/jcr-compare.hashes.txt?path=/content/my-site > hashes_pub1.txt`
+1. `HTTP GET /bin/acs-commons/jcr-compare.hashes.txt?paths=/content/my-site` where `/content/my-site` should be replaced with the path you want to generate hashes for. For example:
+`curl -u admin:admin http://localhost:4502/bin/acs-commons/jcr-compare.hashes.txt?paths=/content/my-site > hashes_pub1.txt`
 2. Save the output to a file and sort the results using the sort command on a linux machine then diff them. For example:
 
 {% highlight xml %}
