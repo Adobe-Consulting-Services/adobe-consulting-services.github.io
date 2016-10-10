@@ -25,7 +25,7 @@ This must be done in both author and publish.
 
 Centrally manage and distribute JavaScript across all your web properties.
 
-> This component is deprecated as of ACS AEM Commons 2.0.0. Please use the Cloud Service provided with AEM 6.0 and higher.
+> This component is deprecated as of ACS AEM Commons 2.0.0. Please use the [Cloud Service](https://docs.adobe.com/docs/en/aem/6-2/administer/integration/marketing-cloud/dtm.html) provided with AEM 6.0 and higher.
 
 ![image]({{ site.data.acs-aem-commons.baseurl }}/images/cloud-services/dtm.png)
 

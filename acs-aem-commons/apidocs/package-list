@@ -12,6 +12,7 @@ com.adobe.acs.commons.forms.components
 com.adobe.acs.commons.forms.helpers
 com.adobe.acs.commons.functions
 com.adobe.acs.commons.genericlists
+com.adobe.acs.commons.http
 com.adobe.acs.commons.http.injectors
 com.adobe.acs.commons.httpcache
 com.adobe.acs.commons.httpcache.config
@@ -25,6 +26,8 @@ com.adobe.acs.commons.httpcache.store
 com.adobe.acs.commons.httpcache.util
 com.adobe.acs.commons.images
 com.adobe.acs.commons.json
+com.adobe.acs.commons.models.injectors.annotation
+com.adobe.acs.commons.notifications
 com.adobe.acs.commons.oak
 com.adobe.acs.commons.packaging
 com.adobe.acs.commons.quickly
@@ -38,6 +41,7 @@ com.adobe.acs.commons.social.linkedin
 com.adobe.acs.commons.synth
 com.adobe.acs.commons.twitter
 com.adobe.acs.commons.util
+com.adobe.acs.commons.util.visitors
 com.adobe.acs.commons.version
 com.adobe.acs.commons.version.model
 com.adobe.acs.commons.wcm
@@ -48,6 +52,8 @@ com.adobe.acs.commons.wcm.tags.wcmmode
 com.adobe.acs.commons.widgets
 com.adobe.acs.commons.workflow
 com.adobe.acs.commons.workflow.bulk
+com.adobe.acs.commons.workflow.bulk.execution
+com.adobe.acs.commons.workflow.bulk.execution.model
 com.adobe.acs.commons.workflow.bulk.removal
 com.adobe.acs.commons.workflow.process
 com.adobe.acs.commons.workflow.synthetic

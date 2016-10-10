@@ -12,11 +12,27 @@ initial-release: 1.10.2
 
 ## Purpose
 
-The `cqinclude` "xtype" allows for modularization and re-use widgets and widget collections. This facilitates an elegant pattern of composition when creating AEM components; Larger components cant be composed of smaller components.
+The `cqinclude` xtype allows for modularization and re-use widgets and widget collections. This facilitates an elegant pattern of composition when creating AEM components where larger components can be composed of smaller components.
 
 The `cqinclude` xtype is simple in that it pulls the targets widget node structure into the `cqincluding` component for re-use.  This is problematic when a n AEM component is composed of multiple sub-components and each sub-component use the same property names.
 
-For example, a Feature component may be composed of a Title Component, Text Component and Button component. Both the Title component and Button component may store the label value to the property name `./jcr:title`. If both dialogs are combined into the Feature component's dialog via the OOTB `cqinclude`, there will be two fields saving to the same property, resulting in a mutli-value property with no real way to tell which value belongs to which sub-component.
+For example, a Feature component may be composed of a Title Component, Text Component and Button component. Both the Title component and Button component may store the label value to the property name `./jcr:title`. If both dialogs are combined into the Feature component's dialog via the OOTB `cqinclude`, there will be two fields saving to the same property, resulting in a multi-value property with no real way to tell which value belongs to which sub-component.
+
+
+### Multi-level Namespacing (Since v2.6.4/3.2.4)
+
+Multi-level namespacing is when one `cqinclude.namespace` includes a `cq:Widget` that contains another `cqinclude.namespace`. Multi-level support ensures that the hierarchy of these includes are maintained when reading/persisting the data to the JCR.
+
+If multi-level cqincluding with namespaces is required, this can be enabled by by creating a `sling:OsgiConfig` at `/apps/mysite/config/com.adobe.acs.commons.wcm.impl.CQIncludePropertyNamespaceServlet.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    namespace.multi-level="{Boolean}true"
+    />
+{% endhighlight %}     
 
 
 ## How to Use

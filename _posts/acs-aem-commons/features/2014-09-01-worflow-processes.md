@@ -9,13 +9,13 @@ categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
 
-## Send Templated E-Mail Workflow Process (v1.9.0)
+## Send Template'd E-Mail Workflow Process (v1.9.0)
 
 Based on the payload the email parameters are pre-populate with JCR properties:
 
 * If payload is a **DAM asset** then the param map is populated with `[dam:Asset]/jcr:content/metadata` node properties
 * If the payload is **cq:Page** then the param map is populated with `[cq:Page]/jcr:content` properties
-* The param map keys are the Node's property names and the values the `String` representations of the property value. For `String[]` properties the value is one comma separated String. 
+* The param map keys are the Node's property names and the values the `String` representations of the property value. For `String[]` properties the value is one comma separated String.
   * Currently `String[]` are checked for multiple properties.
 
 Include additional parameters added to E-mail params
@@ -61,3 +61,72 @@ Mark content as replicated by the Workflow Initiator. This Workflow Process is e
 A new Workflow Process step that executed Replicated By Workflow Initiator can be added to the end of this model, and content will be marked as being Activated/Deactived by the user that initiated the replication request.
 
 ![image](/acs-aem-commons/images/workflow-processes/replicated-by-workflow-initiator-config.png)
+
+## Content Traversing Workflow - Synthetic Workflow Wrapper
+
+Synthetic Workflow Wrapper is a Process steps that will traverse the entire content tree, and process the each `dam:Asset` or `cq:Page` using the provided workflow model as ACS Commons synthetic workflow.
+
+Processing the tree in a serial fashion allows for a more controlled workflow execution decreasing the chances of overloading AEM. Setting `throttle` to `true` decreases the chances further.
+
+![Workflow - Synthetic Workflow Wrapper](/acs-aem-commons/images/workflow-processes/synthetic-workflow-wrapper-process-args.png)
+
+### Process Args options
+
+* `throttle`
+  * `true` or `false`
+  * Defaults to `false`
+  * If `true`, throttles the execution using ACS Commons Throttled Task Runner (part of ACS Commons Fast Action Manager)
+* `traverseTree`
+  * `true` or `false`
+  * Defaults to `false`
+  * If `true`, walks the entire content tree under the payload looking for the first `dam:Asset` nodes to process (does not process sub-Assets)
+* `saveInterval`
+  * The number of sub-payloads to process before saving.
+* `workflowModelId`
+  * The absolute path to the `cq:Workflow` to execute as Synthetic Workflow.
+  * Note this workflow must be ACS Commons Synthetic Workflow compatible.
+
+{% highlight xml %}
+throttle=true|false
+traverseTree=true|false
+saveInterval=1024
+workflowModelId=/etc/workflow/models/dam/update_asset
+{% endhighlight %}
+
+
+## Content Traversing Workflow - Replicate with Options
+
+**Replication with Options** is a Process steps that will traverse the entire content tree, and process the each `dam:Asset` or `cq:Page`, replicating each node based on the Process Args.
+
+Processing the tree in a serial fashion allows for a more controlled workflow execution decreasing the chances of overloading AEM. Setting `throttle` to `true` decreases the chances further.
+
+![Workflow - Synthetic Workflow Wrapper](/acs-aem-commons/images/workflow-processes/replicate-with-options-process-args.png)
+
+### Process Args Options
+
+* `replicationActionType`
+  * Options include [ReplicationActionType's](aem/6-0/develop/ref/javadoc/com/day/cq/replication/ReplicationActionType.html): ACTIVATE | DEACTIVATE | DELETE
+* `throttle`
+  * `true` or `false`
+  * Defaults to `false`
+  * If `true`, throttles the execution using ACS Commons Throttled Task Runner (part of ACS Commons Fast Action Manager)
+* `traverseTree`
+  * `true` or `false`
+  * Defaults to `false`
+  * If `true`, walks the entire content tree under the payload looking for the first `dam:Asset` nodes to process (does not process sub-Assets)
+* `synchronous`
+  * `true` or `false`
+  * Defaults to `false`
+  * Typically best to set to `true` to ensure the replication queue does not build up.
+* `suppressVersions`
+  * `true` or `false`
+  * Defaults to `false`
+  * Typically best to set to `false` if version are not required (as their creation is work to be done)
+
+  {% highlight xml %}
+  replicationActionType=ACTIVATE|DEACTIVATE|DELETE
+  synchronous=true|false
+  suppressVersions=true|false
+  throttle=true|false
+  traverseTree=true|false
+  {% endhighlight %}

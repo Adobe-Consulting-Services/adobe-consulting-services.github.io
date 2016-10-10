@@ -5,7 +5,7 @@ description: Xpath driven autocomplete lists
 date: 2016-04-25
 thumbnail: /images/queryautocomplete/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.5.0/3.1.0
 ---

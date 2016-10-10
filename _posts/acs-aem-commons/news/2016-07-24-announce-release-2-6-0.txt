@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.6.4 & 3.2.4 now available!
+description: New Features include Bulk Workflow Manager v2, Asset Color Palettes and Content Traversing Workflows. Enhancements for Fast Action Manager, Synthetic Workflow Granite WF support, HTTP Cache include support, Review Task Mover collision support and E-mail API attachments!
+date: 2016-07-24
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---

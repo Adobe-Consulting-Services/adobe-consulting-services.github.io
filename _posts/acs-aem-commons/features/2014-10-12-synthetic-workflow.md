@@ -30,6 +30,7 @@ ACS AEM Commons Synthetic Workflow is intended to supplement AEM Workflow for sp
   * `workflow` and `workflowData` MetaDataMaps are the same object
 * Workflow Process MetaDataMaps are supported (Ex. Providing `PROCESS_ARGS` for each Workflow Process being executed)
 * Workflow Processes are executed in the order they are defined in the `workflowProcess` array.
+* Since v2.6.0/3.2.0 supports Granite WF Process (those that extends `com.adobe.granite.workflow.exec.WorkflowProcess`)
 
 ## Unsupported Workflow Features
 

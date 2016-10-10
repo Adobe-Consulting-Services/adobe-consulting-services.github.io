@@ -27,6 +27,30 @@ The way that the action manager handles JCR sessions is that it clones the resou
 
 Once work is scheduled to run, you can check on the status using the provided JMX MBeans.  The `ThrottledTaskRunner` bean lets you get current running stats of the actual work being done.  The Action Manager Factory bean lets you get an overview of all action managers that have been created and how much work they have pending, if any, as well as total run-time and any errors that have occurred.
 
+### OSGi Configuration
+
+The Throttled Task Runner is OSGi configurable.
+
+![Throttled Task Runner - OSGi Configuration](/acs-aem-commons/images/fast-action-manager/throttled-task-runner-osgi.png)
+
+* Max threads: Recommended not to exceed the number of CPU cores. Default 4.
+* Max CPU %: Used to throttle activity when CPU exceeds this amount. Range is 0..1; -1 means disable this check.
+* Max Heap %: Used to throttle activity when heap usage exceeds this amount. Range is 0..1; -1 means disable this check.
+* Cooldown time: Time to wait for cpu/mem cooldown between throttle checks (in milliseconds)
+* Watchdog time: Maximum time allowed (in ms) per action before it is interrupted forcefully.
+
+### JMX MBeans
+
+#### Throttled Task Runner MBean 
+
+![Throttled Task Runner - JMX Mbean](/acs-aem-commons/images/fast-action-manager/throttled-task-runner-jmx.png)
+
+#### Action Manager MBean 
+
+![Action Manager - JMX Mbean](/acs-aem-commons/images/fast-action-manager/action-manager-jmx.png)
+
+### Developing with the Fast Action Manager APIs
+
 To use Fast Action Manager (FAM) write a small code harness that collects the resources to process along w/ the desired processing.
 
 ### Example Code: Fast Action Manager calling Synthetic Workflow on DAM Update assets

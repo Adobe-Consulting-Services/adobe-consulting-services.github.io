@@ -1,0 +1,8 @@
+---
+layout: acs-aem-tools_default
+title: Release 0.0.28 now available!
+description: Enhancement and bug fixes for AEM Fiddle and CSV Asset Importer
+thumbnail: /images/default/thumbnail.png
+categories: news
+tags: acs-aem-tools-news
+---
