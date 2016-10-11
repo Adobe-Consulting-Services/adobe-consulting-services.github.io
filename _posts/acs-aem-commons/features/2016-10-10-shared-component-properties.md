@@ -13,7 +13,7 @@ initial-release: 2.7.0
 ## Purpose
 
 Extend AEM functionality to allow components to be configured with shared content and properties that apply across all
-instances of a component (or in some cases multiple components) for an entire site. 
+instances of that component (or in some cases multiple components) on an entire site. 
 
 ### Features of Shared Component Properties:
 - Component-specific "shared" properties can be configured for any component by adding a new "shared properties" dialog
