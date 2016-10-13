@@ -120,3 +120,7 @@ Rows 2..N each represent an Asset to import.
 ----------
 
 *Credits: Thanks to Elise H. for helping define and refine the scope and behavior of this tool.*
+
+### user-event-data (Since v0.0.30)
+
+`user-event-data` of `acs-aem-tools.csv-asset-importer` is set for modifications invoked by this feature.
