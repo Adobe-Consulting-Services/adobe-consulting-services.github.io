@@ -42,3 +42,7 @@ Test Page Generator is a utility to automatically generator large numbers of pag
 ![AEM Test Page Generator - Results]({{ site.data.acs-aem-tools.baseurl }}/images/test-page-generator/screenshot-crxdelite.png)
 
 * Spot-check your generated pages to make sure everything looks good!
+
+### event-user-data (Since v0.0.30)
+
+`event-user-data` of `acs-aem-tools.test-page-generator` is set for modifications invoked by this feature.

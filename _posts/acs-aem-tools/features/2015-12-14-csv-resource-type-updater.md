@@ -35,3 +35,7 @@ This tool supports updating `sling:resourceType` and `cq:template` properties as
 ![WebUI Form](/acs-aem-tools/images/csv-resource-type-updater/web-ui.png)
 
 ![Results](/acs-aem-tools/images/csv-resource-type-updater/results.png)
+
+### event-user-data (Since v0.0.30)
+
+`event-user-data` of `acs-aem-tools.csv-resource-type-updater` is set for modifications invoked by this feature.

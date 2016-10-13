@@ -73,6 +73,6 @@ Note: Switching to HTML src view often makes reading the error messages easier.
 * "My Fiddles" are stored under the logged in user's profile node. Ex. `/home/users/admin/profile/fiddles/demo-fiddle`
 
 
-### user-event-data (Since v0.0.30)
+### event-user-data (Since v0.0.30)
 
 `user-event-data` of `acs-aem-tools.aem-fiddle` is set for the JCR session used by this feature.
