@@ -17,7 +17,7 @@ initial-release: 2.2.0
 
 Easily set TTL headers on Requests in support of [AEM Dispatcher 4.1.11](https://www.adobeaemcloud.com/content/companies/public/adobe/dispatcher/dispatcher.html) TTL support.
 
-ACS AEM Commons Dispatcher TTL allows Response Headers to be set instructing AEM Dispatcher to respect a TTL-based timeout. This feature does expect that a Dispatcher is in the request chain. To enable support in other scenarios, see the [note](#note).
+ACS AEM Commons Dispatcher TTL allows Response Headers to be set instructing AEM Dispatcher to respect a TTL-based timeout. This feature does expect that a Dispatcher is in the request chain. To enable support in other scenarios, see the [note](acs-aem-commons/features/dispatcher-ttl.html#note).
 
 The following expiration configurations are supported
 
