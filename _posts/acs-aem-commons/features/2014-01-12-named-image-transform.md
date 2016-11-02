@@ -5,7 +5,7 @@ description: Consistently resize, crop and transform images
 date: 2014-09-18
 thumbnail: /images/named-image-transform/thumbnail.png
 feature-tags: component-dev
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 1.5.0
 ---

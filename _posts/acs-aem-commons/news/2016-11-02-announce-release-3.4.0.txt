@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.8.0 and 3.4.0 now available!
+description: Users to CSV Exporter, SMTP Health check, Enhancements to Named Image Transform and, per usual, bug fixes!
+date: 2016-11-02
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
