@@ -5,7 +5,7 @@ description: Transcribe your asset
 date: 2016-09-06
 thumbnail: /images/speech-to-text/thumbnail.png
 feature-tags: authoring
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 3.3.0
 ---

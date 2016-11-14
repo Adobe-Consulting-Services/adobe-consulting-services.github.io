@@ -1,11 +1,11 @@
 ---
 layout: acs-aem-commons_feature
 title: Bulk Workflow Manager v2
-description: Finally execute Workflow at scale!
+description: Execute Workflow at scale!
 date: 2016-07-24
 thumbnail: /images/bulk-workflow-manager/thumbnail.png
 feature-tags: administration content-migration
-tags: acs-aem-commons-features
+tags: acs-aem-commons-features updated
 categories: acs-aem-commons features
 initial-release: 2.6.4/3.2.4
 ---
@@ -50,7 +50,7 @@ Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Wo
 
 Select AEM OOTB Workflow to execute the workflow using the AEM Workflow Engine. This provides all the usual functionality AEM Workflow provides. This uses the Sling Job Engine and large sets 10,000+ payloads, this can be slower as as Bulk Workflow Manager throttles/manages the # of workflows being executed at once.
 
-> Bulk Workflow Manager does NOT support transient workflow
+> Since v2.8.0/3.4.0 - the AEM OOTB Workflow Runner has limited support of Transient Workflows. Transient workflows can be executed and run with basic job queue size-based throttling, and failures are not detected. AEM logs must be monitored for failures.
 
 ### Synthetic Workflow
 

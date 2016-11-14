@@ -117,6 +117,14 @@ If a column has an empty value, that property will be not exist on the Asset's m
 
 Rows 2..N each represent an Asset to import.
 
+
+### event-user-data (Since v0.0.30)
+
+`event-user-data` of `acs-aem-tools.csv-asset-importer` is set for modifications invoked by this feature.
+
+For example, in the AEM launcher exclude list, `event-user-data:acs-aem-tools.csv-asset-importer` can be added to ignore events that result from the CSV Asset Importer tool.
+
+
 ----------
 
 *Credits: Thanks to Elise H. for helping define and refine the scope and behavior of this tool.*

@@ -1,0 +1,8 @@
+---
+layout: acs-aem-tools_default
+title: Release 0.0.30 now available!
+description: AEM Fiddle bug fixes and event-user-data for ACS Tools features!
+thumbnail: /images/default/thumbnail.png
+categories: news
+tags: acs-aem-tools-news
+---
