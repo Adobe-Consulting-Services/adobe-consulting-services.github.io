@@ -7,7 +7,7 @@ thumbnail: /images/shared-component-properties/thumbnail.png
 feature-tags: authoring component-dev
 tags: acs-aem-commons-features new
 categories: acs-aem-commons features
-initial-release: 2.8.0
+initial-release: 2.9.0
 ---
 
 ## Purpose
