@@ -50,10 +50,54 @@ The AEM OOTB Reference component solves some cases, but
 
 To enable Shared Component Properties, you must do the following:
 
+1. *Enable the Shared Component Properties OSGi service.
+1. *Add client libraries to include the new authoring options.
 1. Specify a "page root path" pattern via OSGi config for `com.adobe.acs.commons.wcm.impl.PageRootProviderImpl`
-1. Add `SharedComponentPropsPageInfoProvider` as an info provider for your page component
+1. Add `SharedComponentPropertiesPageInfoProvider` as an info provider for your page component
 
-#### <a name="activation-page-root"></a>**Specifying the Page Root Path**
+\* The first two steps can be accomplished by installing the 
+[activation package](/acs-aem-commons/packages/shared-component-properties/shared-component-props-activate-1.0.zip),
+which deploys configs to `/apps/shared-component-properties` and client libraries to
+`/etc/clientlibs/shared-component-properties`.
+
+#### <a name="activation-enable-service"></a>**1. Enabling the Shared Component Properties OSGi Service**
+This is done via the Felix console or by deploying a blank OSGi configuration file from your project deployment.
+
+`/apps/mysite/config.author/com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesImpl.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  jcr:primaryType="sling:OsgiConfig"/>
+{% endhighlight %}
+
+#### <a name="activation-add-clientlibs"></a>**2. Adding the Client Libraries for Authoring**
+The client libraries required for authoring Shared Component Properties are deployed via ACS AEM Commons, but disabled
+by default.  To include these client libraries, you must create a new client library for the Touch UI and/or a new
+client library for the Classic UI.  These libraries simply embed the real libraries from ACS AEM Commons, and must
+include a (blank) js.txt file to trigger the JavaScript include.
+
+Touch UI client library definition:
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="cq.authoring.editor"
+    embed="[acs-commons.shared-component-properties]"/>
+{% endhighlight %}
+
+Classic UI client library definition:
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="cq.widgets"
+    embed="[acs-commons.shared-component-properties.classic]"/>
+{% endhighlight %}
+
+#### <a name="activation-page-root"></a>**3. Specifying the Page Root Path**
 Shared and global properties are stored under your site's root page (i.e. home page). As such, the feature requires you
 to specify a path (regexp patterns supported) to your site's root page.
 
@@ -65,10 +109,10 @@ Example OSGI deployment pointed at the Geometrixx home page (/content/geometrixx
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
   jcr:primaryType="sling:OsgiConfig"
-  page.root.path="/content/geometrixx/[a-z]{2}"/>
+  page.root.path="[/content/geometrixx/[a-z]{2}]"/>
 {% endhighlight %}
 
-#### <a name="activation-page-info-provider"></a>**Adding the Page Info Provider to your Page Component**
+#### <a name="activation-page-info-provider"></a>**4. Adding the Page Info Provider to your Page Component**
 Page info providers are documented by AEM @ <https://docs.adobe.com/docs/en/aem/6-1/develop/components/pageinfo.html>.
 Assuming your page component has a resourceSuperType of `foundation/components/page`, the simplest way to do this is to:
 
@@ -77,7 +121,7 @@ Assuming your page component has a resourceSuperType of `foundation/components/p
 1. Paste the node (with its children) into your page component
 1. Add a `nt:unstructured` node named `sharedComponentProps` under `/apps/(your page component)/cq:infoProviders`
 1. Add a `className` property to the `sharedComponentProps` node with String value
-`com.adobe.acs.commons.wcm.impl.SharedComponentPropsPageInfoProvider`
+`com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesPageInfoProvider`
 1. Restart AEM to ensure this change takes effect
 
 
@@ -86,7 +130,7 @@ For any component, add a `dialogshared` (Touch UI) or `dialog_shared.xml` (Class
 standard `cq:dialog` (Touch UI) or `dialog.xml` (Classic UI) dialog nodes.
 
 Using the Touch UI, authors can launch the new shared properties dialog for this component by clicking
-"Configure Shared Properties" (share icon) to the right of "Configure" (wrench icon).
+"Configure Shared Properties" (layers icon) to the right of "Configure" (wrench icon).
 ![Configure Shared Properties](/acs-aem-commons/images/shared-component-properties/edit-shared-properties.png)
 
 Using the Classic UI, authors can launch the new shared properties dialog for this component by clicking "Edit
@@ -125,7 +169,7 @@ a component's JSP file, a map of all properties with overrides correctly applied
 ### <a name="example"></a>Example
 [Download the example package](/acs-aem-commons/packages/shared-component-properties/shared-component-props-example-1.0.zip)
 and install using CRX Package Manager. This will add a new "Shared Component Properties Example" component at
-`/apps/shared-component-props/components/content/shared-component-props-example`. This component demonstrates shared and
+`/apps/shared-component-properties-example/components/content/shared-component-props-example`. This component demonstrates shared and
 global property dialogs for both the Touch UI and Classic UI, including property overrides.
 
 NOTE: You will still need to follow the
@@ -151,28 +195,46 @@ After ruling out permissions as the culprit, an issue with the
 [Activation]({{ site.data.acs-aem-commons.baseurl }}/features/shared-component-properties.html#activation)
 steps above is almost certainly the problem.
 
-To debug an issue with Activation, first verify that the Page Info Provider has been correctly added to your page
-component. To do this (on a local AEM author server), go to
+To debug an issue with Activation, first verify that you have successfully enabled the
+"ACS AEM Commons - Shared Component Properties" OSGi service by checking the Felix console at
+`http://localhost:4502/system/console/configMgr` - there should be a checkmark showing that the service is active.
+If not, check that you have correctly deployed the config file from
+[Enabling the Shared Component Properties OSGi Service]({{ site.data.acs-aem-commons.baseurl }}/features/shared-component-properties.html#activation-enable-service)
+or take the shortcut by installing the provided
+[activation package](/acs-aem-commons/packages/shared-component-properties/shared-component-props-activate-1.0.zip).
+
+After verifying that the Shared Component Properties service is active, the next step is to check that the
+Page Info Provider has been correctly added to your page component. To do this, go to
 <http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=(full path to your current page)> and search the
-resulting JSON for `sharedComponentProperties`. If this element is present, your Page Info Provide is configured
+resulting JSON for `sharedComponentProperties`. If this element is present, your Page Info Provider is configured
 correctly. If not, repeat the steps under
 [Adding the Page Info Provider to your Page Component]({{ site.data.acs-aem-commons.baseurl }}/features/shared-component-properties.html#activation-page-info-provider)
 extremely carefully, including the step to restart your AEM server. Once the Page Info Provider is configured correctly,
 the JSON returned from the pageinfo.json URL will contain a `sharedComponentProperties` field.
 
 If the Page Info Provider is confirmed to be configured correctly but you are still not seeing the authoring options to
-open the shared or global properties for the example component, the next thing to check is the
+open the shared or global properties for the example component, check the `enabled` value under
+`sharedComponentProperties` in the pageinfo.json mentioned above.  If `enabled: false` then AEM is unable to find the
+root page for the page being viewed.  To resolve this issue, verify the
 [Page Root Path]({{ site.data.acs-aem-commons.baseurl }}/features/shared-component-properties.html#activation-page-root)
-configuration. First, check that your OSGi configuration has been successfully deployed by going to
+configuration. Start by checking that your OSGi configuration has been successfully deployed by going to
 `http://localhost:4502/system/console/configMgr/com.adobe.acs.commons.wcm.impl.PageRootProviderImpl`. The
 `page root path` should reflect the path that you have configured. If it does, then the next thing to check is that the
 page you are authoring on matches the pattern of the page root path. For example, a page root path of 
 `/content/mysite/[a-z]{2}` will not work if you are authoring on `/content/othersite/en/mypage` since the system is
 unable to use the non-matching page root path to determine the root page. In a case where you need to support multiple
-content roots, a more complex page root path pattern such as `/content/(mysite|othersite)/[a-z]{2}` can be used.
+content roots, the OSGi configuration allows for a list of page root paths. Alternatively, a more complex page root path
+pattern such as `/content/(mysite|othersite)/[a-z]{2}` can also be used.
+
+If you are still not seeing the authoring options for shared or global properties for the example component after
+verifying that pageinfo.json has `enabled: true` for `sharedComponentProperties`, the authoring client library for your
+current authoring UI (classic or touch) has not been successfully included.  See the 
+[Adding the Client Libraries for Authoring]({{ site.data.acs-aem-commons.baseurl }}/features/shared-component-properties.html#activation-add-clientlibs)
+section above for details, or try installing the provided
+[activation package](/acs-aem-commons/packages/shared-component-properties/shared-component-props-activate-1.0.zip).
 
 If all else fails, try upping the log level of the following classes to DEBUG:
 
 - `com.adobe.acs.commons.wcm.impl.PageRootProviderImpl`
-- `com.adobe.acs.commons.wcm.impl.SharedComponentPropertiesBindingsValuesProvider`
-- `com.adobe.acs.commons.wcm.impl.SharedComponentPropsPageInfoProvider`
+- `com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesBindingsValuesProvider`
+- `com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesPageInfoProvider`
