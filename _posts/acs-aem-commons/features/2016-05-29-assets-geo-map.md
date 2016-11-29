@@ -129,3 +129,7 @@ To add the map, create a new component of type `acs-commons/components/dam/asset
 
 </col2>
 {% endhighlight %}
+
+## Video Walkthrough
+
+<iframe width="945" height="532" src="https://www.youtube.com/embed/yMi-Qab14-o?rel=0" frameborder="0" allowfullscreen></iframe>

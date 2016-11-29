@@ -59,3 +59,7 @@ Select Synthetic Workflow to execute the workflow using [ACS Commons Synthetic W
 ### Synthetic Workflow w/ FAM
 
 Select Synthetic Workflow to execute the workflow using [ACS Commons Synthetic Workflow](/acs-aem-commons/features/synthetic-workflow.html), but allow [ACS Commons Fast Action Manager](/acs-aem-commons/features/fast-action-manager.html) to run the work in a multi-threaded fashion. This is typically the fastest approach but carries all the same considerations in the use of Synthetic Workflow.
+
+## Video Walkthrough
+
+<iframe width="945" height="532" src="https://www.youtube.com/embed/tK4yE6Ys14Q?rel=0" frameborder="0" allowfullscreen></iframe>
