@@ -141,4 +141,17 @@ The default behavior for updating Oak Index properties is to perform an in place
     recreateOnUpdate="{Boolean}true"
     forceIndex="{Boolean}true"
     />
-{% endhighlight %}   
+{% endhighlight %}
+
+## Service User
+
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-ensure-oak-index-service`
+
+ACLs:
+
+* `jcr:read` on `/apps`
+* `jcr:read`, `rep:write`, `rep:indexDefinitionManagement` on `*/oak:index/*`

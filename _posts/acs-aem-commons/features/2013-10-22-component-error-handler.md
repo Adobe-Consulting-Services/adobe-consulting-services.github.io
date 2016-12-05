@@ -85,4 +85,14 @@ AEM6 SP1 introduced [an issue](https://github.com/Adobe-Consulting-Services/acs-
 	/>
 {% endhighlight %}  
 
+## Service User
 
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-component-error-handler-service`
+
+ACLs:
+
+* `jcr:read` on `/apps` and `/content`

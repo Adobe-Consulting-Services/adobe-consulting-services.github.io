@@ -59,3 +59,15 @@ This is a great way to communicate when system activities will occur, are occurr
   * Can be referenced in the Message (see 7) with `{{"{{ onTime "}}}}`
 10. **Off Time:** Notification will display only BEFORE this time and if is Enabled (see 4)
   * Can be referenced in the Message (see 7) with `{{"{{ offTime "}}}}`
+
+## Service User
+
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-system-notifications-service`
+
+ACLs:
+
+* `jcr:read` on `/etc/acs-commons/notifications`
