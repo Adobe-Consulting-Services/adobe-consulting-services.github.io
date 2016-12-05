@@ -221,3 +221,15 @@ sling.filter.scope=["REQUEST","ERROR"]
 {% endhighlight %}
 
 ***Note:*** You must use a .config file because the `service.ranking` must be of type integer, which cannot be set on a sling:OsgiConfig node.
+
+## Service User
+
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-error-page-handler-service`
+
+ACLs:
+
+* `jcr:read` on `/content`

@@ -63,3 +63,15 @@ Select Synthetic Workflow to execute the workflow using [ACS Commons Synthetic W
 ## Video Walkthrough
 
 <iframe width="945" height="532" src="https://www.youtube.com/embed/tK4yE6Ys14Q?rel=0" frameborder="0" allowfullscreen></iframe>
+
+## Service User
+
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-bulk-workflow-service`
+
+ACLs:
+
+* `jcr:read`, `jcr:modifyProperties` on `/etc/acs-commons/bulk-workflow-manager`

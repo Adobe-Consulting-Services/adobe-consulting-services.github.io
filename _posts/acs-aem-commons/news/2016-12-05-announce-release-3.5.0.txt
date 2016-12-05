@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.8.2 and 3.5.0 now available!
+description: Stylesheet inlineing rewriter (6.2 only), replace administrative sessions (6.2 only), various bug fixes.
+date: 2016-12-05
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---

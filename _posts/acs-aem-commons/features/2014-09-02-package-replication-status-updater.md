@@ -42,3 +42,15 @@ To enable Package Replication Status Updating, create a new `sling:OsgiConfig` n
 	* Package Last Modified: Marks the content as replicated the last time the Package was modified (aka Built)
 	* Current Time: Marks the content as replicated at the current time (now)
 	* Default: Package Last Modified
+
+## Service User
+
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-package-replication-status-event-service`
+
+ACLs:
+
+* `jcr:read`, `jcr:write` on `/`

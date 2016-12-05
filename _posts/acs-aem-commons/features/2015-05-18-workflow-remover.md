@@ -73,3 +73,16 @@ Define a `sling:OsgiConfig` with the following attributes.
 * workflow.payloads: Only remove Workflow Instances whose payloads match one of these regex patterns.
 * worlflow.older-than: Only remove Workflow Instances whose payloads are older than this UTC Time in milliseconds.
 * max-duration: Max number of minutes to run. 0 for no limit.
+
+
+## Service User
+
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-workflow-remover-service`
+
+ACLs:
+
+* `jcr:read`, `jcr:write` on `/etc/workflow/instances`

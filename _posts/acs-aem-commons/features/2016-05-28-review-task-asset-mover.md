@@ -216,3 +216,16 @@ Prior to v2.6.0/3.2.0 when a reviewed asset was moved into a folder with an asse
 ![Assets with Move Assets](/acs-aem-commons/images/review-task-asset-mover/image-3.png)
 
 ![Approved Assets](/acs-aem-commons/images/review-task-asset-mover/image-4.png)
+
+
+## Service User
+
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-review-task-asset-mover-service`
+
+ACLs:
+
+* `jcr:read`, `jcr:write` on `/content/dam`

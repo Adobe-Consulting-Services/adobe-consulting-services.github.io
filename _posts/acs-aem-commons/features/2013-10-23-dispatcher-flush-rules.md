@@ -123,5 +123,14 @@ Delete the entire cache when a new package is activated.
     />
 {% endhighlight %}     
 
+## Service User
 
-      
+On AEM 6.2 or above, this service uses a Service User for repository access. This user is configured with
+the expected permissions required, but additional permissions may be required if your repository design
+deviates from the expected structure.
+
+User name: `acs-commons-dispatcher-flush-service`
+
+ACLs:
+
+* `jcr:read`, `crx:replicate` on `/`
