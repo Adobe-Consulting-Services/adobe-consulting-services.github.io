@@ -27,7 +27,7 @@ Enable the Sling Event Handler that listens for completed tasks and processes th
 
 Define a `sling:OsgiConfig` at `/apps/mysite/config/com.adobe.acs.commons.dam.impl.ReviewTaskAssetMoverHandler.xml`
 
-[Download OSGi configuration as CQ Package](/assets/acs-aem-commons/store/acs-aem-common-review-task-osgi-config-2.0.0.zip)
+[Download OSGi configuration as CQ Package](/assets/acs-aem-commons/store/acs-aem-commons-review-task-osgi-config-2.0.0.zip)
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -135,7 +135,7 @@ Prior to v2.6.0/3.2.0 when a reviewed asset was moved into a folder with an asse
 
 `/apps/dam/gui/content/projects/addtask`
 
-[Download overlay as CQ Package](/assets/acs-aem-commons/store/acs-aem-common-review-task-overlay-2.0.1-AEM62.zip)
+[Download overlay as CQ Package](/assets/acs-aem-commons/store/acs-aem-commons-review-task-overlay-2.0.1-AEM62.zip)
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
