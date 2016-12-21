@@ -1,0 +1,8 @@
+---
+layout: acs-aem-tools_default
+title: Release 0.0.40 now available!
+description: Compatible with AEM 6.3 Beta (now requires AEM 6.1+)
+thumbnail: /images/default/thumbnail.png
+categories: news
+tags: acs-aem-tools-news
+---
