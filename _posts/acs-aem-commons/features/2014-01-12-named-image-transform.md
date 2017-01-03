@@ -207,9 +207,12 @@ greyscale:greyscale=true
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>crop:bounds=150,100,100,100</code></li>
-	<li><code>crop:bounds=150,100,100,100&amp;smart=false</code><br>
-</li></ul></div>
+	<li><code>crop:bounds=150\,100\,100\,100</code></li>
+	<li><code>crop:bounds=150\,100\,100\,100&amp;smart=false</code></li>
+	<li><code>crop:bounds=25%\,0\,50%\,100%</code>
+        <ul><li>Relative cropping available since v2.8.0/3.4.0</li></ul>
+    </li>    
+</ul></div>
 
 <div class="section">
 <h3>Adjust Brightness/Contrast</h3>
