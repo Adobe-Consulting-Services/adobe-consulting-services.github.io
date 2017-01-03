@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_default
 title: Release 2.9.0 and 3.6.0 now available!
-description: Multifield HTL support. AEM 6.3 Beta compatibility.
+description: Multifield HTL support, Shared Component Properties, AEM 6.3 Beta compatibility.
 date: 2016-12-21
 thumbnail: /images/default/thumbnail.png
 categories: acs-aem-commons news
