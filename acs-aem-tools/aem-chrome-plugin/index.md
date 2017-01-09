@@ -23,6 +23,6 @@ AEM Chrome Plug-in has two main sets of functionality, each of which can be use 
 ## Quick Links
 
 * [AEM Chrome Plug-in Download](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)
-* [Sling Log Tracer Bundle Download](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.0/org.apache.sling.tracer-1.0.0.jar)
+* [Sling Log Tracer Bundle 1.0.2+ Download](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.2/org.apache.sling.tracer-1.0.2.jar)
 * [GitHub Project](https://github.com/Adobe-Consulting-Services/aem-chrome-plugin)
 * [GitHub Issues](https://github.com/Adobe-Consulting-Services/aem-chrome-plugin/issues)

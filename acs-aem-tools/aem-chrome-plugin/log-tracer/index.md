@@ -10,18 +10,17 @@ categories: acs-aem-tools
 
 [< Back to AEM Chrome Plug-in](/acs-aem-tools/aem-chrome-plugin)
 
-
 ## Quick Links
 
 * [AEM Chrome Plug-in Download](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)
-* [Sling Log Tracer Bundle Download](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.0/org.apache.sling.tracer-1.0.0.jar)
+* [Sling Log Tracer 1.0.2+ Bundle Download](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.2/org.apache.sling.tracer-1.0.2.jar)
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/6xedlK-ckuo" frameborder="0" allowfullscreen></iframe>
 
 ## Requirements
 
-* Requires AEM 6.1+
-* Requires Apache Sling Log Tracer to be installed and enabled on the target AEM instance
+* Requires AEM 6.0+
+* Requires Apache Sling Log Tracer v1.0.2+ to be installed and enabled on the target AEM instance
 * This is is a development tool and should not be used on production instances.
 * ACS AEM Tools is not required
 
@@ -37,7 +36,7 @@ AEM Chrome Plug-in - Log Tracer collects and exposes per-request:
 
 ## How to use AEM Chrome Plug-in - Log Tracer
 
-1. Download and install [Sling Log Tracer 1.0.0+](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.0/org.apache.sling.tracer-1.0.0.jar) via [AEM 6.1 Felix Console](http://localhost:4502/system/console/bundles) and ensure it is started/active.
+1. Download and install [Sling Log Tracer 1.0.2+](http://search.maven.org/remotecontent?filepath=org/apache/sling/org.apache.sling.tracer/1.0.2/org.apache.sling.tracer-1.0.2.jar) via [AEM 6.0+ Felix Console](http://localhost:4502/system/console/bundles) and ensure it is started/active.
 2.  Enable [Sling Log Tracer via Felix ConfigMgr](http://localhost:4502/system/console/configMgr/configMgr/org.apache.sling.tracer.internal.LogTracer).
  * Make sure both "Enabled" and "Servlet Enabled" are checked.
  ![Sling Log Tracer OSGi Config](/acs-aem-tools/images/aem-chrome-plugin/sling-log-tracer-configmgr.png)
@@ -63,7 +62,7 @@ AEM Chrome Plug-in - Log Tracer collects and exposes per-request:
 
 AEM Chrome Plug-in works in conjunction with [Apache Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html) to collect and expose server-side data to the browser.
 
-1. AEM Chrome Plug-in intercepts requests made from Chrome browser to to AEM 6.1+
+1. AEM Chrome Plug-in intercepts requests made from Chrome browser to AEM 6.0+
 2. AEM Chrome Plug-in injects Sling Log Tracer headers defining what data Sling Log Tracer should collect for that request on the AEM server.
 3. When the HTTP Request returns, a Sling Log Tracer UUID is provided in the HTTP Response. AEM Chrome Plug-in uses this UUID in a background HTTP Request to AEM to retrieve the log data collected by Sling Log Tracer.
 4. AEM Chrome Plug-in parses and injects the log data into the AEM Chrome Plug-in Dev Panel.
