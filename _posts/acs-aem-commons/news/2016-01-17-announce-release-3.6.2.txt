@@ -1,0 +1,9 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.6.2 now available!
+description: Bug fix release
+date: 2016-01-17
+thumbnail: /images/default/thumbnail.png
+categories: acs-aem-commons news
+tags: acs-aem-commons-news
+---
