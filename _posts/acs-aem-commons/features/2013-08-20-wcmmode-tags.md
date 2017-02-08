@@ -62,3 +62,29 @@ These would typically be used in a `<c:if>` tag, e.g.
     You probably want to populate the title in the dialog.
 </c:if>
 {% endhighlight %}
+
+### Switching between Edit and Preview modes
+
+By default AEM does not reload content when an author switches between Edit and Preview modes.  Since `wcmmode`
+tags execute server-side, this means they are calculated using the mode the page was originally
+loaded as.  For example, if an author loads a page in Edit mode, and then switches to Preview mode,
+all content wrapped in `<wcmmode:edit>` will still display since the page was loaded originally in Edit mode.
+
+In order for `wcmmode` tags to work correctly as the author switches between Edit and Preview mode without requiring
+the author to manually refresh the browser page, you can add an authoring client library with category
+`cq.authoring.editor.hook` that automatically refreshes the content behind the scenes as the author switches.
+
+{% highlight js %}
+(function ($, ns) {
+    $(document).on('cq-layer-activated', function (event) {
+        // Reload the content frame when switching between authoring modes, so that
+        // functionality based on whether the user is Editing or Previewing works
+        // correctly w/o having to manually refresh the page.
+        if (event.prevLayer && event.layer !== event.prevLayer) {
+            if (event.prevLayer !== 'Annotate' && event.layer !== 'Annotate') {
+                ns.ContentFrame.reload();
+            }
+        }
+    });
+})(jQuery, Granite.author);
+{% endhighlight %}
