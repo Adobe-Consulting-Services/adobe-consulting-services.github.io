@@ -17,7 +17,7 @@ initial-release: 2.2.0
 
 Easily set TTL headers on Requests in support of [AEM Dispatcher 4.1.11](https://www.adobeaemcloud.com/content/companies/public/adobe/dispatcher/dispatcher.html) TTL support.
 
-ACS AEM Commons Dispatcher TTL allows Response Headers to be set instructing AEM Dispatcher to respect a TTL-based timeout.
+ACS AEM Commons Dispatcher TTL allows Response Headers to be set instructing AEM Dispatcher to respect a TTL-based timeout. This feature does expect that a Dispatcher is in the request chain. To enable support in other scenarios, see the [note](acs-aem-commons/features/dispatcher-ttl.html#note).
 
 The following expiration configurations are supported
 
@@ -111,3 +111,42 @@ In your AEM Content project, create a `sling:Folder` under your application's `/
 * `max.age`: Max age value (in seconds) to put in Cache Control header.  
 * `expires.time`: Time of day which the content expires (HH:mm)
 * `expires.day-of-month`: Day of month to expire the content. Will expire on the closes day. Ex. If set to 31, in February will expire on the 28th (or 29th on leap-year).
+
+
+## Note
+
+This feature expects that the Dispatcher was involeved in the request chain. This expectation is managed via a known HTTP Header. To simulate the Dispatcher, add the necessary HTTP header to the request:
+
+> Server-Agent: Communique-Dispatcher
+
+An example _cURL_ request to add this header:
+
+> curl -v -H "Server-Agent: Communique-Dispatcher" http://localhost:4502/content/test -u admin:admin
+
+The output of the above would be:
+
+{% highlight bash %}
+*   Trying ::1...
+* connect to ::1 port 4502 failed: Connection refused
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 4502 (#0)
+* Server auth using Basic with user 'admin'
+> GET /content/test HTTP/1.1
+> Host: localhost:4502
+> Authorization: Basic YWRtaW46YWRtaW4=
+> User-Agent: curl/7.43.0
+> Accept: */*
+> Server-Agent: Communique-Dispatcher
+> 
+< HTTP/1.1 404 Not Found
+< Date: Tue, 18 Oct 2016 00:17:22 GMT
+< Cache-Control: max-age=10000
+< X-Content-Type-Options: nosniff
+< X-Frame-Options: SAMEORIGIN
+< Set-Cookie: cq-authoring-mode=CLASSIC;Path=/;Expires=Tue, 25-Oct-2016 00:17:22 GMT
+< Expires: Thu, 01 Jan 1970 00:00:00 GMT
+< Content-Type: text/html; charset=ISO-8859-1
+< Transfer-Encoding: chunked
+< 
+* Connection #0 to host localhost left intact
+{% endhighlight %}
