@@ -1,0 +1,9 @@
+---
+
+title: Release 1.9.4 now available!
+description: Minor enhancements and Bug fix release! Error Page Handler, Component Error Handler and Ensure Property Indexes now are better!
+date: 2014-11-21
+
+project: acs-aem-commons
+
+---

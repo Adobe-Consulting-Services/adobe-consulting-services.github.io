@@ -1,0 +1,9 @@
+---
+
+title: Release 1.8.0 now available!
+description: AEM Environment Indicator, OSGi Bundle Disabler, Query Packager, More Image Transformers, Package Replication Status Updater, Bulk Workflow Manager and more! 
+date: 2014-09-30
+
+project: acs-aem-commons
+
+---

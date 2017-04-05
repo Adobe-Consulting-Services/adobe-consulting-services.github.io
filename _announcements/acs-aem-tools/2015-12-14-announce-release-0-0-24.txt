@@ -1,0 +1,8 @@
+---
+
+title: Release 0.0.24 now available!
+description: New features include Resource Type/Template Updater along w/ enhancements and bug-fixes.
+
+project: acs-aem-tools
+
+---

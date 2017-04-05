@@ -1,9 +1,0 @@
----
-layout: acs-aem-tools_default
-title: Release 0.0.16 now available!
-description: Client Library Optimizer and AEM6 compatibility updates for AEM Fiddle
-date: 2014-11-21
-thumbnail: /images/default/thumbnail.png
-categories: news
-tags: acs-aem-tools-news
----

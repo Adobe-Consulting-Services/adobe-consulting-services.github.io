@@ -1,0 +1,40 @@
+
+@import "mixins";
+
+body {
+  background: #fff;
+  font-family: 'SourceSans';
+  font-weight: 200;
+  font-style: normal;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #4d4d4d;
+  font-size: 175%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'SourceSans';
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+.code {
+  background-color: #f7f7f7;
+  border-radius: 0;
+}
+
+.code-block {
+  @extend .code;
+  font-family: Courier, serif;
+}
+
+p a {
+  text-decoration: underline;
+}

@@ -1,8 +1,0 @@
----
-layout: acs-aem-tools_default
-title: Release 0.0.26 now available!
-description: AEM 6.2 Compatibility release.
-thumbnail: /images/default/thumbnail.png
-categories: news
-tags: acs-aem-tools-news
----

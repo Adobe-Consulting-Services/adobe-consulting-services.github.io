@@ -1,0 +1,28 @@
+---
+---
+
+
+$color: #1d6700;
+$color-dark: darken($color, 25%);
+$color-light: lighten($color, 25%);
+
+$secondary-color: #06A608;
+
+$dark-bg-color: #2ee200;
+$dark-bg-color-text: white;
+$dark-bg-color-light: #2bce00;
+$dark-bg-color-dark: #1f8b00;
+
+@import "shared";
+
+a {
+  color: $color;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+.color-block {
+  background: #2D3C27 url('/assets/acs-aem-tools/images/colored-bg.jpg');
+}

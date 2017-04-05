@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 2.6.10 and 3.2.12 now available!
-description: Bug fix releases
-date: 2016-08-24
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

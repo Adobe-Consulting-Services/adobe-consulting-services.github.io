@@ -2,16 +2,18 @@
 {% assign project = include.project %}
 
 <div class="feature" data-filter-tags="all {{ feature.feature-tags }}
- {% if feature.tags contains 'new' %} new 
- {% elsif feature.tags contains 'updated' %} updated {% endif %}">
+{% if feature.tags contains 'new' %} new
+{% elsif feature.tags contains 'legacy' %} legacy
+{% elsif feature.tags contains 'updated' %} updated {% endif %}">
     <a class="feature-image-wrapper" href="{{ feature.url }}">
 
-        {% if feature.tags contains 'beta' %}<div class="beta"></div>
+        {% if feature.tags contains 'deprecated' %}<div class="deprecated"></div>
+        {% elsif feature.tags contains 'beta' %}<div class="beta"></div>
         {% elsif feature.tags contains 'new' %}<div class="new"></div>
         {% elsif feature.tags contains 'updated' %}<div class="updated"></div>{% endif %}
 		
         <img class="img-responsive"
-             src="/{{ project }}{{ feature.thumbnail }}" alt="{{ feature.title }}"/></a>
+             src="{{ feature.url }}/../thumbnail.png" alt="{{ feature.title }}"/></a>
 
     <h3><a href="{{ feature.url }}">{{ feature.title }}</a></h3>
 

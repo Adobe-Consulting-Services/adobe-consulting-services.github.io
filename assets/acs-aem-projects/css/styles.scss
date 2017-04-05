@@ -1,0 +1,31 @@
+---
+---
+
+$color: #1e002e;
+$color-dark: darken($color, 25%);
+$color-light: lighten($color, 25%);
+
+$secondary-color: #333;
+
+$dark-bg-color: $color-light;
+$dark-bg-color-text: white;
+$dark-bg-color-dark: darken($dark-bg-color, 20%);
+$dark-bg-color-light: lighten($dark-bg-color, 10%);
+
+@import "shared";
+
+a {
+  color: $color;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+.color-block {
+  background: #2A073B url('/assets/acs-aem-projects/images/colored-bg.jpg');
+}
+
+.project-icons {
+  background-image: url('/assets/acs-aem-projects/images/icons-projects-w-gradient.png');
+}

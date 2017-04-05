@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 2.2.0 now available!
-description: Requires AEM 6.0 or higher! HTTP Cache, Dispatcher TTL and a number of updates and bug-fixes.
-date: 2015-12-15
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

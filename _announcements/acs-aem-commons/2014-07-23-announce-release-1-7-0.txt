@@ -1,0 +1,9 @@
+---
+
+title: Release 1.7.0 now available!
+description: Share This Cloud Service, Oak Index Manager, Component Disabler, JSON Event Logger, AJAX Base Component loading indicator and Touch UI hot keys
+date: 2014-07-23
+
+project: acs-aem-commons
+
+---

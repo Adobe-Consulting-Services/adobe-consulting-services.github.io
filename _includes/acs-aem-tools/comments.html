@@ -1,0 +1,30 @@
+{% assign pageId = (page.url | remove: "/index.html") %}
+{% assign prefix = "http://adobe-consulting-services.github.io" %}
+
+<div class="comment-header">
+    Please report any issues with the Feature or documentation on the <a href="https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues/new" target="_blank">ACS AEM Tools GitHub Issue tracker</a>.
+</div>
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_shortname = 'acsaemtools';
+
+    var disqus_config = function () {
+        this.page.url = '{{prefix}}{{ page.url }}';
+        this.page.identifier = '{{ pageId }}';
+        this.page.title = '{{ page.title }}';
+    };
+
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

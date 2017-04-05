@@ -1,0 +1,9 @@
+---
+
+title: Release 2.2.2 now available!
+description: Compatibility release
+date: 2016-01-15
+
+project: acs-aem-commons
+
+---

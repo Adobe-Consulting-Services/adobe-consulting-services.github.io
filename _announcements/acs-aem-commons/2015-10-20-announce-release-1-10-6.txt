@@ -1,0 +1,9 @@
+---
+
+title: Release 1.10.6 now available!
+description: Bug fix release.
+date: 2015-10-20
+
+project: acs-aem-commons
+
+---

@@ -1,8 +1,0 @@
----
-layout: acs-aem-tools_default
-title: Release 0.0.24 now available!
-description: New features include Resource Type/Template Updater along w/ enhancements and bug-fixes.
-thumbnail: /images/default/thumbnail.png
-categories: news
-tags: acs-aem-tools-news
----

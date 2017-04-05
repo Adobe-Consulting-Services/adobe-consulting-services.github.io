@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 1.7.4 now available!
-description: Bug Fix Release
-date: 2014-08-27
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

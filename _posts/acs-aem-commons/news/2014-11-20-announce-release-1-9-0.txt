@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 1.9.2 now available!
-description: Synthetic Workflow, Quickly (Beta!), E-mail Template Workflow Process, Chained Named Transforms, sling:OrderedFolder Support for Package Replication Status, One-to-many Dispatcher Flush Rules and more! 
-date: 2014-11-21
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

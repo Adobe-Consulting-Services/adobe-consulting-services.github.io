@@ -1,0 +1,9 @@
+---
+
+title: Release 0.0.2 now available!
+description: First public release!
+date: 2013-12-18
+
+project: acs-aem-tools
+
+---

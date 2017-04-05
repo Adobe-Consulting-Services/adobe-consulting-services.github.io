@@ -1,0 +1,55 @@
+.icon {
+  display: block;
+}
+
+.info-icons {
+  background-image: url('/assets/shared/images/icons-informational.png');
+  width: 100px;
+  height: 100px;
+}
+
+.icon-check {
+  @extend .info-icons;
+  background-position:0px 0px;
+}
+
+.icon-x {
+  @extend .info-icons;
+  background-position:-100px 0px;
+}
+
+.icon-gear {
+  @extend .info-icons;
+  background-position:-200px 0px;
+}
+
+.icon-download {
+  @extend .info-icons;
+  background-position:-300px 0px;
+}
+
+.icon-laptop {
+  @extend .info-icons;
+  background-position:-400px 0px;
+}
+
+.project-icons {
+  background-image: url('/assets/shared/images/icons-projects.png');
+  width: 100px;
+  height: 100px;
+}
+
+.icon-acs-aem-commons {
+  @extend .project-icons;
+  background-position:0px 0px;
+}
+
+.icon-acs-aem-tools {
+  @extend .project-icons;
+  background-position:-100px 0px;
+}
+
+.icon-acs-aem-samples {
+  @extend .project-icons;
+  background-position:-200px 0px;
+}

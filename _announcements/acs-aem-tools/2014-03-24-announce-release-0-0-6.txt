@@ -1,0 +1,9 @@
+---
+
+title: Release 0.0.6 now available!
+description: New Query Editor Tool; New Developer Health Checks; Misc AEM 6 compatibility fixes.
+date: 2014-03-24
+
+project: acs-aem-tools
+
+---

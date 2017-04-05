@@ -1,0 +1,9 @@
+---
+
+title: Release 0.0.8 now available!
+description: Live Reload now supports JavaScript injection to support mobile devices.
+date: 2014-04-16
+
+project: acs-aem-tools
+
+---

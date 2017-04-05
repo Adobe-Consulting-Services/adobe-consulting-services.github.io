@@ -1,0 +1,9 @@
+---
+
+title: Release 3.6.2 now available!
+description: Bug fix release
+date: 2016-01-17
+
+project: acs-aem-commons
+
+---

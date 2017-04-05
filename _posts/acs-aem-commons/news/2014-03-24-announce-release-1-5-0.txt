@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 1.5.0 now available!
-description: New Features - Named Image Transform Servlet, ACL Packager, Responsive Column Control,Sitemap Generator, MultiField Panel Widget, Syslog Integration and LinkedIn OAuth2 support.
-date: 2014-03-24
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

@@ -11,7 +11,9 @@ layout: acs-aem-commons_default
             <div class="feature-doc-header">
                 <h1>
                     {{ page.title }}
-                    {% if page.tags contains 'beta' %}
+                    {% if page.tags contains 'deprecated' %}
+                    <span class="deprecated">Deprecated</span>
+                    {% elsif page.tags contains 'beta' %}
                     <span class="beta">Beta</span>	
                     {% elsif page.tags contains 'new' %}
                     <span class="new">New!</span>

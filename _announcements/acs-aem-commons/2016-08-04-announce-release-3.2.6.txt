@@ -1,0 +1,9 @@
+---
+
+title: 3.2.6 now available!
+description: Bug fix release for AEM 6.2
+date: 2016-08-04
+
+project: acs-aem-commons
+
+---
