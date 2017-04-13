@@ -5,7 +5,7 @@ description: Configure components with properties shared across pages.
 date: 2016-11-14
 thumbnail: /images/shared-component-properties/thumbnail.png
 feature-tags: authoring component-dev
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 2.9.0
 ---

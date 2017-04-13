@@ -5,7 +5,7 @@ description: Check AEM's temperature
 date: 2016-11-01
 thumbnail: /images/healthchecks/thumbnail.png
 feature-tags: administration standard
-tags: acs-aem-commons-features new
+tags: acs-aem-commons-features
 categories: acs-aem-commons features
 initial-release: 3.4.0
 ---
