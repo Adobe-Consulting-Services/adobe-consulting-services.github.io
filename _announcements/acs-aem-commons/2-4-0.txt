@@ -1,0 +1,9 @@
+---
+
+title: Release 2.4.2 & 3.0.2 now available!
+description: AEM 6.2 Support (in 3.0.2) ... Fast Action Manager, Path-based rendition conditions, Social image support for Named Image Transform, and more!
+date: 2016-04-27
+
+project: acs-aem-commons
+
+---

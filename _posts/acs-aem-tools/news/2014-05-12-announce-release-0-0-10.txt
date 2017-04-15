@@ -1,9 +1,0 @@
----
-layout: acs-aem-tools_default
-title: Release 0.0.10 now available!
-description: Adding ACS AEM Tools to AEM 6 Touch navigation.
-date: 2014-05-12
-thumbnail: /images/default/thumbnail.png
-categories: news
-tags: acs-aem-tools-news
----

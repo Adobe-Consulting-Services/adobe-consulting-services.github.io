@@ -1,0 +1,9 @@
+---
+
+title: Release 1.3.0 now available!
+description: New feature XSS JSP Functions. Bug fixes to versioned client libraries.
+date: 2013-12-11
+
+project: acs-aem-commons
+
+---

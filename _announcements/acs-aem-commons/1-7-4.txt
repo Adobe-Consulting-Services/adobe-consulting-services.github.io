@@ -1,0 +1,9 @@
+---
+
+title: Release 1.7.4 now available!
+description: Bug Fix Release
+date: 2014-08-27
+
+project: acs-aem-commons
+
+---

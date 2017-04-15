@@ -1,0 +1,9 @@
+---
+
+title: Release 1.4.2 now available!
+description: Bugfix release
+date: 2014-02-10
+
+project: acs-aem-commons
+
+---

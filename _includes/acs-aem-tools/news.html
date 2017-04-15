@@ -1,13 +1,15 @@
 <section class="news">
     <div class="container">
         <ul class="show-more-list">
-
-            {% for post in site.tags.acs-aem-tools-news %}
+            {% assign sorted = (site.announcements | sort: 'date') | reverse %}
+            {% for post in sorted %}
+            {% if post.project == 'acs-aem-tools' %}
             <li class="news-entry">
                 <span class="title">{{ post.title }}</span>
                 @ <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
                 &#x219d; <span class="description">{{ post.description }}</span>
             </li>
+            {% endif %}
             {% endfor %}
 
             <a class="show-more" href="javascript:void();">Show more news &#x2193;</a>

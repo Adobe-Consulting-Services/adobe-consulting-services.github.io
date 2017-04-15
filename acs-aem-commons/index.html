@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_home
 title: Adobe AEM Commons
-description: A way to bootstrap AEM project with common functionality, a set ofreusable components, and an AEM development toolkit.
+description: A way to bootstrap AEM project with common functionality, a set of reusable components, and an AEM development toolkit.
 ---
 <!-- How to use -->
 <section class="introduction" id="introduction">
@@ -58,7 +58,7 @@ description: A way to bootstrap AEM project with common functionality, a set ofr
 <section class="features" id="features">
     <div class="stripe">
         <div class="container">
-            <h2 id="features">Features</h2>
+            <h2>Features</h2>
         </div>
     </div>
 
@@ -68,14 +68,15 @@ description: A way to bootstrap AEM project with common functionality, a set ofr
     
     <div class="container">
         <div class="wrapper">
-                {{ page.project }}
 
-            {% for post in site.tags.acs-aem-commons-features %}
-                {% include shared/feature-card.html feature=post project=site.data.acs-aem-commons.name %}
+            {% assign sorted = site.acs-aem-commons | sort: 'date' | reverse %}
+            {% for page in sorted %}
+            {% assign depth = page.path | split: '/' | size %}
+                {% if depth == 4 %}
+                    {% include shared/feature-card.html feature=page project=site.data.acs-aem-commons.name %}
+                {% endif %}
             {% endfor %}
-
         </div>
-
     </div>
 </section>
 

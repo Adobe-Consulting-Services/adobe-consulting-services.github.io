@@ -1,0 +1,9 @@
+---
+
+title: Release 1.4.0 now available!
+description: Audio component now has analytics integration.
+date: 2013-12-12
+
+project: acs-aem-commons
+
+---

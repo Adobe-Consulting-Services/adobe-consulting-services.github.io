@@ -33,7 +33,6 @@ This page identifies the versions of Adobe Experience Manager with which a parti
 | 2.8.X           |            |          |             | &#x2714;  | &#x2714;  |            |            |
 | 2.9.X           |            |          |             | &#x2714;  | &#x2714;  |            |            |
 | 2.10.X          |            |          |             | &#x2714;  | &#x2714;  |            |            |
-| 2.11.X          |            |          |             | &#x2714;  | &#x2714;  |            |            |
 | 3.0.X           |            |          |             |           |           | &#x2714;   |            |
 | 3.1.X           |            |          |             |           |           | &#x2714;   |            |
 | 3.2.X           |            |          |             |           |           | &#x2714;   |            |
@@ -41,6 +40,4 @@ This page identifies the versions of Adobe Experience Manager with which a parti
 | 3.4.X           |            |          |             |           |           | &#x2714;   |            |
 | 3.5.X           |            |          |             |           |           | &#x2714;   |            |
 | 3.6.X           |            |          |             |           |           | &#x2714;   |            |
-| 3.7.X           |            |          |             |           |           | &#x2714;   |            |
-| 3.8.X           |            |          |             |           |           | &#x2714;   |  &#x2714;  |
-
+| 3.7.X           |            |          |             |           |           | &#x2714;   |  &#x2714;  |

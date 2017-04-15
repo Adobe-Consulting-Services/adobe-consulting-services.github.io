@@ -1,0 +1,9 @@
+---
+
+title: Release 2.0.4 now available!
+description: AEM 6.0 Required! Bug Fix Release
+date: 2015-09-16
+
+project: acs-aem-commons
+
+---

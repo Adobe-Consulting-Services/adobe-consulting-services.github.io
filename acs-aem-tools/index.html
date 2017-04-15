@@ -69,26 +69,18 @@ description: A set of tools whose goal is making AEM developer lives easier.
         </div>
     </div>
 
-    <div class="container">
+       <div class="container">
         <div class="wrapper">
-            {% for post in site.tags.acs-aem-tools-features %}
+            {{ page.project }}
 
-                {% assign mod2 = forloop.index|modulo:2 %}
-                {% assign mod3 = forloop.index|modulo:3 %}
-
-                {% include shared/feature-card.html feature=post project=site.data.acs-aem-tools.name %}
-
-                {% if mod2 == 0 %}
-                <div class="clearfix visible-sm visible-xs hidden-md hidden-lg"></div>
+            {% assign sorted = site.acs-aem-tools | sort: 'date' | reverse %}
+            {% for page in sorted %}
+                {% assign depth = page.path | split: '/' | size %}
+                {% if depth == 4 %}
+                    {% include shared/feature-card.html feature=page project=site.data.acs-aem-tools.name %}
                 {% endif %}
-
-                {% if mod3 == 0 %}
-                <div class="clearfix hidden-sm hidden-xs visible-md visible-lg"></div>
-                {% endif %}
-
             {% endfor %}
         </div>
-
     </div>
 </section>
 

@@ -1,0 +1,53 @@
+---
+---
+
+$color: #333; /*#cb0900; */
+$color-dark: darken($color, 25%);
+$color-light: lighten($color, 25%);
+
+$secondary-color: red;
+
+$dark-bg-color: #f55115;
+$dark-bg-color-text: darken($color, 10%);
+$dark-bg-color-light: #ff8781;
+$dark-bg-color-dark: #bc2606;
+
+@import "shared";
+
+a {
+  color: $color;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+.color-block {
+	background: #882021 url('/assets/acs-aem-commons/images/colored-bg.jpg');
+}
+
+table.data-table {	
+	margin: 0 auto 2em auto;
+	
+	thead {
+		border-bottom: solid 1px #ccc;
+		
+		tr {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+	
+	th, td {
+		padding: 1em 1.5em;
+	}
+
+	tr {
+		border-bottom: solid 1px #eee;
+		
+		&:hover {
+			background-color: #f7f7f7;
+		}
+	}
+}

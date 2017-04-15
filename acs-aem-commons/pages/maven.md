@@ -29,7 +29,7 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
 <dependency>
     <groupId>com.adobe.acs</groupId>
     <artifactId>acs-aem-commons-content</artifactId>
-    <version>{{ site.data.acs-aem-commons.62version }}</version>
+    <version>{{ site.data.acs-aem-commons.version62 }}</version>
     <type>content-package</type>
 </dependency>
 {% endhighlight %}

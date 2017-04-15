@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 2.2.4 now available!
-description: Bug-fix release! Fixes Workflow Remover from being enabled by default!
-date: 2016-01-25
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

@@ -1,0 +1,43 @@
+---
+---
+
+$color: #333; /*#cb0900; */
+$color-dark: darken($color, 25%);
+$color-light: lighten($color, 25%);
+
+$secondary-color: #E59BA8;
+
+$dark-bg-color: #441434;
+$dark-bg-color-text: darken($color, 10%);
+$dark-bg-color-light: #8859a7;
+$dark-bg-color-dark: #A14E84;
+
+@import "shared";
+
+a {
+  color: $color;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+.color-block {
+  background: #5a2648 url('/assets/acs-aem-samples/images/colored-bg.jpg');
+}
+
+/* Home Page Columns */
+
+.samples-section {
+  border-bottom: dotted 1px #ccc;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+}
+
+.col1, .col2 {
+  @include make-xs-column(12);
+  @include make-sm-column(6);
+  @include make-md-column(6);
+  @include make-lg-column(6);
+}
+

@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 2.10.0 and 3.7.0 now available!
-description: Service User Manager (6.2+ only), Audit Log Search, Page Compare, Contextual Pathbrowser, and more!
-date: 2017-03-15
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

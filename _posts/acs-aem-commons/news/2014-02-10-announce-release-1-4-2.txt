@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 1.4.2 now available!
-description: Bugfix release
-date: 2014-02-10
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

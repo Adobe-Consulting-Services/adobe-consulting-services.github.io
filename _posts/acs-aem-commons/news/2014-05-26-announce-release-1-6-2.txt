@@ -1,9 +1,0 @@
----
-layout: acs-aem-commons_default
-title: Release 1.6.2 now available!
-description: Bug release for ACL Packager, Content Finder - Query Builder and Dispatcher Flush Rules.
-date: 2014-05-26
-thumbnail: /images/default/thumbnail.png
-categories: acs-aem-commons news
-tags: acs-aem-commons-news
----

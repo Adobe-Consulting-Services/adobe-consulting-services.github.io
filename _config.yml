@@ -3,4 +3,17 @@ highlighter: rouge
 markdown: kramdown
 exclude:  [ Gemfile, Gemfile.lock, README.md, vendor/ ]
 baseurl: /
-permalink: none
+collections:
+  announcements:
+    output: false
+  acs-aem-commons:
+    output: true
+  acs-aem-tools:
+    output: true
+  contributors:
+    output: true
+gems:
+  - jekyll-redirect-from
+sass:
+    sass_dir: _sass
+    style: compressed

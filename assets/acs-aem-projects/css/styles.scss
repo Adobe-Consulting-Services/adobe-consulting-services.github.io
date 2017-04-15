@@ -1,0 +1,69 @@
+---
+---
+
+$color: #1e002e;
+$color-dark: darken($color, 25%);
+$color-light: lighten($color, 25%);
+
+$secondary-color: #333;
+
+$dark-bg-color: $color-light;
+$dark-bg-color-text: white;
+$dark-bg-color-dark: darken($dark-bg-color, 20%);
+$dark-bg-color-light: lighten($dark-bg-color, 10%);
+
+@import "shared";
+
+a {
+  color: $color;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+.acs-aem-projects {
+  #jumbotron {
+
+    .wrapper {
+      margin-bottom: 2.5rem;
+    }
+
+    .message {
+      top: 0;
+      margin-bottom: 2rem;
+    }
+
+    .projects-wrapper {
+      .center {
+        width: 36%;
+        margin-top: 0;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+
+      a {
+        float: left;
+        width: 30%;
+        height: auto;
+        margin-top: 3%;
+        margin-left: 0;
+        margin-right: 0;
+
+        img {
+          height: auto;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .color-block {
+    background: #2A073B url('/assets/acs-aem-projects/images/colored-bg.jpg');
+  }
+
+  .project-icons {
+    background-image: url('/assets/acs-aem-projects/images/icons-projects-w-gradient.png');
+  }
+}
