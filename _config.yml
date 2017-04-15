@@ -5,7 +5,7 @@ exclude:  [ Gemfile, Gemfile.lock, README.md, vendor/ ]
 baseurl: /
 collections:
   announcements:
-    output: true
+    output: false
   acs-aem-commons:
     output: true
   acs-aem-tools:

@@ -5,6 +5,7 @@ description: Set TTLs on ClientLib JS/CSS to infinity and beyond!
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/versioned-clientlibs.html
 feature-tags: component-dev backend-dev
+tags: updated
 initial-release: 1.2.0
 ---
 
@@ -62,3 +63,11 @@ SetEnvIf Request_URI "(\.min)?\.[a-f0-9]+\.js" long_expires=true
 SetEnvIf Request_URI "(\.min)?\.[a-f0-9]+\.css" long_expires=true
 Header set Cache-Control max-age=2592000 env=long_expires 
 {% endhighlight %}
+
+## MD5 Enforcement (Since 2.11.0/3.8.0)
+
+Optionally, a filter can registered which checks incoming requests for client libraries and ensures that the hash in the path is the correct value. To enable this, set the property `enforce.md5` to `true` on the PID `com.adobe.acs.commons.rewriter.impl.VersionedClientlibsTransformerFactory`
+
+![transformer factory configuration]({{ site.data.acs-aem-commons.baseurl }}/images/versioned-clientlibs/config.png)
+
+> If you enable this option, the hash will be prefixed with `ACSHASH` to ensure that only rewritten paths are validated. Be sure to incorporate this into any web server or CDN rules.

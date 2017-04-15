@@ -5,6 +5,7 @@ description: Easily generate sitemaps for search indexing
 date: 2014-01-01
 redirect_from: /acs-aem-commons/features/simple-sitemap.html
 initial-release: 1.5.0
+tags: updated
 ---
 
 # Purpose
@@ -15,9 +16,7 @@ Generate a Sitemap XML file in the syntax defined by [http://www.sitemaps.org/](
 
 In order to use this feature, you must have a "home page" page component, e.g. `geometrixx/components/homepage`. Once you have determined the resource type for this page component, configure a new instance of the `com.adobe.acs.commons.wcm.impl.SiteMapServlet` servlet with the resource type and, optionally, a domain name configured in the Externalizer component.
 
-![sitemap servlet configuration](images/config.png)
-
-
+![sitemap servlet configuration]({{ site.data.acs-aem-commons.baseurl }}/images/sitemap/config.png)
 
 > See [http://dev.day.com/docs/en/cq/current/developing/externalizer.html](http://dev.day.com/docs/en/cq/current/developing/externalizer.html) for more information on configuring the Externalizer.
 
@@ -68,3 +67,7 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
 
 * *exclude.property* The `[cq:Page]/jcr:content` property name which if evaluates to true, excludes the Page from the site map. Defaults to backwards compatible property name `hideInNav`, allowing the Hide In Navigation checkbox to control if the page is excluded from Site map.
   * To disregard all properties, set to a non-existent property: `exclude.property=null` as this will always evaluate to `false`
+
+#### Since v2.11.0/3.8.0
+
+* *character.encoding* The character encoding for the output from the servlet. If not specified, the container's default encoding for XML files is used (which is ISO-8859-1 for Jetty).

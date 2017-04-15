@@ -1,8 +1,8 @@
 <section class="news">
     <div class="container">
         <ul class="show-more-list">
-
-            {% for post in site.announcements | sort: 'date' %}
+            {% assign sorted = (site.announcements | sort: 'date') | reverse %}
+            {% for post in sorted %}
             {% if post.project == 'acs-aem-tools' %}
             <li class="news-entry">
                 <span class="title">{{ post.title }}</span>
