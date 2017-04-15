@@ -1,4 +1,5 @@
 com.adobe.acs.commons.analysis.jcrchecksum
+com.adobe.acs.commons.audit_log_search
 com.adobe.acs.commons.components.longformtext
 com.adobe.acs.commons.dam
 com.adobe.acs.commons.dam.audio
@@ -12,6 +13,7 @@ com.adobe.acs.commons.forms.components
 com.adobe.acs.commons.forms.helpers
 com.adobe.acs.commons.functions
 com.adobe.acs.commons.genericlists
+com.adobe.acs.commons.http
 com.adobe.acs.commons.http.injectors
 com.adobe.acs.commons.httpcache
 com.adobe.acs.commons.httpcache.config
@@ -25,6 +27,7 @@ com.adobe.acs.commons.httpcache.store
 com.adobe.acs.commons.httpcache.util
 com.adobe.acs.commons.images
 com.adobe.acs.commons.json
+com.adobe.acs.commons.models.injectors.annotation
 com.adobe.acs.commons.notifications
 com.adobe.acs.commons.oak
 com.adobe.acs.commons.packaging
@@ -35,14 +38,19 @@ com.adobe.acs.commons.replication
 com.adobe.acs.commons.replication.dispatcher
 com.adobe.acs.commons.replication.status
 com.adobe.acs.commons.rewriter
+com.adobe.acs.commons.search
 com.adobe.acs.commons.social.linkedin
 com.adobe.acs.commons.synth
+com.adobe.acs.commons.synth.children
 com.adobe.acs.commons.twitter
 com.adobe.acs.commons.util
 com.adobe.acs.commons.util.visitors
 com.adobe.acs.commons.version
 com.adobe.acs.commons.version.model
 com.adobe.acs.commons.wcm
+com.adobe.acs.commons.wcm.comparisons
+com.adobe.acs.commons.wcm.comparisons.lines
+com.adobe.acs.commons.wcm.comparisons.model
 com.adobe.acs.commons.wcm.datasources
 com.adobe.acs.commons.wcm.notifications
 com.adobe.acs.commons.wcm.properties.shared
