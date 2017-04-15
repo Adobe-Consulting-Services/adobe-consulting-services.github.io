@@ -2,8 +2,8 @@
 layout: acs-aem-commons_feature
 title: Exporters
 description: Users to CSV Export!
-sub-feature: true
 date: 2016-11-02
+redirect_from: /acs-aem-commons/features/exports.html
 feature-tags: administration
 tags: 
 initial-release: 3.4.0

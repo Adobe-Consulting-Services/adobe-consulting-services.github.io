@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Query Path Render Condition
 description: Show and hide your nodes in Touch UI based on the current path.
 date: 2016-04-25
+redirect_form: /acs-aem-commons/features/path-rendercondition.html
 initial-release: 2.4.0/3.0.0
 ---
 

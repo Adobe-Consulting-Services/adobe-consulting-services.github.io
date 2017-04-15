@@ -3,11 +3,9 @@ layout: acs-aem-commons_feature
 title: Error Page Handler
 description: Create authorable error pages with ease
 date: 2013-09-30
-thumbnail: /images/errorpagehandler/thumbnail.png
+redirect_from: /acs-aem-commons/features/errorpagehandler.html
 youtube-id: w4P9T_miX8Q
 feature-tags: authoring standard
-tags: acs-aem-commons-features
-categories: acs-aem-commons features
 initial-release: 1.0.0
 ---
 

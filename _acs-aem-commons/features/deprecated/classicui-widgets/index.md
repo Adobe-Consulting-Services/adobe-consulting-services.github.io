@@ -3,9 +3,15 @@ layout: acs-aem-commons_feature
 title: Custom Widgets and Validators
 description: Improve your dialogs
 date: 2014-01-02
+redirect_from: /acs-aem-commons/features/widgets.html
 tags: deprecated
 feature-tags: component-dev
 ---
+
+## Why is this deprecated?
+
+Since AEM 6.2, UI should be used for developing components. Since these widgets are in direct support of ClassicUI widget development, they are deprecated.
+
 
 ## Vanity Path Uniqueness Check (Since 1.5.0)
 

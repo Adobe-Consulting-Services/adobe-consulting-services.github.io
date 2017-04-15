@@ -1,11 +1,10 @@
 ---
 layout: acs-aem-commons_feature
 title: Dispatcher Flush UI
-description: The conveniece of flushing by yourself
+description: The convenience of flushing by yourself
 date: 2013-10-02
+redirect_from: /acs-aem-commons/features/dispatcher-flush-ui.html
 feature-tags: administration standard
-tags: acs-aem-commons-features
-categories: acs-aem-commons features
 initial-release: 1.2.0
 ---
 

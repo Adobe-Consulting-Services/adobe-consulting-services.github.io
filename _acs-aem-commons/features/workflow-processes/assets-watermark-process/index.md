@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Rendition Watermarker
 description: Watermark asset renditions.
-sub-feature: true
+redirect_from: /acs-aem-commons/features/dam-workflow-processes.html
 date: 2013-10-02
 initial-release: 1.0.0
 ---

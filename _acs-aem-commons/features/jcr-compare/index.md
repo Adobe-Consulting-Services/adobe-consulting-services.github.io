@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: JCR Compare
 description: See what content is different between JCRs
 date: 2015-10-1
+redirect_from: /acs-aem-commons/features/jcr-checksum-compare.html
 feature-tags: administration content-migration
 initial-release: 2.1.0
 

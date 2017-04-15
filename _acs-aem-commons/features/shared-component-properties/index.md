@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Shared Component Properties
 description: Configure components with properties shared across pages
 date: 2016-11-14
+redirect_from: /acs-aem-commons/features/shared-component-properties.html 
 feature-tags: authoring component-dev
 tags: 
 initial-release: 2.9.0

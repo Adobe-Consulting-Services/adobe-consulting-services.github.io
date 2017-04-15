@@ -1,69 +1,29 @@
 /*
-Error: Undefined mixin 'make-xs-column'.
-        on line 9 of _sass/_feature-cards.scss, in `make-xs-column'
-        from line 9 of _sass/_feature-cards.scss
+Error: Invalid CSS after "$color: #1e002e": expected "{", was ";"
+        on line 4 of assets/acs-aem-projects/css/styles.scss
 
-4:   .stripe {
-5:     margin-bottom: 2em;
-6:   }
+1: ---
+2: ---
+3: 
+4: $color: #1e002e;
+5: $color-dark: darken($color, 25%);
+6: $color-light: lighten($color, 25%);
 7: 
-8:   .feature {
-9:     @include make-xs-column(12);
-10:     @include make-sm-column(6);
-11:     @include make-md-column(4);
-12:     @include make-lg-column(4);
-13: 
-14:     height: 350px;
+8: $secondary-color: #333;
+9: 
 
 Backtrace:
-_sass/_feature-cards.scss:9:in `make-xs-column'
-_sass/_feature-cards.scss:9
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `with_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+assets/acs-aem-projects/css/styles.scss:4
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:665:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
@@ -77,4 +37,4 @@ _sass/_feature-cards.scss:9
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'make-xs-column'.\A         on line 9 of _sass/_feature-cards.scss, in `make-xs-column'\A         from line 9 of _sass/_feature-cards.scss\A \A 4:   .stripe {\A 5:     margin-bottom: 2em;\A 6:   }\A 7: \A 8:   .feature {\A 9:     @include make-xs-column(12);\A 10:     @include make-sm-column(6);\A 11:     @include make-md-column(4);\A 12:     @include make-lg-column(4);\A 13: \A 14:     height: 350px;"; }
+  content: "Error: Invalid CSS after \"$color: #1e002e\": expected \"{\", was \";\"\A         on line 4 of assets/acs-aem-projects/css/styles.scss\A \A 1: ---\A 2: ---\A 3: \A 4: $color: #1e002e;\A 5: $color-dark: darken($color, 25%);\A 6: $color-light: lighten($color, 25%);\A 7: \A 8: $secondary-color: #333;\A 9: "; }

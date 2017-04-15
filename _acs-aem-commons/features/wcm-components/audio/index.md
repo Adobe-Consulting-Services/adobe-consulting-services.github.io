@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Audio Component
 description: An HTML5 audio component and related workflow process
 date: 2013-08-10
+redirect_from: /acs-aem-commons/features/generic-lists.html
 feature-tags: component-dev components
 initial-release: 1.0.0
 ---

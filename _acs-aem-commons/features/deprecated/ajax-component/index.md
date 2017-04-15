@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Base AJAX Component
 description: AJAX-ify your AEM Components with ease
 date: 2013-07-30
-sub-feature: true
+redirect_from: /acs-aem-commons/features/ajax-component.html
 youtube-id: 8fAyI2IVBbc
 feature-tags: component-dev
 tags: deprecated
@@ -12,9 +12,9 @@ initial-release: 1.0.0
 
 ## Why is this deprecated?
 
+An robust alternative that supersedes this feature is the open-source [Sling Dynamic Include (SDI)](https://github.com/Cognifide/Sling-Dynamic-Include#sling-dynamic-include) library. SDI has been contributed to the Apache Sling project and provides: SSI, ESI, and JSI (Javascript-Side Include; which is effectively what this ACS AEM Commons feature provided) capabilities.
 
-> An robust alternative that supercedes this feature is the open-source [Sling Dynamic Include (SDI)](https://github.com/Cognifide/Sling-Dynamic-Include#sling-dynamic-include) library. SDI has been contributed to the Apache Sling project and provides: SSI, ESI, and JSI (Javascript-Side Include; which is effectively what this ACS AEM Commons feature provided) capabilities.
-> We recommend evaluating Sling Dyanmic Include before using this feature.
+We recommend evaluating Sling Dynamic Include before using this feature.
 
 
 ## Purpose

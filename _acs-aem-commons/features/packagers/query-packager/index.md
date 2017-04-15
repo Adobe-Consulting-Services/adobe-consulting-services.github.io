@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Query Packager
 description: Create package definitions from Queries
-sub-feature: true
+redirect_from: /acs-aem-commons/features/query-packager.html
 date: 2014-09-22
 feature-tags: administration
 initial-release: 1.8.0

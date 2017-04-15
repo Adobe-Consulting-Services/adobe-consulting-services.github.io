@@ -3,9 +3,15 @@ layout: acs-aem-commons_feature
 title: Component Helper
 description: Simplify your components
 date: 2013-06-10
+redirect_from: /acs-aem-commons/features/oak-index-manager.html
 tags: deprecated
 initial-release: 1.0.0
 ---
+
+## Why is this deprecated?
+
+Since 6.0, HTL should be used to develop components. HTL and SlingModels provide better facilities for achieving the same functionality provided in ComponentHelper, thus it is deprecated. 
+
 
 ## Purpose
 

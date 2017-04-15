@@ -37,19 +37,26 @@ $xs-height: auto;
   .wrapper {
     @include make-row();
     @extend .jumbotron-height;
+    margin-top: 2.5rem;
     margin-bottom: 0;
     text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     .message {
       @include make-md-column(12);
       padding: 0 2em;
       margin-bottom: 4em;
       text-align: center;
+
+      a {
+        display: inline-block;
+      }
     }
 
     img {
       @extend .img-responsive;
-      max-width: 90%;
+      max-width: 100%;
       margin: 0 auto;
     }
 
@@ -72,6 +79,12 @@ $xs-height: auto;
     /* Desktop; Show top/bottom or side-by-side */
     @media (min-width: $screen-md-min) {
       overflow: hidden;
+
+      .wrapper {
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
 
       img {
         height: 550px;

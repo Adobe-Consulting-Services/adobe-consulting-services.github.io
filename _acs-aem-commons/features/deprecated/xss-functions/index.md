@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: XSS JSP Functions
 description: JSP Taglib for XSS Protection
 date: 2013-12-11
+redirect_from: /acs-aem-commons/features/xss-functions.html
 tags: deprecated
 feature-tags: component-dev standard
 initial-release: 1.3.0
@@ -10,8 +11,7 @@ initial-release: 1.3.0
 
 ## Why is the deprecated?
 
-Since AEM 6.0, you should be developing using HTL which auto-XSS protects. Manually using the XSS APIs is a deprecated approach to presentation layer development. 
-
+Since AEM 6.0, HTL (which auto-XSS protects) is the preferred over JSP, thus this feature which directly supports use of JSP's is deprecated. 
 
 ## Purpose
 

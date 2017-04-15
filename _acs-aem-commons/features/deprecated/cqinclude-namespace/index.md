@@ -3,10 +3,15 @@ layout: acs-aem-commons_feature
 title: cqinclude Namespace
 description: Use your components as building blocks
 date: 2015-05-19
+redirect_from: /acs-aem-commons/features/cqinclude-namespace.html
 tags: deprecated
 feature-tags: component-dev
 initial-release: 1.10.2
 ---
+
+## Why is this deprecated?
+
+Since 6.2, ClassicUI dialog development should be avoided. Since this is in direct support of the ClassicUI dialog development, this feature is now deprecated.  
 
 ## Purpose
 

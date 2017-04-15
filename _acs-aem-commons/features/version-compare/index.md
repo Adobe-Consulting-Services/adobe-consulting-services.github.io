@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Version Comparison Tool
 description: Need to compare multiple versions of a page?
 date: 2015-08-21
-sub-feature: true
+redirect_from: /acs-aem-commons/features/version-comparison.html	/acs-aem-commons/features/version-compare/index.html
 feature-tags: authoring administration
 initial-release: 2.0.0
 ---

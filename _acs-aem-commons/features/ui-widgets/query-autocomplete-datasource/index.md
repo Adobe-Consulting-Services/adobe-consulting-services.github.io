@@ -3,7 +3,8 @@ layout: acs-aem-commons_feature
 title: Query Autocomplete Datasource
 description: Xpath driven autocomplete lists
 date: 2016-04-25
-\feature-tags: component-dev
+redirect_from: /acs-aem-commons/features/queryautocomplete-datasource.html
+feature-tags: component-dev
 initial-release: 2.5.0/3.1.0
 ---
 

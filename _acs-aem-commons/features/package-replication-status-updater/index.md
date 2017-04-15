@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Package Replication Status Updater
 description: Replicate content packages and have your cake too!
 date: 2014-09-02
+redirect_from: /acs-aem-commons/features/package-replication-status-updater.html
 feature-tags: content-migration administration
 initial-release: 1.8.0
 ---

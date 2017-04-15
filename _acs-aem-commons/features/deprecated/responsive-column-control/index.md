@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Responsive Column Control
 description: Give your authors maximal column layout flexibility.
 date: 2014-01-14
+redirect_from: /acs-aem-commons/features/responsive-column-control.html
 tags: deprecated
 feature-tags: component-dev
 initial-release: 1.5.0
@@ -10,7 +11,7 @@ initial-release: 1.5.0
 
 ## Why is this deprecated?
 
-Since AEM 6.2, you should be creating responsive columns (or any column for that matter) using the AEM Layout Container and Template Editor approach.
+Since AEM 6.2, responsive columns (or any column for that matter) should be defined using using the AEM Layout Container and Template Editor approach.
 
 
 # Purpose

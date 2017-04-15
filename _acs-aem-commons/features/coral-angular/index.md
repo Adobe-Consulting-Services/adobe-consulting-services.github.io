@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: CoralUI Angular Directives
 description: Cut down on duplicate markup in custom Coral UI interfaces
 date: 2015-08-12
+redirect_from: /acs-aem-commons/features/coral-angular.html
 ---
 
 > This feature is primarily intended for use within ACS AEM Commons itself, but may be valuable for other users.

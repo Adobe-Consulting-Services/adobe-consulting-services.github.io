@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: WCM Views
 description: Too many edit zones making your head spin?
 date: 2015-05-19
+redirect_from: /acs-aem-commons/features/wcm-views.html
 tags: deprecated
 feature-tags: authoring
 initial-release: 1.10.0
@@ -10,7 +11,7 @@ initial-release: 1.10.0
 
 ## Why is this deprecated?
 
-Since AEM 6.2, you should be developing in TouchUI and not ClassicUI. This is a ClassicUI feature, so if you're using it, it means you haven't moved over to TouchUI, which you should!
+Since AEM 6.2, you should be developing in UI and not ClassicUI. This is a ClassicUI feature, so if you're using it, it means you haven't moved over to UI, which you should!
 
 ## Purpose
 

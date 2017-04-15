@@ -2,11 +2,15 @@
 layout: acs-aem-commons_feature
 title: Dynamic RTE Configuration
 description: Create a re-usable RTE configurations
+redirect_from: /acs-aem-commons/features/dynamic-rte-configurations.html
 date: 2013-08-30
 tags: deprecated
 initial-release: 1.0.0
 ---
 
+## Why is this deprecated?
+
+Since 6.2, ClassicUI dialog development should be avoided. Since this is in direct support of the ClassicUI RTE widget, this feature is now deprecated.  
 
 ## Purpose
 

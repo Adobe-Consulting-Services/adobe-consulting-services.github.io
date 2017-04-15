@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Draggable Lists
 description: Drag to order your lists
 date: 2016-04-25
+redirect_from: /acs-aem-commons/features/draggablelist.html
 feature-tags: component-dev
 initial-release: 2.5.0/3.1.0
 ---

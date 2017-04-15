@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: System Notifications
 description: Alert AEM Authors about system activities
 date: 2015-10-20
+redirect_from: /acs-aem-commons/features/system-notifications.html
 feature-tags: administration content-migration
 initial-release: 2.1.0
 

@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: AEM Cloud Services
 description: Integrate with cloud services like a Pro!
 date: 2013-11-10
+redirect_from: /acs-aem-commons/features/cloud-services.html
 initial-release: 1.2.0
 ---
 

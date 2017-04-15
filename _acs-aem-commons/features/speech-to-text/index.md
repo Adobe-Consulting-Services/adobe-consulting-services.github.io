@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Watson Speech to Text Integration
 description: Transcribe your asset
 date: 2016-09-06
+redirect_from: /acs-aem-commons/features/speech-to-text.html
 feature-tags: authoring
 initial-release: 3.3.0
 ---

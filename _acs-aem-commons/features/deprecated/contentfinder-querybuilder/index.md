@@ -3,9 +3,14 @@ layout: acs-aem-commons_feature
 title: Content Finder - Query Builder
 description: Use QueryBuilder syntax to build ContentFinder tabs
 date: 2013-07-20
+redirect_from: /acs-aem-commons/features/contentfinder-querybuilder.html
 tags: deprecated
 initial-release: 1.0.0
 ---
+
+## Why is this deprecated?
+
+Since 6.2, the UI page editor should be use for editing AEM Sites pages, and not the ClassicUI page editor. Since this feature directly supports extending the ClassicUI page editor's content finder, it is deprecated.
 
 ## Purpose
 

@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: WCMMode Tags & Functions
 description: JSP Taglib for working with WCM Mode
 date: 2013-08-20
+redirect_from: /acs-aem-commons/features/wcmmode-tags.html
 tags: deprecated
 feature-tags: component-dev standard
 initial-release: 1.0.0
@@ -10,7 +11,7 @@ initial-release: 1.0.0
 
 ## Why is this deprecated?
 
-Since AEM 6.0, you should be developing using HTL which does not support taglibs. HTL has its own wcmmode support.
+Since AEM 6.0, you should be developing using HTL which does not support taglibs, but has its own wcmmode support.
 
 ## Purpose
 

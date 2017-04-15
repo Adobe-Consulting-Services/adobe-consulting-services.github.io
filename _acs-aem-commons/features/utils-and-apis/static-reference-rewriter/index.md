@@ -2,8 +2,8 @@
 layout: acs-aem-commons_feature
 title: Static Reference Rewriter
 description: Minimize your static request size.
-sub-feature: true
 date: 2013-07-01
+redirect_from: /acs-aem-commons/features/static-reference-rewriter.html
 feature-tags: component-dev
 initial-release: 1.0.0
 ---

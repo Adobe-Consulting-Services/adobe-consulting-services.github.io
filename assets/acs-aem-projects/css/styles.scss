@@ -22,10 +22,48 @@ a {
   }
 }
 
-.color-block {
-  background: #2A073B url('/assets/acs-aem-projects/images/colored-bg.jpg');
-}
+.acs-aem-projects {
+  #jumbotron {
 
-.project-icons {
-  background-image: url('/assets/acs-aem-projects/images/icons-projects-w-gradient.png');
+    .wrapper {
+      margin-bottom: 2.5rem;
+    }
+
+    .message {
+      top: 0;
+      margin-bottom: 2rem;
+    }
+
+    .projects-wrapper {
+      .center {
+        width: 36%;
+        margin-top: 0;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+
+      a {
+        float: left;
+        width: 30%;
+        height: auto;
+        margin-top: 3%;
+        margin-left: 0;
+        margin-right: 0;
+
+        img {
+          height: auto;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .color-block {
+    background: #2A073B url('/assets/acs-aem-projects/images/colored-bg.jpg');
+  }
+
+  .project-icons {
+    background-image: url('/assets/acs-aem-projects/images/icons-projects-w-gradient.png');
+  }
 }

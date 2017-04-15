@@ -3,10 +3,9 @@ layout: acs-aem-commons_feature
 title: AEM Environment Indicator
 description: Too many tabs have you confused?
 date: 2014-09-26
-thumbnail: /images/aem-environment-indicator/thumbnail.png
+redirect_from: /acs-aem-commons/features/aem-environment-indicator.html
 feature-tags: administration
 tags: acs-aem-commons-features
-categories: acs-aem-commons features
 initial-release: 1.8.0
 ---
 

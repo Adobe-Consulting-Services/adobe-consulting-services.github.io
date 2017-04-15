@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Email API
 description: Generic Email Service to send template based emails
 date: 2014-04-01
+redirect_from: /acs-aem-commons/features/email-api.html
 feature-tags: backend-dev
 initial-release: 1.6.0
 ---

@@ -2,8 +2,8 @@
 layout: acs-aem-commons_feature
 title: Delegating Servlet
 description: Clean-up those one-off overlays
-sub-feature: true
 date: 2013-06-20
+redirect_from: /acs-aem-commons/features/delegating-servlet.html
 feature-tags: backend-dev
 initial-release: 1.0.0
 ---

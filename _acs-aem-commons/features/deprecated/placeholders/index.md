@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Component Placeholders
 description: A little polish goes a long way
 date: 2014-01-10
+redirect_from: /acs-aem-commons/features/placeholders.html
 tags: deprecated
 feature-tags: component-dev standard
 initial-release: 1.5.0
@@ -10,7 +11,7 @@ initial-release: 1.5.0
 
 ## Why is the deprecated?
 
-Since AEM 6.2, you should absolutely be developing for TouchUI. 
+Since AEM 6.2, you should be developing for UI, which does not have the image-placeholder paradigm. 
 
 ## Purpose
 

@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: ACL Packager
 description: Easily zip up access control entries
-sub-feature: true
+redirect_from: /acs-aem-commons/features/acl-packager.html
 date: 2014-01-20
 feature-tags: administration
 initial-release: 1.5.0

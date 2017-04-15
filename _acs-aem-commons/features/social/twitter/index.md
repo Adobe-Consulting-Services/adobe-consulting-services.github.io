@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Twitter Adapter Factory
 description: Easily interact with the Twitter API
 date: 2013-10-10
-sub-feature: true
+redirect_from: /acs-aem-commons/features/twitter.html
 initial-release: 1.2.0
 ---
 

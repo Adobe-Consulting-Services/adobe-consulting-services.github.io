@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: OSGi Component Disabler
 description: Disable OSGi Components as part of your build
 date: 2014-09-23
-sub-feature: true
+redirect_from: /acs-aem-commons/features/osgi-disabler.html
 feature-tags: administration
 initial-release: 1.7.0
 ---

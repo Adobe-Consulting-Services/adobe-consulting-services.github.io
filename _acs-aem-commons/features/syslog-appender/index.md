@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Syslog Integration
 description: Send log messages to remote systems
 date: 2014-01-10
+redirect_from: /acs-aem-commons/features/syslog-appender.html
 initial-release: 1.5.0
 ---
 

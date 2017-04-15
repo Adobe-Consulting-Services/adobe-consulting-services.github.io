@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: HTTP Cache
 description: Cache the uncacheable!
 date: 2015-12-05
+redirect_from: /acs-aem-commons/features/http-cache.html
 feature-tags: backend-dev
 initial-release: 2.2.0
 

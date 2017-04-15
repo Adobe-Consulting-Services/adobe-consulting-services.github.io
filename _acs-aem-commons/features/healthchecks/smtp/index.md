@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: SMTP Health Check
 description: Check AEM's temperature
 date: 2016-11-01
-sub-feature: true
+redirect_form: /acs-aem-commons/features/healthchecks.html
 initial-release: 3.4.0
 ---
 

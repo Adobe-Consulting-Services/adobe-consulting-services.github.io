@@ -8,9 +8,9 @@ tags: deprecated
 initial-release: 1.2.0
 ---
 
-## Deprecation notice
+## Why is this deprecated?
 
-> This feature is deprecated as of ACS AEM Commons 2.0.0. Please use the [Cloud Service](https://docs.adobe.com/docs/en/aem/6-2/administer/integration/marketing-cloud/dtm.html) provided with AEM 6.0 and higher.
+This feature is deprecated as of ACS AEM Commons 2.0.0. Please use the [Cloud Service](https://docs.adobe.com/docs/en/aem/6-2/administer/integration/marketing-cloud/dtm.html) provided with AEM 6.0 and higher.
 
 ## Purpose
 

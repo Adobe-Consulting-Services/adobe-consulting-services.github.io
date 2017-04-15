@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: JSON Event Logger
 description: Log OSGi events as JSON
 date: 2014-07-23
+redirect_from: /acs-aem-commons/features/json-event-logger.html
 feature-tags: administration
 initial-release: 1.7.0
 ---
