@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.11.2 and 3.8.2 now available!
+description: AEM 6.3 Compatibility, bug fixes!
+date: 2017-04-20
+project: acs-aem-commons
+---
