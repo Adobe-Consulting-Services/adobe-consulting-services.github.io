@@ -5,7 +5,7 @@ description: Ensure your service users exist!
 date: 2017-02-14
 feature-tags: backend-dev 
 tags: new
-initial-release: 3.10.0
+initial-release: 3.8.0
 ---
 
 ## Purpose
@@ -21,7 +21,7 @@ The Ensure Service User facilitates defining service users and their ACLs in OSG
 
 Create an OSGi configuration for each service user:
 
-    /apps/my-app/config/com.adobe.acs.commons.util.impl.EnsureServiceUser-myServiceUser
+    /apps/my-app/config/com.adobe.acs.commons.users.impl.EnsureServiceUser-myServiceUser
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
