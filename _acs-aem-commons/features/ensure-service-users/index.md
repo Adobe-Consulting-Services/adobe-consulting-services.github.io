@@ -31,7 +31,7 @@ Create an OSGi configuration for each service user:
     principalName="my-service-user"
     type="add"
     ensure-immediately="{Boolean}true"
-    aces ="[type=allow;permissions=jcr:read,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"
+    aces ="[type=allow;privileges=jcr:read,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"
 {% endhighlight %}
 
 ### OSGi Config Properties
@@ -58,10 +58,10 @@ Create an OSGi configuration for each service user:
 `aces`
 
 * Array of ACE definitions to ensure for the principal
-* Format: `type=allow;permissions=jcr:read,rep:write;path=/content/foo;rep:glob=/jcr:content/*`
+* Format: `type=allow;privileges=jcr:read,rep:write;path=/content/foo;rep:glob=/jcr:content/*`
   * `type: allow OR deny` 
     * Required
-  * `permissions`: comma delimited list of valid JCR permissions
+  * `privileges`: comma delimited list of valid JCR privileges
     * Required
   * `path`: absolute content path which the ACE will be applied
     * Required
