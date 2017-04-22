@@ -16,7 +16,6 @@ Because of this, projects often require the definition of many service users and
 
 The Ensure Service User facilitates defining service users and their ACLs in OSGi configurations, and will intelligently ensure they exist on the target AEM instances.
 
-
 ## Configuration
 
 Create an OSGi configuration for each service user:
@@ -36,18 +35,26 @@ Create an OSGi configuration for each service user:
 
 ### OSGi Config Properties
 
+![Ensure Service User - OSGi Config](images/osgi-config.png)
+
 `principalName`
 
 * The service user name
-* Can be just the principal name or the absolute path where the user should be stored in the JCR
-    * my-service-user OR /home/users/system/my-service-user
+* Can be just the principal name, a relative path, or the absolute path where the user should be stored in the JCR. Remember, service users may ONLY exist under `/home/users/system`.
+    * `my-service-user`
+      * Creates `/home/users/system/my-service-user`
+    * `my-company/my-service-user` or  or `./my-company/my-service-user` or `/my-company/my-service-user`
+      * Creates `/home/users/system/my-company/my-service-user`
+    * `/home/users/system/my-company/my-service-user`
+      * Creates `/home/users/system/my-company/my-service-user`
+* Note, if a system user exists w the same principal name at a DIFFERENT location, the location this tool will use that service user and not attempt to move it to a different folder. 
 
 `type`
 
-* Options: add OR remove
-* Add will ensure the existance of the service user and ACLs
-* Remove ensures that the service user and any ACLs are removed
-* Defaults to `add`
+* Options: `add` OR `remove`
+  * `add` ensures the existence of the service user and ACLs
+  * `remove` ensures that the service user and any ACLs are removed
+  * Defaults to `add`
 
 `ensure-immediately`
 
@@ -81,3 +88,17 @@ Create an OSGi configuration for each service user:
     * Example: `rep:itemNames=cq:lastModifiedBy,jcr:lastModifiedBy`
     
 For more information on `rep:glob`, `rep:ntNames`, `rep:itemNames` and `rep:prefixes` [http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html](Apache Oak Restrictions documentation)
+
+### JMX MBean
+
+[http://localhost:4502/system/console/jmx/com.adobe.acs.commons%3Atype%3DEnsure+Service+User](http://localhost:4502/system/console/jmx/com.adobe.acs.commons%3Atype%3DEnsure+Service+User)
+
+![Ensure Service User - OSGi Config](images/jmx.png)
+
+A JMX MBean is also provided that allows for the ensurance of Service Users. 
+
+This can be invoked on a per-service user based or on all service users.
+
+When invoking on a per-service user basis, ONLY the principal name is to be provided; for example, if `principalName = my-company/my-servicer-user` the parameter to the JMX Mbean method would be `my-servicer-user`. 
+
+This is most commonly leveraged when `ensure-immediately` is set to `false`, and the service user is ensure manually at a specific point in time. 
