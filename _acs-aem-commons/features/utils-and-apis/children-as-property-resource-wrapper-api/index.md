@@ -36,7 +36,7 @@ Review the [ChildrenAsPropertyResource APIs](https://adobe-consulting-services.g
 
 ### Writing Data
 
-{%highlight java%}
+{% highlight java %}
 // Get the real resource to store the data to; be default the JSON will be persisted in a property named `children` 
 Resource real = resolver.getResource("/etc/products/product-class-x/jcr:content/performance-data");
 
@@ -57,12 +57,12 @@ wrapper.persist();
 
 // Commit the persisted changes to the JCR 
 resolver.commit();
-{%highlight java%}
+{% endhighlight %}
 
 
 ### Reading Data
 
-{%highlight java%}
+{% highlight java %}
 // Get the real resource that has the serialized children
 Resource real = resolve.getResource("/etc/products/product-class-x/jcr:content/performance-data");
 
@@ -73,7 +73,7 @@ ChildrenAsPropertyResource wrapper = new ChildrenAsPropertyResource(real);
 for (Resource child : wrapper.getChildren()) {
   child.getValueMap().get("prop-1", String.class);
 }      
-{%highlight java%}
+{% endhighlight %}
 
 
 
