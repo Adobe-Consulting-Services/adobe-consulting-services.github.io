@@ -21,6 +21,8 @@ Typically this Workflow Process step is added as the last step in AEM's DAM Upda
 
 ### Process Args Options
 
+![Process Args](images/config.png)
+
 Set the Workflow Process Steps' PROCESS_ARGS to a comma-delimited list of property pairs, which are in turn delimited by `=`, mapping the src property and the destination property on the `[dam:Asset]/jcr:content/metadata` node.
 
 Example:
