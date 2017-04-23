@@ -47,8 +47,8 @@ Create an OSGi configuration for each service user:
       * Creates `/home/users/system/my-company/my-service-user`
     * `/home/users/system/my-company/my-service-user`
       * Creates `/home/users/system/my-company/my-service-user`
-* Note, if a system user exists w the same principal name at a DIFFERENT location, the location this tool will use that service user and not attempt to move it to a different folder. 
-
+* Note: If a system user exists with the same principal name at a DIFFERENT location, this tool assumes that service user is correct and not attempt to move it to the specified location in this configuration. 
+* Note: If a principal name is specified for an AEM or ACS AEM Commons provided system user, the ensure user process will fail. This list may not always be exhaustive and up to date, and meant to help protect against collisions. 
 `type`
 
 * Options: `add` OR `remove`
@@ -58,7 +58,7 @@ Create an OSGi configuration for each service user:
 
 `ensure-immediately`
 
-* Options: true OR false
+* Options: `true` OR `false`
 * When set to true, the ensurance is performed whenever this bundle is loaded.
 * Defaults to true
 
