@@ -4,14 +4,14 @@ title:  Content Traversing - Replicate with Options
 description: Replicate a bunch of content (more) safely!
 sub-feature: true
 date: 2014-09-01
-initial-release: ?.?.?
+initial-release: 2.6.2/3.2.2
 ---
 
-##Purpose
+## Purpose
 
 **Replication with Options** is a Process steps that will traverse the entire content tree, and process the each `dam:Asset` or `cq:Page`, replicating each node based on the Process Args.
 
-##How to Use
+## How to Use
 
 Processing the tree in a serial fashion allows for a more controlled workflow execution decreasing the chances of overloading AEM. Setting `throttle` to `true` decreases the chances further.
 
