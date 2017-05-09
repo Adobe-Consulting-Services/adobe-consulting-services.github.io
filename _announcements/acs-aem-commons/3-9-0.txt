@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.12.0 and 3.9.0 now available!
+description: An automatic package replicator, new replication status setting workflow process, lambda-based resource visitors, enhancements, and bug fixes, oh my!
+date: 2017-05-09
+project: acs-aem-commons
+---

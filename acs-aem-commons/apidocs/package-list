@@ -7,6 +7,7 @@ com.adobe.acs.commons.designer
 com.adobe.acs.commons.email
 com.adobe.acs.commons.errorpagehandler
 com.adobe.acs.commons.fam
+com.adobe.acs.commons.fam.actions
 com.adobe.acs.commons.fam.mbean
 com.adobe.acs.commons.forms
 com.adobe.acs.commons.forms.components
@@ -36,6 +37,8 @@ com.adobe.acs.commons.quickly.operations
 com.adobe.acs.commons.quickly.results
 com.adobe.acs.commons.replication
 com.adobe.acs.commons.replication.dispatcher
+com.adobe.acs.commons.replication.packages.automatic
+com.adobe.acs.commons.replication.packages.automatic.model
 com.adobe.acs.commons.replication.status
 com.adobe.acs.commons.rewriter
 com.adobe.acs.commons.search
@@ -44,6 +47,7 @@ com.adobe.acs.commons.synth
 com.adobe.acs.commons.synth.children
 com.adobe.acs.commons.twitter
 com.adobe.acs.commons.util
+com.adobe.acs.commons.util.mbeans
 com.adobe.acs.commons.util.visitors
 com.adobe.acs.commons.version
 com.adobe.acs.commons.version.model
