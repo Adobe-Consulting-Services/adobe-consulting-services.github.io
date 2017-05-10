@@ -17,7 +17,7 @@ During asset migrations, after using a tool like VLT-RCP to transfer assets to a
 
 A new Workflow Process step that executes Set Replication Status can be added to a workflow model, and the WF Processes Process ARGS can be supplied as defined below.
 
-[Workflow process step](images/thumbnail.png)
+[Workflow process step](thumbnail.png)
 
 ### Process Args Options
 
