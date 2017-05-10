@@ -5,7 +5,7 @@ description: Easily generate sitemaps for search indexing
 date: 2014-01-01
 redirect_from: /acs-aem-commons/features/simple-sitemap.html
 initial-release: 1.5.0
-tags: updated
+tags: 
 ---
 
 # Purpose
