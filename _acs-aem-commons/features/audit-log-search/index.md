@@ -4,7 +4,7 @@ title: Audit Log Search
 description: Easily search the AEM Audit Log
 date: 2017-02-12
 feature-tags: administration
-tags: new
+tags: updated
 initial-release: 2.10.0/3.7.0
 ---
 

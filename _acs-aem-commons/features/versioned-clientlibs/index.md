@@ -68,6 +68,6 @@ Header set Cache-Control max-age=2592000 env=long_expires
 
 Optionally, a filter can registered which checks incoming requests for client libraries and ensures that the hash in the path is the correct value. To enable this, set the property `enforce.md5` to `true` on the PID `com.adobe.acs.commons.rewriter.impl.VersionedClientlibsTransformerFactory`
 
-![transformer factory configuration]({{ site.data.acs-aem-commons.baseurl }}/images/versioned-clientlibs/config.png)
+![transformer factory configuration](images/config.png)
 
 > If you enable this option, the hash will be prefixed with `ACSHASH` to ensure that only rewritten paths are validated. Be sure to incorporate this into any web server or CDN rules.

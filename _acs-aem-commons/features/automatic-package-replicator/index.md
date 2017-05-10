@@ -1,12 +1,10 @@
 ---
 layout: acs-aem-commons_feature
 title: Automatic Package Replication
-description: Automatically build and replicate an AEM Package on a timmer, event trigger or workflow
+description: Automatically build and replicate AEM Packages on a timers, event triggers or workflows
 date: 2017-05-07
-thumbnail: /images/automatic-package-replication/automatic-package-replication.png
 feature-tags: administraton backend-dev
-tags: acs-aem-commons-features
-categories: acs-aem-commons features
+tags: new
 initial-release: 3.8.0
 ---
 
@@ -22,12 +20,12 @@ There are two primary methods for invoking the Automatic Package Replication fea
 
 To use the Automatic Package Replication feature:
 
-1. Create and configure an AEM Package in the [Package Manager](https://docs.adobe.com/docs/en/aem/6-0/administer/content/package-manager.html), including the filters for the package
+1. Create and configure an AEM Package in the [Package Manager](https://docs.adobe.com/docs/en/aem/6-3/administer/content/package-manager.html), including the filters for the package
 2. Navigate to [/miscadmin#/etc/acs-commons/automatic-package-replication](http://localhost:4502/miscadmin#/etc/acs-commons/automatic-package-replication) on your environment. 
 3. Create a new page of the type `Automatic Package Replication Configuration`
 4. Open and configure the Automatic Package Replication configuration
 
-![Automatic Package Replication Configuration](/acs-aem-commons/images/automatic-package-replication/configuration.png)
+![Automatic Package Replication Configuration](images/automatic-package-replication/configuration.png)
 
 ### Configuration Fields
 
@@ -49,4 +47,4 @@ To invoke the Automatic Package Replication feature from a workflow, add a `Proc
  - **Process** - `Build and Replicate Package`
  - **Arguments** - The path to the package to build and replicate
 
-![Automatic Package Replication Workflow Configuration](/acs-aem-commons/images/automatic-package-replication/workflow-configuration.png)
+![Automatic Package Replication Workflow Configuration](images/automatic-package-replication/workflow-configuration.png)

@@ -21,13 +21,19 @@ You can create author-able templates so that the developers do not need to be in
 
 	 List<String> boolean sendEmail(String templatePath, Map<String, String> emailParams, String... recipients);
 
+     List<InternetAddress> sendEmail(String templatePath, Map<String, String> emailParams, Map<String, DataSource> attachments, InternetAddress... recipients);
+
+     List<String> sendEmail(String templatePath, Map<String, String> emailParams, Map<String, DataSource> attachments, String... recipients);
+
 **Description**  
 
 Sends an email to one or more recipients based on the template text specified by the path and replacing variables in the template text using the email parameters. See [Creating an Email Template](#creating-an-email-template) section below for an example template.
 
+The template file name need to be `*.html` to send email with attachments since the file extension determine the mailType.
+
 **Parameters**       
 
-* `templatePath` - An absolute path of the email template in the repository. eg: `/etc/notification/email/emailTemplate.txt`  
+* `templatePath` - An absolute path of the email template in the repository. eg: `/etc/notification/email/emailTemplate.txt` or `/etc/notification/email/emailTemplate.html` for email with attachments
 * `emailParams`  - Map containing template variables that are injected in the email. Sender's information can be set inside the emailParams for keys: `senderEmailAddress` and `senderName`:
 
 		emailParams.put("senderEmailAddress","abcd@example.com");  
@@ -35,6 +41,11 @@ Sends an email to one or more recipients based on the template text specified by
 
 * `recipients` - A variable array of recipients email addresses.
 
+* `attachments` - Map containing attached file name and attachment datasource 
+    
+        String attachment1 = "This text should be in the attache txt file.";
+        Map<String, DataSource> attachments = new HashMap<>();
+        attachments.put("attachment1.txt", new ByteArrayDataSource(attachment1, "text/plain"));
 
 **Returns**  
 `failureList` - Returns list of those recipients addresses for which the email sent was not successful. A wholly successful `sendEmail` results in an empty list.

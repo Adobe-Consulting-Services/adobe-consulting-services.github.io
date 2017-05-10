@@ -4,7 +4,7 @@ title: Page Compare
 description: Side-by-side property comparison of page.. wait for it.. across versions!
 date: 2017-02-01
 feature-tags: administration
-tags: new
+tags: updated
 initial-release: 2.10.0/3.7.0
 ---
 

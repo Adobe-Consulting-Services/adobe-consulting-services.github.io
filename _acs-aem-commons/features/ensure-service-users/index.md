@@ -4,7 +4,7 @@ title: Ensure Service User
 description: Ensure your service users exist!
 date: 2017-02-14
 feature-tags: backend-dev 
-tags: new
+tags: 
 initial-release: 3.8.0
 ---
 

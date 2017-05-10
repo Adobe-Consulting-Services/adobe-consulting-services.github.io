@@ -4,7 +4,7 @@ title: Workflow Delegation
 description: Have one workflow kick off another workflow!
 sub-feature: true
 date: 2017-02-01
-tags: authoring administration new
+tags: authoring administration
 initial-release: 2.7.0/3.10.0
 ---
 
