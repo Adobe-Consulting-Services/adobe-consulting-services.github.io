@@ -25,7 +25,7 @@ To use the Automatic Package Replication feature:
 3. Create a new page of the type `Automatic Package Replication Configuration`
 4. Open and configure the Automatic Package Replication configuration
 
-![Automatic Package Replication Configuration](images/automatic-package-replication/configuration.png)
+![Automatic Package Replication Configuration](images/configuration.png)
 
 ### Configuration Fields
 
@@ -47,4 +47,4 @@ To invoke the Automatic Package Replication feature from a workflow, add a `Proc
  - **Process** - `Build and Replicate Package`
  - **Arguments** - The path to the package to build and replicate
 
-![Automatic Package Replication Workflow Configuration](images/automatic-package-replication/workflow-configuration.png)
+![Automatic Package Replication Workflow Configuration](images/workflow-configuration.png)
