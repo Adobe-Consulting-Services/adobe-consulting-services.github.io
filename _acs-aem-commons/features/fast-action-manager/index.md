@@ -31,7 +31,8 @@ Once work is scheduled to run, you can check on the status using the provided JM
 You can programatically check by tracking down the ActionManager instance via the ActionManagerFactory service as well.
 
 ### Lambda Visitors
-> [SimpleFilteringResourceVisitor JavaDocs](http://adobe-consulting-services.github.io/acs-aem-commons/apidocs/com/adobe/acs/commons/fam/package-summary.html)
+> [SimpleFilteringResourceVisitor JavaDocs](https://adobe-consulting-services.github.io/acs-aem-commons/apidocs/com/adobe/acs/commons/util/visitors/SimpleFilteringResourceVisitor.html)
+
 If your target nodes are exactly an entire subtree of nodes, maybe with a light amount of programmatic filtering, then using a query is likely not always the best idea.  The new updated FAM also includes visitors that allow simple lambda expressions for the following:
 
 * Determine what nodes should be traversed (setTraversalFilter) -- Default is all
