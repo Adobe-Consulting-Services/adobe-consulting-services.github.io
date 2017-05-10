@@ -6,14 +6,14 @@ date: 2016-04-25
 redirect_from: /acs-aem-commons/features/fast-action-manager.html
 feature-tags: backend-dev content-migration
 tags: updated
-initial-release: 2.12.0/3.9.0
+initial-release: 3.9.0
 ---
 
 ## Version notice
 
 > [Legacy FAM for 6.0/6.1](old/aem_60_61.html)
 
-In order to better support Java 8 language features, FAM will only be maintained from ACS Commons versions 2.12.0/3.9.0 to support AEM 6.2+ on Java 8 or newer.  Older AEM instances running on earlier versions may use the older version of FAM but will not inherit any of the more recent bug fixes or improvements.
+In order to better support Java 8 language features, FAM will only be maintained from ACS Commons versions 3.9.0 to support AEM 6.2+ on Java 8 or newer.  Older AEM instances running on earlier versions may use the older version of FAM but will not inherit any of the more recent bug fixes or improvements.
 
 ## Purpose
 
@@ -29,7 +29,7 @@ Generally speaking the ActionManager is used to perform the same action against 
 - For working on a tree, or to walk a tree looking for nodes to process, use a visitor pattern.  See the "Lambda Visitors" section below for examples.
 - To run the same action(s) against query results you can do like the examples (below) and use `withQueryResults` instead.
 
-*Note:* Since versions 2.12.0 and 3.9.0, cleanup of resource resolvers is completely automatic.  You must remember to close your original resource resolver which you use to create the ActionManager, but any additional resource resolves it creates internally are closed when it is finished.  The way that the action manager handles JCR sessions is that it clones the resource resolver provided at the time of creation.  The original resource resolver can be closed at any point without affecting the scheduled work.
+*Note:* Since version 3.9.0, cleanup of resource resolvers is completely automatic.  You must remember to close your original resource resolver which you use to create the ActionManager, but any additional resource resolves it creates internally are closed when it is finished.  The way that the action manager handles JCR sessions is that it clones the resource resolver provided at the time of creation.  The original resource resolver can be closed at any point without affecting the scheduled work.
 
 Once work is scheduled to run, you can check on the status using the provided JMX MBeans.  The `ThrottledTaskRunner` bean lets you get current running stats of the actual work being done.  The Action Manager Factory bean lets you get an overview of all action managers that have been created and how much work they have pending, if any, as well as total run-time and any errors that have occurred.
 
