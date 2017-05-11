@@ -23,17 +23,17 @@ Fast Action Manager is a easy-to-use API that allows for parallelized and (intel
 
 > [Fast Action Manager JavaDocs](http://adobe-consulting-services.github.io/acs-aem-commons/apidocs/com/adobe/acs/commons/fam/package-summary.html)
 
-The Action Manager is built on top of the Throttled Task Runner (a managed thread pool) and provides a convenient way to run many AEM-specific activities in bulk.  Set up your own work using `deferredWithResolver` which is the simplest call to schedule work to run at some future point.  Your action is passed in as a lambda or function reference such that it is invoked with a ready-to-use resource resolver.  There's no need to catch errors or close the resolver!  If your action generates an error it is logged for you.  If you want to catch the error for retry purposes, there are also several types of retry facilities provided (see "If at first you don't succeed" below.)
+The Action Manager is built on top of the Throttled Task Runner (a managed thread pool) and provides a convenient way to run many AEM-specific activities in bulk.  Set up your own work using `deferredWithResolver` which is the simplest call to schedule work to run at some future point.  Your action is passed in as a lambda or function reference such that it is invoked with a ready-to-use resource resolver.  There's no need to catch errors!  If your action generates an error it is logged for you.  If you want to catch the error for retry purposes, there are also several types of retry facilities provided (see "If at first you don't succeed" below.)
 
 Generally speaking the ActionManager is used to perform the same action against many target resources in the JCR, though that's not necessarily a requirement for using it.  Two ways to identify which resources to operate on are the following:
 - For working on a tree, or to walk a tree looking for nodes to process, use a visitor pattern.  See the "Lambda Visitors" section below for examples.
-- To run the same action(s) against query results you can do like the examples (below) and use `withQueryResults` instead.
+- To run the same action(s) against query results you use `withQueryResults` instead.  See the query examples at the bottom of this page for samples.
 
-*Note:* Since version 3.9.0, cleanup of resource resolvers is completely automatic.  You must remember to close your original resource resolver which you use to create the ActionManager, but any additional resource resolves it creates internally are closed when it is finished.  The way that the action manager handles JCR sessions is that it clones the resource resolver provided at the time of creation.  The original resource resolver can be closed at any point without affecting the scheduled work.
+*Note:* Since version 3.9.0, cleanup of internally-generated resource resolvers is completely automatic.  You must remember to close your original resource resolver which you use to create the ActionManager, but any additional resource resolves it creates internally are closed when it is finished.  The way that the action manager handles JCR sessions is that it clones the resource resolver provided at the time of creation.  The original resource resolver can be closed at any point without affecting the scheduled work.
 
 Once work is scheduled to run, you can check on the status using the provided JMX MBeans.  The `ThrottledTaskRunner` bean lets you get current running stats of the actual work being done.  The Action Manager Factory bean lets you get an overview of all action managers that have been created and how much work they have pending, if any, as well as total run-time and any errors that have occurred.
 
-You can programatically check by tracking down the ActionManager instance via the `ActionManagerFactory` service as well.
+You can programatically track down ActionManager instances via the `ActionManagerFactory` service as well.
 
 ### Lambda Visitors
 > [SimpleFilteringResourceVisitor JavaDocs](https://adobe-consulting-services.github.io/acs-aem-commons/apidocs/com/adobe/acs/commons/util/visitors/SimpleFilteringResourceVisitor.html)
@@ -73,7 +73,11 @@ For traversing folder structures and working with folder contents, there is a Tr
 There are many cases where retry logic is necessary to ensure that work is completed even though there are race conditions which might cause occasional issues.  This happens a lot, for example, when building recursive tree structures.  There are two main flavors of retry logic provided.
 
 #### Retrying a single action
-If the activity performed is a read-only kind of action or is something which is ideally executed by itself (such as executing transient workflow) then the Actions.retry method is the best choice:
+If the activity performed does not benefit from batch processing the `Actions.retry` method is the best choice.  Some examples of why you would use this instead are:
+
+* Read-only actions where no commit occurs, such as performing ACL or other validation checks
+* Creating items individually where batch processing is more problematic, such as creating tree structures
+* Other solitary actions which take a considerable amount of time like Synthetic Workflow or asset ingestion
 
 {% highlight java %}
 manager.deferredWithResolver(Actions.retry(5, 100, 
@@ -81,10 +85,10 @@ manager.deferredWithResolver(Actions.retry(5, 100,
 ));
 {% endhighlight %}
 
-Likewise you can pass Actions.retry(...) in to the withQueryResults method as well for query-based actions.
+Likewise you can wrap actions using `Actions.retryAll` in conjunction with the `withQueryResults` method to add retry support to query-based actions.
 
 #### Retrying a stack of actions
-If the activity is designed to commit content changes, then ActionBatch is a more convenient option.  The difference is that all actions are executed sequentially and if any of them fail, the resolver is refreshed and all actions are retied again in order.  It is preferred to commit content changes in batches, say 10 at a time, rather than individually as it can be much faster overall.  Note: There is currently no support for "withQueryResults" to use ActionBatch internally, so it mostly lends itself to other iterator patterns such as visitor or simple for-loops.  Once the iterator or visitor is completed defining all the work, the commitBatch() method must be called to schedule the final batch of work.
+If the activity is designed to commit content changes, then ActionBatch is a more convenient option.  The difference is that all actions are executed sequentially and if any of them fail, the resolver is refreshed and all actions within that batch are retied again in order.  It is preferred to commit content changes in batches, say 10 at a time, rather than individually as it can be much faster overall.  Note: There is currently no support for "withQueryResults" to use ActionBatch internally, so you have to use other iterator patterns such as visitor or simple for-loops -- or use the withQueryResults to build ActionBatches instead of processing results right away.  Once the iterator or visitor is completed defining all the work, the commitBatch() method must be called to schedule the final batch of work.
 
 {% highlight java %}
     ActionManager manager = amf.createTaskManager("Copy folder structure", resourceResolver, 1);
@@ -105,32 +109,6 @@ If the activity is designed to commit content changes, then ActionBatch is a mor
     batch.commitBatch(); 
 {% endhighlight %}
 
-### OSGi Configuration
-
-The Throttled Task Runner is OSGi configurable.
-
-![Throttled Task Runner - OSGi Configuration](images/throttled-task-runner-osgi.png)
-
-* Max threads: Recommended not to exceed the number of CPU cores. Default 4.
-* Max CPU %: Used to throttle activity when CPU exceeds this amount. Range is 0..1; -1 means disable this check.
-* Max Heap %: Used to throttle activity when heap usage exceeds this amount. Range is 0..1; -1 means disable this check.
-* Cooldown time: Time to wait for cpu/mem cooldown between throttle checks (in milliseconds)
-* Watchdog time: Maximum time allowed (in ms) per action before it is interrupted forcefully.
-
-### JMX MBeans
-
-#### Throttled Task Runner MBean 
-
-This is the core worker pool. All action managers share the same task runner pool, at least in the current implementation.  The task runner can be paused or halted entirely, throwing out any unfinished work.
-
-![Throttled Task Runner - JMX Mbean](images/throttled-task-runner-jmx.png)
-
-#### Action Manager MBean 
-
-The action manager bean provides basic information about each running action manager and also lists any errors encountered.  Other operations allow purging completed work, which is necessary if using this facility often.
-
-![Action Manager - JMX Mbean](images/action-manager-jmx.png)
-
 ## Developing with the Fast Action Manager APIs
 
 To use Fast Action Manager write a small code harness that identifies the resources to process and then defines how those items should be processed using one or more functions.  There are some additional considerations worth noting in addition to the examples already provided.  Some of the following will sound totally contrary to good-practice for AEM but that's because the stuff you normally have to do is already done for you.
@@ -143,7 +121,7 @@ A final note on this is that standard Java 8 functions do not allow throwing unc
 
 ### Don't close resolvers
 
-Your method should NEVER close the resolver.  Resolvers are maintained (and reused) by the action manager so closing them can actually mess things up.  Don't close them.  That is automatic.
+Your action functions should NEVER close the resolver passed into it.  Resolvers are maintained (and reused) by the action manager so closing them can actually mess things up.  Don't close them.  That is automatic.  You must remember to close your original resource resolver which you use to create the ActionManager, but any additional resource resolves it creates internally are closed when it is finished.
 
 ### Don't pass resources into your lambda functions
 
@@ -164,13 +142,17 @@ Notice in the above that the visitor is provided a resource, but the `ActionBatc
 
 Most of the time you don't need to commit in your actions unless you're doing something really specific and need to be 100% sure.  There are a number of features which cause commit to happen automatically, and a few places it does not.
 
-* The constructor for Action Manager lets you specify how many times a resolver is reused before it attempts to auto-commit any changes.  Generally you can set this to 1 but remember if you aren't using ActionBatch then failures mean that other actions might not get retried when the commit fails.
-* ActionBatch will automatically commit and refresh the resource resolver at the end of each batch and will retry all actions if the commit fails.  In case you are doing mass-updates this is the most likely candidate for managing this work.
-* Action.retry and Action.retryAll do NOT commit automatically because not every use of these generates repository changes.  Because of that, if you want to use these your function needs to commit changes at the end.  In case of failure, these methods do a revert and refresh on the resource resolver so that the action can be attempted again.
+* The constructor for Action Manager lets you specify how many times a resolver is reused before it attempts to auto-commit any changes.  Generally you can set this to 1 but remember if you aren't using ActionBatch then failures mean that other actions might not get retried when the commit fails.  In fact, the auto-commit performed in Action Manager only records errors, there is no retry when failure occurs at this level.
+* ActionBatch will automatically commit and refresh the resource resolver at the end of each batch and will retry all actions if the commit fails.  In case you are doing mass-updates this is the most likely candidate for managing this work.  If a batch passes the commit operation without exhausting available retries then no errors are recorded, but they do show in the log file.
+* Action.retry and Action.retryAll do NOT commit automatically because not every use of these generates repository changes.  Because of that, you explicitly have to commit at the end of your function if making changes.  In case of failure, these methods do a revert and refresh on the resource resolver so that the action can be attempted again.
 
 ### Chain reaction
 
-One of the major additions to FAM is the addition of `onSuccess`, `onFailure`, and `onFinish` functions on ActionManager.  With these it is possible to have an ActionManager trigger another set of actions when it is finished, but only if there were no errors (hence onSuccess -- which only works if all errors are thrown where FAM can see them.)  Likewise finish operations be scheduled with onFinish (which is called if the operation is successful or not.)  Finally any generated errors cause the failure function to be called instead of the success function.  This is a convenient mechanism to schedule clean-up or abort style rollback operations.
+One of the major additions to FAM is the addition of `onSuccess`, `onFailure`, and `onFinish` functions on ActionManager.  With these it is possible to have an ActionManager trigger another set of actions when it is finished
+
+* *Success:* All activities have finished and no errors were recorded.  This can be used to kick off another ActionManager-based worker process if building a complex multi-step utility.
+* *Failure:* All activities have finished but one or more resulted in error.  This is a handy mechanism for adding a rollback or abort kind of feature.
+* *Finish:* All activities have finished, success and failue events have already been processed.  Also, all resource resolvers have already been closed as well.
 
 These features were necessary to support the chaining of action managers for building larger, more complex processes.  This feature is further utilized in other more advanced ACS Commons features.
 
@@ -184,9 +166,11 @@ There is some trickery under the hood which allows your error reporting to note 
 
 This way, your function makes a note of the current item being processed and should an error occur your error list will note the path correctly.
 
-### Example Code: Fast Action Manager calling Synthetic Workflow on DAM Update assets
+## Examples
 
-This sample code executes the OOTB DAM Asset Update Workflow Model on all assets under a designated path.
+### Query Example: Starting Synthetic Workflow on DAM Update assets
+
+This sample code executes the OOTB DAM Asset Update Workflow Model on all assets under a designated path using a query.
 
 {% highlight jsp %}
 
@@ -216,10 +200,9 @@ Finished adding <%=numberOfAssets%> items.
 
 {% endhighlight %}
 
+### Query Example: Replicating assets
 
-### Example Code: Fast Action Manager replicating assets
-
-This sample code replicates all DAM assets under the designated path.
+This sample code replicates all DAM assets under the designated path using a query.
 
 {% highlight jsp %}
 <%@include file="/libs/foundation/global.jsp"%>
@@ -248,15 +231,43 @@ Finished adding <%=numberOfAssets%> items to the activation queue <%=agentId%>.
 
 {% endhighlight %}
 
-
-### Example Code: Chain Fast Action Manager actions
+### Advanced Function Example: Chaining actions
 
 Because FAM uses functions you are able to use `.andThen(...)` operator to call one function after another.  If the first function fails then the second function is not called.
 
-{% highlight jsp %}
-...
+{% highlight java %}
+// This can be provided to withQueryResults to run synthetic workflow and replicate assets afterwards
 Actions.startSyntheticWorkflows(model, swr).andThen(
    ReplicationActions.activateAllWithOptions(replicator, publishOptions)
 )
-...
+// This is the same except for using deferredWithResolver, ActionBatch, etc.
+Actions.startSyntheticWorkflow(model, path, swr).andThen(
+   ReplicationActions.activateWithOptions(replicator, path, publishOptions)
+)
 {% endhighlight %}
+
+### OSGi Configuration
+
+The Throttled Task Runner is OSGi configurable, but please note that changing configuration while work is being processed results in resetting the worker pool and can lose active work.
+
+![Throttled Task Runner - OSGi Configuration](images/throttled-task-runner-osgi.png)
+
+* Max threads: Recommended not to exceed the number of CPU cores. Default 4.
+* Max CPU %: Used to throttle activity when CPU exceeds this amount. Range is 0..1; -1 means disable this check.
+* Max Heap %: Used to throttle activity when heap usage exceeds this amount. Range is 0..1; -1 means disable this check.
+* Cooldown time: Time to wait for cpu/mem cooldown between throttle checks (in milliseconds)
+* Watchdog time: Maximum time allowed (in ms) per action before it is interrupted forcefully.
+
+### JMX MBeans
+
+#### Throttled Task Runner MBean 
+
+This is the core worker pool. All action managers share the same task runner pool, at least in the current implementation.  The task runner can be paused or halted entirely, throwing out any unfinished work.
+
+![Throttled Task Runner - JMX Mbean](images/throttled-task-runner-jmx.png)
+
+#### Action Manager MBean 
+
+The action manager bean provides basic information about each running action manager and also lists any errors encountered.  Other operations allow purging completed work, which is necessary if using this facility often.
+
+![Action Manager - JMX Mbean](images/action-manager-jmx.png)
