@@ -24,6 +24,8 @@ the asset named **transcription.txt**.
 To use this, first create a configuration for `com.adobe.acs.commons.http.impl.HttpClientFactoryImpl` (with some unique name)
 with `factory.name` property set to `watson-speech-to-text`, the credentials and hostname for Watson.
 
+*Note: This OSGi configuration factory is named [ACS AEM Commons - Http Components Fluent Executor Factory](http://localhost:4502/system/console/configMgr#com.adobe.acs.commons.http.impl.HttpClientFactoryImpl) in /system/console/config*
+
 For example, on the hosted BlueMix platform, this might look like:
 
 {% highlight json %}
