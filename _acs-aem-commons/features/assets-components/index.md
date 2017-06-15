@@ -8,6 +8,6 @@ feature-tags: authoring
 initial-release: 3.1.0
 ---
 
-> These features are AEM 6.2 ONLY!
+> These features are AEM 6.2+ ONLY!
 
 {% include acs-aem-commons/sub-features.html %}
