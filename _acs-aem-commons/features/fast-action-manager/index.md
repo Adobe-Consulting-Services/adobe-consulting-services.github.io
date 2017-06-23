@@ -23,6 +23,8 @@ Fast Action Manager is a easy-to-use API that allows for parallelized and (intel
 
 > [Fast Action Manager JavaDocs](http://adobe-consulting-services.github.io/acs-aem-commons/apidocs/com/adobe/acs/commons/fam/package-summary.html)
 
+> [Deep dive recording: Fast Action Manager and a folder move tool built using it](https://my.adobeconnect.com/p85l0mfo4fwx/?OWASP_CSRFTOKEN=25de769380f7bf27844802e3e716d3a26f892048c3350d6a74a4f1381525016d)
+
 The Action Manager is built on top of the Throttled Task Runner (a managed thread pool) and provides a convenient way to run many AEM-specific activities in bulk.  Set up your own work using `deferredWithResolver` which is the simplest call to schedule work to run at some future point.  Your action is passed in as a lambda or function reference such that it is invoked with a ready-to-use resource resolver.  There's no need to catch errors!  If your action generates an error it is logged for you.  If you want to catch the error for retry purposes, there are also several types of retry facilities provided (see "If at first you don't succeed" below.)
 
 Generally speaking the ActionManager is used to perform the same action against many target resources in the JCR, though that's not necessarily a requirement for using it.  Two ways to identify which resources to operate on are the following:
