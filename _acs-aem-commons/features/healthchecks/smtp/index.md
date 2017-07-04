@@ -7,7 +7,8 @@ redirect_form: /acs-aem-commons/features/healthchecks.html
 initial-release: 3.4.0
 ---
 
-> [Add health checks to your Granite WebUI](https://docs.adobe.com/docs/en/aem/6-0/administer/operations/operations-dashboard.html#Health Reports)
+> [Add health checks to your Granite WebUI](https://docs.adobe.com/docs/en/aem/6-3/administer/operations/operations-dashboard.html#Health Reports). 
+> Please note that the `sling:configCollectionInherit` MUST be used as shown in [this sample](https://github.com/heervisscher/htl-examples/blob/master/ui.apps/src/main/content/jcr_root/apps/settings/granite/operations/hc/.content.xml).
 
 
 ## SMTP E-mail Service Health Check
