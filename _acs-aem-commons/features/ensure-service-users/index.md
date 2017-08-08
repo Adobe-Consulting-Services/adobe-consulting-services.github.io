@@ -30,7 +30,7 @@ Create an OSGi configuration for each service user:
     principalName="my-service-user"
     type="add"
     ensure-immediately="{Boolean}true"
-    aces ="[type=allow;privileges=jcr:read,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"
+    aces="[type=allow;privileges=jcr:read\,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"/>
 {% endhighlight %}
 
 ### OSGi Config Properties
