@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Contextual Pathfield Browser
-description: ???
+description: Dynamically limit selectable paths!
 date: 2017-02-11
 feature-tags: component-dev
 tags: new
@@ -9,7 +9,7 @@ initial-release: 2.10.0
 ---
 
 ## Contextual Path Browser
-The `contextualpathbrowser` granite UI widget functions just like a standard `pathbrowser` widget other than it detects
+The `contextualpathbrowser` Granite UI widget functions just like a standard `pathbrowser` widget other than it detects
 the root page of the current site on a multi-site platform and limits the author to selecting content within that site.
 
 Take the following content structure:
