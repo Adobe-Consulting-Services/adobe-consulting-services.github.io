@@ -5,7 +5,6 @@ description: Helpful workflow processes
 date: 2013-10-02
 redirect_from: /acs-aem-commons/features/worflow-processes.html
 feature-tags: authoring administration
-tags: new
 initial-release: 1.0.0
 ---
 {% include acs-aem-commons/sub-features.html %}
