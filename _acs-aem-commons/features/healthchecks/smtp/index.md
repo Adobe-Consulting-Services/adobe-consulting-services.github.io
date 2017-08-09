@@ -13,7 +13,7 @@ initial-release: 3.4.0
 
 ## SMTP E-mail Service Health Check
 
-This health check attempst to connect to the SMPT server defined in the [Day CQ Mail Service OSGi Configuration](http://localhost:4502/system/console/configMgr/com.day.cq.mailer.DefaultMailService) and send a test e-mail to an OSGi configured e-mail address (see sample OSGi configuration below).
+This health check attempts to connect to the SMTP server defined in the [Day CQ Mail Service OSGi Configuration](http://localhost:4502/system/console/configMgr/com.day.cq.mailer.DefaultMailService) and send a test e-mail to an OSGi configured e-mail address (see sample OSGi configuration below).
 
 > Note, this health check can take some time to fail if the timeout. 
 
