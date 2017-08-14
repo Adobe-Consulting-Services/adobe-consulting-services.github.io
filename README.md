@@ -103,3 +103,17 @@ To create a sub-feature card list that automatically reads the feature-docs that
 ```
 
 Note this sub-feature list is only available for ACS AEM Commons.
+
+## Building
+
+This site is built using Jekyll.  To build this sitel locally you must have already installed Ruby, Bundle, and Jekyll.  With these installed you can do the follow:
+```
+bundle exec jekyll build
+```
+
+Or alternatively to build and serve locally for review:
+```
+bundle exec jekyll serve
+```
+
+More information can be found here: [https://jekyllrb.com/](https://jekyllrb.com/)
