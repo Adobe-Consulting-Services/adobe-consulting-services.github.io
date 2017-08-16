@@ -1,15 +1,15 @@
 ---
-layout: acs-aem-commons_feature
+layout: acs-aem-commons_subpage
 title: MCP - Tools
 ---
 These are the process definitions provided with MCP, but these are by no means the upward limit of what can be built with this framework.
 
-[<< back to MCP Table of Contents](index.html)
+[<< back to MCP Table of Contents](../index.html)
 
 ## Page Relocator
 Page relocator assists the author in moving a tree of assets to a new location or renaming a page.  All references are updated to reflect the changed page structure following this activity.  Publish options are also presented.  This process generates a report listing all affected pages, their new locations, number of references, and durations of move, unpublish, republish times (in milliseconds.)
 
-![Page Relocator](images/page-relocator.png)
+![Page Relocator](../images/page-relocator.png)
 
 * Source page: The page being moved or renamed
 * Destination: If moving, this is the parent that will contain the page being moved.  If renaming this is the full path that source page should have at the end of the operation, including its new name.  The parent of this page must exist first!
@@ -31,7 +31,7 @@ The steps of this operation are:
 ## Folder Relocator
 This tool is used to move or rename folders of assets.  **Note:** At the present time, this tool does not update references if pages are affected by these moves.  This was primarily intended for assets customers that do not use Sites.  This is subject to change in the future, or a new tool might be released to address this gap as needed.
 
-![Folder Relocator](images/folder-relocator-1.png)
+![Folder Relocator](../images/folder-relocator-1.png)
 * Source folder: Folder being moved or renamed.
 * Destination folder: Parent folder (if moving) or new folder path including new name (if renaming.) The parent path must exist!
 * Mode: Move/Rename (as described above)
@@ -45,7 +45,7 @@ The steps of this operation are:
 
 ## Asset Reporting
 This reporting process identifies how much space is being used in a folder and its subfolders across all assets.
-![Asset Report](images/asset-report.png)
+![Asset Report](../images/asset-report.png)
 
 * Folder: Base path to start the report from
 * Levels: Number of levels to report.
@@ -55,7 +55,7 @@ It is worth noting that levels only dictates how granular the report will be, bu
 ## Asset Ingestor
 This is an example of a high-speed parallel asset ingestor utility.  You can load a directory of assets into AEM very easily with this tool.  Because of the ability to overload a server with assets, this tool only appears for the "admin" user right now.
 
-![Asset Ingestor](images/asset-ingestor.png)
+![Asset Ingestor](../images/asset-ingestor.png)
 * Source: Location in the local filesystem.  This can be a mapped/mounted network drive too.
 * Target JCR Folder: Where to store the assets in AEM
 * Ignore folders: Comma-delimited list of folders to skip, useful for bypassing thumnail folders and such
@@ -75,7 +75,7 @@ This process has two steps:
 ## Deep Prune
 This is a maintenance tool that only appears for the "admin" user.  It allows you to recursively delete things from AEM such as content, workflow instances, running jobs, etc.
 
-![Deep Prune](images/deep-prune.png)
+![Deep Prune](../images/deep-prune.png)
 * Starting folder: Base folder where deletes will occur
 * Minimum purge level: Only remove things this many levels down from the starting folder.  For example if the starting folder is /content/mySite and the minimum level is 3, then only folders like /content/mySite/page1/page2/page3 will be touched.  A setting of 0 means to delete everything under a folder, including the folder itself.  1 means all the immediate folders under the base folder, etc.
 * Passes: Number of times to repeat this process.  Some nodes don't like being deleted and errors might occur.  This retries the deletion a specified number of times.

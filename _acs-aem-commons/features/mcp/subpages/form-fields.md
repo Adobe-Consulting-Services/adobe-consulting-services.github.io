@@ -1,9 +1,9 @@
 ---
-layout: acs-aem-commons_feature
+layout: acs-aem-commons_subpage
 title: MCP - How the start form is built
 ---
 
-[<< back to MCP Table of Contents](index.html)
+[<< back to MCP Table of Contents](../index.html)
 
 ## FormField annotations
 In order for the user to instruct the process what to do, one or more variables should be declared in the Process Definition class which can be used to determine what the user wants.  These variables are local to the process definition, and so they should be declared as private and **not static.**  You indicate the field requires user input using the annotation `@FormField` like so:

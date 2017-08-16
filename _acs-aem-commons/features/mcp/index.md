@@ -18,19 +18,19 @@ MCP (Manage Controlled Processes) is both a dashboard for performing complex tas
 ### Usage
 This section covers usage and is written for end-users, system administrators, and developers.
 
-[Process Manager](process-manager.html): The main user interface and basic operations.
+[Process Manager](subpages/process-manager.html): The main user interface and basic operations.
 
-[Tools](tools.html): Descriptions and guides for various pre-defined MCP-based tools.
+[Tools](subpages/tools.html): Descriptions and guides for various pre-defined MCP-based tools.
 
-[Maintenance / Operations](maintenance.html): Notes for general maintenance procedures.
+[Maintenance / Operations](subpages/maintenance.html): Notes for general maintenance procedures.
 
 ### Development
 This section describes how you build new tools with MCP.
 
-[Process Definition](process-definition.html): The only class you have to write.
+[Process Definition](subpages/process-definition.html): The only class you have to write.
 
-[FormField Annotations](form-fields.html): Generating the start form.
+[FormField Annotations](subpages/form-fields.html): Generating the start form.
 
-[Error handling](error-handling): Where do errors go?
+[Error handling](subpages/error-handling): Where do errors go?
 
-[Generic Report](generic-report): How to build simple reports with few lines of code.
+[Generic Report](subpages/generic-report): How to build simple reports with few lines of code.

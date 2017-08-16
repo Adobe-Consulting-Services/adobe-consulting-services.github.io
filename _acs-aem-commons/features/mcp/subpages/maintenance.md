@@ -1,9 +1,9 @@
 ---
-layout: acs-aem-commons_feature
+layout: acs-aem-commons_subpage
 title: MCP - Maintenance Operations
 ---
 
-[<< back to MCP Table of Contents](index.html)
+[<< back to MCP Table of Contents](../index.html)
 
 ## Persisted data
 All data for MCP is tracked under `/var/acs-commons/mcp`.  It is written by the mcp system user `acs-commons-manage-controlled-processes-service`.  There are no cases where other user accounts need to write to this location but they should be allowed to read from here in order to obtain information about process reports or [errors](error-handling.html).

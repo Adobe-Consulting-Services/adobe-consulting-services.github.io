@@ -1,9 +1,9 @@
 ---
-layout: acs-aem-commons_feature
+layout: acs-aem-commons_subpage
 title: MCP - Generic Report
 ---
 
-[<< back to MCP Table of Contents](index.html)
+[<< back to MCP Table of Contents](../index.html)
 
 The GenericReport is a simple facility for persisting a report of columnar data, retrieving it via a Sling model, and displaying it as either a simple table or an Excel spreadsheet.
 

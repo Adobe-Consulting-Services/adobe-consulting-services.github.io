@@ -1,9 +1,9 @@
 ---
-layout: acs-aem-commons_feature
+layout: acs-aem-commons_subpage
 title: MCP - Error handling
 ---
 
-[<< back to MCP Table of Contents](index.html)
+[<< back to MCP Table of Contents](../index.html)
 
 ## Initialization errors
 
@@ -16,7 +16,7 @@ Error handling during each step in a process is provided by the Fast Action Mana
 - If the step is defined as critical then the Error and Finish handlers for that action manage will trigger, but MCP will terminate the process and not proceed to the next step.
 - If the step is defined as a regular step then MCP will advance to the next step.  The Error handler of action manager will fire at the end of the step prior to starting the next MCP step.
 
-More information about FAM and error handling is provided via [the Fast Action Manager documentation](../fast-action-manager/index.html).
+More information about FAM and error handling is provided via [the Fast Action Manager documentation](../../fast-action-manager/index.html).
 
 ## Error persistence
 

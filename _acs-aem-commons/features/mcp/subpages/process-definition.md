@@ -1,9 +1,9 @@
 ---
-layout: acs-aem-commons_feature
+layout: acs-aem-commons_subpage
 title: MCP - Process Definition
 ---
 
-[<< back to MCP Table of Contents](index.html)
+[<< back to MCP Table of Contents](../index.html)
 
 ## ProcessDefinition interface
 To create a new process definition for use with MCP, create a class which implements the ProcessDefinition interface with the following methods:
@@ -77,7 +77,7 @@ private void step1(ActionManager manager) {
 }
 ```
 
-Always keep in mind that resources don't like being shared across threads.  Always retrieve a fresh copy of the resource with the provided resource resolver in a deferred action.  More information about these visitors and how to use FAM are described in [the Fast Action Manager documentation](../fast-action-manager/index.html).
+Always keep in mind that resources don't like being shared across threads.  Always retrieve a fresh copy of the resource with the provided resource resolver in a deferred action.  More information about these visitors and how to use FAM are described in [the Fast Action Manager documentation](../../fast-action-manager/index.html).
 
 ### Critical actions and failure recovery
 The methods `defineAction` and `defineCriticalAction` return the ActionManager used for those steps.  With these, you can register callbacks with `onSuccess`, `onFailure`, and `onFinish`.  One such example is if you create temporary structures in the first part of a process, but no undoable actions have occurred yet, you can register those actions as critial.  Then register an onFailure handler that removes the temporary structures if there is a problem.  That way should anything go wrong the system won't be cluttered with left-over garbage.
@@ -86,6 +86,6 @@ The methods `defineAction` and `defineCriticalAction` return the ActionManager u
 The `storeReport` method is triggered at the end of a process run.  You can do anything here but if your reporting needs are simple, it is recommended to use the [generic report](generic-report.html) if it makes sense.  See that section for more information.
 
 ## Debugging / Errors
-Errors are recorded to the JCR at the end of each step.  This is covered more in the section on [error handling](error-handling.html).  Additionally, you can recover from errors by taking advantage of the retry actions and/or grouping changes using ActionBatch.  This is described further in [the Fast Action Manager documentation](../fast-action-manager/index.html).
+Errors are recorded to the JCR at the end of each step.  This is covered more in the section on [error handling](error-handling.html).  Additionally, you can recover from errors by taking advantage of the retry actions and/or grouping changes using ActionBatch.  This is described further in [the Fast Action Manager documentation](../../fast-action-manager/index.html).
 
 At the moment if the process fails during init() or buildProcess() it might not report that failure back to the user very effectively.  When in doubt, check the error.log file.
