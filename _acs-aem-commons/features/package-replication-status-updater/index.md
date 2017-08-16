@@ -10,7 +10,7 @@ initial-release: 1.8.0
 
 ## Purpose
 
-Packages are a great way to promot large collections of content from Author to Publish servers. However, package replication does not mark the covered content on AEM Author as activated, making it difficult for content authors to understand if the content is in fact activated. Even more dangerous, OOTB tooling like "delete" and "move" will not automatically deactivate the content resulting in orphaned content on AEM Publish.
+Packages are a great way to promote large collections of content from Author to Publish servers. However, package replication does not mark the covered content on AEM Author as activated, making it difficult for content authors to understand if the content is in fact activated. Even more dangerous, OOTB tooling like "delete" and "move" will not automatically deactivate the content resulting in orphaned content on AEM Publish.
 
 The ACS AEM Commons Package Replication Status Updater combats this problems by inspecting the contents of any replicated package, and marking applicable content with the appropriate replication status on AEM Author.
 
@@ -34,12 +34,20 @@ To enable Package Replication Status Updating, create a new `sling:OsgiConfig` n
 * `node-types`: A String array of node-types (or mixins) that are candidates for replication status updates. 
    * Added in 1.9.0, hierarchy node-type definitions are supported to allow setting replication status on sling:OrderedFolder's jcr:content nodes. This can be leveraged for custom node-type hierarchies.
    * Default: [cq:ReplicationStatus,cq:PageContent,dam:AssetContent,rep:User,rep:Group,sling:OrderedFolder/nt:unstructured]
-* `replicated-by`: Marks the replicator for the package content. Accepts a principal name or any String.
-   * Default: Package Replication
 * `replicated-at`: Marks the replication time for the content. Accepts "Package Last Modified" or "Current Time"
 	* Package Last Modified: Marks the content as replicated the last time the Package was modified (aka Built)
 	* Current Time: Marks the content as replicated at the current time (now)
 	* Default: Package Last Modified
+* `replicated-by.override`: Marks the replicator for the package content. Accepts a principal name or any String.
+   * Default: Package Replication
+   * The name `replicated-by.override` was introduced in v3.10.0. Prior to v3.10.0 and in all 2.x.x releases, the name is `replicated-by`. 
+     v3.10.0+ will automatically fallback to `replicate-by` if `replicated-by.override` is not set.
+     
+## Replicated By enhancement since v3.10.0
+
+Since v.3.10.0, if the `replicated-by.override` (and previous `replicated-by`) OSGi configuration properties are left blank, then the actual user that requests the package replication will be used as the `cq:replicatedBy` value on each contents of the package.
+          
+Prior to this enhancement, the value in `replicated-by` was ALWAYS used as the value for `cq:replicatedBy` on the replicated package contents.
 
 ## Service User
 

@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
-title: Vanity Path Re-write Mapper
-description: Have your path re-writing and vanities too!
+title: Vanity Path Rewrite Mapper
+description: Have your path rewriting and vanities too!
 date: 2017-08-08
 feature-tags: authoring administration
 tags: new
@@ -12,7 +12,7 @@ initial-release: 3.10.0
 
 This is for everyone that loathes /etc/maps! 
 
-If you're a big fans of [using the Sling Resource Resolver Factory to re-write outgoing URLs and httpd with mod_rewrite, to re-write them back to AEM paths](http://www.cognifide.com/our-blogs/cq/multidomain-cq-mappings-and-apache-configuration/),
+If you're a big fans of [using the Sling Resource Resolver Factory to rewrite outgoing URLs and httpd with mod_rewrite, to rewrite them back to AEM paths](http://www.cognifide.com/our-blogs/cq/multidomain-cq-mappings-and-apache-configuration/),
 then you know the big draw-back with this approach is it prevents use of sling vanity paths, since they'll get `/content/xxx` slapped on the front of them by httpd, 
 and thus not resolve to the actual sling vanity path. 
 
@@ -61,11 +61,11 @@ In your overlay `404.jsp` place (or incorporate) the following code:
 5. The HTTP request to `/my-vanity` passes through httpd/dispatcher and is prefixed with `/content/example` (since httpd doesnt know anything about vanities)
 6. The request is reverse proxied back to AEM, with the invalid URL `/content/example/my-vanity` which AEM cannot resolve.
 7. AEM sends the request to its internal Sling Error Handler for 404s
-8. ACS Commons Vanity Path Re-write Mapper hooks into Sling's 404 error handler 
+8. ACS Commons Vanity Path Rewrite Mapper hooks into Sling's 404 error handler 
 9. In the 404 error handler, the ACS Commons VanityPathService does the following:
     1. `resourceResolver.map("/content/example/my-vanity")`  trims `/content/example` to `/my-vanity`
     2. A checks is ade to ensure the  mapped value (`/my-vanity`) is not the same original value (`/content/example/my-vanity`)
-        * If it is, then its not a re-written URL and the original 404 resolution is correct.
+        * If it is, then its not a rewritten URL and the original 404 resolution is correct.
     3. `resourceResolver.resolve("/my-vanity")` determines if this new trimmed path (`/my-vanity`) resolves to a resource, including via `sling:vanityPaths`.
     4. If the call to `resolve(..)` returns `null,` then it's not a vanity path, and the original 404 is respected.
     5. Else if, the call to `resolve(..)` is NOT null, then it IS vanity path, and the user is forwarded to that resource.

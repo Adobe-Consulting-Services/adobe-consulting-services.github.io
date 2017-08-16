@@ -3,8 +3,8 @@ layout: acs-aem-commons_feature
 title: Health Check Status E-mailer
 description: Actually know when health checks fail!
 date: 2017-08-08
+initial-release: 2.14.0/3.10.0
 tags: new
-initial-release: 3.10.0
 ---
 
 ## Purpose
