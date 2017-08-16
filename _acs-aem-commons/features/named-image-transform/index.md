@@ -2,10 +2,11 @@
 layout: acs-aem-commons_feature
 title: Named Transform Image Servlet
 description: Consistently resize, crop and transform images
-date: 2014-09-18
+date: 2017-07-01
 redirect_from: /acs-aem-commons/features/named-image-transform.html
 feature-tags: component-dev
 initial-release: 1.5.0
+tags: updated
 ---
 
 ## Purpose
@@ -325,4 +326,23 @@ greyscale:greyscale=true
 <ul>
 	<li><code>letter-pillar-box:width=600&amp;height=600</code></li>
 	<li><code>letter-pillar-box:width=600&amp;height=600&amp;alpha=.65&amp;color=0F0F0F</code><br>
+</li></ul></div>
+
+
+<div class="section">
+<h3>Sharpen (v2.14.0+/v3.10.0+)</h3>
+<p>Adds a sharpen/unsharpen mask to images.</p>
+<p>Name</p>
+<ul>
+	<li><code>sharpen</code></li>
+</ul>
+<p>Params</p>
+<ul>
+	<li><code>op_usm=[amount,radius]</code></li>
+	<li>amount: 0.0...5.0</li>
+	<li>radius: 0...250</li>
+</ul>
+<p>Examples</p>
+<ul>
+	<li><code>sharpen:3.5,20</code></li>
 </li></ul></div>

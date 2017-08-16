@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 2.14.0 and 3.10.0 now available!
+description: MCP, Vanity Path Re-write Mapper, QR Code for Page Editor, Asset Folder Properties, Brand Portal Sync workflow process, and a ton of bug fixes! Check the new CHANGELOG.md!
+date: 2017-08-18
+project: acs-aem-commons
+---

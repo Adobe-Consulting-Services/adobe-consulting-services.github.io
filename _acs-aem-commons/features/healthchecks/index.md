@@ -2,9 +2,10 @@
 layout: acs-aem-commons_feature
 title: Health Checks
 description: Check AEM's temperature
-date: 2016-11-01
+date: 2017-08-08
 feature-tags: administration standard
 initial-release: 3.4.0
+tags: new
 ---
 
 > [Add health checks to your Granite WebUI](https://docs.adobe.com/docs/en/aem/6-3/administer/operations/operations-dashboard.html#Health Reports). 
