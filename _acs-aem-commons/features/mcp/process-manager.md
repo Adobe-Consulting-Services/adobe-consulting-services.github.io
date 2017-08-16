@@ -25,7 +25,7 @@ Select the process you wish to start.  The next screen will prompt you for the i
 
 ![Example of process inputs](images/folder-relocator-1.png)
 
-After providing required inputs, the process may be started with the "Start" button at the bottom of the form.  If you selected the wrong process you can click "Previous" and go back to choose another process.  More information about these sample processes can be found in the Tools section of this documentation.
+After providing required inputs, the process may be started with the "Start" button at the bottom of the form.  If you selected the wrong process you can click "Previous" and go back to choose another process.  More information about these sample processes can be found in the [Tools section](tools.html) of this documentation.
 
 Once the process has started you will see it in the process manager with a status indicated by a blue progress bar.
 ![Process running](images/running-task.png)
@@ -56,4 +56,4 @@ Once a reporting process has completed, it stores any reporting information gene
 - *View:* Opens the report in a new browser tab.  You can copy data from here and paste into other applications if desired.
 - *Download (Excel):* This generates the report as an Excel document and is downloaded to your computer's Downloads folder.  You can open this up in your spreadsheet tool of choice and further maniuplate the data as needed.
 
-More information about generated reports is provided in the Tools section with the corresponding process that generates that report.  If the buttons do not appear then either the process was terminated abnormally, it is still running, or it was not a process that generates a report.
+More information about generated reports is provided in the [Tools section](tools.html) with the corresponding process that generates that report.  If the buttons do not appear then either the process was terminated abnormally, it is still running, or it was not a process that generates a report.

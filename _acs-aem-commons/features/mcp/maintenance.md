@@ -6,7 +6,7 @@ title: MCP - Maintenance Operations
 [<< back to MCP Table of Contents](index.html)
 
 ## Persisted data
-All data for MCP is tracked under `/var/acs-commons/mcp`.  It is written by the mcp system user `acs-commons-manage-controlled-processes-service`.  There are no cases where other user accounts need to write to this location but they should be allowed to read from here in order to obtain information about process reports or errors.
+All data for MCP is tracked under `/var/acs-commons/mcp`.  It is written by the mcp system user `acs-commons-manage-controlled-processes-service`.  There are no cases where other user accounts need to write to this location but they should be allowed to read from here in order to obtain information about process reports or [errors](error-handling.html).
 
 ## Process cleanup
 Over time the process instances will pile up and cause a lot of clutter in the user interface.  To resolve this, back up any content of value from the repository location `/var/acs-commons/mcp` and use the process manager (main UI) to start "Process Cleanup."  It will ask you the age in days you want to use.  0 means anything from yesterday or earlier.  -1 means everything.  Otherwise values like 7 mean one week old, and so on.
