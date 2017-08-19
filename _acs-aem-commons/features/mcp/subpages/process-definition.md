@@ -5,35 +5,38 @@ title: MCP - Process Definition
 
 [<< back to MCP Table of Contents](../index.html)
 
-## ProcessDefinition interface
-To create a new process definition for use with MCP, create a class which implements the ProcessDefinition interface with the following methods:
-* **getName** returns the name of this process.
+## ProcessDefinition class
+To create a new process definition for use with MCP, create a class which extends the ProcessDefinition abstract class with the following methods:
 * **buildProcess** defines the steps that this process entails and schedules the necessary work accordingly.
 * **storeReport** determines how and where to store a report, if applicable.  This method can be blank if no report is being generated.  See the section on Generic Report for more information.
-
 Additionally, the definition should declare any variables required for user input.  They can be private but they should **never** be static.  For more information on handling user input see [the form fields documentation](form-fields.html).
-
-## OSGi service, or is it?
-In practice, these definition objects are instantiated every time a new process is started.  Given that these are not singleton instances, that would indicate that these definitions are not services.  However, in order to find all process definitions more easily (to produce a list of them), it is required that the process definition also register itself as a service like so:
-
+## ProcessDefinitionFactory class
+You also need to create a factory which can instantiate your definition every time a new process is started.  The factory has three purposes:
+1. Register itself as a service so that it can be discovered by MCP
+2. Identify the friendly name of the process definition via getName.
+3. Instantiate a process definition, passing any requied services through the constructor.  Because the factory is a service, any dependency declared with @Reference will be injected automatically.
+For example:
 ```
 @Component
-@Service(ProcessDefinition.class)
-public class MyProcessDefinition implements ProcessDefinition, Serializable {
-    ...
+@Service(ProcessDefinitionFactory.class)
+public class MyProcessDefinitionFactory extends ProcessDefinitionFactory<MyProcessDefinition>{
+    public String getName() {
+        return "My Process";
+    }
+
+    process MyProcessDefinition createProcessDefinitionInstance() {
+        return new MyProcessDefintion();
+    }
+}
 ```
 
-The other interesting side effect of this design is that the process definition can inject dependencies with @Reference and these will be populated when the process is started.  The MCP framework has some trickery to make this happen, but for simplicity you shouldn't have to worry about that and use @Reference as needed.
 
-## Hiding a process definition
-If you do not want the user to be able to see the process definition at all, simply don't register it as an OSGi service.  You can still start it using the MCP Servlet (described in [the Operations documentation page](maintenance.html)) or alternatively using the `createManagedProcessInstance` of the ControlledProcessManager service itself.  The OSGi facility only serves the two goals of helping inject references and to make the process selection in the start dialog.  Note that if you go this way, you cannot inject services as references into your definition class and have to get them some other way.
-
-Another way to hide a process definition from all users EXCEPT admin is to also have your class implement the interface HiddenProcessDefinition.  This is recommended as it makes it so that Admin can still access the process if needed.
-
+## Controlling access to users
+The ProcessDefinitionFactory has a method you can optionally override called `isAllowed` which takes the user object and returns true if they are allowed to see/start this definition.  The default is true, which means all users will see it.  If you override this method in your factory you can change this behavior.  Alternatively, instead of extending ProcessDefinitionFactory you can use AdminOnlyProcessDefinitionFactory which only lets the "admin" user see the process, or you can use AdministratorsOnlyProcessDefinitionFactory which lets anyone in the administrators group see the process.
 ## Lifecycle of a process instance
 When a process begins the following occur:
 * The MCP Servlet creates a ProcessDefinition class using the `definition` parameter to deterime what class to instantiate.
-* The MCP Manager service instantiates that class and copies any service definitions over if needed so that the required dependencies are injected.
+* The MCP Manager service identifies the appropriate factory and uses that to instantiate the process definition object.
 * The MCP Servlet takes this new process definition object and asks the service for a new process instance, passing the definition back.
 * The MCP Manager creates a new process instance in memory and passes the definition to the constructor
 * The Process Instance sets up its internal variables and randomly generates an ID for itself

@@ -27,7 +27,7 @@ This section covers usage and is written for end-users, system administrators, a
 ### Development
 This section describes how you build new tools with MCP.
 
-[Process Definition](subpages/process-definition.html): The only class you have to write.
+[Process Definition](subpages/process-definition.html): Describes how to write your own custom processes	.
 
 [FormField Annotations](subpages/form-fields.html): Generating the start form.
 
