@@ -15,6 +15,8 @@ initial-release: 3.9.0
 
 In order to better support Java 8 language features, FAM will only be maintained from ACS Commons versions 3.9.0 to support AEM 6.2+ on Java 8 or newer.  Older AEM instances running on earlier versions may use the older version of FAM but will not inherit any of the more recent bug fixes or improvements.
 
+- *NEW IN 3.10.0*: ActionManager now has a method called Cancel which terminates any pending work for that action manager.  See the java docs for more information.
+
 ## Purpose
 
 Fast Action Manager is a easy-to-use API that allows for parallelized and (intelligently) throttled execution of Synthetic Workflow, Replication, or anything else you want!

@@ -6,6 +6,7 @@ date: 2013-09-30
 redirect_from: /acs-aem-commons/features/errorpagehandler.html
 youtube-id: w4P9T_miX8Q
 feature-tags: authoring standard
+tags: updated
 initial-release: 1.0.0
 ---
 
@@ -169,6 +170,7 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     enabled="{Boolean}true"
+    vanity.dispatch.enabled="{Boolean}true"
     serve-authenticated-from-cache="{Boolean}true"
     ttl="{Long}300"
     error-page.system-path="/content/error"
@@ -177,6 +179,8 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 {% endhighlight %}
 
 * `enabled` true/false to toggle the Error Page Handler on and off
+
+* `vanity.dispatch.enabled` true/false to toggle using the [ACS Commons Vanity Path Re-writer Mapper](acs-aem-commons/features/vanity-page-rewrite-mapper/index.html). Since v3.10.0.
 
 * `not-found.behavior = redirect-to-login || respond-with-404` Defines the default behavior for 404'ing requests. Defaults to `respond-with-404`. (Since v1.9.4)
 
@@ -198,6 +202,8 @@ The Error Page Handler has a few more advanced settings that are typically unuse
 * `error-images.enabled` boolean value; true to enable, false to disable. Defaults to false. (Since version 1.7.0)
 
 * `error-images.path` is a &lt;selectors.extension&gt; (ex. `.img.png`) absolute path to a nt:file image, or relative path to a image component resource.
+
+
 
 If an extension or relative path, this value is applied to the resolved error page. (ex. if error-image.path is 'jcr:content/image.img.png' and the resolve error path is '/content/acme/error' then '/content/acme/error/jcr:content/image.img.png' will be used to render the image.). Defaults to '.img.png' which will render the error page's Page image. (Since version 1.7.0)
 

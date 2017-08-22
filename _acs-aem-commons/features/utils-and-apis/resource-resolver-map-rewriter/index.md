@@ -4,6 +4,7 @@ title: Resource Resolver Mapping Rewriter
 description: Map any HTML attribute!
 date: 2015-10-15
 initial-release: 2.1.0
+tags: updated
 ---
 
 ## Purpose
@@ -12,9 +13,11 @@ The OOTB AEM LinkChecker rewriter only supports a limited set of HTML element/at
 
 Often other attributes may need to have their values mapped to ensure the URL is exposed properly, such as: img src, or data-* attributes used to expose AEM end points to JavaScript applications. 
 
-## Configuration
+## How to use
 
-### Component Configuration
+### OSGi Component configuration
+
+![ Resource Resolver Mapping Rewriter OSGi Config](./images/osgi-config.png)
 
 First, you must configure the rewriter pipeline component. This is done using OSGi configuration. It is a factory component using the PID `com.adobe.acs.commons.rewriter.impl.StaticReferenceRewriteTransformerFactory`. This allows you to specify multiple configurations to handle multi-site deployments and/or deployments where a different domain is used for different path segments (i.e. `/etc/designs/site` on one domain and `/content/dam/site` on a different domain).
 
@@ -32,9 +35,9 @@ First, you must configure the rewriter pipeline component. This is done using OS
 * `pipeline.type` - This is the pipeline component name which will be referenced from the rewriter configuration below.
 * `attributes` - The list of HTML element/attribute pairs which will be rewritten. element and attributes are `:` delimited. Each attribute **MUST** be unique in the list, but can have multiple attributes specified as comma delimited values.
 
-### Rewriter Pipeline Configuration
+### Rewriter Pipeline configuration
 
-The easiest way to configure the rewriter pipline is just to copy `/libs/cq/config/rewriter/default` to a path inside your application, e.g. `/apps/myapp/config/rewriter/mysite. Note that the configuration node *must* be inside a four-level path that ends in `config/rewriter`.
+The easiest way to configure the rewriter pipeline is just to copy `/libs/cq/config/rewriter/default` to a path inside your application, e.g. `/apps/myapp/config/rewriter/mysite. Note that the configuration node *must* be inside a four-level path that ends in `config/rewriter`.
 
 To validate that your configuration was successful, look at the Sling Rewriter tab in the OSGi Web Console.
 
