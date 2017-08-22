@@ -330,7 +330,7 @@ greyscale:greyscale=true
 
 
 <div class="section">
-<h3>Sharpen (v2.14.0+/v3.10.0+)</h3>
+<h3>Sharpen (v2.13.0+/v3.10.0+)</h3>
 <p>Adds a sharpen/unsharpen mask to images.</p>
 <p>Name</p>
 <ul>
