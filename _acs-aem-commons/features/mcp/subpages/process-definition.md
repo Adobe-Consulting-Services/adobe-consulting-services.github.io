@@ -16,6 +16,7 @@ You also need to create a factory which can instantiate your definition every ti
 2. Identify the friendly name of the process definition via getName.
 3. Instantiate a process definition, passing any requied services through the constructor.  Because the factory is a service, any dependency declared with @Reference will be injected automatically.
 For example:
+
 ```
 @Component
 @Service(ProcessDefinitionFactory.class)
@@ -29,7 +30,6 @@ public class MyProcessDefinitionFactory extends ProcessDefinitionFactory<MyProce
     }
 }
 ```
-
 
 ## Controlling access to users
 The ProcessDefinitionFactory has a method you can optionally override called `isAllowed` which takes the user object and returns true if they are allowed to see/start this definition.  The default is true, which means all users will see it.  If you override this method in your factory you can change this behavior.  Alternatively, instead of extending ProcessDefinitionFactory you can use AdminOnlyProcessDefinitionFactory which only lets the "admin" user see the process, or you can use AdministratorsOnlyProcessDefinitionFactory which lets anyone in the administrators group see the process.
@@ -58,6 +58,7 @@ When a process begins the following occur:
 
 ### Defining work with Fast Action Manager
 The general pattern that is recommended is that the step function defers defining work immediately.  For example:
+
 ```
 private void step1(ActionManager manager) {
     TreeFilteringResourceVisitor visitor = new TreeFilteringResourceVisitor();
