@@ -2,6 +2,7 @@
 
 title: Release 0.0.22 now available!
 description: New features include Tag Maker and CSV/Asset Importer. Enhancements to Explain Query (QueryBuilder query support, results to JSON and performance tuning)
+date: 2015-06-22
 
 project: acs-aem-tools
 

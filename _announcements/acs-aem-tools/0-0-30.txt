@@ -2,6 +2,7 @@
 
 title: Release 0.0.30 now available!
 description: AEM Fiddle bug fixes and event-user-data for ACS Tools features!
+date: 2017-10-12
 
 project: acs-aem-tools
 

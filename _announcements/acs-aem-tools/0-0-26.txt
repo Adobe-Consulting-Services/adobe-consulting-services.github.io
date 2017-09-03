@@ -2,6 +2,7 @@
 
 title: Release 0.0.26 now available!
 description: AEM 6.2 Compatibility release.
+date: 2016-04-25
 
 project: acs-aem-tools
 

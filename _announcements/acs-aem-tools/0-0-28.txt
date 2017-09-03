@@ -2,6 +2,7 @@
 
 title: Release 0.0.28 now available!
 description: Enhancement and bug fixes for AEM Fiddle and CSV Asset Importer
+date: 2016-07-24
 
 project: acs-aem-tools
 
