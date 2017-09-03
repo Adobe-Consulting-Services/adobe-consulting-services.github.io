@@ -1,0 +1,25 @@
+---
+layout: acs-aem-commons_default
+---
+<script>
+    digitalData.page.pageInfo.category.projectName = "ACS AEM Commons";
+</script>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <section class="feature-doc">
+            <div class="feature-doc-header">
+                <h1>
+                    {{ page.title }}
+                </h1>
+
+                {% if page.initial-release %}
+                <p class="available-since">Available since version {{page.initial-release}}</p>
+                {% endif %}
+            </div>
+
+            {{ content }}
+
+            {% include acs-aem-commons/comments.html %}
+        </section>
+    </div>
+</div>
