@@ -106,7 +106,7 @@ Note this sub-feature list is only available for ACS AEM Commons.
 
 ## Building
 
-This site is built using Jekyll.  To build this sitel locally you must have already installed Ruby, Bundle, and Jekyll.  With these installed you can do the follow:
+This site is built using Jekyll.  To build this site locally you must have already installed Ruby, Bundle, and Jekyll.  With these installed you can do the following:
 ```
 bundle exec jekyll build
 ```
@@ -117,3 +117,16 @@ bundle exec jekyll serve
 ```
 
 More information can be found here: [https://jekyllrb.com/](https://jekyllrb.com/)
+
+### Example of installing Ruby/Jekyll under Ubuntu:
+Every package manager works a little differently but for the most part you need to make sure you have Ruby and its dev libraries installed in order for Jekyll to work.  Gem will want to compile nokogiri's native code to match your environment so additional libraries are required as well.
+For example:
+```
+sudo apt install build-essential ruby ruby-dev libxml2-dev zlib1g-dev
+sudo gem install bundler
+bundle install
+```
+
+The final part installs all the prerequisites needed to run the bundle commands as demonstrated in the section above.  You should only need to execute these commands once.
+
+Other operating systems will vary along this theme, e.g. on Mac OSX you will likely need to install XCode if you haven't done so already.

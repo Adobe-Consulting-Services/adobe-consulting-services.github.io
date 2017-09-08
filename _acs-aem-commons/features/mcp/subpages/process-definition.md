@@ -9,12 +9,15 @@ title: MCP - Process Definition
 To create a new process definition for use with MCP, create a class which extends the ProcessDefinition abstract class with the following methods:
 * **buildProcess** defines the steps that this process entails and schedules the necessary work accordingly.
 * **storeReport** determines how and where to store a report, if applicable.  This method can be blank if no report is being generated.  See the section on Generic Report for more information.
+
 Additionally, the definition should declare any variables required for user input.  They can be private but they should **never** be static.  For more information on handling user input see [the form fields documentation](form-fields.html).
+
 ## ProcessDefinitionFactory class
 You also need to create a factory which can instantiate your definition every time a new process is started.  The factory has three purposes:
 1. Register itself as a service so that it can be discovered by MCP
 2. Identify the friendly name of the process definition via getName.
 3. Instantiate a process definition, passing any requied services through the constructor.  Because the factory is a service, any dependency declared with @Reference will be injected automatically.
+
 For example:
 
 ```
@@ -44,13 +47,13 @@ When a process begins the following occur:
 * The MCP Servlet converts the request parameters into a Map object (described in the [Form Fields section](form-fields.html)) and initalizes the process instance.
     * The instance init method asks the process definition to parse its inputs.
       This can be overridden but it is recommended that unless you really need to, don't override the init method that ProcessDefinition inherits from FormProcessor
-    * After setting all Process Definition variables from the form, the init() method is called.
-    This is where you would define any one-time setup functions that do not require a resource resolver to operate.
+    * After setting all Process Definition variables from the form, the init() method is called.  Init is where you would define any one-time setup functions that do not require a resource resolver to operate.
 * The MCP Servlet asks the process instance to execute the process via the `run` method.
     * After setting some basic information, the instance calls the process definitions's `buildProcess` method.
     * Any additional setup operations that require a resource resolver should come first in the Process Definition's `buildProcess` method.
     * Process Definition `buildProcess` then uses `defineAction` and `defineCriticalAction` methods of the process instance to specify each step that the process will take.  Each of these require a method reference that takes an ActionManager as a parameter.  Look at existing definitions for examples of this
     * Each step should take advantage of the deferred methods provided by Fast Action Manager.  For more information see [the Fast Action Manager documentation](../fast-action-manager/index.html).
+    
 * In the order they were defined, the process instance executes each step defined in `buildProcess`.  If a Critical step has any error, then the process will halt at the end of that step.
 * At the end of each step, any new errors are recorded to the JCR.
 * When the process is over, the process instance triggers the `storeReport` method as well as persisting any final information about the process.
