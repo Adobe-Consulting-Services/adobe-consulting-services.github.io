@@ -28,6 +28,11 @@ com.adobe.acs.commons.httpcache.store
 com.adobe.acs.commons.httpcache.util
 com.adobe.acs.commons.images
 com.adobe.acs.commons.json
+com.adobe.acs.commons.mcp
+com.adobe.acs.commons.mcp.form
+com.adobe.acs.commons.mcp.mbean
+com.adobe.acs.commons.mcp.model
+com.adobe.acs.commons.mcp.util
 com.adobe.acs.commons.models.injectors.annotation
 com.adobe.acs.commons.notifications
 com.adobe.acs.commons.oak
@@ -47,6 +52,7 @@ com.adobe.acs.commons.synth
 com.adobe.acs.commons.synth.children
 com.adobe.acs.commons.twitter
 com.adobe.acs.commons.util
+com.adobe.acs.commons.util.datadefinitions
 com.adobe.acs.commons.util.mbeans
 com.adobe.acs.commons.util.visitors
 com.adobe.acs.commons.version
@@ -60,6 +66,7 @@ com.adobe.acs.commons.wcm.notifications
 com.adobe.acs.commons.wcm.properties.shared
 com.adobe.acs.commons.wcm.tags
 com.adobe.acs.commons.wcm.tags.wcmmode
+com.adobe.acs.commons.wcm.vanity
 com.adobe.acs.commons.widgets
 com.adobe.acs.commons.workflow
 com.adobe.acs.commons.workflow.bulk
