@@ -8,7 +8,7 @@ feature-tags: authoring
 initial-release: 3.1.0
 ---
 
-> This feature is AEM 6.2 ONLY!
+> This feature is AEM 6.2+ ONLY!
 
 ## Purpose
 
