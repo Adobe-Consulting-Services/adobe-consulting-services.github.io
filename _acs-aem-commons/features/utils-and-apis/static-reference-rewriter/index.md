@@ -33,7 +33,7 @@ First, you must configure the rewriter pipeline component. This is done using OS
     jcr:primaryType="sling:OsgiConfig"
     pipeline.type="mysite-static-refs"
     attributes="[img:src\,srcset,link:href,script:src]"
-    matchingPatterns="[img:srcset;(/content/dam/.+?[jpg|png]) .+?w]"
+    matchingPatterns="[img:srcset;(\/content\/dam\/.+?[jpg|png]) .+?w]"
     host.count="{Long}2"
     host.pattern="static{}.mysite.com"
     prefixes="[/etc/designs/mysite,/content/dam/mysite]"/>
