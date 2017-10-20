@@ -42,7 +42,7 @@ First, you must configure the rewriter pipeline component. This is done using OS
 
 * `pipeline.type` - This is the pipeline component name which will be referenced from the rewriter configuration below.
 * `attributes` - The list of HTML element/attribute pairs which will be rewritten.
-* `matchingPatterns` - The list of HTML element/attribute/regex patterns specifying how to find the url part in the attribute value. This is used to pre-prend host to more complex attribute values like in the case of srcset. The url part must be the first matching group within the pattern. This means that a call to Matcher.group(1) should return the url part of the complex value.
+* `matchingPatterns` (since 3.11.0) - The list of HTML element/attribute/regex patterns specifying how to find the url part in the attribute value. This is used to pre-prend host to more complex attribute values like in the case of srcset. The url part must be the first matching group within the pattern. This means that a call to Matcher.group(1) should return the url part of the complex value.
 Format is: <element>:<attribute>;<regex-pattern>
 * `host.count` - If you are using Domain Sharding, this is the number of domains.
 * `host.pattern` - If you are *not* using Domain Sharding, this is simply the static host name. If you are using Domain Sharding, this will be a pattern used to generate the static domain names, replacing the string `{}` with a number between 1 and the `host.count` value.
