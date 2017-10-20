@@ -5,6 +5,7 @@ description: Minimize your static request size.
 date: 2013-07-01
 redirect_from: /acs-aem-commons/features/static-reference-rewriter.html
 feature-tags: component-dev
+tags: updated
 initial-release: 1.0.0
 ---
 

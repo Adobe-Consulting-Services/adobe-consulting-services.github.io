@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.11.0 now available!
+description: S3 Asset Ingestion & Tag Maker in MCP, complex value support in the StaticReferenceRewriterTransformer, and a ton of bug fixes! Check the CHANGELOG.md!
+date: 2017-10-19
+project: acs-aem-commons
+---

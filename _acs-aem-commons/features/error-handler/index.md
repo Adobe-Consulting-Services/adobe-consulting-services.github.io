@@ -6,7 +6,6 @@ date: 2013-09-30
 redirect_from: /acs-aem-commons/features/errorpagehandler.html
 youtube-id: w4P9T_miX8Q
 feature-tags: authoring standard
-tags: updated
 initial-release: 1.0.0
 ---
 

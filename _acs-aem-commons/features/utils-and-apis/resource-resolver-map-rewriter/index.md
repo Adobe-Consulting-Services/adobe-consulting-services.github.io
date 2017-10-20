@@ -4,7 +4,6 @@ title: Resource Resolver Mapping Rewriter
 description: Map any HTML attribute!
 date: 2015-10-15
 initial-release: 2.1.0
-tags: updated
 ---
 
 ## Purpose

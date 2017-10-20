@@ -5,7 +5,6 @@ description: aka FACEMELTER
 date: 2016-04-25
 redirect_from: /acs-aem-commons/features/fast-action-manager.html
 feature-tags: backend-dev content-migration
-tags: updated
 initial-release: 3.9.0
 ---
 

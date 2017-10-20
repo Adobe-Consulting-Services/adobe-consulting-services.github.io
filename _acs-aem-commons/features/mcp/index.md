@@ -5,7 +5,7 @@ description: The most efficient way of managing what we do
 date: 2017-08-14
 redirect_from: /acs-aem-commons/features/mcp.html
 feature-tags: backend-dev content-migration
-tags: new
+tags: updated
 initial-release: 3.10.0
 ---
 
