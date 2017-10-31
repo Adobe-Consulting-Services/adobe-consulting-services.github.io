@@ -9,8 +9,6 @@ initial-release: 0.0.12
 
 ## Getting Started
 
-> Explain Query only works on AEM6 with Oak based repositories (TarMK/MongoMK)
-
 Install the ACS AEM Tools package via the AEM Package Manager and then open Test Page Generator from the AEM Tools console, or directly at [/etc/test-page-generator/test-page-generator.html](http://localhost:4502/etc/acs-tools/test-page-generator.html)
 
 To get to the AEM Tools console from the Touch UI, from the left rail navigation, select Tools > ACS AEM Tools > Test Page Generator.
