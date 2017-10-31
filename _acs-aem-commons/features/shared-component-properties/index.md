@@ -61,7 +61,7 @@ which deploys configs to `/apps/shared-component-properties` and client librarie
 #### <a name="activation-enable-service"></a>**1. Enabling the Shared Component Properties OSGi Service**
 This is done via the Felix console or by deploying a blank OSGi configuration file from your project deployment.
 
-`/apps/mysite/config.author/com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesImpl.xml`
+`/apps/mysite/config/com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesImpl.xml`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -101,7 +101,7 @@ to specify a path (regexp patterns supported) to your site's root page.
 
 Example OSGI deployment pointed at the Geometrixx home page (/content/geometrixx/en):
 
-`/apps/mysite/config.author/com.adobe.acs.commons.wcm.impl.PageRootProviderImpl.xml`
+`/apps/mysite/config/com.adobe.acs.commons.wcm.impl.PageRootProviderImpl.xml`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -183,7 +183,7 @@ permissions to the root page (i.e. home page) of the site. This is where shared/
 ## <a name="permissions"></a>Troubleshooting
 If you are having trouble getting AEM to show the authoring options for shared and global property dialogs, first
 start by installing the
-[Example]({{ site.data.acs-aem-commons.baseurl }}/features/shared-component-properties.html#example)
+[Example](#example)
 component and checking that you are able to see the options for opening the
 shared and global dialogs for the "Shared Component Properties Example" component. If so, check for differences between
 the dialogs on the example component and your custom component. If not, try logging in as the `admin` user (if you
