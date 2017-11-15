@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.12.0 now available!
+description: Broken References MCP Task, Asset Metadata Dialog Helper, and a ton of bug fixes! Check the CHANGELOG.md!
+date: 2017-11-15
+project: acs-aem-commons
+---
