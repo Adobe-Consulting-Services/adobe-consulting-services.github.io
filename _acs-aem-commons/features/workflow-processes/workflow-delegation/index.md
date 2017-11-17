@@ -10,9 +10,9 @@ initial-release: 2.7.0/3.10.0
 
 ## Purpose
 
-Allow the OOTB "Request for Activation" workflow to execute different WF steps based on the payload.
+Allow to execute a different workflow model on the same payload.
 
-For example, when the Workflow is executed on a pages under `/content/en/pages` an approval workflow is required, however pages under `/content/en/pages/faq` do not require the approval workflow, and on `/content/dam/products` a more rigorous approval workflow is required.
+Taking the "Request for activation" workflow as example, when the Workflow is executed on a pages under `/content/en/pages` an approval workflow is required, however pages under `/content/en/pages/faq` do not require the approval workflow, and on `/content/dam/products` a more rigorous approval workflow is required. Using the Workflow Delegation step you can define the exact workflow model to start as part of the content tree. You don't need to hardcode the information which workflow to start at which location in the workflow model; also you don't need to modify any workflow launchers. 
 
 ## How to Use
 
