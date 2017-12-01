@@ -61,6 +61,7 @@ As of ACS Commons 3.13.0, this feature now supports the asset schema metadata fo
 ![Asset merge example](images/asset-example.png)
 
 This example shows how to use `merge-all-tags` from an asset schema editor.  It is possible to also merge specific fields by name, but you will have to add one hidden field for each, with names for each field like so:
+
     :jcr:content/metadata/dam:tag-field1@PropertyMerge
     :jcr:content/metadata/dam:tag-field2@PropertyMerge
     ... etc
