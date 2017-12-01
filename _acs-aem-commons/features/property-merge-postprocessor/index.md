@@ -2,7 +2,8 @@
 layout: acs-aem-commons_feature
 title: Property Merge POST Processor
 description: Merge data into a single property
-date: 2015-05-17
+date: 2017-12-01
+tags: updated
 redirect_from: /acs-aem-commons/features/property-merge-post-processor.html
 feature-tags: component-dev
 initial-release: 1.10.0
@@ -44,6 +45,29 @@ Example
 Adding the above as request params will merge aTags, bTags, cTags into abcTags and dTags, eTags into deTags
 
 Note the `:` prefix to ensure these params are ignored by the OOTB Sling POST Servlet, and not written to the underlying resource.
+
+### Special case: Merging all tags
+
+You can also specify a special value for source prop `merge-all-tags` which will enable a mode wherein the processor evaluates all incoming data for values that look like tags, and merge all of them to the designated property.
+
+Example
+
+    :merge-all-tags@PropertyMerge=allTags
+
+## TouchUI Asset editing support
+
+As of ACS Commons 3.13.0, this feature now supports the asset schema metadata forms.  You can merge invidual fields, or use the new `merge-all-tags` feature as well.  You must take great care to exercise some constraints, for example all your metadata properties should begin with `jcr:content/metadata/` -- note that there is no beginning slash.
+
+![Asset merge example](images/asset-example.png)
+
+This example shows how to use `merge-all-tags` from an asset schema editor.  It is possible to also merge specific fields by name, but you will have to add one hidden field for each, with names for each field like so:
+    :jcr:content/metadata/dam:tag-field1@PropertyMerge
+    :jcr:content/metadata/dam:tag-field2@PropertyMerge
+    ... etc
+
+## Caution about field visibility
+
+If you are combining tags, it is a good idea to make sure that the target propery is not visible or otherwise part of the form (not even a hidden field.)  This is because the sling post processor will re-instate all of the old values each time, making it impossible to for removed tags to get cleaned out.  However, if the merged tag propert is not shown or part of the form, then the underlying values should be correct.  You can verify this by looking at the node properties in CRX DE Lite.
 
 #### Example of ExtJS Dialog XML
 	
