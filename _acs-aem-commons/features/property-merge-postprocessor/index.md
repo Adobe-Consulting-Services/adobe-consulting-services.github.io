@@ -48,11 +48,11 @@ Note the `:` prefix to ensure these params are ignored by the OOTB Sling POST Se
 
 ### Special case: Merging all tags
 
-You can also specify a special value for source prop `merge-all-tags` which will enable a mode wherein the processor evaluates all incoming data for values that look like tags, and merge all of them to the designated property.
+You can also specify a special value for source property `Operation.mergeAllTags` which will enable a mode wherein the processor evaluates all incoming data for values that look like tags, and merge all of them to the designated property.
 
 Example
 
-    :merge-all-tags@PropertyMerge=allTags
+    :Operation.mergeAllTags@PropertyMerge=allTags
 
 ## TouchUI Asset editing support
 
@@ -60,7 +60,7 @@ As of ACS Commons 3.13.0, this feature now supports the asset schema metadata fo
 
 ![Asset merge example](images/asset-example.png)
 
-This example shows how to use `merge-all-tags` from an asset schema editor.  It is possible to also merge specific fields by name, but you will have to add one hidden field for each, with names for each field like so:
+This example shows how to use `Operation.mergeAllTags` from an asset schema editor.  It is possible to also merge specific fields by name, but you will have to add one hidden field for each, with names for each field like so:
 
     :jcr:content/metadata/dam:tag-field1@PropertyMerge
     :jcr:content/metadata/dam:tag-field2@PropertyMerge
