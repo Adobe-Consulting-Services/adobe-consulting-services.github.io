@@ -40,6 +40,8 @@ com.adobe.acs.commons.packaging
 com.adobe.acs.commons.quickly
 com.adobe.acs.commons.quickly.operations
 com.adobe.acs.commons.quickly.results
+com.adobe.acs.commons.redirectmaps
+com.adobe.acs.commons.redirectmaps.models
 com.adobe.acs.commons.replication
 com.adobe.acs.commons.replication.dispatcher
 com.adobe.acs.commons.replication.packages.automatic
