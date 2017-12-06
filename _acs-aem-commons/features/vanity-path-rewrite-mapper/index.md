@@ -4,7 +4,6 @@ title: Vanity Path Rewrite Mapper
 description: Have your path rewriting and vanities too!
 date: 2017-08-08
 feature-tags: authoring administration
-tags: new
 initial-release: 3.10.0
 ---
 

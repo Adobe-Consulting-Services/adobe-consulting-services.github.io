@@ -5,7 +5,6 @@ description: Add properties to AEM Asset Folders
 date: 2017-08-08
 feature-tags: administration
 initial-release: 3.10.0
-tags: new
 ---
 
 ## Purpose

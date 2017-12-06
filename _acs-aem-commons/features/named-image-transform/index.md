@@ -6,7 +6,6 @@ date: 2017-07-01
 redirect_from: /acs-aem-commons/features/named-image-transform.html
 feature-tags: component-dev
 initial-release: 1.5.0
-tags: updated
 ---
 
 ## Purpose

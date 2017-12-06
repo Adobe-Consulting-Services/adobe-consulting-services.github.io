@@ -4,7 +4,6 @@ title: QR Code Page Editor Plug-in
 description: See your page on REAL mobile in a snap!
 date: 2017-08-06
 feature-tags: authoring administration
-tags: new
 initial-release: 3.10.0
 ---
 
