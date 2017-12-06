@@ -9,16 +9,16 @@ tags: acs-aem-commons-features new
 initial-release: 3.13.0
 ---
 
-##Purpose
+## Purpose
 
 Reusable Permission Sensitive Cache Servlet to be used on the [/auth_checker](https://helpx.adobe.com/experience-manager/kb/PSCachingDelivery.html) configuration of the dispatcher
 
-##How to use
+## How to use
 * Create an sling:OsgiConfig config for `com.adobe.acs.commons.dispatcher.impl.PermissionSensitiveCacheServlet`.
 * Add a multi String property `sling.servlet.paths`.
 * Property value should be the path you want the `/url` config in the Dispatcher `/auth_checker` to call.
 
-##Example OSGi Configuration
+## Example OSGi Configuration
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
@@ -27,7 +27,7 @@ Reusable Permission Sensitive Cache Servlet to be used on the [/auth_checker](ht
 
 {% endhighlight %}
 
-##Example Dispathcer Configuration
+## Example Dispathcer Configuration
 {% highlight xml %}
 /auth_checker
   {
