@@ -23,7 +23,7 @@ Reusable Permission Sensitive Cache Servlet to be used on the [/auth_checker](ht
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    sling.servlet.paths="[/bin/microsoft-odyssey/wcm/permissioncheck]"/>
+    sling.servlet.paths="[/bin/mysite/wcm/permissioncheck]"/>
 
 {% endhighlight %}
 
@@ -31,7 +31,7 @@ Reusable Permission Sensitive Cache Servlet to be used on the [/auth_checker](ht
 {% highlight xml %}
 /auth_checker
   {
-  /url "/bin/permissioncheck.html"
+  /url "/bin/mysite/wcm/permissioncheck"
        
   /filter
     {
