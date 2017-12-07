@@ -71,7 +71,7 @@ Redirect configurations are used to gather vanity redirects to AEM pages based o
  
  ![Create Redirect Configurations](images/create-redirect-configurations.png)
  
- #### Fields
+#### Fields
  
 - Scheme - The request scheme, e.g. http or https, used to map the paths into published URLs
 - Domain - The domain name for the requests, used to map the paths into published URLs
