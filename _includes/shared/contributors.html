@@ -1,0 +1,33 @@
+{% assign counter = 0 %}
+{% for contributor in site.contributors %}
+{% if contributor.tags contains 'acs-aem-commons' %}
+{% assign counter = counter | plus:1 %}
+{% endif %}
+{% endfor %}
+
+{% if counter > 1 %}
+<section class="contributors">
+    <div class="container">
+        <h4>Contributors</h4>
+
+        <p>ACS AEM Commons accepts contributions from ...</p>
+
+        <div class="row">
+
+            {% for contributor in site.contributors %}
+            {% if contributor.tags contains 'acs-aem-commons' %}
+            <div class="contributor">
+                <a href="{{ contributor.website }}">
+                    <img class="img-responsive contributor-logo"
+                         src="{{ contributor.url }}/../logo.png"
+                         alt="{{ contributor.title }}"/></a>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+
+        </div>
+	</div>
+</section>
+{% endif %}
+

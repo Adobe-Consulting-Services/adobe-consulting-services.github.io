@@ -14,40 +14,43 @@ $dark-bg-color-dark: #bc2606;
 
 @import "shared";
 
-a {
-  color: $color;
+.acs-aem-commons {
 
-  &:hover {
-    color: $color-dark;
-  }
-}
+	a {
+	  color: $color;
 
-.color-block {
-	background: #882021 url('/assets/acs-aem-commons/images/colored-bg.jpg');
-}
+	  &:hover {
+	    color: $color-dark;
+	  }
+	}
 
-table.data-table {	
-	margin: 0 auto 2em auto;
+	.color-block {
+		background: #882021 url('/assets/acs-aem-commons/images/colored-bg.jpg');
+	}
+
+	table.data-table {	
+		margin: 0 auto 2em auto;
 	
-	thead {
-		border-bottom: solid 1px #ccc;
+		thead {
+			border-bottom: solid 1px #ccc;
 		
-		tr {
-			&:hover {
-				background-color: transparent;
+			tr {
+				&:hover {
+					background-color: transparent;
+				}
 			}
 		}
-	}
 	
-	th, td {
-		padding: 1em 1.5em;
-	}
+		th, td {
+			padding: 1em 1.5em;
+		}
 
-	tr {
-		border-bottom: solid 1px #eee;
+		tr {
+			border-bottom: solid 1px #eee;
 		
-		&:hover {
-			background-color: #f7f7f7;
+			&:hover {
+				background-color: #f7f7f7;
+			}
 		}
 	}
 }

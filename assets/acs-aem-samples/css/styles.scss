@@ -14,30 +14,35 @@ $dark-bg-color-dark: #A14E84;
 
 @import "shared";
 
-a {
-  color: $color;
+.acs-aem-samples {
+	a {
+	  color: $color;
 
-  &:hover {
-    color: $color-dark;
-  }
+	  &:hover {
+	    color: $color-dark;
+	  }
+	}
+
+	.color-block {
+	  background: #5a2648 url('/assets/acs-aem-samples/images/colored-bg.jpg');
+	}
+
+	/* Home Page Columns */
+
+	.samples-section {
+	  border-bottom: dotted 1px #ccc;
+	  padding-bottom: .5em;
+	  margin-bottom: .5em;
+	}
+
+	.col1, .col2 {
+	  @include make-xs-column(12);
+	  @include make-sm-column(6);
+	  @include make-md-column(6);
+	  @include make-lg-column(6);
+	}
+	
+	#jumbotron .wrapper .message {
+		margin-top: 3rem;
+	}
 }
-
-.color-block {
-  background: #5a2648 url('/assets/acs-aem-samples/images/colored-bg.jpg');
-}
-
-/* Home Page Columns */
-
-.samples-section {
-  border-bottom: dotted 1px #ccc;
-  padding-bottom: .5em;
-  margin-bottom: .5em;
-}
-
-.col1, .col2 {
-  @include make-xs-column(12);
-  @include make-sm-column(6);
-  @include make-md-column(6);
-  @include make-lg-column(6);
-}
-

@@ -1,0 +1,22 @@
+.contributors {
+
+  .contributor {
+    @include make-xs-column(4);
+    @include make-sm-column(3);
+    @include make-md-column(2);
+    @include make-lg-column(2);
+
+    text-align: center;
+    position: relative;
+
+    .contributor-logo {
+      margin: 0 auto;
+      object-fit: contain;
+      padding: 0;
+      width: 100%;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+  }
+
+}

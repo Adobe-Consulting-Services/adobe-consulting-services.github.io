@@ -15,14 +15,16 @@ $dark-bg-color-dark: #1f8b00;
 
 @import "shared";
 
-a {
-  color: $color;
+.acs-aem-tools {
+	a {
+	  color: $color;
 
-  &:hover {
-    color: $color-dark;
-  }
-}
+	  &:hover {
+	    color: $color-dark;
+	  }
+	}
 
-.color-block {
-  background: #2D3C27 url('/assets/acs-aem-tools/images/colored-bg.jpg');
+	.color-block {
+	  background: #2D3C27 url('/assets/acs-aem-tools/images/colored-bg.jpg');
+	}
 }
