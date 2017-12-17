@@ -73,7 +73,7 @@ description: A way to bootstrap AEM project with common functionality, a set of 
             {% for page in sorted %}
             {% assign depth = page.path | split: '/' | size %}
                 {% if depth == 4 %}
-                    {% include shared/feature-card.html feature=page project=site.data.acs-aem-commons.name %}
+                    {% include shared/feature-card.html feature=page project=site.data.acs-aem-commons %}
                 {% endif %}
             {% endfor %}
         </div>

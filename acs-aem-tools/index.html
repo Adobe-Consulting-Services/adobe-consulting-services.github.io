@@ -77,7 +77,7 @@ description: A set of tools whose goal is making AEM developer lives easier.
             {% for page in sorted %}
                 {% assign depth = page.path | split: '/' | size %}
                 {% if depth == 4 %}
-                    {% include shared/feature-card.html feature=page project=site.data.acs-aem-tools.name %}
+                    {% include shared/feature-card.html feature=page project=site.data.acs-aem-tools %}
                 {% endif %}
             {% endfor %}
         </div>

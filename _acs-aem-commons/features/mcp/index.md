@@ -20,7 +20,7 @@ This section covers usage and is written for end-users, system administrators, a
 
 [Process Manager](subpages/process-manager.html): The main user interface and basic operations.
 
-[Tools](subpages/tools.html): Descriptions and guides for various pre-defined MCP-based tools.
+[Tools](../mcp-tools/index.html): Descriptions and guides for various pre-defined MCP-based tools.
 
 [Maintenance / Operations](subpages/maintenance.html): Notes for general maintenance procedures.
 

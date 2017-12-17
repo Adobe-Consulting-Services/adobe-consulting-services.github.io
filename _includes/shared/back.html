@@ -1,0 +1,13 @@
+<div class="row back-button-wrapper">	
+	<div class="row back-button">
+	    <div class="col-md-10 col-md-offset-1">
+	        {% assign pathParts = page.path | remove: "index.md" | split: "/" %}
+
+			{% if pathParts.size > 3 %}
+				<a href="../index.html">&lt; Back to the features</a>
+			{% else %}
+				<a href="../../#features">&lt; Back to the features</a>		
+			{% endif %}	
+		</div>
+	</div>
+</div>

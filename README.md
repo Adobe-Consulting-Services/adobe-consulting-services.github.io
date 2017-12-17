@@ -69,8 +69,9 @@ title: Post title
 description: Post description
 date: 2014-01-01 # Time not required
 feature-tags: standard || component-dev || backend-dev || authoring || administration
-tags:  new || updated || deprecated
 initial-release: 1.0.0
+last-updated-release: 1.0.0
+tags: deprecated
 ---
 ```
 
@@ -85,12 +86,19 @@ date: 2013-06-10
 feature-tags: standard authoring
 tags: deprecated
 initial-release: 1.0.0
+last-updated-release: 3.13.0
 ---
 ```
 
 Note: `feature-tags` will only effect Feature Filtering on ACS AEM Commons; it will be ignored on other sites.
 
 Thumbnail images for features should ba named `thumbnail.png` and be a native `400 width x 200 height pixels`.
+
+## New and Updated badges
+
+The New and Updated badges are now applied by matching the projects `site.data.<project>.version` and `site.data.<project>.version60` to the pages `intial-release` and `last-updated-release` frontmatter metadata, so setting the tags directly is no longer necessary; only the initial-release and last-updated-release frontmatter need to be maintained.
+	
+Deprecated features still use the `tags: deprecated`.
 
 ## Sub-feature pages
 
@@ -102,7 +110,7 @@ To create a sub-feature card list that automatically reads the feature-docs that
  {% include acs-aem-commons/sub-features.html %}
 ```
 
-Note this sub-feature list is only available for ACS AEM Commons.
+Note this sub-feature list is only available for ACS AEM Commons (and not ACS AEM Tools).
 
 ## Building
 

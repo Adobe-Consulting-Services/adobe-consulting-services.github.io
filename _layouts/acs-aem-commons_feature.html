@@ -5,6 +5,9 @@ layout: acs-aem-commons_default
     digitalData.page.pageInfo.category.pageType = "Feature";
     digitalData.page.pageInfo.category.projectName = "ACS AEM Commons";
 </script>
+
+{% include shared/back.html %}
+
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
         <section class="feature-doc">
@@ -15,9 +18,13 @@ layout: acs-aem-commons_default
                     <span class="deprecated">Deprecated</span>
                     {% elsif page.tags contains 'beta' %}
                     <span class="beta">Beta</span>	
-                    {% elsif page.tags contains 'new' %}
+                    {% elsif page.initial-release == site.data.acs-aem-commons.version %}
                     <span class="new">New!</span>
-                    {% elsif page.tags contains 'updated' %}
+                    {% elsif page.initial-release == site.data.acs-aem-commons.version60 %}
+                    <span class="new">New!</span>
+                    {% elsif page.last-updated-release == site.data.acs-aem-commons.version %}
+                    <span class="updated">Updated</span>    				
+                    {% elsif page.last-updated-release == site.data.acs-aem-commons.version60 %}
                     <span class="updated">Updated</span>    				
                     {% endif %}
                 </h1>

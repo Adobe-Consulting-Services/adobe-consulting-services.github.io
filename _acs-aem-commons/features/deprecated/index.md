@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Deprecated Features
-description: Once they were cool, now they're just old.
+description: There are better ways to solve these problems now
 tags: deprecated
 date: 1900-01-01
 ---

@@ -3,10 +3,10 @@ layout: acs-aem-commons_feature
 title: Property Merge POST Processor
 description: Merge data into a single property
 date: 2017-12-01
-tags: updated
 redirect_from: /acs-aem-commons/features/property-merge-post-processor.html
 feature-tags: component-dev
 initial-release: 1.10.0
+last-updated-release: 3.13.0
 ---
 
 ## Purpose
