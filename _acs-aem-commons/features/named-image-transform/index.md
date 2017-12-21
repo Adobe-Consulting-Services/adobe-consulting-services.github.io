@@ -339,8 +339,8 @@ greyscale:greyscale=true
 <ul>
 	<li><code>op_usm=[amount,radius]</code>
 	<ul>
-		<li><code>amount: 0.0...5.0</code></li>
-		<li><code>radius: 0...250</code></li>
+		<li><code>amount=[0.0...5.0]</code></li>
+		<li><code>radius=[0...250]</code></li>
 	</ul>
 	</li>
 </ul>
