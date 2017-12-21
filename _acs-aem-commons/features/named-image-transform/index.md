@@ -337,11 +337,14 @@ greyscale:greyscale=true
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>op_usm=[amount,radius]</code></li>
-	<li>amount: 0.0...5.0</li>
-	<li>radius: 0...250</li>
+	<li><code>op_usm=[amount,radius]</code>
+	<ul>
+		<li><code>amount: 0.0...5.0</code></li>
+		<li><code>radius: 0...250</code></li>
+	</ul>
+	</li>
 </ul>
 <p>Examples</p>
 <ul>
-	<li><code>sharpen:3.5,20</code></li>
-</li></ul></div>
+	<li><code>sharpen:op_usm=3.5,20</code></li>
+</ul></div>
