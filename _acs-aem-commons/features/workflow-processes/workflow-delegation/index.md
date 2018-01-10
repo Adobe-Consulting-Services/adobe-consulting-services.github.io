@@ -18,11 +18,24 @@ Taking the "Request for activation" workflow as example, when the Workflow is ex
 
 Arguments should be provided as PROCESS_ARGS to the workflow Process Step:
 
+    confWorkflowModelProperty=<confPropName>
     workflowModelProperty=<propName>    
     defaultWorkflowModel=<absolutePathToDefaultWorkflowModel>
     terminateWorkflowOnDelegation=true|false
     
 ### PROCESS_ARGS descriptions
+* `confWorkflowModelProperty` is the name of the conf property which contains the paths of the workflow models. Optional.
+    * By using /conf for configuration the content must not be changed
+    * The current content path must contain at least one configuration (cq:conf) pointing to any path under /conf
+    
+    ![Content cq:conf](images/cqpagecontent.png)
+    
+    * The /conf path must contain a setting page with the name  `workflowDelegation`. This page can have multiple delegations defined. This process arg defines the name of the property used
+    
+    ![conf Structure](images/conf.png)
+    
+    * The value of this property much be a valid, Workflow model path for example: `/etc/workflow/models/my-workflow-model` OR  `/etc/workflow/models/my-workflow-model/jcr:content/model`
+
 * `propName` is the name of the property which contains the paths of the workflow models. Optional.
     * A property of this name must exist on the node hierarchy (`[cq:Page]/jcr:content` or `[sling:Folder]/jcr:content` or `[sling:OrderedFolder]/jcr:content`)
     * The value of this property much be a valid, Workflow model path for example: `/etc/workflow/models/my-workflow-model` OR  `/etc/workflow/models/my-workflow-model/jcr:content/model`
