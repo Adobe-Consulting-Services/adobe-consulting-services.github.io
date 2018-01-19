@@ -36,6 +36,7 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
     jcr:primaryType="sling:OsgiConfig"
     sling.servlet.resourceTypes="[myapp/components/page/home-page]"
     externalizer.domain="publish"
+    extensionless.urls="Boolean{true}"
     include.lastmod="{Boolean}false"
     changefreq.properties="[myChangeFreqProperties]"
     priority.properties="[myPriorityProperties]"
@@ -71,3 +72,7 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
 #### Since v2.11.0/3.8.0
 
 * *character.encoding* The character encoding for the output from the servlet. If not specified, the container's default encoding for XML files is used (which is ISO-8859-1 for Jetty).
+
+#### Since v3.14.0
+
+* *extensionless.urls* This property controls whether page links included in sitemap should be generated with or without .html extension. If not specified or specified as false (default), page links will end with .html. If specified as true, path is included with a trailing slash, e.g. /content/geometrixx/en/
