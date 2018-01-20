@@ -2,6 +2,6 @@
 layout: acs-aem-commons_default
 title: Release 3.14.0 now available!
 description: Report Builder, Dynamic Loading for Touch UI ClientLibraries, Extensionless URLs in Sitemaps, a bunch of bug fixes! Check the CHANGELOG.md!
-date: 2017-01-19
+date: 2018-01-19
 project: acs-aem-commons
 ---
