@@ -41,7 +41,7 @@ This configuration has the following fields:
  * **Query Language** - The query language to use for executing the query
  * **Page Size** - The number of results to retrieve per page
 
-<img src="images/Configure-Report-JCR-QUery-Config.jpg" class="img-responsive center-block" title="Configuring a Basic Parameter" />
+<img src="images/Configure-Report-JCR-Query-Config.jpg" class="img-responsive center-block" title="Configuring the JCR Query Report Configuration" />
 
 ## Parameters
 
