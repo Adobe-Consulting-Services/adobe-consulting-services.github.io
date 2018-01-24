@@ -20,6 +20,7 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
     <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>content-package</type>
+    <classifier>min</classifier> <!-- optional, see below -->
 </dependency>
 {% endhighlight %}
 
@@ -31,6 +32,7 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
     <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version60 }}</version>
     <type>content-package</type>
+    <classifier>min</classifier> <!-- optional, see below -->
 </dependency>
 {% endhighlight %}
 
@@ -50,6 +52,8 @@ To include the ''min'' package, add
 {% endhighlight %}
 
 inside the `<dependency>` element.
+
+To include the ''full'' package, don't provide any `<classifier>` element inside the `<dependency>` element.
 
 ## Step 2: Add ACS AEM Commons as a Sub Package
 

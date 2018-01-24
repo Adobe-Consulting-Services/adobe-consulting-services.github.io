@@ -5,6 +5,7 @@ description: Easily generate sitemaps for search indexing
 date: 2014-01-01
 redirect_from: /acs-aem-commons/features/simple-sitemap.html
 initial-release: 1.5.0
+last-updated-release: 3.14.0
 tags: 
 ---
 
@@ -16,7 +17,7 @@ Generate a Sitemap XML file in the syntax defined by [http://www.sitemaps.org/](
 
 In order to use this feature, you must have a "home page" page component, e.g. `geometrixx/components/homepage`. Once you have determined the resource type for this page component, configure a new instance of the `com.adobe.acs.commons.wcm.impl.SiteMapServlet` servlet with the resource type and, optionally, a domain name configured in the Externalizer component.
 
-![sitemap servlet configuration]({{ site.data.acs-aem-commons.baseurl }}/images/sitemap/config.png)
+![sitemap servlet configuration](images/config.png)
 
 > See [http://dev.day.com/docs/en/cq/current/developing/externalizer.html](http://dev.day.com/docs/en/cq/current/developing/externalizer.html) for more information on configuring the Externalizer.
 
@@ -36,6 +37,7 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
     jcr:primaryType="sling:OsgiConfig"
     sling.servlet.resourceTypes="[myapp/components/page/home-page]"
     externalizer.domain="publish"
+    extensionless.urls="Boolean{true}"
     include.lastmod="{Boolean}false"
     changefreq.properties="[myChangeFreqProperties]"
     priority.properties="[myPriorityProperties]"
@@ -71,3 +73,7 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
 #### Since v2.11.0/3.8.0
 
 * *character.encoding* The character encoding for the output from the servlet. If not specified, the container's default encoding for XML files is used (which is ISO-8859-1 for Jetty).
+
+#### Since v3.14.0
+
+* *extensionless.urls* This property controls whether page links included in sitemap should be generated with or without .html extension. If not specified or specified as false (default), page links will end with .html. If specified as true, path is included with a trailing slash, e.g. /content/geometrixx/en/

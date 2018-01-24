@@ -47,6 +47,9 @@ com.adobe.acs.commons.replication.dispatcher
 com.adobe.acs.commons.replication.packages.automatic
 com.adobe.acs.commons.replication.packages.automatic.model
 com.adobe.acs.commons.replication.status
+com.adobe.acs.commons.reports.api
+com.adobe.acs.commons.reports.internal
+com.adobe.acs.commons.reports.models
 com.adobe.acs.commons.rewriter
 com.adobe.acs.commons.search
 com.adobe.acs.commons.social.linkedin
