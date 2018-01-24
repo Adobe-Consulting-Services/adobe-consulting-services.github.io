@@ -5,6 +5,7 @@ title: VLT-RCP
 description: WebUI front-end for VLT-RCP
 date: 2015-06-22
 initial-release: 0.0.22
+last-updated-release: 0.0.52
 ---
 
 ## Getting Started

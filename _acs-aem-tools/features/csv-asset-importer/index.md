@@ -5,7 +5,6 @@ title: CSV Asset Importer
 description: Easily import assets w/ metadata!
 date: 2015-06-20
 initial-release: 0.0.22
-tags: updated
 ---
 
 ## Getting Started

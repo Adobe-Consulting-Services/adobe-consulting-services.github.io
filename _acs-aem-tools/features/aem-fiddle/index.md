@@ -5,7 +5,7 @@ title: AEM Fiddle
 description: Web-based AEM IDE perfect for POC’s, experimenting and running ad hoc scripts.
 date: 2013-12-06
 initial-release: 0.0.2
-tags: updated
+last-updated-release: 0.0.52
 ---
 
 The intent of AEM Fiddle is to provide an accessible, developer friendly environment for experimentation, POCs and other one-off tasks. AEM Fiddle is **not** intended to be used as a full fledged application development environment.

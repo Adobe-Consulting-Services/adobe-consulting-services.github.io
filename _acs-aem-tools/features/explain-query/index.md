@@ -5,6 +5,7 @@ title: Explain Query
 description: Understand how Oak's query engine is executing queries
 date: 2015-06-01
 initial-release: 0.0.12
+last-updated-release: 0.0.52
 tags: legacy
 ---
 
