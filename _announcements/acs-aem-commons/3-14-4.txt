@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.14.4 now available!
+description: Critical bug fix for 3.14.0 release. Check the CHANGELOG.md!
+date: 2018-01-25
+project: acs-aem-commons
+---
