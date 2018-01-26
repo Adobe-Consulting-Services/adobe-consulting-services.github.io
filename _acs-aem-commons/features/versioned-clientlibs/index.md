@@ -71,3 +71,11 @@ Optionally, a filter can registered which checks incoming requests for client li
 ![transformer factory configuration](images/config.png)
 
 > If you enable this option, the hash will be prefixed with `ACSHASH` to ensure that only rewritten paths are validated. Be sure to incorporate this into any web server or CDN rules.
+
+## Log Warnings under AEM 6.3
+
+When using this feature on AEM 6.3, you may see log messages like this for proxied client libraries:
+
+    15.12.2017 17:34:40.249 WARN [10.45.0.1 [1513355680163] GET /aem/start.html HTTP/1.1] com.adobe.granite.ui.clientlibs.impl.HtmlLibraryManagerImpl No library configured at /apps/granite/ui/components/coral/foundation/clientlibs/foundation
+
+The only solution at present for this is to set the log level for `com.adobe.granite.ui.clientlibs.impl.HtmlLibraryManagerImpl` to `ERROR`.
