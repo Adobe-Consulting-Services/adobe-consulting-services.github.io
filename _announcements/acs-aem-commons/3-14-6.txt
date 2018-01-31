@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.14.6 now available!
+description: Restoring 6.2 compatibility and fixing a TouchUI bug. Check the CHANGELOG.md!
+date: 2018-01-31
+project: acs-aem-commons
+---
