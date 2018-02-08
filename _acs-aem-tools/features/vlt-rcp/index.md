@@ -8,6 +8,11 @@ initial-release: 0.0.22
 last-updated-release: 0.0.52
 ---
 
+<div class="banner--notice">
+Since ACS Tools v0.0.52, <a href="http://mvnrepository.com/artifact/org.apache.jackrabbit.vault/org.apache.jackrabbit.vault.rcp">Jackrabbit FileVault RCP Server Bundle 3.1.40+</a> is required. 
+</div>
+
+
 ## Getting Started
 
 Install the ACS AEM Tools package via the AEM Package Manager and then open VLT-RCP from the AEM Tools console, or directly at [/etc/acs-tools/vlt-rcp.html](http://localhost:4502/etc/acs-tools/vlt-rcp.html)

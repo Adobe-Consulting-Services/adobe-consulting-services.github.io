@@ -172,3 +172,19 @@ ul.show-more-list {
   margin: 3em 0 1em 0;
   padding-top: .5em;
 }
+
+.banner--notice {
+  padding: 1.5rem 2.5rem;
+  background-color: #F9D687;
+  color: #383735;
+  margin: 1rem auto 5rem auto;
+  max-width: 90%;
+  border-radius: 3px;
+  text-align: center;
+
+  a {
+    color: #383735 !important;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+}

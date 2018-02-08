@@ -145,20 +145,15 @@ pre {
   }
 }
 
-.back-button-wrapper {
-	height: 3rem;
-	
-	.back-button {
-		position: absolute;
-		left: 0;
-		right: 0;
-		background-color: #f7f7f7;
-	
-		a {
-			display: inline-block;
-			padding: 1.5rem 0;
-			color: #999;
-			font-weight: 400;
-		}
-	}
+.back-button__bar {
+    background-color: #f7f7f7;
+
+      a {
+          margin-left: 4rem;
+          display: inline-block;
+          padding: 1.5rem 0;
+          color: #999 !important;
+          font-weight: 400;
+      }
+
 }
