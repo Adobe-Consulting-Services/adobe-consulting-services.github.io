@@ -9,6 +9,10 @@ feature-tags: administraton
 initial-release: 3.14.0
 ---
 
+<div class="banner--notice">
+This feature only works on AEM 6.3 and above.
+</div>
+
 ## Purpose
 
 This tool allows AEM Administrators and advanced users to create, execute and download reports based on the contents of the AEM repository. 
