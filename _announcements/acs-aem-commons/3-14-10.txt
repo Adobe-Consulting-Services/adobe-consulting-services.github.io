@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.14.10 now available!
+description: MCP improvements, Report Builder improvements, and more! Check the CHANGELOG.md!
+date: 2018-03-08
+project: acs-aem-commons
+---
