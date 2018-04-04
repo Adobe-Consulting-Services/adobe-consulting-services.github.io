@@ -24,3 +24,9 @@ ACS AEM Commons Authorizble Packager faciliates the creation Content Packages co
 * The Preview button output a list of the package filter entries which will be included.
 * The Create Package button (cut off in the above screenshot!)... creates the package
 * Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package.
+
+## Using Authorizable Packagers on AEM Publish
+
+Because the ACS Commons Packagers are built using the ClassicUI dialogs, the configuration dialogs are automatically force-disabled on AEM Publish.
+
+In order to use Packages on AEM Publish, you must define the Package configuration on AEM Author, replicate the Packager page to AEM publish, and then Create the package on AEM Publish based on that replicated configuration.
