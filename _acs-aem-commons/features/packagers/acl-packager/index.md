@@ -27,6 +27,13 @@ Frequently, access control entries need to be copied from one environment to ano
 ![image](images/created_package.png)
 * Now that the Package definition has been created, go to CRX Package Manager by clicking on one of the links in the result message, Build and Download the package. 
 
+## Using the ACL Packagers on AEM Publish
+
+Because the ACS Commons Packagers are built using the ClassicUI dialogs, the configuration dialogs are automatically force-disabled on AEM Publish.
+
+In order to use Packages on AEM Publish, you must define the Package configuration on AEM Author, replicate the Packager page to AEM publish, and then Create the package on AEM Publish based on that replicated configuration.
+
+
 
 ## Bug Fixes
 
