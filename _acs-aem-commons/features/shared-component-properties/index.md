@@ -175,12 +175,12 @@ NOTE: You will still need to follow the
 steps above to enable Shared Component Properties on your AEM server.
 
 
-## Permissions
+## <a name="permissions"></a>Permissions
 In order for an author to see the options to configure shared and global properties, the author must have `write`
 permissions to the root page (i.e. home page) of the site. This is where shared/global properties for a site are stored.
 
 
-## <a name="permissions"></a>Troubleshooting
+## Troubleshooting
 If you are having trouble getting AEM to show the authoring options for shared and global property dialogs, first
 start by installing the
 [Example](#example)
