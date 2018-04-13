@@ -59,4 +59,4 @@ User name: `acs-commons-package-replication-status-event-service`
 
 ACLs:
 
-* `jcr:read`, `jcr:write` on `/`
+* `jcr:read`, `rep:write`, `jcr:readAccessControl`, `jcr:modifyAccessControl` on `/`
