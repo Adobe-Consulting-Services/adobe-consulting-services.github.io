@@ -29,13 +29,19 @@ HttpCache provides an effective way to improve performance of an application by 
 	* On cache invalidate
 * Provides mechanism to plugin custom cache keys.
 * Pluggable cache persistence model.
-	* In-memory implementation provided OOTB
+	* In-memory & JCR implementation provided OOTB
 	* Allows multiple cache stores to co-exist.
 * Invalidation mechanism based on JCR paths and Sling jobs.
 	* Sample JCR change event handler based invalidation supplied.
 	In-memory cache store supports TTL.
 * Provides powerful instrumentation based on JMX MBean.
 * Since v2.6.0/3.2.0 HTTP Cache now supports caching that the Sling Include level (as well as the original Sling Request level)
+
+### What to use: In-Mem store or JCR store?
+In general, the In-Memory store (default) is recommended for the obvious reason that it's the fastest. 
+However, if you have cache entries that are that big or many that they cannot be stored in the RAM memory, the JCR storages provides a solution.
+Also, the JCR storage means that the cache won't be flushed on a server restart as it's persisted while the In-Mem storage
+
 
 ## How to configure
 
@@ -131,7 +137,35 @@ Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache
 - `httpcache.cachestore.memcache.ttl` Time To Live (TTL) of cached items in seconds. Value of '-1' disables the TTL behavior.
 - `httpcache.cachestore.memcache.maxsize` Max size of the cache store in MB.  Once the store reaches the set size, least recently used entry would be evicted.
 
-#### Configuring JCR Node change invalidator (JCRNodeChangeEventHandler)
+
+#### Configuring JCR cache store (JCRHttpCacheStoreImpl)
+
+JCR store for caching http responses.
+
+Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache.store.mem.impl.JCRHttpCacheStoreImpl.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    scheduler.expression="0 0 12 1/1 * ? *"
+	httpcache.config.jcr.rootpath="/var/acs-commons/httpcache"
+	httpcache.config.jcr.bucketdepth="10"
+	httpcache.config.jcr.savedelta="500"
+	httpcache.config.jcr.expiretimeinseconds="-1"
+ />
+{% endhighlight %}
+
+- `scheduler.expression` The cron expression on which to run clean-up checks
+- `httpcache.config.jcr.rootpath` Points to the location of the cache root parent node in the JCR repository
+- `httpcache.config.jcr.bucketdepth` The depth the bucket tree goes. Minimum value is 1. This value can be used for tweaking performance
+- `httpcache.config.jcr.savedelta` The threshold to perform session.save() on add,remove and modify actions when handling the cache
+- `httpcache.config.jcr.expiretimeinseconds` Expiry time of a cache entry in seconds. If on the scheduled cleanup the node has expired, it will be evicted. (-1 for no expiry)
+
+
+
+#### Configuring JCR Node change invalidator (JCRNodeChangeEventHandler) Since v2.5.0/3.14.0
 
 Sample cache invalidation job creator. Watches for changes in JCR nodes and creates sling jobs for cache invalidation.  
 
@@ -193,9 +227,16 @@ Cache config (`com.adobe.acs.commons.httpcache.config.HttpCacheConfig`) can be e
 
 CacheKeyFactory (`com.adobe.acs.commons.httpcache.keys.CacheKeyFactory`) is tied to HttpCacheConfig (`com.adobe.acs.commons.httpcache.config.impl.HttpCacheConfigImpl`) via cache config's OSGi property `cacheKeyFactory.target`. CacheKeyFactory builds CacheKeys (`com.adobe.acs.commons.httpcache.keys.CacheKey`). Custom implementation of CacheKeyFactory should provide its own CacheKey. Often these implementations factor in the custom implementation of Cache config extension (`com.adobe.acs.commons.httpcache.config.HttpCacheConfigExtension`). Group based cache key factory, cache key and cache config extension are provided OOTB.
 
+If you want your CacheKey to work in the JCR store, you need to provide an implementation of writeObject / readObject for serialization. 
+[writeObject](https://docs.oracle.com/javase/7/docs/platform/serialization/spec/output.html#861) 
+[readObject](https://docs.oracle.com/javase/7/docs/platform/serialization/spec/input.html#2971) 
+
+The abstract class com.adobe.acs.commons.httpcache.keys.AbstractCacheKey contains parentReadObject and parentWriteObject as protected methods to provide serialization logic for it's fields.
+You will need to serialize your fields accordingly so they may be persisted in the JCR.
+
 ### Creating new Cache store
 
-HttpCache framework allows multiple cache stores to co-exist at run time. Choice of cache store to be used can be made while configuring cache configs. Custom cache store should implement HttpCacheStore (com.adobe.acs.commons.httpcache.store.HttpCacheStore) interface. In-memory cache store provided OOTB.
+HttpCache framework allows multiple cache stores to co-exist at run time. Choice of cache store to be used can be made while configuring cache configs. Custom cache store should implement HttpCacheStore (com.adobe.acs.commons.httpcache.store.HttpCacheStore) interface. In-memory & JCR cache store provided OOTB.
 
 ### Creating custom mechanism for cache invalidation
 
@@ -207,7 +248,7 @@ Custom cache invalidation events could be sling event handlers for JCR specific 
 
 ## How to instrument
 
-JMX beans exposed to instrument the http cache for the following 2 components.
+JMX beans exposed to instrument the http cache for the following 3 components.
 
 ### Instrumenting HttpCacheEngine
 
@@ -224,3 +265,13 @@ MBean for in-memory cache store exposes a set of attributes such as cache stats,
 It also allows operations such as clearing the cache and accessing the cache content given a cache key.
 
 ![image](images/httpcache-mbean-memstore-2.png)
+
+### Instrumenting JCR cache store
+
+Same goes for the JCR cache store. Stats are pretty similar to the In-Mem cache store.
+
+![image](images/httpcache-mbean-jcr-store-1.png)
+
+It also allows operations such as clearing the cache entirely or to run a purge for expired entries.
+
+![image](images/httpcache-mbean-jcr-store-2.png)
