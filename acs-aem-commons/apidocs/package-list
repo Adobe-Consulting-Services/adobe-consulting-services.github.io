@@ -36,6 +36,8 @@ com.adobe.acs.commons.mcp.util
 com.adobe.acs.commons.models.injectors.annotation
 com.adobe.acs.commons.notifications
 com.adobe.acs.commons.oak
+com.adobe.acs.commons.ondeploy
+com.adobe.acs.commons.ondeploy.scripts
 com.adobe.acs.commons.packaging
 com.adobe.acs.commons.quickly
 com.adobe.acs.commons.quickly.operations
@@ -49,6 +51,7 @@ com.adobe.acs.commons.replication.packages.automatic.model
 com.adobe.acs.commons.replication.status
 com.adobe.acs.commons.reports.api
 com.adobe.acs.commons.reports.internal
+com.adobe.acs.commons.reports.internal.datasources
 com.adobe.acs.commons.reports.models
 com.adobe.acs.commons.rewriter
 com.adobe.acs.commons.search
