@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.14.0 now available!
+description: On-Deploy Scripts Framework, New Import Tools, References in Reports, HTTP Cache JCR storage, and bug fixes!
+date: 2018-04-18
+project: acs-aem-commons
+---
