@@ -1,11 +1,12 @@
 ---
 layout: acs-aem-commons_feature
-title: Ensure Service User
-description: Ensure your service users exist!
-date: 2017-02-14
+title: Ensure Authorizable (FKA Ensure Service User)
+description: Ensure your service users and groups exist!
+date: 2018-04-19
 feature-tags: backend-dev 
-tags: 
+tags: updated
 initial-release: 3.8.0
+last-updated-release: 3.15.0
 ---
 
 ## Purpose
@@ -16,9 +17,11 @@ Because of this, projects often require the definition of many service users and
 
 The Ensure Service User facilitates defining service users and their ACLs in OSGi configurations, and will intelligently ensure they exist on the target AEM instances.
 
+Ensure Group builds on top of ensure service user to allow easily creating and maintaining group hierarchies across many AEM environments.
+
 ## Configuration
 
-Create an OSGi configuration for each service user:
+Create an OSGi configuration for each service user or group with the corresponding PID and unique identifier, eg.:
 
     /apps/my-app/config/com.adobe.acs.commons.users.impl.EnsureServiceUser-myServiceUser
 
@@ -30,16 +33,24 @@ Create an OSGi configuration for each service user:
     principalName="my-service-user"
     type="add"
     ensure-immediately="{Boolean}true"
-    aces="[type=allow;privileges=jcr:read\,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"/>
+    aces="[type=allow;privilege s=jcr:read\,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"/>
 {% endhighlight %}
+
+For Ensure Group, the PID is _com.adobe.acs.commons.users.impl.EnsureGroup_, with the only additional property being member-of.
 
 ### OSGi Config Properties
 
+**Ensure Service User**
+
 ![Ensure Service User - OSGi Config](images/osgi-config.png)
+
+**Ensure Group**
+
+![Ensure Group - OSGi Config](images/osgi-config-group.png)
 
 `principalName`
 
-* The service user name
+* The service user or group name
 * Can be just the principal name, a relative path, or the absolute path where the user should be stored in the JCR. Remember, service users may ONLY exist under `/home/users/system`.
     * `my-service-user`
       * Creates `/home/users/system/my-service-user`
@@ -89,16 +100,21 @@ Create an OSGi configuration for each service user:
     
 For more information on `rep:glob`, `rep:ntNames`, `rep:itemNames` and `rep:prefixes` [http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html](Apache Oak Restrictions documentation)
 
+`member-of`
+
+* Applies only to Ensure Group 
+* An Array of groups that the group must belong to
+
 ### JMX MBean
 
 [http://localhost:4502/system/console/jmx/com.adobe.acs.commons%3Atype%3DEnsure+Service+User](http://localhost:4502/system/console/jmx/com.adobe.acs.commons%3Atype%3DEnsure+Service+User)
 
-![Ensure Service User - OSGi Config](images/jmx.png)
+![Ensure Service User - JMX Operations](images/jmx.png)
 
-A JMX MBean is also provided that allows for the ensurance of Service Users. 
+A JMX MBean is also provided that allows for the ensurance of Service Users and Groups. 
 
-This can be invoked on a per-service user based or on all service users.
+This can be invoked on a per-authorizable basis or on all service users and groups.
 
-When invoking on a per-service user basis, ONLY the principal name is to be provided; for example, if `principalName = my-company/my-servicer-user` the parameter to the JMX Mbean method would be `my-servicer-user`. 
+When invoking on a per-authorizable basis, ONLY the principal name is to be provided; for example, if `principalName = my-company/my-servicer-user` the parameter to the JMX Mbean method would be `my-servicer-user`. 
 
-This is most commonly leveraged when `ensure-immediately` is set to `false`, and the service user is ensure manually at a specific point in time. 
+This is most commonly leveraged when `ensure-immediately` is set to `false`, and the service user or group is ensured manually at a specific point in time. 
