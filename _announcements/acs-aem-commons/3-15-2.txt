@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.15.2 now available!
+description: MCP error handling and reporting improvements, Asset ingestion improvements, and other bugfixes!
+date: 2018-04-25
+project: acs-aem-commons
+---
