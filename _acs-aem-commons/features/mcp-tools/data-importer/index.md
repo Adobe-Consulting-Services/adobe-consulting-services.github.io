@@ -23,7 +23,7 @@ There are several options to control how data will be brought into AEM with this
 
 ## Excel data format requirements
 
-[This page](/acs-aem-commons/features/utils-and-apis/data-api/index.html#structure) provides much more detailed information about the excel spreadsheet format as well as how to work with different data types.  It is extremely imporant to note the spreadsheet must have one column named "*path*" which contains the full path of the node to be created/updated.  Other columns are interpreted as properties on that node to be either added, merged, or updated depending on the "Existing action" selection.
+[This page](/acs-aem-commons/features/utils-and-apis/data-api/index.html#structure) provides much more detailed information about the excel spreadsheet format as well as how to work with different data types.  It is extremely imporant to note the spreadsheet must have one column named "*path*" which contains the full path of the node to be created/updated.  Note that in the other page talking about spreadsheet format that this "path" column is a required and the description of how required columns applies there.  Other columns are interpreted as properties on that node to be either added, merged, or updated depending on the "Existing action" selection.
 
 ## Existing action explained
 
