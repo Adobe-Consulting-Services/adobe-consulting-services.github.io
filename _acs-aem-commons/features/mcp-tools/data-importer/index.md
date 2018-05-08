@@ -14,12 +14,12 @@ This utility allows you to import data from a spreadsheet into AEM.  [Click here
 
 There are several options to control how data will be brought into AEM with this tool:
 
-* Excel file: Provide the excel file.  In Windows you must ensure the file is not currently open in Excel or you will receive an error.
-* Existing action: Decide how data should be managed if the destination nodes alread exist or do not already exist yet.
-* Structure node type: If intermediate nodes in the path are missing, this decides what type they should be.
-* Dry run: Only report on what actions would be taken without doing any actual work.
-* Detailed report: Report on all actions taken, otherwise only brief summary information is provided in the report.
-* Import in sorted order: Ignores order in spreadsheet and sorts everything by path before processing.
+* *Excel file*: Provide the excel file.  In Windows you must ensure the file is not currently open in Excel or you will receive an error.
+* *Existing action*: Decide how data should be managed if the destination nodes alread exist or do not already exist yet.
+* *Structure node type*: If intermediate nodes in the path are missing, this decides what type they should be.
+* *Dry run*: Only report on what actions would be taken without doing any actual work.
+* *Detailed report*: Report on all actions taken, otherwise only brief summary information is provided in the report.
+* *Import in sorted order*: Ignores order in spreadsheet and sorts everything by path before processing.
 
 ## Excel data format requirements
 
