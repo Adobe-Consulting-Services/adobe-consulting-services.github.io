@@ -34,7 +34,7 @@ You have a lot of options of how to control what happens with both existing and 
 * *Create and Merge Properties* - Create new nodes and update existing nodes with missing properties.  Existing properties are left alone.
 * *Merge Existing Only* - If node doesn't exist, row is skipped.  Properties are only stored if the node doesn't have those yet.  Existing properties are retained if they already exist.
 * *Overwrite Existing Only* - If node doesn't exist, row is skipped.  All properties are updated/overwritten for existing nodes.
-* *Do Nothing* - Does absolutely nothing, useful to test if file was read correctly.
+* *Do Nothing* - Does nothing, absolutely nothing.   Useful to test if file was read correctly.
 
 ## Process report
 
