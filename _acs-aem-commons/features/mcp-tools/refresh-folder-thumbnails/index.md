@@ -1,6 +1,6 @@
 ---
 layout: acs-aem-commons_feature
-title: Asset Folder Thumbnail Regeneration
+title: Refresh Asset Folder Thumbnails
 description: Fix folder thumbnails quickly!
 date: 2018-05-07
 feature-tags: authoring administration
