@@ -3,7 +3,8 @@
         {% assign sorted = (site.acs-aem-commons | sort: 'date') | reverse %}
         {% assign currentPagePath = page.path | remove: "index.md" %}
         {% for subpage in sorted %}
-            {% capture subFeature %}{% if subpage.path contains currentPagePath and subpage.path != page.path %}true{% else %}false{% endif %}{% endcapture %}
+			{% assign relativeDistance = subpage.path | remove: currentPagePath | split: "/" | size %}
+            {% capture subFeature %}{% if subpage.path contains currentPagePath and relativeDistance == 2 %}true{% else %}false{% endif %}{% endcapture %}
             {% if subFeature == 'true' %}
                 {% include shared/feature-card.html feature=subpage project=site.data.acs-aem-commons %}
             {% endif %}
