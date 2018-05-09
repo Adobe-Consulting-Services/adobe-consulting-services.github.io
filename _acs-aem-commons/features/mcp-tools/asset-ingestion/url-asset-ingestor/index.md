@@ -80,6 +80,10 @@ It is possible to import properties such as dc:title but note that during the me
 
 More information about XMP Writeback and blacklist/filtering [can be found here](https://helpx.adobe.com/experience-manager/6-4/assets/using/xmp-writeback.html#FilteringXMPmetadata).
 
+### Note on working with cq:tags and other kinds of data types
+
+The standard property type is assumed to be a plain string when importing metadata.  If you are working with properties that are other types, such as tags (which should be arrays of strings) then you need to add type hints to the header for that column.  e.g. `cq:tags@string[]` or `cq:tags@[]` should suffice.  You can also add multiple columns named cq:tags and then they will be treated as a list of strings also.  More information about how types are handled during the import are [discussed on this page](/acs-aem-commons/features/utils-and-apis/data-api/index.html#structure).
+
 ### Ignored columns
 
 A column will be ignored in the following cases:
