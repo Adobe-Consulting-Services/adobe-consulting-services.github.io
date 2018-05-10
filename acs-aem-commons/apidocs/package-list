@@ -3,6 +3,7 @@ com.adobe.acs.commons.audit_log_search
 com.adobe.acs.commons.components.longformtext
 com.adobe.acs.commons.dam
 com.adobe.acs.commons.dam.audio
+com.adobe.acs.commons.data
 com.adobe.acs.commons.designer
 com.adobe.acs.commons.email
 com.adobe.acs.commons.errorpagehandler
