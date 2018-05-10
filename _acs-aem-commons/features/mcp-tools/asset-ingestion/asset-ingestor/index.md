@@ -4,6 +4,7 @@ title: Asset Ingestor
 description: Load a directory of assets into AEM
 date: 2017-11-01
 initial-release: 3.10.0
+last-updated-release: 3.16.0
 ---
 
 This is an example of a high-speed parallel asset ingestor utility.  You can load a directory of assets into AEM very easily with this tool.  Because of the ability to overload a server with assets, this tool only appears for the "admin" user right now.
@@ -21,6 +22,9 @@ This is an example of a high-speed parallel asset ingestor utility.  You can loa
     * Version: Create a version of the asset and upload a fresh copy.  This is the safest, but slowest, option.
 * **Minimum size**: The minimum file size (in bytes) that is required for importing a file.  Anything smaller is ignored. (0 = no minimum)
 * **Maximum size**: The maximum file size allowed (in bytes); anything larger is skipped. (-1 = no maximum -- NOT RECOMMENDED!)
+* **Dry run**: If checked, no assets will be imported but a report will be produced.  This is useful for testing out the data file for integrity.
+* **Detailed Report**: If checked, a list of all imported assets will be produced.  If unchecked, only a summary will be provided.
+* **Inhibit Workflow**: If checked, the process will attempt to bypass DAM Update Asset workflow.  This requires the workflow launcher have the following in the _exclude list_ setting: `event-user-data:changedByWorkflowProcess`.  If using this option. also consider using bulk workflow afterwards to process assets after the import has finished completely.
 
 This process has two steps:
 

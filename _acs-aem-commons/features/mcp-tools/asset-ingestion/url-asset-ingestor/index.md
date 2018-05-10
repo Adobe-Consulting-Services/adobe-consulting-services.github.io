@@ -8,13 +8,19 @@ initial-release: 3.15.0
 last-updated-release: 3.16.0
 ---
 
-This tool loads assets listed in a spreadsheet and optionally also loading additional asset metadata.
+This tool loads assets listed in a spreadsheet and optionally also sets additional asset metadata if provided.
 
 ## Overview
 
 ![Asset import process overview](images/process-overview.png)
 
-The above diagram details the URL Asset Import process.  First a spreadsheet should be prepared that lists all assets to be imported (see Spreadsheet format and the example below).  The user must start the process and provide the spreadsheet, paying careful attention to the process options, detailed in the next section.  During the first phase, all necessary folders are created.  Following that, assets are imported, and all metadata (if any) is applied.  At the end of the process a report is prepared and stored for later retrieval as needed.
+The above diagram details the URL Asset Import process:
+
+* First a spreadsheet should be prepared (by the user) that lists all assets to be imported.  See Spreadsheet format and the example below.  
+* The user must start the process and provide the spreadsheet, paying careful attention to the process options, detailed in the next section.
+* During the first phase, all necessary folders are created.
+* Following that, assets are imported, and all metadata (if any) is applied.
+* At the end of the process a report is prepared and stored for later retrieval as needed.
 
 ## Starting the process
 
@@ -29,7 +35,7 @@ The above diagram details the URL Asset Import process.  First a spreadsheet sho
 - *Connection timeout*: For HTTP/HTTPS urls, this is the connection timeout in milliseconds (default is 30 seconds)
 - *Dry run*: If checked, no assets will be imported but a report will be produced.  This is useful for testing out the data file for integrity.
 - *Detailed Report*: If checked, a list of all imported assets will be produced.  If unchecked, only a summary will be provided.
-- *Inhibit Workflow*: If chekced, the process will attempt to bypass DAM Update Asset workflow.  This requires the workflow launcher have the following in the _exclude list_ setting: `event-user-data:changedByWorkflowProcess`.
+- *Inhibit Workflow*: If checked, the process will attempt to bypass DAM Update Asset workflow.  This requires the workflow launcher have the following in the _exclude list_ setting: `event-user-data:changedByWorkflowProcess`.  If using this option. also consider using bulk workflow afterwards to process assets after the import has finished completely.
 - *Target JCR Folder*: This is the folder used if target folder is unspecified.
 - *Ignore Folders*: List of folders to be ignored.  Can be helpful if trying to avoid some data in the spreadsheet.
 - *Ignore Files*: List of files to be ignored.  Can be helpful if trying to avoid some data in the spreadsheet.
@@ -53,8 +59,8 @@ This process requires the input spreadsheet to be in a certain format. [This pag
 
 These two columns must be present or the import process will skip the row entirely.  If the sheet does not have these two columns, then the whole sheet will be discarded.  When in doubt, use "*dry run*" to confirm that the data is being interpreted correctly.
 
-* *Source* – defies where the file will be downloaded from. Should be full url (can be web or local filesystem URL).  The URL can be relative but this requires the `Default prefix` is specified correctly in the process dialog.  Examples are https://www.somewhere.com/path/to/my-picture.jpg or file:///mnt/uploads/my-picture.jpg
-* *Target* – Takes target folder where the asset must be in AEM.  No folder information is used from the source URL so _this must be the exact target folder_.  For example, a target folder of `/content/dam/my-stuff` will load the previous source examples as `/content/dam/my-stuff/my-picture.jpg`.
+* *Source* – Path or URL of the original file.  This can be a full URL, of type HTTP, HTTPS, or FILE.  The source can also insteadt be relative to the `Default prefix` specified in start process form described above.  Examples are https://www.somewhere.com/path/to/my-picture.jpg or file:///mnt/uploads/my-picture.jpg.  If Default Prefix is set as "*http://www.my-website.com/images*" and source in the file is "my-picture.jpg" then the effective source URL will be the combination of the two: `http://www.my-website.com/images/my-picture.jpg`.  Keep in mind that default prefix will be ignored if source is a full URL starting with http://, https://, or file://.
+* *Target* – Full path of folder where asset will be stored in AEM.  *NOTE:* No folder information is used from the source URL so _this must be the exact target folder_.  For example, a target folder of `/content/dam/my-stuff` will load the previous source examples as `/content/dam/my-stuff/my-picture.jpg`.
 
 ### Adding additional renditions
 
