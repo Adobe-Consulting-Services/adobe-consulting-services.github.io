@@ -34,12 +34,12 @@ If you want to ingest files into AEM and also want to provide additional metadat
 ### Data is local, AEM is not local
 
 If the data is in your local network, but AEM isn't, then you must consider:
-- What is the speed between where the data is today and where AEM is?  If the files are in your local network, but AEM is hosted offsite such as in AWS, how fast is your upload speed to the internet? (hint: use (Speedtest)[https://www.speedtest.net] or (MLab Network Diagnostic test)[https://www.measurementlab.net/tests/ndt/])  Once you know your upload speedand the total size of your data, it is pretty easy to do the division and calculate how long it takes to uplaod that much data.
-- How long will it take to upload that much data?  [Here's a calculator](http://downloadtimecalculator.com/Upload-Time-Calculator.html) to help you answer that.
+- What is the speed between where the data is today and where AEM is?  If the files are in your local network, but AEM is hosted offsite such as in AWS, how fast is your upload speed to the internet? **Hint:** Use [Speedtest](https://www.speedtest.net) or [MLab Network Diagnostic test](https://www.measurementlab.net/tests/ndt/)  
+- How long will it take to upload that much data?  [Here's a calculator](http://downloadtimecalculator.com/Upload-Time-Calculator.html) to help you answer that.  Once you know your upload speed and the total size of your data, it is pretty easy to do the division and calculate how long it takes to upload that much data.
 
-If the answer is a long, long time (as in several days, weeks, etc) then it is worth having a conversation with your provider (such as the customer service engineer assigned to your contract) to discuss options such as shipping physical media.
+If the answer is a long, long time (as in several days, weeks, etc) then it is worth having a conversation with your provider (such as the customer service engineer assigned to your contract) to discuss shipping physical media.
 
-It is possible to upload assets into an Amazon S3 bucket and use the Amazon S3 ingestor to process them that way.
+If the transfer time isn't too large of a concern then it is possible to upload assets into an Amazon S3 bucket and use the Amazon S3 ingestor to process them that way.  You can also upload small batches of files using more out-of-the-box product features if they are suitable to your needs.
 
 ### Data is not local
 
