@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.16.0 now available!
+description: New tools for updating folder thumbnails, Redirect map entry editor, new Data API, fixes for on-deploy scripts, EvolutionContext, and much more!
+date: 2018-05-10
+project: acs-aem-commons
+---
