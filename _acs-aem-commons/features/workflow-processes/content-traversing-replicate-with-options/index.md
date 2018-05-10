@@ -38,11 +38,16 @@ Processing the tree in a serial fashion allows for a more controlled workflow ex
   * `true` or `false`
   * Defaults to `false`
   * Typically best to set to `false` if version are not required (as their creation is work to be done)
-
+* `agents`
+   * The node name of the agent to target for replication. For example, to target /etc/replication/agents.author/publish-1, provide the agentId of `publish-1`.
+   * Defaults to `empty`
+   * This is a required field
+     * Due to a bug, this requires atleast 1 agent to be provided. When this bug is resolved, the documentation will be updated.
   {% highlight xml %}
   replicationActionType=ACTIVATE|DEACTIVATE|DELETE
   synchronous=true|false
   suppressVersions=true|false
   throttle=true|false
   traverseTree=true|false
+  agents=<agent-node-name>,<agent-node-name>
   {% endhighlight %}
