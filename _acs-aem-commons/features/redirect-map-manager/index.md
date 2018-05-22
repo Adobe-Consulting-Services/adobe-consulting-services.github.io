@@ -5,6 +5,7 @@ description: Generate an Apache httpd Redirect Map from Properties in AEM
 date: 2017-12-05
 feature-tags: administraton backend-dev seo
 initial-release: 3.13.0
+last-updated-release: 3.17.0
 ---
 
 ## Purpose

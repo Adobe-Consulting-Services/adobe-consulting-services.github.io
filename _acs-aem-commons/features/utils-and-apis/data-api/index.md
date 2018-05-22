@@ -5,7 +5,7 @@ description: Simplify working with data
 date: 2018-05-04
 redirect_from: /acs-aem-commons/features/data-api.html
 feature-tags: backend-dev content-migration
-initial-release: 3.16.0
+initial-release: 3.17.0
 ---
 
 The Data API provides useful abstractions for working with data from various sources and converting it into some kind of format that can be more easily stored in AEM.
@@ -58,6 +58,8 @@ By default a column is assumed to be a single-value String.  It is possible add 
 ‡ Boolean conversion is pretty basic, using the following rules:
 * Any value beginning with the letters X, T, Y (any case) or a non-zero number.
 * Anything else is treated as false.
+
+_Note in 3.17.0+:_ Regardless of type hints provided, if you request the string value of any column, it will return the display representation of the cell as it appears in Excel.  Meaning if it is formatted as a percentage you will get something like 100.00%, not 1.0, as the value of toString().
 
 ### Multi-value columns
 

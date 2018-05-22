@@ -5,7 +5,7 @@ description: Bulk-load assets from a spreadsheet
 date: 2018-05-04
 feature-tags: content-migration authoring administration
 initial-release: 3.15.0
-last-updated-release: 3.16.0
+last-updated-release: 3.17.0
 ---
 
 This tool loads assets listed in a spreadsheet and optionally also sets additional asset metadata if provided.
