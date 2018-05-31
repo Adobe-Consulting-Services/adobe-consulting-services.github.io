@@ -14,9 +14,11 @@ Define simple, yet powerful, rules for targetted flushing of files cached by Dis
 
 ## How to Use
 
+Dispatcher Flush Rules are intended to be deployed and executed on AEM Publish, which should have  On Trigger Flush Agents set up. Running Dispatcher Flush Rules on AEM Author that flush Dispatchers for AEM Publish can result in race-conditions, where the Dispatcher cache invalidation (and re-caching of content) can occur prior to the new replicated content being persisted on AEM Publish. See the "Flushing from AEM 5.6+ Publish Servers" section below for how to set up On Trigger Flush Agents.
+
 Create a new `sling:OsgiConfig` node for each logical flush rule set. A good practice is to create a "global" configuration and separate configurations per "site".
 
-    /apps/myapp/config/com.adobe.acs.commons.replication.dispatcher.impl.DispatcherFlushRulesImpl-SomeFriendlyName
+    /apps/myapp/config.publish/com.adobe.acs.commons.replication.dispatcher.impl.DispatcherFlushRulesImpl-MySite
 
 ### OSGi Config Properties
 
@@ -106,7 +108,7 @@ Dispatcher Flush Rules work from AEM 5.6 Publish Servers as well. Simple configu
 
 Delete the entire cache when a new package is activated.  
 
-    /apps/myapp/config/com.adobe.acs.commons.replication.dispatcher.impl.DispatcherFlushRulesImpl-global
+    /apps/myapp/config.publish/com.adobe.acs.commons.replication.dispatcher.impl.DispatcherFlushRulesImpl-global
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
