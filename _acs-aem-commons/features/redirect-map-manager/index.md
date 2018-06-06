@@ -38,7 +38,7 @@ Before using the Redirect Map Manager, you need to configure Apache to retrieve 
         # Rewrite rules
         RewriteMap map.legacy dbm:/etc/httpd/conf/redirectmap.map
         RewriteCond ${map.legacy:$1} !=""
-        RewriteRule ^(.*)$ 		${map.legacy:$1}|/} [L,R=301]
+        RewriteRule ^(.*)$ 		${map.legacy:$1|/} [L,R=301]
     ```
 2. Add a cron task to pull the Redirect Map from the publisher and convert it into a DB File. For example, I could add the following script into `/etc/cron.hourly`:
     ```
