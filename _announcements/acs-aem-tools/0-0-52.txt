@@ -1,6 +1,6 @@
 ---
 title: Release 0.0.52 now available!
-description: Bug fixes in AEM Fiddle (now works on AEM 6.3+), Explain Query and Vlt RCP UI (requires FileVaulr 3.4.1) - ACS AEM Tools now requires AEM 6.2+.
+description: Bug fixes in AEM Fiddle (now works on AEM 6.3+), Explain Query and Vlt RCP UI (requires FileVault 3.4.1) - ACS AEM Tools now requires AEM 6.2+.
 date: 2018-01-24
 
 project: acs-aem-tools
