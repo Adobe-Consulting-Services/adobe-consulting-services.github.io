@@ -1,0 +1,7 @@
+---
+title: Release 1.0.0 now available!
+description: Requires AEM 6.3+! New features in Dumplibs,  Vlt RCP UI (requires FileVault 3.4.1) - ACS AEM Tools now requires AEM 6.2+.
+date: 2018-01-24
+
+project: acs-aem-tools
+---
