@@ -33,6 +33,7 @@ ACS AEM Commons Synthetic Workflow is intended to supplement AEM Workflow for sp
 ## Unsupported Workflow Features
 
 * Does NOT support ECMA workflow steps, dialog participant steps, etc.
+* Does NOT support External Workflow Processes, as the point of External Workflow Processes is to use Jobs to safely wait for a long-running process running outside of AEM to complete.
 * Synthetic Workflow does NOT support Routes and executes Workflow Processes serially.
  * As of 2.0.0, a single Synthetic Route and a single Synthetic Back Route are available; these effectively are NOOP's and execution will continue forward in a serial fashion. Routes are never followed in Synthetic Workflow.
 * Unsupported operations throw UnsupportedOperation Exceptions; Test your Synthetic Workflow run on a representative sample set to ensure the candidate Workflow Process steps do not use unimplemented features.
