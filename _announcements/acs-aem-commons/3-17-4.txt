@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.17.4 now available!
+description: Resolves issue with 3.17.4 which has tons of bug-fixes and improvements to existing stuff in ACS Commons!
+date: 2018-08-15
+project: acs-aem-commons
+---
