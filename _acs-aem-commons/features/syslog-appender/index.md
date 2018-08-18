@@ -11,9 +11,9 @@ initial-release: 1.5.0
 
 Using this OSGi configured Logback appender, you can easily send log messages to a syslog server, either one internally hosted or hosted on a SaaS syslog service.
 
-# How to Use
+> This appender only supports syslog over UDP.
 
-**Requires AEM 6.0**
+# How to Use
 
 Configure a new instance of the `com.adobe.acs.commons.logging.impl.SyslogAppender` with the host and port of your syslog server. To log all messages, leave the logger names field as `ROOT`; otherwise specify the specific logger names you want to send to the server.
 
