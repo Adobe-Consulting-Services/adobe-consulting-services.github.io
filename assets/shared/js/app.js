@@ -1,3 +1,6 @@
+anchors.options.class = "anchor-link";
+anchors.add(".feature-doc h2");
+
 $.bigfoot();
 
 ;$(function() { 

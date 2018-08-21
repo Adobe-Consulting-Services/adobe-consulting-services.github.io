@@ -188,3 +188,12 @@ ul.show-more-list {
     text-decoration: underline;
   }
 }
+
+.feature-doc .anchor-link {
+  text-decoration: none;
+  color: #666;
+
+  &:hover {
+    color: #555;
+  }
+}
