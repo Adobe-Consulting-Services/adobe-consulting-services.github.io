@@ -72,7 +72,7 @@ Optionally, a filter can registered which checks incoming requests for client li
 
 > If you enable this option, the hash will be prefixed with `ACSHASH` to ensure that only rewritten paths are validated. Be sure to incorporate this into any web server or CDN rules.
 
-## Log Warnings under AEM 6.3
+## Log Warnings under AEM 6.3+
 
 When using this feature on AEM 6.3, you may see log messages like this for proxied client libraries:
 
