@@ -11,7 +11,6 @@ initial-release: 1.6.0
 ## Purpose
 
 The `EmailService` provides APIs for sending emails through a centrally configured service.
-You can create author-able templates so that the developers do not need to be involved in creating and updating email templates.
 
 ## Email API definition
 
