@@ -1,3 +1,5 @@
+{% capture is_feature_page %}{% if page.url contains '/features/' %}true{% else %}false{% endif %}{% endcapture%}
+
 <footer>
     <div class="container">
         <a href="/pages/license.html">License</a>
@@ -8,6 +10,12 @@
 
         <span style="float:right;">
         	<a href="/">ACS AEM Projects</a>
+
+            {% if is_feature_page == 'true' %}
+            <br/>
+            <br/>
+            <a class="button" href="https://github.com/Adobe-Consulting-Services/adobe-consulting-services.github.io/blob/master/{{ page.url | replace: "/acs-aem-", "_acs-aem-" | replace: ".html", ".md" }}" target="github">Edit page source</a>
+            {% endif %}
         </span>
 	</div>
 </footer>
