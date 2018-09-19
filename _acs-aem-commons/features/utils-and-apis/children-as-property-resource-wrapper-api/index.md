@@ -27,7 +27,7 @@ An example use case, happens in the Financial Service industry where day-based d
 ```
 
 Even if the nodes are sharded to `2017/01/01/entry` daily data for one data-set, 
-this uses ~ 365 * 17 (# of years), so in this example:  ~ 3650 nodes. Multiple that by various product classes x products and the number of nodes cna read the 100k's and even millions.
+this uses ~ 365 * 17 (# of years), so in this example:  ~ 3650 nodes. Multiple that by various product classes x products and the number of nodes can reach the 100k's and even millions.
 
  
 ## How to
