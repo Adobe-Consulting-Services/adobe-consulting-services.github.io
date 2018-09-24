@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.18.0 now available - our 100th release!
+description: ACS introduces a new API for interactacting with Adobe I/O, and some other other cool stuff!
+date: 2018-09-24
+project: acs-aem-commons
+---
