@@ -1,3 +1,4 @@
+com.adobe.acs.commons.adobeio.service
 com.adobe.acs.commons.analysis.jcrchecksum
 com.adobe.acs.commons.audit_log_search
 com.adobe.acs.commons.components.longformtext
