@@ -16,7 +16,11 @@ layout: acs-aem-commons_base
             </nav>
         </header>
 
-        {% include acs-aem-commons/jumbotron.html %}
+        {% if site.data.acs-aem-commons.version == "3.18.0" %}
+            {% include acs-aem-commons/jumbotron-100th-release.html %}
+        {% else %}
+            {% include acs-aem-commons/jumbotron.html %}
+        {% endif %}
 
     </div>
     {% include acs-aem-commons/news.html %}

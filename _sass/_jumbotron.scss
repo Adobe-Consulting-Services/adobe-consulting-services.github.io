@@ -31,6 +31,36 @@ $xs-height: auto;
 }
 
 #jumbotron {
+
+
+
+  &.jumbotron--100-release {
+
+    @media (min-width: $screen-md-min) {
+      img {
+        margin-top: 100px !important;
+      }
+    }
+
+    .banner {
+      @media (min-width: $screen-sm-min) {
+        top: 70%;
+      }
+
+      @media (min-width: $screen-md-min) {
+        top: 75%;
+      }
+
+      top: 35%;
+    }
+  }
+
+
+
+
+
+
+
   color: white;
   border-bottom: solid 1px $secondary-color;
 
@@ -219,3 +249,4 @@ $xs-height: auto;
 
   }
 }
+
