@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.18.2 now available - an important bug-fix release!
+description: Bug-fixes!! Definitely use this over 3.18.0!
+date: 2018-09-26
+project: acs-aem-commons
+---
