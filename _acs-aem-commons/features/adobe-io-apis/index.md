@@ -36,7 +36,7 @@ After all these configurations you can use the health check (/system/console/hea
 
 When you have defined your endpoints you can use them inside your code like this
 
-    @Reference(target = "(id=getCampaignData)")
+    @Reference(target = "(id=target-activities)")
     private EndpointService endpointService;
 
 Once you have the reference to the EndpointService you can execute the Adobe I/O api calls.
