@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Adobe I/O APIs
-description: AEM + Adobe I/0 = ♥
+description: AEM + Adobe I/O = ♥
 date: 2018-09-24
 feature-tags: backend-dev
 initial-release: 3.18.0
