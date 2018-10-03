@@ -20,7 +20,7 @@ Only want to allow users to delete assets only under /content/dam/<myassets>? Us
 
 >[Renderconditions Public Document](https://docs.adobe.com/docs/en/aem/6-1/ref/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/rendercondition.html)
 
-Add a "rendercondition" node under any node and watch it go to work.
+Add a "granite:rendercondition" node under any node and watch it go to work.
 
 
 ### Example Dialog
@@ -35,7 +35,7 @@ In the example below, the "Remove Workflow Instances" node will only show up for
      href="/etc/acs-commons/workflow-remover.html"
      id="acs-commons-workflow-remover"
      target="_blank">
-     <rendercondition
+     <granite:rendercondition
          jcr:primaryType="nt:unstructured"
          sling:resourceType="acs-commons/granite/ui/components/renderconditions/path"
          path="/content/geometrixx/en/.*"/>
