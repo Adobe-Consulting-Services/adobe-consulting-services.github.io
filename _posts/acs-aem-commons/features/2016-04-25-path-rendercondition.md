@@ -1,6 +1,6 @@
 ---
 layout: acs-aem-commons_feature
-title: Path Render Condition
+title: Path Based Render Condition
 description: Show and hide your nodes in Touch UI based on the current path.
 date: 2016-04-25
 thumbnail: /images/default/thumbnail.png
