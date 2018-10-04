@@ -21,7 +21,7 @@ In the path field, enter the the path of the page or asset for which you want to
 
 ![Version Compare - Web UI](images/version-compare.png)
 
-Each property for the page or asset (and its children) will be displayed with a visual indicator of whether the
+Each property for the page or asset (and its children) will be displayed with a visual indicator of whether the property was added, changed, or removed.
 
 ### Display Options
 
