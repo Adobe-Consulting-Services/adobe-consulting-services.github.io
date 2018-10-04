@@ -38,6 +38,6 @@ Allow AEM authors (or "super authors") to flush parts of the dispatcher cache ma
 * The page will refresh indicating the successful status of your Flush request
 * If there are problems, review the Dispatcher Flush Agent Logs
 
-**Note: This requires Dispatcher Flush Replication Agents to be setup on Author. If your Dispatcher Flush agents reside on Publish, you will need to setup a parallel set on AEM Author with the setting if "Ignore Default"**
+**Note: This requires Dispatcher Flush Replication Agents to be setup on Author. If your Dispatcher Flush agents reside on Publish, you will need to setup a parallel set on AEM Author with the setting of "Ignore Default"**
 
 ![image](images/replication-agent-config-ignore-default.png)      
