@@ -40,7 +40,7 @@ HttpCache provides an effective way to improve performance of an application by 
 ### What to use: In-Mem store or JCR store?
 In general, the In-Memory store (default) is recommended for the obvious reason that it's the fastest. 
 However, if you have cache entries that are that big or many that they cannot be stored in the RAM memory, the JCR storages provides a solution.
-Also, the JCR storage means that the cache won't be flushed on a server restart as it's persisted while the In-Mem storage
+Also, the JCR storage means that the cache won't be flushed on a server restart as it's persisted while the In-Mem storage is lost if the AEM process is stopped for any reason.
 
 
 ## How to configure
