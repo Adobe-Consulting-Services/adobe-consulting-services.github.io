@@ -10,7 +10,7 @@ initial-release: 2.0.0
 
 # Purpose
 
-ACS AEM Commons Authorizble Packager faciliates the creation Content Packages containing authorizables. Because these packages are based on the authorizable IDs, you do not need to worry about the use of intermediate path or the obfuscated user node names in AEM 6.1.
+ACS AEM Commons Authorizable Packager faciliates the creation Content Packages containing authorizables. Because these packages are based on the authorizable IDs, you do not need to worry about the use of intermediate path or the obfuscated user node names in AEM 6.1.
 
 # How to Use
 
