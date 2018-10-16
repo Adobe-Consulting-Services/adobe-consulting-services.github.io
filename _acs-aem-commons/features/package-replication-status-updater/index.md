@@ -12,7 +12,7 @@ initial-release: 1.8.0
 
 Packages are a great way to promote large collections of content from Author to Publish servers. However, package replication does not mark the covered content on AEM Author as activated, making it difficult for content authors to understand if the content is in fact activated. Even more dangerous, OOTB tooling like "delete" and "move" will not automatically deactivate the content resulting in orphaned content on AEM Publish.
 
-The ACS AEM Commons Package Replication Status Updater combats this problems by inspecting the contents of any replicated package, and marking applicable content with the appropriate replication status on AEM Author.
+The ACS AEM Commons Package Replication Status Updater combats these problems by inspecting the contents of any replicated package, and marking applicable content with the appropriate replication status on AEM Author.
 
 ## How to Use
 
