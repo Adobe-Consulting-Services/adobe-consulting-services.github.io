@@ -27,17 +27,17 @@ Add a "granite:rendercondition" node under any node and watch it go to work.
 
 In the example below, the "Remove Workflow Instances" node will only show up for paths under `/content/geometrixx/en`
 
-```<?xml version="1.0" encoding="UTF-8"?>
- <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-     jcr:description="Remove Workflow Instances"
-     jcr:primaryType="nt:unstructured"
-     jcr:title="Workflow Remover"
-     href="/etc/acs-commons/workflow-remover.html"
-     id="acs-commons-workflow-remover"
-     target="_blank">
-     <granite:rendercondition
+    <?xml version="1.0" encoding="UTF-8"?>
+     <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+         jcr:description="Remove Workflow Instances"
          jcr:primaryType="nt:unstructured"
-         sling:resourceType="acs-commons/granite/ui/components/renderconditions/path"
-         path="/content/geometrixx/en/.*"/>
- </jcr:root>
-```
+         jcr:title="Workflow Remover"
+         href="/etc/acs-commons/workflow-remover.html"
+         id="acs-commons-workflow-remover"
+         target="_blank">
+         <granite:rendercondition
+             jcr:primaryType="nt:unstructured"
+             sling:resourceType="acs-commons/granite/ui/components/renderconditions/path"
+             path="/content/geometrixx/en/.*"/>
+     </jcr:root>
+
