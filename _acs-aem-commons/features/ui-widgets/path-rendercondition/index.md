@@ -1,9 +1,12 @@
 ---
 layout: acs-aem-commons_feature
-title: Query Path Render Condition
+title: Path Render Condition
 description: Show and hide your nodes in Touch UI based on the current path.
 date: 2016-04-25
-redirect_form: /acs-aem-commons/features/path-rendercondition.html
+thumbnail: /images/default/thumbnail.png
+feature-tags: component-dev
+tags: acs-aem-commons-features new
+categories: acs-aem-commons features
 initial-release: 2.4.0/3.0.0
 ---
 
@@ -17,15 +20,14 @@ Only want to allow users to delete assets only under `/content/dam/<myassets>?` 
 
 >[Renderconditions Public Document](https://docs.adobe.com/docs/en/aem/6-1/ref/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/rendercondition.html)
 
-Add a "rendercondition" node under any node and watch it go to work.
+Add a "granite:rendercondition" node under any node and watch it go to work.
 
 
 ### Example Dialog
 
 In the example below, the "Remove Workflow Instances" node will only show up for paths under `/content/geometrixx/en`
 
-{% highlight xml %}
-<?xml version="1.0" encoding="UTF-8"?>
+```<?xml version="1.0" encoding="UTF-8"?>
  <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
      jcr:description="Remove Workflow Instances"
      jcr:primaryType="nt:unstructured"
@@ -33,9 +35,9 @@ In the example below, the "Remove Workflow Instances" node will only show up for
      href="/etc/acs-commons/workflow-remover.html"
      id="acs-commons-workflow-remover"
      target="_blank">
-     <rendercondition
+     <granite:rendercondition
          jcr:primaryType="nt:unstructured"
          sling:resourceType="acs-commons/granite/ui/components/renderconditions/path"
          path="/content/geometrixx/en/.*"/>
  </jcr:root>
-{% endhighlight %}     
+```
