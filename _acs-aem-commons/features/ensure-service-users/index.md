@@ -33,7 +33,7 @@ Create an OSGi configuration for each service user or group with the correspondi
     principalName="my-service-user"
     type="add"
     ensure-immediately="{Boolean}true"
-    aces="[type=allow;privilege s=jcr:read\,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"/>
+    aces="[type=allow;privileges=jcr:read\,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"/>
 {% endhighlight %}
 
 For Ensure Group, the PID is _com.adobe.acs.commons.users.impl.EnsureGroup_, with the only additional property being member-of.
