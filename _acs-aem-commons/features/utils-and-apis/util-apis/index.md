@@ -14,7 +14,7 @@ Provide common utility functionality across projects.
 
 ## Overview
 
-The best overview are the [ACS AEM Commons Utils JavaDocs](/apidocs/com/adobe/acs/commons/util/package-summary.html).
+The best overview are the [ACS AEM Commons Utils JavaDocs](acs-aem-commons/apidocs/com/adobe/acs/commons/util/package-summary.html).
 
 Characteristics of the ACS AEM Commons Utils are:
 
