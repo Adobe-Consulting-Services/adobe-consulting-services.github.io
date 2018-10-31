@@ -10,7 +10,7 @@ initial-release: 1.9.0
 
 ## Purpose
 
-This workflow process step allows for sending of templated emails from Workflow model execution. This is greate for sending custom notifications as the Workflow progresses.
+This workflow process step allows for sending of templated emails from Workflow model execution. This is great for sending custom notifications as the Workflow progresses.
 
 ## How to Use
 
