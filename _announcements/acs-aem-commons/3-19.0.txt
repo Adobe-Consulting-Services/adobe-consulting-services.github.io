@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 3.19.0 now available - this is last release that supports AEM 6.2!
+description: 16 new features and bugfixes.  Check the release notes!
+date: 2018-11-03
+project: acs-aem-commons
+---
