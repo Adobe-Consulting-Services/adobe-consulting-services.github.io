@@ -60,6 +60,7 @@ com.adobe.acs.commons.search
 com.adobe.acs.commons.social.linkedin
 com.adobe.acs.commons.synth
 com.adobe.acs.commons.synth.children
+com.adobe.acs.commons.throttling
 com.adobe.acs.commons.twitter
 com.adobe.acs.commons.util
 com.adobe.acs.commons.util.datadefinitions
