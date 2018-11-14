@@ -14,6 +14,7 @@ Asset Folder Creator leverages the power and flexibility of Excel, to put the po
 ![Asset Folder Creator](./images/asset-folder-creator.png)
 
 * **Excel File**: The Excel (xlsx) file that contains the Asset Folder definitions. *Note this is NOT a CSV file.*
+  * [Example Excel file](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/bundle/src/test/resources/com/adobe/acs/commons/mcp/impl/processes/asset-folder-creator.xlsx?raw=true)
 * **Folder Type**: The type of folders to create; Ordered or Unordered Folder
 * **Primary Creator**: The Data Converter (see below) to initially parse the Excel cell data with. 
 * **Fallback Creator**: The Data Converter (see below) to parse the Excel cell data with if the Primary Creator cannot parse the data. 
