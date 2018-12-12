@@ -1,0 +1,6 @@
+---
+title: Release 1.0.2 now available!
+description: AEM 6.4 compatibility release! (The UI's didnt work in AEM 6.4 before :( )
+date: 2018-12-12
+project: acs-aem-tools
+---
