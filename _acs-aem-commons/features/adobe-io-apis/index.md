@@ -13,7 +13,7 @@ This feature enables you to make Adobe I/O api-calls, whereby all the plumbing i
 
 ## How to
 
-Follow this article to setup your integration on Adobe I/O: https://blogs.adobe.com/experiencedelivers/uncategorized/calling-api-adobe-o/
+Follow this article to setup your integration on Adobe I/O: [https://blogs.adobe.com/experiencedelivers/uncategorized/calling-api-adobe-o/](https://blogs.adobe.com/experiencedelivers/uncategorized/calling-api-adobe-o/)
 
 Once this is done...
 
