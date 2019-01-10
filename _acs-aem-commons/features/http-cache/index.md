@@ -6,6 +6,7 @@ date: 2015-12-05
 redirect_from: /acs-aem-commons/features/http-cache.html
 feature-tags: backend-dev
 initial-release: 2.2.0
+last-updated-release: 4.0.0
 
 ---
 
@@ -36,12 +37,17 @@ HttpCache provides an effective way to improve performance of an application by 
 	In-memory cache store supports TTL.
 * Provides powerful instrumentation based on JMX MBean.
 * Since v2.6.0/3.2.0 HTTP Cache now supports caching that the Sling Include level (as well as the original Sling Request level)
+* Since 4.0.0 HTTP Cache supports per config based TTL (overrides global) for JCR store and Caffeine store (requires caffeine bundle).
+
 
 ### What to use: In-Mem store or JCR store?
 In general, the In-Memory store (default) is recommended for the obvious reason that it's the fastest. 
 However, if you have cache entries that are that big or many that they cannot be stored in the RAM memory, the JCR storages provides a solution.
 Also, the JCR storage means that the cache won't be flushed on a server restart as it's persisted while the In-Mem storage is lost if the AEM process is stopped for any reason.
 
+*Since 4.0.0:
+The caffeine store is added, but only activated if the caffeine 3rd party bundle is active. 
+This store is a MEM store that allows for per config specified TTL, but is a little heavier then the standard MEM store.
 
 ## How to configure
 
@@ -63,9 +69,10 @@ For each configuration, define a `sling:OsgiConfig`
     httpcache.config.requesturi.patterns.blacklisted="[/content/my-site(.*)no-cache(.*)]"
     httpcache.config.request.authentication="authenticated"
     httpcache.config.invalidation.oak.paths="[/content/my-site/(.*)]"
+    httpcache.config.expiry.on.create="{Long}50000"
     cacheConfigExtension.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
     cacheKeyFactory.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
-    httpcache.config.cache-handling-rules.pid="[pid-of-rule1, pid-of-rule2]"
+    httpcache.config.cache.handling.rules.pid="[pid-of-rule1, pid-of-rule2]"
  />
  {% endhighlight %}     
 
@@ -80,6 +87,13 @@ For each configuration, define a `sling:OsgiConfig`
 * `httpcache.config.cache-handling-rules.pid` Service pid of cache handling rules applied for this config. Note that this is cache config specific rule while the global set of rules set at cache engine are applied to all cache configs.
 * `httpcache.config.filter-scope` specifies if the HTTP Cache config should be evaluated at the Sling Request or Include level. Valid values are `REQUEST` or `INCLUDE`. Available since v2.6.0/3.2.0 - prior all caching occurred at the REQUEST level which is the default.
 
+Since 4.0.0 and not supported by default MEM cache store (use JCR or Caffeine)
+* `httpcache.config.expiry.on.create ` Sets a expiry time in milliseconds that is specific to cache entries that belong to this configuration. 
+* `httpcache.config.expiry.on.update` Refresh expiry time on update, specific to cache entries that belong to this configuration.
+* `httpcache.config.expiry.on.read` Refresh expiry time on read, specific to cache entries that belong to this configuration.
+    * If above are not specified, per store TTL will be used. If specified, overrides store TTL (for entries that belong to configuration)
+    * These options have `-1L` (disabled) as default.
+
 #### Configuring cache config extension (GroupHttpCacheConfigExtension)
 
 User group based cache config extension and associated cache key creation. Modeled as OSGi configuration factory. Multiple configurations allowed.
@@ -93,7 +107,7 @@ For each configuration, define a `sling:OsgiConfig`
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
 	config.name="unique-name"
-	httpcache.config.extension.user-groups.allowed="[group1, group2]"
+	httpcache.config.extension.user.groups.allowed="[group1, group2]"
  />
  {% endhighlight %}     
 
@@ -112,7 +126,7 @@ Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-    httpcache.engine.cache-handling-rules.global="[pid1, pid2, pid3]"
+    httpcache.engine.cache.handling.rules.global="[pid1, pid2, pid3]"
  />
 {% endhighlight %}
 
