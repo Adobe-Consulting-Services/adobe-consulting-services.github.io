@@ -18,8 +18,10 @@ HttpCache provides an effective way to improve performance of an application by 
 ### Features
 * Caches anonymous and authenticated requests.
 * Supports caching personalized requests.
-	* Group based caching provided OOTB.
-	* Mechanism exposed to plugin custom logic for handling personalized requests.
+	* Authentication Group based caching provided OOTB.
+	* Request parameter, header, cookie based caching provided OOTB.
+	* ValueMap value based caching provided OOTB.
+	* Mechanism exposed to plugin additional custom logic for handling personalized requests.
 * Super flexible cache configs tied to URIs supported.
 	* Allows extending cache configs.
 	* Allows multiple cache configs.
@@ -106,7 +108,7 @@ For each configuration, define a `sling:OsgiConfig`
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-	config.name="unique-name"
+	configName="unique-name"
 	httpcache.config.extension.user.groups.allowed="[group1, group2]"
  />
  {% endhighlight %}     
@@ -235,11 +237,28 @@ Any cache handling rule explained above applied only to specific cache config vi
 
 ### Extending cache config
 
-Cache config (`com.adobe.acs.commons.httpcache.config.HttpCacheConfig`) can be extended through implementation of config extension (`com.adobe.acs.commons.httpcache.config.HttpCacheConfigExtension`). A typical developer use-case (but not limited to) for this is to achieve caching of personalized requests. User group based implementation of cache config extension (`com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension`) has been provided OOTB to achieve support of group level personalization. Relation between `HttpCacheConfig` and `HttpCacheConfigExtension` established through OSGi reference target filter `cacheConfigExtension.target` at `com.adobe.acs.commons.httpcache.config.impl.HttpCacheConfigImpl`.
+Cache config (`com.adobe.acs.commons.httpcache.config.HttpCacheConfig`) can be extended through implementation of config extension (`com.adobe.acs.commons.httpcache.config.HttpCacheConfigExtension`). A typical developer use-case (but not limited to) for this is to achieve caching of personalized requests. User group based implementation of cache config extension
+ 
+The following config extensions are provided OOTB:
+
+* `com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension` authenticated user group cache rules / personalization. 
+* `com.adobe.acs.commons.httpcache.config.impl.ResourceTypeHttpCacheConfigExtension` resource type / path based cache rules
+* `com.adobe.acs.commons.httpcache.config.impl.RequestParameterHttpCacheConfigExtension` request parameter based cache rules / personalization
+* `com.adobe.acs.commons.httpcache.config.impl.RequestCookieHttpCacheConfigExtension` request cookie based cache rules / personalization
+* `com.adobe.acs.commons.httpcache.config.impl.RequestHeaderHttpCacheConfigExtension` request header based cache rules / personalization
+* `com.adobe.acs.commons.httpcache.config.impl.ValueMapValueHttpCacheConfigExtension` request resource's value map values based cache rules
+* `com.adobe.acs.commons.httpcache.config.impl.CombinedCacheConfigExtension` allows you to combine multiple extensions into 1 to promote reuse
+
+All of the above are compatible with the JCR cache (Serializable). 
+ 
+Relation between `HttpCacheConfig` and `HttpCacheConfigExtension` established through OSGi reference target filter `cacheConfigExtension.target` at `com.adobe.acs.commons.httpcache.config.impl.HttpCacheConfigImpl`.
+
+
 
 ### Custom key factory and custom cache keys
 
-CacheKeyFactory (`com.adobe.acs.commons.httpcache.keys.CacheKeyFactory`) is tied to HttpCacheConfig (`com.adobe.acs.commons.httpcache.config.impl.HttpCacheConfigImpl`) via cache config's OSGi property `cacheKeyFactory.target`. CacheKeyFactory builds CacheKeys (`com.adobe.acs.commons.httpcache.keys.CacheKey`). Custom implementation of CacheKeyFactory should provide its own CacheKey. Often these implementations factor in the custom implementation of Cache config extension (`com.adobe.acs.commons.httpcache.config.HttpCacheConfigExtension`). Group based cache key factory, cache key and cache config extension are provided OOTB.
+CacheKeyFactory (`com.adobe.acs.commons.httpcache.keys.CacheKeyFactory`) is tied to HttpCacheConfig (`com.adobe.acs.commons.httpcache.config.impl.HttpCacheConfigImpl`) via cache config's OSGi property `cacheKeyFactory.target`. CacheKeyFactory builds CacheKeys (`com.adobe.acs.commons.httpcache.keys.CacheKey`). Custom implementation of CacheKeyFactory should provide its own CacheKey. Often these implementations factor in the custom implementation of Cache config extension (`com.adobe.acs.commons.httpcache.config.HttpCacheConfigExtension`). The OOTB extensions mentioned above also implement the CacheKeyFactory interface, with the exception of the CombinedCacheConfigExtension. The factory variant is: 
+* `com.adobe.acs.commons.httpcache.config.impl.CombinedCacheKeyFactory` allows you to combine multiple factories into 1 to promote reuse
 
 If you want your CacheKey to work in the JCR store, you need to provide an implementation of writeObject / readObject for serialization. 
 [writeObject](https://docs.oracle.com/javase/7/docs/platform/serialization/spec/output.html#861) 
@@ -247,6 +266,99 @@ If you want your CacheKey to work in the JCR store, you need to provide an imple
 
 The abstract class com.adobe.acs.commons.httpcache.keys.AbstractCacheKey contains parentReadObject and parentWriteObject as protected methods to provide serialization logic for it's fields.
 You will need to serialize your fields accordingly so they may be persisted in the JCR.
+
+## Example OOTB config extension / key factories configurations:
+
+
+`com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension-uniquename.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+	configName="unique-name"
+	httpcache.config.extension.user.groups.allowed="[group1, group2]"
+ />
+ {% endhighlight %}     
+
+`com.adobe.acs.commons.httpcache.config.impl.ResourceTypeHttpCacheConfigExtension-myresourceconfig.xml`
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+	configName="my-resource-config"
+	httpcache.config.extension.paths.allowed="['/content/acs-commons/mycontainerpage/(.*)/jcr:content/(.*)']"
+	httpcache.config.extension.resourcetypes.allowed="['/apps/acs-commons/components/my-cacheable-component']" 	
+ />
+ {% endhighlight %}  
+
+
+
+### `com.adobe.acs.commons.httpcache.config.impl.RequestParameterHttpCacheConfigExtension-myrequestparameterconfig.xml`
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    configName="my-request-parameter-config"
+    allowedKeys="[pageView,page]" 
+    allowedValues="[pageView=compact|medium|large]"
+    emptyAllowed="{Boolean}false"
+ />
+ {% endhighlight %}  
+ 
+`com.adobe.acs.commons.httpcache.config.impl.RequestCookieHttpCacheConfigExtension-myrequestcookieconfig.xml` 
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    configName="my-request-cookie-config"
+    allowedKeys="[myCustomUserGroupFromMiddleware]" 
+    allowedValues="[myCustomUserGroupFromMiddleware=superUser|normal|loyalUser]"
+    emptyAllowed="{Boolean}true"
+ />
+ {% endhighlight %}  
+ 
+`com.adobe.acs.commons.httpcache.config.impl.RequestHeaderHttpCacheConfigExtension-myrequestheaderconfig.xml`
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    configName="my-request-header-config"
+    allowedKeys="[my-custom-header]" 
+    emptyAllowed="{Boolean}false"
+ />
+ {% endhighlight %}  
+ 
+`com.adobe.acs.commons.httpcache.config.impl.ValueMapValueHttpCacheConfigExtension-myvaluemapconfig.xml` 
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    configName="my-valuemap-config"
+    allowedKeys="[resourceIsCacheAble]" 
+    allowedValues="[resourceIsCacheAble={Boolean}true]"
+    emptyAllowed="{Boolean}false"
+ />
+ {% endhighlight %}  
+ 
+`com.adobe.acs.commons.httpcache.config.impl.CombinedCacheConfigExtension`
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    configName="combined-group-and-resource-config"
+    cacheConfigExtension.target="(|(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.ValueMapValueHttpCacheConfigExtension)(configName=my-valuemap-config)(((service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.RequestHeaderHttpCacheConfigExtension)(configName=my-request-header-config)" 
+    cacheKeyFactory.target="(|(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.ValueMapValueHttpCacheConfigExtension)(configName=my-valuemap-config)(((service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.RequestHeaderHttpCacheConfigExtension)(configName=my-request-header-config))" 
+    emptyAllowed="{Boolean}false"
+ />
+ {% endhighlight %}  
 
 ### Creating new Cache store
 
