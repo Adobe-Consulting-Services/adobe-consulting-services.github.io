@@ -6,8 +6,13 @@ date: 2015-08-25
 redirect_from: /acs-aem-commons/features/icon-picker.html
 feature-tags: component-dev
 initial-release: 2.0.0
-
+last-updated-release: 4.0.0
 ---
+
+<div class="banner--notice">
+<a href="/acs-aem-commons/pages/releases/4-0-0.html" target="_blank">As of ACS AEM Commons 4.0.0 all UI Widgets must be explicitly enabled</a>
+</div>
+
 
 > In version 2.1.0 the default `fa` CSS class has been removed. If you have created a custom Font Awesome generic list using 2.0.0, you will need to prefix each value with the `fa` CSS class.
 
@@ -16,6 +21,12 @@ initial-release: 2.0.0
 Adds a visual icon selection to AEM Component Dialogs.
 
 ## Usage
+
+### Wrapper Client Library (required as of 4.0.0)
+
+The following wrapper Client Library node definition must be used to enable this feature.
+
+* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/touchui-widgets/icon-picker/.content.xml#L10)
 
 ### Setup
 
@@ -37,15 +48,6 @@ For Touch UI, add a component definition to your dialog with a `sling:resourceTy
                             path="/etc/acs-commons/lists/font-awesome-icons"
                             sling:resourceType="acs-commons/components/utilities/genericlist/datasource"/>
     </icon>
-
-### Classic UI
-
-For Classic UI, add a widget using the xtype `graphiciconselection`.
-
-    <icon xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="cq:Widget" fieldLabel="Icon" name="./icon"
-          options="/etc/acs-commons/lists/font-awesome-icons/_jcr_content.list.json"
-          xtype="graphiciconselection"/>
 
 ### Component Code
 

@@ -3,8 +3,15 @@ layout: acs-aem-commons_feature
 title: CoralUI Angular Directives
 description: Cut down on duplicate markup in custom Coral UI interfaces
 date: 2015-08-12
+tags: deprecated
 redirect_from: /acs-aem-commons/features/coral-angular.html
 ---
+
+## Why is this deprecated?
+
+AngularJS is effectively dead, and it is better to use a modern JavaScript framework. CoralUI 2 is also no replaced by CoralUI 3.
+
+## Purpose
 
 > This feature is primarily intended for use within ACS AEM Commons itself, but may be valuable for other users.
 
@@ -15,7 +22,7 @@ This Client Library includes a variety of AngularJS directives useful when build
 # General Usage
 
 1. Include the client library category `acs-commons.coralui.angularjs` as a dependency to your client library.
-2. In your AngularJS module intialization, include `acsCoral` as a dependecy.
+2. In your AngularJS module initialization, include `acsCoral` as a dependency.
 
 # Directives
 

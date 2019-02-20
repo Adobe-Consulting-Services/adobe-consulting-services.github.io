@@ -13,4 +13,13 @@ When using AEM 6.3+ please use Adobe's fully supported
 instead of this feature.
 </div>
 
+
+### Wrapper Client Library (required as of 4.0.0)
+
+The following wrapper Client Library node definition must be used to enable this feature.
+
+* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/touchui-widgets/composite-multifield/.content.xml#L9)
+
+### How to use
+
 The ACS Commons multifield extension is well described by H2S Solutions in their blog entry: <a href="https://www.hs2solutions.com/blog/using-acs-aem-commons-nested-multifield">Using the ACS AEM Commons Nested Multifield</a>

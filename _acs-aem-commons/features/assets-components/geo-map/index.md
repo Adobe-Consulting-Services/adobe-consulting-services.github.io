@@ -6,6 +6,7 @@ redirect_from: /acs-aem-commons/features/assets-geo-map.html
 date: 2016-05-30
 feature-tags: authoring
 initial-release: 3.1.0
+last-updated-release: 4.0.0
 ---
 
 > This feature is AEM 6.2+ ONLY!
@@ -20,20 +21,38 @@ Provide a visual map in the Assets metadata editor view, powered by OpenStreeMap
 
 ## How to Use - Location Properties
 
+### Wrapper Client Library (required as of 4.0.0)
+
+The following wrapper Client Library node definition must be used to enable this feature.
+
+* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/authoring/dam-location/.content.xml#L9)
+
+### Configuring the Metadata Schema field
+
 To configure the display JavaScript bit, you need to add
 
 `wrapperClass=acs-dam-location-degrees`
 
-To the metadata field definition for exif:GPSLatitude and exif:GPSLongitude
+To the metadata field definition for `exif:GPSLatitude` and `exif:GPSLongitude`
 
-## How to Use - Map
+## How to Use - Map (since 3.2.0)
 
-### Since 3.2.0
+This component can be automatically activated in the metadata schema editor.
 
-This component can be automatically activated in the metadata schema editor. To do this, it is first necessary to activate an OSGi component which handles the activation. To do this, create a new node named `com.adobe.acs.commons.dam.impl.CustomComponentActivatorListServlet` of type `sling:OsgiConfig` in any valid `config` folder in the repository. Then create a new textfield component in the Metadata Schema Editor and specify a "Map to property" of `./jcr:content/metadata/location` and ensure the field is disabled. This field will be automatically replaced with the map component when the asset editor is loaded.
+To do this, it is first necessary to activate an OSGi component which handles the activation. To do this, create a new node named `com.adobe.acs.commons.dam.impl.CustomComponentActivatorListServlet` of type `sling:OsgiConfig` in any valid `config` folder in the repository.
+
+Then create a new textfield component in the Metadata Schema Editor and specify a "Map to property" of `./jcr:content/metadata/location` and ensure the field is disabled. This field will be automatically replaced with the map component when the asset editor is loaded.
+
+### Wrapper Client Library (required as of 4.0.0)
+
+The following wrapper Client Library node definition must be used to enable this feature.
+
+* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/components/dam/custom-component-activator/clientlib/.content.xml#L11-L17)
+
 
 ![Asset Editor Configuration](images/schema-editor.png)
 
+<!--
 ### Legacy (pre-3.2.0 approach)
 
 To add the map, create a new component of type `acs-commons/components/dam/asset-location-map` in the metadata schema editor.
@@ -127,7 +146,8 @@ To add the map, create a new component of type `acs-commons/components/dam/asset
 
 </col2>
 {% endhighlight %}
+-->
 
-## Video Walkthrough
+## Video Walk-through
 
 <iframe width="945" height="532" src="https://www.youtube.com/embed/yMi-Qab14-o?rel=0" frameborder="0" allowfullscreen></iframe>

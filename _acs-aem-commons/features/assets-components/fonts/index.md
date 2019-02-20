@@ -6,6 +6,7 @@ sub-feature: true
 date: 2016-05-29
 feature-tags: authoring
 initial-release: 3.1.0
+last-updated-release: 4.0.0
 ---
 
 > This feature is AEM 6.2+ ONLY!
@@ -16,7 +17,15 @@ Images and documented edited with Adobe creative applications contain a variety 
 
 ## Usage - General
 
-In order to take advantage of the automatic activation of any of these components, it is necessary to activate an OSGi component which handles the activation. To do this, create a new node named `com.adobe.acs.commons.dam.impl.CustomComponentActivatorListServlet` of type `sling:OsgiConfig` in any valid `config` folder in the repository.
+In order to take advantage of the automatic activation of any of these components, it is necessary to activate an OSGi component which handles the activation.
+
+To do this, create a new node named `com.adobe.acs.commons.dam.impl.CustomComponentActivatorListServlet` of type `sling:OsgiConfig` in any valid `config` folder in the repository.
+
+### Wrapper Client Library (required as of 4.0.0)
+
+The following wrapper Client Library node definition must be used to enable this feature.
+
+* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/components/dam/custom-component-activator/clientlib/.content.xml#L11-L17)
 
 ## Fonts
 
