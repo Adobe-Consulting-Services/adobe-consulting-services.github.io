@@ -5,8 +5,13 @@ description: Simple yet flexible framework for building complex forms
 date: 2013-07-10
 redirect_from: /acs-aem-commons/features/forms.html
 feature-tags: component-dev
+tags: deprecated
 initial-release: 1.0.0
 ---
+
+## Why is this deprecated?
+
+This API is built for use with JSP which has long since been superseded by HTL as the preferred script language in AEM, therefore the  use of this API is discourages as to encourage the use of HTL.
 
 ## Purpose
 

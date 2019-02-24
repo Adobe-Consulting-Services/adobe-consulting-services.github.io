@@ -13,15 +13,13 @@ last-updated-release: 4.0.0
 
 AEM authors quickly want to grab the asset's publish URL for sharing or for use with external tools like Adobe Target.
 
-## How to setup
+## How to Setup
 
-As of ACS AEM Commons 4.0.0, the following wrapper Client Library node definition must be used to enable this feature.
-
-* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/components/dam/custom-component-activator/clientlib/.content.xml#L11-L17)
+{% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/components/dam/custom-component-activator/clientlib/.content.xml#L11-L17' %}
 
 Note that your [AEM Externalizer](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/externalizer.html) OSGi service must be set up for the Publish URL to use the correct domain.
 
-## How to use
+## How to Use
 
 1. Ensure the asset is published
 2. Click into the asset

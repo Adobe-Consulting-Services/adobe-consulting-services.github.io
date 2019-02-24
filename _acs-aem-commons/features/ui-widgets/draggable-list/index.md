@@ -28,11 +28,7 @@ The Draggable List component lets you create an ordered list of elements that ar
 * If using the [ACS Commons Query Autocomplete Datasource](/acs-aem-commons/features/queryautocomplete-datasource.html), set `sling:resourceType = acs-commons/granite/ui/components/form/queryautocomplete/datasource`
 * If using your own datasource, set the `sling:resourceType` accordingly.
 
-## Wrapper Client Library (required as of 4.0.0)
-
-The following wrapper Client Library node definition must be used to enable this feature.
-
-* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/touchui-widgets/draggable-list/.content.xml#L9)
+{% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/touchui-widgets/draggable-list/.content.xml#L9' %}
 
 ## Sample Datasource
 

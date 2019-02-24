@@ -20,11 +20,7 @@ Query autocomplete datasource lets you build your [autocomplete](https://docs.ad
 
 ## How to Use
 
-### Wrapper Client Library (required as of 4.0.0)
-
-The following wrapper Client Library node definition must be used to enable this feature.
-
-* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/touchui-widgets/search-based-path-browser/.content.xml#L9)
+{% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/touchui-widgets/search-based-path-browser/.content.xml#L9' %}
 
 ### Component setup
 
