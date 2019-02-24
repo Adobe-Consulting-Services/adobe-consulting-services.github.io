@@ -5,6 +5,16 @@ title: Http Cache - JMX instrumentation
 
 [<< back to HTTP Cache Table of Contents](../index.html)
 
+
+## Breaking changes in ACS AEM Commons 4.0.0
+
+The following JMX Object Names were corrected. Any systems interacting with these MBean must be updated.
+
+* Was: `com.adobe.acs.httpcache:type=HTTP Cache Engine`, is now: `com.adobe.acs.commons.httpcache:type=HTTP Cache - Engine`
+* Was: `com.adobe.acs.httpcache:type=JCR HTTP Cache Store`, is now: `com.adobe.acs.commons.httpcache:type=HTTP Cache - JCR Cache Store`
+* Was: `com.adobe.acs.httpcache:type=In Memory HTTP Cache Store`, is now: `com.adobe.acs.commons.httpcache:type=HTTP Cache - In-Memory Cache Store`
+
+
 ## How to instrument
 
 JMX beans exposed to instrument the http cache for the following 3 components.
@@ -34,3 +44,4 @@ Same goes for the JCR cache store. Stats are pretty similar to the In-Mem cache 
 It also allows operations such as clearing the cache entirely or to run a purge for expired entries.
 
 ![image](../images/httpcache-mbean-jcr-store-2.png)
+

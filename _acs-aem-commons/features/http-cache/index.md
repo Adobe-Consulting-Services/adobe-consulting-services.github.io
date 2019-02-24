@@ -20,7 +20,7 @@ HttpCache provides an effective way to improve performance of an application by 
 * Supports caching personalized requests.
 	* Authentication Group based caching provided OOTB.
 	* Request parameter, header, cookie based caching provided OOTB.
-	* ValueMap value based caching provided OOTB.
+	* HTTP Request Query Param, HTTP Request Attribute, HTTP Cookie, and Sling Resource property based caching provided OOTB.
 	* Mechanism exposed to plugin additional custom logic for handling personalized requests.
 * Super flexible cache configs tied to URIs supported.
 	* Allows extending cache configs.
@@ -32,15 +32,15 @@ HttpCache provides an effective way to improve performance of an application by 
 	* On cache invalidate
 * Provides mechanism to plugin custom cache keys.
 * Pluggable cache persistence model.
-	* In-memory & JCR implementation provided OOTB
+	* In-memory, Caffeine & JCR implementation provided OOTB
 	* Allows multiple cache stores to co-exist.
 * Invalidation mechanism based on JCR paths and Sling jobs.
 	* Sample JCR change event handler based invalidation supplied.
 	In-memory cache store supports TTL.
 * Provides powerful instrumentation based on JMX MBean.
 * Since v2.6.0/3.2.0 HTTP Cache now supports caching that the Sling Include level (as well as the original Sling Request level)
-* Since 4.0.0 HTTP Cache supports per config based TTL (overrides global) for JCR store and Caffeine store (requires caffeine bundle).
-* Since 4.0.0 Provides OOTB cache config extensions: RequestCookieHttpCacheConfigExtension, RequestHeaderHttpCacheConfigExtension,RequestParameterHttpCacheConfigExtension,ValueMapValueHttpCacheConfigExtension
+* Since 4.0.0 HTTP Cache supports per config based TTL (overrides global) for JCR store and Caffeine store (requires [Caffeine bundle](https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine)).
+* Since 4.0.0 Provides OOTB cache config extensions: RequestCookieHttpCacheConfigExtension, RequestHeaderHttpCacheConfigExtension,RequestParameterHttpCacheConfigExtension, ResourcePropertiesHttpCacheConfigExtension
     
 ## Table of Contents
 
@@ -51,23 +51,18 @@ This section covers usage and is written for end-users, system administrators, a
 
 ### Getting started
 
-[Base config](subpages/base-config.html): Creating a basic configuration to get started caching
-
-[Config extensions](subpages/config-extensions.html): Extending the basic configuration with OOTB extensions using sling:OsgiConfig
-
-[Cache invalidation](subpages/invalidation.html): Invalidation mechanisms to prevent stale content
+* [Base config](subpages/base-config.html): Creating a basic configuration to get started caching
+* [Config extensions](subpages/config-extensions.html): Extending the basic configuration with OOTB extensions using `sling:OsgiConfig`
+* [Cache invalidation](subpages/invalidation.html): Invalidation mechanisms to prevent stale content
 
 ### Advanced
 
-[Custom config extension](subpages/creating-config-extension.html): Create your own config extension for specific business logic
-
-[Custom key factory](subpages/creating-key-factory.html): Create your own key factory for specific business logic
-
-[Custom cache store](subpages/creating-cache-store.html): Create your own cache store
-
-[Handling rules](subpages/handling-rules.html): Toggle handling rules (such as don't cache response code 500) and / or create your own rules
+* [Custom config extension](subpages/creating-config-extension.html): Create your own config extension for specific business logic
+* [Custom key factory](subpages/creating-key-factory.html): Create your own key factory for specific business logic
+* [Custom cache store](subpages/creating-cache-store.html): Create your own cache store
+* [Handling rules](subpages/handling-rules.html): Toggle handling rules (such as don't cache response code 500) and / or create your own rules
 
 ### Instrumentation
 
-[JMX consoles](subpages/jmx.html): Available JMX instrumentation consoles
+* [JMX consoles](subpages/jmx.html): Available JMX instrumentation consoles
 

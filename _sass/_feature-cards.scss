@@ -29,6 +29,11 @@
     h3 {
       a {
         color: black;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
       color: black;
       margin: 1em 0 .5em 0;
@@ -40,7 +45,7 @@
       margin-bottom: 4rem;
     }
 
-    .banner {
+    .feature__banner {
       background: transparent no-repeat top left;
       width: 119px;
       height: 119px;
@@ -50,22 +55,22 @@
 
     .new {
       background-image: url('/assets/shared/images/new-banner.png');
-      @extend .banner;
+      @extend .feature__banner;
     }
 
     .updated {
       background-image: url('/assets/shared/images/updated-banner.png');
-      @extend .banner;
+      @extend .feature__banner;
     }
 
     .beta {
       background-image: url('/assets/shared/images/beta-banner.png');
-      @extend .banner;
+      @extend .feature__banner;
     }
 
     .deprecated {
       background-image: url('/assets/shared/images/deprecated-banner.png');
-      @extend .banner;
+      @extend .feature__banner;
     }
   }
 }
@@ -84,7 +89,7 @@
 
 .sub-feature .feature-image-wrapper {
 
-  .banner {
+  .sub-feature__banner {
     background: transparent no-repeat top left;
     background-size: contain;
     width: 100px;
@@ -95,22 +100,22 @@
 
   .new {
     background-image: url('/assets/shared/images/new-banner.png');
-    @extend .banner;
+    @extend .sub-feature__banner;
   }
 
   .updated {
     background-image: url('/assets/shared/images/updated-banner.png');
-    @extend .banner;
+    @extend .sub-feature__banner;
   }
 
   .beta {
     background-image: url('/assets/shared/images/beta-banner.png');
-    @extend .banner;
+    @extend .sub-feature__banner;
   }
 
   .deprecated {
     background-image: url('/assets/shared/images/deprecated-banner.png');
-    @extend .banner;
+    @extend .sub-feature__banner;
   }
 
   box-shadow: 0 2px 7px rgba(0,0,0,0.25);

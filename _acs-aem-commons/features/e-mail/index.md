@@ -6,6 +6,7 @@ date: 2014-04-01
 feature-tags: backend-dev
 tags: update
 initial-release: 1.6.0
+last-updated-release: 4.0.0
 ---
 
 {% include acs-aem-commons/sub-features.html %}

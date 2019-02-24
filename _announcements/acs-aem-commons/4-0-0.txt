@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: ACS AEM Commons 4.0.0 - Big release!!! But has some breaking changes around Client Libs and a few Java APIs.
+description: AEM 6.3, 6.4 and 6.5 support! See the changelog for everything that's new as well as review the <a href="/acs-aem-commons/pages/releases/4-0-0.html">4.0.0 Release notes</a>!
+date: 2019-02-20
+project: acs-aem-commons
+---
