@@ -26,6 +26,9 @@ This allows Smart Tag data to be embedded in the image binary itself and be usef
 When this Workflow Process Step runs on an asset with Smart Tags, it generates the JCR Node structure shown below under the asset's metadata node.
 This JCR Node structure is defined in such a way the OOTB XMP Writeback and read and write it back into the binary's XMP metadata.
 
+![XMP writeable nodes](images/nodes.png)
+
+
 In order to get the Smart Tag data into the binary's XMP, the OOTB AEM XMP Writeback Process Step must be executed on the asset AFTER **Synchronize Smart Tags to XMP Metadata Node** is run.
 
 How and when the OOTB XMP Writeback is invoked is up to you. This can be done as a Process Step directly after the **Synchronize Smart Tags to XMP Metadata Node** Process Step, or it can be in an entirely different Workflow Model that is triggered via Launchers or other means.
