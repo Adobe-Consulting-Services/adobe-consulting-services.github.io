@@ -5,6 +5,7 @@ title: Http Cache - Creating custom key factory
 
 [<< back to HTTP Cache Table of Contents](../index.html)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0J9iyOOQNX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 CacheKeyFactory (`com.adobe.acs.commons.httpcache.keys.CacheKeyFactory`) is tied to HttpCacheConfig (`com.adobe.acs.commons.httpcache.config.impl.HttpCacheConfigImpl`) via cache config's OSGi property `cacheKeyFactory.target`. CacheKeyFactory builds CacheKeys (`com.adobe.acs.commons.httpcache.keys.CacheKey`). Custom implementation of CacheKeyFactory should provide its own CacheKey. Often these implementations factor in the custom implementation of Cache config extension (`com.adobe.acs.commons.httpcache.config.HttpCacheConfigExtension`). The OOTB extensions mentioned above also implement the CacheKeyFactory interface, with the exception of the CombinedCacheConfigExtension. The factory variant is: 
 * `com.adobe.acs.commons.httpcache.config.impl.CombinedCacheKeyFactory` allows you to combine multiple factories into 1 to promote reuse
