@@ -4,7 +4,7 @@ title: Remote Assets
 description: Automatically sync assets on-demand from one AEM server to another.
 date: 2019-03-11
 redirect_from: /acs-aem-commons/features/remote-assets.html 
-feature-tags: new administration authoring content-migration
+feature-tags: new beta administration authoring content-migration
 initial-release: 4.1.0
 ---
 
