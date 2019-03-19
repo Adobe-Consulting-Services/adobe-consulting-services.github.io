@@ -5,8 +5,19 @@ description: AEM Design-driven, reusable ClientLibs
 date: 2013-09-20
 redirect_from: /acs-aem-commons/features/designer-clientlibsmanager.html
 feature-tags: component-dev backend-dev standard
+tags: deprecated
 initial-release: 1.0.0
 ---
+
+
+
+## Why is this deprecated?
+
+The modern to managing Client Libraries to be added to an AEM Site is using Editable Templates (via Policies) and not using the legacy Designs paradigm.
+
+Likewise, since AEM 6.4, [recommendation](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/sites-repository-restructuring-in-aem-6-4.html#StaticTemplateDesigns) is to move any existing Designs out for `/etc` and into `/apps/settings` which renders them immutable at runtime (you cant modify them in the JCR via UIs)
+
+Lastly, the API tooling to support this is geared towards JSPs, which have been superseded by HTL.
 
 ## Purpose
 
