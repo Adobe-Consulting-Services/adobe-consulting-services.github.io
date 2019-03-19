@@ -10,6 +10,7 @@
 @import "feature-cards";
 @import "feature-docs";
 @import "quick-links";
+@import "banners";
 @import "contributors";
 
 .color-block {
@@ -172,6 +173,8 @@ ul.show-more-list {
   margin: 3em 0 1em 0;
   padding-top: .5em;
 }
+
+
 
 .banner--notice {
   padding: 1.5rem 2.5rem;

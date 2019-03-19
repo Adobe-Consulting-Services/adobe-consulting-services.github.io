@@ -12,6 +12,9 @@ feature-tags: component-dev
 
 Since AEM 6.2, UI should be used for developing components. Since these widgets are in direct support of ClassicUI widget development, they are deprecated.
 
+# How to Use
+
+{% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/widgets/.content.xml#L13-L20' %}
 
 ## Vanity Path Uniqueness Check (Since 1.5.0)
 

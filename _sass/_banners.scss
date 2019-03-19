@@ -1,0 +1,33 @@
+
+
+.banner {
+  padding: 1.5rem 2.5rem;
+  color: #383735;
+  margin: 1rem auto 5rem auto;
+  max-width: 90%;
+  border-radius: 3px;
+  text-align: center;
+
+  a {
+    color: #383735 !important;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+}
+
+.banner.banner--notice {
+  background-color: #F9D687;
+  color: #383735;
+
+  a {
+    color: #383735 !important;
+  }
+}
+
+.banner.banner--info {
+  background-color: antiquewhite;
+}
+
+.banner.banner--inline {
+  margin: 1rem auto 1rem auto !important;;
+}

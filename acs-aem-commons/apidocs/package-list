@@ -28,6 +28,7 @@ com.adobe.acs.commons.httpcache.keys
 com.adobe.acs.commons.httpcache.rule
 com.adobe.acs.commons.httpcache.store
 com.adobe.acs.commons.httpcache.util
+com.adobe.acs.commons.i18n
 com.adobe.acs.commons.images
 com.adobe.acs.commons.json
 com.adobe.acs.commons.mcp
@@ -38,6 +39,7 @@ com.adobe.acs.commons.mcp.util
 com.adobe.acs.commons.models.injectors.annotation
 com.adobe.acs.commons.notifications
 com.adobe.acs.commons.oak
+com.adobe.acs.commons.oakpal.checks
 com.adobe.acs.commons.ondeploy
 com.adobe.acs.commons.ondeploy.scripts
 com.adobe.acs.commons.packaging
@@ -86,4 +88,7 @@ com.adobe.acs.commons.workflow.bulk.execution.model
 com.adobe.acs.commons.workflow.bulk.removal
 com.adobe.acs.commons.workflow.process
 com.adobe.acs.commons.workflow.synthetic
+com.adobe.acs.commons.wrap.cqsearch
+com.adobe.acs.commons.wrap.jackrabbit
+com.adobe.acs.commons.wrap.jcr
 com.adobe.acs.commons.xss

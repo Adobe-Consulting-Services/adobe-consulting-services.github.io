@@ -6,6 +6,7 @@ date: 2016-05-29
 redirect_from: /acs-aem-commons/features/advanced-assets-components.html
 feature-tags: authoring
 initial-release: 3.1.0
+last-updated-release: 4.0.0
 ---
 
 > These features are AEM 6.2+ ONLY!

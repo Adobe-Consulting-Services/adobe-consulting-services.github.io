@@ -10,22 +10,27 @@ layout: acs-aem-commons_default
     <div class="col-md-10 col-md-offset-1">
         <section class="feature-doc">
             <div class="feature-doc-header">
-                <h1>
-                    {{ page.title }}
+                <div class="feature-doc-header-title">
+
+                    <h1>
+                        {{ page.title }}
+                    </h1>
+
                     {% if page.tags contains 'deprecated' %}
                     <span class="deprecated">Deprecated</span>
                     {% elsif page.tags contains 'beta' %}
-                    <span class="beta">Beta</span>	
+                    <span class="beta">Beta</span>
                     {% elsif page.initial-release == site.data.acs-aem-commons.version %}
                     <span class="new">New!</span>
                     {% elsif page.initial-release == site.data.acs-aem-commons.version60 %}
                     <span class="new">New!</span>
                     {% elsif page.last-updated-release == site.data.acs-aem-commons.version %}
-                    <span class="updated">Updated</span>    				
+                    <span class="updated">Updated</span>
                     {% elsif page.last-updated-release == site.data.acs-aem-commons.version60 %}
-                    <span class="updated">Updated</span>    				
+                    <span class="updated">Updated</span>
                     {% endif %}
-                </h1>
+
+                </div>
 
                 {% if page.initial-release %}
                 <p class="available-since">Available since version {{page.initial-release}}</p>

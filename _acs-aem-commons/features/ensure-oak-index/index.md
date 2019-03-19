@@ -6,7 +6,7 @@ date: 2015-10-02
 redirect_from: /acs-aem-commons/features/ensure-oak-index.html
 feature-tags: backend-dev
 initial-release: 2.1.0
-
+last-updated-release: 4.0.0
 ---
 
 ![JCR Compare](images/osgi-console.png)
@@ -52,6 +52,8 @@ Once all the Ensure Definitions are defined, create a `sling:OsgiConfig` factory
 ### Provide Additional Ignore Properties (Since v2.6.4/3.2.4)
 
 If additional properties on the root ensure definition/oak index node need to be ignored, you can specify them via OSGi configuration. These additional properties will be joined w the mandatory ignore properties list and will NOT be considered when 1) evaluating if there is a change between the ensure definition and oak index 2) when removing properties from the oak index during and update operation.
+
+> Since version 4.0.0, EnsureOakIndex excludes property `seed`, and sub-tree `[oak:QueryIndexDefinition]/facets/jcr:content`.
 
 Create a `sling:OsgiConfig` at `/apps/mysite/config/com.adobe.acs.commons.oak.impl.EnsureOakIndexManagerImpl.xml`
 

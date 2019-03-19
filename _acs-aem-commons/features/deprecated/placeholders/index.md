@@ -51,6 +51,8 @@ Note that sizes can be used with the standard placeholder classes as well:
 
 ## How To Use
 
+{% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/widgets/.content.xml#L13-L20' %}
+
 ### JSP Tag (Since 1.6.0)
 
 You can also use a custom JSP tag to add placeholders.

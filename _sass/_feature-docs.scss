@@ -4,37 +4,43 @@
 .feature-doc {
   margin-top: 2em;
 
-  h1 {
-    margin-top: 2em;
+  .feature-doc-header {
+    .feature-doc-header-title {
+      margin-bottom: 1rem;
+      h1 {
+        display: inline;
+        margin-top: 2em;
+      }
 
-    .badge {
-      color: white;
-      padding: .25em .5em;
-      border-radius: 5px;
-      margin-left: 10px;
-      font-size: .7em;
-      position: relative;
-      top: -.1em;
-    }
+      .badge {
+        color: white;
+        padding: .25em .5em;
+        border-radius: 5px;
+        margin-left: 10px;
+        font-size: 2.5rem;
+        position: relative;
+        top: -.1em;
+      }
 
-    .new {
-      background-color: red;
-      @extend .badge;
-    }
+      .new {
+        background-color: red;
+        @extend .badge;
+      }
 
-    .updated {
-      background-color: #308BF6;
-      @extend .badge;
-    }
+      .updated {
+        background-color: #308BF6;
+        @extend .badge;
+      }
 
-    .beta {
-      background-color: #76107E;
-      @extend .badge;
-    }
+      .beta {
+        background-color: #76107E;
+        @extend .badge;
+      }
 
-    .deprecated {
-      background-color: #444;
-      @extend .badge;
+      .deprecated {
+        background-color: #444;
+        @extend .badge;
+      }
     }
   }
 
@@ -53,6 +59,10 @@
   h2 {
     border-bottom: dotted 1px #ccc;
     padding-bottom: .25em;
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   img {

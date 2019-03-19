@@ -5,11 +5,12 @@ description: Replicate a bunch of content (more) safely!
 sub-feature: true
 date: 2014-09-01
 initial-release: 2.6.2/3.2.2
+last-updated-release: 4.0.0
 ---
 
 ## Purpose
 
-**Replication with Options** is a Process steps that will traverse the entire content tree, and process the each `dam:Asset` or `cq:Page`, replicating each node based on the Process Args.
+**Replication with Options** is a Process steps that will traverse the entire content tree, and process the each `dam:Asset`, `cq:Page` or `cq:Tag` (cq:Tag since version 4.0.0) replicating each node based on the Process Args.
 
 ## How to Use
 

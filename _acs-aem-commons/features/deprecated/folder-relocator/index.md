@@ -7,9 +7,15 @@ date: 2017-09-01
 initial-release: 3.10.0
 ---
 
-## Note: As of 3.19.0 this is replaced by the Renovator.
+## Why is this deprecated?
+
+As of ACS AEM Commons 3.19.0 this is replaced by the Renovator.
+
+## Purpose
 
 This tool is used to move or rename folders of assets.  
+
+## How to Use
 
 > At the present time, this tool does not update references if pages are affected by these moves.  This was primarily intended for assets customers that do not use Sites.  This is subject to change in the future, or a new tool might be released to address this gap as needed.
 

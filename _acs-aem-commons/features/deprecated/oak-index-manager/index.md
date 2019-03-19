@@ -29,7 +29,7 @@ An AEM6 Oak-based repository is required. This does not work with a Jackrabbit 2
 1. Install the ACS AEM Commons package
 2. As the "admin" user, open Tools > ACS Commons > Oak Index Manager
 
-![image](iamges/screenshot.png)
+![image](images/screenshot.png)
 
 ## Caution!
 
