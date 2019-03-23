@@ -6,6 +6,7 @@ date: 2014-04-01
 redirect_from: /acs-aem-commons/features/email-api.html
 feature-tags: backend-dev
 initial-release: 1.6.0
+last-updated-release: 4.0.0
 ---
 
 ## Purpose
@@ -32,21 +33,27 @@ The template file name need to be `*.html` to send email with attachments since 
 
 **Parameters**       
 
-* `templatePath` - An absolute path of the email template in the repository. eg: `/etc/notification/email/emailTemplate.txt` or `/etc/notification/email/emailTemplate.html` for email with attachments
-* `emailParams`  - Map containing template variables that are injected in the email. Sender's information can be set inside the emailParams for keys: `senderEmailAddress` and `senderName`:
+* `templatePath`: An absolute path of the email template in the repository. eg: `/etc/notification/email/emailTemplate.txt` or `/etc/notification/email/emailTemplate.html` for email with attachments
+* `emailParams`: Map containing template variables that are injected in the email. Sender's information can be set inside the emailParams for keys: `senderEmailAddress` and `senderName`:
 
 		emailParams.put("senderEmailAddress","abcd@example.com");  
 		emailParams.put("senderName","David Smith");
 
-* `recipients` - A variable array of recipients email addresses.
+* `recipients`: A variable array of recipients email addresses.
 
-* `attachments` - Map containing attached file name and attachment datasource 
+* `attachments`: Map containing attached file name and attachment datasource
     
         String attachment1 = "This text should be in the attache txt file.";
         Map<String, DataSource> attachments = new HashMap<>();
         attachments.put("attachment1.txt", new ByteArrayDataSource(attachment1, "text/plain"));
 
-**Returns**  
+* `bounceAddress`: Specifies the bounce address. Also referred to as the envelope FROM address. (Since v4.0.0)
+
+        Map<String, DataSource> attachments = new HashMap<>();
+        attachments.put("bounceAddress", "support@example.com");
+
+
+**Returns**
 `failureList` - Returns list of those recipients addresses for which the email sent was not successful. A wholly successful `sendEmail` results in an empty list.
 
 ## How to Use

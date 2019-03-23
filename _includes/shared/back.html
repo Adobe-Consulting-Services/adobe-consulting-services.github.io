@@ -1,15 +1,19 @@
+{% assign baseUrl = include.baseUrl %}
 {% assign pathParts = page.path | remove: "index.md" | split: "/" %}
+{% capture isFeature %}{% if page.path contains 'feature' %}yes{% else %}no{% endif %}{% endcapture%}
 
-{% if pathParts.size > 3 %}
+
+
+{% if pathParts.size > 3 and isFeature == 'yes' %}
 	<div class="back-button__bar">
 		<div class="container">
 			<a href="../index.html">&lt; Back to the features</a>
 		</div>
 	</div>
-{% elsif pathParts.size > 2 %}
+{% elsif pathParts.size == 3 or isFeature == 'no' %}
 	<div class="back-button__bar">
 		<div class="container">
-			<a href="../../#features">&lt; Back to the features</a>
+			<a href="/{{ baseUrl }}/#features">&lt; Back to the features</a>
 		</div>
 	</div>
 {% endif %}

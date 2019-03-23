@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Sling Models Injectors
-description: Inject objects into your Sling Models classes
+description: Inject cool stuff into your Sling Models
 date: 2014-04-08
 feature-tags: backend-dev
 initial-release: 1.6.0

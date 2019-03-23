@@ -12,6 +12,12 @@ initial-release: 1.2.0
 
 Define simple, yet powerful, rules for targetted flushing of files cached by Dispatcher.
 
+Dispatcher cache flushing is typically done by setting a stat level, which means a piece of content changes at a certain "folder level" in the cache, then everything under that folder (or a relative folder level) is invalidated. Ideally, dispatcher cache invalidation is as specific as possible, so items in the cache live their longest possible life, however creating general stat level rules to achieve this can be tricky.
+
+For example, if a website section `/content/my-site/us/en/products` leverages images from `/content/dam/products`, anytime an image asset in `/content/dam/products` is updated, we want to ensure any uses of it by web pages in `/content/my-site/us/en/products` are also updated. We could set a stat level of 1 that invalidates everything under `/content` when anything under `/content` changes, however this inefficient, since an update to `/content/my-site/us/en/products` would invalidate everything under the rest of the web site too, for example: `/content/my-site/us/en/services` and `/content/my-site/us/en/about-us`, etc.
+
+Instead we can use Dispatcher Flush rules to create a "smart" flush scheme, that listens for replications to `/content/dam/products` and then invalidates ONLY `/content/my-site/us/en/products`, leaving the rest of the web site's content safely cached.
+
 ## How to Use
 
 Dispatcher Flush Rules are intended to be deployed and executed on AEM Publish, which should have  On Trigger Flush Agents set up. Running Dispatcher Flush Rules on AEM Author that flush Dispatchers for AEM Publish can result in race-conditions, where the Dispatcher cache invalidation (and re-caching of content) can occur prior to the new replicated content being persisted on AEM Publish. See the "Flushing from AEM 5.6+ Publish Servers" section below for how to set up On Trigger Flush Agents.

@@ -16,14 +16,24 @@ layout: acs-aem-commons_base
             </nav>
         </header>
 
-        {% if site.data.acs-aem-commons.version == "3.18.0" %}
-            {% include acs-aem-commons/jumbotron-100th-release.html %}
+        {% if site.data.acs-aem-commons.version == "4.0.0" %}
+            {% include acs-aem-commons/jumbotron-major-release.html %}
         {% else %}
             {% include acs-aem-commons/jumbotron.html %}
         {% endif %}
 
     </div>
+
     {% include acs-aem-commons/news.html %}
+
+    <div class="container" style="padding: 0 0 10px 0 ">
+        <div class="banner banner--notice banner--inline" style="max-width: 100%">
+            If you are upgrading ACS AEM Commons, please review the
+            <a href="/acs-aem-commons/pages/releases/4-0-0.html">4.0.0 Release Notes</a>
+            to understand the breaking changes.
+        </div>
+    </div>
+
 
     <div class="page content" role="main">
         {{ content }}        

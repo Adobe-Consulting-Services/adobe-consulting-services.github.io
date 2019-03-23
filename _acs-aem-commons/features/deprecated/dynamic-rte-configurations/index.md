@@ -24,7 +24,9 @@ On SiteA, the text component should include the default plugins. On SiteB, the s
 
 Using dynamic RTE configuration, this can be done without creating extra components. This also allows for the easy sharing of RTE configurations within a site. If `/apps/myco/components/content/text` and `/apps/myco/components/content/other-text` need to share the same RTE configuration, that can be easily done by using a named configuration. This is *even* true if `text` and `other-text` use different property names, something that is very challenging with `cqinclude`.
 
-## How to Use
+## How to Uses
+
+{% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/rte-plugins/dialog-plugin/.content.xml#L12-L18'  %}
 
 * Create a node structure under `/etc/rteconfig`. Each node directly under `/etc/rteconfig` defines a set of configurations, most commonly associated with a site. For the example above, you would have `/etc/rteconfig/sitea` and `/etc/rteconfig/siteb`.
 * On these site nodes, set a `pattern` property with a regex defining when the rules within that node are applied, e.g. `/etc/rteconfig/sitea` would have a `pattern` of `/content/sitea/.*`

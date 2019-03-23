@@ -35,6 +35,17 @@ h4 {
   font-family: Courier, serif;
 }
 
-p a {
+p a, .content a {
   text-decoration: underline;
+}
+
+b, strong {
+  font-weight: 400;
+}
+
+a {
+  cursor: pointer !important;
+  &:hover, &:active {
+    cursor: pointer !important;
+  }
 }

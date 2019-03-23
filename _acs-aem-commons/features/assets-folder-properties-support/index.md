@@ -2,7 +2,7 @@
 layout: acs-aem-commons_feature
 title: Assets Folder Properties Support
 description: Add properties to AEM Asset Folders
-date: 2017-08-08
+date: 2000-01-01
 feature-tags: administration
 initial-release: 3.10.0
 ---
