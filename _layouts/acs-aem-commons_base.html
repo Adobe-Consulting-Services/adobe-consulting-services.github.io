@@ -3,6 +3,17 @@
     {% include shared/head.html project=site.data.acs-aem-commons.name %}
 
     <body class="acs-aem-commons">
+        <script>
+            (function() {
+                var today = new Date(),
+                    month = today.getMonth(),
+                    day = today.getDate();
+
+                if (month === 2 && (day >= 22 && day <= 29)) {
+                    document.querySelector('body').className += ' fv';
+                }
+            }());
+        </script>
         {{ content }}
         
         {% include shared/footer.html %}

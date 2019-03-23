@@ -1,0 +1,27 @@
+
+  .acs-aem-commons.fv {
+    .color-block {
+      background: #000 url('/assets/acs-aem-commons/images/black-bg.jpg') !important;
+      background-size: cover !important;
+    }
+
+    #jumbotron {
+      border-bottom-color: black;
+      .banner {
+        background-color: black;
+        color: #ffffff;
+      }
+    }
+
+    #jumbotron .wrapper .action-btn {
+      border-color: #666;
+
+      &:active {
+        background-color: black;
+      }
+    }
+
+    .feature-filters ul li a.active {
+      background-color: black;
+    }
+  }
