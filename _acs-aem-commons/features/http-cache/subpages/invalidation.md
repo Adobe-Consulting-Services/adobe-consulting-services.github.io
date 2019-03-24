@@ -5,6 +5,7 @@ title: Http Cache - Invalidation
 
 [<< back to HTTP Cache Table of Contents](../index.html)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QRygeYu7wzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Preventing stale content is very important. In the HTTP cache, it is the responsibility of the developer to do this, as the HTTP cache is so flexible and extensible, it is impossible for it to know when to invalidate itself. That is why the developer must instruct the HTTP cache when to flush the content.
 However, there are some OOTB helper classes out there, next to the HttpCacheEngine and HttpCacheStore services which can be referenced to invalidate the cache as well.
