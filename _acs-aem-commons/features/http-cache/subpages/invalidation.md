@@ -5,7 +5,7 @@ title: Http Cache - Invalidation
 
 [<< back to HTTP Cache Table of Contents](../index.html)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QRygeYu7wzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DC1-DGY-uk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Preventing stale content is very important. In the HTTP cache, it is the responsibility of the developer to do this, as the HTTP cache is so flexible and extensible, it is impossible for it to know when to invalidate itself. That is why the developer must instruct the HTTP cache when to flush the content.
 However, there are some OOTB helper classes out there, next to the HttpCacheEngine and HttpCacheStore services which can be referenced to invalidate the cache as well.
@@ -45,3 +45,23 @@ Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig" httpcache.config.invalidation.references="{Boolean}true" />
 {% endhighlight %}
+
+#### Custom invalidation
+
+The HttpCacheEngine service has 2 methods for cache invalidation.
+
+1: isPathPotentialToInvalidate(String path).
+This executes the regex statement from all cache config's `httpcache.config.invalidation.oak.paths` values, and returns if there is at least one match.
+This is good to narrow down a filter and save performance in your service / servlet / workflow.
+
+2: invalidateCache(String keyString) 
+
+What happens:
+
+* CacheKey with the String constructor get's constructed using buildCacheKey(String resourcePath) from the factory.
+* Calls isInvalidatedBy on the entries' CacheKey objects in ALL stores.
+* The AbstractCacheKey provides an implementation for isInvalidatedBy that checks if the resourcePath is equal. 
+* This makes sense because if the underlying resource changes, you generally want to invalidate.
+* If true, it will clear the corresponding entry from the store
+
+Note: Be careful overriding isInvalidatedBy, this can lead to the OOTB `HttpCacheInvalidationJobConsumer` not working.
