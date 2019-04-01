@@ -39,7 +39,7 @@ In short, you need a solution that achieves all of the following objectives:
 ### How does Remote Assets Work?
 
 The mentality of Remote Assets is "sync what you need, when you need it."  To accomplish this goal, Remote Assets
-sync's assets from the remote system in a two-step process to optimize sync time and disk usage on the local server.
+syncs assets from the remote system in a two-step process to optimize sync time and disk usage on the local server.
 
 The first step for sync'ing assets is a "node sync," where the full node trees for assets (and tags) configured by
 an admin or developer are sync'd to the local server.  When the
@@ -49,7 +49,7 @@ fraction of the disk space and sync time needed if instead the entire set of ass
 package.  Having the entire node structure present on the local server allows assets to be searched and accessed
 as if they are fully present on the local server, supporting all OOTB functionalities.
 
-The second step for sync'ing assets is a "binary sync," which occurs on an indivudal asset basis.  This sync is
+The second step for sync'ing assets is a "binary sync," which occurs on an individual asset basis.  This sync is
 triggered whenever a non-admin user references a "remote" asset in any way.  Here are just a few events that can
 trigger a binary sync:
 - Author executes an asset search where a remote asset is in the search results
@@ -58,10 +58,10 @@ trigger a binary sync:
 - End user views a page where a remote asset is referenced
 
 When any of these (or similar) actions take place by a non-admin user, the system detects that the requested asset is
-a "remote" asset that doesn't yet have it's binary files sync'd from the remote server, and in real time while the
-current request is processing, sync's the binary files into the local DAM "just in time."
+a "remote" asset that doesn't yet have its binary files sync'd from the remote server, and in real time while the
+current request is processing, syncs the binary files into the local DAM "just in time."
 
-Once an asset has completed sync of it's binary files to the local server, it is no longer considered a "remote" asset,
+Once an asset has completed sync of its binary files to the local server, it is no longer considered a "remote" asset,
 and from that point forward there is no performance penalty in accessing the asset as it is now a "real" asset the
 same as if it were uploaded directly to the server.  A "real" asset can once again become a "remote" asset during
 a subsequent node sync, but only if it has been updated on the remote server since the last node sync.
@@ -82,12 +82,12 @@ We look forward to future pull requests that help put more "guard rails" around 
 - DAM workflow launchers can be triggered by Remote Assets, resulting in poor performance and possibly even server
 crashes. This is avoided by following Step 1 in the "How to Use" section.
 - There is no limit to how many assets a single request can trigger a binary sync for.  Binary sync is, however,
-disbled for the admin user and for all service users to help avoid unintended sync's of large numbers of assets.
+disabled for the admin user and for all service users to help avoid unintended syncs of large numbers of assets.
 - There is no size limit on assets that can trigger a binary sync.  If you have extremely large assets in a certain
 part of your DAM, you may wish to avoid sync'ing that part of the DAM.
 - Sync of binaries is executed as a synchronous operation to provide the "magical" experience of assets being present
 on first request. In most cases, this results in the best user experience. However, a request involving remote assets
-may take signficant time to complete if the connection between the local and remote server is slow, the requested
+may take significant time to complete if the connection between the local and remote server is slow, the requested
 assets are large, and/or the number of requested assets is very high. A high speed connection between the local and
 remote server will help mitigate this issue, and once remote asset binary files are sync'd for a set of assets there
 is no longer a delay in requesting those assets again.
@@ -131,7 +131,7 @@ Remote Assets requires two OSGi service configurations to be fully enabled.
 
 The first required OSGi service configuration is simply a blank OSGi configuration file for the
 `RemoteAssetDecorator` service, which is responsible for sync'ing a remote asset's binary file the first time it is
-requsted by a non-admin user.
+requested by a non-admin user.
 
 This is done via the Felix console or by deploying a blank OSGi configuration file from your project deployment.
 
@@ -174,7 +174,7 @@ exposing login credentials for the remote AEM server is reduced
 
 `retry.delay`
 - Number of minutes to wait to sync the binaries for a remote asset in the case of a failed attempt
-- It is recommended to use a higher value in cases where the local server does not have regular network access to the
+- It is recommended to use a higher value in cases where the local server does not have regular network access to
 the remote server (e.g. local developer server that requires VPN to access the remote server)
 
 `save.interval`
@@ -223,7 +223,7 @@ Simply click the `syncAssetNodes()` function and `Invoke` it.  Depending on how 
 sync are, this process can take anywhere from a few seconds to a few hours.  Assuming the return value of the function
 is `null` the sync has completed successfully.
 
-Note that executing a manual node sync will not automatically trigger future node sync's,
+Note that executing a manual node sync will not automatically trigger future node syncs,
 so you may wish to periodically execute the sync to keep up to date with new assets and tags.
 
 #### Scheduled node sync
@@ -258,7 +258,7 @@ below.
 
 ## Troubleshooting
 
-As this feature is meant for non-production use, and involves important activities to have full visiblity of, it is
+As this feature is meant for non-production use, and involves important activities to have full visibility of, it is
 recommended that you set the log level of the `com.adobe.acs.commons.remoteassets` package at all times to DEBUG.
 This is a good first step in debugging any issues.
 
@@ -277,10 +277,10 @@ sync from the remote server. Tags must be present on the local server in order f
 sync'd assets.
 
 ### Asset binary files not sync'ing, assets showing as "REMOTE ASSET"
-If you've executed a node sync successfully, but all assets in the DAM are showing up up with the temporary binary
+If you've executed a node sync successfully, but all assets in the DAM are showing up with the temporary binary
 files denoting "REMOTE ASSET," this can be caused by a few different scenarios:
-- You are logged in as the `admin` user.  Because the `admin` user is used for some back end process in AEM, remote
-assets does not sync asset binary files for the `admin` user.  To resolve, log in as a non-admin user.
+- You are logged in as the `admin` user.  Because the `admin` user is used for some back-end process in AEM, Remote
+Assets does not sync asset binary files for the `admin` user.  To resolve, log in as a non-admin user.
 - Your browser has cached temporary binary file versions of these assets from viewing them as the `admin` user.
 This is a very easy "gotcha" and resolved with a simple browser cache clear.
 - The `RemoteAssetDecorator` service is not configured. This service is configured with a simple blank OSGi config file,
