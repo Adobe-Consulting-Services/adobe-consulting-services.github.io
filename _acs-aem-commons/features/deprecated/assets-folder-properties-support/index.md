@@ -4,8 +4,14 @@ title: Assets Folder Properties Support
 description: Add properties to AEM Asset Folders
 date: 2000-01-01
 feature-tags: administration
+tags: deprecated
 initial-release: 3.10.0
 ---
+
+## Why is this deprecated?
+
+Since AEM 6.3 (Feature Pack), Asset Folder metadata schema's can be customized using AEM's [Asset Folder Metadata Schema Editor](https://helpx.adobe.com/experience-manager/6-3/assets/using/folder-metadata-schema.html), removing the need for this tooling.
+
 
 ## Purpose
 
