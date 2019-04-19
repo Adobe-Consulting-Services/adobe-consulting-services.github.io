@@ -27,12 +27,12 @@ need to be configured with a root of `/` or `/content`, leaving the author to co
 on siteA, or into siteB when working on siteB. As the number of sites increase, so does the chance for user error. It
 also makes for a less clean authoring experience.
 
-The `contextualpathbrowser` field instead leverages the `Page Info Provider` configured via OSGi to
+The `contextualpathbrowser` field instead leverages the `ACS AEM Commons - Page Root Provider Configuration` configured via OSGi to
 determine the base page of the current site and dynamically limit the content to that particular site. As such, an
 author opening up a dialog with `contextualpathbrowser` from any page on siteA will see and be able to select pages
 only from siteA, and an author on siteB will see and be able to select pages only from siteB.
 
-To use `contextualpathbrowser`, you must first configure the `Page Info Provider` in OSGi with the appropriate path(s)
+To use `contextualpathbrowser`, you must first configure the `ACS AEM Commons - Page Root Provider Configuration` in OSGi with the appropriate path(s)
 or regex(es) to determine the root page(s) of your site(s).  Then, to leverage `contextualpathbrowser` in a dialog,
 simply replace
 
