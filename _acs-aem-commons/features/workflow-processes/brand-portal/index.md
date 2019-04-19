@@ -37,9 +37,8 @@ In order to publish to Brand Portal, the asset to be un/published must be a desc
     
     `/content/dam/.../[sling:OrderedFolder]/jcr:content/mpConfig=/etc/cloudservices/mediaportal/brand-portal`
     
-AEM does not support the additional of author-able Asset Folder properties OOTB, so the `mpConfig` property must be
+Set the the `mpConfig` property on the Asset Folder (or Asset Folder hierarchy) using one if the following options...
 
-* Set manually by development/operations via node manipulation (ideally part of the application project)
+* Use [Asset Folder Metadata Schemas](https://helpx.adobe.com/experience-manager/6-3/assets/using/folder-metadata-schema.html) to add an author-able `mpConfig` property to Assets Folder properties.
 * Select the top-level folder from the AEM Assets Web UI and click `Publish to Brand Portal` to set this property. Note that doing this will ALSO publish any descendant assets to Brand Portal.
-* Use [ACS AEM Commons Asset Folder Properties](/acs-aem-commons/features/assets-folder-properties-support/index.html) feature to add an author-able `mpConfig` property to Assets Folder properties.  
-         
+* Set manually by development/operations via node manipulation (ideally part of the application project)
