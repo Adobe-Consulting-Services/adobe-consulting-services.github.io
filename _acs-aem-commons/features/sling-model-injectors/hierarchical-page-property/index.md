@@ -35,7 +35,7 @@ Note: Out of performance reasons, only works with `@HierarchicalPageProperty` as
     public class TestModel {
 
         @HierarchicalPageProperty("cq:designPath")
-        private String design designPath;
+        private String designPath;
 
         public String getDesignPath() {
             //outputs design property set on our language root page with path: /content/acs-commons/en
