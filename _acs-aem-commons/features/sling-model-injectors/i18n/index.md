@@ -21,11 +21,11 @@ Note: Out of performance reasons, only the I18n can be injected using the generi
     @Model(adaptables = { SlingHttpServletRequest.class, Resource.class })
     public class TestModel {
 
-        @I18N
+        @Inject
         private I18n i18n;
 
         @I18N("com.adobe.i18n.backButtonText")
-        private String backButtonText
+        private String backButtonText;
         
         @PostConstruct
         public void init(){
