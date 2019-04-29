@@ -17,6 +17,8 @@ AEM authors quickly want to grab the asset's publish URL for sharing or for use 
 
 {% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/authoring/dam-copy-publishurl/.content.xml#L11-L17' %}
 
+In order to enable the feature, please configure [com.adobe.acs.commons.dam.impl.CopyAssetPublishUrlFeature](http://localhost:4502/system/console/configMgr/com.adobe.acs.commons.dam.impl.CopyAssetPublishUrlFeature)
+
 Note that your [AEM Externalizer](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/externalizer.html) OSGi service must be set up for the Publish URL to use the correct domain.
 
 ## How to Use
