@@ -27,6 +27,7 @@ Include additional parameters added to E-mail params
 * **wfModelTitle**: Name of workflow model
 * **authorLink**: Uses AuthorUIHelper service to create a link to the payload on author
 * **publishLink**: Uses AEM Externalizer service to create a link to the payload on Publish
+* **wfInitiator**: Name of the workflow initiator
 
 WF Process is configured using the OOTB Process Step with the following workflow arguments:
 
