@@ -4,7 +4,7 @@ title: ETag Support
 description: Create and evaluate ETag headers based on response's message digest
 date: 2014-04-04
 feature-tags: backend-dev
-initial-release: 4.0.2
+initial-release: 4.1.0
 ---
 
 ## Purpose
