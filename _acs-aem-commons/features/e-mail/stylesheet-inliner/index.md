@@ -10,13 +10,13 @@ initial-release: 2.9.0
 
 ## Purpose
 
-Causes <link> elements referencing stylesheets to be inlined into output as <style> elements.  This is helpful when a page is to be used as an email, where external stylesheet references aren't often supported by email clients.  
+Causes `&lt;link&gt;` elements referencing stylesheets to be inlined into output as `&lt;style&gt;` elements. This is helpful when a page is to be used as an email, where external stylesheet references aren't often supported by email clients.
 
-Works for clientlibs and static resources. Links found in <head> will be added at the beginning of <body>, whereas those found in <body> will be added where they're found.
+Works for ClientLibs and static resources. Links found in `&lt;head&gt;` will be added at the beginning of `&lt;body&gt;`, whereas those found in `&lt;body&gt;` will be added where they're found.
 
 ## How to Use
 
-Add a Sling rewriter configuration node (example below) that includes the `inline-css` transformer type to you project. Requests with the "inline-css" selector will have their styles inlined.
+Add a Sling rewriter configuration node (example below) that includes the `inline-css` transformer type to you project. Requests with the `inline-css` selector will have their styles inlined.
 
 
 ### Note
@@ -30,7 +30,7 @@ This re-writer does **NOT** support
 
 ## Rewriter Configuration Node
 
-The easiest way to configure the rewriter pipline is just to copy `/libs/cq/config/rewriter/default` to a path inside your application, e.g. `/apps/myapp/config/rewriter/inline-css`. Note that the configuration node *must* be inside a four-level path that ends in `config/rewriter`.
+The easiest way to configure the rewriter pipeline is just to copy `/libs/cq/config/rewriter/default` to a path inside your application, e.g. `/apps/myapp/config/rewriter/inline-css`. Note that the configuration node *must* be inside a four-level path that ends in `config/rewriter`.
 
 To validate that your configuration was successful, look at the Sling Rewriter tab in the OSGi Web Console.
 
