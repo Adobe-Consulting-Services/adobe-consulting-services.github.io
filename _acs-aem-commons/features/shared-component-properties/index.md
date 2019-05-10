@@ -50,7 +50,7 @@ To enable Shared Component Properties, you must do the following:
 
 1. Enable the Shared Component Properties OSGi service.
 2. Add client libraries to include the new authoring options.
-3. Specify a "page root path" pattern via OSGi config for `com.adobe.acs.commons.wcm.impl.PageRootProviderImpl`
+3. Specify a "page root path" pattern via OSGi config for `com.adobe.acs.commons.wcm.impl.PageRootProviderConfig`
 4. Add `SharedComponentPropertiesPageInfoProvider` as an info provider for your page component
 
 The first two steps can be accomplished by installing the 
@@ -101,7 +101,7 @@ to specify a path (regexp patterns supported) to your site's root page.
 
 Example OSGI deployment pointed at the Geometrixx home page (/content/geometrixx/en):
 
-`/apps/mysite/config/com.adobe.acs.commons.wcm.impl.PageRootProviderImpl.xml`
+`/apps/mysite/config/com.adobe.acs.commons.wcm.impl.PageRootProviderConfig-example.xml`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -216,7 +216,7 @@ open the shared or global properties for the example component, check the `enabl
 root page for the page being viewed.  To resolve this issue, verify the
 [Page Root Path](#activation-page-root)
 configuration. Start by checking that your OSGi configuration has been successfully deployed by going to
-`http://localhost:4502/system/console/configMgr/com.adobe.acs.commons.wcm.impl.PageRootProviderImpl`. The
+`http://localhost:4502/system/console/configMgr/com.adobe.acs.commons.wcm.impl.PageRootProviderConfig-example` (`-example` suffix may vary). The
 `page root path` should reflect the path that you have configured. If it does, then the next thing to check is that the
 page you are authoring on matches the pattern of the page root path. For example, a page root path of 
 `/content/mysite/[a-z]{2}` will not work if you are authoring on `/content/othersite/en/mypage` since the system is
@@ -233,6 +233,6 @@ section above for details, or try installing the provided
 
 If all else fails, try upping the log level of the following classes to DEBUG:
 
-- `com.adobe.acs.commons.wcm.impl.PageRootProviderImpl`
+- `com.adobe.acs.commons.wcm.impl.PageRootProviderConfig`
 - `com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesBindingsValuesProvider`
 - `com.adobe.acs.commons.wcm.properties.shared.impl.SharedComponentPropertiesPageInfoProvider`
