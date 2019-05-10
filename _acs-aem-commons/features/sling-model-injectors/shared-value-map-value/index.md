@@ -16,24 +16,13 @@ Provides convenience for for accessing Shared Properties as implemented by ACS C
     @Model(adaptables = {SlingHttpServletRequest.class, Resource.class})
     public final class SharedComponentPropsExampleModel {
 
-        @SharedValueMapValue(name = "titleText", type = SharedComponentProperties.ValueTypes.SHARED)
-        private String shared;
+        @SharedValueMapValue(type = SharedComponentProperties.ValueTypes.SHARED)
+        private String sharedProp;
 
-        @SharedValueMapValue(name = "titleText", type = SharedComponentProperties.ValueTypes.GLOBAL)
-        private String global;
+        @SharedValueMapValue(type = SharedComponentProperties.ValueTypes.GLOBAL)
+        private String globalProp;
 
-        @SharedValueMapValue(name = "titleText", type = SharedComponentProperties.ValueTypes.MERGED)
-        private String merged;
-
-        public String getGlobal() {
-            return global;
-        }
-
-        public String getShared() {
-            return shared;
-        }
-
-        public String getMerged() {
-            return merged;
-        }
+        // type will be MERGED by default
+        @SharedValueMapValue
+        private String mergedProp;
     }
