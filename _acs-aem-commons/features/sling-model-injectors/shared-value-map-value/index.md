@@ -11,6 +11,10 @@ initial-release: 3.17.0
 
 Provides convenience for for accessing Shared Properties as implemented by ACS Commons [Shared Component Properties](/acs-aem-commons/features/shared-component-properties/index.html).
 
+## How to Use
+
+The feature is very similar in usage to the standard `ValueMapValue` annotation.
+
 ## Example
 
     @Model(adaptables = {SlingHttpServletRequest.class, Resource.class})
