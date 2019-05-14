@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 4.1.0 now available!
+description: Remote Assets! ETag Servlet Filter! Cache Enhancements! Important bug fixes!
+date: 2019-05-13
+project: acs-aem-commons
+---
