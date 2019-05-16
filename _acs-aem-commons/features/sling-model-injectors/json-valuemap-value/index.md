@@ -32,16 +32,16 @@ Injections are available when adapting either a `Resource` or `SlingHttpServletR
 
 
     String singleValue = resource.getValueMap().get("singleValue", String.class);
-    //equals: {"property1": "somevalue", "property2": "othervalue"}
+    // equals: {"property1": "somevalue", "property2": "othervalue"}
     
     String multiValue = resource.getValueMap().get("multipleValues", String[].class);
-    //equals: {"property1": "somevalue", "property2": "othervalue"}, 
-    //        {"property1": "anotherValue", "property2": "nothinginteresting"}
+    // equals: {"property1": "somevalue", "property2": "othervalue"},
+    //         {"property1": "anotherValue", "property2": "nothinginteresting"}
     
 
 
     //our POJO that represents the JSON 
-    public class SimpleJsonPojo{
+    public class SimpleJsonPojo {
         private String property1;
         private Integer property2;
     }
@@ -53,13 +53,13 @@ Injections are available when adapting either a `Resource` or `SlingHttpServletR
         @JsonValueMapValue
         private SimpleJsonPojo singleValue;
         
-        @JsonValueMap("multipleValues")
+        @JsonValueMapValue(name = "multipleValues")
         private List<SimpleJsonPojo> multipleList;
         
-        @JsonValueMap("multipleValues")
+        @JsonValueMapValue(name = "multipleValues")
         private Set<SimpleJsonPojo> multipleSet;
                
-        @JsonValueMap("multipleValues")
+        @JsonValueMapValue(name = "multipleValues")
         private SimpleJsonPojo[] multipleArray;
         
         public SimpleJsonPojo getSingleValue(){
