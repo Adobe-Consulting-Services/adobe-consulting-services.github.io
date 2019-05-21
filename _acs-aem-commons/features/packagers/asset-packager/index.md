@@ -12,14 +12,13 @@ initial-release: 4.2.0
 
 The Asset Packager lets you create a content package that is given a specific page path and will
 iterate over the content of that package to add all referenced assets into the package as well,
-giving you exactly what you need for a single page with all images.
+giving you exactly what you need for a set of pages with all images.
 
 Helps a developer looking to:
 * Replicate an issue specific to content on a remote server
-* Not bloat your local instance unnecessarily
-* Still get enough content to replicate the issue (and not have broken images)
-
-or just a developer looking to get set up with some local content and want some but _not all_ of the
+  * Not bloat your local instance unnecessarily
+  * Still get enough content to replicate the issue (and not have broken images)
+* Get set up with some local content and want some but _not all_ of the
 DAM.
 
 Helps a business user:
