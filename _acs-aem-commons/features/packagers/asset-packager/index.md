@@ -58,7 +58,7 @@ Outside of the standard content packager features shared between the packagers, 
 ### Advanced Configuration
 
 ![image](images/edit_dialog_advanced_annotated.png)
-**1.** A prefix for that assets have to have in order to be added to the content package. If you
+**1.** A prefix that assets are required to have in order to be added to the content package. If you
 provide `/content/dam/<project>` then only project specific assets will be added. By default any
 asset in /content/dam will be added.
 
