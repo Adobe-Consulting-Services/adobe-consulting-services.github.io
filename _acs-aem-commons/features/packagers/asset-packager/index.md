@@ -22,6 +22,10 @@ Helps a developer looking to:
 or just a developer looking to get set up with some local content and want some but _not all_ of the
 DAM.
 
+Helps a business user:
+* Migrate content easily between environments
+  * Content release from UAT to Production
+  * Content sync from Production to a lower environment
 
 # How to Use
 
