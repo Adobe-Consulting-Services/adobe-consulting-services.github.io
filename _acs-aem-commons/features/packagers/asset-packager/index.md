@@ -63,8 +63,8 @@ provide `/content/dam/<project>` then only project specific assets will be added
 asset in /content/dam will be added.
 
 **2.** Page patterns to exclude. This accepts full paths to a page - this will exclude the page and
- any pages beneath it - as well as regex patterns. If a page is excluded (and pages should be added
- to the package) it will show up as an exclude in the filter definition for the page.
+ any pages beneath it - as well as regex patterns. If a page is excluded it will show up as an
+ exclude in the filter definition for the page.
 ![image](images/page_exclude.png)
 
 **3.** Asset patterns to exclude. This accepts full paths to assets or folders as well as regex
