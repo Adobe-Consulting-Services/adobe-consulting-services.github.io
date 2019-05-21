@@ -30,8 +30,6 @@ Helps a business user:
 
 * Log in to AEM Author
 * Navigate to the Classic UI Tools Console (from the Touch UI, this is Tools:Operations:Configuration)
-* Under the `acs-commmons` folder, create a folder named `packagers` (NOTE: As of 1.6.0, this folder
-is created automatically)
 * Under the `packagers` folder, create a new Page of Template type "Asset Packager"
 ![image](images/create_dialog.png)
 * Open the newly created page and use the Edit dialog to configure the package rules and configuration
