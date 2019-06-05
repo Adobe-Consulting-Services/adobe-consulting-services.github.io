@@ -29,7 +29,7 @@ To create a configuration, define a `sling:OsgiConfig`
     httpcache.config.expiry.on.create="{Long}50000"
     cacheConfigExtension.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
     cacheKeyFactory.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
-    httpcache.config.cache.handling.rules.pid="[pid-of-rule1, pid-of-rule2]"
+    httpcache.config.cache-handling-rules.pid="[pid-of-rule1, pid-of-rule2]"
  />
  {% endhighlight %}     
 
