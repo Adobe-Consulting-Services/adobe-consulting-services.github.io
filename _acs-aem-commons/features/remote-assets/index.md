@@ -13,7 +13,7 @@ initial-release: 4.1.0
 **(RECOMMENDED FOR NON-PRODUCTION USE ONLY)**
 
 Remote Assets allows you to configure an AEM server to automatically sync in the assets from another, remote AEM server,
-on an-needed basis.  Remote Assets does not require anything to be installed on the remote AEM server.
+on an as-needed basis.  Remote Assets does not require anything to be installed on the remote AEM server.
 
 For a quick overview of this feature, read this
 [Blog Post on Remote Assets](https://blogs.adobe.com/contentmanagement/2018/04/19/brett-birschbach-aemrockstar-2018/)
