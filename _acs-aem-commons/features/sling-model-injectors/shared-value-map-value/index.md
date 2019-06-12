@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Shared Component Properties Injector
-description: Injects a Share Component property
+description: Injects a Shared Component property
 date: 2018-05-05
 feature-tags: backend-dev
 initial-release: 3.17.0
