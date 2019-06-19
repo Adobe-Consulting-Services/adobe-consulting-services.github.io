@@ -1,5 +1,6 @@
 com.adobe.acs.commons.adobeio.service
 com.adobe.acs.commons.analysis.jcrchecksum
+com.adobe.acs.commons.assets
 com.adobe.acs.commons.audit_log_search
 com.adobe.acs.commons.components.longformtext
 com.adobe.acs.commons.dam
@@ -39,15 +40,16 @@ com.adobe.acs.commons.mcp.util
 com.adobe.acs.commons.models.injectors.annotation
 com.adobe.acs.commons.notifications
 com.adobe.acs.commons.oak
-com.adobe.acs.commons.oakpal.checks
 com.adobe.acs.commons.ondeploy
 com.adobe.acs.commons.ondeploy.scripts
 com.adobe.acs.commons.packaging
+com.adobe.acs.commons.packaging.util
 com.adobe.acs.commons.quickly
 com.adobe.acs.commons.quickly.operations
 com.adobe.acs.commons.quickly.results
 com.adobe.acs.commons.redirectmaps
 com.adobe.acs.commons.redirectmaps.models
+com.adobe.acs.commons.remoteassets
 com.adobe.acs.commons.replication
 com.adobe.acs.commons.replication.dispatcher
 com.adobe.acs.commons.replication.packages.automatic
