@@ -1,6 +1,6 @@
 ---
 layout: acs-aem-commons_subpage
-title: Http Cache - Handling rules
+title: Http Cache - Header / Cookie exclusions
 ---
 
 [<< back to HTTP Cache Table of Contents](../index.html)
