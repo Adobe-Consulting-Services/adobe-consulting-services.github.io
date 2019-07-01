@@ -66,4 +66,4 @@ This section covers usage and is written for end-users, system administrators, a
 ### Instrumentation
 
 * [JMX consoles](subpages/jmx.html): Available JMX instrumentation consoles
-
+* [Activating Caffeine Store](subpages/activating-caffeine-cache.html): Activating the Caffeine in-memory cache store
