@@ -27,6 +27,8 @@ To create a configuration, define a `sling:OsgiConfig`
     httpcache.config.request.authentication="authenticated"
     httpcache.config.invalidation.oak.paths="[/content/my-site/(.*)]"
     httpcache.config.expiry.on.create="{Long}50000"
+    httpcache.config.excluded.response.headers="[someRegex-(.*),someOtherRegex]"
+    httpcache.config.excluded.cookie.keys="[myLoginCookieKey,myOtherLoginCookieKey]" 
     cacheConfigExtension.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
     cacheKeyFactory.target="(&(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.GroupHttpCacheConfigExtension)(config.name=unique-confg-name-of-extension))"
     httpcache.config.cache-handling-rules.pid="[pid-of-rule1, pid-of-rule2]"
@@ -51,5 +53,9 @@ Since 4.0.0 and not supported by default MEM cache store (use JCR or Caffeine)
 * `httpcache.config.expiry.on.read` Refresh expiry time on read, specific to cache entries that belong to this configuration.
     * If above are not specified, per store TTL will be used. If specified, overrides store TTL (for entries that belong to configuration)
     * These options have `-1L` (disabled) as default.
+
+Since 4.3.0
+  * `httpcache.config.excluded.response.headers ` List of header keys (as regex) that should NOT be put in the cached response, to be served to the output.
+  * `httpcache.config.excluded.cookie.keys` List of cookie keys that will NOT be put in the cached response, to be served to the output.
     
 With this in place, the HTTP cache is enabled. Notice that if the factory reference doesn't resolve ( `cacheKeyFactory.target`) the config will not be active, and the filter won't either. Check the OSGI components tab in the Felix console.
