@@ -61,7 +61,7 @@ This section covers usage and is written for end-users, system administrators, a
 * [Custom key factory](subpages/creating-key-factory.html): Create your own key factory for specific business logic
 * [Custom cache store](subpages/creating-cache-store.html): Create your own cache store
 * [Handling rules](subpages/handling-rules.html): Toggle handling rules (such as don't cache response code 500) and / or create your own rules
-* [Response Cookie / Response Header exclusion](subpages/cookie-header-exclusions.html) : Specify headers / cookies that should not be included in the cache (Since 4.3.0)
+* [Response Cookie / Response Header exclusion](subpages/cookie-header-exclusions.html) : Specify headers / cookies that should not be included in the cache (Since 4.2.2)
 
 ### Instrumentation
 
