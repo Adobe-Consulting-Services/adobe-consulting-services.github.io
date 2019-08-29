@@ -12,13 +12,25 @@ If you're using the Content Package Maven plugin, take these two easy steps:
 
 In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
 
-### For 6.2 and 6.3
+### For 6.3, 6.4, and 6.5
 
 {% highlight xml %}
 <dependency>
     <groupId>com.adobe.acs</groupId>
     <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
+    <type>content-package</type>
+    <classifier>min</classifier> <!-- optional, see below -->
+</dependency>
+{% endhighlight %}
+
+### For 6.2
+
+{% highlight xml %}
+<dependency>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>acs-aem-commons-content</artifactId>
+    <version>{{ site.data.acs-aem-commons.version62 }}</version>
     <type>content-package</type>
     <classifier>min</classifier> <!-- optional, see below -->
 </dependency>
