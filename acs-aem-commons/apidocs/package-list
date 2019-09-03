@@ -40,6 +40,7 @@ com.adobe.acs.commons.mcp.util
 com.adobe.acs.commons.models.injectors.annotation
 com.adobe.acs.commons.notifications
 com.adobe.acs.commons.oak
+com.adobe.acs.commons.oakpal.checks
 com.adobe.acs.commons.ondeploy
 com.adobe.acs.commons.ondeploy.scripts
 com.adobe.acs.commons.packaging
