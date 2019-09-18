@@ -90,6 +90,27 @@ Then, (while still in the _content project's pom.xml_) within the configuration 
 </plugin>    
 {% endhighlight %}
 
+If using the `filevault-package-maven-plugin`, within it's configuration add a `subPackage` just like above and also add `allowIndexDefinitions` like below: 
+
+{% highlight xml %}
+<plugin>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>filevault-package-maven-plugin</artifactId>
+    <extensions>true</extensions>
+    <configuration>
+        <allowIndexDefinitions>true</allowIndexDefinitions>
+        ...
+        <subPackages>
+            <subPackage>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-content</artifactId>
+                <filter>true</filter>
+            </subPackage>
+        </subPackages>
+        ...
+    </configuration>
+</plugin>    
+{% endhighlight %}
 
 ## Step 3: Add ACS AEM Commons Bundle as a Dependency (Optional)
 
