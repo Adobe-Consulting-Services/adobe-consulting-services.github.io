@@ -39,3 +39,5 @@ The property `acsComponentsLimit` is also inherited from parent container's cont
 ## Limitations
 
 - The Classic UI implementation only supports leveraging design properties but not content policies
+- Due to known issues with transitivity of `embed` property within `cq:ClientLibraryFolder` using `dependencies` [property
+instead](#how-to-use) will be safer.
