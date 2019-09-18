@@ -30,22 +30,27 @@ The above diagram details the URL Asset Import process:
 
 ![Start process form](images/url-asset-import.png)
 
-- *Import data file*: Specify the excel data file, making sure it is not currently in use elsewhere (close Excel first)
-- *Default prefix*: Added to the source path if the image is not a full URL.  This is useful for loading assets are are all stored in the same place, simplifying the data in the spreadsheet.
-- *Connection timeout*: For HTTP/HTTPS urls, this is the connection timeout in milliseconds (default is 30 seconds)
+- *Retry pause*: Used as retry pause between createFolder, createAsset actions and etc...
+- *Retries*: Actions to attempt.
 - *Dry run*: If checked, no assets will be imported but a report will be produced.  This is useful for testing out the data file for integrity.
 - *Detailed Report*: If checked, a list of all imported assets will be produced.  If unchecked, only a summary will be provided.
 - *Inhibit Workflow*: If checked, the process will attempt to bypass DAM Update Asset workflow.  This requires the workflow launcher have the following in the _exclude list_ setting: `event-user-data:changedByWorkflowProcess`.  If using this option. also consider using bulk workflow afterwards to process assets after the import has finished completely.
+- *Preserve Filename*: If checked, file name is preserved as asset name.  If unchecked, asset name will support only the following characters: letters, digits, hyphens, underscores, another chars will be replaced with hyphens.
 - *Target JCR Folder*: This is the folder used if target folder is unspecified.
-- *Ignore Folders*: List of folders to be ignored.  Can be helpful if trying to avoid some data in the spreadsheet.
-- *Ignore Files*: List of files to be ignored.  Can be helpful if trying to avoid some data in the spreadsheet.
-- *Ignore Extensions*: List of file extensions to be ignored.  Can be helpful if trying to avoid some data in the spreadsheet.
+- *Default prefix*: Added to the source path if the image is not a full URL.  This is useful for loading assets are are all stored in the same place, simplifying the data in the spreadsheet.
+- *Folders filter*: Comma-delimited list of folders to filter, useful for bypassing thumnail folders and such. If you want to exclude folder name add '-' sign before name. If you want to include name, just write folder name or add '+' sign before name.
+- *Files filter*: Comma-delimited list of files to filter, also useful for bypassing additional metadata files which might not be useful in a DAM setting. If you want to exclude file name add '-' sign before name. If you want to include name, just write file name or add '+' sign before name.
+- *Extensions filter*: Comma-delimited list of file extensions to filter. If you want to exclude extension add '-' sign before name. If you want to include extension, just write extension or add '+' sign before name.
 - *Existing Action*: Control what happens when assets already exist.  This doesn't apply to importing renditions (which are always imported if included in the spreadsheet.)
     - Replace: The existing asset (original) is replaced
     - Skip: Don't replace the asset
     - Version: Create a new version of the existing asset and replace the original rendition with the new version.
 - *Minimum Size*: Any file smaller than this size (in bytes) will be skipped.  The default is 1kb.  -1 disables this check.
 - *Maximum Size*: Any file larger than this size (in bytes) will be skipped.  The default size is 1gb.  -1 disables this check.
+- *Import data file*: Specify the excel data file, making sure it is not currently in use elsewhere (close Excel first)
+- *Connection timeout*: For HTTP/HTTPS urls, this is the connection timeout in milliseconds (default is 30 seconds)
+- *Username*: Username for connections that require login
+- *Password*: Password for connections that require login
 
 ## Spreadsheet Format
 
