@@ -18,19 +18,23 @@ The state of the checkbox/select would only effect the current row of multi-fiel
 ## How to use
 
 ### Select field (aka Drop-down field)
-1. Add the empty property `cq-dialog-multifield-dropdown-showhide` to the select element
-2. Add the data attribute `cq-dialog-showhide-target` to the select element whose value is a selector, usually a specific class name, to find all possible target elements that can be shown/hidden.
+1. Add the empty property `acs-cq-dialog-dropdown-checkbox-showhide` to the dropdown/select or checkbox element
+2. Add the data attribute acs-cq-dialog-dropdown-checkbox-showhide-target to the dropdown/select or checkbox element, 
+   whose value is a selector, usually a specific class name, to find all possible target elements that can be shown/hidden.
 4. Add the target class to each target component that can be shown/hidden
 5. Add the class hidden to each target component to make them initially hidden
-6. Add the attribute `showhidetargetvalue` to each target component, the value should equal the value of the select
-7. Option that will un-hide this element
-
+6. Add the attribute `acs-dropdownshowhidetargetvalue` to each target component, the value should equal the value of the select option that will unhide this element. Multiple values can be provided separated with spaces.
 
 ### Checkbox field
-1. Add the empty property `cq-dialog-multifield-checkbox-showhide` to the checkbox element
-2. Add the data attribute `cq-dialog-showhide-target` to the checkbox element, whose value is a selector, usually a specific class name, to find all possible target elements that can be shown/hidden.
-3. Add the target class to each target component that can be shown/hidden
-4. Add the class hidden to each target component to make them initially hidden
-5. Add the attribute `showhidetargetvalue` to each target component, the value should equal to:
-    * `true` if the field is to be displayed when Checkbox is selected
-    * `false` if the field is to be displayed when Checkbox is unselected
+1. Add the empty property `acs-cq-dialog-dropdown-checkbox-showhide` to the dropdown/select or checkbox element
+2. Add the data attribute acs-cq-dialog-dropdown-checkbox-showhide-target to the dropdown/select or checkbox element, 
+   whose value is a selector, usually a specific class name, to find all possible target elements that can be shown/hidden.
+4. Add the target class to each target component that can be shown/hidden
+5. Add the class hidden to each target component to make them initially hidden
+6. Add the attribute `acs-checkboxshowhidetargetvalue` to each target component, the value should equal to:
+ - 'true' if the field is to be displayed when Checkbox is selected.
+ - '' if the field is to be displayed when Checkbox is unselected (value of false is made empty in JavaScript).
+
+7. Add both acs-dropdownshowhidetargetvalue and acs-checkboxshowhidetargetvalue attribute to each target component, which should beunhidden based on combination of dropdown and checkbox value.
+8. The acs-dropdownshowhidetargetvalue and/or acs-checkboxshowhidetargetvalue attribute can be added to dialog tab items to show and hide them.
+9. (optional) add css class acs-commons-field-required-allow-hidden to provided required field validation, which turns off when the field is hidden
