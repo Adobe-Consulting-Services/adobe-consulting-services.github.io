@@ -26,7 +26,7 @@ Adds a visual icon selection to AEM Component Dialogs.
 
 The following wrapper Client Library node definition must be used to enable this feature.
 
-* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/content/src/main/content/jcr_root/apps/acs-commons/touchui-widgets/icon-picker/.content.xml#L10)
+* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/ui.apps/src/main/content/jcr_root/apps/acs-commons/touchui-widgets/icon-picker/.content.xml)
 
 ### Setup
 
