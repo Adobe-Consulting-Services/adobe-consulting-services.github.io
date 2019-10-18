@@ -34,6 +34,7 @@ com.adobe.acs.commons.images
 com.adobe.acs.commons.json
 com.adobe.acs.commons.mcp
 com.adobe.acs.commons.mcp.form
+com.adobe.acs.commons.mcp.form.workflow
 com.adobe.acs.commons.mcp.mbean
 com.adobe.acs.commons.mcp.model
 com.adobe.acs.commons.mcp.util
