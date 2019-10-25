@@ -19,7 +19,7 @@ Provide a visual map in the Assets metadata editor view, powered by OpenStreeMap
 
 ![Geolocation Map](images/image.png)
 
-## How to Use - Location Properties
+## How to Use - Location Properties (Note that is  NOT for the Map, the How to use the Map is below)
 
 {% include acs-aem-commons/wrapper-client-library.html path='/apps/acs-commons/authoring/dam-location/.content.xml#L9' %}
 
@@ -39,8 +39,10 @@ To do this, it is first necessary to activate an OSGi component which handles th
 
 Then create a new textfield component in the Metadata Schema Editor and specify a "Map to property" of `./jcr:content/metadata/location` and ensure the field is disabled. This field will be automatically replaced with the map component when the asset editor is loaded.
 
-
 ![Asset Editor Configuration](images/schema-editor.png)
+
+* [Download the AEM Content Package](./acs-aem-commons.assets-geolocation-map-DEMO-SNAPSHOT.zip) that installs the required Wrapper Client Libraries and activates the CustomComponentActivatorListServlet.
+
 
 <!--
 ### Legacy (pre-3.2.0 approach)
