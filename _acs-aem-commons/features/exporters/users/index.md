@@ -1,6 +1,6 @@
 ---
 layout: acs-aem-commons_feature
-title: Exporters
+title: User Exporter
 description: Users to CSV Export!
 date: 2016-11-02
 redirect_from: /acs-aem-commons/features/exports.html
