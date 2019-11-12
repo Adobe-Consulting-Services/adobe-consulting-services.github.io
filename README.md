@@ -114,7 +114,11 @@ Note this sub-feature list is only available for ACS AEM Commons (and not ACS AE
 
 ## Building
 
-This site is built using Jekyll.  To build this site locally you must have already installed Ruby, Bundler, and Jekyll.  With these installed you can do the following:
+This site is built using Jekyll.  To build this site locally you must have already installed Ruby, Bundler, and Jekyll. If You build first time do initially:
+```
+bundle install
+```
+With these installed you can do the following:
 ```
 bundle exec jekyll build
 ```
