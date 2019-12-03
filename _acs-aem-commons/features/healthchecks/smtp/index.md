@@ -19,7 +19,7 @@ This health check attempts to connect to the SMTP server defined in the [Day CQ 
 
 ### How to use
 
-Enable the STMP Health check by creating an OSGi Configuration under `/apps/myapp/config`
+Enable the STMP Health check by creating an OSGi Configuration under `/apps/myapp/config/com.adobe.acs.commons.hc.impl.SMTPMailServiceHealthCheck`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
