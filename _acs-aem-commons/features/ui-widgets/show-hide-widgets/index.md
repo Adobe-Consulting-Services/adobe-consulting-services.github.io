@@ -15,6 +15,12 @@ This is an enhancement to the ACS Commons multi-field component.
 This enhancements enables show/hide of multiple dialog fields based on the toggling of checkbox or select fields. 
 The state of the checkbox/select would only effect the current row of multi-field.
 
+### Wrapper Client Library (required as of 4.0.0)
+
+The following wrapper Client Library node definition must be used to enable this feature.
+
+* [Wrapper Client Library node definition](https://github.com/Adobe-Consulting-Services/acs-aem-commons/tree/master/ui.apps/src/main/content/jcr_root/apps/acs-commons/touchui-widgets/showhidedialogfields/.content.xml)
+
 ## How to use
 
 ### Select field (aka Drop-down field)
