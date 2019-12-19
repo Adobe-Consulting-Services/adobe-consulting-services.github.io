@@ -9,7 +9,7 @@ redirect_from: /acs-aem-commons/features/coral-angular.html
 
 ## Why is this deprecated?
 
-AngularJS is effectively dead, and it is better to use a modern JavaScript framework. CoralUI 2 is also no replaced by CoralUI 3.
+AngularJS is effectively dead, and it is better to use a modern JavaScript framework. CoralUI 2 is also now replaced by CoralUI 3.
 
 ## Purpose
 
