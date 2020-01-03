@@ -2,8 +2,8 @@
 layout: acs-aem-samples_home
 title: ACS AEM Samples
 description: Sample implementations of the common building blocks for AEM applications.
-bundleURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples
-contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/content/src/main/content/jcr_root/apps/acs-samples
+bundleURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/core/src/main/java/com/adobe/acs/samples
+contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/ui.apps/src/main/content/jcr_root/apps/acs-aem-samples
 
 ---
 <!-- How to use -->
@@ -80,21 +80,14 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 				</div>
 
 				<div class="samples-section">
-					<h3><a href="{{ page.bundleURL }}/migration/impl" target="_blank">Content Migration</a></h3>
-					<p>Sample code for building out common custom tooling required for Content Migration activities.</p>
-					<ul>
-
-						<li><a href="{{ page.bundleURL }}/migration/impl/SampleContentReplicationHarnessImpl.java" target="_blank">Replication Harness w/ MBean</a></li>
-					</ul>
-				</div>
-
-				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/events/impl" target="_blank">Events</a></h3>
 					<p>Asynchronous system notifications.</p>
 					<ul>
+						<!--
 						<li><a href="{{ page.bundleURL }}/events/impl/SampleSlingEventHandler.java" target="_blank">Sling Event Handler</a></li>
 						<li><a href="{{ page.bundleURL }}/jobs/impl/SampleEventHandlerWithImmediateJobExecution.java" target="_blank">Sling Event Handler (with Immediate Job Execution)</a></li>
 						<li><a href="{{ page.bundleURL }}/events/impl/SampleJcrEventListener.java" target="_blank">JCR Event Listener</a></li>
+						-->						
 						<li><a href="https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/9387008a7f692e2fc330b67582694053eddb027d/bundle/src/main/java/com/adobe/acs/samples/events/cq5/impl/SampleSlingEventHandler.java" target="_blank">(Deprecated) CQ5 Sling Event Handler</a></li>
 					</ul>
 				</div>
@@ -112,14 +105,16 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 
 				<div class="samples-section">
 					<h3><a href="https://github.com/niekraaijmakers/layout-wcm-pages" target="_blank">Header / Footer - Layout WCM solution</a></h3>
-					<p>A ready to use setup to handle complex headers and footers by leveraging everything AEM has to offer</p>
-					<p>Personalized header based on cookies (or anything else)</p>
-					<p>Highly flexible, maintainable, for both authors and developers</p>
-					<p>(Re)publish your header / footer, not all pages that use it</p>
-					<p>Can be used with <a href="https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/msm.html">Multi Site Manager</a>, <a href="https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/translation.html">Translations</a>, <a href="https://helpx.adobe.com/experience-manager/6-3/sites/authoring/using/templates.html">Template Designer</a></p>
+					<p>A ready to use setup to handle complex headers and footers by leveraging everything AEM has to offer:</p>
+					<ul>
+						<li>Personalized header based on cookies (or anything else)</li>
+						<li>Highly flexible, maintainable, for both authors and developers</li>
+						<li>(Re)publish your header / footer, not all pages that use it</li>
+						<li>Usable with <a href="https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/msm.html">Multi Site Manager</a>, <a href="https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/translation.html">Translations</a>, <a href="https://helpx.adobe.com/experience-manager/6-3/sites/authoring/using/templates.html">Template Designer</a>/li>
+					</ul>
 					<ul>
 						<li><a href="https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html" target="_blank">Uses Sling Dynamic Include</a></li>
-						<li><a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html" target="_blank">Cached with ACS Aem - Commons Http Cache</a></li>
+						<li><a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html" target="_blank">Cached with ACS AEM Commons - HTTP Cache</a></li>
 					</ul>
 				</div>
 
@@ -145,18 +140,19 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 					<p>Completing work with some guarantees.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/jobs/impl/SampleSlingJobConsumer.java" target="_blank">Sling Job Consumer</a></li>
-						<li><a href="{{ page.bundleURL }}/jobs/impl/SampleEventHandlerWithImmediateJobExecution.java" target="_blank">Sling Event Handler (with Immediate Job Execution)</a></li>
+						<!--<li><a href="{{ page.bundleURL }}/jobs/impl/SampleEventHandlerWithImmediateJobExecution.java" target="_blank">Sling Event Handler (with Immediate Job Execution)</a></li>-->
 					</ul>
 				</div>
 
+				<!--
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/mbean/impl" target="_blank">MBeans</a></h3>
 					<p>Interact with your code via JMX and the Apache Felix MBean Web UI.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/mbean/impl/SampleMBeanImpl.java" target="_blank">Basic MBean with Statistics and Operations</a></li>
-						<li><a href="{{ page.bundleURL }}/migration/impl/SampleContentReplicationHarnessImpl.java" target="_blank">Replication Harness w/ MBean</a></li>
 					</ul>
 				</div>
+				-->
 
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/models" target="_blank">Models</a></h3>
@@ -208,7 +204,7 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 
 
 				<div class="samples-section">
-					<h3><a href="{{ page.bundleURL }}/search/impl" target="_blank">Search</a></h3>
+					<h3><a href="{{ page.bundleURL }}/search" target="_blank">Search</a></h3>
 					<p>Performing searches and extending AEM's search frameworks.</p>
 					<ul>
 						<li><a href="{{ page.bundleURL }}/search/querybuilder/impl/SampleQueryBuilder.java" target="_blank">Query Builder Use (illustrating ~all Predicates)</a></li>
@@ -250,10 +246,12 @@ contentURL: https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/ma
 					<p>Expose data not in the JCR as if it were in the JCR!</p>
 				</div>
 
+				<!--
 				<div class="samples-section">
 					<h3><a href="{{ page.bundleURL }}/schedulers/impl" target="_blank">Sling Scheduled Services</a></h3>
 					<p>Run code on a given schedule or interval.</p>
 				</div>
+				-->
 
 				<div class="samples-section">
 					<h3><a href="{{ page.contentURL }}/touch-ui" target="_blank">Task Management</a></h3>
