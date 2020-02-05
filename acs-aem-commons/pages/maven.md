@@ -12,7 +12,7 @@ If you're using the Content Package Maven plugin, take these two easy steps:
 
 Note that all `<dependency>` entries listed below can be defined at the Reactor pom.xml with the version, type and classifier, and the version-less/type-less/classifier-less dependencys can be used in the sub-project poms. The instructions below define the dependencies directly in each sub-project pom for clarity and succinctness. 
 
-### For AEM as a Cloud Service (or any project built from AEM Maven Archetype 22+)
+### For AEM as a Cloud Service (or any project built from AEM Maven Archetype 21 and above)
 
 In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
 
@@ -97,7 +97,7 @@ To include the ''full'' package, don't provide any `<classifier>` element inside
 
 ## Step 2: Add ACS AEM Commons as an Embed/Sub package
 
-### For AEM as a Cloud Service (or any AEM Project genereated from AEM Project Maven Archetype 22+)
+### For AEM as a Cloud Service (or any AEM Project genereated from AEM Project Maven Archetype 21 and above)
 
 In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
 
@@ -130,7 +130,7 @@ In the `filevault-package-maven-plugin` plugin configuration of your _all projec
 {% endhighlight %}
 
 
-### For 6.x (and NOT generated from Maven AEM Project Maven Archetype 22+)
+### For 6.x (and NOT generated from Maven AEM Project Maven Archetype 21 and above)
 
 In the _content project's pom.xml_, within the configuration of the `content-package-maven-plugin`, add a `subPackage`:
 
