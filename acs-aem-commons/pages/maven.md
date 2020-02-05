@@ -14,10 +14,9 @@ Note that all `<dependency>` entries listed below can be defined at the Reactor 
 
 ### For AEM as a Cloud Service (or any project built from AEM Maven Archetype 22+)
 
-{% highlight xml %}
-
 In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
 
+{% highlight xml %}
 <dependency>
     <groupId>com.adobe.acs</groupId>
     <artifactId>acs-aem-commons.ui.content</artifactId>
@@ -102,13 +101,16 @@ To include the ''full'' package, don't provide any `<classifier>` element inside
 
 In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
 
+{% highlight xml %}
 <plugins>
     <plugin>
         <groupId>org.apache.jackrabbit</groupId>
         <artifactId>filevault-package-maven-plugin</artifactId>
         ...
         <configuration>
-            <!-- allowIndexDefinitions is required as acs-aem-commons deploys ACLs to /oak:index which is detected as an "index definition", even though it's not really -->
+            <!-- allowIndexDefinitions is required as acs-aem-commons deploys 
+                 ACLs to /oak:index which is detected as an "index definition", 
+                 even though it's not really an oak index definition -->
             <allowIndexDefinitions>true</allowIndexDefinitions>
             ...
             <embeddeds>
@@ -125,6 +127,8 @@ In the `filevault-package-maven-plugin` plugin configuration of your _all projec
                     <target>/apps/my-app-packages/content/install</target>
                 </embedded>
                 ...
+{% endhighlight %}
+
 
 ### For 6.x (and NOT generated from Maven AEM Project Maven Archetype 22+)
 
