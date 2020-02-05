@@ -10,41 +10,11 @@ If you're using the Content Package Maven plugin, take these two easy steps:
 
 ## Step 1: Add ACS AEM Commons as a Dependency
 
-In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
+Note that all `<dependency>` entries listed below can be defined at the Reactor pom.xml with the version, type and classifier, and the version-less/type-less/classifier-less dependencys can be used in the sub-project poms. The instructions below define the dependencies directly in each sub-project pom for clarity and succinctness. 
 
-
-### For AEM as a Cloud Service (or any project build from AEM Maven Archetype 22+)
-
-For more information on how to deploy 3rd party/vendor packages as part of your package, please see the Adobe documentation on [Understand the Structure of a Project Content Package in AEM as a cloud Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html).
+### For AEM as a Cloud Service (or any project built from AEM Maven Archetype 22+)
 
 {% highlight xml %}
-
-In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
-
-<plugins>
-    <plugin>
-        <groupId>org.apache.jackrabbit</groupId>
-        <artifactId>filevault-package-maven-plugin</artifactId>
-        ...
-        <configuration>
-            <!-- allowIndexDefinitions is required as acs-aem-commons deploys ACLs to /oak:index which is detected as an "index definition", even though it's not really -->
-            <allowIndexDefinitions>true</allowIndexDefinitions>
-            ...
-            <embeddeds>
-                <embedded>
-                    <groupId>com.adobe.aem.commons</groupId>
-                    <artifactId>acs-aem-commons.ui.apps</artifactId>
-                    <type>zip</type>
-                    <target>/apps/my-app-packages/application/install</target>
-                </embedded>
-                <embedded>
-                    <groupId>com.adobe.aem.commons</groupId>
-                    <artifactId>acs-aem-commons.ui.content</artifactId>
-                    <type>zip</type>
-                    <target>/apps/my-app-packages/content/install</target>
-                </embedded>
-                ...
-
 
 In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
 
@@ -126,9 +96,39 @@ inside the `<dependency>` element.
 
 To include the ''full'' package, don't provide any `<classifier>` element inside the `<dependency>` element.
 
-## Step 2: Add ACS AEM Commons as a Sub Package
+## Step 2: Add ACS AEM Commons as an Embed/Sub package
 
-Then, (while still in the _content project's pom.xml_) within the configuration of the `content-package-maven-plugin`, add a `subPackage`:
+### For AEM as a Cloud Service (or any AEM Project genereated from AEM Project Maven Archetype 22+)
+
+In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
+
+<plugins>
+    <plugin>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>filevault-package-maven-plugin</artifactId>
+        ...
+        <configuration>
+            <!-- allowIndexDefinitions is required as acs-aem-commons deploys ACLs to /oak:index which is detected as an "index definition", even though it's not really -->
+            <allowIndexDefinitions>true</allowIndexDefinitions>
+            ...
+            <embeddeds>
+                <embedded>
+                    <groupId>com.adobe.aem.commons</groupId>
+                    <artifactId>acs-aem-commons.ui.apps</artifactId>
+                    <type>zip</type>
+                    <target>/apps/my-app-packages/application/install</target>
+                </embedded>
+                <embedded>
+                    <groupId>com.adobe.aem.commons</groupId>
+                    <artifactId>acs-aem-commons.ui.content</artifactId>
+                    <type>zip</type>
+                    <target>/apps/my-app-packages/content/install</target>
+                </embedded>
+                ...
+
+### For 6.x (and NOT generated from Maven AEM Project Maven Archetype 22+)
+
+In the _content project's pom.xml_, within the configuration of the `content-package-maven-plugin`, add a `subPackage`:
 
 {% highlight xml %}
 <plugin>
