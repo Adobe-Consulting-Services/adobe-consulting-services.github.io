@@ -99,6 +99,9 @@ To include the ''full'' package, don't provide any `<classifier>` element inside
 
 ### For AEM as a Cloud Service (or any AEM Project genereated from AEM Project Maven Archetype 21 and above)
 
+For more information on the Maven Project sructural changes in Maven Archetype 21, please review [Understand the Structure of a Project Content Package in AEM as a Cloud Service]
+](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html).  Note that this project structure is compatible with AEM 6.x as well.
+
 In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
 
 {% highlight xml %}
@@ -128,7 +131,6 @@ In the `filevault-package-maven-plugin` plugin configuration of your _all projec
                 </embedded>
                 ...
 {% endhighlight %}
-
 
 ### For 6.x (and NOT generated from Maven AEM Project Maven Archetype 21 and above)
 
