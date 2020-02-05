@@ -19,7 +19,7 @@ In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
 {% highlight xml %}
 <dependency>
     <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons.ui.content</artifactId>
+    <artifactId>acs-aem-commons-ui.content</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>content-package</type>
     <classifier>min</classifier> <!-- optional, see below -->
@@ -27,7 +27,7 @@ In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
 
 <dependency>
     <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons.ui.apps</artifactId>
+    <artifactId>acs-aem-commons-ui.apps</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>content-package</type>
     <classifier>min</classifier> <!-- optional, see below -->
@@ -119,13 +119,13 @@ In the `filevault-package-maven-plugin` plugin configuration of your _all projec
             <embeddeds>
                 <embedded>
                     <groupId>com.adobe.aem.commons</groupId>
-                    <artifactId>acs-aem-commons.ui.apps</artifactId>
+                    <artifactId>acs-aem-commons-ui.apps</artifactId>
                     <type>zip</type>
                     <target>/apps/my-app-packages/application/install</target>
                 </embedded>
                 <embedded>
                     <groupId>com.adobe.aem.commons</groupId>
-                    <artifactId>acs-aem-commons.ui.content</artifactId>
+                    <artifactId>acs-aem-commons-ui.content</artifactId>
                     <type>zip</type>
                     <target>/apps/my-app-packages/content/install</target>
                 </embedded>
