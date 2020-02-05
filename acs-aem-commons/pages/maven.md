@@ -12,7 +12,62 @@ If you're using the Content Package Maven plugin, take these two easy steps:
 
 In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
 
+
+### For AEM as a Cloud Service (or any project build from AEM Maven Archetype 22+)
+
+For more information on how to deploy 3rd party/vendor packages as part of your package, please see the Adobe documentation on [Understand the Structure of a Project Content Package in AEM as a cloud Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html).
+
+{% highlight xml %}
+
+In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
+
+<plugins>
+    <plugin>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>filevault-package-maven-plugin</artifactId>
+        ...
+        <configuration>
+            <!-- allowIndexDefinitions is required as acs-aem-commons deploys ACLs to /oak:index which is detected as an "index definition", even though it's not really -->
+            <allowIndexDefinitions>true</allowIndexDefinitions>
+            ...
+            <embeddeds>
+                <embedded>
+                    <groupId>com.adobe.aem.commons</groupId>
+                    <artifactId>acs-aem-commons.ui.apps</artifactId>
+                    <type>zip</type>
+                    <target>/apps/my-app-packages/application/install</target>
+                </embedded>
+                <embedded>
+                    <groupId>com.adobe.aem.commons</groupId>
+                    <artifactId>acs-aem-commons.ui.content</artifactId>
+                    <type>zip</type>
+                    <target>/apps/my-app-packages/content/install</target>
+                </embedded>
+                ...
+
+
+In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
+
+<dependency>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>acs-aem-commons.ui.content</artifactId>
+    <version>{{ site.data.acs-aem-commons.version }}</version>
+    <type>content-package</type>
+    <classifier>min</classifier> <!-- optional, see below -->
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>acs-aem-commons.ui.apps</artifactId>
+    <version>{{ site.data.acs-aem-commons.version }}</version>
+    <type>content-package</type>
+    <classifier>min</classifier> <!-- optional, see below -->
+</dependency>
+{% endhighlight %}
+
 ### For 6.3, 6.4, and 6.5
+
+In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
 
 {% highlight xml %}
 <dependency>
@@ -26,6 +81,8 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
 
 ### For 6.2
 
+In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
+
 {% highlight xml %}
 <dependency>
     <groupId>com.adobe.acs</groupId>
@@ -37,6 +94,8 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
 {% endhighlight %}
 
 ### For 6.0 and 6.1
+
+In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
 
 {% highlight xml %}
 <dependency>
