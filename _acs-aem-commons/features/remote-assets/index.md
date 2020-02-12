@@ -6,6 +6,7 @@ date: 2019-03-11
 redirect_from: /acs-aem-commons/features/remote-assets.html 
 feature-tags: new beta administration authoring content-migration
 initial-release: 4.1.0
+tags: aemcs-incompatible
 ---
 
 ## Purpose

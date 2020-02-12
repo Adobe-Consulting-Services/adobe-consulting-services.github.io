@@ -37,6 +37,11 @@ layout: acs-aem-commons_default
                 {% endif %}
             </div>
 
+
+            {% if page.tags contains 'aemcs-incompatible' %}
+            {% include acs-aem-commons/aemcs-incompatible.html %}
+            {% endif %}
+
             {{ content }}
 
             {% include acs-aem-commons/comments.html %}

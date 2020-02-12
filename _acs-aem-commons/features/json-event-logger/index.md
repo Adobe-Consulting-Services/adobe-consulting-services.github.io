@@ -5,6 +5,7 @@ description: Log OSGi events as JSON
 date: 2014-07-23
 redirect_from: /acs-aem-commons/features/json-event-logger.html
 feature-tags: administration
+tags: aemcs-incompatible
 initial-release: 1.7.0
 ---
 

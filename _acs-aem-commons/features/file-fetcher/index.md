@@ -5,6 +5,7 @@ description: Automatically pull files into AEM and publish them
 date: 2019-12-17
 redirect_from: /acs-aem-commons/features/mcp.html
 feature-tags: administration
+tags: aemcs-incompatible
 initial-release: 4.4.0
 ---
 
