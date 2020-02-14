@@ -5,6 +5,7 @@ description: Fix folder thumbnails quickly!
 date: 2018-05-07
 feature-tags: authoring administration
 initial-release: 3.16.0
+tags: aemcs-incompatible
 ---
 
 This repairs invalid or missing thumbnails on asset folders (just folders, not assets) which might have become invalid for one reason or another.  [Click here](/acs-aem-commons/features/mcp/subpages/process-manager.html) to read on how to start a process.  When prompted to  select the process, pick "Refresh Folder Thumbnails."

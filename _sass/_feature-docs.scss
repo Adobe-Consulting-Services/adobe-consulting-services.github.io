@@ -167,3 +167,16 @@ pre {
       }
 
 }
+.aemcs-incompatible {
+    background-color: lighten(orange, 10%);
+    padding: 2rem 1rem; 
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 200;
+    
+    .aemcs-incompatible__title {
+      font-size: 2.5rem;
+      padding-bottom: 1rem;
+    }
+    
+}

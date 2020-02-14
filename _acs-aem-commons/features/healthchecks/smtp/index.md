@@ -5,6 +5,7 @@ description: Check AEM's temperature
 date: 2016-11-01
 redirect_from: /acs-aem-commons/features/healthchecks.html
 initial-release: 3.4.0
+tags: aemcs-incompatible
 ---
 
 > [Add health checks to your Granite WebUI](https://docs.adobe.com/docs/en/aem/6-3/administer/operations/operations-dashboard.html#Health Reports). 

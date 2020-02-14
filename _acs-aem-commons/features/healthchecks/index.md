@@ -4,6 +4,7 @@ title: Health Checks
 description: Check AEM's temperature
 date: 2017-08-08
 feature-tags: administration standard
+tags: aemcs-incompatible
 initial-release: 3.4.0
 ---
 
