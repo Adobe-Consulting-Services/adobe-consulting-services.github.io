@@ -41,7 +41,7 @@ Characteristics of the ACS AEM Commons Utils are:
 	<dt><code>TemplateUtil</code></dt>
 	<dd>Utility methods for working with CQ Templates.</dd>
 	<dt><code>TextUtil</code></dt>
-	<dd>Gets default values, non-blank values. See also <a href="http://dev.day.com/docs/en/cq/current/javadoc/com/day/text/TextUtils.html" target="_blank">CQ TextUtils</a> and <a href="http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html" target="_blank">Apache Commons StringUtils</a>.</dd>
+	<dd>Gets default values, non-blank values. See also <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/text/TextUtils.html" target="_blank">CQ TextUtils</a> and <a href="http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html" target="_blank">Apache Commons StringUtils</a>.</dd>
 	<dt><code>TypeUtil</code></dt>
 	<dd>Intelligently determines Java object types and converts between types (including "unusual" transformations like Array to Map)</dd>
 	<dt><code>ThreadContextClassLoaderTaskExecutor</code> (since 1.5.0)</dt>
