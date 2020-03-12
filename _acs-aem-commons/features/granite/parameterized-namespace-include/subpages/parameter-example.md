@@ -16,26 +16,28 @@ It allows you to customize various values per include, such as a fieldLabel, fie
 
 The way it works is that give defined a property value (not key!) in the dialog XML the following expression:
 
-    
-$&#x0007B;&#x0007B;(OptionalTypeCast)parameterKey(:OptionalDefaultValue&#x0007D;&#x0007D;
-
+{% raw %}
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">${{(OptionalTypeCast)parameterKey(:OptionalDefaultValue}}</code></pre></figure>
+{% endraw %}
 
 So at minimum you will need:
 
-
-$&#x0007B;&#x0007B;parameterKey&#x0007D;&#x0007D;
+{% raw %}
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">${{parameterKey}}</code></pre></figure>
+{% endraw %}
 
 
 When you want to typecast that value to a Boolean:
 
-
-$&#x0007B;&#x0007B;(Boolean)parameterKey&#x0007D;&#x0007D;
-
+{% raw %}
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">${{(Boolean)parameterKey}}</code></pre></figure>
+{% endraw %}
 
 And if you also would live to give it a default value of true:
 
-
-$&#x0007B;&#x0007B;(Boolean)parameterKey:true&#x0007D;&#x0007D;
+{% raw %}
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">${{(Boolean)parameterKey:true}}</code></pre></figure>
+{% endraw %}
 
 ### The example
 
