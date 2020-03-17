@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 4.4.2 now available!
+description: So much stuff. Can't list it all here. Check the release notes!
+date: 2020-02-28
+project: acs-aem-commons
+---
