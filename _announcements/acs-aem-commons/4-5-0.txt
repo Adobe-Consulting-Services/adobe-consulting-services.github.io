@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 4.5.0 is here!
+description: Namespace includes for TouchUI Dialogs has finally arrived!! Also a bunch of bug-fixes and technical enhancements.
+date: 2020-03-25
+project: acs-aem-commons
+---
