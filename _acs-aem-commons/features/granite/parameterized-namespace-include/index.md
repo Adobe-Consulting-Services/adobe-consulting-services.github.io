@@ -6,18 +6,18 @@ date: 2020-03-08
 redirect_from: /acs-aem-commons/features/granite.html
 feature-tags: backend-dev, new, dialog, granite, coral
 tags: new
-initial-release: 4.4.0
+initial-release: 4.5.0
 ---
 
 ## Purpose
 
 The parameterized namespace include (acs-commons/granite/ui/components/include) can include dialog snippets with a namespace and or parameters.
 
-The namespace mechanism is similar to the following deprecated feature: [following deprecated feature](../../deprecated/cqinclude-namespace/index.html)
+The namespace mechanism is similar to the following [following deprecated feature](../../deprecated/cqinclude-namespace/index.html).
 
-This allows you to reuse a dialog snippet multiple times in 1 dialog.
+This allows you to reuse a dialog snippet multiple times in a dialog.
 
-Parameters allow you to define parameters in your dialog snippets in the values of properties.
+The parameters mechanism allows you to define parameters in your dialog snippets in the values.
 For example the fieldLabel. You can define a default value, but override the default value when including the snippet.
 
 
