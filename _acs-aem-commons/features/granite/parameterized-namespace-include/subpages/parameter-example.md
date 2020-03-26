@@ -14,7 +14,7 @@ It allows you to customize various values per include, such as a fieldLabel, fie
 
 ### Syntax 
 
-The way it works is that give defined a property value (not key!) in the dialog XML the following expression:
+The way it works is that in a property value (not a property key!) in the dialog XML  you put the following expression:
 
 {% raw %}
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml">${{(OptionalTypeCast)parameterKey(:OptionalDefaultValue}}</code></pre></figure>
@@ -43,7 +43,7 @@ And if you also would live to give it a default value of true:
 
 Enough talk, now for the actual example. 
 We will define 1 dialog snippet. The snippet will have a simple title and description.
-But some stuff will be configurable.
+But some stuff will be customize-able on a include basis.
 The snippet will be created under: /apps/path/to/block.xml
 
 {% raw %}
