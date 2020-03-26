@@ -6,7 +6,7 @@ date: 2020-03-08
 redirect_from: /acs-aem-commons/features/granite.html
 feature-tags: backend-dev, new, dialog, granite, coral
 tags: new
-initial-release: 4.4.0
+initial-release: 4.5.0
 ---
 
 ## Purpose
