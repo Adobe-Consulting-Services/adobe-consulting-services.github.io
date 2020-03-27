@@ -20,7 +20,7 @@ Configure the AEM Marketo Form feature via a Cloud Service Configuration.
 2. Add a new cloud service configuration or click on an existing one to open the configuration editor screen
     ![Marketo Cloud Configuration Screen](images/Marketo-Cloud-Config-Screen.png). Ensure the cloud configuration is created in your site's Conf root
 3. Fill out and save the cloud configuration with the account details, including:
-    - REST Endpoint Host - found in Marketo under Admin >> Integration >> Web Services, do not include the protocol (e.g. https) or the path e.g. (/rest)
+    - REST Endpoint Host - found in Marketo under Admin >> Integration >> Web Services, do not include the protocol (e.g. https, or //) or the path e.g. (/rest)
     - Marketo Server Instance - The URL you use to access Marketo, starting with // and without a path
     - Munchkin Account ID - Found in Marketo under Admin >> Integration >> Munchkin, three sets of characters separated by dashes
     - Client ID - Found in Marketo under Admin >> Integration >> LaunchPoint, a UUID
