@@ -16,6 +16,8 @@ The following snippets show you how to do this leveraging this feature.
 
 For the dialogs, we will need to include part of the core component's image dialog in our own dialog.
 
+{% highlight xml %}
+
     <?xml version="1.0" encoding="UTF-8"?>
     <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
               xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
@@ -69,7 +71,8 @@ For the dialogs, we will need to include part of the core component's image dial
             </items>
         </content>
     </jcr:root>
-
+    
+{% endhighlight %}
                                 
 ### CQ Template node
 
