@@ -119,7 +119,6 @@ Then we will define the actual dialog that will include the main snippet:
                 <parameters
                         jcr:primaryType="nt:unstructured"
                         blockTitle="Block1"
-                        namespace="block1"
                         descriptionIsRequired="{Boolean}true"
                 />
             </block1>
@@ -133,7 +132,6 @@ Then we will define the actual dialog that will include the main snippet:
                 <parameters
                         jcr:primaryType="nt:unstructured"
                         blockTitle="Block2"
-                        namespace="block2"
                         hideExtra="{Boolean}true"
                         descriptionMaxLength="{Long}15"
                 />
