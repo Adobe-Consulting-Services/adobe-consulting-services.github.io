@@ -37,8 +37,9 @@ So if we need to have 'myCustomProperty' namespaced:
 
 
 com.adobe.acs.commons.granite.ui.components.impl.include.NamespacedTransformedResourceProviderImpl.xml
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-        properties="[name,fileNameParameter,fileReferenceParameter,myCustomProperty]"
-        jcr:primaryType="sling:OsgiConfig"/>
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    properties="[name,fileNameParameter,fileReferenceParameter,myCustomProperty]"
+    jcr:primaryType="sling:OsgiConfig"/>
+{% endhighlight %}
