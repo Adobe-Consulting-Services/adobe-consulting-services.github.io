@@ -80,6 +80,8 @@ In order for the resource type core/wcm/components/image/v2/image to be added to
 You can do this by creating a folder _cq_template with a .content.xml in that folder.
 Put in the following contents:
 
+{% highlight xml %}
+
     <?xml version="1.0" encoding="UTF-8"?>
     <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
               jcr:primaryType="nt:unstructured">
@@ -93,7 +95,7 @@ Put in the following contents:
         />
     </jcr:root>
                                                         
-               
+ {% endhighlight %}              
 
 
 ### Sling Model
