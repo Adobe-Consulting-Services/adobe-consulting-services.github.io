@@ -43,7 +43,6 @@ Line 7 identifies the ITEM element (and implicitly, its children) as iterable, o
 This shows a generated document with Structure Panel open and Tagging highlighted.
 ![Dynamic Deck - Property Mapping for Generated Document](images/property-mapping---generated-document.jpg) 
 
-
 ### Asset Selection
 There are three ways to specify what AEM Assets will be imported into the InDesign document:
 * AEM Collection
@@ -52,7 +51,13 @@ There are three ways to specify what AEM Assets will be imported into the InDesi
 
 Using the AEM Collections or Tags is most straightforward for end-users.  The Query-driven approach is more flexible and precise.
 
-## Prerequesites For Running the Tool
+The Dynaic Deck Query configuration page can be launched from the Query List button on the Dynamic Deck Dynamo dialog, shown below in the Running the Tool section.  The query configuration page looks like this:
+![Dynamic Deck - Query Configuration Page](images/query-configurations2.jpg) 
+
+### Data Sync
+User updates to generated documents can be written back to the source AEM Assets. This requies  setting is-data-sync="true" in the mapping XML for each field that should be synchronized. See lines 4 and 11 in the XML example above.
+
+## Tool Setup
 
 ### InDesign CC Server
 This tool requires InDesign CC Server.  Any recent version will work, but your server version must match your desktop version. On localhost, start InDesign server as follows:
@@ -60,20 +65,23 @@ This tool requires InDesign CC Server.  Any recent version will work, but your s
 ./InDesignServer -port 8080
 {% endhighlight %}
 
-### Template Files
-This tool also requires InDesign template and XML mapping file(s) that are not included in the ACS AEM Commons default installation.  
+### Samples Package
+The [InDesign Dynamic Deck Samples package](/acs-aem-commons/packages/indesign-dynamic-deck/indesign-dynamic-deck-samples-1.0.zip) includes everything needed to generate two different example documents.  Use the Simple Template to generate a document from We.Retail Assets.  The Get Outside Template generates a document from assets that are installed with the Samples package.  InDesign templates are provided for InDesign CC Server 2018 and 2020.
 
-Two examples are available:
-* Simple Template.  The package includes INDD and XML only. It is designed to work with We.Retail Assets. InDesign template files are provided for InDesign CC 2018 and 2020.
-
-* More examples are available on request. TODO
+Installing the Samples package adds the following artifacts to AEM:
+* Template files, installed at /content/dam/dynamic-deck-dynamo/templates.
+* A destination folder for generated documents, at /content/dam/dynamic-deck-dynamo/destination. 
+* A master asset, used by the Get Outside example, installed at /content/dam/dynamic-deck-dynamo/master-assets/get-outside-master-asset.jpg.
+* Example SQL2 query definitions.  These are implemented as a Generic List installed at /etc/acs-commons/lists/dynamic-deck-query-list.
+* Data Sync workflow model. This is installed at /conf/global/settings/workflow/models/indesign-dynamic-deck-data-sync and /var/workflow/models/indesign-dynamic-deck-data-sync. The Data Sync workflow process step is installed with ACS AEM Commons.
+* Data Sync workflow launcher, installed at /conf/global/settings/workflow/launcher/config/indesign-dynamic-deck-data-sync-launcher.  The launcher fires on XML rendition modified.  The launcher is installed Enabled.
 
 ## Running the Tool
-Do this to generate a deck that uses a query to select all We.Retail activities :
-![Dynamic Deck - Generate Simple Example](images/generate-simple-example-2.jpg) 
+Do this to generate the Simple Example deck (assuming you have InDesign CC Server 2018 installed):
+![Dynamic Deck - Generate Simple Example](images/generate-simple-example-4.jpg) 
 
 You should get this:
-![Dynamic Deck - Generate Simple Example](images/generate-simple-example-results.jpg) 
+![Dynamic Deck - Generate Simple Example](images/generate-simple-example-results2.jpg) 
 
 Note that by default the We.Retail Assets have no Tags applied.  To test deck generation using Tags you must first manually apply Tags.  This can be done quickly as follows:
 * In Assets search for "Gloves"
@@ -84,23 +92,6 @@ Note that by default the We.Retail Assets have no Tags applied.  To test deck ge
 
 Collections works as you would expect.  Try it.
 
-## Advanced Topics
-
-### Queries
-The tool in includes a place to configure queries.  It looks like this:
-![Dynamic Deck - Generate Simple Example](images/query-configurations.jpg) 
-
-### Data Sync
-User updates to generated documents can be written back to the source AEM Assets. This requies 1) installation of an optional workflow and 2) setting is-data-sync="true" in the mapping XML for each field that should be synchronized. See lines 4 and 11 in the XML example above.
-
-To install the Data Sync workflow download and install THIS PACKAGE TODO.  Please ask if you need this.
-
 ### Tips for creating InDesign document templates
 
-Coming soon.  Please ask if you need this. TODO
-
-
-
-
-
-
+Coming soon.  Please create an issue if you need this.
