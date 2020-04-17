@@ -4,7 +4,7 @@ title: InDesign Dynamic Deck
 description: Generate InDesign documents from AEM Assets
 date: 2020-03-02
 feature-tags: new forms authoring 
-initial-release: 4.4.1
+initial-release: 4.5.0
 ---
 
 ## Purpose
