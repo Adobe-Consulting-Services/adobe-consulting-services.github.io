@@ -66,7 +66,7 @@ This tool requires InDesign CC Server.  Any recent version will work, but your s
 {% endhighlight %}
 
 ### Samples Package
-The [InDesign Dynamic Deck Samples package](/acs-aem-commons/packages/indesign-dynamic-deck/indesign-dynamic-deck-samples-1.0.zip) includes everything needed to generate two different example documents.  Use the Simple Template to generate a document from We.Retail Assets.  The Get Outside Template generates a document from assets that are installed with the Samples package.  InDesign templates are provided for InDesign CC Server 2018 and 2020.
+The [InDesign Dynamic Deck Samples package](/acs-aem-commons/packages/indesign-dynamic-deck/indesign-dynamic-deck-samples-1.1.zip) includes everything needed to generate two different example documents.  Use the Simple Template to generate a document from We.Retail Assets.  The Get Outside Template generates a document from assets that are installed with the Samples package.  InDesign templates are provided for InDesign CC Server 2018 and 2020.
 
 Installing the Samples package adds the following artifacts to AEM:
 * Template files, installed at /content/dam/dynamic-deck-dynamo/templates.
