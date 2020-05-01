@@ -66,7 +66,7 @@ This tool requires InDesign CC Server.  Any recent version will work, but your s
 {% endhighlight %}
 
 ### Samples Package
-The [InDesign Dynamic Deck Samples package](/acs-aem-commons/packages/indesign-dynamic-deck/indesign-dynamic-deck-samples-1.1.zip) includes everything needed to generate two different example documents.  Use the Simple Template to generate a document from We.Retail Assets.  The Get Outside Template generates a document from assets that are installed with the Samples package.  InDesign templates are provided for InDesign CC Server 2018 and 2020.
+The [InDesign Dynamic Deck Samples package](/acs-aem-commons/features/indesign-dynamic-deck/indesign-dynamic-deck-samples-1.2.zip) includes everything needed to generate two different example documents.  Use the Simple Template to generate a document from We.Retail Assets.  The Get Outside Template generates a document from assets that are installed with the Samples package.  InDesign templates are provided for InDesign CC Server 2018 and 2020.
 
 Installing the Samples package adds the following artifacts to AEM:
 * Template files, installed at /content/dam/dynamic-deck-dynamo/templates.
@@ -85,13 +85,13 @@ You should get this:
 
 Note that by default the We.Retail Assets have no Tags applied.  To test deck generation using Tags you must first manually apply Tags.  This can be done quickly as follows:
 * In Assets search for "Gloves"
-* Select all .jpegs, only .jpegs
+* Select all .jpeg's, only .jpeg's
 * Click Properties
-* Apply Tag We.Retail->Apparel->Gloves to all selected Assets and Save
+* Apply Tag We.Retail -> Apparel -> Gloves to all selected Assets and Save
 * Generate a deck with the same tag.
 
 Collections works as you would expect.  Try it.
 
 ### Tips for creating InDesign document templates
 
-Coming soon.  Please create an issue if you need this.
+Coming soon.  Please create an Github issue if you need this.
