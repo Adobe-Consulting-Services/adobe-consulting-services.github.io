@@ -37,7 +37,7 @@ Typically, you will also want to use either Resource Resolver Mappings or mod_re
     jcr:primaryType="sling:OsgiConfig"
     sling.servlet.resourceTypes="[myapp/components/page/home-page]"
     externalizer.domain="publish"
-    extensionless.urls="Boolean{true}"
+    extensionless.urls="{Boolean}true"
     include.lastmod="{Boolean}false"
     changefreq.properties="[myChangeFreqProperties]"
     priority.properties="[myPriorityProperties]"
