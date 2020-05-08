@@ -62,7 +62,7 @@ externalizer.domain="publish"
 print.grouping.comments=B"true"
 {% endhighlight %}
 
-{% highlight %}
+{% highlight plaintext %}
 # Start Group: all
 User-agent: *
 Allow: /
