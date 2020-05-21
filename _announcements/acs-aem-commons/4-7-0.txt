@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 4.7.0 has dropped!
+description: Bug fixes and Copy Properties workflow process!
+date: 2020-05-12
+project: acs-aem-commons
+---
