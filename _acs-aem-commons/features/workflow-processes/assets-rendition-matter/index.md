@@ -7,6 +7,7 @@ date: 2013-10-02
 initial-release: 1.2.0
 tags: aemcs-incompatible
 ----
+
 ## Purpose
 This process ensures that an rendition *exactly* matches a set of dimensions by applying a matte. This  is sometimes referred to as letterboxing (when the matte is applied on the top and bottom of the image) or windowboxing (when the matte is applied on the left and right of the Both the horizontal and the vertical position along with the dimensions can be configured via parameters.
 
