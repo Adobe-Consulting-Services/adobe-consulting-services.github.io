@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 4.7.2 has dropped!
+description: Bug fixes, Compatibility improvements for AEM CS, and improvements to the dialog generator!
+date: 2020-07-08
+project: acs-aem-commons
+---
