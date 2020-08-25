@@ -31,7 +31,7 @@ Create an OSGi configuration for each service user or group with the correspondi
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     principalName="my-service-user"
-    type="add"
+    operation="add"
     ensure-immediately="{Boolean}true"
     aces="[type=allow;privileges=jcr:read\,rep:write;path=/content/foo;rep:glob=/jcr:content/*]"/>
 {% endhighlight %}
