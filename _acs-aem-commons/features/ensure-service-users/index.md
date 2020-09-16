@@ -9,6 +9,13 @@ initial-release: 3.8.0
 last-updated-release: 3.15.0
 ---
 
+
+<div class="banner banner--notice">
+AEM 6.3 and greater should migrate to [Sling Repo Init scripts](https://sling.apache.org/documentation/bundles/repository-initialization.html) to ensure Authorizables and ACLS.
+
+Sling Repo Init supports creation of Users, Service Users and Groups, as well as the application of ACLs. It is generally recommended to prefer principal-based ACLs over resource-based ACLs when using Repo Init.
+</div>    
+
 ## Purpose
 
 Since AEM 6.2, service users are used to access the JCR instead of using the administrative resource resolver. Service users require ACLs applied to provide only enough access for the service user to perform its function.
