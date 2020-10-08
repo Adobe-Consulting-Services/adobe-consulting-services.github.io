@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 4.8.0
+description: MS Office Asset Selector, a new TouchUI replacement of ACS Commons' Miscadmin, and lone bug fix!
+date: 2020-07-17
+project: acs-aem-commons
+---
