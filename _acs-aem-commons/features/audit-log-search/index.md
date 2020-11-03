@@ -55,4 +55,4 @@ The following columns will be available in the results:
 
 If you receive the Oak Index missing warning when using the Audit Log search or if the results are slow, you will need to install an Oak Index to improve query performance.
 
-You can generate an Oak Index based on the queries in the Audit Log Search tool with the [Oak Index Definition Generator](http://oakutils.appspot.com/generate/index) or download a [package with a simple Oak Index definition](/acs-aem-commons/packages/audit-log-search/acs-aem-commons-audit-log-oak-index-3.7.0.zip).
+You can generate an Oak Index based on the queries in the Audit Log Search tool with the [Oak Index Definition Generator](http://oakutils.appspot.com/generate/index) or download a [package with a simple Oak Index definition](/acs-aem-commons/packages/audit-log-search/acs-aem-commons-audit-log-oak-index-4.8.6.zip).
