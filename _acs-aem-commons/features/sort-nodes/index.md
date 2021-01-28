@@ -36,11 +36,11 @@ http://localhost:4502/content/someFolder
 
 
 ### Request Parameters
-`:byTitle`
+#### `:byTitle`
 
 whether to sort nodes by jcr:title (default: `false`). The code will use the value of the jcr:title property of the underlying node or of it's jcr:content child node if it exists or default to node name of jcr:title was not found.
 
-`:caseSensitive`
+#### `:caseSensitive`
 
 whether sort should be case sensitive (default: `false`), e.g.
 ```  
@@ -59,7 +59,7 @@ You can turn it off by setting the `-F":caseSensitive=true"` request parameter a
      -  b           
 ```
 
-`:nonHierarchyFirst`
+#### `:nonHierarchyFirst`
 
 whether the sort should move non-hierarchy nodes to the top (default: `true`)
 
@@ -75,7 +75,7 @@ The default value is `true` which means jcr:content, rep:policy and such will be
 ```
 
 You can turn it off by setting the `-F":nonHierarchyFirst=false"` parameter
-which will switch the sort mode to sort nodes regardless if they are `nt:hierarchyNode` or not
+which will switch the mode to sort nodes regardless if they are `nt:hierarchyNode` or not
 ```  
 +  /content/someFolder
      -  a           // cq:Page
