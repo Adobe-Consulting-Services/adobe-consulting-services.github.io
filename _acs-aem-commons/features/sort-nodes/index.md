@@ -3,6 +3,8 @@ layout: acs-aem-commons_feature
 title: Sort JCR Nodes
 description: Need to alphabetize child pages or tags?
 feature-tags: authoring administration
+initial-release: 4.12.0
+date: 2015-03-13
 ---
 
 ## Purpose
