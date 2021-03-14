@@ -1,0 +1,6 @@
+---
+title: Release 4.11.2 fix release!
+description: Fixed issue with Version Clientlibs when running on AEM 6.5.7
+date: 2021-01-06
+project: acs-aem-commons
+---
