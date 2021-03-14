@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.0.2
+description: AEM as a Cloud Service compatible release! This increases minimum AEM version support though!
+date: 2021-03-14
+project: acs-aem-commons
+---

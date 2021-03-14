@@ -4,3 +4,4 @@ _site/
 *.iml
 .DS_Store
 *.jekyll-metadata
+.history/

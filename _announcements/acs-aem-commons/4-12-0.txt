@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 4.12.0
+description: Some cool new features like Sorter and Redirect Manager, and some bug-fixes too! Last of the 4.x line as well!
+date: 2021-03-13
+project: acs-aem-commons
+---
