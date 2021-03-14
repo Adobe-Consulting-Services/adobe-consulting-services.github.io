@@ -2,9 +2,9 @@
 layout: acs-aem-commons_feature
 title: Redirect Manager
 description: Manage HTTP Redirects in AEM
-date: 2021-01-23
+date: 2021-03-12
 feature-tags: administraton backend-dev seo
-initial-release: 4.11.0
+initial-release: 4.12.0
 ---
 
 ## Purpose
