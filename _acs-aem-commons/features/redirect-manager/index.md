@@ -22,6 +22,7 @@ To create a Redirect configuration:
 ![Create Redirect Configurations](images/create-rule.png)
 
 ### Form Inputs
+
 | Input        | Required          | Description          |
 | ------------- |-------------|-------------|
 | Source Path | Yes | Where to redirect from. Can be a AEM path or a regular expression. See below |
@@ -32,6 +33,7 @@ To create a Redirect configuration:
 
 Redirects are supported for pages and assets. You can use trailing wildcard (*) or regular expressions with matching groups.
 Examples:
+
 | Source        | Target           |
 | ------------- |-------------|
 | /content/dam/we-retail/hello.pdf | /content/dam/we-retail/welcome.pdf |
