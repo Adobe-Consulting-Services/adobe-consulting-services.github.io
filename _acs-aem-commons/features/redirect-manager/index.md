@@ -77,7 +77,7 @@ http://localhost:4502/content/we-retail/en/contact-us.html?wcmmode=disabled
 
 ### Export and Import
 
- You can export redirects into a spreadsheet, edit of offline and then import the rules back in AEM. 
+ You can export redirects into a spreadsheet, edit it offline and then import the rules back in AEM. 
  ![Export](images/export.png)
 
 ![Export](images/export-xls.png)
