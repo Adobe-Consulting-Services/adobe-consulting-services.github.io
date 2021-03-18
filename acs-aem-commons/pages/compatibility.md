@@ -5,13 +5,13 @@ title: Compatibility
 
 # {{ page.title }}
 
-This page identifies the versions of Adobe Experience Manager with which a particular version of ACS AEM Commons is compatible. In general, we strive to be compatible with the current version and the last prior version. For the purpose of this page, _compatible_ means that the package is installable. Individual features may require a higher version. Please refer to the individual feature documentation pages for more details.
+This page identifies the versions of Adobe Experience Manager with which a particular version of ACS AEM Commons is compatible. In general, we strive to be compatible with the current version and the last prior version. For the purpose of this page, _compatible_ means that the package is install-able. Individual features may require a higher version. Please refer to the individual feature documentation pages for more details.
 
 
 {:.data-table}
 |                   | CQ 5.5     | CQ 5.6   |  AEM 5.6.1  | AEM 6.0   | AEM 6.1   |  AEM 6.2   |  AEM 6.3   |  AEM 6.4   | AEM 6.5    | AEM as a Cloud Service | 
 |-------------------|:----------:|:--------:|:-----------:|:---------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------------------:|
-| 4.7.0+            |            |          |             |           |           |            |  &#x2714;  |  &#x2714;  |  &#x2714;  | &#x2714; [*](#aem-as-a-cloud-service-feature-incompatibility)      |            
+| 5.X.X             |            |          |             |           |           |            |            |  &#x2714;  |  &#x2714;  | &#x2714; [*](#aem-as-a-cloud-service-feature-incompatibility)      |            
 | 4.X.X             |            |          |             |           |           |            |  &#x2714;  |  &#x2714;  |  &#x2714;  |                        |
 | 3.17.X            |            |          |             |           |           | &#x2714;   |  &#x2714;  |  &#x2714;  |            |                        | 
 | 3.16.X            |            |          |             |           |           | &#x2714;   |  &#x2714;  |  &#x2714;  |            |                        |
@@ -63,7 +63,7 @@ This page identifies the versions of Adobe Experience Manager with which a parti
 
 ## AEM as a Cloud Service Feature Incompatibility
 
-ACS AEM Commons 4.7.0 and greater can be deployed to AEM as a Cloud Service. While the ACS AEM Commons package itself is deployable to AEM as a Cloud service, this does NOT mean that all features work or should be used on AEM as a Cloud Service.
+ACS AEM Commons 5.0.0 and greater can be deployed to AEM as a Cloud Service. While the ACS AEM Commons package itself is deployable to AEM as a Cloud service, this does NOT mean that all features work or should be used on AEM as a Cloud Service.
 The table below calls out the known problematic features categorizing them by "Incompatibility Level"
 
 * __INCOMPATIBLE__ indicates the features that should not, and may not be possible to use in AEM as a Cloud Service. This classification is broken into two sub-classifications:
