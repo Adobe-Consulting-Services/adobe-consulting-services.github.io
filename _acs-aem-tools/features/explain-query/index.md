@@ -6,12 +6,12 @@ description: Understand how Oak's query engine is executing queries
 date: 2015-06-01
 initial-release: 0.0.12
 last-updated-release: 0.0.52
-tags: legacy
+tags: legacy, deprecated
 ---
 
-> Since AEM 6.1, Explain Query is part of AEM via the Operations web console. 
-> The main advantage the ACS AEM Tools version of this tool has over the AEM version is QueryBuilder syntax support.
-
+<div class="banner banner--notice">
+    Since AEM 6.1, Explain Query is part of AEM via the Operations web console, or in AEM as a Cloud Service, via the Developer Console.
+</div>   
 
 ## Getting Started
 

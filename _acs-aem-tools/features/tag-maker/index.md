@@ -5,10 +5,17 @@ title: Tag Maker
 description: Plucked from an AEM taxonomist's dream!
 date: 2015-06-21
 initial-release: 0.0.22
+tags: deprecated
 ---
 
-## Getting Started
+<div class="banner banner--notice">
+    This feature has effectively been moved to <a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/mcp-tools/tag-creator/index.html">ACS AEM Commons as Tag Creator</a>.
+    <br/>
+    <br/>
+    Please use ACS AEM Commons' Tag Creator instead of this tool.
+</div>   
 
+## Getting Started
 
 Install the ACS AEM Tools package via the AEM Package Manager and then open Tag Maker from the AEM Tools console, or directly at [/etc/acs-tools/tag-maker.html](http://localhost:4502/etc/acs-tools/tag-maker.html)
 

@@ -6,8 +6,8 @@
 {% elsif feature.last-updated-release == project.version or feature.last-updated-release == project.version60 %} updated {% endif %}">
     <a class="feature-image-wrapper" href="{{ feature.url }}">
 
-        {% if feature.feature-tags contains 'deprecated' %}<div class="deprecated"></div>
-        {% elsif feature.feature-tags contains 'beta' %}<div class="beta"></div>
+        {% if feature.tags contains 'deprecated' %}<div class="deprecated"></div>
+        {% elsif feature.tags contains 'beta' %}<div class="beta"></div>
         {% elsif feature.initial-release contains project.version or feature.initial-release contains project.version60 %}<div class="new"></div>
         {% elsif feature.last-updated-release contains project.version or feature.last-updated-release contains project.version60 %}<div class="updated"></div>{% endif %}
 		

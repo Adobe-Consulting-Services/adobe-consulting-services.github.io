@@ -7,7 +7,15 @@ date: 2015-06-20
 initial-release: 0.0.22
 ---
 
+<div class="banner banner--notice">
+    This feature is mostly replaced by <a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/mcp-tools/data-importer/index.html">ACS AEM Commons Data Importer</a>.
+    <br/>
+    <br/>
+    Note there is not exact feature parity, so please review both to ensure you make the optimal choice. All things being equal, please prefer <a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/mcp-tools/data-importer/index.html">ACS AEM Commons Data Importer</a>. 
+</div>   
+
 ## Getting Started
+
 
 Install the ACS AEM Tools package via the AEM Package Manager and then open CSV Asset Importer from the AEM Tools console, or directly at [/etc/acs-tools/csv-asset-importer.html](http://localhost:4502/etc/acs-tools/csv-asset-importer.html)
 
