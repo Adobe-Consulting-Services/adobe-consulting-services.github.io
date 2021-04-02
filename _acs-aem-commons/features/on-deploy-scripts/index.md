@@ -40,6 +40,12 @@ with all nodes - e.g. `postal | zip | zipcode` -> `postalcode`
 - Creation of the initial site structure
 - Creation of content meant for local developer environments only
 
+### Patch System by Jetpack Add-on
+
+[Patch System by Jetpack](https://jetpack.ida-mediafoundry.io/tools/patch-system.html) is a cool Add-on that builds on top of On Deploy scripts! It's not part of ACS AEM Commons, but if you use OnDeploy Scripts definitely check it out!
+
+![Patch System by Jetpack](https://jetpack.ida-mediafoundry.io/images/patch-system.png)
+
 ### Why use this tool?
 
 There are other tools out there that allow you to run ad-hoc scripts against your AEM instance manually, but this
