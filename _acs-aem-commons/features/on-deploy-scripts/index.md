@@ -42,11 +42,11 @@ with all nodes - e.g. `postal | zip | zipcode` -> `postalcode`
 
 ### Patch System by Jetpack Add-on
 
-[Patch System by Jetpack](https://jetpack.ida-mediafoundry.io/tools/patch-system.html) is a cool Add-on that builds on top of On Deploy scripts! It's not part of ACS AEM Commons, but if you use OnDeploy Scripts definitely check it out!
+[Patch System by Jetpack](https://jetpack.ida-mediafoundry.io/tools/patch-system.html) is a cool add-on that builds on top of On-Deploy scripts! It's not part of ACS AEM Commons, but if you use On-Deploy Scripts definitely check it out!
 
 ![Patch System by Jetpack](https://jetpack.ida-mediafoundry.io/images/patch-system.png)
 
-### Why use this tool?
+### Why use On-Deploy Scripts?
 
 There are other tools out there that allow you to run ad-hoc scripts against your AEM instance manually, but this
 method is fully automated. An automated approach provides many key benefits.
@@ -75,7 +75,7 @@ activated/published. This can be a big deal for mass content updates.
 - Script run status is preserved within AEM, giving an easy way to determine if a script has already been run on a
 given server.
 
-## How to Use
+## How to Use On-Deply Scripts
 
 1. Enable the On-Deploy Scripts Feature
 1. Implement a Script Provider Service
