@@ -3,127 +3,88 @@ layout: acs-aem-commons_feature
 title: Redirect Manager
 description: Manage HTTP Redirects in AEM
 date: 2021-03-12
-feature-tags: administraton backend-dev seo
-initial-release: 4.12.0
+feature-tags: administration backend-dev seo
+initial-release: 5.0.4
 ---
 
 ## Purpose
 
-This tool allows content authors to  maintain and publish redirect configurations. Support for redirects is implemented as a servlet filter  which evaluates redirect configurations and issues a 302 or 301 respectively in case of a matching incoming request url. 
+Redirect Manager allows content authors to  maintain and publish redirect configurations from AEM. Support for redirects is implemented as a servlet filter  which evaluates redirect configurations and issues a 302 or 301 respectively in case of a matching incoming request url. 
 
-## Setting Up Redirect Manager
+## Features
+* AEM as a Cloud Service  compatible
+* Support for regular expressions including back-references
+* Support for context-aware configurations
+* Support for Sling Mappings to rewrite Location header
+* Export redirect rules into a spreadsheet, edit them offline and import back
+* JMX Instrumentation
 
-To create a Redirect configuration:
+## Table of Contents
 
-1. Navigate to [/apps/acs-commons/content/redirect-manager.html](http://localhost:4502//apps/acs-commons/content/redirect-manager.html)
+* [Getting started](#getting-started): New to managing redirects in AEM? This is the place to start!
+* [Managing Redirects](./manage.md): Manage Redirects
+* [Context aware configuration](./caconfig.md): Maintain different redirect configuration per context
+* [Sling Mappings](./mappings.md): Using Sling Mappings to rewrite Location header
+* [Advanced Configuration](./advanced.md): OSGi configuration explained
+* [Extending Functionality](./extend.md): Extending the basic configuration 
+
+## Getting started
+
+### Configuration
+Redirect Manager is a opt-in feature and requires an OSGi configuration before it gets active.
+To enable redirects create a configuration for PID `com.adobe.acs.commons.redirects.filter.RedirectFilter`, e.g.
+```text
+/apps/my-app/config/com.adobe.acs.commons.redirects.filter.RedirectFilter
+```
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          enabed="{Boolean}true"/>
+```
+
+###  Create Redirects
+
+To access  Redirect Manager, open the main AEM menu from the link in the upper-left and select Tools » ACS AEM Commons » Manage Redirects
+or navigate to http://localhost:4502/apps/acs-commons/content/redirect-manager/redirects.html
+
+You will see a list of available redirect configurations. The default global configuration (`/conf/global`) is created 
+automatically by ACS Commons and it is a good start to put your redirects.
+![/conf/global](images/conf_global.png)
+
+Click on `/conf/global` to start managing redirect configurations
+
 ![Manage Redirects](images/manage-redirects.png)
 
-2. Configure one or more Redirect Configurations. 
+Click the _"+ Add Configuration"_ button to configure one or more Redirect Configurations, e.g. 
+
+| Source        | Target           | Status Code |
+| ------------- |-------------|-------------|
+| /content/geometrixx/us/en/about-us | /content/we-retail/us/en/about-us | 302 |
+
 ![Create Redirect Configurations](images/create-rule.png)
 
-### Form Inputs
+Redirects are supported for pages and assets. You can match by exact path or by a regular expression.
+Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of
+the regex match.
+See the [Manage Redirects](./manage.md) for more information.
 
-| Input        | Required          | Description          |
-| ------------- |-------------|-------------|
-| Source Path | Yes | Where to redirect from. Can be a AEM path or a regular expression. See below |
-| Target Path | Yes | Where to redirect to. Can be a path in AEM or an external URL |
-| Status Code | Yes | 301 or 302 :warning: The HTTP 301 status code is cached in browsers with no expiry date and cannot be reverted, i.e. once 301 is applied, it is forever |
-| Redirect Until | No | If the field has a value, the page redirection would work till that date and after that date, the redirection would stop for that entry, If the field has no value, the page redirection would work without any end date (as is)|
+### Replicate 
 
-
-Redirects are supported for pages and assets. You can use trailing wildcard (*) or regular expressions with matching groups.
-Examples:
-
-| Source        | Target           |
-| ------------- |-------------|
-| /content/dam/we-retail/hello.pdf | /content/dam/we-retail/welcome.pdf |
-| /content/we-retail/de/about/* | /content//we-retail/en/about |
-| /content/we-retail/es/about/(.*) | /content/we-retail/en/about |
-| /content/we-retail/de/about/(.*) | /content/we-retail/en/about/$1 |
-| /content/we-retail/(pt-br\|de)/(.+)/speakers/(.*) | /content/we-retail/en/$1/speakers/$2 |
-| /content/geometrixx/de/* | https://www.geometrixx.de/welcome |
-
-
-![Trailing Wildcards](images/trailing-wildcard-1.png)
-
-![Back References](images/regex-backref.png)
-
-Note that ordering matters for overlapping regex matches.
-Rules are evaluated in the order they are defined in the tool and so far that was the order the rules were created.
-
-Assuming you created three overlapping rules, the first one will greedily match all the requests and #2 and #3 will never be used.
-
-```
-/content/we-retail/(.+)/about -> target1
-/content/we-retail/en/(.+)/about -> target2
-/content/we-retail/en/na/contact-us/(.+)/about -> target3
-```
-
-You can re-order rules by dragging them in the UI:
-
-
-![Re-Order](images/drag.png)
-
-
-3. Switch to the *Publish* tab and click the 'Publish Redirect Configurations' button to replicate redirects to the publish instances.
+On the "Manage Redirects" page switch to the *Publish* tab and click the 'Publish Redirect Configurations' button 
+to replicate your redirects to the publish instances.
 
 ![Publish Configurations](images/publish.png)
 
+### Testing 
 
-4. Testing Redirects in AEM Author
+In your publish instance navigate to http://localhost:4503/content/geometrixx/us/en/about-us.html which should return 
+a 302 redirect to http://localhost:4503/content/we-retail/us/en/about-us.html : 
 
-Redirects in Author are disabled in EDIT, PREVIEW and DESIGN WCM Modes. To test on author you need to disable WCM mode and append ?wcmmode=disabled to the query string, e.g.
-http://localhost:4502/content/we-retail/en/contact-us.html?wcmmode=disabled
-
-## Redirect Map Manager Features
-
-### Export and Import
-
- You can export redirects into a spreadsheet, edit of offline and then import the rules back in AEM. 
- ![Export](images/export.png)
-
-![Export](images/export-xls.png)
-
-![Import](images/import.png)
-
-The redirect map file will be combined with the redirects configured in AEM to create the final set of redirects. T
-
-### OSGi Configuration
-
-Advanced settings can be configured in the OSGi configuration
-![Import](images/osgi.png)
-
-ACS Redirect Manager supports the following attributes:
-
-1. Enabled Redirect Filter - global flag to enable/disable redirects
-2. Rewrite Location Headers - whether the Location header should be ResourceResolver#map'd 
-3. Request Extensions - optional list of extension for which redirection is allowed. Default is empty which means any extensions are allowed.
-4. Preserve Query String. Whether  query string, e.g.
-http://localhost:4502/content/we-retail/en/contact-us.html? from the source url should be appended to the Location header
-5. Storage path. Where to store redirect configurations. Default is /var/acs-commons/redirects
-6. On Delivery Headers. Optional HTTP headers in the _name:value_ format to apply on delivery
- 
-### Extending Functionality
-
-There can be cases clients would want to apply custom logic to rewrite the Location header before delivery. Redirect Manager provides a hook into the functionality which allows to register a class to rewrite urls:
-
-```java
-package com.adobe.acs.commons.redirects;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.osgi.service.component.annotations.Component;
-
-@Component
-public class MyLocationAdjuster implements LocationHeaderAdjuster{
-    @Override
-    public String adjust(SlingHttpServletRequest request, String location) {
-
-        if(location.startsWith("/content/we-retail/de/")){
-            String loc = StringUtils.substringAfter(location,"/content/we-retail/de/");
-            return "https://www.we-retail.de/" + loc;
-        }
-        return location;
-    }
-}
+```shell
+$ curl -I http://localhost:4503/content/geometrixx/us/en/about-us.html
+HTTP/1.1 302 Found
+Location: /content/we-retail/us/en/about-us.html
 ```
+
+ 
