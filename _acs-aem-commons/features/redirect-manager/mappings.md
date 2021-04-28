@@ -16,7 +16,7 @@ HTTP/1.1 302 Found
 Location: /content/we-retail/en/page2.html
 ```
 
-This may not work for setups where Dispatcher forces shortened URLs via the mod_rewrite rules, e.g.
+This may not work for setups where Dispatcher forces shortened URLs via mod_rewrite rules, e.g.
 ```shell
 https://www.we-retail.com/en/page1.html # HTTP 200
 https://www.we-retail.com/content/we-retail/en/page2.html # HTTP 404, only shortened paths are accepted
@@ -66,7 +66,7 @@ With this mappings Sling will map a full JCR path to a shortened domain URL, e.g
 // map /content/we-retail/en/page1 to https://www.we-retail.com/en/page1
 String mappedUrl = resourceResolver.map("/content/we-retail/en/page1"); // returns https://www.we-retail.com/en/page1
 ```
-where the domain and schema are taken from the path by naming conventions. See the [Sling Mappings](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) documentation for more details.
+where the domain and schema are taken from the path by naming conventions. See the [Mappings for Resource Resolution](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) page for more details.
  
 #### Mapping Redirect Target
 With the mappings above the Location header will be passed through `ResourceResolver#map` and user will get a shortened domain URL, e.g.

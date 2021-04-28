@@ -6,7 +6,7 @@ title: Redirect Manager - Extending Functionality
 ## Extending Functionality
 
 There can be cases clients would want to apply custom logic to rewrite the Location header before delivery. 
-Redirect Manager provides a hook into the functionality which allows to register a class to rewrite urls:
+Redirect Manager provides a hook which allows to register a class to rewrite urls:
 
 ```java
 package com.adobe.acs.commons.redirects;
