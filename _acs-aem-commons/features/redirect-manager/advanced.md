@@ -17,3 +17,8 @@ title: Redirect Manager - Advanced Configuration
 | Additional Response Headers|  | Optional response headers in the name:value format to apply on delivery, e.g. Cache-Control: max-age=3600 (additionalHeaders)  |
 | Configuration bucket name | settings | name of the parent folder where to store redirect rules, see [Context Aware Redirect Configurations](./caconfig.md)  |
 | Configuration Name | redirects |The node name to store redirect configurations. Default is 'redirects' which means the default path to store redirects is /conf/global/settings/redirects where 'settings' is the bucket and 'redirects' is the config name, see [Context Aware Redirect Configurations](./caconfig.md)  |
+
+## Additional Response Headers
+
+## JMX Instrumentation
+

@@ -44,6 +44,7 @@ You can use [Sling Mappings](./mappings.md) or a [custom class](./extend.md) to 
 | /content/we-retail/(pt-br\|de)/(.+)/speakers/(.*) | /content/we-retail/en/$1/conference/$2 | An example with two back references.  |
 | /content/we-retail/hello | /en/welcome | Return a shortened url (`/en/welcome`) instead of `/content/we-retail/en/welcome` . This will work assuming your dispatcher configuration rewrites `/en/welcome` into `/content/we-retail/en/welcome` |
 | /content/geometrixx/de/* | https://www.geometrixx.de/welcome | Redirect to an external domain |
+| /content/we-retail/hello | /en/welcome?a=1&b=2 | Redirect target can include a query string |
 
 
 ![Trailing Wildcards](images/trailing-wildcard-1.png)

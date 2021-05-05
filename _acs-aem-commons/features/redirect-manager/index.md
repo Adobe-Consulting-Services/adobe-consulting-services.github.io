@@ -9,7 +9,9 @@ initial-release: 5.0.4
 
 ## Purpose
 
-Redirect Manager allows content authors to  maintain and publish redirect configurations from AEM. Support for redirects is implemented as a servlet filter  which evaluates redirect configurations and issues a 302 or 301 respectively in case of a matching incoming request url. 
+Redirect Manager allows content authors to  maintain and publish redirect configurations from AEM. 
+Support for redirects is implemented as a servlet filter  which evaluates redirect configurations and issues a 302 or 301 
+respectively in case of a matching incoming request url. 
 
 ## Features
 * AEM as a Cloud Service  compatible
@@ -21,14 +23,14 @@ Redirect Manager allows content authors to  maintain and publish redirect config
 
 ## Table of Contents
 
-* [Getting started](#getting-started): New to managing redirects in AEM? This is the place to start!
-* [Managing Redirects](./manage.md): Manage Redirects
-* [Context aware configuration](./caconfig.md): Maintain different redirect configuration per context
+* [Getting Started](#getting-started-with-redirect-manager)
+* [Managing Redirects](./manage.md)
+* [Context Aware Configuration](./caconfig.md)
 * [Sling Mappings](./mappings.md): Using Sling Mappings to rewrite Location header
-* [Advanced Configuration](./advanced.md): OSGi configuration explained
+* [Advanced Configuration](./advanced.md)
 * [Extending Functionality](./extend.md): Extending the basic configuration 
 
-## Getting started
+## Getting Started with Redirect Manager
 
 ### Configuration
 Redirect Manager is a opt-in feature and requires an OSGi configuration before it gets active.
@@ -50,13 +52,15 @@ or navigate to http://localhost:4502/apps/acs-commons/content/redirect-manager/r
 
 You will see a list of available redirect configurations. The default global configuration (`/conf/global`) is created 
 automatically by ACS Commons and it is a good start to put your redirects.
+
 ![/conf/global](images/conf_global.png)
+See [Context Aware Configuration](./caconfig.md) how to maintain different redirect configuration per context
 
 Click on `/conf/global` to start managing redirect configurations
 
 ![Manage Redirects](images/manage-redirects.png)
 
-Click the _"+ Add Configuration"_ button to configure one or more Redirect Configurations, e.g. 
+Click the _"+ Add Configuration"_ button to add a redirect rule, e.g. 
 
 | Source        | Target           | Status Code |
 | ------------- |-------------|-------------|
@@ -67,7 +71,8 @@ Click the _"+ Add Configuration"_ button to configure one or more Redirect Confi
 Redirects are supported for pages and assets. You can match by exact path or by a regular expression.
 Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of
 the regex match.
-See the [Manage Redirects](./manage.md) for more information.
+
+See [Manage Redirects](./manage.md) for more information.
 
 ### Replicate 
 
