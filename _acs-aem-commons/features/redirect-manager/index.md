@@ -19,7 +19,6 @@ respectively in case of a matching incoming request url.
 * Support for context-aware configurations
 * Support for Sling Mappings to rewrite Location header
 * Export redirect rules into a spreadsheet, edit them offline and import back
-* JMX Instrumentation
 
 ## Table of Contents
 
@@ -28,7 +27,6 @@ respectively in case of a matching incoming request url.
 * [Context Aware Configuration](./caconfig.md)
 * [Sling Mappings](./mappings.md): Using Sling Mappings to rewrite Location header
 * [Advanced Configuration](./advanced.md)
-* [Extending Functionality](./extend.md): Extending the basic configuration 
 
 ## Getting Started with Redirect Manager
 

@@ -1,25 +1,22 @@
 ---
 layout: acs-aem-commons_subpage
-title: Redirect Manager - UI
+title: Manage Redirects
 ---
 
-##  Redirect Manager UI
+##  Managing Redirects
 
-[Redirect Manager](http://localhost:4502/apps/acs-commons/content/redirect-manager.html/conf/global/settings/redirects) 
-is a dashboard where you can create, update, delete and publish your redirect configurations. 
+Redirects can be created either from the [Manage Redirects](http://localhost:4502/apps/acs-commons/content/redirect-manager.html/conf/global/settings/redirects) console
+or [imported](#export-and-import) from an Excel spreadsheet.
 
-![Manage Redirects](images/manage-redirects.png)
-
-Click the _"+ Add Configuration"_ button to configure one or more Redirect Configurations, e.g.
+### Form Inputs
 
 ![Create Redirect Configurations](images/create-rule.png)
 
-### Form Inputs
 
 | Input        | Required          | Description          |
 | ------------- |-------------|-------------|
 | Source Path | Yes | Where to redirect from. Can be a path in AEM or a regular expression |
-| Target Path | Yes | Where to redirect to. Can be a path in AEM or an external URL |
+| Target Path | Yes | Where to redirect to. Can be a path in AEM or an external URL . Can contain back-references. |
 | Status Code | Yes | 301 or 302 **Warning:** The HTTP 301 status code is cached in browsers with no expiry date and cannot be reverted, i.e. once 301 is applied, it is forever |
 | Redirect Until | No | If the field has a value, the page redirection would work till that date and after that date, the redirection would stop for that entry, If the field has no value, the page redirection would work without any end date (as is)|
 | Notes | No | Optional notes. Roughly equivalent to a comment near a redirect in an Apache HTTPD conf file |
@@ -30,7 +27,7 @@ the regex match.
 
 Redirect target can be a full JCR path ( `/content/we-retail/en/about` ) or a shortened path (`/en/about`) compatible with 
 your Dispatcher mod_rewrite rules or an external url (https://www.we-retail.com/en/about). 
-You can use [Sling Mappings](./mappings.md) or a [custom class](./extend.md) to rewrite Location header.
+You can use [Sling Mappings](./mappings.md) or a [custom class](./mappings.md#custom-location-rewriter) to rewrite Location header.
 
 ### Examples:
 
@@ -72,10 +69,15 @@ You can re-order rules by dragging them in the UI:
 
 ### Export and Import
 
- You can export redirects into a spreadsheet, edit of offline and then import the rules back in AEM. 
- ![Export](images/export.png)
+ You can export redirects into a spreadsheet, edit it offline and then import the rules back in AEM. 
+ 
+To export redirects to a spreadsheet switch to the 'Export' tab and click the 'Export Redirect Map' button:
+
+![Export](images/export.png)
 
 ![Export](images/export-xls.png)
+
+To import redirects switch to the 'Import' tab and click the 'Import Redirect Map' button:
 
 ![Import](images/import.png)
 

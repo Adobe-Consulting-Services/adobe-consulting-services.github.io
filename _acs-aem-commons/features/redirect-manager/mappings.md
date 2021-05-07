@@ -104,3 +104,31 @@ Location: /en/welcome.html  # redirect target as is
 In the second case Redirect Filter will first try to lookup a rule by the JCR Path (_/content/we-retail/en/page_) 
 and then will try to match the mapped path (_/en/page_) . 
 
+## Custom Location Rewriter
+
+There can be cases clients would want to apply custom logic to rewrite the Location header before delivery.
+Redirect Manager provides a hook which allows to register a class to rewrite urls:
+
+```java
+package com.adobe.acs.commons.redirects;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.osgi.service.component.annotations.Component;
+
+@Component
+public class MyLocationAdjuster implements LocationHeaderAdjuster{
+    @Override
+    public String adjust(SlingHttpServletRequest request, String location) {
+
+        if(location.startsWith("/content/we-retail/de/")){
+            String loc = StringUtils.substringAfter(location,"/content/we-retail/de/");
+            return "https://www.we-retail.de/" + loc;
+        }
+        return location;
+    }
+}
+```
+
+You can use it as an alternative to Sling Mappings.
+

@@ -3,22 +3,54 @@ layout: acs-aem-commons_subpage
 title: Redirect Manager - Advanced Configuration
 ---
 
-## Advanced Configuration
+### Advanced Configuration
 
-![advanced configuration](images/osgi.png)
+### Additional Response Headers
+The `additionalHeaders` parameter specifies additional response headers to apply on delivery in the name: value format, e.g.
 
-| Source        | Default | Description |
-| ------------- |-------------|-------------|
-| Enable Redirect Filter | false | Whether redirects are enabled |
-| Rewrite Location Header | false | Apply Sling Resource Mappings to Location header. Set ti true if Location header should be rewritten using ResourceResolver#map |
-| Request Extensions |  | List of extensions for which redirection is allowed. Default is empty which means any.  |
-| Request Paths | /content | List of paths for which redirection is allowed. Set to the root (`/`) if you need to redirect vanity urls, e.g. `http://localhost:4502/vanityUrl => http://localhost:4502/en/page`  |
-| Preserve Query String | true | Preserve query string in redirects  |
-| Additional Response Headers|  | Optional response headers in the name:value format to apply on delivery, e.g. Cache-Control: max-age=3600 (additionalHeaders)  |
-| Configuration bucket name | settings | name of the parent folder where to store redirect rules, see [Context Aware Redirect Configurations](./caconfig.md)  |
-| Configuration Name | redirects |The node name to store redirect configurations. Default is 'redirects' which means the default path to store redirects is /conf/global/settings/redirects where 'settings' is the bucket and 'redirects' is the config name, see [Context Aware Redirect Configurations](./caconfig.md)  |
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          enabed="{Boolean}true"
+          additionalHeaders="[Cache-Control: max-age=3600,Cache-Control: no-store]"
+/>
+```
 
-## Additional Response Headers
+```shell
+$ curl -I http://localhost:4503/content/we-retail/page1.html
+HTTP/1.1 302 Found
+Location: /content/we-retail/page2.html
+Cache-Control: max-age=3600
+Cache-Control: no-store
+```
 
-## JMX Instrumentation
+
+### Preserving Query String
+
+The `preserveQueryString` parameter controls whether query string will be preserved in redirects, e.g.
+
+```shell
+$ curl -I http://localhost:4503/content/we-retail/page1.html?a=1&b=2
+HTTP/1.1 302 Found
+Location: /content/we-retail/page2.html?a=1&b=2     # query string preserved
+```
+The default value is `true`. Set `preserveQueryString` to false to drop query string parameters in redirects:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          enabed="{Boolean}true"
+          preserveQueryString="{Boolean}false"
+/>
+```
+
+```shell
+$ curl -I http://localhost:4503/content/we-retail/page1.html?a=1&b=2
+HTTP/1.1 302 Found
+Location: /content/we-retail/page2.html   # no query string
+```
+
+
 
