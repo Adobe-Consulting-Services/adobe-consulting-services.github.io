@@ -29,10 +29,6 @@ Helps a business user:
 # How to Use
 
 * Log in to AEM Author
-
-Tools >> acs-commons >> Content Packagers
-
-
 * Navigate to __Tools > ACS Commons > Conetnt Packagers__
 * Under the `packagers` folder, create a new Page of Template type "Asset Packager"
 ![image](images/create_dialog.png)
