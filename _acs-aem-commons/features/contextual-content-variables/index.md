@@ -11,7 +11,7 @@ initial-release: 5.0.5
 ## Purpose
 
 Contextual Content Variables is a tool built to enable authors to use content variables directly in their authored text.
-The tool replaces variables present in the content (either JSON or HTML) at render-time, keeping caching enabled for the
+The tool replaces variables present in the content (either JSON or HTML) on the server-side at render-time, keeping caching enabled for the
 site and decreasing any impact on performance.
 
 ## How to Use
