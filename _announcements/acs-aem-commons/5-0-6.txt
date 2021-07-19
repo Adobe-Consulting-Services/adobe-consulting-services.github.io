@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.0.6
+description: Bug fixes galore!
+date: 2021-07-12
+project: acs-aem-commons
+---
