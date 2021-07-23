@@ -23,10 +23,10 @@ respectively in case of a matching incoming request url.
 ## Table of Contents
 
 * [Getting Started](#getting-started-with-redirect-manager)
-* [Managing Redirects](./manage)
-* [Context Aware Configuration](./caconfig)
-* [Sling Mappings](./mappings): Using Sling Mappings to rewrite Location header
-* [Advanced Configuration](./advanced)
+* [Managing Redirects](./manage.html)
+* [Context Aware Configuration](./caconfig.html)
+* [Sling Mappings](./mappings.html): Using Sling Mappings to rewrite Location header
+* [Advanced Configuration](./advanced.html)
 
 ## Getting Started with Redirect Manager
 
