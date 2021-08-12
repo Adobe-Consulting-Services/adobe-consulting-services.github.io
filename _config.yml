@@ -1,4 +1,4 @@
-name: Adobe Consulting Services
+name: Adobe Community Software
 highlighter: rouge
 markdown: kramdown
 exclude:  [ Gemfile, Gemfile.lock, README.md, vendor/, .idea/]
