@@ -5,9 +5,17 @@ description: Set TTLs on ClientLib JS/CSS to infinity and beyond!
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/versioned-clientlibs.html
 feature-tags: component-dev backend-dev
-tags: aemcs-incompatible
+tags: aemcs-incompatible deprecated
 initial-release: 1.2.0
 ---
+
+## AEM as a Cloud Service notice!
+
+AEM ClientLibraryManager now supports [versioning client library URLs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=en#content-consistency). 
+
+Only use the ACS AEM Commons versioned client libraries if your version of AEM does not support versioned client library URLs.
+
+
 
 ## Purpose
 
