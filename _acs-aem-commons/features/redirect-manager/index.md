@@ -52,7 +52,7 @@ You will see a list of available redirect configurations. The default global con
 automatically by ACS Commons and it is a good start to put your redirects.
 
 ![/conf/global](images/conf_global.png)
-See [Context Aware Configuration](./caconfig.md) how to maintain different redirect configuration per context
+See [Context Aware Configuration](./caconfig.html) how to maintain different redirect configuration per context
 
 Click on `/conf/global` to start managing redirect configurations
 
@@ -70,7 +70,7 @@ Redirects are supported for pages and assets. You can match by exact path or by 
 Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of
 the regex match.
 
-See [Manage Redirects](./manage.md) for more information.
+See [Manage Redirects](./manage.html) for more information.
 
 ### Replicate 
 

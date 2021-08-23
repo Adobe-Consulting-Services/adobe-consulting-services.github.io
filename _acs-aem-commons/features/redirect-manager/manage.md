@@ -27,7 +27,7 @@ the regex match.
 
 Redirect target can be a full JCR path ( `/content/we-retail/en/about` ) or a shortened path (`/en/about`) compatible with 
 your Dispatcher mod_rewrite rules or an external url (https://www.we-retail.com/en/about). 
-You can use [Sling Mappings](./mappings.md) or a [custom class](./mappings.md#custom-location-rewriter) to rewrite Location header.
+You can use [Sling Mappings](./mappings.html) or a [custom class](./mappings.html#custom-location-rewriter) to rewrite Location header.
 
 ### Examples:
 
