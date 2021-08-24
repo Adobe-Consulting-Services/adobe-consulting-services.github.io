@@ -40,7 +40,7 @@ To enable redirects create a configuration for PID `com.adobe.acs.commons.redire
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:OsgiConfig"
-          enabed="{Boolean}true"/>
+          enabled="{Boolean}true"/>
 ```
 
 ###  Create Redirects

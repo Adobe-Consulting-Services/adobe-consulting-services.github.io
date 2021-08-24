@@ -12,7 +12,7 @@ The `additionalHeaders` parameter specifies additional response headers to apply
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:OsgiConfig"
-          enabed="{Boolean}true"
+          enabled="{Boolean}true"
           additionalHeaders="[Cache-Control: max-age=3600,Cache-Control: no-store]"
 />
 ```
@@ -41,7 +41,7 @@ The default value is `true`. Set `preserveQueryString` to false to drop query st
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:OsgiConfig"
-          enabed="{Boolean}true"
+          enabled="{Boolean}true"
           preserveQueryString="{Boolean}false"
 />
 ```

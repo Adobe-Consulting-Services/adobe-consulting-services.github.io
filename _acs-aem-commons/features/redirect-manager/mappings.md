@@ -39,7 +39,7 @@ or add a `rewriteUrls="{Boolean}true"` parameter in the OSGi configuration:
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:OsgiConfig"
           rewriteUrls="{Boolean}true"
-          enabed="{Boolean}true"/>
+          enabled="{Boolean}true"/>
 ```
 
 ### Example
