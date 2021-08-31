@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.0.10
+description: Bugfix with MCP tools, and re-added the Redirect Map Manager card, and some other minor enhancements and fixes!
+date: 2021-08-31
+project: acs-aem-commons
+---
