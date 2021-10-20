@@ -11,7 +11,7 @@ tags: deprecated
 
 # Deprecation notice
 
-Please prefer the [Sitemap feature in AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components/issues/1697) when possible.
+**Please prefer the [Sitemap feature in AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/seo/sitemaps.html) when possible.**
 
 
 # Purpose
