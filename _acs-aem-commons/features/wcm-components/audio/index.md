@@ -5,6 +5,7 @@ description: An HTML5 audio component and related workflow process
 date: 2013-08-10
 redirect_from: /acs-aem-commons/features/audio.html
 feature-tags: component-dev components
+tags: aemcs-incompatible
 initial-release: 1.0.0
 ---
 
