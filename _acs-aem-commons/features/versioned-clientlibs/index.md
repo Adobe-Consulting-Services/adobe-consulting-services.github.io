@@ -9,11 +9,13 @@ tags: aemcs-incompatible deprecated
 initial-release: 1.2.0
 ---
 
-## AEM as a Cloud Service notice!
+## DEPRECATION INFORMATION
 
-AEM ClientLibraryManager now supports [versioning client library URLs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=en#content-consistency). 
+AEM as a Cloud Service's ClientLibraryManager now supports [versioning client library URLs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=en#content-consistency). 
 
 Only use the ACS AEM Commons versioned client libraries if your version of AEM does not support versioned client library URLs.
+
+__When using AEM 6.5.x, ignore the deprecation notice if/until OOTB version client library URLs are made available OOTB.__
 
 
 
