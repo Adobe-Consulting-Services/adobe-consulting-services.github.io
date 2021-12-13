@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.1.0
+description: Bug fixes and a new iscurrentusermemberof Granite UI render condition!
+date: 2021-12-13
+project: acs-aem-commons
+---
