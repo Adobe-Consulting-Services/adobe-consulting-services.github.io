@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.1.2
+description: Resolves critical errors with Cloud Manager for AEM as a Cloud Service!
+date: 2022-01-21
+project: acs-aem-commons
+---
