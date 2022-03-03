@@ -85,6 +85,28 @@ In the Touch UI Asset Metadata Editor, you can provide the name to the list *pre
 
 > One quirk of the Metadata Asset Editor is that the JSON support is not dynamic. You must update the editor when the list changes.
 
+## Localization (since v5.2.0)
+
+Localization was added in a non-backwards compatible manner (localization appeared for all users regardless if it was desired) and updated to be opt-in in v5.2.0.
+
+1. By default localization of Generic List dialogs is disabled, so Generic List authoring using a single language.
+   ![Localize - 1](./images/localize-1.png)
+1. To enable localized Generic List dialogs can enable at Global Level via OSGi config. 
+
+  ![Localize - 2](./images/localize-2.png)
+
+  `com.adobe.acs.commons.mcp.impl.McpLocalizationServiceImpl.cfg.json`
+  
+  ```json
+  {
+    "localizationEnabled": true
+  }
+  ```  
+1.  Create an overlay of the languages JCR structure found in `/libs/wcm/core/resources/languages` to `/apps/wcm/core/resources/languages` including the languages you require for localization.
+  ![Localize - 3](./images/localize-3.png)
+1. Then Localized Generic List authoring will look like:
+  ![Localize - 4](./images/localize-4.png)
+
 ## API
 
 You will frequently need to do two things with lists:
