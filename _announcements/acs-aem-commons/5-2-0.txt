@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.2.0
+description: The big fix in this one is to Generic Lists and localization support. If youre using localization with Generic Lists checkout the updated docs.
+date: 2022-03-03
+project: acs-aem-commons
+---
