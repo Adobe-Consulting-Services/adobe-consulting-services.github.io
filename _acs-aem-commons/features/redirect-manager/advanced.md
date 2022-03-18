@@ -3,8 +3,6 @@ layout: acs-aem-commons_subpage
 title: Redirect Manager - Advanced Configuration
 ---
 
-### Advanced Configuration
-
 ### Additional Response Headers
 The `additionalHeaders` parameter specifies additional response headers to apply on delivery in the name: value format, e.g.
 
@@ -51,6 +49,3 @@ $ curl -I http://localhost:4503/content/we-retail/page1.html?a=1&b=2
 HTTP/1.1 302 Found
 Location: /content/we-retail/page2.html   # no query string
 ```
-
-
-
