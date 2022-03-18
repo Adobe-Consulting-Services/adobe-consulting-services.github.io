@@ -67,6 +67,36 @@ You can re-order rules by dragging them in the UI:
 ![Re-Order](images/drag.png)
 
 
+
+### Context Prefix
+
+In cases where a lot of redirect rules share a common base path, it is often handy to define a context prefix. A context prefix allows to omit the common base path from the Source and Target Paths for all redirect rules within a configuration.
+
+A context prefix is scoped per configuration.
+
+To make a redirect rule ignore a context prefix for a certain Target Path, use an absolute url or check the Ignore Context Prefix checkbox.
+
+With the context prefix `/content/we-retail`, target paths are resolved as follows
+
+```
+/en/index -> /content/we-retail/en/index
+/content/we-retail/en/index -> /content/we-retail/en/index
+https://www.we-retail.com/en/index -> https://www.we-retail.com/en/index
+```
+
+When a context prefix is set for the current configuration, this is clearly indicated in the UI:
+
+![Prefix text](images/prefix-text.png)
+
+The content prefix can be entered while creating the [Context Aware Configuration](./caconfig.html):
+
+![Creation in CA config](images/prefix-create1.png)
+
+It can also be added or edited afterwards in the [Manage Redirects](http://localhost:4502/apps/acs-commons/content/redirect-manager.html/conf/global/settings/redirects) page:
+
+![Creation in manage redirects](images/prefix-create2.png)
+
+
 ### Export and Import
 
  You can export redirects into a spreadsheet, edit it offline and then import the rules back in AEM. 
