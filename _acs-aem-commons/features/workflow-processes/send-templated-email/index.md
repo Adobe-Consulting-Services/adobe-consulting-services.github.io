@@ -21,6 +21,8 @@ Based on the payload the email parameters are pre-populate with JCR properties:
 * The param map keys are the Node's property names and the values the `String` representations of the property value. For `String[]` properties the value is one comma separated String.
   * Currently `String[]` are checked for multiple properties.
 
+Params (i.e. properties) are referencable in the [e-mail template](https://adobe-consulting-services.github.io/acs-aem-commons/features/e-mail/email-api/index.html#creating-an-email-template) using the `${paramName}` syntax.
+
 Include additional parameters added to E-mail params
 
 * **wfStepTitle**: Title of workflow step
@@ -33,6 +35,7 @@ WF Process is configured using the OOTB Process Step with the following workflow
 
 * **sendTo**: Path to a CQ user or group. An E-mail will be sent to the user. In the case of a group, an E-mail  is sent to all members.
 * **emailTemplate**: Absolute path to the E-mail template to use in the JCR repository.
+  * [E-mail template format example](https://adobe-consulting-services.github.io/acs-aem-commons/features/e-mail/email-api/index.html#creating-an-email-template)
 * **dateFormat**: (optional) SimpleDateFormat string for converting Calendar properties to a String to be used in the email (i.e: yyyy-MM-dd hh:mm)
 
 ![image](images/wf-step.png)
