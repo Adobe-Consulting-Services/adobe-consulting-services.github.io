@@ -30,7 +30,8 @@ In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
     <artifactId>acs-aem-commons-ui.apps</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>zip</type>
-    <classifier>min</classifier> <!-- optional, see below -->
+    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
+    <classifier>min</classifier>
 </dependency>
 {% endhighlight %}
 
@@ -44,7 +45,8 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
     <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>content-package</type>
-    <classifier>min</classifier> <!-- optional, see below -->
+    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
+    <classifier>min</classifier>
 </dependency>
 {% endhighlight %}
 
@@ -58,7 +60,8 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
     <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version62 }}</version>
     <type>content-package</type>
-    <classifier>min</classifier> <!-- optional, see below -->
+    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
+    <classifier>min</classifier>
 </dependency>
 {% endhighlight %}
 
@@ -72,11 +75,14 @@ In the `<dependencies>` section of your _content project's pom.xml_ file, add th
     <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version60 }}</version>
     <type>content-package</type>
-    <classifier>min</classifier> <!-- optional, see below -->
+    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
+    <classifier>min</classifier> 
 </dependency>
 {% endhighlight %}
 
-### Minimal Package
+### Minimal Package (v5.3.0 and earlier)
+
+__Version 5.3.0+ no have/need a min package. For v5.3.0+ do not specify a classifier__
 
 ACS AEM Commons has two distributions:
 
