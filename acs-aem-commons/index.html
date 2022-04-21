@@ -69,9 +69,11 @@ description: A way to bootstrap AEM project with common functionality, a set of 
 
             {% assign sorted = site.acs-aem-commons | sort: 'date' | reverse %}
             {% for page in sorted %}
-            {% assign depth = page.path | split: '/' | size %}
-                {% if depth == 4 %}
-                    {% include shared/feature-card.html feature=page project=site.data.acs-aem-commons %}
+                {% if page.layout != "acs-aem-commons_subpage" %}
+                    {% assign depth = page.path | split: '/' | size %}
+                    {% if depth == 4 %}
+                        {% include shared/feature-card.html feature=page project=site.data.acs-aem-commons %}
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </div>

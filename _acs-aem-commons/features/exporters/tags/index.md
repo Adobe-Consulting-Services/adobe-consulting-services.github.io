@@ -6,7 +6,7 @@ date: 2019-10-30
 redirect_from: /acs-aem-commons/features/exports.html
 feature-tags: administration
 tags: 
-initial-release: 4.3.4
+initial-release: 4.8.0
 ---
 
 ## Tags to CSV Exporter

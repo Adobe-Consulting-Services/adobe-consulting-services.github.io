@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.3.0
+description: A bunch of stuff! fixes, changes and some new additions to redirect manager and data importer. The big change is no more min package though!
+date: 2022-04-15
+project: acs-aem-commons
+---

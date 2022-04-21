@@ -23,10 +23,10 @@ respectively in case of a matching incoming request url.
 ## Table of Contents
 
 * [Getting Started](#getting-started-with-redirect-manager)
-* [Managing Redirects](./manage.html)
-* [Context Aware Configuration](./caconfig.html)
-* [Sling Mappings](./mappings.html): Using Sling Mappings to rewrite Location header
-* [Advanced Configuration](./advanced.html)
+* [Managing Redirects](./subpages/manage.html)
+* [Context Aware Configuration](./subpages/caconfig.html)
+* [Sling Mappings](./subpages/mappings.html): Using Sling Mappings to rewrite Location header
+* [Advanced Configuration](./subpages/advanced.html)
 
 ## Getting Started with Redirect Manager
 
@@ -40,7 +40,7 @@ To enable redirects create a configuration for PID `com.adobe.acs.commons.redire
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:OsgiConfig"
-          enabed="{Boolean}true"/>
+          enabled="{Boolean}true"/>
 ```
 
 ###  Create Redirects
@@ -52,7 +52,7 @@ You will see a list of available redirect configurations. The default global con
 automatically by ACS Commons and it is a good start to put your redirects.
 
 ![/conf/global](images/conf_global.png)
-See [Context Aware Configuration](./caconfig.md) how to maintain different redirect configuration per context
+See [Context Aware Configuration](./caconfig.html) how to maintain different redirect configuration per context
 
 Click on `/conf/global` to start managing redirect configurations
 
@@ -70,7 +70,7 @@ Redirects are supported for pages and assets. You can match by exact path or by 
 Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of
 the regex match.
 
-See [Manage Redirects](./manage.md) for more information.
+See [Manage Redirects](./manage.html) for more information.
 
 ### Replicate 
 
