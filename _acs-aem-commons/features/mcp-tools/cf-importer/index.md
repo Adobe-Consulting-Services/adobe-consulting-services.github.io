@@ -26,7 +26,19 @@ The input spreadsheet must have a header row followed by data rows, e.g.
 | /content/dam/cf-import | import-1 | CF Test 1 | /conf/cf-import/settings/dam/cfm/models/cf-test-model | value1 | 2022   |
 | /content/dam/cf-import | import-2 | CF Test 2 | /conf/cf-import/settings/dam/cfm/models/cf-test-model | value2 | 0.5    |
 
-Download [sample spreadsheet](./images/cf-importer.xlsx "sample spreadsheet") and [CF model](./images/cf-importer-test-model-1.0.zip "CF model")
+this input will created two content fragments in AEM: 
+```  
++  /content/dam/cf-import
+     +  import-1
+        - jcr:title   CF Test 1  
+        - cq:model    /conf/cf-import/settings/dam/cfm/models/cf-test-model   
+     +  import-2  
+        - jcr:title   CF Test 2         
+        - cq:model    /conf/cf-import/settings/dam/cfm/models/cf-test-model   
+```
+
+Download [sample spreadsheet](./images/cf-importer.xlsx "sample spreadsheet") and 
+[CF model](./images/cf-importer-test-model-1.0.zip "CF model") to see all available options
 
 ### Required Columns
 The first four columns have fixed names and are required:
