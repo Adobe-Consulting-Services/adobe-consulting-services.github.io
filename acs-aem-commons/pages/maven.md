@@ -10,79 +10,25 @@ If you're using the Content Package Maven plugin, take these two easy steps:
 
 ## Step 1: Add ACS AEM Commons as a Dependency
 
-Note that all `<dependency>` entries listed below can be defined at the Reactor pom.xml with the version, type and classifier, and the version-less/type-less/classifier-less dependencys can be used in the sub-project poms. The instructions below define the dependencies directly in each sub-project pom for clarity and succinctness. 
+Note that all `<dependency>` entries listed below can be defined at the reactor pom.xml's `<dependencyManagement>` with the version, type and classifier, and the version-less dependencies can be used in the sub-project poms. The instructions below define the dependencies directly in each sub-project pom for clarity and succinctness. 
 
-### For AEM as a Cloud Service (or any project built from AEM Maven Archetype 21 and above)
-
-In the `<dependencies>` section of your _all project's pom.xml_ file, add this:
+In the `<dependencies>` section of your _all (container-package) project's pom.xml_ file, add this:
 
 {% highlight xml %}
 <dependency>
     <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-ui.content</artifactId>
+    <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>zip</type>
     <classifier>min</classifier> <!-- optional, see below -->
 </dependency>
-
-<dependency>
-    <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-ui.apps</artifactId>
-    <version>{{ site.data.acs-aem-commons.version }}</version>
-    <type>zip</type>
-    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
-    <classifier>min</classifier>
-</dependency>
 {% endhighlight %}
 
-### For 6.3, 6.4, and 6.5
-
-In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
-
-{% highlight xml %}
-<dependency>
-    <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-content</artifactId>
-    <version>{{ site.data.acs-aem-commons.version }}</version>
-    <type>content-package</type>
-    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
-    <classifier>min</classifier>
-</dependency>
-{% endhighlight %}
-
-### For 6.2
-
-In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
-
-{% highlight xml %}
-<dependency>
-    <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-content</artifactId>
-    <version>{{ site.data.acs-aem-commons.version62 }}</version>
-    <type>content-package</type>
-    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
-    <classifier>min</classifier>
-</dependency>
-{% endhighlight %}
-
-### For 6.0 and 6.1
-
-In the `<dependencies>` section of your _content project's pom.xml_ file, add this:
-
-{% highlight xml %}
-<dependency>
-    <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-content</artifactId>
-    <version>{{ site.data.acs-aem-commons.version60 }}</version>
-    <type>content-package</type>
-    <!-- min not supported after v5.3.0 -- otherwise optional < v5.3.0 -- see below -->    
-    <classifier>min</classifier> 
-</dependency>
-{% endhighlight %}
+Please refer to [Compatibility](/acs-aem-commons/pages/compatibility.html) for the last version compatible with AEM 6.4 or older.
 
 ### Minimal Package (v5.3.0 and earlier)
 
-__Version 5.3.0+ no have/need a min package. For v5.3.0+ do not specify a classifier__
+__Version 5.3.0+ no longer has/needs a min package. For v5.3.0+ do not specify a classifier__
 
 ACS AEM Commons has two distributions:
 
@@ -103,10 +49,10 @@ To include the ''full'' package, don't provide any `<classifier>` element inside
 
 ## Step 2: Add ACS AEM Commons as an Embed/Sub package
 
-### For AEM as a Cloud Service (or any AEM Project genereated from AEM Project Maven Archetype 21 and above)
+### For AEM as a Cloud Service (or any AEM Project generated from AEM Project Maven Archetype 21 and above)
 
-For more information on the Maven Project sructural changes in Maven Archetype 21, please review [Understand the Structure of a Project Content Package in AEM as a Cloud Service]
-](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html).  Note that this project structure is compatible with AEM 6.x as well.
+For more information on the Maven Project structural changes in Maven Archetype 21, please review [Understand the Structure of a Project Content Package in AEM as a Cloud Service]
+](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html). Note that this project structure is compatible with AEM 6.x as well.
 
 In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
 
@@ -117,23 +63,14 @@ In the `filevault-package-maven-plugin` plugin configuration of your _all projec
         <artifactId>filevault-package-maven-plugin</artifactId>
         ...
         <configuration>
-            <!-- allowIndexDefinitions is required as acs-aem-commons deploys 
-                 ACLs to /oak:index which is detected as an "index definition", 
-                 even though it's not really an oak index definition -->
-            <allowIndexDefinitions>true</allowIndexDefinitions>
-            ...
             <embeddeds>
                 <embedded>
                     <groupId>com.adobe.acs</groupId>
-                    <artifactId>acs-aem-commons-ui.apps</artifactId>
+                    <artifactId>acs-aem-commons-content</artifactId>
                     <type>zip</type>
                     <target>/apps/my-app-packages/application/install</target>
-                </embedded>
-                <embedded>
-                    <groupId>com.adobe.acs</groupId>
-                    <artifactId>acs-aem-commons-ui.content</artifactId>
-                    <type>zip</type>
-                    <target>/apps/my-app-packages/content/install</target>
+                    <filter>true</filter>
+                    <isAllVersionsFilter>true</isAllVersionsFilter>
                 </embedded>
                 ...
 {% endhighlight %}
@@ -161,7 +98,7 @@ In the _content project's pom.xml_, within the configuration of the `content-pac
 </plugin>    
 {% endhighlight %}
 
-If using the `filevault-package-maven-plugin`, within it's configuration add a `subPackage` just like above and also add `allowIndexDefinitions` like below: 
+If using the `filevault-package-maven-plugin`, within its configuration add a `subPackage` just like above: 
 
 {% highlight xml %}
 <plugin>
@@ -169,13 +106,12 @@ If using the `filevault-package-maven-plugin`, within it's configuration add a `
     <artifactId>filevault-package-maven-plugin</artifactId>
     <extensions>true</extensions>
     <configuration>
-        <allowIndexDefinitions>true</allowIndexDefinitions>
-        ...
         <subPackages>
             <subPackage>
                 <groupId>com.adobe.acs</groupId>
                 <artifactId>acs-aem-commons-content</artifactId>
                 <filter>true</filter>
+                <isAllVersionsFilter>true</isAllVersionsFilter>
             </subPackage>
         </subPackages>
         ...
@@ -183,9 +119,11 @@ If using the `filevault-package-maven-plugin`, within it's configuration add a `
 </plugin>    
 {% endhighlight %}
 
+As the `filevault-package-maven-plugin` prior to version 1.1.0 suffered from bug [JCRVLT-343](https://issues.apache.org/jira/browse/JCRVLT-343) use a newer version (in general using the most recent version outlined at [Plugin Documentation](https://jackrabbit.apache.org/filevault-package-maven-plugin/plugin-info.html#usage) is recommended).
+
 ## Step 3: Add ACS AEM Commons Bundle as a Dependency (Optional)
 
-In the `<dependencies>` section of the _pom.xml_ any maven projects that use ACS AEM Commons APIs (Java utils, TagLibs, etc.), add the dependency for the `acs-aem-commons-bundle` project. The `acs-aem-commons-bundle` will deployed as part of the `acs-aem-commons-content` package (above), however the dependency is required to compile your project when it uses ACS AEM Commons Java APIs.
+In the `<dependencies>` section of the _pom.xml_ of any Maven modules that use ACS AEM Commons APIs (Java utils, TagLibs, etc.), add the dependency for the `acs-aem-commons-bundle` project. The `acs-aem-commons-bundle` will deployed as part of the `acs-aem-commons-content` package (above), however the dependency is required to compile your project when it uses ACS AEM Commons Java APIs.
 
 {% highlight xml %}
 <dependency>
