@@ -26,7 +26,7 @@ The input spreadsheet must have a header row followed by data rows, e.g.
 | /content/dam/cf-import | import-1 | CF Test 1 | /conf/cf-import/settings/dam/cfm/models/cf-test-model | value1 | 2022   |
 | /content/dam/cf-import | import-2 | CF Test 2 | /conf/cf-import/settings/dam/cfm/models/cf-test-model | value2 | 0.5    |
 
-this input will created two content fragments in AEM: 
+This input will create two content fragments in AEM: 
 ```  
 +  /content/dam/cf-import
      +  import-1
