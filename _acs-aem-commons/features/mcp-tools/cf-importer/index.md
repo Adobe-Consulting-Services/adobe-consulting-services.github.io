@@ -38,7 +38,7 @@ This input will create two content fragments in AEM:
 ```
 
 Download [sample spreadsheet](./images/cf-importer.xlsx "sample spreadsheet") and 
-[CF model](./images/cf-importer-test-model-1.0.zip "CF model") to see all available options
+[CF model](./images/cf-importer-test-model-1.0.zip "CF model") to see all available options.
 
 ### Required Columns
 The first four columns have fixed names and are required:
