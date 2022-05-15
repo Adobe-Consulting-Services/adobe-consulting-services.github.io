@@ -70,7 +70,7 @@ The data columns map the spreadsheet cells to the fields in the CF model:
 
 #### Multivalued Fields
 
-To specify multiple values fields enter multiple lines in a single Excel cell by pressing Alt + Enter keys simultaneously while entering texts
+To specify multiple values fields enter multiple lines in a single Excel cell by pressing Alt + Enter keys simultaneously while entering text.
 
 ### CF Metadata Columns
 
