@@ -68,7 +68,7 @@ In the `filevault-package-maven-plugin` plugin configuration of your _all projec
                     <groupId>com.adobe.acs</groupId>
                     <artifactId>acs-aem-commons-content</artifactId>
                     <type>zip</type>
-                    <target>/apps/my-app-packages/application/install</target>
+                    <target>/apps/my-app-packages/container/install</target>
                     <filter>true</filter>
                     <isAllVersionsFilter>true</isAllVersionsFilter>
                 </embedded>
