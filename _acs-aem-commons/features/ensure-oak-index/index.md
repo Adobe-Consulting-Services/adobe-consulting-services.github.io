@@ -78,6 +78,51 @@ Now, deploy the package containing the Ensure Definitions and the OSGi Configura
 * Ensure Definition nodes can be multi-levels deep, supporting Lucene Property Index definitions.
 * Define the Ensure Definition exactly as you would the Oak Index you wish to create/update (with the exception of the `jcr:primaryType` as noted above)
 
+### Ignored Properties
+
+The following properties are always ignored (hard-coded into the [EnsureOakIndexJobHandler.java](https://github.com/Adobe-Consulting-Services/acs-aem-commons/blob/master/bundle/src/main/java/com/adobe/acs/commons/oak/impl/EnsureOakIndexJobHandler.java)) when determining if there is a change between the Oak index and the Ensure Oak index:
+
+#### Shared ignored properties
+
++ `jcr:primaryType`
++ `jcr:lastModified`
++ `jcr:lastModifiedBy`
++ `jcr:mixinTypes`
++ `jcr:created`
++ `jcr:createdBy`
+
+#### Ignored Ensure oak index definition properties
+
++ `recreateOnUpdate`
++ `forceReindex`
++ `delete`
++ `ignore`
++ `disable`
+
+#### Ignored Oak index definition properties
+
++ `reindex`
++ `reindexCount`
++ `seed`
+
+#### Ignored sub-trees
+
+These entire sub-trees are ignored from determining a delta.
+
++ `[oak:QueryIndexDefinition]/facets/jcr:content` (for Oak index)
++ `[oak:Unstructured]/facets/jcr:content` (for Ensure oak index)
+
+Other properties can be ignored as needed (for example, if AEM/Oak changes their implementation and adds other "transient value" properties) using thise `
+
+#### Custom ignored properties
+
+Custom ignored properties can be added by creating an OSGi configuration for `com.adobe.acs.commons.oak.impl.EnsureOakIndexManagerImpl.cfg.json`
+
+```json
+{
+    "properties.ignore": [ "anotherPropertyToIgnore", "andAnotherPropertyToIgnore" ]
+}
+```
 
 ### Special Properties
 
@@ -99,7 +144,6 @@ An Ensure Definition can mark an Oak Index as disabled (but NOT deleted) by sett
 
 * `/apps/mysite/oak-index/disable-this-index@disable=true`
 
-
 ### Delete
 
 Property Name: `delete`
@@ -113,7 +157,7 @@ To delete an existing Oak Index, create an Ensure Definition with the same node 
 
 Property Name: `forceReindex`
 
-On create or update, the Oak Index can be marked to be immediately re-indexed by setting @forceReindex=true`.
+On create or update, the Oak Index can be marked to be immediately re-indexed by setting @forceReindex=true`. 
 
 * `/apps/mysite/oak-index/always-reindex-this-index@forceReindex=true`
 
