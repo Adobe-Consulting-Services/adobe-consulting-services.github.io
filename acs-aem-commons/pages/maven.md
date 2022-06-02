@@ -20,7 +20,6 @@ In the `<dependencies>` section of your _all (container-package) project's pom.x
     <artifactId>acs-aem-commons-content</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>zip</type>
-    <classifier>min</classifier> <!-- optional, see below -->
 </dependency>
 {% endhighlight %}
 
