@@ -25,9 +25,9 @@ In the `<dependencies>` section of your _all (container-package) project's pom.x
 
 Please refer to [Compatibility](/acs-aem-commons/pages/compatibility.html) for the last version compatible with AEM 6.4 or older.
 
-### Minimal Package (v5.3.0 and earlier)
+### Minimal Package (v5.2.x and earlier)
 
-__Version 5.3.0+ no longer has/needs a min package. For v5.3.0+ do not specify a classifier__
+__Version 5.3.0 and above no longer has a min package. For v5.3.0 and above do not specify a classifier__
 
 ACS AEM Commons has two distributions:
 
