@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.3.2
+description: Whole lotta bug fixes! Check the release notes!
+date: 2022-06-22
+project: acs-aem-commons
+---
