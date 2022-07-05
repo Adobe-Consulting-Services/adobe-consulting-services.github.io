@@ -1,4 +1,4 @@
----
+\---
 layout: acs-aem-commons_feature
 title: Redirect Manager
 description: Manage HTTP Redirects in AEM

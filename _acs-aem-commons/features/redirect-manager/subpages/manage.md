@@ -32,17 +32,18 @@ You can use [Sling Mappings](./mappings.html) or a [custom class](./mappings.htm
 
 ### Examples:
 
-| Source        | Target           | Description |
-| ------------- |-------------|-------------|
-| /content/we-retail/hello | /content/we-retail/welcome | Match a page by path. Redirect `/content/we-retail/hello` to `/content/we-retail/welcome` |
-| /content/dam/we-retail/hello.pdf | /content/dam/we-retail/welcome.pdf | Match an asset by path. Redirect `/content/dam/we-retail/hello.pdf` to `/content/dam/we-retail/welcome.pdf` |
-| /content/we-retail/de/about/* | /content/we-retail/en/about | Wildcard Match.  Redirect all pages that start with `/content/we-retail/de/about/*` to `/content/we-retail/en/about`|
-| /content/we-retail/es/about/(.*) | /content/we-retail/en/about | Regex Match equivalent to `/content/we-retail/de/about/*`.  Redirect all pages that match `/content/we-retail/de/about/(.*)` to `/content/we-retail/en/about` |
-| /content/we-retail/de/about/(.*) | /content/we-retail/en/about/$1 | Use a back-reference to redirect german pages (de) to  their english versions (en), e.g. `/content/we-retail/de/about/team => /content/we-retail/en/about/team` |
-| /content/we-retail/(pt-br\|de)/(.+)/speakers/(.*) | /content/we-retail/en/$1/conference/$2 | An example with two back references.  |
-| /content/we-retail/hello | /en/welcome | Return a shortened url (`/en/welcome`) instead of `/content/we-retail/en/welcome` . This will work assuming your dispatcher configuration rewrites `/en/welcome` into `/content/we-retail/en/welcome` |
-| /content/geometrixx/de/* | https://www.geometrixx.de/welcome | Redirect to an external domain |
-| /content/we-retail/hello | /en/welcome?a=1&b=2 | Redirect target can include a query string |
+| Source                                                                                    | Target                            | Description                                                                                                                                                                                           |
+|-------------------------------------------------------------------------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /content/we-retail/hello                                                                  | /content/we-retail/welcome        | Match a page by path. Redirect `/content/we-retail/hello` to `/content/we-retail/welcome`                                                                                                             |
+| /content/dam/we-retail/hello.pdf                                                          | /content/dam/we-retail/welcome.pdf | Match an asset by path. Redirect `/content/dam/we-retail/hello.pdf` to `/content/dam/we-retail/welcome.pdf`                                                                                           |
+| /content/we-retail/de/about/*                                                             | /content/we-retail/en/about       | Wildcard Match.  Redirect all pages that start with `/content/we-retail/de/about/*` to `/content/we-retail/en/about`                                                                                  |
+| /content/we-retail/es/about/(.*)                                                          | /content/we-retail/en/about       | Regex Match equivalent to `/content/we-retail/de/about/*`.  Redirect all pages that match `/content/we-retail/de/about/(.*)` to `/content/we-retail/en/about`                                         |
+| /content/we-retail/de/about/(.*)                                                          | /content/we-retail/en/about/$1    | Use a back-reference to redirect german pages (de) to  their english versions (en), e.g. `/content/we-retail/de/about/team => /content/we-retail/en/about/team`                                       |
+| /content/we-retail/(pt-br\                                                                | de)/(.+)/speakers/(.*)            | /content/we-retail/en/$1/conference/$2                                                                                                                                                                | An example with two back references.  |
+| /content/we-retail/hello                                                                  | /en/welcome                       | Return a shortened url (`/en/welcome`) instead of `/content/we-retail/en/welcome` . This will work assuming your dispatcher configuration rewrites `/en/welcome` into `/content/we-retail/en/welcome` |
+| /content/geometrixx/de/*                                                                  | https://www.geometrixx.de/welcome | Redirect to an external domain                                                                                                                                                                        |
+| /content/we-retail/hello                                                                  | /en/welcome?a=1&b=2               | Redirect target can include a query string                                                                                                                                                            |
+| /content/we-retail/hello.mobile<br/>or<br/>/content/we-retail/hello\.(mobile&#124;desktop) | /content/we-retail/en/about | Match url with a specific selector . Since v5.3.3.                                                                                                                                                    |
 
 
 ![Trailing Wildcards](images/trailing-wildcard-1.png)
