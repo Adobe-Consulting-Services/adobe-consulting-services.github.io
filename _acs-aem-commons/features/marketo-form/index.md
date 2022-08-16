@@ -70,3 +70,7 @@ Allows for setting the form values dynamically
 Allows you to write custom JavaScript to configure the form behavior, will have access to a variable 'form'
 
 ![Marketo Form Component Advanced Tab](images/Advanced-Tab.png)
+
+### Cloud Config Location
+
+Note, for the Market forms to load, the Market cloud config must exist in the Cloud Config that the page the Embeddable Market form component points to. For example, if page with the Embeddable Market component has a Cloud Config set to `/conf/wknd`, then the Market cloud config must exists under `/conf/wknd/settings/cloudconfigs` and not `/conf/global/settings/cloudconfigs`.
