@@ -101,7 +101,7 @@ redirect configurations will be stored in a _settings/redirects_ node relative t
 
 Notice that all of these configurations end with _settings/redirects_.  This can be changed in the OSGi configuration of _com.adobe.acs.commons.redirects.filter.RedirectFilter_
 
-![OSGi Configuration](./images/caconfig_osgi.png)
+![OSGi Configuration](../images/caconfig_osgi.png)
 
 
 
