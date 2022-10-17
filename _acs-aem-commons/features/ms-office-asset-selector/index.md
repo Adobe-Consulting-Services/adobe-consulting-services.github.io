@@ -4,6 +4,7 @@ title: MS Office Asset Selector
 description: Access AEM assets directly from MS Office apps!
 date: 2020-07-17
 feature-tags: authoring
+tags: aemcs-incompatible
 initial-release: 4.8.0
 ---
 
