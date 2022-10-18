@@ -7,6 +7,19 @@ feature-tags: authoring
 initial-release: 4.8.0
 ---
 
+Table of Contents
+
+- [Setup Instructions](#setup-instructions)
+    - [AEM Configuration](#aem-configuration)
+    - [Office Add-in Configuration](#office-add-in-configuration)
+    - [Distributing the Add-in](#distributing-the-add-in)
+        - [Network Share Catalog](#network-share-catalog)
+        - [Centralized Deployment](#centralized-deployment)
+        - [Sharepoint Catalog](#sharepoint-catalog)
+    - [User Permissions (Recommended)](#user-permissions-recommended)
+    - [Page Specific Permissions](#page-specific-permissions)
+- [Additional Links](#additional-links)
+
 ![Powerpoint integration](../ms-office-asset-selector/images/powerpoint.jpeg)
 
 The AEM Asset Selector Office Add-in allows a company to make available an
