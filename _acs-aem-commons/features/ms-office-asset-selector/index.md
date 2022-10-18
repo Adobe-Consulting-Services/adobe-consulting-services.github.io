@@ -36,6 +36,7 @@ Additionally, you can download a content package with just the required page, te
 + <a href="../ms-office-asset-selector/downloads/manifest-cloud.xml" download>Download AEM as a Cloud Service
   manifest.xml</a>
   + Note, the actual manifest file can have any name.
+  + Note, the "commands" references are needed for the manifest file to be valid. However, these are only needed for advanced add-in functionality and can be ignored in this case.
 + <a href="../ms-office-asset-selector/downloads/MS_Office_Asset_Selector.zip" download>Download Content Package</a>
 
 ### Legacy manifest
