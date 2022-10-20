@@ -7,10 +7,10 @@
 
     <Version>1.0.0.0</Version>
     <ProviderName>ACS AEM Commons</ProviderName>
-    <DefaultLocale>de-DE</DefaultLocale>
+    <DefaultLocale>en-US</DefaultLocale>
     <DisplayName DefaultValue="ACS Commons Assets"/>
-    <Description DefaultValue="Add-in zum Suchen und Verwenden von AEM Assets.">
-        <Override Locale="en-US" Value="Add-in for importing images from AEM Asset Selector."/>
+    <Description DefaultValue="Add-in for importing images from AEM Asset Selector.">
+        <Override Locale="de-DE" Value="Add-in zum Suchen und Verwenden von AEM Assets."/>
     </Description>
     <IconUrl
             DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/etc.clientlibs/acs-commons/asset-selectors/ms-office/asset-selector/clientlibs/resources/icon.png"/>
@@ -43,7 +43,7 @@
     </Hosts>
 
     <DefaultSettings>
-        <SourceLocation DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/content/asset-selectors/assetpicker.html?wcmmode=disabled"/>
+        <SourceLocation DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/content/asset-selectors/ms-office.html?wcmmode=disabled"/>
     </DefaultSettings>
 
     <Permissions>ReadWriteDocument</Permissions>
@@ -111,7 +111,7 @@
                 <bt:Url id="Commands.Url"
                         DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/content/asset-selectors/commands.html"/>
                 <bt:Url id="Taskpane.Url"
-                        DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/content/asset-selectors/assetpicker.html?wcmmode=disabled"/>
+                        DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/content/asset-selectors/ms-office.html?wcmmode=disabled"/>
             </bt:Urls>
             <bt:ShortStrings>
                 <bt:String id="GetStarted.Title" DefaultValue="Get started with your Asset Picker Add-In!"/>

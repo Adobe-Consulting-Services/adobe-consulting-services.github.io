@@ -37,7 +37,6 @@ Additionally, you can download a content package with just the required page, te
   manifest.xml</a>
   + Note, the actual manifest file can have any name.
   + Note, the "commands" references are needed for the manifest file to be valid. However, these are only needed for advanced add-in functionality and can be ignored in this case.
-+ <a href="../ms-office-asset-selector/downloads/MS_Office_Asset_Selector.zip" download>Download Content Package</a>
 
 ### Legacy manifest
 
@@ -70,7 +69,7 @@ However, you may want to review the information about [managing access](#managin
 for more information on how access to content can be controlled and managed.
 
 To ensure the necessary page is available and working, simply navigate to
-`/content/asset-selectrors/ms-office.html` in your web browser.
+`/content/asset-selectors/ms-office.html` in your web browser.
 
 ### Office Add-in Configuration
 
@@ -99,10 +98,6 @@ Follow the Steps below:
 3. Update `<Id>` in `manifest.xml` to a new unique id
     - e.g `<Id>gy4of8YpaRzkTqx3N75m</Id>`
 4. Include and Deploy ACS Commons in your project
-    - or install the provided package for just the asset selector
-        - <https://share.lucanerlich.com/s/FXB9r6SwWJPHxxe>
-        - Includes the entry-page `/content/asset-selectors/assetpicker`
-        - Includes the corresponding template and component in `xxx/components/office-addin`
 
 ### Distributing the Add-in
 
