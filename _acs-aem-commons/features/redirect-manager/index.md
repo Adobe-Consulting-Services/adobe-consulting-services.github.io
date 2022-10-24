@@ -5,6 +5,7 @@ description: Manage HTTP Redirects in AEM
 date: 2021-03-12
 feature-tags: administration backend-dev seo
 initial-release: 5.0.4
+last-updated-release: 5.4.0
 ---
 
 ## Purpose
