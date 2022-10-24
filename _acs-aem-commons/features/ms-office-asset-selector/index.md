@@ -4,9 +4,11 @@ title: MS Office Asset Selector
 description: Access AEM assets directly from MS Office apps!
 date: 2020-07-17
 feature-tags: authoring
-tags: aemcs-incompatible
 initial-release: 4.8.0
+last-updated-release: 5.4.0
 ---
+
+> MS Office Asset Selector requires v5.4.0+ to work on AEM as a Cloud Service.
 
 ![Powerpoint integration](../ms-office-asset-selector/images/powerpoint.jpeg)
 
