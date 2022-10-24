@@ -5,6 +5,7 @@ description: AEM + Adobe I/O = ♥
 date: 2018-09-24
 feature-tags: backend-dev
 initial-release: 3.18.0
+last-updated-release: 5.4.0
 ---
 
 ## Purpose
