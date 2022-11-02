@@ -3,7 +3,12 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="TaskPaneApp">
-    <Id>C3Sg6os68sygBDc345N9</Id>
+
+    <!--
+    Replace with random GUID
+    https://guidgenerator.com/online-guid-generator.aspx
+     -->
+    <Id>714c179c-5866-4ac0-af14-33146fc5b14e</Id>
 
     <Version>1.0.0.0</Version>
     <ProviderName>ACS AEM Commons</ProviderName>
@@ -43,7 +48,8 @@
     </Hosts>
 
     <DefaultSettings>
-        <SourceLocation DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/content/asset-selectors/ms-office.html?wcmmode=disabled"/>
+        <SourceLocation
+                DefaultValue="https://author-p00000-e000000.adobeaemcloud.com/content/asset-selectors/ms-office.html?wcmmode=disabled"/>
     </DefaultSettings>
 
     <Permissions>ReadWriteDocument</Permissions>
