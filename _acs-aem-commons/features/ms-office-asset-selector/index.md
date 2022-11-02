@@ -98,9 +98,8 @@ Follow the Steps below:
     5. TaskpaneButton.Label
     6. GetStarted.Description
     7. TaskpaneButton.Tooltip
-3. Update `<Id>` in `manifest.xml` to a new unique GUID
-    - e.g `<Id>514a547d-fa44-46e2-b1c3-59e265ac0d36</Id>`
-    - <https://guidgenerator.com/online-guid-generator.aspx>
+3. Update `<Id>` in `manifest.xml` to a new unique id
+    - e.g `<Id>gy4of8YpaRzkTqx3N75m</Id>`
 4. Include and Deploy ACS Commons in your project
 
 ### Distributing the Add-in
