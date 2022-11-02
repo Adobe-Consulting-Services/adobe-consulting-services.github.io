@@ -3,7 +3,7 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="TaskPaneApp">
-    <Id>C3Sg6os68sygBDc345N9</Id>
+    <Id>514a547d-fa44-46e2-b1c3-59e265ac0d36</Id>
 
     <Version>1.0.0.0</Version>
     <ProviderName>ACS AEM Commons</ProviderName>
