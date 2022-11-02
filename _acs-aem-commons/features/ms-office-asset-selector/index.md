@@ -5,7 +5,10 @@ description: Access AEM assets directly from MS Office apps!
 date: 2022-10-19
 feature-tags: authoring
 initial-release: 4.8.0
+last-updated-release: 5.4.0
 ---
+
+> MS Office Asset Selector requires v5.4.0+ to work on AEM as a Cloud Service.
 
 Table of Contents
 

@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.4.0
+description: MS Office asset picker now works on AEMaaCS. Improvements and Redirect Manager, and others features!
+date: 2022-10-24
+project: acs-aem-commons
+---
