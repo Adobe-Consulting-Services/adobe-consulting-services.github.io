@@ -1,16 +1,17 @@
 ---
 layout: acs-aem-commons_subpage
 title: Manage Redirects
+redirect_from: /acs-aem-commons/features//redirect-manager/manage.html
 ---
 
-##  Managing Redirects
+## Managing Redirects
 
 Redirects can be created either from the [Manage Redirects](http://localhost:4502/apps/acs-commons/content/redirect-manager.html/conf/global/settings/redirects) console
 or [imported](#export-and-import) from an Excel spreadsheet.
 
 ### Form Inputs
 
-![Create Redirect Configurations](images/create-rule.png)
+![Create Redirect Configurations](../images/create-rule.png)
 
 
 | Input        | Required          | Description          |
@@ -22,11 +23,11 @@ or [imported](#export-and-import) from an Excel spreadsheet.
 | Notes | No | Optional notes. Roughly equivalent to a comment near a redirect in an Apache HTTPD conf file |
 
 Redirects are supported for pages and assets. You can match by exact path or by a regular expression.
-Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of 
+Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of
 the regex match.
 
-Redirect target can be a full JCR path ( `/content/we-retail/en/about` ) or a shortened path (`/en/about`) compatible with 
-your Dispatcher mod_rewrite rules or an external url (https://www.we-retail.com/en/about). 
+Redirect target can be a full JCR path ( `/content/we-retail/en/about` ) or a shortened path (`/en/about`) compatible with
+your Dispatcher mod_rewrite rules or an external url (https://www.we-retail.com/en/about).
 You can use [Sling Mappings](./mappings.html) or a [custom class](./mappings.html#custom-location-rewriter) to rewrite Location header.
 
 ### Examples:
@@ -44,12 +45,13 @@ You can use [Sling Mappings](./mappings.html) or a [custom class](./mappings.htm
 | /content/we-retail/hello | /en/welcome?a=1&b=2 | Redirect target can include a query string |
 
 
-![Trailing Wildcards](images/trailing-wildcard-1.png)
+![Trailing Wildcards](../images/trailing-wildcard-1.png)
 
-![Back References](images/regex-backref.png)
+![Back References](../images/regex-backref.png)
 
 
-### Ordering 
+### Ordering
+
 Note that ordering matters for overlapping regex matches.
 Rules are evaluated in the order they are defined in the tool and so far that was the order the rules were created.
 
@@ -63,9 +65,7 @@ Assuming you created three overlapping rules, the first one will greedily match 
 
 You can re-order rules by dragging them in the UI:
 
-
-![Re-Order](images/drag.png)
-
+![Re-Order](../images/drag.png)
 
 
 ### Context Prefix
@@ -99,16 +99,16 @@ It can also be added or edited afterwards in the [Manage Redirects](http://local
 
 ### Export and Import
 
- You can export redirects into a spreadsheet, edit it offline and then import the rules back in AEM. 
- 
+You can export redirects into a spreadsheet, edit it offline and then import the rules back in AEM.
+
 To export redirects to a spreadsheet switch to the 'Export' tab and click the 'Export Redirect Map' button:
 
-![Export](images/export.png)
+![Export](../images/export.png)
 
-![Export](images/export-xls.png)
+![Export](../images/export-xls.png)
 
 To import redirects switch to the 'Import' tab and click the 'Import Redirect Map' button:
 
-![Import](images/import.png)
+![Import](../images/import.png)
 
 The redirect map file will be combined with the redirects configured in AEM to create the final set of redirects. 

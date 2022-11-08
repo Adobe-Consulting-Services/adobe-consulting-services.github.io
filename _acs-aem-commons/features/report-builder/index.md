@@ -7,6 +7,7 @@ date: 2018-01-19
 tags: new
 feature-tags: administraton
 initial-release: 3.14.0
+last-updated-release: 5.4.0
 ---
 
 <div class="banner--notice">
@@ -19,7 +20,7 @@ This tool allows AEM Administrators and advanced users to create, execute and do
 
 ## Viewing Reports
 
-To view the available reports, navigate to the Report Landing Page at [http://SERVER:PORT/etc/acs-commons/reports.html](http://localhost:4502/etc/acs-commons/reports.html). This page will display a list of the avaialble reports as well as links to view, edit and delete each report. 
+To view the available reports, navigate to the Report Landing Page at [http://SERVER:PORT/apps/acs-commons/reports.html](http://localhost:4502/apps/acs-commons/reports.html). This page will display a list of the avaialble reports as well as links to view, edit and delete each report. 
 
 ![Report Landing Page](images/Report-Landing-Page.jpg)
 

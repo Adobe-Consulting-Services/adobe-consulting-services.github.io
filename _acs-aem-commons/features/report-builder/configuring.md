@@ -110,7 +110,7 @@ This column has the following fields:
  * **Editor** - The editor to open when the user selects this button. One of:
     * *CRX DE* - Opens the result resource in CRX DE Lite
     * *Assets* - Opens the result resource in AEM's Asset Manager
-    * *Assets* - Opens the result resource in AEM's Experience Fragments Editor
+    * *Experience Fragments* - Opens the result resource in AEM's Experience Fragments Editor
     * *Sites* - Opens the result resource in AEM's Sites Browser
     * *Tags* - Opens the result resource in AEM's Tag Browser
     * *Custom* - Opens the result resource an editor the user specifies below
