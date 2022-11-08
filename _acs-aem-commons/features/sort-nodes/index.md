@@ -93,6 +93,39 @@ which will switch the mode to sort nodes regardless if they are `nt:hierarchyNod
      -  rep:policy  // non-hierarchy
 ```
 
+#### `:respectNumbers`
+Optional boolean parameter to control whether numbers should be sorted first followed by alphabetical values (default: `false`)
+
+The default value is `false` which means all values will be sorted alphabetically, e.g.
+```  
++  /content/someFolder
+     - 1
+     - 1-A
+     - 101 
+     - 11 
+     - 2-B
+     - 20
+     - 200
+     - 22 
+     - aaa 
+     - bbb 
+```
+
+With `:respectNumbers=true` numbers will be sorted first followed by alphabetical values:
+```  
++  /content/someFolder
+     - 1
+     - 11 
+     - 20
+     - 22 
+     - 101 
+     - 200
+     - 1-A
+     - 2-B
+     - aaa 
+     - bbb 
+```
+
 ## Extending SortNodesOperation
 
 OSGi services of the com.adobe.acs.commons.sorter.NodeSorter type can be used to implement new node sorters. For example, to register a sorter by _sling:resourceType_  deploy the service below:
