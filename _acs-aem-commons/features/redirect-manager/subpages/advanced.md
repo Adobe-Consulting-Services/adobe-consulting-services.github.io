@@ -4,8 +4,6 @@ title: Redirect Manager - Advanced Configuration
 redirect_from: /acs-aem-commons/features//redirect-manager/advanced.html
 ---
 
-### Advanced Configuration
-
 ### Additional Response Headers
 
 The `additionalHeaders` parameter specifies additional response headers to apply on delivery in the name: value format, e.g.

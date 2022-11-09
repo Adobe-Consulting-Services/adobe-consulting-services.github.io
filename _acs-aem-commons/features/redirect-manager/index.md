@@ -59,7 +59,7 @@ Click on `/conf/global` to start managing redirect configurations
 
 ![Manage Redirects](images/manage-redirects.png)
 
-Click the _"+ Add Configuration"_ button to add a redirect rule, e.g. 
+Click the _"+ Redirect Configuration"_ button to add a redirect rule, e.g. 
 
 | Source        | Target           | Status Code |
 | ------------- |-------------|-------------|
