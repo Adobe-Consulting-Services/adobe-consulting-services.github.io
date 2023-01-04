@@ -68,6 +68,9 @@ Click the _"+ Redirect Configuration"_ button to add a redirect rule, e.g.
 ![Create Redirect Configurations](images/create-rule.png)
 
 Redirects are supported for pages and assets. You can match by exact path or by a regular expression.
+It is also possible to evaluate the source based on the request URI. This can be configured for each redirect configuration separately.
+Enabling this allows evaluation of request specific data (ie. suffix). 
+
 Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of
 the regex match.
 
