@@ -43,7 +43,7 @@ You can use [Sling Mappings](./mappings.html) or a [custom class](./mappings.htm
 | /content/we-retail/de/about/(.*)                 | /content/we-retail/en/about/$1    | Use a back-reference to redirect german pages (de) to  their english versions (en), e.g. `/content/we-retail/de/about/team => /content/we-retail/en/about/team`                                       |
 | /content/we-retail/(pt-br\|de)/(.+)/speakers/(.*)  | /content/we-retail/en/$1/conference/$2 | An example with two back references.                                                                                                                                                                  |
 | /content/we-retail/hello                         | /en/welcome                       | Return a shortened url (`/en/welcome`) instead of `/content/we-retail/en/welcome` . This will work assuming your dispatcher configuration rewrites `/en/welcome` into `/content/we-retail/en/welcome` |
-| /content/geometrixx/de/*                         | https://www.geometrixx.de/welcome | Redirect to an external domain                                                                                                                                                                        |
+| /content/we-retail/de/*                         | https://www.we-retail.de/welcome | Redirect to an external domain                                                                                                                                                                        |
 | /content/we-retail/hello                         | /en/welcome?a=1&b=2               | Redirect target can include a query string                                                                                                                                                            |
 
 
@@ -60,11 +60,11 @@ Enabling this allows evaluation of request specific data (ie. suffix).
 
 | Source                                                              | Target                                        |
 |---------------------------------------------------------------------|-----------------------------------------------|
-| /content/geometrixx/en/one.html/suffix.html                         | /content/geometrixx/en/redirected-page        |
-| /content/geometrixx/en/two.mobile.html/suffix.html                  | /content/geometrixx/en/redirected-page-selector |
-| (.*)/geometrixx/en/three.html/suffix.html                           | /content/geometrixx/en/redirected-page-regex  |
-| /content/geometrixx/en/(\w+).(mobile\desktop).html/suffix-(\d+).html | /content/geometrixx/en/redirected-page-multi-regex |
-| /content/geometrixx/en/page.mobile.html                             | /content/geometrixx/en/page.desktop           |
+| /content/we-retail/en/one.html/suffix.html                         | /content/we-retail/en/redirected-page        |
+| /content/we-retail/en/two.mobile.html/suffix.html                  | /content/we-retail/en/redirected-page-selector |
+| (.*)/we-retail/en/three.html/suffix.html                           | /content/we-retail/en/redirected-page-regex  |
+| /content/we-retail/en/(\w+).(mobile\desktop).html/suffix-(\d+).html | /content/we-retail/en/redirected-page-multi-regex |
+| /content/we-retail/en/page.mobile.html                             | /content/we-retail/en/page.desktop           |
 
 ### Preserving Extensions
 

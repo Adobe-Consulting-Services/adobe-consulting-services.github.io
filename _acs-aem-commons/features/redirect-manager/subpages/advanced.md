@@ -62,10 +62,10 @@ This lets you define redirects without the `.html` extension and redirect manage
 Notice .html in the Location header. 
 | Source                             | Target                             | Status Code |
 |------------------------------------|------------------------------------|-------------|
-| /content/geometrixx/us/en/about-us | /content/we-retail/us/en/about-us | 302         |
+| /content/we-retail/us/en/contact-us | /content/we-retail/us/en/about-us | 302         |
 
 ```shell
-$ curl -I http://localhost:4503/content/geometrixx/us/en/about-us.html
+$ curl -I http://localhost:4503/content/we-retail/us/en/contact-us.html
 HTTP/1.1 302 Found
 Location: /content/we-retail/us/en/about-us.html
 ```
@@ -82,7 +82,7 @@ This behaviour is controlled by  the `preserveExtension` flag.  Set it to `false
 ```
 
 ```shell
-$ curl -I http://localhost:4503/content/geometrixx/us/en/about-us.html
+$ curl -I http://localhost:4503/content/we-retail/us/en/contact-us.html
 HTTP/1.1 302 Found
 Location: /content/we-retail/us/en/about-us
 ```

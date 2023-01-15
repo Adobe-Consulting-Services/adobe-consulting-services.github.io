@@ -68,8 +68,8 @@ their own tables of redirects, any other site will fallback to _/conf/global_ :
     + settings
       + redirects
         + rule-1
-            - source = "/content/geometrixx/page1"
-            - target = "/content/geometrixx/page2"
+            - source = "/content/we-retail/page1"
+            - target = "/content/we-retail/page2"
             - statusCode = 302
 ```
 
