@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.5.2
+description: Fixed that pesky bug in MCP where the dropdowns didn't show all options!
+date: 2023-01-20
+project: acs-aem-commons
+---
