@@ -52,3 +52,37 @@ $ curl -I http://localhost:4503/content/we-retail/page1.html?a=1&b=2
 HTTP/1.1 302 Found
 Location: /content/we-retail/page2.html   # no query string
 ```
+
+### Preserving Extensions
+
+By default, redirect manager preserves extension if it is present in the request. 
+This lets you define redirects without the `.html` extension and redirect manager will automatically append it. 
+
+#### Example. 
+Notice .html in the Location header. 
+| Source                             | Target                             | Status Code |
+|------------------------------------|------------------------------------|-------------|
+| /content/we-retail/us/en/contact-us | /content/we-retail/us/en/about-us | 302         |
+
+```shell
+$ curl -I http://localhost:4503/content/we-retail/us/en/contact-us.html
+HTTP/1.1 302 Found
+Location: /content/we-retail/us/en/about-us.html
+```
+
+This behaviour is controlled by  the `preserveExtension` flag.  Set it to `false` to disable appending extensions:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          enabled="{Boolean}true"
+          preserveExtension="{Boolean}false"
+/>
+```
+
+```shell
+$ curl -I http://localhost:4503/content/we-retail/us/en/contact-us.html
+HTTP/1.1 302 Found
+Location: /content/we-retail/us/en/about-us
+```

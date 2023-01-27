@@ -26,7 +26,7 @@ respectively in case of a matching incoming request url.
 * [Getting Started](#getting-started-with-redirect-manager)
 * [Managing Redirects](./subpages/manage.html)
 * [Context Aware Configuration](./subpages/caconfig.html)
-* [Sling Mappings](./subpages/mappings.html): Using Sling Mappings to rewrite Location header
+* [Rewriting Location header](./subpages/mappings.html)
 * [Advanced Configuration](./subpages/advanced.html)
 
 ## Getting Started with Redirect Manager
@@ -61,9 +61,9 @@ Click on `/conf/global` to start managing redirect configurations
 
 Click the _"+ Redirect Configuration"_ button to add a redirect rule, e.g. 
 
-| Source        | Target           | Status Code |
-| ------------- |-------------|-------------|
-| /content/geometrixx/us/en/about-us | /content/we-retail/us/en/about-us | 302 |
+| Source                              | Target           | Status Code |
+|-------------------------------------|-------------|-------------|
+| /content/we-retail/us/en/contact-us | /content/we-retail/us/en/about-us | 302 |
 
 ![Create Redirect Configurations](images/create-rule.png)
 
@@ -85,11 +85,11 @@ to replicate your redirects to the publish instances.
 
 ### Testing 
 
-In your publish instance navigate to http://localhost:4503/content/geometrixx/us/en/about-us.html which should return 
+Navigate to http://localhost:4503/content/we-retail/us/en/about-us.html which should return 
 a 302 redirect to http://localhost:4503/content/we-retail/us/en/about-us.html : 
 
 ```shell
-$ curl -I http://localhost:4503/content/geometrixx/us/en/about-us.html
+$ curl -I http://localhost:4503/content/we-retail/us/en/contact-us.html
 HTTP/1.1 302 Found
 Location: /content/we-retail/us/en/about-us.html
 ```

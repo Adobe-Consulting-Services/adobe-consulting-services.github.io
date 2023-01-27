@@ -14,41 +14,63 @@ or [imported](#export-and-import) from an Excel spreadsheet.
 ![Create Redirect Configurations](../images/create-rule.png)
 
 
-| Input        | Required          | Description          |
-| ------------- |-------------|-------------|
-| Source Path | Yes | Where to redirect from. Can be a path in AEM or a regular expression |
-| Target Path | Yes | Where to redirect to. Can be a path in AEM or an external URL . Can contain back-references. |
-| Status Code | Yes | 301 or 302 **Warning:** The HTTP 301 status code is cached in browsers with no expiry date and cannot be reverted, i.e. once 301 is applied, it is forever |
-| Redirect Until | No | If the field has a value, the page redirection would work till that date and after that date, the redirection would stop for that entry, If the field has no value, the page redirection would work without any end date (as is)|
-| Notes | No | Optional notes. Roughly equivalent to a comment near a redirect in an Apache HTTPD conf file |
+| Input       | Required | Description                                                                                                                                                |
+|-------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Source Path | Yes      | Where to redirect from. Can be a path in AEM or a regular expression                                                                                       |
+| Target Path | Yes      | Where to redirect to. Can be a path in AEM or an external URL . Can contain back-references.                                                               |
+| Status Code | Yes      | 301 or 302 **Warning:** The HTTP 301 status code is cached in browsers with no expiry date and cannot be reverted, i.e. once 301 is applied, it is forever |
+| On Time     | No       | The time when the redirect should go live                                                                                                                  |
+| Off Time    | No       | The time when the redirect should stop working                                                                                                             |
+| Notes       | No       | Optional notes. Roughly equivalent to a comment near a redirect in an Apache HTTPd conf file                                                               |
+| Tags        | No       | Optional tags to categorize redirect rules                                                                                                                 |
 
 Redirects are supported for pages and assets. You can match by exact path or by a regular expression.
 Target can include back-references ($N) to the regex pattern which will be replaced by the contents of the Nth group of
 the regex match.
 
 Redirect target can be a full JCR path ( `/content/we-retail/en/about` ) or a shortened path (`/en/about`) compatible with
-your Dispatcher mod_rewrite rules or an external url (https://www.we-retail.com/en/about).
+your Dispatcher mod_rewrite rules, or an external url (https://www.we-retail.com/en/about).
 You can use [Sling Mappings](./mappings.html) or a [custom class](./mappings.html#custom-location-rewriter) to rewrite Location header.
 
 ### Examples:
 
-| Source        | Target           | Description |
-| ------------- |-------------|-------------|
-| /content/we-retail/hello | /content/we-retail/welcome | Match a page by path. Redirect `/content/we-retail/hello` to `/content/we-retail/welcome` |
-| /content/dam/we-retail/hello.pdf | /content/dam/we-retail/welcome.pdf | Match an asset by path. Redirect `/content/dam/we-retail/hello.pdf` to `/content/dam/we-retail/welcome.pdf` |
-| /content/we-retail/de/about/* | /content/we-retail/en/about | Wildcard Match.  Redirect all pages that start with `/content/we-retail/de/about/*` to `/content/we-retail/en/about`|
-| /content/we-retail/es/about/(.*) | /content/we-retail/en/about | Regex Match equivalent to `/content/we-retail/de/about/*`.  Redirect all pages that match `/content/we-retail/de/about/(.*)` to `/content/we-retail/en/about` |
-| /content/we-retail/de/about/(.*) | /content/we-retail/en/about/$1 | Use a back-reference to redirect german pages (de) to  their english versions (en), e.g. `/content/we-retail/de/about/team => /content/we-retail/en/about/team` |
-| /content/we-retail/(pt-br\|de)/(.+)/speakers/(.*) | /content/we-retail/en/$1/conference/$2 | An example with two back references.  |
-| /content/we-retail/hello | /en/welcome | Return a shortened url (`/en/welcome`) instead of `/content/we-retail/en/welcome` . This will work assuming your dispatcher configuration rewrites `/en/welcome` into `/content/we-retail/en/welcome` |
-| /content/geometrixx/de/* | https://www.geometrixx.de/welcome | Redirect to an external domain |
-| /content/we-retail/hello | /en/welcome?a=1&b=2 | Redirect target can include a query string |
+| Source                                           | Target                            | Description                                                                                                                                                                                           |
+|--------------------------------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /content/we-retail/hello                         | /content/we-retail/welcome        | Match a page by path. Redirect `/content/we-retail/hello` to `/content/we-retail/welcome`                                                                                                             |
+| /content/dam/we-retail/hello.pdf                 | /content/dam/we-retail/welcome.pdf | Match an asset by path. Redirect `/content/dam/we-retail/hello.pdf` to `/content/dam/we-retail/welcome.pdf`                                                                                           |
+| /content/we-retail/de/about/*                    | /content/we-retail/en/about       | Wildcard Match.  Redirect all pages that start with `/content/we-retail/de/about/*` to `/content/we-retail/en/about`                                                                                  |
+| /content/we-retail/es/about/(.*)                 | /content/we-retail/en/about       | Regex Match equivalent to `/content/we-retail/de/about/*`.  Redirect all pages that match `/content/we-retail/de/about/(.*)` to `/content/we-retail/en/about`                                         |
+| /content/we-retail/de/about/(.*)                 | /content/we-retail/en/about/$1    | Use a back-reference to redirect german pages (de) to  their english versions (en), e.g. `/content/we-retail/de/about/team => /content/we-retail/en/about/team`                                       |
+| /content/we-retail/(pt-br\|de)/(.+)/speakers/(.*)  | /content/we-retail/en/$1/conference/$2 | An example with two back references.                                                                                                                                                                  |
+| /content/we-retail/hello                         | /en/welcome                       | Return a shortened url (`/en/welcome`) instead of `/content/we-retail/en/welcome` . This will work assuming your dispatcher configuration rewrites `/en/welcome` into `/content/we-retail/en/welcome` |
+| /content/we-retail/de/*                         | https://www.we-retail.de/welcome | Redirect to an external domain                                                                                                                                                                        |
+| /content/we-retail/hello                         | /en/welcome?a=1&b=2               | Redirect target can include a query string                                                                                                                                                            |
 
 
 ![Trailing Wildcards](../images/trailing-wildcard-1.png)
 
 ![Back References](../images/regex-backref.png)
 
+It is also possible to evaluate the source based on the request URI. This can be configured for each redirect configuration separately.
+Enabling this allows evaluation of request specific data (ie. suffix).
+
+![Evaluate URI](../images/evaluateUri-rule.png)
+
+### Evaluate URI Examples :
+
+| Source                                                              | Target                                        |
+|---------------------------------------------------------------------|-----------------------------------------------|
+| /content/we-retail/en/one.html/suffix.html                         | /content/we-retail/en/redirected-page        |
+| /content/we-retail/en/two.mobile.html/suffix.html                  | /content/we-retail/en/redirected-page-selector |
+| (.*)/we-retail/en/three.html/suffix.html                           | /content/we-retail/en/redirected-page-regex  |
+| /content/we-retail/en/(\w+).(mobile\desktop).html/suffix-(\d+).html | /content/we-retail/en/redirected-page-multi-regex |
+| /content/we-retail/en/page.mobile.html                             | /content/we-retail/en/page.desktop           |
+
+### Preserving Extensions
+
+By default, redirect manager preserves extension if it is present in the request.
+This lets you define redirects without the `.html` extension and redirect manager will automatically append it.
+This can be [disabled](./advanced.md#Preserving Extensions) by the `preserveExtension` flag in the OSGi configuration.
 
 ### Ordering
 
@@ -86,15 +108,15 @@ https://www.we-retail.com/en/index -> https://www.we-retail.com/en/index
 
 When a context prefix is set for the current configuration, this is clearly indicated in the UI:
 
-![Prefix text](images/prefix-text.png)
+![Prefix text](../images/prefix-text.png)
 
 The content prefix can be entered while creating the [Context Aware Configuration](./caconfig.html):
 
-![Creation in CA config](images/prefix-create1.png)
+![Creation in CA config](../images/prefix-create1.png)
 
 It can also be added or edited afterwards in the [Manage Redirects](http://localhost:4502/apps/acs-commons/content/redirect-manager.html/conf/global/settings/redirects) page:
 
-![Creation in manage redirects](images/prefix-create2.png)
+![Creation in manage redirects](../images/prefix-create2.png)
 
 
 ### Export and Import
