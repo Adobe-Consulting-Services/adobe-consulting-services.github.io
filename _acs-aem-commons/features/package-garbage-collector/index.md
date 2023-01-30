@@ -24,7 +24,7 @@ By default, the service will do absolutely nothing. In order to have the job run
 - **scheduler:** 
 This is a cron expression that gives great flexibility in when and how frequently the garbage collection is run. By default, an empty value here will cause the job to run at 02:30 every day.
 - **groupName:** 
-This is the group name of the packages that you want to remove.
+This is the group name of the packages that you want to remove. It will be matched exactly - no wildcards are supported.
 - **maxAgeInDays:**
 Packages matching the group name that were installed more than this number of days ago will be removed.
 
@@ -39,6 +39,8 @@ Packages matching the group name that were installed more than this number of da
 Once it has been configured, the following configuration will be visible in the Felix Console
 
 ![image](images/package-garbage-collector-felix-console.png)
+
+**Note:** The garbage collector will **not** remove the currently installed version of any packages that meet the age and group name criteria.
 
 ## Logging
 The job has INFO and DEBUG level logging so the removal of packages can be monitored.
