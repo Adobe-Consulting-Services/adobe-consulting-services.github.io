@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.6.0
+description: New package garbage collector, and additions to redirect manager!
+date: 2023-02-02
+project: acs-aem-commons
+---
