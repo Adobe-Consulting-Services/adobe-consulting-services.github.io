@@ -5,8 +5,8 @@ description: Cleans up packages deployed by Cloud Manager
 date: 2022-01-27
 redirect_from: /acs-aem-commons/features/package-garbage-collector.html 
 feature-tags: administration
-initial-release: 5.5.3
-last-updated-release: 5.5.3
+initial-release: 5.6.0
+last-updated-release: 5.6.0
 tags: aemcs-incompatible
 ---
 
