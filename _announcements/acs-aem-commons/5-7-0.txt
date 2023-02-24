@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 5.7.0
+description: Improvements to redirect manager and smart tags support for Reports!
+date: 2023-02-24
+project: acs-aem-commons
+---
