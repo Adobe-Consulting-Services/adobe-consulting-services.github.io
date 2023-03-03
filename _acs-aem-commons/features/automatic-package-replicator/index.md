@@ -21,7 +21,7 @@ To use the Automatic Package Replication feature:
 
 1. Navigate to `AEM Author > Tools > Automatic Package Replication`
 2. From the top right corner select `Create > Page`
-3. On the *Create Page* page, select `Automatic Package Replication Configuration > Next`
+3. On the *Create Page*, select `Automatic Package Replication Configuration > Next`
 4. Enter the Title / Name of your Automatic Package Replication and Click *Create*
     ![Creating a Automatic Package Replication](images/create-config.png)
 5. Open and configure the Automatic Package Replication configuration

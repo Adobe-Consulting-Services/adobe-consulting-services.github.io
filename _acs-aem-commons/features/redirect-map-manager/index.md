@@ -20,7 +20,7 @@ To create a Redirect Map configuration:
 
 1. Navigate to `AEM Author > Tools > Redirect Maps`
 2. From the top right corner select `Create > Page`
-2. On the *Create Page* page, select `Redirect Map Configuration > Next`
+2. On the *Create Page*, select `Redirect Map Configuration > Next`
 3. Enter the Title / Name of your Redirect Map and Click *Create*
     ![Creating a Redirect Map Configuration](images/create.png)
 4. Upload a Redirect Map base file \(optional\). If specificed, this file will be combined with the values from the AEM repository to generate the final Redirect Map file. This can be useful for specifying miscellaneous or external redirects which aren't found for pages in the AEM repository. For example, redirecting a particular URL to an external application.

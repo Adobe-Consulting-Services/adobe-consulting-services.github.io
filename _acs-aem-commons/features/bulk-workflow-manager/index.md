@@ -27,19 +27,19 @@ Bulk Workflow Manager supports executing OOTB AEM Workflow, Serial [Synthetic Wo
 
 # How to Use
 
-* Log in to AEM Author
-* Navigate to the Classic UI Tools Console (from the Touch UI, this is Tools:Operations:Configuration)
-* Under the `acs-commmons` folder, create a folder named `Bulk Workflow Manager`
-* Under the `Bulk Workflow Manager` folder, create a new Page of Template type "Bulk Workflow Manager"
-![image](images/step-1.png)
-* Use the configuration forms to define the Bulk Workflow run.
-![image](images/step-2.png)
+* Navigate to `AEM Author > Tools > Bulk Workflow Manager`
+* From the top right corner select `Create > Page`
+* On the *Create Page*, select `Bulk Workflow Manager > Next`
+* Enter the Title / Name of your Bulk Workflow Manager and Click *Create*
+    ![Creating a Redirect Map Configuration](images/step-1.png)
+* Open and configure the configuration forms to define the Bulk Workflow run.
+    ![image](images/step-2.png)
 * Upon pressing "Start Bulk Workflow" the resources will be queried and prepped for workflow. Please note, if the repository is large and the query inefficient it may take some time to collected all candidate resources. Ensure your query is correct before starting Bulk Workflow. During Bulk Workflow execution, the process can be stopped.
-![image](images/step-3.png)
+    ![image](images/step-3.png)
 * Stopped Bulk Workflow processes can be resumed. Note; Bulk Workflow Manager processing will stop/restart automatically during re-deploys of the ACS AEM Commons bundle.
-![image](images/step-4.png)
+    ![image](images/step-4.png)
 * When the Bulk Workflow execution is complete, the page will display the final results.
-![image](images/step-5.png)
+    ![image](images/step-5.png)
 * To start another Bulk Workflow run, create a new `Bulk Workflow Manager` page.
 
 ## Runner Types (v2.6.4/3.2.4)
