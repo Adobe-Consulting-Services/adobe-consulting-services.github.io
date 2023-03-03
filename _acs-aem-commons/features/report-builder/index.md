@@ -4,8 +4,7 @@ title: Report Builder
 description: Create and execute custom reports based on the AEM Repository
 redirect_from: /acs-aem-commons/features/reports.html
 date: 2018-01-19
-tags: new
-feature-tags: administraton
+feature-tags: aem-65 aem-cs
 initial-release: 3.14.0
 last-updated-release: 5.4.0
 ---

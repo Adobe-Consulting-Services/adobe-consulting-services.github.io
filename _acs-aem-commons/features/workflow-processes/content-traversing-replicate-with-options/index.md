@@ -2,10 +2,10 @@
 layout: acs-aem-commons_feature
 title:  Content Traversing - Replicate with Options
 description: Replicate a bunch of content (more) safely!
-sub-feature: true
 date: 2014-09-01
 initial-release: 2.6.2/3.2.2
 last-updated-release: 4.0.0
+feature-tags: aem-65
 ---
 
 ## Purpose

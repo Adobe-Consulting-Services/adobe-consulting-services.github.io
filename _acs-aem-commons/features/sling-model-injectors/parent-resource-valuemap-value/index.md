@@ -4,7 +4,7 @@ title: Parent Resource ValueMap Value Injector
 description: Configure components to inherit parent component properties
 date: 2020-12-10
 redirect_from: /acs-aem-commons/features/parent-resource-valuemap-value.html 
-feature-tags: backend-dev component-dev
+feature-tags: aem-65 aem-cs
 initial-release: 4.9.0
 ---
 
@@ -28,7 +28,7 @@ If there is a use-case in which multiple components inherit parent component pro
 
 ## How to Use
 
-- Inject the properties into your component’s Sling Model using the `@ParentResourceValueMapValue` annotation. 
+- Inject the properties into your component's Sling Model using the `@ParentResourceValueMapValue` annotation. 
 - Set the `maxLevel` property value if you know the level of the parent, or the parent of the parent component, which 
 has the property you need. 
 - Please note that if `maxLevel` is not explicitly set, it will set to default value `-1`.

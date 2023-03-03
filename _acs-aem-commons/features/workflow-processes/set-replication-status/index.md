@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Set Replication Status
 description: Updates replication status via WF! 
 date: 2017-05-08
-feature-tags: content-migration
+feature-tags: aem-65 aem-cs
 initial-release: 2.12.0/3.9.0
 ---
 

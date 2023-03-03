@@ -3,8 +3,8 @@ layout: acs-aem-commons_feature
 title: Content Traversing - Synthetic Workflow Wrapper
 description: Run workflow at scale (more) safely!
 date: 2014-09-01
-tags: authoring administration
 initial-release: 2.6.2/3.2.2
+feature-tags: aem-65
 ---
 
 ## Purpose

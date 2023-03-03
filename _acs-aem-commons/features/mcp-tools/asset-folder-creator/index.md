@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Asset Folder Creator
 description: Model and create Asset Folder hierarchies using Excel
 date: 2017-12-01
-feature-tags: backend-dev content-migration
+feature-tags: aem-65 aem-cs
 initial-release: 3.13.0
 ---
 
@@ -18,8 +18,8 @@ Asset Folder Creator leverages the power and flexibility of Excel, to put the po
 * **Folder Type**: The type of folders to create; Ordered or Unordered Folder
 * **Primary Creator**: The Data Converter (see below) to initially parse the Excel cell data with. 
 * **Fallback Creator**: The Data Converter (see below) to parse the Excel cell data with if the Primary Creator cannot parse the data. 
-	* This is useful when mixing Data Converter types in a single file. For example: 90% of the cells can use "Lowercase with Dashes" but 10% need explicit node names using Title and Node Name. Instead of creating all cells using the "Title and Node Name" format with the `{{"{{"}} ... }}`, only those that need the explicit title can define that format.
-	* If all cells can be processed by the Primary Converter then this can be set to None.
+    * This is useful when mixing Data Converter types in a single file. For example: 90% of the cells can use "Lowercase with Dashes" but 10% need explicit node names using Title and Node Name. Instead of creating all cells using the "Title and Node Name" format with the `{{"{{"}} ... }}`, only those that need the explicit title can define that format.
+    * If all cells can be processed by the Primary Converter then this can be set to None.
 
 ## Data Converters
 

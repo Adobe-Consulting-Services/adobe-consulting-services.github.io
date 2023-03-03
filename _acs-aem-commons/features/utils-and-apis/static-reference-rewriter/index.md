@@ -4,8 +4,7 @@ title: Static Reference Rewriter
 description: Minimize your static request size.
 date: 2013-07-01
 redirect_from: /acs-aem-commons/features/static-reference-rewriter.html
-feature-tags: component-dev
-tags: updated
+feature-tags: aem-65 aem-cs
 initial-release: 1.0.0
 ---
 
@@ -54,7 +53,7 @@ The easiest way to configure the rewriter pipline is just to copy `/libs/cq/conf
 
 To validate that your configuration was successful, look at the Sling Rewriter tab in the OSGi Web Console.
 
-	/apps/myapp/config/rewriter/mysite.xml
+    /apps/myapp/config/rewriter/mysite.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>

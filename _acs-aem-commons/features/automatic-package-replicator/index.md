@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Automatic Package Replication
 description: Automatically build and replicate AEM Packages on a timers, event triggers or workflows
 date: 2017-05-07
-feature-tags: administraton backend-dev
+feature-tags: aem-65 aem-cs
 initial-release: 3.8.0
 ---
 

@@ -5,7 +5,7 @@ description: Create authorable error pages with ease
 date: 2013-09-30
 redirect_from: /acs-aem-commons/features/errorpagehandler.html
 youtube-id: w4P9T_miX8Q
-feature-tags: authoring standard
+feature-tags: aem-65 aem-cs
 initial-release: 1.0.0
 ---
 

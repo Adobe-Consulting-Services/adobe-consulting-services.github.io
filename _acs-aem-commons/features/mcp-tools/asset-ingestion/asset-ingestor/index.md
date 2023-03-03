@@ -5,6 +5,7 @@ description: Load a directory of assets into AEM
 date: 2017-11-01
 initial-release: 3.10.0
 last-updated-release: 3.16.0
+feature-tags: aem-65
 tags: aemcs-incompatible
 ---
 

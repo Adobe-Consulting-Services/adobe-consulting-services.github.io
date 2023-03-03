@@ -4,7 +4,7 @@ title: LinkedIn Scribe Integration
 description: Ease LinkedIn integration needs
 date: 2013-07-25
 redirect_from: /acs-aem-commons/features/linkedin-scribe.html
-feature-tags: component-dev
+feature-tags: aem-65 aem-cs
 initial-release: 1.5.0
 ---
 

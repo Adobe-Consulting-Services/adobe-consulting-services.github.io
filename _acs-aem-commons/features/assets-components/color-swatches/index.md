@@ -4,7 +4,7 @@ title: Assets Color Swatches
 description: Quickly see the colors in an image!
 date: 2016-05-29
 sub-feature: true
-feature-tags: authoring
+feature-tags: aem-65 aem-cs
 initial-release: 3.1.0
 last-updated-release: 4.0.0
 ---

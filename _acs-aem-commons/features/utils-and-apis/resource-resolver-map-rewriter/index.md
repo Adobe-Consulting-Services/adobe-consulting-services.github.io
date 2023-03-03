@@ -4,6 +4,7 @@ title: Resource Resolver Mapping Rewriter
 description: Map any HTML attribute!
 date: 2015-10-15
 initial-release: 2.1.0
+feature-tags: aem-65 aem-cs
 ---
 
 ## Purpose
@@ -40,7 +41,7 @@ The easiest way to configure the rewriter pipeline is just to copy `/libs/cq/con
 
 To validate that your configuration was successful, look at the Sling Rewriter tab in the OSGi Web Console.
 
-	/apps/myapp/config/rewriter/mysite.xml
+    /apps/myapp/config/rewriter/mysite.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>

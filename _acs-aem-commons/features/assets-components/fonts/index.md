@@ -4,7 +4,7 @@ title: Asset Fonts
 description: Quickly see what fonts are used in an asset!
 sub-feature: true
 date: 2016-05-29
-feature-tags: authoring
+feature-tags: aem-65 aem-cs
 initial-release: 3.1.0
 last-updated-release: 4.0.0
 ---

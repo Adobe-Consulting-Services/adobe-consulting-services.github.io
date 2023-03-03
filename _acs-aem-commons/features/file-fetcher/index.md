@@ -4,7 +4,7 @@ title: File Fetcher
 description: Automatically pull files into AEM and publish them
 date: 2019-12-17
 redirect_from: /acs-aem-commons/features/mcp.html
-feature-tags: administration
+feature-tags: aem-65
 tags: aemcs-incompatible
 initial-release: 4.4.0
 ---
@@ -26,7 +26,7 @@ The File Fetcher configuration supports the following attributes:
 - *DAM Path* (_damPath_) - (required) The path under which to save the file, should start with /content/dam
 - *Headers* (_headers_) - (optional) Headers to add to the request
 - *Mime Type* (_mimeType_) - (required) The [mime type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types) of the asset to create
--	*Remote URL* (_remoteUrl_) - (required) The URL from which to retrieve the file
+-    *Remote URL* (_remoteUrl_) - (required) The URL from which to retrieve the file
 - *Update Cron Expression* (_scheduler.expression_) - (required) - A [cron expression](https://freeformatter.com/cron-expression-generator-quartz.html) on when to fetch the file
 - *Valid Response Codes* (_validResponseCodes_) - (optional) - A list of response codes which are considered successful, 200 is default
 - *Connection Timeout* (_connectionTimeout_) - (optional) - Maximum timeout for a connection response, 5000 is default

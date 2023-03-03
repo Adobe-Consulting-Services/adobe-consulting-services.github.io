@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Contextual Pathfield Browser
 description: Dynamically limit selectable paths!
 date: 2017-02-11
-feature-tags: component-dev
+feature-tags: aem-65 aem-cs
 tags: new
 initial-release: 2.10.0
 ---

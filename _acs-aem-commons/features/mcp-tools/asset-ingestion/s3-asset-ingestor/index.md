@@ -4,6 +4,7 @@ title: S3 Asset Ingestor
 description: Load a S3 bucket of assets into AEM
 date: 2017-11-01
 initial-release: 3.11.0
+feature-tags: aem-65
 tags: aemcs-incompatible
 ---
 

@@ -4,7 +4,7 @@ title: JSON Event Logger
 description: Log OSGi events as JSON
 date: 2014-07-23
 redirect_from: /acs-aem-commons/features/json-event-logger.html
-feature-tags: administration
+feature-tags: aem-65
 tags: aemcs-incompatible
 initial-release: 1.7.0
 ---
@@ -23,9 +23,9 @@ Create a config at `/apps/system/config/com.adobe.acs.commons.logging.impl.JsonE
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-	event.topics="[org/apache/sling/api/resource/Resource/*]"
-	event.logger.category="osgi.events.resource"
-	event.logger.level="INFO"
+    event.topics="[org/apache/sling/api/resource/Resource/*]"
+    event.logger.category="osgi.events.resource"
+    event.logger.level="INFO"
     />
 {% endhighlight %}     
 
@@ -37,10 +37,10 @@ Then use an Apache Sling Logging Logger configuration to enable logging for that
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-	org.apache.sling.commons.log.pattern="{Long}5"
-	org.apache.sling.commons.log.names="[osgi.events.resource]"
-	org.apache.sling.commons.log.file="logs/osgi.events.resource.log"
-	org.apache.sling.commons.log.level="info"
+    org.apache.sling.commons.log.pattern="{Long}5"
+    org.apache.sling.commons.log.names="[osgi.events.resource]"
+    org.apache.sling.commons.log.file="logs/osgi.events.resource.log"
+    org.apache.sling.commons.log.level="info"
     />
 {% endhighlight %}    
 
@@ -58,9 +58,9 @@ Finally, use a [SyslogAppender](/acs-aem-commons/features/syslog-appender/index.
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-	suffix.pattern="%logger{36}:\ %msg%n"
-	port=I"514"
-	loggers="[osgi.events.resource]"
-	host="127.0.0.1"
+    suffix.pattern="%logger{36}:\ %msg%n"
+    port=I"514"
+    loggers="[osgi.events.resource]"
+    host="127.0.0.1"
     />
 {% endhighlight %}   

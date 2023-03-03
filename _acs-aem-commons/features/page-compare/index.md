@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Page Compare
 description: Side-by-side property comparison of page.. wait for it.. across versions!
 date: 2017-02-01
-feature-tags: administration
+feature-tags: aem-65 aem-cs
 initial-release: 2.10.0/3.7.0
 ---
 

@@ -4,9 +4,9 @@ title: Manage Controlled Processes
 description: The most efficient way of managing what we do
 date: 2017-08-14
 redirect_from: /acs-aem-commons/features/mcp.html
-feature-tags: backend-dev content-migration
-last-updated-release: 4.3.4
+feature-tags: aem-65 aem-cs
 initial-release: 3.10.0
+last-updated-release: 4.3.4
 ---
 
 ## Introduction
@@ -27,7 +27,7 @@ This section covers usage and is written for end-users, system administrators, a
 ### Development
 This section describes how you build new tools with MCP.
 
-[Process Definition](subpages/process-definition.html): Describes how to write your own custom processes	.
+[Process Definition](subpages/process-definition.html): Describes how to write your own custom processes    .
 
 [FormField Annotations](subpages/form-fields.html): Generating the start form.
 

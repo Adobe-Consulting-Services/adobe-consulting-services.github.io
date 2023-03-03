@@ -4,7 +4,7 @@ title: Draggable Lists
 description: Drag to order your lists
 date: 2016-04-25
 redirect_from: /acs-aem-commons/features/draggablelist.html
-feature-tags: component-dev
+feature-tags: aem-65 aem-cs
 initial-release: 2.5.0/3.1.0
 last-updated-release: 4.0.0
 ---
@@ -64,31 +64,31 @@ The Draggable List component lets you create an ordered list of elements that ar
 <?xml version="1.0" encoding="UTF-8"?>
    <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="nt:unstructured" jcr:title="List" sling:resourceType="cq/gui/components/authoring/dialog" helpPath="en/cq/current/wcm/default_components.html#List">
       <content
-      	jcr:primaryType="nt:unstructured"
-      	sling:resourceType="granite/ui/components/foundation/container">
-      	<layout
-      		jcr:primaryType="nt:unstructured"
-      		margin="false"
-      		sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
-      	<items
-      		jcr:primaryType="nt:unstructured">
-      		<column
-      			jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
-      			<items
-      				jcr:primaryType="nt:unstructured">
-      				<list
-      					jcr:primaryType="nt:unstructured"
-      					displayProperty="jcr:content/jcr:title"
-      					fieldLabel="Draggable List"
-      					name="./list"
-      					sling:resourceType="acs-commons/components/authoring/draggablelist">
-      					<datasource
-      						jcr:primaryType="nt:unstructured"
-      						sling:resourceType="mytestcomponents/datasources/draggablelist"/>
-      				</list>
-      			</items>
-      		</column>
-      	</items>
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/container">
+          <layout
+              jcr:primaryType="nt:unstructured"
+              margin="false"
+              sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+          <items
+              jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                  <items
+                      jcr:primaryType="nt:unstructured">
+                      <list
+                          jcr:primaryType="nt:unstructured"
+                          displayProperty="jcr:content/jcr:title"
+                          fieldLabel="Draggable List"
+                          name="./list"
+                          sling:resourceType="acs-commons/components/authoring/draggablelist">
+                          <datasource
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="mytestcomponents/datasources/draggablelist"/>
+                      </list>
+                  </items>
+              </column>
+          </items>
       </content>
    </jcr:root>
 {% endhighlight %}

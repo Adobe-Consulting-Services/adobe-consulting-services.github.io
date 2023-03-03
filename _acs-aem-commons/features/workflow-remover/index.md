@@ -4,9 +4,9 @@ title: Workflow Remover
 description: Power-tooling for workflow removal
 date: 2015-05-18
 redirect_from: /acs-aem-commons/features/workflow-remover.html 
-feature-tags: administration
+feature-tags: aem-65 aem-cs
 initial-release: 1.10.0
-last-updated-release: 4.3.4
+last-updated-release: 6.0.0
 ---
 
 ## Purpose
@@ -58,7 +58,7 @@ ACS AEM Commons' Workflow Remover can also be used to schedule removal of workfl
 
 Define a `sling:OsgiConfig` with the following attributes.
 
-	/apps/mysite/config.author/com.adobe.acs.commons.workflow.bulk.removal.impl.WorkflowInstanceRemoverScheduler-pdfs.xml
+    /apps/mysite/config.author/com.adobe.acs.commons.workflow.bulk.removal.impl.WorkflowInstanceRemoverScheduler-pdfs.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -77,9 +77,9 @@ Define a `sling:OsgiConfig` with the following attributes.
 
 * scheduler.expression: The usual Sling Scheduler expression (see www.cronmaker.com)
 * workflow.statuses: Only remove Workflow Instances that have one of these statuses
-	* ABORTED,COMPLETE,RUNNING,SUSPENDED,STALE
+    * ABORTED,COMPLETE,RUNNING,SUSPENDED,STALE
 * workflow.models: Only remove Workflow Instances that belong to one of these WF Models.
-	* Example: /etc/workflow/models/dam/adddamsize/jcr:content/model
+    * Example: /etc/workflow/models/dam/adddamsize/jcr:content/model
 * workflow.payloads: Only remove Workflow Instances whose payloads match one of these regex patterns.
 * worlflow.older-than: Only remove Workflow Instances whose payloads are older than this UTC Time in milliseconds.
 * max-duration: Max number of minutes to run. 0 for no limit.

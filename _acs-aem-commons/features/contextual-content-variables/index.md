@@ -4,7 +4,7 @@ title: Contextual Content Variables (CCVAR)
 description: Use properties directly in authored text
 redirect_from: /acs-aem-commons/features/contextual-content-variables.html
 date: 2021-05-21
-feature-tags: authoring
+feature-tags: aem-65 aem-cs
 initial-release: 5.0.5
 ---
 
@@ -44,7 +44,7 @@ Note that the configuration node *must* be inside a four-level path that ends in
 
 To validate that your configuration was successful, look at the Sling Rewriter tab in the OSGi Web Console.
 
-	/apps/myapp/config/rewriter/ccvar-transformer.xml
+    /apps/myapp/config/rewriter/ccvar-transformer.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>

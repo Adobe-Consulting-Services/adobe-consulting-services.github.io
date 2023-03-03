@@ -4,7 +4,7 @@ title: Package Replication Status Updater
 description: Replicate content packages and have your cake too!
 date: 2014-09-02
 redirect_from: /acs-aem-commons/features/package-replication-status-updater.html
-feature-tags: content-migration administration
+feature-tags: aem-65 aem-cs
 initial-release: 1.8.0
 ---
 
@@ -38,9 +38,9 @@ To enable Package Replication Status Updating, create a new `sling:OsgiConfig` n
 * `replicated-by`: Marks the replicator for the package content. Accepts a principal name or any String.
    * Default: Package Replication
 * `replicated-at`: Marks the replication time for the content. Accepts "Package Last Modified" or "Current Time"
-	* Package Last Modified: Marks the content as replicated the last time the Package was modified (aka Built)
-	* Current Time: Marks the content as replicated at the current time (now)
-	* Default: Package Last Modified
+    * Package Last Modified: Marks the content as replicated the last time the Package was modified (aka Built)
+    * Current Time: Marks the content as replicated at the current time (now)
+    * Default: Package Last Modified
 * `replicated-by.override`: Marks the replicator for the package content. Accepts a principal name or any String.
    * Default: Package Replication
    * The name `replicated-by.override` was introduced in v3.10.0. Prior to v3.10.0 and in all 2.x.x releases, the name is `replicated-by`. 

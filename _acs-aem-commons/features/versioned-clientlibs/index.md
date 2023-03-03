@@ -4,12 +4,12 @@ title: Versioned ClientLibs
 description: Set TTLs on ClientLib JS/CSS to infinity and beyond!
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/versioned-clientlibs.html
-feature-tags: component-dev backend-dev
-tags: aemcs-incompatible deprecated
+feature-tags: aem-65
+tags: aemcs-incompatible
 initial-release: 1.2.0
 ---
 
-## DEPRECATION INFORMATION
+## AEM 6.5 only
 
 AEM as a Cloud Service's ClientLibraryManager now supports [versioning client library URLs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=en#content-consistency). 
 
@@ -48,7 +48,7 @@ The easiest way to configure the rewriter pipline is just to copy `/libs/cq/conf
 
 To validate that your configuration was successful, look at the Sling Rewriter tab in the OSGi Web Console.
 
-	/apps/myapp/config/rewriter/versioned-clientlibs.xml
+    /apps/myapp/config/rewriter/versioned-clientlibs.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>

@@ -4,9 +4,8 @@ title: Path Render Condition
 description: Show and hide your nodes in Touch UI based on the current path.
 date: 2016-04-25
 thumbnail: /images/default/thumbnail.png
-feature-tags: component-dev
+feature-tags: aem-65 aem-cs
 tags: acs-aem-commons-features new
-categories: acs-aem-commons features
 initial-release: 2.4.0/3.0.0
 ---
 

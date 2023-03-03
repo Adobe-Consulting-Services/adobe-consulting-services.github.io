@@ -4,8 +4,7 @@ title: Permission Sensitive Cache Servlet
 description: Make your dispatcher cache respect ACLs.
 date: 2017-12-05
 redirect_from: /acs-aem-commons/features/permission-sensitive-cache.html
-feature-tags: component-dev
-tags: acs-aem-commons-features new
+feature-tags: aem-65 aem-cs
 initial-release: 3.13.0
 ---
 

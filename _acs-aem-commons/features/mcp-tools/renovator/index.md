@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Renovator
 description: Power tooling for moving assets and pages in AEM
 date: 2018-11-03
+feature-tags: aem-65 aem-cs
 initial-release: 3.19.0
 ---
 

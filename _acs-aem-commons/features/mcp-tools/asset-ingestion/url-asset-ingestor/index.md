@@ -3,9 +3,9 @@ layout: acs-aem-commons_feature
 title: URL Asset Import
 description: Bulk-load assets from a spreadsheet
 date: 2018-05-04
-feature-tags: content-migration authoring administration
 initial-release: 3.15.0
 last-updated-release: 3.17.0
+feature-tags: aem-65
 tags: aemcs-incompatible
 ---
 
@@ -82,7 +82,7 @@ Source and target must be specified in addition to the addition two columns desc
 
 ### Optional metadata columns
 
-Additional columns with “:” in the name will be added as asset metadata.  For example a property like “abc:my-property” (where "abc' is a custom namespace) will be appended to the metadata.  This only happens for original assets, not renditions.  If a row has values filled in for "rendition" or "original" then effectively all metadata fields will be ignored entirely.
+Additional columns with ":" in the name will be added as asset metadata.  For example a property like "abc:my-property" (where "abc' is a custom namespace) will be appended to the metadata.  This only happens for original assets, not renditions.  If a row has values filled in for "rendition" or "original" then effectively all metadata fields will be ignored entirely.
 
 More information about metadata [can be found here](https://helpx.adobe.com/experience-manager/6-4/assets/using/metadata.html).
 

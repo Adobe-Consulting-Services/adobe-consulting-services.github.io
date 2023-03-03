@@ -4,7 +4,7 @@ title: Property Merge POST Processor
 description: Merge data into a single property
 date: 2017-12-01
 redirect_from: /acs-aem-commons/features/property-merge-post-processor.html
-feature-tags: component-dev
+feature-tags: aem-65 aem-cs
 initial-release: 1.10.0
 last-updated-release: 3.13.0
 ---
@@ -23,25 +23,25 @@ While pointing multiple dialog fields to a single property and combining the val
 
 Add the following POST parameters
 
-	:<sourceProp1>@PropertyMerge=<destinationProp>
-	:<sourceProp2>@PropertyMerge=<destinationProp>
+    :<sourceProp1>@PropertyMerge=<destinationProp>
+    :<sourceProp2>@PropertyMerge=<destinationProp>
 
-	:<destinationProp>@PropertyMerge.AllowDuplicates=true|false
-	:<destinationProp>@PropertyMerge.TypeHint=String|Date|Long|Double|Boolean
+    :<destinationProp>@PropertyMerge.AllowDuplicates=true|false
+    :<destinationProp>@PropertyMerge.TypeHint=String|Date|Long|Double|Boolean
 
 Example
 
-	:aTags@PropertyMerge=abcTags
-	:bTags@PropertyMerge=abcTags
-	:cTags@PropertyMerge=abcTags
-	:abcTags@PropertyMerge.AllowDuplicates=true
-	:abcTags@PropertyMerge.TypeHint=String
+    :aTags@PropertyMerge=abcTags
+    :bTags@PropertyMerge=abcTags
+    :cTags@PropertyMerge=abcTags
+    :abcTags@PropertyMerge.AllowDuplicates=true
+    :abcTags@PropertyMerge.TypeHint=String
 
-	:dTags@PropertyMerge=deTags
-	:eTags@PropertyMerge=deTags
-	:deTags@PropertyMerge.AllowDuplicates=false
-	:deTags@PropertyMerge.TypeHint=String
-		
+    :dTags@PropertyMerge=deTags
+    :eTags@PropertyMerge=deTags
+    :deTags@PropertyMerge.AllowDuplicates=false
+    :deTags@PropertyMerge.TypeHint=String
+        
 Adding the above as request params will merge aTags, bTags, cTags into abcTags and dTags, eTags into deTags
 
 Note the `:` prefix to ensure these params are ignored by the OOTB Sling POST Servlet, and not written to the underlying resource.
@@ -71,7 +71,7 @@ This example shows how to use `Operation.mergeAllTags` from an asset schema edit
 If you are combining tags, it is a good idea to make sure that the target propery is not visible or otherwise part of the form (not even a hidden field.)  This is because the sling post processor will re-instate all of the old values each time, making it impossible to for removed tags to get cleaned out.  However, if the merged tag propert is not shown or part of the form, then the underlying values should be correct.  You can verify this by looking at the node properties in CRX DE Lite.
 
 #### Example of ExtJS Dialog XML
-	
+    
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
@@ -83,21 +83,21 @@ If you are combining tags, it is a good idea to make sure that the target proper
             jcr:primaryType="cq:Widget"
             xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
-            	<animal-tags
+                <animal-tags
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Animal Tags"
                     name="./animalTags"
                     xtype="tags"/>
-            	<plant-tags
+                <plant-tags
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Plant Tags"
                     name="./plantTags"
-                    xtype="tags"/>		
-	            <cq-tags
+                    xtype="tags"/>        
+                <cq-tags
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Merged Tags"
                     name="./cq:tags"
-					readonly="{Boolean}true"
+                    readonly="{Boolean}true"
                     xtype="tags"/>
                 <animal-tags-property-merge
                     jcr:primaryType="cq:Widget"
@@ -110,21 +110,21 @@ If you are combining tags, it is a good idea to make sure that the target proper
                     ignoreData="{Boolean}true"
                     name=":plantTags@PropertyMerge"
                     value="cq:tags"
-                    xtype="hidden"/> 			
+                    xtype="hidden"/>             
                 <cq-tags-property-merge-allow-duplicates
                     jcr:primaryType="cq:Widget"
                     ignoreData="{Boolean}true"
                     name=":cq:tags@PropertyMerge.AllowDuplicates"
                     value="false"
-                    xtype="hidden"/> 						
+                    xtype="hidden"/>                         
                 <cq-tags-property-merge-type-hint
                     jcr:primaryType="cq:Widget"
                     ignoreData="{Boolean}true"
                     name=":cq:tags@PropertyMerge.TypeHint"
                     value="String"
-                    xtype="hidden"/> 						
-				</items>
-			</tab1>
-		</items>
+                    xtype="hidden"/>                         
+                </items>
+            </tab1>
+        </items>
 </jcr:root>
 {% endhighlight %}

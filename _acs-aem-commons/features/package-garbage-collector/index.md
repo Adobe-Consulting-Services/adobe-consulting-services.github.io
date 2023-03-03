@@ -4,13 +4,14 @@ title: Package Garbage Collector
 description: Cleans up packages deployed by Cloud Manager
 date: 2022-01-27
 redirect_from: /acs-aem-commons/features/package-garbage-collector.html 
-feature-tags: administration
 initial-release: 5.6.0
 last-updated-release: 5.6.0
+feature-tags: aem-65
 tags: aemcs-incompatible
 ---
 
 ## Purpose
+
 When you use Adobe Cloud Manager to deploy new code to your environments on Adobe Managed Service instances, it will generate a unique version number for your package, based on the configuration in the pom.xml file. 
 
 The downside of this approach, is that over time, multiple versions of the packages are building up in the /etc/packages part of the repository. Eventually, this leads to the exhaustion of the storage, and in the worst case scenario, left unchecked; repository corruption. In particular, test environments that usually have less storage available than staging or production environments are more susceptible to this problem. 

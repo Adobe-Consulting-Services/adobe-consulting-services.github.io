@@ -3,8 +3,8 @@ layout: acs-aem-commons_feature
 title: Refresh Asset Folder Thumbnails
 description: Fix folder thumbnails quickly!
 date: 2018-05-07
-feature-tags: authoring administration
 initial-release: 3.16.0
+feature-tags: aem-65
 tags: aemcs-incompatible
 ---
 

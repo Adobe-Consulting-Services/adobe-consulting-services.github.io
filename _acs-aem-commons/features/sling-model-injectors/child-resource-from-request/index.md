@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Child Resource From Request Injector
 description: Injects a resource as a sling model, using a sling request as the adaptable
 date: 2019-06-12
-feature-tags: backend-dev
+feature-tags: aem-65 aem-cs
 initial-release: 4.2.0
 ---
 

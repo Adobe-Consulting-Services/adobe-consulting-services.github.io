@@ -5,6 +5,7 @@ description: Watermark asset renditions.
 redirect_from: /acs-aem-commons/features/dam-workflow-processes.html
 date: 2013-10-02
 initial-release: 1.0.0
+feature-tags: aem-65
 tags: aemcs-incompatible
 ---
 
@@ -18,12 +19,12 @@ This process overlays the named watermark image onto the named rendition in the 
     2. Insert a new Process step, Workflow/Process Step ![Workflow Component List](images/1.png)
     3. Edit the Process Step
         1. Title: Add watermark to image
-        2. On the Process tab, select “Add Watermark to Rendition” from the Process drop down. ![Process Drop Down](images/2.png)
+        2. On the Process tab, select "Add Watermark to Rendition" from the Process drop down. ![Process Drop Down](images/2.png)
         3. Check the Handler Advance option
         4. Two arguments are required
             1. `renditionName`: The name of the rendition to modify, e.g. "cq5dam.web.1280.1280"
             2. `watermark`: The repository path of the watermark. If this is a simple `nt:file` node, it is just the path to the node. If it is a DAM asset, it is the path to the original rendition, e.g. `/content/dam/geometrixx/icons/target.png/jcr:content/renditions/original`. ![Arguments](images/3.png)
-    4. Click OK and then “Save” the workflow.
+    4. Click OK and then "Save" the workflow.
 
 A full configuration example might have all the following:  
 > watermark:/content/dam/geometrixx/icons/draft.png/jcr:content/renditions/original,renditionName:cq5dam.web.1280.1280

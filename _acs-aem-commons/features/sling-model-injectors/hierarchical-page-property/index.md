@@ -4,7 +4,7 @@ title: Hierarchical Page Property Sling Models Injector
 description: Inject Hierarchical Page ValueMap properties in your sling model
 date: 2019-02-08
 redirect_from: /acs-aem-commons/features/aem-sling-models-injectors.html
-feature-tags: backend-dev, new
+feature-tags: aem-65 aem-cs
 tags: new
 initial-release: 4.0.0
 ---

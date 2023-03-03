@@ -6,7 +6,7 @@ date: 2014-01-01
 redirect_from: /acs-aem-commons/features/simple-sitemap.html
 initial-release: 1.5.0
 last-updated-release: 3.14.0
-tags: deprecated
+feature-tags: aem-65 aem-cs
 ---
 
 # Deprecation notice
