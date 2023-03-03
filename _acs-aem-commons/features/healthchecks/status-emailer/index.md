@@ -4,8 +4,7 @@ title: Health Check Status E-mailer
 description: Actually know when health checks fail!
 date: 2017-08-08
 initial-release: 2.13.0/3.10.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 ## Purpose

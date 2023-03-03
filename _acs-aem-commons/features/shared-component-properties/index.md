@@ -4,7 +4,7 @@ title: Shared Component Properties
 description: Configure components with properties shared across pages
 date: 2016-11-14
 redirect_from: /acs-aem-commons/features/shared-component-properties.html 
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.9.0
 ---
 

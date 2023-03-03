@@ -5,8 +5,7 @@ description: Create one-time scripts that execute upon deployment to AEM
 date: 2018-04-05
 redirect_from: /acs-aem-commons/features/on-deploy-scripts.html 
 initial-release: 3.15.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 ## Purpose

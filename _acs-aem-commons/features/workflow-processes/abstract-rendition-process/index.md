@@ -5,7 +5,7 @@ description: Ease your workflow development
 sub-feature: true
 date: 2013-10-02
 initial-release: 1.0.0
-feature-tags: aem-65
+tags: aem-65
 ---
 
 ## Purpose

@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Tag Creator
 description: Plucked from an AEM taxonomist's dream!
 date: 2017-08-14
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.11.0
 ---
 

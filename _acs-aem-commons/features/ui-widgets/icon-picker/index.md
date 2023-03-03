@@ -4,7 +4,7 @@ title: Icon Picker
 description: Add visual icon picker to dialogs
 date: 2015-08-25
 redirect_from: /acs-aem-commons/features/icon-picker.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.0.0
 last-updated-release: 4.0.0
 ---

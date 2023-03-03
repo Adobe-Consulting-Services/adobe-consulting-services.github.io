@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: QR Code Page Editor Plug-in
 description: See your page on REAL mobile in a snap!
 date: 2017-08-06
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.10.0
 ---
 

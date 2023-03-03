@@ -4,7 +4,7 @@ title: Dispatcher TTL
 description: Effortlessly take advantage of Dispatcher's TTL caching
 date: 2015-12-04
 redirect_from: /acs-aem-commons/features/dispatcher-ttl.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.2.0
 ---
 

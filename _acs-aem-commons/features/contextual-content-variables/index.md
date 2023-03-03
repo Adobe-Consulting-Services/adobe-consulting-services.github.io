@@ -4,7 +4,7 @@ title: Contextual Content Variables (CCVAR)
 description: Use properties directly in authored text
 redirect_from: /acs-aem-commons/features/contextual-content-variables.html
 date: 2021-05-21
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 5.0.5
 ---
 

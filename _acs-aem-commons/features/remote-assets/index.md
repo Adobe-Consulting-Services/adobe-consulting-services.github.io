@@ -5,8 +5,7 @@ description: Automatically sync assets on-demand from one AEM server to another.
 date: 2019-03-11
 redirect_from: /acs-aem-commons/features/remote-assets.html 
 initial-release: 4.1.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 ## Purpose

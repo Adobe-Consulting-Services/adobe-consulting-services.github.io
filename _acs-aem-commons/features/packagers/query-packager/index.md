@@ -4,7 +4,7 @@ title: Query Packager
 description: Create package definitions from Queries
 redirect_from: /acs-aem-commons/features/query-packager.html
 date: 2014-09-22
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.8.0
 ---
 

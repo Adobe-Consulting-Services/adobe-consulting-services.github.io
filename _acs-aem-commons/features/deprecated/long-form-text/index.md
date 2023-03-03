@@ -4,7 +4,6 @@ title: Long-form Text Component
 description: Add components to text
 date: 2015-03-01
 redirect_url: /acs-aem-commons/features/long-form-text.html
-feature-tags: authoring
 initial-release: 1.9.6
 tags: deprecated
 ---

@@ -4,7 +4,7 @@ title: Parent Resource ValueMap Value Injector
 description: Configure components to inherit parent component properties
 date: 2020-12-10
 redirect_from: /acs-aem-commons/features/parent-resource-valuemap-value.html 
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 4.9.0
 ---
 

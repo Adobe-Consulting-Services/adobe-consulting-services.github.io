@@ -4,7 +4,7 @@ title: Assets Geolocation Map
 description: See from whence your assets hail!
 redirect_from: /acs-aem-commons/features/assets-geo-map.html
 date: 2016-05-30
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.1.0
 last-updated-release: 4.0.0
 ---

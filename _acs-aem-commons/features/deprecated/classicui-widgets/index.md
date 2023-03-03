@@ -5,7 +5,6 @@ description: Improve your dialogs
 date: 2014-01-02
 redirect_from: /acs-aem-commons/features/widgets.html
 tags: deprecated
-feature-tags: component-dev
 ---
 
 ## Why is this deprecated?

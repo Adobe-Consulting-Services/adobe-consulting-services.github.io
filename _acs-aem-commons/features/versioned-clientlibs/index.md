@@ -4,8 +4,7 @@ title: Versioned ClientLibs
 description: Set TTLs on ClientLib JS/CSS to infinity and beyond!
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/versioned-clientlibs.html
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 1.2.0
 ---
 

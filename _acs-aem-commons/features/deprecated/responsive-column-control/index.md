@@ -5,7 +5,6 @@ description: Give your authors maximal column layout flexibility.
 date: 2014-01-14
 redirect_from: /acs-aem-commons/features/responsive-column-control.html
 tags: deprecated
-feature-tags: component-dev
 initial-release: 1.5.0
 ---
 

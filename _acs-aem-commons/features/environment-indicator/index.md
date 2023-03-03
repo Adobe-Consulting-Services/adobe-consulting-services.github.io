@@ -4,7 +4,7 @@ title: AEM Environment Indicator
 description: Too many tabs have you confused?
 date: 2014-09-26
 redirect_from: /acs-aem-commons/features/aem-environment-indicator.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.8.0
 last-updated-release: 6.0.0
 ---

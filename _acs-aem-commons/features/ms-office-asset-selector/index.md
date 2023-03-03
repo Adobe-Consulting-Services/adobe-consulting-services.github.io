@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: MS Office Asset Selector
 description: Access AEM assets directly from MS Office apps!
 date: 2022-10-19
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 4.8.0
 last-updated-release: 5.4.0
 ---

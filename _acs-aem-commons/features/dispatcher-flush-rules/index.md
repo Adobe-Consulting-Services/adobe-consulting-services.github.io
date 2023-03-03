@@ -4,8 +4,7 @@ title: Dispatcher Flush Rules
 description: Statlevels cramping your flushes?
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/dispatcher-flush-rules.html
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 1.2.0
 ---
 

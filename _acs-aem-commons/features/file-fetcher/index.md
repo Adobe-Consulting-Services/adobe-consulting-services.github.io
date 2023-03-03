@@ -4,8 +4,7 @@ title: File Fetcher
 description: Automatically pull files into AEM and publish them
 date: 2019-12-17
 redirect_from: /acs-aem-commons/features/mcp.html
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 4.4.0
 ---
 

@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Layer Switcher
 description: Switch active layer with a stroke of a key!
 date: 2014-07-23
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.7.0
 last-updated-release: 4.0.0
 ---

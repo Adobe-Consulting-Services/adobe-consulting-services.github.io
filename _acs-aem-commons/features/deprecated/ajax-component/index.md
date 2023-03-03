@@ -5,7 +5,6 @@ description: AJAX-ify your AEM Components with ease
 date: 2013-07-30
 redirect_from: /acs-aem-commons/features/ajax-component.html
 youtube-id: 8fAyI2IVBbc
-feature-tags: component-dev
 tags: deprecated
 initial-release: 1.0.0
 ---

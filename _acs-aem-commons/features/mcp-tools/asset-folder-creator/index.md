@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Asset Folder Creator
 description: Model and create Asset Folder hierarchies using Excel
 date: 2017-12-01
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.13.0
 ---
 

@@ -4,8 +4,7 @@ title: Dispatcher Flush UI
 description: The convenience of flushing by yourself
 date: 2013-10-02
 redirect_from: /acs-aem-commons/features/dispatcher-flush-ui.html
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 1.2.0
 last-updated-release: 6.0.0
 ---

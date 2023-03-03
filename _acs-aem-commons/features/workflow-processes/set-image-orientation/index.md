@@ -4,8 +4,7 @@ title: Set Image Orientation
 description: Set image orientation tag based on aspect ratio 
 date: 2020-11-03
 initial-release: 4.9.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 ## Purpose

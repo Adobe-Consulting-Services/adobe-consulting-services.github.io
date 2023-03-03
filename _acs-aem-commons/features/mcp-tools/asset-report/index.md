@@ -4,7 +4,7 @@ title: Asset Reporting
 description: Details reporting on all your assets
 date: 2017-09-01
 initial-release: 3.10.0
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 ---
 
 This reporting process identifies how much space is being used in a folder and its subfolders across all assets.

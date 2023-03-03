@@ -4,7 +4,7 @@ title: Static Reference Rewriter
 description: Minimize your static request size.
 date: 2013-07-01
 redirect_from: /acs-aem-commons/features/static-reference-rewriter.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.0.0
 ---
 

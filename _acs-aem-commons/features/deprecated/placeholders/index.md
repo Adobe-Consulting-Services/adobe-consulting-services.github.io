@@ -5,7 +5,6 @@ description: A little polish goes a long way
 date: 2014-01-10
 redirect_from: /acs-aem-commons/features/placeholders.html
 tags: deprecated
-feature-tags: component-dev standard
 initial-release: 1.5.0
 ---
 

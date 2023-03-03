@@ -5,8 +5,7 @@ description: Matte your assets!
 sub-feature: true
 date: 2013-10-02
 initial-release: 1.2.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 ## Purpose

@@ -4,7 +4,7 @@ title: Query Autocomplete Datasource
 description: QueryBuilder driven autocomplete lists
 date: 2016-04-25
 redirect_from: /acs-aem-commons/features/queryautocomplete-datasource.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.5.0/3.1.0
 last-updated-release: 4.0.0
 ---

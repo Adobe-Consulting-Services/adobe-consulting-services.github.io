@@ -4,7 +4,7 @@ title: Asset Edit History
 description: Quickly see an asset's XMP edit history!
 date: 2016-05-29
 sub-feature: true
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.1.0
 last-updated-release: 4.0.0
 ---

@@ -5,7 +5,7 @@ description: Replicate a bunch of content (more) safely!
 date: 2014-09-01
 initial-release: 2.6.2/3.2.2
 last-updated-release: 4.0.0
-feature-tags: aem-65
+tags: aem-65
 ---
 
 ## Purpose

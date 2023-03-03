@@ -4,7 +4,7 @@ title: Property Merge POST Processor
 description: Merge data into a single property
 date: 2017-12-01
 redirect_from: /acs-aem-commons/features/property-merge-post-processor.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.10.0
 last-updated-release: 3.13.0
 ---

@@ -4,7 +4,7 @@ title: Named Transform Image Servlet
 description: Consistently resize, crop and transform images
 date: 2017-07-01
 redirect_from: /acs-aem-commons/features/named-image-transform.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.5.0
 ---
 

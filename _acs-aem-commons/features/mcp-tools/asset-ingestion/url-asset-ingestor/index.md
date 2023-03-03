@@ -5,8 +5,7 @@ description: Bulk-load assets from a spreadsheet
 date: 2018-05-04
 initial-release: 3.15.0
 last-updated-release: 3.17.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 This tool loads assets listed in a spreadsheet and optionally also sets additional asset metadata if provided.

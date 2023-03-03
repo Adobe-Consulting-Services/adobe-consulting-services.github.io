@@ -4,7 +4,7 @@ title: Manage Controlled Processes
 description: The most efficient way of managing what we do
 date: 2017-08-14
 redirect_from: /acs-aem-commons/features/mcp.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.10.0
 last-updated-release: 4.3.4
 ---

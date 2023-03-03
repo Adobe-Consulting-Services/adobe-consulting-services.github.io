@@ -4,7 +4,7 @@ title: Package Replication Status Updater
 description: Replicate content packages and have your cake too!
 date: 2014-09-02
 redirect_from: /acs-aem-commons/features/package-replication-status-updater.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.8.0
 ---
 

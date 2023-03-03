@@ -4,8 +4,7 @@ title: SMTP Health Check
 description: Check AEM's temperature
 date: 2016-11-01
 redirect_from: /acs-aem-commons/features/healthchecks.html
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 > [Add health checks to your Granite WebUI](https://docs.adobe.com/docs/en/aem/6-3/administer/operations/operations-dashboard.html#Health Reports). 

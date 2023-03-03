@@ -4,7 +4,7 @@ title: HTTP Cache
 description: Cache the uncacheable!
 date: 2015-12-05
 redirect_from: /acs-aem-commons/features/http-cache.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.2.0
 last-updated-release: 4.0.0
 

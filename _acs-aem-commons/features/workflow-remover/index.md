@@ -4,7 +4,7 @@ title: Workflow Remover
 description: Power-tooling for workflow removal
 date: 2015-05-18
 redirect_from: /acs-aem-commons/features/workflow-remover.html 
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.10.0
 last-updated-release: 6.0.0
 ---

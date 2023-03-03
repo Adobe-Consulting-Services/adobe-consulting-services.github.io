@@ -4,7 +4,7 @@ title: Parameterized Namespace Granite Include
 description: Include granite dialog snippets with parameters and / or a namespace, so you can reuse them better
 date: 2020-03-08
 redirect_from: /acs-aem-commons/features/granite.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 4.5.0
 ---
 

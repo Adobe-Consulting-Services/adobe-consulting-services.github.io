@@ -4,7 +4,6 @@ title: Forms
 description: Simple yet flexible framework for building complex forms
 date: 2013-07-10
 redirect_from: /acs-aem-commons/features/forms.html
-feature-tags: component-dev
 tags: deprecated
 initial-release: 1.0.0
 ---

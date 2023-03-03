@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Workflow Delegation
 description: Have one workflow kick off another workflow!
 date: 2017-02-01
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.7.0/3.10.0
 ---
 

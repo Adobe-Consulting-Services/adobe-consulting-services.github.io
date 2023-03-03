@@ -4,7 +4,7 @@ title: Draggable Lists
 description: Drag to order your lists
 date: 2016-04-25
 redirect_from: /acs-aem-commons/features/draggablelist.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.5.0/3.1.0
 last-updated-release: 4.0.0
 ---

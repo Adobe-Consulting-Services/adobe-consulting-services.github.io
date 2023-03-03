@@ -4,7 +4,7 @@ title: JsonValueMapValue Sling Models Injector
 description: Inject JSON objects into your Sling Models classes
 date: 2014-04-08
 redirect_from: /acs-aem-commons/features/aem-sling-models-injectors.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 4.0.0
 ---
 

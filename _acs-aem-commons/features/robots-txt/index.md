@@ -4,7 +4,7 @@ title: Robots.txt Generator
 description: Easy and flexible generattion of robots.txt files for your website 
 date: 2020-05-07
 initial-release: 4.7.0
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 ---
 
 # Purpose

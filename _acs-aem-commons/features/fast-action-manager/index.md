@@ -4,7 +4,7 @@ title: Fast Action Manager
 description: aka FACEMELTER
 date: 2016-04-25
 redirect_from: /acs-aem-commons/features/fast-action-manager.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.9.0
 last-updated-release: 6.0.0
 ---

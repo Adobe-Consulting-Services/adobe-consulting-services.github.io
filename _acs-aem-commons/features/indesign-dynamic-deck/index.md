@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: InDesign Dynamic Deck
 description: Generate InDesign documents from AEM Assets
 date: 2020-03-02
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 4.6.0
 ---
 

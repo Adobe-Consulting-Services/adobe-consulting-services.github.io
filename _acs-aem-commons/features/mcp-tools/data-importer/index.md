@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Data Importer
 description: Bulk-load data from a spreadsheet
 date: 2018-05-04
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 3.15.2
 last-updated-release: 3.16.0
 ---

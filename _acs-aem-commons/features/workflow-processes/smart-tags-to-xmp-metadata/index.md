@@ -4,7 +4,7 @@ title: Sync Smart Tags to XMP Metadata Node
 description: Get those Smart Tags into XMP Metadata!
 sub-feature: true
 date: 2019-02-01
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 4.0.0
 ---
 

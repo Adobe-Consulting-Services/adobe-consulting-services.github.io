@@ -4,7 +4,7 @@ title: Page and Design Reference Providers
 description: Notify authors when dependencies need to be activated.
 date: 2014-04-05
 redirect_from: /acs-aem-commons/features/reference-providers.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.6.0
 ---
 

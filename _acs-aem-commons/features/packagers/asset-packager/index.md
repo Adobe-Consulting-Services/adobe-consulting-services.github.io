@@ -4,7 +4,7 @@ title: Asset Packager
 description: Easily package pages and the associated assets
 redirect_from: /acs-aem-commons/features/asset-packager.html
 date: 2019-05-20
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 4.2.0
 ---
 

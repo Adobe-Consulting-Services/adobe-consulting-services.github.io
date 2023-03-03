@@ -4,7 +4,7 @@ title: ACS AEM Commons Utils APIs
 description: A collection of common utils
 sub-feature: true
 date: 2013-06-30
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.0.0
 ---
 

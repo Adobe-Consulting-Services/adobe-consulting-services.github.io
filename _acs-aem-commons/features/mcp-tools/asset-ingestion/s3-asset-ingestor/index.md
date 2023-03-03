@@ -4,8 +4,7 @@ title: S3 Asset Ingestor
 description: Load a S3 bucket of assets into AEM
 date: 2017-11-01
 initial-release: 3.11.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 This is essentially the same as the [File Asset Ingestor](../asset-ingestor/index.html), but pulls files from an Amazon S3 bucket instead of the local filesystem.  You can load a directory of assets into AEM very easily with this tool.  Because of the ability to overload a server with assets, this tool only appears for the "admin" user right now.

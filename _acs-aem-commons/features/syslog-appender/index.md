@@ -5,8 +5,7 @@ description: Send log messages to remote systems
 date: 2014-01-10
 redirect_from: /acs-aem-commons/features/syslog-appender.html
 initial-release: 1.5.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 # Purpose

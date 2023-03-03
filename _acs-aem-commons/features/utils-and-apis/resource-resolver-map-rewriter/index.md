@@ -4,7 +4,7 @@ title: Resource Resolver Mapping Rewriter
 description: Map any HTML attribute!
 date: 2015-10-15
 initial-release: 2.1.0
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 ---
 
 ## Purpose

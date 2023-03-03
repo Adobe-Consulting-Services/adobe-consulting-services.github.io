@@ -4,7 +4,7 @@ title: System Notifications
 description: Alert AEM Authors about system activities
 date: 2015-10-20
 redirect_from: /acs-aem-commons/features/system-notifications.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 2.1.0
 ---
 

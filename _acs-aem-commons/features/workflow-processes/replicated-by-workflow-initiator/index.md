@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Replicated By Workflow Initiator
 description: Set the workflow initiator accurately!
 date: 2014-09-01
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.8.0
 ---
 

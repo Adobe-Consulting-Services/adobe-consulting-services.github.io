@@ -4,7 +4,7 @@ title: Synthetic Workflow
 description: Workflow Process execution has never been faster
 date: 2014-10-12
 redirect_from: /acs-aem-commons/features/synthetic-workflow.html
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.9.0
 ---
 

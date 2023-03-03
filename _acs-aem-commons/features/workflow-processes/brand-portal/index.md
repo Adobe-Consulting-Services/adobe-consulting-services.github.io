@@ -5,8 +5,7 @@ description: Sync AEM assets with Brand Portal from AEM Workflow
 sub-feature: true
 date: 2017-08-13
 initial-release: 3.10.0
-tags: aemcs-incompatible
-feature-tags: aem-65
+tags: aem-65
 ---
 
 ## Purpose

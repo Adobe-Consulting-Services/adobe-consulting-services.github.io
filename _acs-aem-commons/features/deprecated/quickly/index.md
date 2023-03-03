@@ -4,7 +4,6 @@ title: Quickly
 description: Quickly navigate AEM
 date: 2014-11-12
 redirect_from: /acs-aem-commons/features/quickly.html
-feature-tags: authoring administration
 tags: deprecated
 initial-release: 1.9.0
 ---

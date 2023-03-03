@@ -4,7 +4,7 @@ title: Send Template'd E-mail
 description: Helpful Workflow processes
 sub-feature: true
 date: 2014-09-01
-feature-tags: aem-65 aem-cs
+tags: aem-65 aem-cs
 initial-release: 1.9.0
 ---
 

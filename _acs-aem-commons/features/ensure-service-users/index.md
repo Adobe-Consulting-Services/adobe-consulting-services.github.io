@@ -3,8 +3,7 @@ layout: acs-aem-commons_feature
 title: Ensure Authorizable (FKA Ensure Service User)
 description: Ensure your service users and groups exist!
 date: 2018-04-19
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 3.8.0
 last-updated-release: 3.15.0
 ---

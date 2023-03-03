@@ -6,8 +6,7 @@ date: 2022-01-27
 redirect_from: /acs-aem-commons/features/package-garbage-collector.html 
 initial-release: 5.6.0
 last-updated-release: 5.6.0
-feature-tags: aem-65
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 ## Purpose
