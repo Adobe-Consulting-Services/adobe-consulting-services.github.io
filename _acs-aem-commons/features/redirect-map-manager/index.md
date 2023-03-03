@@ -76,7 +76,7 @@ Once you restart Apache, this will automatically pull changes from the Redirect 
 
 This allows uploading redirect map file will be combined with the redirects configured in AEM to create the final set of redirects.
 
-![Upload a Redirect Map File](images/upload-redirect-map.jpg)
+![Upload a Redirect Map File](images/upload-redirect-map.png)
 
 ### Redirect Configuration
 
