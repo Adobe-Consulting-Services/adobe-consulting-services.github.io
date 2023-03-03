@@ -11,6 +11,7 @@ This page identifies the versions of Adobe Experience Manager with which a parti
 {:.data-table}
 |                   | CQ 5.5     | CQ 5.6   |  AEM 5.6.1  | AEM 6.0   | AEM 6.1   |  AEM 6.2   |  AEM 6.3   |  AEM 6.4   | AEM 6.5    | AEM as a Cloud Service | 
 |-------------------|:----------:|:--------:|:-----------:|:---------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------------------:|
+| 6.X.X             |            |          |             |           |           |            |            |            |  &#x2714; (6.5.10+) | &#x2714; [*](#aem-as-a-cloud-service-feature-incompatibility)      |            
 | 5.X.X             |            |          |             |           |           |            |            |  &#x2714;  |  &#x2714;  | &#x2714; [*](#aem-as-a-cloud-service-feature-incompatibility)      |            
 | 4.X.X             |            |          |             |           |           |            |  &#x2714;  |  &#x2714;  |  &#x2714;  |                        |
 | 3.17.X            |            |          |             |           |           | &#x2714;   |  &#x2714;  |  &#x2714;  |            |                        | 

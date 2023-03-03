@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Content Fragment Importer
 description: Bulk-import content fragments from a spreadsheet
 date: 2022-04-20
-feature-tags: autoring administration content-migration
+tags: aem-65 aem-cs
 initial-release: 5.4.0
 ---
 

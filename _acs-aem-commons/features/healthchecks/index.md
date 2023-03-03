@@ -3,8 +3,7 @@ layout: acs-aem-commons_feature
 title: Health Checks
 description: Check AEM's temperature
 date: 2017-08-08
-feature-tags: administration standard
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 3.4.0
 ---
 

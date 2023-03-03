@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Vanity Path Rewrite Mapper
 description: Have your path rewriting and vanities too!
 date: 2017-08-08
-feature-tags: authoring administration
+tags: aem-65 aem-cs
 initial-release: 3.10.0
 ---
 

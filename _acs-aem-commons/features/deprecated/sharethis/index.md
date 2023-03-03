@@ -1,14 +1,19 @@
 ---
 layout: acs-aem-commons_feature
-title: Typekit Cloud Service
-description: Use your fonts!
+title: ShareThis Cloud Services
+description: Share what? Share this!
 date: 2013-11-10
 sub-feature: true
-initial-release: 1.2.0
+initial-release: 1.7.0
+tags: deprecated
 ---
+
 ## Purpose
 
-Leverage Adobe Typekit's web-fonts to make your AEM web sites stand out on the Web.
+Leverage Share This to easily add social sharing to your site.
+
+![image](images/sharethis.png)
+
 
 ## General Requirements
 
@@ -23,15 +28,15 @@ On AEM 6.1, use of these components generally require enabling of the CQ Configu
 This must be done in both author and publish.
 
 
-![image](images/typekit.png)
-
 ### How to Use
 
 1. Navigate to `AEM Author > Tools > Cloud Services Configurations`
-2. Select `Typekit`
+2. Select `Share This`
 3. Select `New > New Page`
-4. Select `Typekit Configuration` and open the newly created page
-5. Enter your Kit ID
-6. Apply this Typekit Configuration to any AEM Page in the usual manner
-	`Page Properties > Cloud Services Tab > Add Service > TypeKit > Select the configuration`
+4. Select `Share This Configuration` and open the newly created page
+5. Enter your Publisher ID
+6. Configure the other options as needed.
+7. Apply this Share This Configuration to any AEM Page in the usual manner
+    `Page Properties > Cloud Services Tab > Add Service > Share This > Select the configuration`
+
 

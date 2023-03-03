@@ -4,6 +4,7 @@ title: Set Image Orientation
 description: Set image orientation tag based on aspect ratio 
 date: 2020-11-03
 initial-release: 4.9.0
+tags: aem-65
 ---
 
 ## Purpose
@@ -23,10 +24,10 @@ Add custom process step to "DAM Update Asset" workflow model
 2. Insert a new Process Step after "Metadata Processor" step
 3. Edit the Process Step
    1. Title: "Process Image Orientation"
-   2. On the Process tab, select “Set Image Orientation” from the Process drop down.
+   2. On the Process tab, select "Set Image Orientation" from the Process drop down.
    3. Check the Handler Advance option
    4. Add custom arguments if desired (see below)
-4. Close dialog and click “Sync” to update workflow runtime model.
+4. Close dialog and click "Sync" to update workflow runtime model.
 
 
 

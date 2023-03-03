@@ -4,7 +4,6 @@ title: ClientLibs Manager
 description: AEM Design-driven, reusable ClientLibs
 date: 2013-09-20
 redirect_from: /acs-aem-commons/features/designer-clientlibsmanager.html
-feature-tags: component-dev backend-dev standard
 tags: deprecated
 initial-release: 1.0.0
 ---

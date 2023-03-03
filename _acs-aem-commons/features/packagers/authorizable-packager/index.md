@@ -4,7 +4,7 @@ title: Authorizable Packager
 description: Create package definitions of Authorizables
 sub-feature: true
 date: 2015-08-22
-feature-tags: administration
+tags: aem-65 aem-cs
 initial-release: 2.0.0
 ---
 

@@ -4,7 +4,7 @@ title: Data APIs
 description: Simplify working with data
 date: 2018-05-04
 redirect_from: /acs-aem-commons/features/data-api.html
-feature-tags: backend-dev content-migration
+tags: aem-65 aem-cs
 initial-release: 3.17.0
 ---
 

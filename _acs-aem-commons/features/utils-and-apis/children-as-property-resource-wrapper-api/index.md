@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Children as Property Resource Wrapper API
 description: Mock nodes as JSON in properties? What?!
 date: 2017-02-20
-feature-tags: backend-dev
+tags: aem-65 aem-cs
 initial-release: 2.10.0/3.7.0
 ---
 

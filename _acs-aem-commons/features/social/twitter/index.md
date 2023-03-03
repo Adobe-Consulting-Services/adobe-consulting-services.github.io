@@ -4,7 +4,9 @@ title: Twitter Adapter Factory
 description: Easily interact with the Twitter API
 date: 2013-10-10
 redirect_from: /acs-aem-commons/features/twitter.html
+tags: aem-65 aem-cs
 initial-release: 1.2.0
+last-updated-release: 6.0.0
 ---
 
 ## Purpose

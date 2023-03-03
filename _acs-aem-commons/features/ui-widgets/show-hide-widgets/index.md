@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Show/Hide Widgets
 description: Use checkboxes and drop-downs to conditionally show/hide other fields!
 date: 2017-02-10
-feature-tags: component-dev
+tags: aem-65 aem-cs
 initial-release: 2.7.0/3.10.0
 ---
 

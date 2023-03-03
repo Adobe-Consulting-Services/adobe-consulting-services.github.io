@@ -3,8 +3,8 @@ layout: acs-aem-commons_feature
 title: Content Traversing - Synthetic Workflow Wrapper
 description: Run workflow at scale (more) safely!
 date: 2014-09-01
-tags: authoring administration
 initial-release: 2.6.2/3.2.2
+tags: aem-65
 ---
 
 ## Purpose
@@ -37,6 +37,6 @@ Processing the tree in a serial fashion allows for a more controlled workflow ex
 throttle=true|false
 traverseTree=true|false
 saveInterval=1024
-workflowModelId=/etc/workflow/models/dam/update_asset
+workflowModelId=/var/workflow/models/demo-workflow
 {% endhighlight %}
 

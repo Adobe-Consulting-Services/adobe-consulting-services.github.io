@@ -4,8 +4,8 @@ title: Long-form Text Component
 description: Add components to text
 date: 2015-03-01
 redirect_url: /acs-aem-commons/features/long-form-text.html
-feature-tags: authoring
 initial-release: 1.9.6
+tags: deprecated
 ---
 
 ## Purpose
@@ -40,14 +40,14 @@ The ACS AEM Commons Long-form Text Component addresses this issue but allowing m
 
 Each parsys is discrete and requires a Design config to allow/limit components that can be added. A simple pattern for allowing the same components for all Long-form text parsys is to configure this in the code base via design cell nodes using the component name hierarchy. Example: 
 
-	`/etc/designs/demo/content-page/.content.xml`
-		
+    `/etc/designs/demo/content-page/.content.xml`
+        
 {% highlight xml %}
 
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
-		xmlns:cq="http://www.day.com/jcr/cq/1.0" 		
-		xmlns:jcr="http://www.jcp.org/jcr/1.0" 
-		xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"         
+        xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
         jcr:primaryType="nt:unstructured">    
     <long-form-text
             jcr:primaryType="nt:unstructured">

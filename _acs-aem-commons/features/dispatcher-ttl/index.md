@@ -1,12 +1,11 @@
 ---
 layout: acs-aem-commons_feature
 title: Dispatcher TTL
-description: Effortlessly take advantage of Dispatcher’s TTL caching
+description: Effortlessly take advantage of Dispatcher's TTL caching
 date: 2015-12-04
 redirect_from: /acs-aem-commons/features/dispatcher-ttl.html
-feature-tags: backend-dev
+tags: aem-65 aem-cs
 initial-release: 2.2.0
-
 ---
 
 > Requires AEM Dispatcher v4.1.11+

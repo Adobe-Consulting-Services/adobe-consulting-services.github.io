@@ -4,7 +4,7 @@ title: Synthetic Workflow
 description: Workflow Process execution has never been faster
 date: 2014-10-12
 redirect_from: /acs-aem-commons/features/synthetic-workflow.html
-feature-tags: backend-dev content-migration
+tags: aem-65 aem-cs
 initial-release: 1.9.0
 ---
 
@@ -139,7 +139,7 @@ The following code executes the OOTB DAM Asset Workflow Processes against a DAM 
 
 <%@include file="/libs/foundation/global.jsp"%><%
 %><%@page session="false" contentType="text/html; charset=utf-8"
-	pageEncoding="UTF-8"
+    pageEncoding="UTF-8"
     import="org.apache.sling.api.resource.*,
     java.util.*,
     javax.jcr.*,
@@ -193,15 +193,15 @@ The following code executes the OOTB DAM Asset Workflow Processes against a DAM 
         boolean saveAtEndOfAllWFProcesses = false;
 
         swr.execute(resourceResolver, r.getPath(), new String[] {
-        	"Extract Meta Data",
-        	"Create Thumbnail",
-        	"Create Web Enabled Image",
-        	"Update Folder Thumbnail Process"
-        	} , processArgs, saveAfterEachWFProcess, saveAtEndOfAllWFProcesses);
+            "Extract Meta Data",
+            "Create Thumbnail",
+            "Create Web Enabled Image",
+            "Update Folder Thumbnail Process"
+            } , processArgs, saveAfterEachWFProcess, saveAtEndOfAllWFProcesses);
 
         if(++count % 1000 == 0) {
-        	// Save in batches of 1000; How data is saved should be driven by the use case.
-        	resourceResolver.commit();
+            // Save in batches of 1000; How data is saved should be driven by the use case.
+            resourceResolver.commit();
         }
     }
 
@@ -224,7 +224,7 @@ This example shows applying OOTB AEM6 DAM Asset Update WF against unprocessed as
 * Create Thumbnail
 * Create Web Enabled Image
 * Create Reference
-	* Note this is an invalid name and will not execute; See in logs screenshot
+    * Note this is an invalid name and will not execute; See in logs screenshot
 * Update Folder Thumbnail Process
 
 Disable launchers and upload "raw" images to DAM

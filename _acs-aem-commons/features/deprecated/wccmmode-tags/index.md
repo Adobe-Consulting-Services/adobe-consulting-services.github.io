@@ -5,7 +5,6 @@ description: JSP Taglib for working with WCM Mode
 date: 2013-08-20
 redirect_from: /acs-aem-commons/features/wcmmode-tags.html
 tags: deprecated
-feature-tags: component-dev standard
 initial-release: 1.0.0
 ---
 

@@ -4,9 +4,9 @@ title: AEM Environment Indicator
 description: Too many tabs have you confused?
 date: 2014-09-26
 redirect_from: /acs-aem-commons/features/aem-environment-indicator.html
-feature-tags: administration
-tags: acs-aem-commons-features
+tags: aem-65 aem-cs
 initial-release: 1.8.0
+last-updated-release: 6.0.0
 ---
 
 ## Purpose
@@ -81,8 +81,8 @@ This is an example of a custom indicator that renders the environment name in a 
 Set `css-override` to with adjusted color and background colors per environment.
 
 {% highlight css %}
-#acs-commons-env-indicator { 	
-background-color: #800080;  	
+#acs-commons-env-indicator {     
+background-color: #800080;      
 color: #FFF;  
 
 position: fixed;
@@ -90,9 +90,9 @@ top: 0;
 left: 50%;
 width: 126px;
 margin-left: -63px;
-height: 30px;  	
+height: 30px;      
 font: bold 18px/29px sans-serif;
-text-align: center; 	 	
+text-align: center;          
 border: solid 1px black;
 border-top-width: 0;
 z-index: 100000000000000;
@@ -107,11 +107,11 @@ You can even add JS to the `inner-html` make the Tab move away from your mouse
 Local
 <script>
 document.getElementById('acs-commons-env-indicator').onmouseover = function() {
-	if(this.style.left === '50%') {
-		this.style.left = '25%';
-	} else {
-		this.style.left = '50%';
-	}
+    if(this.style.left === '50%') {
+        this.style.left = '25%';
+    } else {
+        this.style.left = '50%';
+    }
 };
 </script>
 {% endhighlight %}

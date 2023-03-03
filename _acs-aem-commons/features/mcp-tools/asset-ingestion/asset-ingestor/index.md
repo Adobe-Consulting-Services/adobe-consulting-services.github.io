@@ -5,7 +5,7 @@ description: Load a directory of assets into AEM
 date: 2017-11-01
 initial-release: 3.10.0
 last-updated-release: 3.16.0
-tags: aemcs-incompatible
+tags: aem-65
 ---
 
 This is an example of a high-speed parallel asset ingestor utility.  You can load a directory of assets into AEM very easily with this tool.  Because of the ability to overload a server with assets, this tool only appears for the "admin" user right now.

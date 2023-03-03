@@ -4,8 +4,7 @@ title: I18n Sling Models Injector
 description: Inject I18n object or values into your Sling Models classes
 date: 2019-02-08
 redirect_from: /acs-aem-commons/features/aem-sling-models-injectors.html
-feature-tags: backend-dev, new
-tags: new
+tags: aem-65 aem-cs
 initial-release: 4.0.0
 ---
 

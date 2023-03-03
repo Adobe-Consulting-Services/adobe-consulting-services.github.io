@@ -4,7 +4,7 @@ title: Named Transform Image Servlet
 description: Consistently resize, crop and transform images
 date: 2017-07-01
 redirect_from: /acs-aem-commons/features/named-image-transform.html
-feature-tags: component-dev
+tags: aem-65 aem-cs
 initial-release: 1.5.0
 ---
 
@@ -125,15 +125,15 @@ greyscale:greyscale=true
 <p>Converts the image to greyscale.</p>
 <p>Name</p>
 <ul>
-	<li><code>greyscale</code></li>
+    <li><code>greyscale</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>None</code></li>
+    <li><code>None</code></li>
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>greyscale</code><br>
+    <li><code>greyscale</code><br>
 </li></ul></div>
 
 <div class="section">
@@ -141,38 +141,38 @@ greyscale:greyscale=true
 <p>Resizes the image to the specified width and/or height.</p>
 <p>Name</p>
 <ul>
-	<li><code>resize</code></li>
+    <li><code>resize</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>width=[width in px]</code></li>
-	<li><code>height=[height in px]</code></li>
+    <li><code>width=[width in px]</code></li>
+    <li><code>height=[height in px]</code></li>
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>resize:width=200</code></li>
-	<li><code>resize:height=300</code></li>
-	<li><code>resize:width=400&amp;height=400</code><br>
+    <li><code>resize:width=200</code></li>
+    <li><code>resize:height=300</code></li>
+    <li><code>resize:width=400&amp;height=400</code><br>
 </li></ul></div>
 
 <div class="section">
 <h3>Bounded Resize (v1.8.0+)</h3>
-<p>Resizes the image but will not resize past maximum dimension constraints. Accepts two Integer params: height and width. Either width or height will scale to the parameterized limit. The other dimension scale automatically to maintain the original aspect ratio. If the original image is smaller than the configured dimensions the image won’t be resized. Upscale param can be set to <code>true</code> to allow upscaling smaller images.</p>
+<p>Resizes the image but will not resize past maximum dimension constraints. Accepts two Integer params: height and width. Either width or height will scale to the parameterized limit. The other dimension scale automatically to maintain the original aspect ratio. If the original image is smaller than the configured dimensions the image won't be resized. Upscale param can be set to <code>true</code> to allow upscaling smaller images.</p>
 <p>Name</p>
 <ul>
-	<li><code>bounded-resize</code></li>
+    <li><code>bounded-resize</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>width=[width in px]</code></li>
-	<li><code>height=[height in px]</code></li>
-	<li><code>upscale=true/false</code></li>
+    <li><code>width=[width in px]</code></li>
+    <li><code>height=[height in px]</code></li>
+    <li><code>upscale=true/false</code></li>
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>bounded-resize:width=200</code></li>
-	<li><code>bounded-resize:height=300</code></li>
-	<li><code>bounded-resize:width=400&amp;height=400&amp;upscale=true</code><br>
+    <li><code>bounded-resize:width=200</code></li>
+    <li><code>bounded-resize:height=300</code></li>
+    <li><code>bounded-resize:width=400&amp;height=400&amp;upscale=true</code><br>
 </li></ul></div>
 
 <div class="section">
@@ -180,15 +180,15 @@ greyscale:greyscale=true
 <p>Rotates the image.</p>
 <p>Name</p>
 <ul>
-	<li><code>rotate</code></li>
+    <li><code>rotate</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>degrees=[degrees to rotate]</code></li>
+    <li><code>degrees=[degrees to rotate]</code></li>
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>rotate:degrees=180</code><br>
+    <li><code>rotate:degrees=180</code><br>
 </li></ul></div>
 
 <div class="section">
@@ -196,18 +196,18 @@ greyscale:greyscale=true
 <p>Crops the image to the specified bounds.</p>
 <p>Name</p>
 <ul>
-	<li><code>crop</code></li>
+    <li><code>crop</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>bounds=[x,y,width,height]</code></li>
-	<li><code>smart=[boolean]</code> Defaults to true. Smart bounding will attempt to shift the specified crop-zone to fit within the image dimensions if the crop-zone falls outside the images dimensions.</li>
+    <li><code>bounds=[x,y,width,height]</code></li>
+    <li><code>smart=[boolean]</code> Defaults to true. Smart bounding will attempt to shift the specified crop-zone to fit within the image dimensions if the crop-zone falls outside the images dimensions.</li>
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>crop:bounds=150\,100\,100\,100</code></li>
-	<li><code>crop:bounds=150\,100\,100\,100&amp;smart=false</code></li>
-	<li><code>crop:bounds=25%\,0\,50%\,100%</code>
+    <li><code>crop:bounds=150\,100\,100\,100</code></li>
+    <li><code>crop:bounds=150\,100\,100\,100&amp;smart=false</code></li>
+    <li><code>crop:bounds=25%\,0\,50%\,100%</code>
         <ul><li>Relative cropping available since v2.8.0/3.4.0</li></ul>
     </li>    
 </ul></div>
@@ -218,16 +218,16 @@ greyscale:greyscale=true
 <p>Note: This utilizes the Adobe CQ Layer adjust(..) method which does not seem to conform w common brightness/contrast expectations.</p>
 <p>Name</p>
 <ul>
-	<li><code>adjust</code></li>
+    <li><code>adjust</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>brightness=[-255 .. 255]</code> (dark to light)</li>
-	<li><code>contrast=[positive float]</code> (1.0 does not change contrast. &lt; 1.0 lower contrast. &gt; 1.0 enhance contrast.)</li>
+    <li><code>brightness=[-255 .. 255]</code> (dark to light)</li>
+    <li><code>contrast=[positive float]</code> (1.0 does not change contrast. &lt; 1.0 lower contrast. &gt; 1.0 enhance contrast.)</li>
 </ul>
 <p>Example</p>
 <ul>
-	<li><code>adjust:brightness=120&amp;contrast=0</code><br>
+    <li><code>adjust:brightness=120&amp;contrast=0</code><br>
 </li></ul></div>
 
 <div class="section">
@@ -235,20 +235,20 @@ greyscale:greyscale=true
 <p>Multiplies all of the <span class="caps">RGB</span> values of the image against a base color. Follows specification of Multiply blend from Adobe Photoshop (http://helpx.adobe.com/after-effects/using/blending-modes-layer-styles.html#Multiply)</p>
 <p>Name</p>
 <ul>
-	<li><code>multiply</code></li>
+    <li><code>multiply</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>alpha=[0.0..1.0]</code> (Opacity, percentage)</li>
-	<li><code>color=[000000..FFFFFF]</code> (Hex Color for use in blending; if specified, overrides all red/green/blue parameters)</li>
-	<li><code>red=[0..255]</code> (Red value for use in blending; not required if using <code>color</code> parameter; default value: 255)</li>
-	<li><code>green=[0..255]</code> (Green value for use in blending; not required if using <code>color</code> parameter; default value: 255)</li>
-	<li><code>blue=[0..255]</code> (Blue value for use in blending; not required if using <code>color</code> parameter; default value: 255)</li>
+    <li><code>alpha=[0.0..1.0]</code> (Opacity, percentage)</li>
+    <li><code>color=[000000..FFFFFF]</code> (Hex Color for use in blending; if specified, overrides all red/green/blue parameters)</li>
+    <li><code>red=[0..255]</code> (Red value for use in blending; not required if using <code>color</code> parameter; default value: 255)</li>
+    <li><code>green=[0..255]</code> (Green value for use in blending; not required if using <code>color</code> parameter; default value: 255)</li>
+    <li><code>blue=[0..255]</code> (Blue value for use in blending; not required if using <code>color</code> parameter; default value: 255)</li>
 </ul>
 <p>Examples</p>
 <ul>
-	<li><code>multiply:alpha=.75&amp;color=3366FF</code></li>
-	<li><code>multiply:alpha=.75&amp;red=51&amp;green=102&amp;blue=255</code><br>
+    <li><code>multiply:alpha=.75&amp;color=3366FF</code></li>
+    <li><code>multiply:alpha=.75&amp;red=51&amp;green=102&amp;blue=255</code><br>
 </li></ul></div>
 
 <div class="section">
@@ -256,36 +256,36 @@ greyscale:greyscale=true
 <p>Shifts the color of all pixels in an image. Parameters are a percentage of R/G/B value. Omit or set R/G/B shift value to 0 to keep current value. If any element of the color is shifted beyond min/max allowed (0..255) the min/max value is used. Based on http://pixastic.com/lib/docs/actions/coloradjust/</p>
 <p>Name</p>
 <ul>
-	<li><code>rgb-shift</code></li>
+    <li><code>rgb-shift</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>red=[-1.0..1.0]</code> (Percentage, amount of red to shift the image)</li>
-	<li><code>green=[-1.0..1.0]</code> (Percentage, amount of green to shift the image)</li>
-	<li><code>blue=[-1.0..1.0]</code> (Percentage, amount of blue to shift the image)</li>
+    <li><code>red=[-1.0..1.0]</code> (Percentage, amount of red to shift the image)</li>
+    <li><code>green=[-1.0..1.0]</code> (Percentage, amount of green to shift the image)</li>
+    <li><code>blue=[-1.0..1.0]</code> (Percentage, amount of blue to shift the image)</li>
 </ul>
 <p>Examples</p>
 <ul>
-	<li><code>rgb-shift:red=.5&amp;green=.25&amp;blue=-.60</code><br>
+    <li><code>rgb-shift:red=.5&amp;green=.25&amp;blue=-.60</code><br>
 </li></ul></div>
 
 <div class="section">
 <h3>Quality (v.1.9.0+)</h3>
 <pre><code>Known Issue: Setting quality above 82 causes rendition file-size to balloon dramatically (up to 2x original).</code></pre>
-<p>Adjusts the quality of the output image. This leverages the <span class="caps">AEM</span> Product Layer API’s write method, so it only works on <span class="caps">JPEG</span> and <span class="caps">GIF</span> image types (<span class="caps">PNG</span> is not supported).</p>
+<p>Adjusts the quality of the output image. This leverages the <span class="caps">AEM</span> Product Layer API's write method, so it only works on <span class="caps">JPEG</span> and <span class="caps">GIF</span> image types (<span class="caps">PNG</span> is not supported).</p>
 <p>Quality is always executed <span class="caps">LAST</span>, no matter where is appears in the transform list.</p>
 <p>Name</p>
 <ul>
-	<li><code>quality</code></li>
+    <li><code>quality</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>quality=[0..100]</code> (0 is lowest quality, 100 is highest)</li>
-	<li>If quality number is “out of bounds”, 82 will be used (<span class="caps">OOTB</span> <span class="caps">AEM</span> Default quality)</li>
+    <li><code>quality=[0..100]</code> (0 is lowest quality, 100 is highest)</li>
+    <li>If quality number is "out of bounds", 82 will be used (<span class="caps">OOTB</span> <span class="caps">AEM</span> Default quality)</li>
 </ul>
 <p>Examples</p>
 <ul>
-	<li><code>quality:quality=75</code><br>
+    <li><code>quality:quality=75</code><br>
 </li></ul></div>
 
 <div class="section">
@@ -293,38 +293,38 @@ greyscale:greyscale=true
 <p>Scale allows percent-based scaling of images.</p>
 <p>Name</p>
 <ul>
-	<li><code>scale</code></li>
+    <li><code>scale</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li>@scale=decimal representation of percent to scale</li>
-	<li>Example: 0.25 = 25%</li>
-	<li>@round=up | down | round</li>
-	<li>Default: round</li>
+    <li>@scale=decimal representation of percent to scale</li>
+    <li>Example: 0.25 = 25%</li>
+    <li>@round=up | down | round</li>
+    <li>Default: round</li>
 </ul>
 <p>Examples</p>
 <ul>
-	<li><code>scale:scale=.75</code><br>
+    <li><code>scale:scale=.75</code><br>
 </li></ul></div>
 
 <div class="section">
 <h3>Letter/Pillar Box (v.2.1.0+)</h3>
-<p>Adds a Letter/Pillar box support when the specified new dimensions don’t match aspect ratio of original image. The apporopriate boxing will be applied based on best fit for the calculated aspect ratio. The background of the boxing is configurable, however if using <span class="caps">JPG</span> encoding transparency is lost resulting in black.</p>
+<p>Adds a Letter/Pillar box support when the specified new dimensions don't match aspect ratio of original image. The apporopriate boxing will be applied based on best fit for the calculated aspect ratio. The background of the boxing is configurable, however if using <span class="caps">JPG</span> encoding transparency is lost resulting in black.</p>
 <p>Name</p>
 <ul>
-	<li><code>letter-pillar-box</code></li>
+    <li><code>letter-pillar-box</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>width=[width in px]</code></li>
-	<li><code>height=[height in px]</code></li>
-	<li><code>alpha=[0.0..1.0]</code> (Opacity of background, percentage)</li>
-	<li><code>color=[000000..FFFFFF]</code> (Hex Color for use in background)</li>
+    <li><code>width=[width in px]</code></li>
+    <li><code>height=[height in px]</code></li>
+    <li><code>alpha=[0.0..1.0]</code> (Opacity of background, percentage)</li>
+    <li><code>color=[000000..FFFFFF]</code> (Hex Color for use in background)</li>
 </ul>
 <p>Examples</p>
 <ul>
-	<li><code>letter-pillar-box:width=600&amp;height=600</code></li>
-	<li><code>letter-pillar-box:width=600&amp;height=600&amp;alpha=.65&amp;color=0F0F0F</code><br>
+    <li><code>letter-pillar-box:width=600&amp;height=600</code></li>
+    <li><code>letter-pillar-box:width=600&amp;height=600&amp;alpha=.65&amp;color=0F0F0F</code><br>
 </li></ul></div>
 
 
@@ -333,18 +333,18 @@ greyscale:greyscale=true
 <p>Adds a sharpen/unsharpen mask to images.</p>
 <p>Name</p>
 <ul>
-	<li><code>sharpen</code></li>
+    <li><code>sharpen</code></li>
 </ul>
 <p>Params</p>
 <ul>
-	<li><code>op_usm=[amount,radius]</code>
-	<ul>
-		<li><code>amount=[0.0...5.0]</code></li>
-		<li><code>radius=[0...250]</code></li>
-	</ul>
-	</li>
+    <li><code>op_usm=[amount,radius]</code>
+    <ul>
+        <li><code>amount=[0.0...5.0]</code></li>
+        <li><code>radius=[0...250]</code></li>
+    </ul>
+    </li>
 </ul>
 <p>Examples</p>
 <ul>
-	<li><code>sharpen:op_usm=3.5,20</code></li>
+    <li><code>sharpen:op_usm=3.5,20</code></li>
 </ul></div>

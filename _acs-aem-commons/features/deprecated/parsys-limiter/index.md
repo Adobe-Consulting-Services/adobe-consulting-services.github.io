@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Parsys Limiter
 description: Limits the parsys to only accept up to a configurable amount of paragraphs
 date: 2019-03-02
-feature-tags: authoring component-dev
+tags: deprecated
 initial-release: 2.3.0
 last-updated-release: 4.0.0
 ---

@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: ETag Support
 description: Create and evaluate ETag headers based on response's message digest
 date: 2014-04-04
-feature-tags: backend-dev
+tags: aem-65 aem-cs
 initial-release: 4.1.0
 ---
 

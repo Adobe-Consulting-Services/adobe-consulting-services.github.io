@@ -4,6 +4,7 @@ title: DAM Metadata Property Reset
 description: Save your dc:title from XMP Writeback!
 date: 2013-10-02
 initial-release: 1.0.0
+tags: aem-65 aem-cs
 ---
 
 ### Purpose

@@ -4,8 +4,7 @@ title: Ensure Oak Index
 description: Include Oak Indexes in your app package
 date: 2015-10-02
 redirect_from: /acs-aem-commons/features/ensure-oak-index.html
-feature-tags: backend-dev
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 2.1.0
 last-updated-release: 4.0.0
 ---

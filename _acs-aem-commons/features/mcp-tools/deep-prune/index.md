@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Deep Prune
 description: Recursively delete pretty much anything!
 date: 2017-08-01
+tags: aem-65 aem-cs
 initial-release: 3.10.0
 ---
 

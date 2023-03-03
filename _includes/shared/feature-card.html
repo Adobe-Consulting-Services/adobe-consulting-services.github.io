@@ -1,7 +1,7 @@
 {% assign feature = include.feature %}
 {% assign project = include.project %}
 
-<div class="feature" data-filter-tags="all {{ feature.feature-tags }}
+<div class="feature" data-filter-tags="all {{ feature.tags | join: ' ' }}
 {% if feature.initial-release == project.version or feature.initial-release == project.version60 %} new
 {% elsif feature.last-updated-release == project.version or feature.last-updated-release == project.version60 %} updated {% endif %}">
     <a class="feature-image-wrapper" href="{{ feature.url }}">

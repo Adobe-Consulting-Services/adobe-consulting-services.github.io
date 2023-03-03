@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: MCP Tools
 description: Get work done.
 date: 2017-12-01
-feature-tags: authoring administration
+tags: aem-65 aem-cs
 initial-release: 3.10.0
 last-updated-release: 4.3.4
 ---

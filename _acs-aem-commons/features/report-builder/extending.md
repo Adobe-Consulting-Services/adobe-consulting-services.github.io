@@ -3,7 +3,7 @@ layout: acs-aem-commons_default
 title: Extending Report Builder
 description: How to extend the report builder functionality
 date: 2017-01-19
-feature-tags: administraton
+tags: aem-65 aem-cs
 initial-release: 3.14.0
 ---
 

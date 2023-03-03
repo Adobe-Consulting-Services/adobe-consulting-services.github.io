@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Datetime with Timezone
 description: Datetime field with Timezone dropdown
 date: 2019-12-30
-feature-tags: authoring component-dev
+tags: aem-65 aem-cs
 initial-release: 4.0.0
 last-updated-release: 4.0.0
 ---

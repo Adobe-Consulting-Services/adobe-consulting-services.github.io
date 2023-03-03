@@ -4,7 +4,7 @@ title: Generic Lists
 description: Easy creation of simple name/value pair lists
 date: 2013-09-10
 redirect_from: /acs-aem-commons/features/generic-lists.html
-feature-tags: component-dev backend-dev
+tags: aem-65 aem-cs
 initial-release: 1.0.0
 last-updated-release: 4.3.4
 ---

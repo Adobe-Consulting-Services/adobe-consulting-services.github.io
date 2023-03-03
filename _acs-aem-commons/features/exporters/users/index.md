@@ -4,9 +4,9 @@ title: User Exporter
 description: Users to CSV Export!
 date: 2016-11-02
 redirect_from: /acs-aem-commons/features/exports.html
-feature-tags: administration
-tags: 
+tags: aem-65 aem-cs
 initial-release: 3.4.0
+last-updated-release: 6.0.0
 ---
 
 ## Users to CSV Exporter

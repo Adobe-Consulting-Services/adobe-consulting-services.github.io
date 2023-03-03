@@ -3,10 +3,9 @@ layout: acs-aem-commons_feature
 title: Redirect Map Manager
 description: Generate an Apache httpd Redirect Map from Properties in AEM
 date: 2018-09-23
-feature-tags: administraton backend-dev seo
+tags: aem-65
 initial-release: 3.13.0
 last-updated-release: 3.18.0
-tags: aemcs-incompatible
 ---
 
 ## Purpose
@@ -41,7 +40,7 @@ Before using the Redirect Map Manager, you need to configure Apache to retrieve 
         # Rewrite rules
         RewriteMap map.legacy dbm:/etc/httpd/conf/redirectmap.map
         RewriteCond ${map.legacy:$1} !=""
-        RewriteRule ^(.*)$ 		${map.legacy:$1|/} [L,R=301]
+        RewriteRule ^(.*)$         ${map.legacy:$1|/} [L,R=301]
     ```
 2. Add a cron task to pull the Redirect Map from the publisher and convert it into a DB File. For example, I could add the following script into `/etc/cron.hourly`:
     ```

@@ -4,8 +4,7 @@ title: Bulk Workflow Manager v2
 description: Execute Workflow at scale!
 date: 2016-07-24
 redirect_from: /acs-aem-commons/features/bulk-workflow-manager.html
-feature-tags: administration content-migration
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 2.6.4/3.2.4
 ---
 

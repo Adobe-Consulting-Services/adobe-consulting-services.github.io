@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Audit Log Search
 description: Easily search the AEM Audit Log
 date: 2017-02-12
-feature-tags: administration
+tags: aem-65 aem-cs
 initial-release: 2.10.0/3.7.0
 ---
 

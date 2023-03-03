@@ -5,7 +5,6 @@ description: JSP Taglib for XSS Protection
 date: 2013-12-11
 redirect_from: /acs-aem-commons/features/xss-functions.html
 tags: deprecated
-feature-tags: component-dev standard
 initial-release: 1.3.0
 ---
 

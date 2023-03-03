@@ -4,9 +4,9 @@ title: Tags Exporter
 description: Tags to CSV Export!
 date: 2019-10-30
 redirect_from: /acs-aem-commons/features/exports.html
-feature-tags: administration
-tags: 
+tags: aem-65 aem-cs
 initial-release: 4.8.0
+last-updated-release: 6.0.0
 ---
 
 ## Tags to CSV Exporter

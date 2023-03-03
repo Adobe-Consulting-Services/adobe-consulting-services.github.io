@@ -5,7 +5,6 @@ description: Too many edit zones making your head spin?
 date: 2015-05-19
 redirect_from: /acs-aem-commons/features/wcm-views.html
 tags: deprecated
-feature-tags: authoring
 initial-release: 1.10.0
 ---
 
@@ -30,14 +29,14 @@ WCM Views has a sidekick option to completely display the WCMViews as well as on
 
 Define a `sling:OsgiConfig` with the following attributes.
 
-	/apps/mysite/config.author/com.adobe.acs.commons.wcm.views.impl.WCMViewsFilter.xml
+    /apps/mysite/config.author/com.adobe.acs.commons.wcm.views.impl.WCMViewsFilter.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.ortg/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
     path-prefixes.include="[/content/mysite,/content/yoursite]"
-	resource-types.include="[mysite/components/media/*]"
+    resource-types.include="[mysite/components/media/*]"
     />
 {% endhighlight %}
 
@@ -46,7 +45,7 @@ Define a `sling:OsgiConfig` with the following attributes.
 
 Optionally define a `sling:OsgiConfig` with the following attributes.
 
-	/apps/mysite/config.author/com.adobe.acs.commons.wcm.views.impl.WCMViewsServlet.xml
+    /apps/mysite/config.author/com.adobe.acs.commons.wcm.views.impl.WCMViewsServlet.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -65,22 +64,22 @@ On the `cq:Component` nodes, add a `String[]` property `wcmViews` and set the va
 
 Example.
 
-	/apps/mysite/components/image@wcmViews=media
-	/apps/mysite/components/video@wcmViews=media
-	/apps/mysite/components/slideshow@wcmViews=media
+    /apps/mysite/components/image@wcmViews=media
+    /apps/mysite/components/video@wcmViews=media
+    /apps/mysite/components/slideshow@wcmViews=media
 
 Note, for this to work on Parsys, iParsys, Column Controls and their ilk, you must set the `wcmViews` property on these components and their sub-components. Example.
 
-	/apps/mysite/components/parsys@wcmViews=drop-zones	
-	/apps/mysite/components/parsys/colctrl@wcmViews=drop-zones	
-	/apps/mysite/components/parsys/new@wcmViews=drop-zones	
+    /apps/mysite/components/parsys@wcmViews=drop-zones    
+    /apps/mysite/components/parsys/colctrl@wcmViews=drop-zones    
+    /apps/mysite/components/parsys/new@wcmViews=drop-zones    
 
 ### Content Resource Enablement
 
 While less usual, content resources can be assigned WCM Views as well. Example:
 
-	/content/mysite/en/jcr:content/common-header@wcmViews=header
-		
+    /content/mysite/en/jcr:content/common-header@wcmViews=header
+        
 ### Enable WCM Views in Sidekick
 
 Add the `acs-common.cq-widgets.wcm-views` client library so that it is included in the `cq.widgets` library.
@@ -90,13 +89,13 @@ Add the `acs-common.cq-widgets.wcm-views` client library so that it is included 
 {% highlight xml %} 
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
-		xmlns:cq="http://www.day.com/jcr/cq/1.0" 
-		xmlns:jcr="http://www.jcp.org/jcr/1.0" 
-		xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0" 
+        xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:ClientLibraryFolder" 
-	categories="cq.widgets" 
-	embed="acs-common.cq-widgets.add-ons.wcm-views"
-	/>
+    categories="cq.widgets" 
+    embed="acs-common.cq-widgets.add-ons.wcm-views"
+    />
 {% endhighlight %}
 
 

@@ -4,7 +4,6 @@ title: Email API
 description: Generic Email Service to send template based emails
 date: 2014-04-01
 redirect_from: /acs-aem-commons/features/email-api.html
-feature-tags: backend-dev
 initial-release: 1.6.0
 last-updated-release: 4.0.0
 ---
@@ -17,9 +16,9 @@ The `EmailService` provides APIs for sending emails through a centrally configur
 
 ### Interface `com.adobe.acs.commons.email.EmailService`
 
-	 List<InternetAddress> sendEmail(String templatePath, Map<String, String> emailParams, InternetAddress... recipients);
+     List<InternetAddress> sendEmail(String templatePath, Map<String, String> emailParams, InternetAddress... recipients);
 
-	 List<String> boolean sendEmail(String templatePath, Map<String, String> emailParams, String... recipients);
+     List<String> boolean sendEmail(String templatePath, Map<String, String> emailParams, String... recipients);
 
      List<InternetAddress> sendEmail(String templatePath, Map<String, String> emailParams, Map<String, DataSource> attachments, InternetAddress... recipients);
 
@@ -36,8 +35,8 @@ The template file name need to be `*.html` to send email with attachments since 
 * `templatePath`: An absolute path of the email template in the repository. eg: `/etc/notification/email/emailTemplate.txt` or `/etc/notification/email/emailTemplate.html` for email with attachments
 * `emailParams`: Map containing template variables that are injected in the email. Sender's information can be set inside the emailParams for keys: `senderEmailAddress` and `senderName`:
 
-		emailParams.put("senderEmailAddress","abcd@example.com");  
-		emailParams.put("senderName","David Smith");
+        emailParams.put("senderEmailAddress","abcd@example.com");  
+        emailParams.put("senderName","David Smith");
 
 * `recipients`: A variable array of recipients email addresses.
 
@@ -64,7 +63,7 @@ The first step to sending emails through this service is to configure the Day CQ
 
 The following `sling:OsgiConfig` can be used to configure the mail service, for example:
 
-	/apps/myapp/config/com.day.cq.mailer.DefaultMailService.xml
+    /apps/myapp/config/com.day.cq.mailer.DefaultMailService.xml
 
 {% highlight xml %}   
 <?xml version="1.0" encoding="UTF-8"?>
@@ -95,24 +94,24 @@ The text file contains the complete email. Email headers are defined as the firs
 Below is a sample email template file. All of the text in the format `${variable}` will be replaced with the variable matching the name inside the brackets.  These variables are injected dynamically by this API.  
 
 
-	From: admin@adobe.com
-	Subject: Greetings
-	CC: ${ccrecipient}
-	BCC: ${bccrecipient}
+    From: admin@adobe.com
+    Subject: Greetings
+    CC: ${ccrecipient}
+    BCC: ${bccrecipient}
 
-	<div style="color: blue;">
+    <div style="color: blue;">
 
-	Hello ${recipientName}
+    Hello ${recipientName}
 
-	Find your message here: ${message}
+    Find your message here: ${message}
 
-	From,
-	Adobe Team
+    From,
+    Adobe Team
 
-	-------------------------------------------------------
-	This is an automatic generated message. Please do not reply.
+    -------------------------------------------------------
+    This is an automatic generated message. Please do not reply.
 
-	</div>
+    </div>
 
 
 This template or any updates to it should be activated/replicated to the publish environment to be able to send emails from the publish instance.
@@ -123,10 +122,10 @@ This template or any updates to it should be activated/replicated to the publish
 The EmailService is an OSGi service and can be injected using `@Reference` in the calling class.
 
 {% highlight java %}
-	@Reference
-	EmailService emailService;
+    @Reference
+    EmailService emailService;
 
-	emailService.sendEmail(templatePath, emailParams, recipients);
+    emailService.sendEmail(templatePath, emailParams, recipients);
 {% endhighlight %}
 
 ## JSP Example
@@ -134,38 +133,38 @@ Example of a code snippet that uses the EmailService API to sent email is show b
 
 
 {% highlight jsp %}
-	<%@include file="/libs/foundation/global.jsp"%>
-	<%@page import="com.adobe.acs.commons.email.EmailService,
-	        java.util.*"%><%
+    <%@include file="/libs/foundation/global.jsp"%>
+    <%@page import="com.adobe.acs.commons.email.EmailService,
+            java.util.*"%><%
 
-	// Get the OSGi Email Service
-	EmailService emailService = sling.getService(EmailService.class);
+    // Get the OSGi Email Service
+    EmailService emailService = sling.getService(EmailService.class);
 
-	// Specify the template file to use (this is an absolute path in the JCR)
-	String templatePath = "/etc/notification/email/default/emailTemplate.txt";
+    // Specify the template file to use (this is an absolute path in the JCR)
+    String templatePath = "/etc/notification/email/default/emailTemplate.txt";
 
-	//Set the dynamic variables of your email template
-	Map<String, String> emailParams = new HashMap<String,String>();
-	emailParams.put("body","hello there");
+    //Set the dynamic variables of your email template
+    Map<String, String> emailParams = new HashMap<String,String>();
+    emailParams.put("body","hello there");
 
-	//  Customize the sender email address - if required
-	emailParams.put("senderEmailAddress","abcd@example.com");
-	emailParams.put("senderName","David Smith");
+    //  Customize the sender email address - if required
+    emailParams.put("senderEmailAddress","abcd@example.com");
+    emailParams.put("senderName","David Smith");
 
-	// Array of email recipients
-	String[] recipients = { "recipient1@example.com", "recipient2@example.com" };
+    // Array of email recipients
+    String[] recipients = { "recipient1@example.com", "recipient2@example.com" };
 
-	// emailService.sendEmail(..) returns a list of all the recipients that could not be sent the email
-	// An empty list indicates 100% success
-	List<String> failureList = emailService.sendEmail(templatePath, emailParams, recipients);
+    // emailService.sendEmail(..) returns a list of all the recipients that could not be sent the email
+    // An empty list indicates 100% success
+    List<String> failureList = emailService.sendEmail(templatePath, emailParams, recipients);
 
-	if (failureList.isEmpty()) {
-		out.println("Email sent successfully to the recipients");
-	} else {
-		out.println("Email sent failed");
-	}
+    if (failureList.isEmpty()) {
+        out.println("Email sent successfully to the recipients");
+    } else {
+        out.println("Email sent failed");
+    }
 
-	%>
+    %>
 {% endhighlight %}
 
 ## Using the Email API to send attachments (since v2.6.0/3.2.0)

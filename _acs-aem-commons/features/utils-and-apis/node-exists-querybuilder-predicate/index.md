@@ -4,7 +4,7 @@ title: NodeExists QueryBuilder Predicate
 description: Check if a node exists or not via a query!
 sub-feature: true
 date: 2013-02-12
-feature-tags: backend-dev
+tags: aem-65 aem-cs
 initial-release: 2.10.0/3.7.0
 ---
 

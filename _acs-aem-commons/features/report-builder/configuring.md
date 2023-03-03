@@ -3,7 +3,7 @@ layout: acs-aem-commons_default
 title: Configuring Report Builder
 description: How to configure reports within the ACS AEM Commons Report Builder
 date: 2017-01-19
-feature-tags: administraton
+tags: aem-65 aem-cs
 initial-release: 3.14.0
 ---
 

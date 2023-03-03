@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: InDesign Dynamic Deck
 description: Generate InDesign documents from AEM Assets
 date: 2020-03-02
-feature-tags: new forms authoring 
+tags: aem-65 aem-cs
 initial-release: 4.6.0
 ---
 
@@ -24,12 +24,12 @@ The tool requires three inputs to generate an InDesign document:
 ![Dynamic Deck - Solution Overview](images/solution-overview.png)
 
 ### InDesign Template
-This tool uses InDesign’s XML import functionality to insert data and imagery from AEM into generated InDesign documents.
+This tool uses InDesign's XML import functionality to insert data and imagery from AEM into generated InDesign documents.
 The following screen grab shows a template document with Structure Panel open and field tagging highlighted. 
 ![Dynamic Deck - Simple Template with Structure and Tagged Fields](images/simple-tempate-with-structure-and-tagged-fields.jpg) 
 
 ### AEM-to-InDesign Mapping (XML)
-The “secret sauce” in this solution is the XML file that specifies AEM-to-InDesign mapping.
+The "secret sauce" in this solution is the XML file that specifies AEM-to-InDesign mapping.
 
 In the screen grab below, line 9 in the XML specifies that the dc:title metadata property on the AEM Asset should be imported into the field associated with the TITLE element.
 ![Dynamic Deck - Property Mapping for Text Data](images/property-mapping---text-data.jpg) 

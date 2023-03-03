@@ -4,7 +4,7 @@ title: Copy Publish URL
 description: Grab the published asset URL!
 sub-feature: true
 date: 2017-10-24
-feature-tags: authoring
+tags: aem-65 aem-cs
 initial-release: 3.12.0
 last-updated-release: 4.0.0
 ---

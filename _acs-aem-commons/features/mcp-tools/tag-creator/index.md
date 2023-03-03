@@ -3,6 +3,7 @@ layout: acs-aem-commons_feature
 title: Tag Creator
 description: Plucked from an AEM taxonomist's dream!
 date: 2017-08-14
+tags: aem-65 aem-cs
 initial-release: 3.11.0
 ---
 
@@ -20,8 +21,8 @@ Tag Creator bridges this gap by ingesting a Excel file, and creating the AEM Tag
   * Download an example Excel file: [acs-commons__tag-creator--sample-file.xlsx](./acs-commons__tag-creator--sample-file.xlsx?raw=true)
 * **Primary Converter**: The Data Converter (see below) to initially parse the Excel cell data with. 
 * **Fallback Converter**: The Data Converter (see below) to parse the Excel cell data with if the Primary Converter cannot parse the data. 
-	* This is useful when mixing Data Converter types in a single file. For example: 90% of the cells can use "Lowercase with Dashes" but 10% need explicit node names using Title and Node Name. Instead of creating all cells using the "Title and Node Name" format with the `{{"{{"}} ... }}`, only those that need the explicit title can define that format.
-	* If all cells can be processed by the Primary Converter then this can be set to None.
+    * This is useful when mixing Data Converter types in a single file. For example: 90% of the cells can use "Lowercase with Dashes" but 10% need explicit node names using Title and Node Name. Instead of creating all cells using the "Title and Node Name" format with the `{{"{{"}} ... }}`, only those that need the explicit title can define that format.
+    * If all cells can be processed by the Primary Converter then this can be set to None.
 
 ## Data Converters
 

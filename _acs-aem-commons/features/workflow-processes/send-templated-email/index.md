@@ -4,7 +4,7 @@ title: Send Template'd E-mail
 description: Helpful Workflow processes
 sub-feature: true
 date: 2014-09-01
-tags: authoring administration
+tags: aem-65 aem-cs
 initial-release: 1.9.0
 ---
 
@@ -49,12 +49,12 @@ Define a @sling:OsgiConfig@ to customize the Author UI Helper Service `/apps/mys
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-	jcr:primaryType="sling:OsgiConfig"
-	isTouch="{Boolean}true"
-	wcmEditorTouchURL="/editor.html"
-	wcmEditorClassicURL="/cf#"
-	damEditorTouchURL="/assetdetails.html"
-	damEditorClassicURL="/damadmin#"/>
+    jcr:primaryType="sling:OsgiConfig"
+    isTouch="{Boolean}true"
+    wcmEditorTouchURL="/editor.html"
+    wcmEditorClassicURL="/cf#"
+    damEditorTouchURL="/assetdetails.html"
+    damEditorClassicURL="/damadmin#"/>
 {% endhighlight %}
 
 The default settings are as follows. If the defaults are applicable to your use case there is no need to create an OSGi Configuration. Typically the only property changed is `isTouch` to `{Boolean}false` is the ClassicUI is used for Page editting.

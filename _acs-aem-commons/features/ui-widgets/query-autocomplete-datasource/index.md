@@ -4,7 +4,7 @@ title: Query Autocomplete Datasource
 description: QueryBuilder driven autocomplete lists
 date: 2016-04-25
 redirect_from: /acs-aem-commons/features/queryautocomplete-datasource.html
-feature-tags: component-dev
+tags: aem-65 aem-cs
 initial-release: 2.5.0/3.1.0
 last-updated-release: 4.0.0
 ---
@@ -68,31 +68,31 @@ which is defined by the "predicates" property on the widget node.
 <?xml version="1.0" encoding="UTF-8"?>
    <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="nt:unstructured" jcr:title="List" sling:resourceType="cq/gui/components/authoring/dialog" helpPath="en/cq/current/wcm/default_components.html#List">
       <content
-      		jcr:primaryType="nt:unstructured"
-      		sling:resourceType="granite/ui/components/foundation/container">
-         	<layout
-         		jcr:primaryType="nt:unstructured"
-         		sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false" />
-         	<items
-         		jcr:primaryType="nt:unstructured">
-            	<column
-            		jcr:primaryType="nt:unstructured"
-            		sling:resourceType="granite/ui/components/foundation/container">
-               	<items
-               		jcr:primaryType="nt:unstructured">
-                  		<autocomplete
-                  			jcr:primaryType="nt:unstructured"
-                  			sling:resourceType="granite/ui/components/foundation/form/autocomplete"
-                  			fieldLabel="Autocomplete"
-                  			name="./autocomplete"
-                  			displayProperty="jcr:content/jcr:title"
-                  			predicates="[type=cq:Page,path=/content/geometrixx,property=jcr:content/sling:resourceType,property.value=geometrixx/components/homepage]">
-                     		<datasource
-                     			jcr:primaryType="nt:unstructured"
-                     			sling:resourceType="acs-commons/granite/ui/components/form/queryautocomplete/datasource" />
-                     		<options
-                     			jcr:primaryType="nt:unstructured"
-                     			sling:resourceType="granite/ui/components/foundation/form/autocomplete/list" />
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/foundation/container">
+             <layout
+                 jcr:primaryType="nt:unstructured"
+                 sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false" />
+             <items
+                 jcr:primaryType="nt:unstructured">
+                <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/container">
+                   <items
+                       jcr:primaryType="nt:unstructured">
+                          <autocomplete
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/foundation/form/autocomplete"
+                              fieldLabel="Autocomplete"
+                              name="./autocomplete"
+                              displayProperty="jcr:content/jcr:title"
+                              predicates="[type=cq:Page,path=/content/geometrixx,property=jcr:content/sling:resourceType,property.value=geometrixx/components/homepage]">
+                             <datasource
+                                 jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="acs-commons/granite/ui/components/form/queryautocomplete/datasource" />
+                             <options
+                                 jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/foundation/form/autocomplete/list" />
                   </autocomplete>
                </items>
             </column>

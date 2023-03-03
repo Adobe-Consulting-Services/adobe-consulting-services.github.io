@@ -4,7 +4,7 @@ title: HTTP Cache
 description: Cache the uncacheable!
 date: 2015-12-05
 redirect_from: /acs-aem-commons/features/http-cache.html
-feature-tags: backend-dev
+tags: aem-65 aem-cs
 initial-release: 2.2.0
 last-updated-release: 4.0.0
 
@@ -18,25 +18,25 @@ HttpCache provides an effective way to improve performance of an application by 
 ### Features
 * Caches anonymous and authenticated requests.
 * Supports caching personalized requests.
-	* Authentication Group based caching provided OOTB.
-	* Request parameter, header, cookie based caching provided OOTB.
-	* HTTP Request Query Param, HTTP Request Attribute, HTTP Cookie, and Sling Resource property based caching provided OOTB.
-	* Mechanism exposed to plugin additional custom logic for handling personalized requests.
+    * Authentication Group based caching provided OOTB.
+    * Request parameter, header, cookie based caching provided OOTB.
+    * HTTP Request Query Param, HTTP Request Attribute, HTTP Cookie, and Sling Resource property based caching provided OOTB.
+    * Mechanism exposed to plugin additional custom logic for handling personalized requests.
 * Super flexible cache configs tied to URIs supported.
-	* Allows extending cache configs.
-	* Allows multiple cache configs.
+    * Allows extending cache configs.
+    * Allows multiple cache configs.
 * Developer hook exposed to plugin custom rules on key cache handling events such as
-	* On request receive.
-	* On response cache
-	* On response deliver
-	* On cache invalidate
+    * On request receive.
+    * On response cache
+    * On response deliver
+    * On cache invalidate
 * Provides mechanism to plugin custom cache keys.
 * Pluggable cache persistence model.
-	* In-memory, Caffeine & JCR implementation provided OOTB
-	* Allows multiple cache stores to co-exist.
+    * In-memory, Caffeine & JCR implementation provided OOTB
+    * Allows multiple cache stores to co-exist.
 * Invalidation mechanism based on JCR paths and Sling jobs.
-	* Sample JCR change event handler based invalidation supplied.
-	In-memory cache store supports TTL.
+    * Sample JCR change event handler based invalidation supplied.
+    In-memory cache store supports TTL.
 * Provides powerful instrumentation based on JMX MBean.
 * Since v2.6.0/3.2.0 HTTP Cache now supports caching that the Sling Include level (as well as the original Sling Request level)
 * Since 4.0.0 HTTP Cache supports per config based TTL (overrides global) for JCR store and Caffeine store (requires [Caffeine bundle](https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine)).

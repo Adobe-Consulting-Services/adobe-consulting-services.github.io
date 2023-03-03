@@ -4,8 +4,7 @@ title: Dispatcher Flush Rules
 description: Statlevels cramping your flushes?
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/dispatcher-flush-rules.html
-feature-tags: backend-dev administration
-tags: aemcs-incompatible
+tags: aem-65
 initial-release: 1.2.0
 ---
 
@@ -43,7 +42,7 @@ Defines the ReplicationActionType to use when issuing the chained replications.
 
 Defines the flush mappings in the format (the delimiter is `=`).
 
-	regex-of-replicating-resource=absolute-path-flush
+    regex-of-replicating-resource=absolute-path-flush
 
 Introduced in 1.5.0, regex groups can be used to further dynamic behavior.
 
@@ -51,9 +50,9 @@ Introduced in 1.5.0, regex groups can be used to further dynamic behavior.
 
 To flush all pages under `/content/mysite` when an new DAM `png` or `jpg` is replicated use
 
-	prop.rules.hierarchical=[
-		"/content/dam/.*\.(png|jpg)=/content/mysite"
-	]
+    prop.rules.hierarchical=[
+        "/content/dam/.*\.(png|jpg)=/content/mysite"
+    ]
 
 or using the new regex grouping (v1.5.0) to flush site pages based on activations to corresponding site dam folders
 
@@ -70,7 +69,7 @@ In this case the following activations would triggers the follow flushes:
 
 Defines the flush mappings in the (same as hierarchical) format
 
-	regex-of-replicating-resource=absolute-path-flush
+    regex-of-replicating-resource=absolute-path-flush
 
 used to initiate "ResourceOnly" dispatcher flush requests.
 
@@ -91,7 +90,7 @@ These Flush Agents should also be configured as `Ignore Default`
     prop.replication-action-type="INHERIT|ACTIVATE|DELETE"
     prop.rules.hierarchical="[regex=/abs/path,regex2=/abs/path2]"
     prop.rules.resource-only="[]"
-	/>
+    />
 {% endhighlight %}  
 
 

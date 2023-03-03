@@ -4,7 +4,7 @@ title: Version Comparison Tool
 description: Need to compare multiple versions of a page?
 date: 2015-08-21
 redirect_from: /acs-aem-commons/features/version-comparison.html
-feature-tags: authoring administration
+tags: aem-65 aem-cs
 initial-release: 2.0.0
 ---
 

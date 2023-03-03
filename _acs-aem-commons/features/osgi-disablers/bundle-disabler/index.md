@@ -4,7 +4,7 @@ title: OSGi Bundle Disabler
 description: Disable OSGi Bundles as part of your build
 date: 2014-09-23
 sub-feature: true
-feature-tags: administration
+tags: aem-65 aem-cs
 initial-release: 1.8.0
 ---
 

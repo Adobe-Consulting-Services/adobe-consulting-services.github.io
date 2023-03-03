@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Marketo Form
 description: Add Marketo Forms in Adobe Experience Manager
 date: 2019-12-17
-feature-tags: new forms authoring
+tags: aem-65 aem-cs
 initial-release: 4.4.0
 ---
 
