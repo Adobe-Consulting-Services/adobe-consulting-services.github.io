@@ -15,12 +15,12 @@ This process ensures that an rendition *exactly* matches a set of dimensions by 
 Update the DAM Update Asset workflow (`/etc/workflow/models/dam/update_asset`) and add a custom process step at any point after the rendition you want to matte has been generated.
 
 1. Open the DAM Update Asset workflow
-2. At the end insert a new Process step, Workflow/Process Step ![Workflow Component List](images/1.png)
+2. At the end insert a new Process step, Workflow/Process Step 
 3. Edit the Process Step
     1. Title: Matte Rendition
-    2. On the Process tab, select "Matte Rendition" from the Process drop down ![image](images/select-matte-finish.jpg)
+    2. On the Process tab, select "Matte Rendition" from the Process drop down
     3. Check the Handler Advance option
-    4. Five arguments are required ![Matte Renditions Params](images/matte-finish-params.jpg)
+    4. Five arguments are required ![Matte Renditions Params](images/matte-finish-params.png)
         1. `bgcolor`: The background color (in hex notation) you want to apply to the rendition
         2. `dimension`: dimensions of the image size
         3. `vpos`: starting vertical position, the options are "top", "bottom", and "middle"

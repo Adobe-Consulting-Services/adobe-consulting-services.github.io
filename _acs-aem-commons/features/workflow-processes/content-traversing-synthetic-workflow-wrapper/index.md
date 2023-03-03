@@ -37,6 +37,6 @@ Processing the tree in a serial fashion allows for a more controlled workflow ex
 throttle=true|false
 traverseTree=true|false
 saveInterval=1024
-workflowModelId=/etc/workflow/models/dam/update_asset
+workflowModelId=/var/workflow/models/demo-workflow
 {% endhighlight %}
 
