@@ -5,7 +5,7 @@ description: Quickly navigate AEM
 date: 2014-11-12
 redirect_from: /acs-aem-commons/features/quickly.html
 feature-tags: authoring administration
-tags: beta
+tags: deprecated
 initial-release: 1.9.0
 ---
 
@@ -70,16 +70,16 @@ Most operations support "type ahead" allowing filtering of results typing charac
 <h3>Help</h3>
 <p>Displays the help menu of all the available Operations</p>
 <ul>
-	<li>Command: <code>help</code></li>
+    <li>Command: <code>help</code></li>
 </ul>
 </div>
 
 <div class="section">
 <p><img src="images/back.png" alt=""></p>
 <h3>Back</h3>
-<p>List of last 25 accessed URIs in <span class="caps">AEM</span> by the user. Values are stored in local storage in the user’s Web browser.</p>
+<p>List of last 25 accessed URIs in <span class="caps">AEM</span> by the user. Values are stored in local storage in the user's Web browser.</p>
 <ul>
-	<li>Command: <code>back</code><br>
+    <li>Command: <code>back</code><br>
 </li></ul></div>
 
 <div class="section">
@@ -87,24 +87,24 @@ Most operations support "type ahead" allowing filtering of results typing charac
 <h3>Go</h3>
 <p>Go to a list of pre-defined Web UIs.</p>
 <ul>
-	<li>Command: <code>go</code></li>
-	<li>Command: <code>go!</code> opens Web UI in a new browser tab</li>
+    <li>Command: <code>go</code></li>
+    <li>Command: <code>go!</code> opens Web UI in a new browser tab</li>
 </ul>
-<p>Go support two “special” instructions that switch the current <span class="caps">AEM</span> Authoring mode. Selecting these will appear to do nothing, but it will update the <span class="caps">AEM</span> Authoring mode cookie resulting in future Quickly navigation to take you to the Touch/Classic version of the Web UIs.</p>
+<p>Go support two "special" instructions that switch the current <span class="caps">AEM</span> Authoring mode. Selecting these will appear to do nothing, but it will update the <span class="caps">AEM</span> Authoring mode cookie resulting in future Quickly navigation to take you to the Touch/Classic version of the Web UIs.</p>
 <ul>
-	<li><code>go classic</code></li>
-	<li><code>go touch</code></li>
+    <li><code>go classic</code></li>
+    <li><code>go touch</code></li>
 </ul>
 </div>
 
 <div class="section">
 <p><img src="images/docs.png" alt=""></p>
 <h3>Docs</h3>
-<p>Access Adobe’s <span class="caps">AEM</span> documentation</p>
+<p>Access Adobe's <span class="caps">AEM</span> documentation</p>
 <ul>
-	<li>Command: <code>docs</code></li>
-	<li>Command: <code>docs [search-term]</code></li>
-	<li>Searches for term on Adobe docs site using DuckDuckGo.com<br>
+    <li>Command: <code>docs</code></li>
+    <li>Command: <code>docs [search-term]</code></li>
+    <li>Searches for term on Adobe docs site using DuckDuckGo.com<br>
 </li></ul></div>
 
 <div class="section">
@@ -112,17 +112,17 @@ Most operations support "type ahead" allowing filtering of results typing charac
 <h3>Lastmod</h3>
 <p>Find the last modified CQ Pages by user and date.</p>
 <ul>
-	<li>Command: <code>lastmod</code></li>
-	<li>Command: <code>lastmod [userId] [ 1s | 2m | 3h | 4d | 5w | 6M | 7y ]</code></li>
-	<li>Defaults to: lastmod [current user] 1d<br>
+    <li>Command: <code>lastmod</code></li>
+    <li>Command: <code>lastmod [userId] [ 1s | 2m | 3h | 4d | 5w | 6M | 7y ]</code></li>
+    <li>Defaults to: lastmod [current user] 1d<br>
 </li></ul></div>
 
 <div class="section">
 <p><img src="images/favorites.png" alt=""></p>
 <h3>Favorites</h3>
-<p>List of last 25 accessed URIs in <span class="caps">AEM</span> by the user. Values are stored in local storage in the user’s Web browser; different browsers means different favorite lists.</p>
+<p>List of last 25 accessed URIs in <span class="caps">AEM</span> by the user. Values are stored in local storage in the user's Web browser; different browsers means different favorite lists.</p>
 <ul>
-	<li>Command: <code>*</code></li>
-	<li>Command: <code>* rm</code></li>
-	<li>Removes the selected Favorite from the list<br>
+    <li>Command: <code>*</code></li>
+    <li>Command: <code>* rm</code></li>
+    <li>Removes the selected Favorite from the list<br>
 </li></ul></div>
