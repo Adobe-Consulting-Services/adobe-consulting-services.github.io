@@ -18,12 +18,13 @@ This tool allows content administrators, system administrators and Search Engine
 
 To create a Redirect Map configuration:
 
-1. Navigate to [/miscadmin#/etc/acs-commons/redirect-maps](http://localhost:4502/miscadmin#/etc/acs-commons/redirect-maps)
-2. Select *New...* > *New Page...*
+1. Navigate to `AEM Author > Tools > Redirect Maps`
+2. From the top right corner select `Create > Page`
+2. On the *Create Page*, select `Redirect Map Configuration > Next`
 3. Enter the Title / Name of your Redirect Map and Click *Create*
-    ![Creating a Redirect Map Configuration](images/create.jpg)
+    ![Creating a Redirect Map Configuration](images/create.png)
 4. Upload a Redirect Map base file \(optional\). If specificed, this file will be combined with the values from the AEM repository to generate the final Redirect Map file. This can be useful for specifying miscellaneous or external redirects which aren't found for pages in the AEM repository. For example, redirecting a particular URL to an external application.
-    ![Upload a Redirect Map File](images/upload-redirect-map.jpg)
+    ![Upload a Redirect Map File](images/upload-redirect-map.png)
 5. Configure one or more Redirect Configurations. These configurations are properties which will be queried for in the AEM repositository to generate the redirect map. Every page or asset under the specified path with the property will be included in the redirect map in the format `[property value] [scheme][domain][paget/asset mapped path]`. The Redirect Map generaton servlet uses [Sling Mappings](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) to automatically externalize the URL for the page/asset.
     ![Create Redirect Configurations](images/create-redirect-configurations.png)
 6. Switch to the *Preview* tab and validate your configuration.
@@ -75,7 +76,7 @@ Once you restart Apache, this will automatically pull changes from the Redirect 
 
 This allows uploading redirect map file will be combined with the redirects configured in AEM to create the final set of redirects.
 
-![Upload a Redirect Map File](images/upload-redirect-map.jpg)
+![Upload a Redirect Map File](images/upload-redirect-map.png)
 
 ### Redirect Configuration
 

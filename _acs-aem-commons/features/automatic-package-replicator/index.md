@@ -19,10 +19,12 @@ There are two primary methods for invoking the Automatic Package Replication fea
 
 To use the Automatic Package Replication feature:
 
-1. Create and configure an AEM Package in the [Package Manager](https://docs.adobe.com/docs/en/aem/6-3/administer/content/package-manager.html), including the filters for the package
-2. Navigate to [/miscadmin#/etc/acs-commons/automatic-package-replication](http://localhost:4502/miscadmin#/etc/acs-commons/automatic-package-replication) on your environment. 
-3. Create a new page of the type `Automatic Package Replication Configuration`
-4. Open and configure the Automatic Package Replication configuration
+1. Navigate to `AEM Author > Tools > Automatic Package Replication`
+2. From the top right corner select `Create > Page`
+3. On the *Create Page*, select `Automatic Package Replication Configuration > Next`
+4. Enter the Title / Name of your Automatic Package Replication and Click *Create*
+    ![Creating a Automatic Package Replication](images/create-config.png)
+5. Open and configure the Automatic Package Replication configuration
 
 ![Automatic Package Replication Configuration](images/configuration.png)
 
