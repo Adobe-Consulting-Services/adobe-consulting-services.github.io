@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 6.0.2
+description: Some bug fixes for 6.0.0 -- Remember, 6.x requires updating your maven dependency (content -> all), and a bunch of deprecated features have been removed!
+date: 2023-03-08
+project: acs-aem-commons
+---
