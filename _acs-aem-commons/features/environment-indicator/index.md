@@ -17,17 +17,17 @@ When working with AEM it's common be accessing multiple environments in the same
 
 ![image](images/osgi-config.png)
 
-Define a `sling:OsgiConfig` with the following attributes.
+Define an OSGi config, typically scoped to the AEM Author env.
 
-{% highlight xml %}
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="sling:OsgiConfig"
-    css-color="orange"
-    css-override="#acs-commons-env-indicator { .. }"
-    inner-html=".."
-    browser-title-prefix="Dev"
-    />
+`/apps/example/osgiconfig/config.author/com.adobe.acs.commons.wcm.impl.AemEnvironmentIndicatorFilter.cfg.json`
+
+{% highlight json %}
+{
+    "css-color": "orange",
+    "css-override": "#acs-commons-env-indicator { .. }",
+    "inner-html": "..",
+    "browser-title-prefix": "Dev"
+}
 {% endhighlight %}
 
 * css-color: The color of the indicator bar; Accepts any valid value for the CSS `background-color` attribute. Ignored if `css-override is` set.
@@ -50,7 +50,6 @@ Browser titles can be used in conjunction with visual indicators (bars, tabs or 
 ![image](images/default-indicator-bar.png)
 
 The bar is a default visual indicator. This indicator can be configured using the `css-color` property. Accepts any valid value for the CSS `background-color` attribute.
-
 
 ### Custom AEM Indicator
 
