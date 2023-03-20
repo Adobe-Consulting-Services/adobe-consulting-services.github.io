@@ -5,7 +5,7 @@ description: Cleans up packages deployed by Cloud Manager
 date: 2022-01-27
 redirect_from: /acs-aem-commons/features/package-garbage-collector.html 
 initial-release: 5.6.0
-last-updated-release: 5.6.0
+last-updated-release: 6.0.4
 tags: aem-65
 ---
 
@@ -27,6 +27,8 @@ This is a cron expression that gives great flexibility in when and how frequentl
 This is the group name of the packages that you want to remove. It will be matched exactly - no wildcards are supported.
 - **maxAgeInDays:**
 Packages matching the group name that were installed more than this number of days ago will be removed.
+- **removeNotInstalledPackages:** 
+Remove packages that have a created date >= `maxAgeInDays` but not installed (Not installed can mean they've never been installed, or they were installed but are now uninstalled).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -34,7 +36,8 @@ Packages matching the group name that were installed more than this number of da
           jcr:primaryType="sling:OsgiConfig"
           scheduler="0 30 2 ? * * *"
           maxAgeInDays="30"
-          groupName="com.uxp"/>
+          groupName="com.uxp"
+          removeNotInstalledPackages="false"/>
 ```
 Once it has been configured, the following configuration will be visible in the Felix Console
 
