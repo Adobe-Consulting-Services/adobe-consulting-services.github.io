@@ -202,3 +202,5 @@ User name: `acs-commons-email-service`
 ACLs:
 
 * `jcr:read` on `/etc/notification/email`
+
+     
