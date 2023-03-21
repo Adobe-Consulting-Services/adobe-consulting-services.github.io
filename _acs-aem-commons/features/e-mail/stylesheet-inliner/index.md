@@ -3,8 +3,7 @@ layout: acs-aem-commons_feature
 title: Stylesheet Inliner
 description: Replaces stylesheet references with &lt;style&gt; elements containing their contents
 date: 2016-11-30
-tags: component-dev backend-dev
-tags: 
+tags: aem-65 aem-cs
 initial-release: 2.9.0
 ---
 
