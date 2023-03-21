@@ -9,6 +9,9 @@ last-updated-release: 6.0.4
 tags: aem-65
 ---
 
+
+> Adobe Managed Services has its own standalone distribution of the Package Garbage Collector. It shares the same code base and can coexist with any version of ACS Commons.
+
 ## Purpose
 
 When you use Adobe Cloud Manager to deploy new code to your environments on Adobe Managed Service instances, it will generate a unique version number for your package, based on the configuration in the pom.xml file. 
