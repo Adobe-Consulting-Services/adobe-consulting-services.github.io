@@ -4,6 +4,7 @@ title: Email API
 description: Generic Email Service to send template based emails
 date: 2014-04-01
 redirect_from: /acs-aem-commons/features/email-api.html
+tags: aem-65 aem-cs
 initial-release: 1.6.0
 last-updated-release: 4.0.0
 ---
