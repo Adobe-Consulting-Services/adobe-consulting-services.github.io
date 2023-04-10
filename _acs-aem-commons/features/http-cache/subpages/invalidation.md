@@ -20,7 +20,7 @@ Custom cache invalidation events could be sling event handlers for JCR specific 
 
 Sample cache invalidation job creator. Watches for changes in JCR nodes and creates sling jobs for cache invalidation.  
 
-Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache.store.mem.impl.JCRNodeChangeEventHandler.xml`
+Define a `sling:OsgiConfig` `/apps/mysite/config/com.adobe.acs.commons.httpcache.invalidator.event.JCRNodeChangeEventHandler.xml`
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
