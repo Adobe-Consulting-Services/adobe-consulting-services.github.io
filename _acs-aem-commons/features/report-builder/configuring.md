@@ -157,6 +157,21 @@ This column has the following fields:
  
 <img src="images/Configure-Report-Tags-Column.jpg" class="img-responsive center-block" title="Configuring a Tags Column" />
 
+### Predicted Tags Column
+
+**Expected Result Type: [Resource](https://sling.apache.org/apidocs/sling9/org/apache/sling/api/resource/Resource.html)**
+
+This column shows a list of the predicted tags of the result _Asset_ resource along with their confidence values.
+
+This column has the following fields:
+
+* **Heading** - The column header to be displayed to the user
+* **Property** - The path/name of the property to use for this column. This property must be a tag type.
+* **Show Confidence** - If true, confidence values will be appended to the predicted tag names.
+* **Lower Confidence Threshold** - Omit all predicted tags whose confidence is lower than this value. 0 implies no filtering.
+
+<img src="images/Configure-Report-Predicted-Tags-Column.png" class="img-responsive center-block" title="Configuring a Tags Column" />
+
 ### Text Column
 
 **Expected Result Type: [Resource](https://sling.apache.org/apidocs/sling9/org/apache/sling/api/resource/Resource.html)**
