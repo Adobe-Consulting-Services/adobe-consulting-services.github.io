@@ -14,6 +14,14 @@ Many web site designs demands consistency of images based on their use within co
 
 The ACS AEM Commons Named Transform Image Servlet allows specific image transforms to be defined centrally via OSGi configurations. These image transforms can be easily invoked via parameterized HTTP GET requests to image resources in AEM.
 
+**Please note** that these transformations are happening on the fly, and the result is not cached as part of this functionality. Also this functionality can be very demanding in terms of resources (both memory/heap and CPU), especially when invoked on large renditions/assets. It can lead to situations of high garbage collection and even Out-of-memory situations, which can bring down AEM.
+
+If you need a specific rendition more often, it is advised to create this rendition upfront using processing profiles (see the documentation for [AEM 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/processing-profiles.html?lang=en) and [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en#custom-config)).
+
+In case of AEM as a Cloud Service the [Core Components support the web-optimized delivery of images](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/components/web-optimized-image-delivery.html?lang=en), and you can also [enable your own components to use that feature](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/web-optimized-image-delivery-java-apis.html?lang=en).
+
+
+
 ## Example
 
 The below DAM Asset image has been resizes, rotated, cropped and greyscaled as defined by the custom defined `my-transform-name` transform rule set.
