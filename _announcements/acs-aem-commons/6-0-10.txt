@@ -1,0 +1,7 @@
+---
+layout: acs-aem-commons_default
+title: Release 6.0.10
+description: Bunch of bug fixes!
+date: 2023-06-02
+project: acs-aem-commons
+---
