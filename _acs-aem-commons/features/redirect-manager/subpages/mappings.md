@@ -39,7 +39,7 @@ To meet this requirement ACS Redirect Manager supports [Sling Mappings](https://
 ### Enable Sling Mappings
 
 Sling Mappings in Redirect Filter are disabled by default. To enable this feature check the 'Rewrite Location Headers' checkbox in the OSGi configuration 
-or add a `rewriteUrls="{Boolean}true"` parameter in the OSGi configuration:
+or add a `mapUrls="{Boolean}true"` parameter in the OSGi configuration:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
