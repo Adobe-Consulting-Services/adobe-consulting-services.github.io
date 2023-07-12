@@ -4,9 +4,16 @@ title: Dispatcher Flush Rules
 description: Statlevels cramping your flushes?
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/dispatcher-flush-rules.html
-tags: aem-65
 initial-release: 1.2.0
 ---
+
+
+<div class="aemcs-incompatible">
+    <div class="aemcs-incompatible__title">Partial AEM as a Cloud Service compatibility!</div>
+    <p>
+         Dispatcher Flush Rules only works when running on AEM as a Cloud Service Publish service, and only with the default "hierarchical" flush type.
+    </p>
+</div>
 
 ## Purpose
 
