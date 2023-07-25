@@ -132,9 +132,9 @@ The `GenericList` interface has two methods:
 * `getItems()` - returns a `java.util.List` of the items in the list.
 * `lookupTitle(String)` - return the title of a particular value from the list.
 
-## Generic Lists access on AEM Publish
+## Generic Lists access on AEM as a Cloud Service Publish
 
-Generic Lists are not accessible to everyone by default on AEM Publish. To make generic lists available on AEM Publish, set the appropriate ACLs:
+Generic Lists are not accessible to everyone by default on AEM as a Cloud Service Publish service. To make generic lists available on AEM Publish, set the appropriate `jcr:read` ACLs on either the `/etc/acs-commons/list` node, on specific list pages under `/etc/acs-commons/lists`.
 
 For example, the following [Sling RepoInit](https://sling.apache.org/documentation/bundles/repository-initialization.html) script allows everyone to have read access to all Generic Lists.
 
@@ -147,4 +147,7 @@ set ACL for everyone
 end
 ```
 
-This can also be achieved through traditional read ACLs being added to `/etc/acs-commons/lists` or explicit list pages.
+Similar to RepoInit, access can be granted to Generic Lists through traditional read ACL `rep:policy` nodes added to `/etc/acs-commons/lists` or explicit list pages -- ReppInit simply scripts the creation of `rep:policy` nodes and is the preferred method.
+
+If lists should not be directly accessed via HTTP on AEM Publish, then create deny filter rules in AEM Dispatcher config, blocking HTTP GET access to `/etc/acs-commons/lists`.
+
