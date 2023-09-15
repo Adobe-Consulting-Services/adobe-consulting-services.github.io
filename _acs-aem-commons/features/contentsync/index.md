@@ -1,6 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Content Sync
+redirect_from: /acs-aem-commons/features/contentsync.html
 description: Synchronize content between AEM instances.
 date: 2023-08-02
 tags: aem-65 aem-cs
@@ -19,14 +20,6 @@ Using CRX Package Manager to copy content between AEM environments has a number 
 - CRX Package Manager requires escalated access, which is not always possible, especially in production environments
 - Installing a package resets the version history.  
 - There are challenges to set up incremental updates.
-
-### What can I sync?
-In general - any content resources, like
-- Pages
-- Assets
-- Experience Fragments
-- Content Fragments
-- Tags
 
 ### How does Content Sync Work?
 Content Sync uses JSON Export/Import between Sling GET/POST servlets. The tool fetches a catalog of resources from the source instance, e.g.
@@ -63,7 +56,9 @@ To sync a _dam:Asset_ resource the tool will make an HTTP call to grab the _jcr:
 
 In order to use the Content Sync tool, you need the latest version of ACS Commons installed on the source and target AEM instances.
 
-### Configure Sling Get Servlet
+### Configure Sling Get Servlet on the source AEM instance
+ContentSync requires a few tweaks in the Sling Get Servlet configuration to ensure it renders the correct JSON .
+
 Create an OSGi configuration for PID `org.apache.sling.servlets.get.DefaultGetServlet` and make sure that:
 - JSON Renderer is enabled
 - JSON Max Results parameter is set to at least 1000
@@ -100,5 +95,5 @@ The default algorithm is based on the _cq:lastModified/jcr:lastModified_ timesta
 As an example, Content Sync ships with _AssetChecksumStrategy_ strategy which synchronizes dam:Asset nodes based 
 on the _dam:sha1_ checksum in the asset metadata.
 
-Users can plug-in their custom strategies by implementing _com.adobe.acs.commons.contentsync.UpdateStrategy_ interface;
+Users can plug in their custom strategies by implementing _com.adobe.acs.commons.contentsync.UpdateStrategy_ interface;
 
