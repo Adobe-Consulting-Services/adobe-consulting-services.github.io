@@ -4,7 +4,7 @@ title:  Content Traversing - Replicate with Options
 description: Replicate a bunch of content (more) safely!
 date: 2014-09-01
 initial-release: 2.6.2/3.2.2
-last-updated-release: 4.0.0
+last-updated-release: 6.2.0
 tags: aem-65
 ---
 
@@ -35,6 +35,10 @@ Processing the tree in a serial fashion allows for a more controlled workflow ex
   * `true` or `false`
   * Defaults to `false`
   * Typically best to set to `true` to ensure the replication queue does not build up.
+* `suppressStatusUpdate` (Since 6.2.0)
+  * `true` or `false`
+  * Defaults to `false`
+  * Typically best to set to `false` so replication information gets updated.
 * `suppressVersions`
   * `true` or `false`
   * Defaults to `false`
