@@ -14,7 +14,7 @@ Sets an Entity Tag (ETag) response header as defined by [RFC-7232](https://tools
 ETag calculation as being offered by [Apache HTTPD](https://httpd.apache.org/docs/2.4/mod/core.html#fileetag) is often not enough because the ETag must not be different between the different publish servers of a server farm and all criteria being offered by Apache HTTPD are in fact server specific.
 
 ETags are a useful measure to reduce traffic for resources which are rarely modified and also helps search engine crawlers to perform better.
-For further information refer to [Optimizing AEM Site Caches](https://helpx.adobe.com/experience-manager/kb/optimizing-aem-site-caches.html).
+For further information refer to [Optimizing AEM Site Caches](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17461.html?lang=en).
 
 ## How to Use
 
