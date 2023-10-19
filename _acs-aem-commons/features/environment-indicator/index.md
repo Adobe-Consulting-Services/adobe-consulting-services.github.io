@@ -4,10 +4,16 @@ title: AEM Environment Indicator
 description: Too many tabs have you confused?
 date: 2014-09-26
 redirect_from: /acs-aem-commons/features/aem-environment-indicator.html
-tags: aem-65 aem-cs
+tags: aem-65
 initial-release: 1.8.0
 last-updated-release: 6.0.0
 ---
+
+## AEM 6.5 only
+
+AEM as a Cloud Service now supports [exposing the environment in its Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=en#identify-aemaacs-environment). 
+
+Therefore using this in AEMaaCS is no longer necessary and redundant (although it still works).
 
 ## Purpose
 
