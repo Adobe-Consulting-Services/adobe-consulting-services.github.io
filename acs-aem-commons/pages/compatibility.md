@@ -72,6 +72,7 @@ The table below calls out the known problematic features categorizing them by "I
     * __ANTI-PATTERN__: Features that are implemented using an anti-pattern in AEM as a Cloud Service.
 * __WARN__: While not technically incompatible, this ACS AEM Commons feature is often used to perform work that is an __ANTI-PATTERN__ (for example, using Bulk Workflow Manager to generate renditions for assets using AEM Workflow Processes, instead of Assets microservices).
 * __REPLACED__: AEM as a Cloud Service now provides a better version of this feature that more closely aligns w/ the overall AEM as a Cloud Service infrastructure.
+* __REWRITTEN__: A separate `acs-aem-commons-all` for AEM as a Cloud Service is foreseen, that rewrites the logic from `acs-aem-commons-bundle` to be AEM as a Cloud Service compatible
 
 All features classified as __INCOMPATIBLE (MISSING DEPENDENCY)__, __INCOMPATIBLE (ANTI-PATTERN)__, and __REPLACED__ have (or will have) an internal kill-switch in the in ACS AEM Commons code-base that prevent them from functioning on AEM as a Cloud Service (these features will continue to function on the supported AEM 6.x installs).
 
@@ -83,6 +84,7 @@ As new features are found to be incompatible with AEM as a Cloud Service, they w
 |----------------------------------------------------------------------------------------------------------------------|-----------------------|------------------------|
 | [Audio Component](/acs-aem-commons/features/wcm-components/audio/index.html) | INCOMPATIBLE (ANTI-PATTERN) | Streaming binary data through AEM memory is an anti-pattern. |
 | [Bulk Workflow Manager](/acs-aem-commons/features/bulk-workflow-manager/index.html) | WARN | Bulk workflow manager can be used to execute Workflows as long as they those workflows do not violate AEM as a Cloud Service's best practices. Commonly, Bulk Workflow Manager is used to process asset binaries; this is not longer allowed in AEM as a Cloud Service |
+| [Dispatcher Flush Rules](/acs-aem-commons/features/dispatcher-flush-rules/index.md) | REWRITTEN | Rewritten to use Sling Distribution instead of Replicator API's. |
 | [Ensure Oak Index](/acs-aem-commons/features/ensure-oak-index/index.md) | INCOMPATIBLE (ANTI-PATTERN) | Oak index definition are considered immutable and not manage-able at runtime. |
 | [Healthchecks - SMTP Healthcheck](/acs-aem-commons/features/healthchecks/smtp/index.html) | INCOMPATIBLE (MISSING DEPENDENCY) | SMTP is not supported. Healthcheck results are not available, rendering running them moot. |
 | [Healthchecks - Healthecheck Status e-mailer](/acs-aem-commons/features/healthchecks/status-emailer/index.html) | INCOMPATIBLE (MISSING DEPENDENCY) | SMTP is not supported. |
