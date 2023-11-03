@@ -66,4 +66,6 @@ The custom Audit Log Lucene Oak index at a minimum should:
    + `cq:time`
    + `cq:type`
    + `cq:userid`
+4. Mark each property index definition `ordered = true`  
+  
   
