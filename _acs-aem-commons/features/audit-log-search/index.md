@@ -15,7 +15,7 @@ Allows administrators to easily search the AEM Audit Log to determine what user 
 
 To use the Audit Log Search:
 
-1. Navigate to [/etc/acs-commons/audit-log-search.html](http://localhost:4502/etc/acs-commons/audit-log-search.html) on your environment. 
+1. Navigate to [/apps/acs-commons/content/audit-log-search.html](http://localhost:4502/apps/acs-commons/content/audit-log-search.html) on your environment. 
 2. Enter your search parameters
 3. Click the `Search Audit Log` button
 
@@ -51,8 +51,19 @@ The following columns will be available in the results:
  - **Modifications** - A list of properties modified, locations moved or other changes in the Audit Log event
  - **CRXDE** - Link to the Audit Log event in CRXDE
 
-## Installing Oak Index
+## Creating an Audit Log Oak Index
 
 If you receive the Oak Index missing warning when using the Audit Log search or if the results are slow, you will need to install an Oak Index to improve query performance.
 
 You can generate an Oak Index based on the queries in the Audit Log Search tool with the [Oak Index Definition Generator](http://oakutils.appspot.com/generate/index) or download a [package with a simple Oak Index definition](/acs-aem-commons/packages/audit-log-search/acs-aem-commons-audit-log-oak-index-4.8.6.zip).
+
+The custom Audit Log Lucene Oak index at a minimum should:
+
+1. Oak lucene index
+2. Indexes on the `cq:AuditEvent` node type
+3. With propertyIndexes
+   + `cq:path`
+   + `cq:time`
+   + `cq:type`
+   + `cq:userid`
+  
