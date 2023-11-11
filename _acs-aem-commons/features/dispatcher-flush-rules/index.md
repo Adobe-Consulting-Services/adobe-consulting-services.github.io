@@ -5,7 +5,7 @@ description: Statlevels cramping your flushes?
 date: 2013-10-01
 redirect_from: /acs-aem-commons/features/dispatcher-flush-rules.html
 initial-release: 1.2.0
-tags: aem-65
+tags: aem-65 aem-cs
 ---
 
 ## Purpose
@@ -20,11 +20,16 @@ Instead we can use Dispatcher Flush rules to create a "smart" flush scheme, that
 
 ## How to Use
 
+### AEM as a Cloud Service
+Dispatcher Flush Rules only work when the OSGi configuration is deployed on AEM Author. After a publish action has occurred, a `distributed` event from Sling Distribution is catched and used to execute the Dispatcher Flush Rules
+
+### AEM 6.5
 Dispatcher Flush Rules are intended to be deployed and executed on AEM Publish, which should have  On Trigger Flush Agents set up. Running Dispatcher Flush Rules on AEM Author that flush Dispatchers for AEM Publish can result in race-conditions, where the Dispatcher cache invalidation (and re-caching of content) can occur prior to the new replicated content being persisted on AEM Publish. See the "Flushing from AEM 5.6+ Publish Servers" section below for how to set up On Trigger Flush Agents.
 
+#### OSGi Config
 Create a new `sling:OsgiConfig` node for each logical flush rule set. A good practice is to create a "global" configuration and separate configurations per "site".
 
-    /apps/myapp/config.publish/com.adobe.acs.commons.replication.dispatcher.impl.DispatcherFlushRulesImpl-MySite
+    /apps/myapp/config.(author|publish)/com.adobe.acs.commons.replication.dispatcher.impl.DispatcherFlushRulesImpl-MySite
 
 ### OSGi Config Properties
 
@@ -65,7 +70,7 @@ In this case the following activations would triggers the follow flushes:
     `/content/dam/mysite/animals/dog.jpg` would flush `/content/mysite`
     `/content/dam/yoursite/animals/cat.jpg` would flush `/content/yoursite`
 
-### prop.rules.resource-only
+### prop.rules.resource-only (AEM 6.5 only)
 
 Defines the flush mappings in the (same as hierarchical) format
 
