@@ -5,7 +5,7 @@ title: Add ACS AEM Commons to your AEM Maven project
 
 # {{ page.title }}
 
-ACS AEM Commons should be included as a Maven dependency on in your AEM project. The instructions for adding ACS AEM Commons to your project varies by the version fo ACS AEM Commons you are using. 
+ACS AEM Commons should be included as a Maven dependency on in your AEM project. The instructions for adding ACS AEM Commons to your project varies by the type of AEM and version of ACS AEM Commons you are using. 
 
 Please refer to [Compatibility](/acs-aem-commons/pages/compatibility.html) to check which version of ACS AEM Commons is compatible with your version of AEM.
 
@@ -14,9 +14,11 @@ Please refer to [Compatibility](/acs-aem-commons/pages/compatibility.html) to ch
 
 ## ACS AEM Commons 6.0.0+
 
+### AEM 6.5
+
 In ACS AEM Commons 6.0.0, the main dependency artifact ID was renamed from `acs-aem-commons-content` to `acs-aem-commons-all`. 
 
-### Your all/pom.xml
+#### Your all/pom.xml
 
 In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
 
@@ -51,7 +53,7 @@ In the `<dependencies>` section of your _all (container-package) project's pom.x
 </dependency>
 {% endhighlight %}
 
-### Your core/pom.xml (Optional)
+#### Your core/pom.xml (Optional)
 
 To use [Java APIs](https://javadoc.io/doc/com.adobe.acs/acs-aem-commons-bundle/latest/index.html) provided by ACS AEM Commons in your code, add a dependency on on the `acs-aem-commons-bundle` in your OSGi bundle Maven project. 
 
@@ -61,6 +63,18 @@ To use [Java APIs](https://javadoc.io/doc/com.adobe.acs/acs-aem-commons-bundle/l
     <artifactId>acs-aem-commons-bundle</artifactId>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <scope>provided</scope>
+</dependency>
+{% endhighlight %}
+
+## AEM as a Cloud Service
+
+All information of AEM 6.5 above applies, but instead of using the `acs-aem-commons-all`, a specific classifier for cloud is foreseen.
+
+{% highlight xml %}
+<dependency>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>acs-aem-commons-all</artifactId>
+    <classifier>cloud</classifier>
 </dependency>
 {% endhighlight %}
 
