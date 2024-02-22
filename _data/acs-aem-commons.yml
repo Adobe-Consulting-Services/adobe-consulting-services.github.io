@@ -1,7 +1,7 @@
 name: acs-aem-commons
 baseurl: /acs-aem-commons
 title: ACS AEM Commons
-version: 6.3.6
+version: 6.4.0
 version60: 2.14.0		
 version62: 3.19.2		
 version65: 4.12.0
