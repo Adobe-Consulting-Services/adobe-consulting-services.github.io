@@ -66,6 +66,29 @@ Create an OSGi configuration for PID `org.apache.sling.servlets.get.DefaultGetSe
 
   ![image](images/sling-get-servlet.png)
 
+#### AEM Publish configurations
+
+In order to sync content from an AEM Publish environment, the following configuration much be made to the Apache Sling Authentication Service OSGi configuruation, adding the path `+/apps/acs-commons/content/contentsync` to paths with authenticationr requirements.
+
+![Sling Authentication Service Handler on AEM Publish](https://github.com/Adobe-Consulting-Services/adobe-consulting-services.github.io/assets/1451868/c3abd022-2c5f-40ef-bfbb-2e9df41ca704)
+
+`/apps/example-app/osgiconfig/config.publish/org.apache.sling.engine.impl.auth.SlingAuthenticator.cfg.json`
+
+```
+{
+  "auth.annonymous":true,
+  "auth.sudo.cookie":"sling.sudo",
+  "sling.auth.requirements":[
+    "+/libs/granite/oauth/content/authorization",
+    "+/apps/acs-commons/content/contentsync"
+  ],
+  "auth.http.realm":"Sling (Development)",
+  "auth.http":"preemptive",
+  "auth.sudo.parameter":"sudo"
+}
+```
+
+
 ### Configure the host(s) to synchronize from
 
 Navigate to the Content Sync tool http://localhost:4502/apps/acs-commons/content/contentsync.html and click the _Configure_
