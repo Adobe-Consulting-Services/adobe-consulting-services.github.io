@@ -19,7 +19,7 @@ This tool allows AEM Administrators and advanced users to create, execute and do
 
 ## Viewing Reports
 
-To view the available reports, navigate to the Report Landing Page at [http://SERVER:PORT/apps/acs-commons/reports.html](http://localhost:4502/apps/acs-commons/reports.html). This page will display a list of the avaialble reports as well as links to view, edit and delete each report. 
+To view the available reports, navigate to the Report Landing Page at [http://SERVER:PORT/apps/acs-commons/content/reports.html](http://localhost:4502/apps/acs-commons/content/reports.html). This page will display a list of the avaialble reports as well as links to view, edit and delete each report. 
 
 ![Report Landing Page](images/Report-Landing-Page.jpg)
 
