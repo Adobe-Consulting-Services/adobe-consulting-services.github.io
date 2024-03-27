@@ -12,6 +12,8 @@ last-updated-release: 3.18.0
 
 This tool allows content administrators, system administrators and Search Engine Optimization teams to easily maintain and publish [Apache httpd Redirect Map](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) files without requiring an Apache restart. These files can manage large lists of redirects and rewrites in the Apache httpd / AEM Dispatcher.
 
+**Note that Apache has an 1024 length limit for RewriteMap single entries.**
+
 ## Setting Up Redirect Map Manager
 
 ### Configuring a Redirect Map
