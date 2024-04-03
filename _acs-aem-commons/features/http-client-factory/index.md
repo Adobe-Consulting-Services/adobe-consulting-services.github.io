@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Http Client Factory
-description: Manage Fluent HTTP Executors/Requests via an OSGi Configuration Factory
+description: Manage Fluent HTTP Executors/Requests (from Apache HttpComponents) via OSGi Configurations
 date: 2024-02-26
 tags: aem-65 aem-cs
 initial-release: 3.1.2
@@ -9,15 +9,15 @@ initial-release: 3.1.2
 
 ## Purpose
 
-[Apache Http Components](https://hc.apache.org/) since version 4.2 contains a [fluent API](https://hc.apache.org/httpcomponents-client-4.5.x/current/tutorial/html/fluent.html) which is often easier to use than the low-level [`CloseableHttpClient` API](https://hc.apache.org/httpcomponents-client-4.5.x/current/tutorial/html/fundamentals.html).
+[Apache HttpComponents](https://hc.apache.org/) since version 4.2 contains a [fluent API](https://hc.apache.org/httpcomponents-client-4.5.x/current/tutorial/html/fluent.html) which is often easier to use than the low-level [`CloseableHttpClient` API](https://hc.apache.org/httpcomponents-client-4.5.x/current/tutorial/html/fundamentals.html).
 
 However, there is no direct support for [OSGi configuration admin](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html) for either API which means that HttpClients and Fluent Executors/Requests must be created manually.
-Apache Http Components only comes with some support for [OSGi configuration of HTTP proxies](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings.html?lang=en) via factory PID `org.apache.http.proxyconfigurator`.
+Apache HttpComponents only comes with some support for [OSGi configuration of HTTP proxies](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings.html?lang=en) via factory PID `org.apache.http.proxyconfigurator`.
 
-The OSGi service `com.adobe.acs.commons.http.HttpClientFactory` manages the lifecycle of Fluent HTTP Executors/Requests automatically. There is an instance available per OSGi configuration bound via factory PID `com.adobe.acs.commons.http.impl.HttpClientFactoryImpl` (with name *ACS AEM Commons - Http Components Fluent Executor Factory*).
+The OSGi service `com.adobe.acs.commons.http.HttpClientFactory` manages the lifecycle of fluent HTTP Executors/Requests. There is an instance available per OSGi configuration bound via factory PID `com.adobe.acs.commons.http.impl.HttpClientFactoryImpl` (with name *ACS AEM Commons - Http Components Fluent Executor Factory*).
 Each service instance only holds a single HTTP Client/Request/Executor object (despite its class name suffix `Factory`).
 
-The client is only closed once the service is stopped by the OSGi runtime, so be aware of potentially open sockets in the underlying connection manager and release the service once you no longer need it.
+The client is only closed once the service is stopped by the OSGi runtime, so be aware of potentially open sockets in the underlying connection manager and release the service once you no longer need it. Also make sure to release the response (and its input streams) once you no longer need it and optionally tweak the TTL for HTTP connections via a custom [`org.apache.http.conn.ConnectionKeepAliveStrategy`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/conn/ConnectionKeepAliveStrategy.html).
 
 ## How to Use
 
