@@ -14,48 +14,59 @@ Please refer to [Compatibility](/acs-aem-commons/pages/compatibility.html) to ch
 
 ## ACS AEM Commons 6.0.0+
 
-### AEM 6.5
+*In ACS AEM Commons 6.0.0, the main dependency artifact ID was renamed from `acs-aem-commons-content` to `acs-aem-commons-all`.*
 
-In ACS AEM Commons 6.0.0, the main dependency artifact ID was renamed from `acs-aem-commons-content` to `acs-aem-commons-all`. 
+The setup for embedding/depending on ACS AEM Commons in your code base differs slightly between AEMaaCS and AEM 6.5.
 
-#### Your all/pom.xml
+### AEM as a Cloud Service
 
-In the `filevault-package-maven-plugin` plugin configuration of your _all project's pom.xml_ file, add this:
+#### Your Container Content Package (usually called `all/pom.xml `)
+
+In your _container content package module's pom.xml_ file you extend both the
+
+* `dependencies` section and the
+* `filevault-package-maven-plugin` configuration
+
+like this:
 
 {% highlight xml %}
 <plugins>
-    <plugin>
-        <groupId>org.apache.jackrabbit</groupId>
-        <artifactId>filevault-package-maven-plugin</artifactId>
+  <plugin>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>filevault-package-maven-plugin</artifactId>
+      ...
+      <configuration>
+        <embeddeds>
+          <embedded>
+            <!-- the artifact with the given id from the project dependencies is embedded -->
+            <artifactId>acs-aem-commons-all</artifactId>
+            <target>/apps/my-app-vendor-packages/container/install</target>
+            <filter>true</filter>
+            <isAllVersionsFilter>true</isAllVersionsFilter>
+          </embedded>
         ...
-        <configuration>
-            <embeddeds>
-                ...
-                <embedded>
-                    <groupId>com.adobe.acs</groupId>
-                    <artifactId>acs-aem-commons-all</artifactId>
-                    <type>zip</type>
-                    <target>/apps/my-app-vendor-packages/container/install</target>
-                    <filter>true</filter>
-                    <isAllVersionsFilter>true</isAllVersionsFilter>
-                </embedded>
-                ...
-{% endhighlight %}
-
-In the `<dependencies>` section of your _all (container-package) project's pom.xml_ file, add this:
-
-{% highlight xml %}
-<dependency>
+        </embeddeds>
+      ...
+      </configuration>
+    ...
+  </plugin>
+</plugins>
+...
+<dependencies>
+  <dependency>
     <groupId>com.adobe.acs</groupId>
     <artifactId>acs-aem-commons-all</artifactId>
+    <classifier>cloud</classifier>
     <version>{{ site.data.acs-aem-commons.version }}</version>
     <type>zip</type>
-</dependency>
+  </dependency>
+  ...
+</dependencies>
 {% endhighlight %}
 
-#### Your core/pom.xml (Optional)
+#### Your OSGi Bundle(s) (usually called `core`) (Optional)
 
-To use [Java APIs](https://javadoc.io/doc/com.adobe.acs/acs-aem-commons-bundle/latest/index.html) provided by ACS AEM Commons in your code, add a dependency on on the `acs-aem-commons-bundle` in your OSGi bundle Maven project. 
+To use [Java APIs](https://javadoc.io/doc/com.adobe.acs/acs-aem-commons-bundle/latest/index.html) provided by ACS AEM Commons in your code, add a dependency on the `acs-aem-commons-bundle` in your OSGi bundle Maven project. 
 
 {% highlight xml %}
 <dependency>
@@ -66,21 +77,63 @@ To use [Java APIs](https://javadoc.io/doc/com.adobe.acs/acs-aem-commons-bundle/l
 </dependency>
 {% endhighlight %}
 
-## AEM as a Cloud Service
+### AEM 6.5
 
-All information of AEM 6.5 above applies, but instead of using the `acs-aem-commons-all`, a specific classifier for cloud is foreseen.
+All information of AEM as a Cloud Service above applies, but instead of using the specific *classifier* `cloud`, you don't use any classifier at all. Also instead of `embeddeds` one leverages `subpackages`
+
+#### Your Container Content Package (usually called `all`)
+
+In your _container content package module's pom.xml_ file, add this:
+
+{% highlight xml %}
+<plugins>
+  <plugin>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>filevault-package-maven-plugin</artifactId>
+      ...
+      <configuration>
+        <subpackages>
+          <subpackage>
+            <!-- the artifact with the given id from the project dependencies is embedded -->
+            <artifactId>acs-aem-commons-all</artifactId>
+            <filter>true</filter>
+            <isAllVersionsFilter>true</isAllVersionsFilter>
+          </subpackage>
+        ...
+        </subpackages>
+      ...
+      </configuration>
+    ...
+  </plugin>
+</plugins>
+...
+<dependencies>
+  <dependency>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>acs-aem-commons-all</artifactId>
+    <version>{{ site.data.acs-aem-commons.version }}</version>
+    <type>zip</type>
+  </dependency>
+  ...
+</dependencies>
+{% endhighlight %}
+
+#### Your OSGi Bundle(s) (usually called `core`) (Optional)
+
+In your _OSGi bundle module's pom.xml_ file, add this:. 
 
 {% highlight xml %}
 <dependency>
     <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-all</artifactId>
-    <classifier>cloud</classifier>
+    <artifactId>acs-aem-commons-bundle</artifactId>
+    <version>{{ site.data.acs-aem-commons.version }}</version>
+    <scope>provided</scope>
 </dependency>
 {% endhighlight %}
 
 ## ACS AEM Commons < 6.0.0
 
-Prior to ACS AEM Commons 6.0.0, the main dependency artifact ID was named from `acs-aem-commons-content`.
+Prior to ACS AEM Commons 6.0.0, the main dependency artifact ID was named `acs-aem-commons-content`.
 
 ### Your all/pom.xml
 
@@ -96,9 +149,7 @@ In the `filevault-package-maven-plugin` plugin configuration of your _all projec
             <embeddeds>
                 ...
                 <embedded>
-                    <groupId>com.adobe.acs</groupId>
                     <artifactId>acs-aem-commons-all</artifactId>
-                    <type>zip</type>
                     <target>/apps/my-app-vendor-packages/container/install</target>
                     <filter>true</filter>
                     <isAllVersionsFilter>true</isAllVersionsFilter>
