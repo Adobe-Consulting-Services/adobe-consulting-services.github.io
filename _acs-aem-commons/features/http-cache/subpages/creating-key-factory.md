@@ -17,6 +17,10 @@ If you want your CacheKey to work in the JCR store, you need to provide an imple
 The abstract class com.adobe.acs.commons.httpcache.keys.AbstractCacheKey contains parentReadObject and parentWriteObject as protected methods to provide serialization logic for it's fields.
 You will need to serialize your fields accordingly so they may be persisted in the JCR.
 
+<h4 id="overview">Deserialization Firewall</h4>
+<p>JCR store stores the keys in JCR repository and hence depends on serialization/deserialization of these keys.
+If you have created your custom key factory, it may fail to deserialize by the JCR store as AEM has deserialization firewall preventing the deserialization from non whitelisted classes.
+To prevent this, Go to configMgr and add your package name in </p><code class="language-plaintext highlighter-rouge">com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name</code>
 
 
 Example implementation:
@@ -26,7 +30,7 @@ Example implementation:
 {% highlight java %}
 
 @Component(configurationPolicy = ConfigurationPolicy.REQUIRE, service = CacheKeyFactory.class)
-@Designate(ocd = WeRetailCacheKeyFactory.class,factory = true)
+@Designate(ocd = WeRetailCacheKeyFactory.Config.class,factory = true)
 public class WeRetailCacheKeyFactory implements CacheKeyFactory {
 
     //our own service
