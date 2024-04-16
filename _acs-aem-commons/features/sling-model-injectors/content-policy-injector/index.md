@@ -1,7 +1,7 @@
 ---
 layout: acs-aem-commons_feature
 title: Content Policy Sling Models Injector
-description: Inject values from the ContentPolicy (component or page) in your sling model
+description: Inject values from the ContentPolicy in your sling model
 date: 2024-04-01
 redirect_from: /acs-aem-commons/features/aem-sling-models-injectors.html
 tags: aem-65 aem-cs
@@ -50,8 +50,6 @@ Injections are available when adapting either a `Resource` or `SlingHttpServletR
         
     }
 
-
-    import com.adobe.acs.commons.models.via.annotations.ContentPolicyViaType;
 ## Example - inject "clientlibsAsync" into the sling model, from the content policy set on the page level
     import com.adobe.acs.commons.models.via.annotations.ContentPolicyViaType;
 
