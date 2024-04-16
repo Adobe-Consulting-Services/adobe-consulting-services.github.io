@@ -16,6 +16,7 @@ Allows for [Sling Models](http://sling.apache.org/documentation/bundles/models.h
 * `resourceResolver`
 * `componentContext`
 * `pageManager`
+* `tagManager` (since 6.6.0)
 * `currentPage`
 * `resourcePage`
 * `designer`
@@ -37,7 +38,7 @@ Most injections are available when adapting either a `Resource` or `SlingHttpSer
     @Model(adaptables = { SlingHttpServletRequest.class, Resource.class })
     public class TestModel {
 
-        @Inject
+        @AemObject
         private Page resourcePage;
 
         public Page getResourcePage() {
