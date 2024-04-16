@@ -133,6 +133,6 @@ And in our HTL we can simply output our source using the javabean approach.
 {% highlight html %}
 
 <div sly-data-sly-use.welcome="${'com.acs.components.WelcomeMessage'}">
-    <img src="${welcome.image.src>"/>
+    <img src="${welcome.image.src}"/>
 </div>
 {% endhighlight %}

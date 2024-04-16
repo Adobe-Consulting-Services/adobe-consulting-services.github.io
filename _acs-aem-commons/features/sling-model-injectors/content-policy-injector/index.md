@@ -10,7 +10,7 @@ initial-release: 6.6.0
 
 ## Purpose
 
-Allows for [Sling Models](http://sling.apache.org/documentation/bundles/models.html) to inject valuemap values or perform adaptions from the content policy valuemap into your sling model.
+Allows for [Sling Models](http://sling.apache.org/documentation/bundles/models.html) to inject ValueMap values or perform adaptions from the content policy ValueMap into your sling model.
 
 
 

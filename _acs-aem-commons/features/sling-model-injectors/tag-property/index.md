@@ -18,6 +18,10 @@ The tag ID is the tag path, e.g. `/content/cq:tags/geometrixx-outdoors/seasons/s
 
 Injections are available when adapting either a `Resource` or `SlingHttpServletRequest` object.
 
+Why not AEMObject for this purpose? Because we need to specify inheritance which is not possible with AEMObject.
+AemObject also does not provide a value method, which is needed to easily specify the property key.
+Also, AEMObject works on bindings / context, and this injection resolves from a property value.
+
 ## Example - inject a single Tag from component property "myTag"
 
     import com.adobe.acs.commons.models.injectors.annotation.TagProperty; 

@@ -42,7 +42,8 @@ Note: Out of performance reasons, only works with `@HierarchicalPageProperty` as
         }
     }
 
-## Via adapter (new) - get the page content resource to adapt from
+# Updates in 6.6.0
+## Via adapter - get the page content resource to adapt from
 
 
     // our page sling model, based upon the page jcr:content resource.
