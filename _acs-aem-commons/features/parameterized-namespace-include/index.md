@@ -12,7 +12,7 @@ initial-release: 4.5.0
 
 The parameterized namespace include (acs-commons/granite/ui/components/include) can include dialog snippets with a namespace and or parameters.
 
-The namespace mechanism is similar to the following [following deprecated feature](../../deprecated/cqinclude-namespace/index.html).
+The namespace mechanism is similar to the following [following deprecated feature](../deprecated/cqinclude-namespace/index.html).
 
 This allows you to reuse a dialog snippet multiple times in a dialog.
 

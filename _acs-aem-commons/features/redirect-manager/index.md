@@ -28,7 +28,8 @@ respectively in case of a matching incoming request url.
 * [Context Aware Configuration](./subpages/caconfig.html)
 * [Rewriting Location header](./subpages/mappings.html)
 * [Advanced Configuration](./subpages/advanced.html)
-
++ [Searching over Redirects](./subpages/search.html)
++ 
 ## Getting Started with Redirect Manager
 
 ### Configuration
