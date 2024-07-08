@@ -41,6 +41,25 @@ Define an OSGi config, typically scoped to the AEM Author env.
 * inner-html: Any valid HTML (or text) that will be added inside the indicator div.
 * browser-title-prefix: The value to prefix the browser title with.
 
+### AEM as a Cloud Service OSGi parameters
+
+As noted above it is recommneded that Adobe supported environment badge in Unified Shell is used to distinguish environments on AEM as a Cloud Service.
+
+However, if you would like to use this feature to distinguish between multiple AEM as a Cloud Service Development, this can be done using [AEM as a Cloud Serviec OSGi environment variables](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#when-to-use-non-secret-environment-specific-configuration-values) and managing their values per environment via [Cloud Manager's Environment variables UI](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables).
+
+For example:
+
+{% highlight json %}
+{
+    "css-color": "$[env:ACS_COMMONS_ENV_INDICATOR_CSS_COLOR;default=orange]",
+    "css-override": "$[env:ACS_COMMONS_ENV_INDICATOR_CSS_OVERRIDE;default=#acs-commons-env-indicator { .., }]",
+    "inner-html": "$[env:ACS_COMMONS_ENV_INDICATOR_INNER_HTML;default=<div>DEV 1</div>]",
+    "browser-title-prefix": "$[env:ACS_COMMONS_ENV_INDICATOR_BROWSER_TITLE_PREFIX;default=Dev 1]"
+}
+{% endhighlight %}
+
+Note: any default values including double quoutes (`"`) must escape them, to avoid malformed JSON.
+
 ## Indicators
 
 ### Browser Title
