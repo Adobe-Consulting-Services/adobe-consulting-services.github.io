@@ -52,7 +52,7 @@ For example:
 {% highlight json %}
 {
     "css-color": "$[env:ACS_COMMONS_ENV_INDICATOR_CSS_COLOR;default=orange]",
-    "css-override": "$[env:ACS_COMMONS_ENV_INDICATOR_CSS_OVERRIDE;default=#acs-commons-env-indicator { .., }]",
+    "css-override": "$[env:ACS_COMMONS_ENV_INDICATOR_CSS_OVERRIDE;default=#acs-commons-env-indicator { ... }]",
     "inner-html": "$[env:ACS_COMMONS_ENV_INDICATOR_INNER_HTML;default=<div>DEV 1</div>]",
     "browser-title-prefix": "$[env:ACS_COMMONS_ENV_INDICATOR_BROWSER_TITLE_PREFIX;default=Dev 1]"
 }
