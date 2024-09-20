@@ -36,6 +36,8 @@ Once you are happy with your Redirect Map file, activate the configuration page 
 
 ### Configuring Apache
 
+#### On-premise and Adobe Managed Services
+
 Before using the Redirect Map Manager, you need to configure Apache to retrieve the file from the AEM Publisher and update it's Redirect Map DB. To set this up you should:
 
 1. Configure Apache to use a redirect map at your intended path. For example, if I wanted to use a Redirect Map DB stored at `/etc/httpd/conf/redirectmap.map`, I could add the following into my site's conf file:
@@ -71,6 +73,10 @@ Before using the Redirect Map Manager, you need to configure Apache to retrieve 
     You can get the path to your Redirect Map file from the Preview tab of the Redirect Map editor page.
 
 Once you restart Apache, this will automatically pull changes from the Redirect Map Manager every hour into Apache.
+
+#### AEM as a Cloud Service
+
+Currently please refer to Early Adopter Program functionality described in [Business users can declare redirects outside of Git (Early Adopter Program)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/2024/release-notes-2024-5-0#apache-rewritemaps-early-adopter) to opt-in.
 
 ## Redirect Map Manager Features
 
