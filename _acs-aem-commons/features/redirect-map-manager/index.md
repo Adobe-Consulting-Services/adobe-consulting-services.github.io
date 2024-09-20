@@ -3,7 +3,7 @@ layout: acs-aem-commons_feature
 title: Redirect Map Manager
 description: Generate an Apache httpd Redirect Map from Properties in AEM
 date: 2018-09-23
-tags: aem-65
+tags: aem-65 aem-cs
 initial-release: 3.13.0
 last-updated-release: 3.18.0
 ---

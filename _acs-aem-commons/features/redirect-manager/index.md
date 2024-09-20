@@ -5,7 +5,7 @@ description: Manage HTTP Redirects in AEM
 date: 2021-03-12
 tags: aem-65 aem-cs
 initial-release: 5.0.4
-last-updated-release: 5.4.0
+last-updated-release: 6.6.5
 ---
 
 ## Purpose
