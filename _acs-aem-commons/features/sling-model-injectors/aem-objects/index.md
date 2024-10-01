@@ -16,7 +16,7 @@ Allows for [Sling Models](http://sling.apache.org/documentation/bundles/models.h
 * `resourceResolver`
 * `componentContext`
 * `pageManager`
-* `tagManager` (since 6.6.0)
+
 * `currentPage`
 * `resourcePage`
 * `designer`
@@ -25,6 +25,16 @@ Allows for [Sling Models](http://sling.apache.org/documentation/bundles/models.h
 * `currentStyle`
 * `session`
 * `xssApi`
+
+Also allows some direct injections that adapt from resourceResolver. (since 6.6.1)
+This adapts if the field has the appropriate class declared.
+
+* [TagManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/tagging/TagManager.html)
+* [AssetManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/AssetManager.html)
+* [AssetManager - old interface](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/AssetManager.html)
+* [QueryBuilder](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/QueryBuilder.html)
+* [ContentPolicyManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/policies/ContentPolicyManager.html)
+* [Externalizer](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html)
 
 Most injections are available when adapting either a `Resource` or `SlingHttpServletRequest` object, with these exceptions, which only work when adapting a `SlingHttpServletRequest` object:
 
