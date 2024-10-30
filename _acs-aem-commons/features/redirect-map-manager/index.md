@@ -76,7 +76,9 @@ Once you restart Apache, this will automatically pull changes from the Redirect 
 
 #### AEM as a Cloud Service
 
-Currently please refer to Early Adopter Program functionality described in [Business users can declare redirects outside of Git (Early Adopter Program)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/2024/release-notes-2024-5-0#apache-rewritemaps-early-adopter) to opt-in.
+Configuring Redirect Map Manager is described in [Pipeline-free URL Redirects](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects).
+
+Please note that this functionality is available since AEM CS Release 18311 - see [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap?lang=en#aem-as-cloud-service).
 
 ## Redirect Map Manager Features
 
