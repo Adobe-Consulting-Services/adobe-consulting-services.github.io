@@ -78,7 +78,7 @@ Once you restart Apache, this will automatically pull changes from the Redirect 
 
 Configuring Redirect Map Manager is described in [Pipeline-free URL Redirects](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects).
 
-Please note that this functionality is available since AEM CS Release 18311 - see [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap?lang=en#aem-as-cloud-service).
+Please note that this functionality is available since AEM CS Release 18311 - see [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/maintenance/2024/2024-10-0?lang=en#18311).
 
 ## Redirect Map Manager Features
 
