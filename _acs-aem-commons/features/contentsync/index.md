@@ -120,3 +120,8 @@ on the _dam:sha1_ checksum in the asset metadata.
 
 Users can plug in their custom strategies by implementing _com.adobe.acs.commons.contentsync.UpdateStrategy_ interface;
 
+## Content Sync and IP Allow Lists
+
+> [!WARNING]  
+> Content Sync is not compatible with IP allow lists.
+If you want to use Content Sync, IP allow lists must not be enabled.
