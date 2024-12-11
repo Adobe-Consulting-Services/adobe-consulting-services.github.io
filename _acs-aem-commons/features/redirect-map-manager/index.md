@@ -80,6 +80,8 @@ Configuring Redirect Map Manager is described in [Pipeline-free URL Redirects](h
 
 Please note that this functionality is available since AEM CS Release 18311 - see [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/maintenance/2024/2024-10-0?lang=en#18311).
 
+Available since [version 6.7.0](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases/tag/acs-aem-commons-6.7.0).
+
 ## Redirect Map Manager Features
 
 ### Configure Redirect Map
