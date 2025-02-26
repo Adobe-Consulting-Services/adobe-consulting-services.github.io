@@ -9,7 +9,7 @@ initial-release: 3.10.0
 
 ## Why is this deprecated?
 
-Since AEM 6.3 (Feature Pack), Asset Folder metadata schema's can be customized using AEM's [Asset Folder Metadata Schema Editor](https://helpx.adobe.com/experience-manager/6-3/assets/using/folder-metadata-schema.html), removing the need for this tooling.
+Since AEM 6.3 (Feature Pack), Asset Folder metadata schema's can be customized using AEM's [Asset Folder Metadata Schema Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/folder-metadata-schema), removing the need for this tooling.
 
 
 ## Purpose
