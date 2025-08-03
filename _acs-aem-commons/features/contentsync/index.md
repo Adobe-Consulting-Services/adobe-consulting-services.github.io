@@ -125,3 +125,43 @@ Users can plug in their custom strategies by implementing _com.adobe.acs.commons
 > [!WARNING]  
 > Content Sync is not compatible with IP allow lists.
 If you want to use Content Sync, IP allow lists must not be enabled.
+
+## OAuth
+
+In some AEMaaCS environments, security policies may disallow Basic Auth. In such cases, ContentSync can use an Adobe IMS Technical Account with OAuth.
+
+### OAuth Configuration
+
+1. Create an [AEMaaCS technical account](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) and download the service credentials JSON from the Adobe Dev Console
+2. Convert the service credentials JSON into a `com.adobe.acs.commons.adobeio.service.impl.IntegrationServiceImpl.cfg.json` OSGi configuration. This can be done via one-liner script:
+ ```shell
+cat cm-p12345-e9876-integration-1.json | \
+jq -r '.integration | {
+  "endpoint": ("https://" + .imsEndpoint + "/ims/exchange/jwt"),
+  "loginEndpoint": "https://ims-na1.adobelogin.com/c/",
+  "privateKey":  .privateKey,
+	"clientId":  .technicalAccount.clientId, 
+	"clientSecret": .technicalAccount.clientSecret,
+	"amcOrgId": .org,
+	"techAccountId": .id,
+	"adobeLoginClaimKey": ("https://" + .imsEndpoint + "/s/ent_aem_cloud_api")
+ }' >com.adobe.acs.commons.adobeio.service.impl.IntegrationServiceImpl.cfg.json
+```
+which will output
+
+```json
+{
+  "endpoint": "https://ims-na1.adobelogin.com/ims/exchange/jwt",
+  "loginEndpoint": "https://ims-na1.adobelogin.com/c/",
+  "privateKey": "************************************",
+  "clientId": "cm-p12345-e9876-integration-1",
+  "clientSecret": "************************************",
+  "amcOrgId": "************************************@AdobeOrg",
+  "techAccountId": "************************************@techacct.adobe.com",
+  "adobeLoginClaimKey": "https://ims-na1.adobelogin.com/s/ent_aem_cloud_api"
+}
+```
+3. deploy the OSGi config and change the Auth type in the host configuration to OAuth:
+   ![image](images/oauth-config.png)
+
+4. Ensure the Technical Account User has read access to the content being sync-ed
