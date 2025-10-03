@@ -56,7 +56,7 @@ Here is an example Oak Index definition you can use:
                     "name": "statusCode",
                     "analyzed": true,
                     "jcr:primaryType": "nt:unstructured"
-                }
+                },
                 "tags": {
                     "name": "cq:tags",
                     "analyzed": true,
@@ -81,6 +81,30 @@ Here is an example Oak Index definition you can use:
                     "name": "statusCode",
                     "analyzed": true,
                     "jcr:primaryType": "nt:unstructured"
+                }
+            }
+        }
+    }
+}
+```
+
+Default OakAnalyzer splits on /, so a path like /content/wknd/de/de gets broken into content, wknd, de. Full-text queries with slashes won’t match as expected.
+If you need full-text queries to match values containing / or - (e.g. repository paths - /content/wknd/de/de), extend the Lucene index with a custom analyzer.
+
+```json
+{
+    "analyzers": {
+        "jcr:primaryType": "nt:unstructured",
+        "default": {
+            "jcr:primaryType": "nt:unstructured",
+            "tokenizer": {
+                "jcr:primaryType": "nt:unstructured",
+                "name": "Keyword"
+            },
+            "filters": {
+                "jcr:primaryType": "nt:unstructured", 
+                "LowerCase": {
+                  "jcr:primaryType": "nt:unstructured"
                 }
             }
         }
