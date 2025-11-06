@@ -89,7 +89,7 @@ Here is an example Oak Index definition you can use:
 ```
 
 Default OakAnalyzer splits on /, so a path like /content/wknd/de/de gets broken into content, wknd, de. Full-text queries with slashes won’t match as expected.
-If you need full-text queries to match values containing / or - (e.g. repository paths - /content/wknd/de/de), extend the Lucene index with a custom analyzer.
+If you need full-text queries to match values containing / or - (e.g. repository paths - /content/wknd/de/de), extend the Lucene index with a [custom analyzer](https://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers).
 
 ```json
 {
