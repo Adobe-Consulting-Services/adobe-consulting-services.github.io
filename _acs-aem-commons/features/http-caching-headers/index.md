@@ -10,7 +10,6 @@ tags: aem-65 aem-cs
 initial-release: 2.2.0
 ---
 
-> [!IMPORTANT]
 > This feature was previously known as *Dispatcher TTL*, however it can also be used without the Dispatcher TTL feature therefore it has been renamed to the more generic name *HTTP Caching Headers*. The configuration PIDs still refer to the original name for backwards-compatibility reasons.
 
 
@@ -28,13 +27,18 @@ All servlet filters can be configured via **factory** configurations, i.e. you c
 filters with one of the mechanism outlined in <https://sling.apache.org/documentation/bundles/configuration-installer-factory.html>.
 All filters are only ever active in case all the following conditions are met:
 
-1. request method is GET
+1. Request method is GET
 1. No URL parameters (can be overridden with boolean service property `allow.all.params`)
-1. Request coming from AEM Dispatcher (`Server-Agent` request header is `Communique-Dispatcher`), see also the following note.
+1. Request coming from AEM Dispatcher (`Server-Agent` request header is `Communique-Dispatcher`), see also the following note (can be overriden with boolean service property `allow.nondispatcher`).
 
-### Note
+All filters have certain service properties in common which allow to affect the conditions under which they should add headers.
 
-This feature expects that the Dispatcher was involved in the request chain. This expectation is managed via a known HTTP header. To simulate the Dispatcher, add the necessary HTTP header to the request:
+![image](images/osgi-configuration.png)
+
+
+### Dispatcher Requests Only
+
+This feature by default expects that the Dispatcher was involved in the request chain. This expectation is managed via a known HTTP header. To simulate the Dispatcher, add the necessary HTTP header to the request:
 
 > Server-Agent: Communique-Dispatcher
 
@@ -70,6 +74,7 @@ The output of the above would be:
 * Connection #0 to host localhost left intact
 {% endhighlight %}
 
+Alternatively one can also add headers to requests not coming from Dispatcher by setting `allow.nondispatcher` to `true`.
 
 ### Request URL Pattern Based
 
@@ -78,7 +83,7 @@ All configuration in this section are for OSGi HTTP Whiteboard servlet filters (
 * `filter.pattern`: A regular expression pattern matched against the request's URL path (prior resource resolving)
 
 
-Description | PID | Properties
+Description | PID | Main Properties
 --- | --- | ---
 Sets a `Cache-Control` response header with `max-age` directive | `com.adobe.acs.commons.http.headers.impl.DispatcherMaxAgeHeaderFilter` |  `max.age`: Max age value (in seconds) to put in `Cache-Control` header. 
 Sets an `Expires` response header which expires daily at the given time | `com.adobe.acs.commons.http.headers.impl.DailyExpiresHeaderFilter` |`expires.time`: Time of day in GMT timezone at which the content expires (in format `HH:mm`). Is interpreted as GMT timezone.
@@ -92,7 +97,7 @@ All configurations in this section are for Sling Servlet filters (i.e. they are 
 
 `max.age`: Max age value (in seconds) to put in `Cache-Control` header. 
 
-Description | PID | Properties
+Description | PID | Main Properties
 --- | --- | ---
 Sets a `Cache-Control` response header with `max-age` directive for the given resource type | `com.adobe.acs.commons.http.headers.impl.ResourceTypeBasedDispatcherMaxAgeHeaderFilter` | `resource.types`: Array of resource types, at least one given type must match the request's type (via `Resource.isResourceType(...)`, i.e. also considering resource type inheritance) for this filter to be active.
 Sets a `Cache-Control` response header with `max-age` directive according to a property value of the request's resource | `com.adobe.acs.commons.http.headers.impl.PropertyBasedDispatcherMaxAgeHeaderFilter` | `property.name`: Property name containing the `max-age` directive value in seconds. In case this is not a valid integer it will use the fallback value from `max.age`. `inherit.property.value`: In case the property value equals the one given here this filter is skipped.
