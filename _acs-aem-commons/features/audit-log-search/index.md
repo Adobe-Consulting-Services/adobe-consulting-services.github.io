@@ -55,7 +55,7 @@ The following columns will be available in the results:
 
 If you receive the Oak Index missing warning when using the Audit Log search or if the results are slow, you will need to install an Oak Index to improve query performance.
 
-You can create a custom Oak Index based on the queries in the Audit Log Search tool with the [Oak Index Definition Generator](http://oakutils.appspot.com/generate/index). Instructions on creating custom Oak Indexes for AEM are available at:
+You can create a custom Oak Index based on the queries in the Audit Log Search tool with the [Oak Index Definition Generator](https://oak-indexing.github.io/oakTools/indexDefGenerator.html). Note that for Cloud Service, installing indexes requires adding the index definition to the Git project. Instructions on creating custom Oak Indexes for AEM are available at:
 
 * [Content searching and indexing documentation](]https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing)
 * [Simplified Index Management](https://oak-indexing.github.io/oakTools/simplified.html)
